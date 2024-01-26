@@ -43,3 +43,7 @@ struct SelectUniv:View {
         .ignoresSafeArea()
     }
 }
+
+#Preview {
+    SelectUniv()
+}

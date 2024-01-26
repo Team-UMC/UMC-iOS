@@ -27,7 +27,7 @@ struct JoinAgreement:View {
                     Spacer().frame(height: 32)
                     
                     HStack(){
-                        JoinAgreCircleCheckButton(circleCheckButton_isChecked: $viewModel.isAllAgreed, title: "약관 전체동의"){
+                        AgrCircleCheckButton(AgrCircleCheckButton_isChecked: $viewModel.isAllAgreed, title: "약관 전체동의"){
                             viewModel.toggleAllAgreements()
                             print(viewModel.isAllAgreed)
                         }
@@ -42,7 +42,7 @@ struct JoinAgreement:View {
                         .padding(10)
                     
                     HStack {
-                        JoinAgreCircleCheckButton(circleCheckButton_isChecked: $viewModel.isTermsAgreed, title: "이용약관 동의 (필수)"){
+                        AgrCircleCheckButton(AgrCircleCheckButton_isChecked: $viewModel.isTermsAgreed, title: "이용약관 동의 (필수)"){
                             viewModel.toggleTermsAgreement()
                         }
                         Spacer()
@@ -64,7 +64,7 @@ struct JoinAgreement:View {
                     
 
                     HStack {
-                        JoinAgreCircleCheckButton(circleCheckButton_isChecked: $viewModel.isPrivacyAgreed,title: "개인정보 수집 및 이용동의 (필수)"){
+                        AgrCircleCheckButton(AgrCircleCheckButton_isChecked: $viewModel.isPrivacyAgreed, title: "개인정보 수집 및 이용동의 (필수)"){
                             viewModel.togglePrivacyAgreement()
                         }
                         Spacer()
@@ -96,4 +96,9 @@ struct JoinAgreement:View {
         }
         .ignoresSafeArea()
     }
+}
+
+
+#Preview {
+    JoinAgreement()
 }

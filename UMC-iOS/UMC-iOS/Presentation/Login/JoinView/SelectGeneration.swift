@@ -62,7 +62,3 @@ struct SelectGeneration:View {
         .ignoresSafeArea()
     }
 }
-
-#Preview {
-    SelectGeneration()
-}

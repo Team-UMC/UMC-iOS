@@ -18,7 +18,13 @@ struct DropDownPicker: View {
     var state: DropDownPickerState = .bottom
     var options: [String]
     var maxWidth: CGFloat = 272
+    var height: CGFloat = 40
+    var minHeight: CGFloat = 500
+    var fontSize: CGFloat = 18
     var placeholder: String = ""
+    var BackColor: Color = .white
+    var TextColor: Color = .black
+    var border: Bool = true
     
     @State var showDropdown = false
     
@@ -38,19 +44,20 @@ struct DropDownPicker: View {
                     Spacer()
                     
                     Text(selection == nil ? placeholder : selection!)
-                        .foregroundColor(selection != nil ? .black : .gray)
+                        .foregroundColor(TextColor)
                         .multilineTextAlignment(.center)
+                        .font(.system(size: fontSize))
                     
-                    Spacer(minLength: 0)
+                    Spacer(minLength: 2)
                     
                     Image(systemName: state == .top ? "chevron.up" : "chevron.down")
-                        .font(.title3)
-                        .foregroundColor(.gray)
+                        .font(.system(size: fontSize))
+                        .foregroundColor(TextColor)
                         .rotationEffect(.degrees((showDropdown ? -180 : 0)))
                 }
                 .padding(.horizontal, 15)
-                .frame(width: 272, height: 40)
-                .background(.white)
+                .frame(width: maxWidth, height: height)
+                .background(BackColor)
                 .contentShape(.rect)
                 .onTapGesture {
                     index += 1
@@ -66,16 +73,20 @@ struct DropDownPicker: View {
                 }
             }
             .clipped()
-            .background(.white)
+            .background(BackColor)
             .cornerRadius(12)
-            .overlay {
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(.gray)
-            }
+            .overlay (
+                Group{
+                    if border{
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.gray)
+                    }
+                }
+            )
             .frame(height: size.height, alignment: state == .top ? .bottom : .top)
             
         }
-        .frame(width: maxWidth, height: 40)
+        .frame(width: maxWidth, height: height)
         .zIndex(zindex)
     }
     
@@ -89,9 +100,10 @@ struct DropDownPicker: View {
                         ForEach(options, id: \.self) { option in
                             Text(option)
                                 .multilineTextAlignment(.center)
-                                .foregroundStyle(selection == option ? Color.black : Color.gray)
+                                .font(.system(size: fontSize))
+                                .foregroundStyle(TextColor)
                                 .animation(.none, value: selection)
-                                .frame(height: 40)
+                                .frame(height: height)
                                 .contentShape(.rect)
                                 .onTapGesture {
                                     withAnimation(.snappy) {
@@ -104,7 +116,7 @@ struct DropDownPicker: View {
                     Spacer()
                 }
             }
-            .frame(minHeight: 500)
+            .frame(minHeight: minHeight)
             
         }
         .transition(.move(edge: state == .top ? .bottom : .top))

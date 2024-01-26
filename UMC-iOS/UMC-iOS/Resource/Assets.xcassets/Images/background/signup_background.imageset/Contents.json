@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "signup_background.png",
+      "filename" : "코드뷰 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +10,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "코드뷰 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
