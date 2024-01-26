@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4212F1352B5CE991008C68C0 /* SettingBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212F1342B5CE990008C68C0 /* SettingBackButton.swift */; };
+		422B49A92B62F9BB008C533A /* GenerationPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B49A82B62F9BB008C533A /* GenerationPartViewModel.swift */; };
+		422B49AC2B62FA0E008C533A /* ManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B49AB2B62FA0E008C533A /* ManagerModel.swift */; };
 		4295589F2B4EE3AC00DDAE57 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */; };
 		429558A12B4EE94800DDAE57 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A02B4EE94800DDAE57 /* SelectGeneration.swift */; };
 		429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */; };
@@ -14,12 +17,22 @@
 		429558A72B4EFDCB00DDAE57 /* JoinNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A62B4EFDCB00DDAE57 /* JoinNickname.swift */; };
 		429558A92B4F017100DDAE57 /* SelectParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A82B4F017100DDAE57 /* SelectParts.swift */; };
 		429558AB2B4F032100DDAE57 /* JoinAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558AA2B4F032100DDAE57 /* JoinAgreement.swift */; };
-		429558AD2B4F04B100DDAE57 /* JoinAgreCircleCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558AC2B4F04B100DDAE57 /* JoinAgreCircleCheckButton.swift */; };
+		429558AD2B4F04B100DDAE57 /* CircleCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558AC2B4F04B100DDAE57 /* CircleCheckButton.swift */; };
 		42A605CD2B4D30B80068D5E9 /* JoinNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A605CC2B4D30B80068D5E9 /* JoinNavigationButton.swift */; };
 		42A605CF2B4D31B30068D5E9 /* JoinCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A605CE2B4D31B30068D5E9 /* JoinCode.swift */; };
 		42A605D12B4D38360068D5E9 /* SelectUniv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A605D02B4D38360068D5E9 /* SelectUniv.swift */; };
 		42A605D42B4EBB720068D5E9 /* JoinTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A605D32B4EBB720068D5E9 /* JoinTextFieldStyle.swift */; };
 		42A605D62B4EBCD90068D5E9 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A605D52B4EBCD80068D5E9 /* JoinViewModel.swift */; };
+		42AFC98B2B5EEABB009FB0AC /* CirclePlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFC98A2B5EEABB009FB0AC /* CirclePlusButton.swift */; };
+		42AFC98D2B5EF02B009FB0AC /* AgrCircleCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFC98C2B5EF02B009FB0AC /* AgrCircleCheckButton.swift */; };
+		42BAC2632B4FDB0400EF1319 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BAC2622B4FDB0400EF1319 /* LoginView.swift */; };
+		42BAC2652B50671300EF1319 /* SelectPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BAC2642B50671200EF1319 /* SelectPosition.swift */; };
+		42BAC26C2B50763400EF1319 /* ManagerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BAC26B2B50763400EF1319 /* ManagerSetting.swift */; };
+		42BAC26E2B510F4300EF1319 /* ManagerPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BAC26D2B510F4300EF1319 /* ManagerPin.swift */; };
+		42BAC2702B510F9200EF1319 /* ManagerCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BAC26F2B510F9200EF1319 /* ManagerCalender.swift */; };
+		42BAC2722B510FC100EF1319 /* ManagerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BAC2712B510FC100EF1319 /* ManagerInfo.swift */; };
+		42D74B812B5D966800DE22D5 /* ManagerPinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D74B802B5D966800DE22D5 /* ManagerPinButton.swift */; };
+		42D74B832B5E7E4600DE22D5 /* CircleFillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D74B822B5E7E4600DE22D5 /* CircleFillButton.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F01A2B4C599000F0CDD0 /* ContentView.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
@@ -55,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4212F1342B5CE990008C68C0 /* SettingBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBackButton.swift; sourceTree = "<group>"; };
+		422B49A82B62F9BB008C533A /* GenerationPartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationPartViewModel.swift; sourceTree = "<group>"; };
+		422B49AB2B62FA0E008C533A /* ManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerModel.swift; sourceTree = "<group>"; };
 		4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		429558A02B4EE94800DDAE57 /* SelectGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
 		429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCircleBorderButton.swift; sourceTree = "<group>"; };
@@ -62,12 +78,22 @@
 		429558A62B4EFDCB00DDAE57 /* JoinNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinNickname.swift; sourceTree = "<group>"; };
 		429558A82B4F017100DDAE57 /* SelectParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectParts.swift; sourceTree = "<group>"; };
 		429558AA2B4F032100DDAE57 /* JoinAgreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAgreement.swift; sourceTree = "<group>"; };
-		429558AC2B4F04B100DDAE57 /* JoinAgreCircleCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAgreCircleCheckButton.swift; sourceTree = "<group>"; };
+		429558AC2B4F04B100DDAE57 /* CircleCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCheckButton.swift; sourceTree = "<group>"; };
 		42A605CC2B4D30B80068D5E9 /* JoinNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinNavigationButton.swift; sourceTree = "<group>"; };
 		42A605CE2B4D31B30068D5E9 /* JoinCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCode.swift; sourceTree = "<group>"; };
 		42A605D02B4D38360068D5E9 /* SelectUniv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUniv.swift; sourceTree = "<group>"; };
 		42A605D32B4EBB720068D5E9 /* JoinTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTextFieldStyle.swift; sourceTree = "<group>"; };
 		42A605D52B4EBCD80068D5E9 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
+		42AFC98A2B5EEABB009FB0AC /* CirclePlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePlusButton.swift; sourceTree = "<group>"; };
+		42AFC98C2B5EF02B009FB0AC /* AgrCircleCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgrCircleCheckButton.swift; sourceTree = "<group>"; };
+		42BAC2622B4FDB0400EF1319 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		42BAC2642B50671200EF1319 /* SelectPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPosition.swift; sourceTree = "<group>"; };
+		42BAC26B2B50763400EF1319 /* ManagerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSetting.swift; sourceTree = "<group>"; };
+		42BAC26D2B510F4300EF1319 /* ManagerPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPin.swift; sourceTree = "<group>"; };
+		42BAC26F2B510F9200EF1319 /* ManagerCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerCalender.swift; sourceTree = "<group>"; };
+		42BAC2712B510FC100EF1319 /* ManagerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfo.swift; sourceTree = "<group>"; };
+		42D74B802B5D966800DE22D5 /* ManagerPinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPinButton.swift; sourceTree = "<group>"; };
+		42D74B822B5E7E4600DE22D5 /* CircleFillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFillButton.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01A2B4C599000F0CDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,9 +139,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4212F1362B5CE9AB008C68C0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				42D74B802B5D966800DE22D5 /* ManagerPinButton.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		422B49AA2B62F9C4008C533A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				422B49A82B62F9BB008C533A /* GenerationPartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		423DC0542B4D29D500033A7D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				42BAC2622B4FDB0400EF1319 /* LoginView.swift */,
 				42A605D22B4EA3610068D5E9 /* ViewModel */,
 				423DC0562B4D2B3400033A7D /* Helper */,
 				423DC0552B4D2B2300033A7D /* JoinView */,
@@ -127,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				42A605CE2B4D31B30068D5E9 /* JoinCode.swift */,
+				42BAC2642B50671200EF1319 /* SelectPosition.swift */,
 				42A605D02B4D38360068D5E9 /* SelectUniv.swift */,
 				429558A02B4EE94800DDAE57 /* SelectGeneration.swift */,
 				429558A42B4EF62200DDAE57 /* JoinName.swift */,
@@ -141,10 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				42A605CC2B4D30B80068D5E9 /* JoinNavigationButton.swift */,
+				42AFC98C2B5EF02B009FB0AC /* AgrCircleCheckButton.swift */,
 				42A605D32B4EBB720068D5E9 /* JoinTextFieldStyle.swift */,
-				4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */,
 				429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */,
-				429558AC2B4F04B100DDAE57 /* JoinAgreCircleCheckButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -155,6 +198,28 @@
 				42A605D52B4EBCD80068D5E9 /* JoinViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		42BAC2692B50760200EF1319 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				422B49AB2B62FA0E008C533A /* ManagerModel.swift */,
+				422B49AA2B62F9C4008C533A /* ViewModel */,
+				4212F1362B5CE9AB008C68C0 /* Helper */,
+				42BAC26A2B50761400EF1319 /* HomeManagerView */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		42BAC26A2B50761400EF1319 /* HomeManagerView */ = {
+			isa = PBXGroup;
+			children = (
+				42BAC26B2B50763400EF1319 /* ManagerSetting.swift */,
+				42BAC26D2B510F4300EF1319 /* ManagerPin.swift */,
+				42BAC26F2B510F9200EF1319 /* ManagerCalender.swift */,
+				42BAC2712B510FC100EF1319 /* ManagerInfo.swift */,
+			);
+			path = HomeManagerView;
 			sourceTree = "<group>";
 		};
 		F332F00C2B4C599000F0CDD0 = {
@@ -234,6 +299,7 @@
 		F332F0442B4C59E000F0CDD0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				42BAC2692B50760200EF1319 /* Home */,
 				F332F0482B4C5A1800F0CDD0 /* Utils */,
 				423DC0542B4D29D500033A7D /* Login */,
 				F332F0452B4C59E900F0CDD0 /* ContentView */,
@@ -269,6 +335,11 @@
 		F332F0482B4C5A1800F0CDD0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				42D74B822B5E7E4600DE22D5 /* CircleFillButton.swift */,
+				42AFC98A2B5EEABB009FB0AC /* CirclePlusButton.swift */,
+				429558AC2B4F04B100DDAE57 /* CircleCheckButton.swift */,
+				4212F1342B5CE990008C68C0 /* SettingBackButton.swift */,
+				4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */,
 				F332F04E2B4C5A4700F0CDD0 /* Extension */,
 				F332F0492B4C5A2E00F0CDD0 /* DummyUtilView.swift */,
 			);
@@ -428,6 +499,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = F332F00C2B4C599000F0CDD0;
 			productRefGroup = F332F0162B4C599000F0CDD0 /* Products */;
@@ -472,29 +544,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				429558AD2B4F04B100DDAE57 /* JoinAgreCircleCheckButton.swift in Sources */,
+				429558AD2B4F04B100DDAE57 /* CircleCheckButton.swift in Sources */,
+				42BAC26C2B50763400EF1319 /* ManagerSetting.swift in Sources */,
 				42A605D62B4EBCD90068D5E9 /* JoinViewModel.swift in Sources */,
+				42AFC98D2B5EF02B009FB0AC /* AgrCircleCheckButton.swift in Sources */,
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
 				F332F04D2B4C5A4000F0CDD0 /* ContentViewModel.swift in Sources */,
+				42AFC98B2B5EEABB009FB0AC /* CirclePlusButton.swift in Sources */,
 				429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */,
+				42D74B832B5E7E4600DE22D5 /* CircleFillButton.swift in Sources */,
+				42D74B812B5D966800DE22D5 /* ManagerPinButton.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
+				42BAC2632B4FDB0400EF1319 /* LoginView.swift in Sources */,
 				42A605D42B4EBB720068D5E9 /* JoinTextFieldStyle.swift in Sources */,
+				42BAC2702B510F9200EF1319 /* ManagerCalender.swift in Sources */,
 				F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
 				429558AB2B4F032100DDAE57 /* JoinAgreement.swift in Sources */,
 				42A605CD2B4D30B80068D5E9 /* JoinNavigationButton.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
+				42BAC26E2B510F4300EF1319 /* ManagerPin.swift in Sources */,
 				4295589F2B4EE3AC00DDAE57 /* DropDownPicker.swift in Sources */,
 				429558A12B4EE94800DDAE57 /* SelectGeneration.swift in Sources */,
 				429558A52B4EF62200DDAE57 /* JoinName.swift in Sources */,
+				42BAC2652B50671300EF1319 /* SelectPosition.swift in Sources */,
+				42BAC2722B510FC100EF1319 /* ManagerInfo.swift in Sources */,
 				42A605CF2B4D31B30068D5E9 /* JoinCode.swift in Sources */,
 				429558A72B4EFDCB00DDAE57 /* JoinNickname.swift in Sources */,
 				429558A92B4F017100DDAE57 /* SelectParts.swift in Sources */,
+				422B49AC2B62FA0E008C533A /* ManagerModel.swift in Sources */,
+				4212F1352B5CE991008C68C0 /* SettingBackButton.swift in Sources */,
 				42A605D12B4D38360068D5E9 /* SelectUniv.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
 				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
+				422B49A92B62F9BB008C533A /* GenerationPartViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

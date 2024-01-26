@@ -10,16 +10,22 @@ import SwiftUI
 struct ContentView: View {
     @State private var isPressed = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            VStack {
+                Button(action: {
+                    isPressed.toggle()
+                }, label: {Image(systemName: "hammer.fill")
+                })
+                .navigationDestination(isPresented: $isPressed){ ManagerSetting()}
+                
+                
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
-}

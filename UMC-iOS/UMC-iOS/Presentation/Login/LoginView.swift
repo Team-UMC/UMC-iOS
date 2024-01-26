@@ -70,8 +70,3 @@ struct LoginView:View {
         }
         .ignoresSafeArea()
     }
-}
-
-#Preview {
-    LoginView()
-}
