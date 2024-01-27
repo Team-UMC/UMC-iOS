@@ -8,10 +8,10 @@
 import SwiftUI
 
 // Task 배열
-struct Task: Identifiable {
+struct Task: Identifiable, Codable{
     var id = UUID().uuidString
-    var title: String // 일정 제목
     var time: Date = Date() // 일단 현재 날짜
+    var title: String // 일정 제목
     var mainText: String // 일정 본문
     var writer: String // 작성자
 }

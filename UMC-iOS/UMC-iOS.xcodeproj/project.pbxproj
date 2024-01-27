@@ -20,6 +20,7 @@
 		46168F162B5843440076EFD4 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46168F152B5843440076EFD4 /* FSCalendar */; };
 		466DED912B56F10700934023 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466DED902B56F10700934023 /* HomeView.swift */; };
 		466DED932B56F18000934023 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466DED922B56F18000934023 /* HomeViewModel.swift */; };
+		46A13EC82B6579AC00B132D8 /* AnnouncementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A13EC72B6579AC00B132D8 /* AnnouncementInfo.swift */; };
 		46B7B4B92B596BA200C72346 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7B4B82B596BA200C72346 /* DateValue.swift */; };
 		46B7B4BB2B59942200C72346 /* CalendarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7B4BA2B59942200C72346 /* CalendarTask.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
@@ -66,6 +67,7 @@
 		46168F122B5840050076EFD4 /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		466DED902B56F10700934023 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		466DED922B56F18000934023 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		46A13EC72B6579AC00B132D8 /* AnnouncementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementInfo.swift; sourceTree = "<group>"; };
 		46B7B4B82B596BA200C72346 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		46B7B4BA2B59942200C72346 /* CalendarTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTask.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 			children = (
 				46B7B4B82B596BA200C72346 /* DateValue.swift */,
 				46B7B4BA2B59942200C72346 /* CalendarTask.swift */,
+				46A13EC72B6579AC00B132D8 /* AnnouncementInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				46168F052B583DAA0076EFD4 /* UserInformationView.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
 				46168F132B5840050076EFD4 /* RankView.swift in Sources */,
+				46A13EC82B6579AC00B132D8 /* AnnouncementInfo.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
 				46168F112B583FA80076EFD4 /* MascotView.swift in Sources */,

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AnnouncementView: View {
+    @Binding var shouldShowAnnouncementPopup: Bool
+    
     var body: some View {
         ZStack {
             Rectangle() // 공지 배경
@@ -37,6 +39,10 @@ struct AnnouncementView: View {
                 
                 Spacer()
             } // HStack
+        } // ZStack
+        .onTapGesture {
+            print("Announcementview Tapped")
+            self.shouldShowAnnouncementPopup = true
         }
     }
 }

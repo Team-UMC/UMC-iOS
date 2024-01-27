@@ -9,7 +9,7 @@ import SwiftUI
 
 // Date Value Model
 
-struct DateValue: Identifiable {
+struct DateValue: Identifiable, Codable {
     var id = UUID().uuidString
     var day: Int
     var date: Date
