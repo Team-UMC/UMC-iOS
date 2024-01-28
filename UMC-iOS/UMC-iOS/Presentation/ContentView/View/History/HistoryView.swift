@@ -20,8 +20,12 @@ struct HistoryView: View {
                 
                 VStack(spacing: 0) {
                     HotProjectView()
-                        .position(x: UIScreen.main.bounds.width/2, y: 156)
-                        .padding(.top, 100)
+                        .padding(.top, 84)
+                    HistorySearchBarView()
+                        .padding(.top, 32)
+                    
+                    Spacer()
+                        
                 }
                     
             } // ZStack
