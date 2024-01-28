@@ -25,6 +25,7 @@ struct HomeNavigationBarView: View {
                     .frame(width: 20, height: 20)
             } // Button
             .padding(.leading, 20)
+            
             Spacer()
             
             HStack { // 오른쪽 버튼 4개

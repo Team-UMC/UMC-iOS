@@ -15,10 +15,11 @@ struct HomeView: View {
         ZStack {
             ScrollView(showsIndicators: false) {
                 ZStack {
-                    Image("backgroundImage") // 원형 배경
+                    Image("homeBackgroundImage") // 원형 배경
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: UIScreen.main.bounds.width)
+                        // .offset(x: 0)
                         .position(x: UIScreen.main.bounds.width/2, y: 119)
                     
                     VStack(spacing: 0) {
@@ -40,7 +41,7 @@ struct HomeView: View {
                         }
                         .padding(.top, 24)
                         .padding(.bottom, 24)
-                    }
+                    } // VStack
                     
                 } // ZStack
                 
