@@ -113,7 +113,7 @@ struct ManagerInfo:View {
                                 .foregroundStyle(.main)
 
                         }
-                        .zIndex(1)
+                        .zIndex(2)
                         HStack {
                             Image(systemName: "minus.circle.fill")
                                 .font(.system(size: 14))
@@ -133,9 +133,9 @@ struct ManagerInfo:View {
                     .background(.white)
                     .cornerRadius(12)
                     .padding()
-                    
-                    
                 }
+                .zIndex(1)
+
                 
             
             }

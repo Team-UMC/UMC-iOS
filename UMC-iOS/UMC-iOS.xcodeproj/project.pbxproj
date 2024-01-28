@@ -10,6 +10,9 @@
 		4212F1352B5CE991008C68C0 /* SettingBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212F1342B5CE990008C68C0 /* SettingBackButton.swift */; };
 		422B49A92B62F9BB008C533A /* GenerationPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B49A82B62F9BB008C533A /* GenerationPartViewModel.swift */; };
 		422B49AC2B62FA0E008C533A /* ManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B49AB2B62FA0E008C533A /* ManagerModel.swift */; };
+		425EF9D62B650E1B00123D6D /* HomeSideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D52B650E1B00123D6D /* HomeSideView.swift */; };
+		425EF9D82B658DB700123D6D /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D72B658DB700123D6D /* SideMenuNavigationButton.swift */; };
+		425EF9DA2B65916200123D6D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D92B65916200123D6D /* UserProfileView.swift */; };
 		4295589F2B4EE3AC00DDAE57 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */; };
 		429558A12B4EE94800DDAE57 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A02B4EE94800DDAE57 /* SelectGeneration.swift */; };
 		429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */; };
@@ -71,6 +74,9 @@
 		4212F1342B5CE990008C68C0 /* SettingBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBackButton.swift; sourceTree = "<group>"; };
 		422B49A82B62F9BB008C533A /* GenerationPartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationPartViewModel.swift; sourceTree = "<group>"; };
 		422B49AB2B62FA0E008C533A /* ManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerModel.swift; sourceTree = "<group>"; };
+		425EF9D52B650E1B00123D6D /* HomeSideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideView.swift; sourceTree = "<group>"; };
+		425EF9D72B658DB700123D6D /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		425EF9D92B65916200123D6D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		429558A02B4EE94800DDAE57 /* SelectGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
 		429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCircleBorderButton.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				42D74B802B5D966800DE22D5 /* ManagerPinButton.swift */,
+				425EF9D72B658DB700123D6D /* SideMenuNavigationButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -207,6 +214,8 @@
 				422B49AA2B62F9C4008C533A /* ViewModel */,
 				4212F1362B5CE9AB008C68C0 /* Helper */,
 				42BAC26A2B50761400EF1319 /* HomeManagerView */,
+				425EF9D52B650E1B00123D6D /* HomeSideView.swift */,
+				425EF9D92B65916200123D6D /* UserProfileView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -553,6 +562,7 @@
 				42AFC98B2B5EEABB009FB0AC /* CirclePlusButton.swift in Sources */,
 				429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */,
 				42D74B832B5E7E4600DE22D5 /* CircleFillButton.swift in Sources */,
+				425EF9D82B658DB700123D6D /* SideMenuNavigationButton.swift in Sources */,
 				42D74B812B5D966800DE22D5 /* ManagerPinButton.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				42BAC2632B4FDB0400EF1319 /* LoginView.swift in Sources */,
@@ -561,6 +571,7 @@
 				F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
 				429558AB2B4F032100DDAE57 /* JoinAgreement.swift in Sources */,
+				425EF9D62B650E1B00123D6D /* HomeSideView.swift in Sources */,
 				42A605CD2B4D30B80068D5E9 /* JoinNavigationButton.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
@@ -573,6 +584,7 @@
 				42A605CF2B4D31B30068D5E9 /* JoinCode.swift in Sources */,
 				429558A72B4EFDCB00DDAE57 /* JoinNickname.swift in Sources */,
 				429558A92B4F017100DDAE57 /* SelectParts.swift in Sources */,
+				425EF9DA2B65916200123D6D /* UserProfileView.swift in Sources */,
 				422B49AC2B62FA0E008C533A /* ManagerModel.swift in Sources */,
 				4212F1352B5CE991008C68C0 /* SettingBackButton.swift in Sources */,
 				42A605D12B4D38360068D5E9 /* SelectUniv.swift in Sources */,

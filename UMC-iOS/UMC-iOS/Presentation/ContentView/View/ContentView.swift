@@ -9,23 +9,44 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isPressed = false
+    @State var presentSideMenu = false
+
+    
     var body: some View {
         NavigationStack{
-            VStack {
-                Button(action: {
-                    isPressed.toggle()
-                }, label: {Image(systemName: "hammer.fill")
-                })
-                .navigationDestination(isPresented: $isPressed){ ManagerSetting()}
+            ZStack{
+                HomeSideView(isShowing: $presentSideMenu, content: AnyView(SideMenuViewContents(presentSideMenu: $presentSideMenu)), direction: .leading)
+                    .zIndex(1)
                 
-                
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+                VStack(alignment: .leading){
+                    Button {
+                        presentSideMenu.toggle()
+                    } label: {
+                        HStack {
+                            Image(systemName: "line.3.horizontal")
+                            Text("Show Menu")
+                        }
+                    }
+                    HStack{
+                        Button(action: {
+                            isPressed.toggle()
+                        }, label: {Image(systemName: "hammer.fill")
+                        })
+                        .navigationDestination(isPresented: $isPressed){ ManagerSetting()}
+                    }
+                    
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+                    Text("Hello, worldsdfsdfsdfsdfsdfsdfsd!")
+                }
             }
-            .padding()
         }
+        
     }
+}
+
+#Preview {
+    ContentView()
 }
 
