@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeNavigationBarView: View {
     // 버튼 이름 리스트
     let imageNames: [String] = ["menuButtonImage",
+                                "reportButtonImage",
                                 "friendsButtonImage",
                                 "noticeButtonImage",
                                 "hammerButtonImage"]
@@ -26,7 +27,7 @@ struct HomeNavigationBarView: View {
             .padding(.leading, 20)
             Spacer()
             
-            HStack { // 오른쪽 버튼 3개
+            HStack { // 오른쪽 버튼 4개
                 ForEach(1..<imageNames.count, id: \.self) { index in
                     Button {
                         print("\(imageNames[index]) Clicked")
