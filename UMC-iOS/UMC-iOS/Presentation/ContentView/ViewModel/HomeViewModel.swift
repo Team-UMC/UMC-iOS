@@ -22,12 +22,6 @@ extension HomeView {
             let popupLocation: String = "수꼬치 인하대 후문점"
             
             return ZStack {
-                Rectangle()
-                    .cornerRadius(14.0)
-                    .frame(width: .infinity, height: 208)
-                    .padding(.horizontal, 48)
-                    .foregroundColor(.white)
-                
                 VStack(spacing: 0) {
 
                     Text(popupTitle)
@@ -68,6 +62,12 @@ extension HomeView {
                     .padding(.top, 24)
                     
                 } // VStack
+                .multilineTextAlignment(.center)
+                .frame(width: 248, height: 180)
+                .padding(.vertical, 24)
+                .padding(.horizontal, 16)
+                .background(Color.white)
+                .cornerRadius(12.0)
                 
             } // ZStack
             .multilineTextAlignment(.center)
@@ -97,12 +97,6 @@ extension HomeView {
             }
             
             return ZStack {
-                Rectangle()
-                    .cornerRadius(14.0)
-                    .frame(width: .infinity, height: 208)
-                    .padding(.horizontal, 48)
-                    .foregroundColor(.white)
-                
                 VStack(spacing: 0) {
                     
                     Text("\(popupDate)")
@@ -139,6 +133,11 @@ extension HomeView {
                     .padding(.top, 24)
                     
                 } // VStack
+                .frame(width: 248, height: 165)
+                .padding(.vertical, 24)
+                .padding(.horizontal, 16)
+                .background(Color.white)
+                .cornerRadius(12.0)
                 
             } // ZStack
             .multilineTextAlignment(.center)
@@ -157,4 +156,9 @@ extension HomeView {
             return calendar.isDate(date1, inSameDayAs: date2)
         }
     } 
+}
+
+
+#Preview {
+    HomeView()
 }
