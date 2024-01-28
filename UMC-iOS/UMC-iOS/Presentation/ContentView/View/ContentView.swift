@@ -33,6 +33,11 @@ struct ContentView: View {
                         }, label: {Image(systemName: "hammer.fill")
                         })
                         .navigationDestination(isPresented: $isPressed){ ManagerSetting()}
+                        Button(action: {
+                            isPressed.toggle()
+                        }, label: {Image(systemName: "person.2.fill")
+                        })
+                        .navigationDestination(isPresented: $isPressed){ FriendsListView()}
                     }
                     
                     Image(systemName: "globe")

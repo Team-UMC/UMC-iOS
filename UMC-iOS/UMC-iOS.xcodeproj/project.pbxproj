@@ -13,6 +13,7 @@
 		425EF9D62B650E1B00123D6D /* HomeSideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D52B650E1B00123D6D /* HomeSideView.swift */; };
 		425EF9D82B658DB700123D6D /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D72B658DB700123D6D /* SideMenuNavigationButton.swift */; };
 		425EF9DA2B65916200123D6D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D92B65916200123D6D /* UserProfileView.swift */; };
+		425EF9DF2B66944300123D6D /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9DE2B66944300123D6D /* FriendsListView.swift */; };
 		4295589F2B4EE3AC00DDAE57 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */; };
 		429558A12B4EE94800DDAE57 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A02B4EE94800DDAE57 /* SelectGeneration.swift */; };
 		429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */; };
@@ -77,6 +78,7 @@
 		425EF9D52B650E1B00123D6D /* HomeSideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideView.swift; sourceTree = "<group>"; };
 		425EF9D72B658DB700123D6D /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
 		425EF9D92B65916200123D6D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		425EF9DE2B66944300123D6D /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		429558A02B4EE94800DDAE57 /* SelectGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
 		429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCircleBorderButton.swift; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		425EF9DD2B66940000123D6D /* HomeTopMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				425EF9DE2B66944300123D6D /* FriendsListView.swift */,
+			);
+			path = HomeTopMenuView;
+			sourceTree = "<group>";
+		};
 		42A605D22B4EA3610068D5E9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +220,7 @@
 		42BAC2692B50760200EF1319 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				425EF9DD2B66940000123D6D /* HomeTopMenuView */,
 				422B49AB2B62FA0E008C533A /* ManagerModel.swift */,
 				422B49AA2B62F9C4008C533A /* ViewModel */,
 				4212F1362B5CE9AB008C68C0 /* Helper */,
@@ -587,6 +598,7 @@
 				425EF9DA2B65916200123D6D /* UserProfileView.swift in Sources */,
 				422B49AC2B62FA0E008C533A /* ManagerModel.swift in Sources */,
 				4212F1352B5CE991008C68C0 /* SettingBackButton.swift in Sources */,
+				425EF9DF2B66944300123D6D /* FriendsListView.swift in Sources */,
 				42A605D12B4D38360068D5E9 /* SelectUniv.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
