@@ -14,6 +14,7 @@
 		425EF9D82B658DB700123D6D /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D72B658DB700123D6D /* SideMenuNavigationButton.swift */; };
 		425EF9DA2B65916200123D6D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D92B65916200123D6D /* UserProfileView.swift */; };
 		425EF9DF2B66944300123D6D /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9DE2B66944300123D6D /* FriendsListView.swift */; };
+		425EF9E32B66CBA800123D6D /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9E22B66CBA800123D6D /* HomeNotificationView.swift */; };
 		4295589F2B4EE3AC00DDAE57 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */; };
 		429558A12B4EE94800DDAE57 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A02B4EE94800DDAE57 /* SelectGeneration.swift */; };
 		429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */; };
@@ -79,6 +80,7 @@
 		425EF9D72B658DB700123D6D /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
 		425EF9D92B65916200123D6D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		425EF9DE2B66944300123D6D /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
+		425EF9E22B66CBA800123D6D /* HomeNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
 		4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		429558A02B4EE94800DDAE57 /* SelectGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
 		429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCircleBorderButton.swift; sourceTree = "<group>"; };
@@ -205,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				425EF9DE2B66944300123D6D /* FriendsListView.swift */,
+				425EF9D52B650E1B00123D6D /* HomeSideView.swift */,
+				425EF9E22B66CBA800123D6D /* HomeNotificationView.swift */,
 			);
 			path = HomeTopMenuView;
 			sourceTree = "<group>";
@@ -225,7 +229,6 @@
 				422B49AA2B62F9C4008C533A /* ViewModel */,
 				4212F1362B5CE9AB008C68C0 /* Helper */,
 				42BAC26A2B50761400EF1319 /* HomeManagerView */,
-				425EF9D52B650E1B00123D6D /* HomeSideView.swift */,
 				425EF9D92B65916200123D6D /* UserProfileView.swift */,
 			);
 			path = Home;
@@ -581,6 +584,7 @@
 				42BAC2702B510F9200EF1319 /* ManagerCalender.swift in Sources */,
 				F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
+				425EF9E32B66CBA800123D6D /* HomeNotificationView.swift in Sources */,
 				429558AB2B4F032100DDAE57 /* JoinAgreement.swift in Sources */,
 				425EF9D62B650E1B00123D6D /* HomeSideView.swift in Sources */,
 				42A605CD2B4D30B80068D5E9 /* JoinNavigationButton.swift in Sources */,

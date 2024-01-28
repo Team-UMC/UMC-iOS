@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isPressed = false
+    @State private var isPressed2 = false
+    @State private var isPressed3 = false
+    
     @State var presentSideMenu = false
 
     
@@ -34,12 +37,16 @@ struct ContentView: View {
                         })
                         .navigationDestination(isPresented: $isPressed){ ManagerSetting()}
                         Button(action: {
-                            isPressed.toggle()
+                            isPressed2.toggle()
                         }, label: {Image(systemName: "person.2.fill")
                         })
-                        .navigationDestination(isPresented: $isPressed){ FriendsListView()}
+                        .navigationDestination(isPresented: $isPressed2){ FriendsListView()}
+                        Button(action: {
+                            isPressed3.toggle()
+                        }, label: {Image(systemName: "bell.fill")
+                        })
+                        .navigationDestination(isPresented: $isPressed3){ HomeNotificationView()}
                     }
-                    
                     Image(systemName: "globe")
                         .imageScale(.large)
                         .foregroundStyle(.tint)
