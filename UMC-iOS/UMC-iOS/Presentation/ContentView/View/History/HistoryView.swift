@@ -21,15 +21,19 @@ struct HistoryView: View {
                 VStack(spacing: 0) {
                     HotProjectView()
                         .padding(.top, 84)
-                    HistorySearchBarView()
+                    ProjectTypeButtonView()
                         .padding(.top, 32)
+                    HistorySearchBarView()
+                        .padding(.top, 8)
+                    HistoryProjectListView()
+                        .padding(.top, 16)
                     
                     Spacer()
                         
-                }
+                } // VStack
                     
             } // ZStack
-            .background(Color.red)
+            
         } // ScrollView
         .ignoresSafeArea(.all)
     }
