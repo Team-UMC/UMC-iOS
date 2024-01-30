@@ -30,6 +30,14 @@
 		46B7B4BB2B59942200C72346 /* CalendarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7B4BA2B59942200C72346 /* CalendarTask.swift */; };
 		46CD3B332B67DE9F00F5616F /* ProjectTypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B322B67DE9F00F5616F /* ProjectTypeButtonView.swift */; };
 		46CD3B352B67E16100F5616F /* HistorySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B342B67E16100F5616F /* HistorySearchView.swift */; };
+		46CD3B372B69040C00F5616F /* HistoryRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B362B69040C00F5616F /* HistoryRegisterView.swift */; };
+		46CD3B3D2B690CAB00F5616F /* HistoryRegisterNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B3C2B690CAB00F5616F /* HistoryRegisterNavigationBarView.swift */; };
+		46CD3B3F2B6910E200F5616F /* ProjectClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B3E2B6910E200F5616F /* ProjectClassificationView.swift */; };
+		46CD3B412B69309D00F5616F /* ProjectCardinalNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B402B69309D00F5616F /* ProjectCardinalNumberView.swift */; };
+		46CD3B432B6933C200F5616F /* ProjectIconRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B422B6933C200F5616F /* ProjectIconRegisterView.swift */; };
+		46CD3B452B69372200F5616F /* ProjectHashtagRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B442B69372200F5616F /* ProjectHashtagRegisterView.swift */; };
+		46CD3B472B69402300F5616F /* ProjectNameRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B462B69402300F5616F /* ProjectNameRegisterView.swift */; };
+		46CD3B492B69467F00F5616F /* ProjectInformationRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD3B482B69467F00F5616F /* ProjectInformationRegisterView.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
 		F332F0202B4C599100F0CDD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01F2B4C599100F0CDD0 /* Preview Assets.xcassets */; };
@@ -84,6 +92,14 @@
 		46B7B4BA2B59942200C72346 /* CalendarTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTask.swift; sourceTree = "<group>"; };
 		46CD3B322B67DE9F00F5616F /* ProjectTypeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTypeButtonView.swift; sourceTree = "<group>"; };
 		46CD3B342B67E16100F5616F /* HistorySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySearchView.swift; sourceTree = "<group>"; };
+		46CD3B362B69040C00F5616F /* HistoryRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRegisterView.swift; sourceTree = "<group>"; };
+		46CD3B3C2B690CAB00F5616F /* HistoryRegisterNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRegisterNavigationBarView.swift; sourceTree = "<group>"; };
+		46CD3B3E2B6910E200F5616F /* ProjectClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectClassificationView.swift; sourceTree = "<group>"; };
+		46CD3B402B69309D00F5616F /* ProjectCardinalNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardinalNumberView.swift; sourceTree = "<group>"; };
+		46CD3B422B6933C200F5616F /* ProjectIconRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIconRegisterView.swift; sourceTree = "<group>"; };
+		46CD3B442B69372200F5616F /* ProjectHashtagRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHashtagRegisterView.swift; sourceTree = "<group>"; };
+		46CD3B462B69402300F5616F /* ProjectNameRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectNameRegisterView.swift; sourceTree = "<group>"; };
+		46CD3B482B69467F00F5616F /* ProjectInformationRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInformationRegisterView.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01C2B4C599100F0CDD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,13 +165,9 @@
 		461A4CB62B66405D0090B396 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				461A4CB92B6640990090B396 /* HistoryView.swift */,
-				461A4CBB2B664B600090B396 /* HotProjectView.swift */,
-				46CD3B322B67DE9F00F5616F /* ProjectTypeButtonView.swift */,
-				461A4CC12B66AF570090B396 /* HistorySearchBarView.swift */,
-				461A4CBD2B669E290090B396 /* HistoryProjectView.swift */,
-				462C99C72B67AE7400A73452 /* HistoryProjectListView.swift */,
-				46CD3B342B67E16100F5616F /* HistorySearchView.swift */,
+				46CD3B382B690BFB00F5616F /* HistoryMain */,
+				46CD3B3A2B690C3C00F5616F /* HistorySearch */,
+				46CD3B3B2B690C4E00F5616F /* HistoryRegister */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -168,6 +180,42 @@
 				46A13EC72B6579AC00B132D8 /* AnnouncementInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		46CD3B382B690BFB00F5616F /* HistoryMain */ = {
+			isa = PBXGroup;
+			children = (
+				461A4CB92B6640990090B396 /* HistoryView.swift */,
+				461A4CBB2B664B600090B396 /* HotProjectView.swift */,
+				46CD3B322B67DE9F00F5616F /* ProjectTypeButtonView.swift */,
+				461A4CC12B66AF570090B396 /* HistorySearchBarView.swift */,
+				461A4CBD2B669E290090B396 /* HistoryProjectView.swift */,
+				462C99C72B67AE7400A73452 /* HistoryProjectListView.swift */,
+			);
+			path = HistoryMain;
+			sourceTree = "<group>";
+		};
+		46CD3B3A2B690C3C00F5616F /* HistorySearch */ = {
+			isa = PBXGroup;
+			children = (
+				46CD3B342B67E16100F5616F /* HistorySearchView.swift */,
+			);
+			path = HistorySearch;
+			sourceTree = "<group>";
+		};
+		46CD3B3B2B690C4E00F5616F /* HistoryRegister */ = {
+			isa = PBXGroup;
+			children = (
+				46CD3B362B69040C00F5616F /* HistoryRegisterView.swift */,
+				46CD3B3C2B690CAB00F5616F /* HistoryRegisterNavigationBarView.swift */,
+				46CD3B3E2B6910E200F5616F /* ProjectClassificationView.swift */,
+				46CD3B402B69309D00F5616F /* ProjectCardinalNumberView.swift */,
+				46CD3B422B6933C200F5616F /* ProjectIconRegisterView.swift */,
+				46CD3B442B69372200F5616F /* ProjectHashtagRegisterView.swift */,
+				46CD3B462B69402300F5616F /* ProjectNameRegisterView.swift */,
+				46CD3B482B69467F00F5616F /* ProjectInformationRegisterView.swift */,
+			);
+			path = HistoryRegister;
 			sourceTree = "<group>";
 		};
 		F332F00C2B4C599000F0CDD0 = {
@@ -497,13 +545,16 @@
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
 				466DED932B56F18000934023 /* HomeViewModel.swift in Sources */,
 				46168F0D2B583EF40076EFD4 /* TodayILearnedView.swift in Sources */,
+				46CD3B412B69309D00F5616F /* ProjectCardinalNumberView.swift in Sources */,
 				46CD3B352B67E16100F5616F /* HistorySearchView.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				462C99C82B67AE7400A73452 /* HistoryProjectListView.swift in Sources */,
 				461A4CBC2B664B600090B396 /* HotProjectView.swift in Sources */,
 				46CD3B332B67DE9F00F5616F /* ProjectTypeButtonView.swift in Sources */,
 				461A4CBE2B669E290090B396 /* HistoryProjectView.swift in Sources */,
+				46CD3B452B69372200F5616F /* ProjectHashtagRegisterView.swift in Sources */,
 				466DED912B56F10700934023 /* HomeView.swift in Sources */,
+				46CD3B372B69040C00F5616F /* HistoryRegisterView.swift in Sources */,
 				46168F052B583DAA0076EFD4 /* UserInformationView.swift in Sources */,
 				461A4CBA2B6640990090B396 /* HistoryView.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
@@ -511,18 +562,23 @@
 				46A13EC82B6579AC00B132D8 /* AnnouncementInfo.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
+				46CD3B472B69402300F5616F /* ProjectNameRegisterView.swift in Sources */,
 				46168F112B583FA80076EFD4 /* MascotView.swift in Sources */,
 				461A4CC22B66AF570090B396 /* HistorySearchBarView.swift in Sources */,
+				46CD3B492B69467F00F5616F /* ProjectInformationRegisterView.swift in Sources */,
 				46B7B4B92B596BA200C72346 /* DateValue.swift in Sources */,
 				46168F032B583CEE0076EFD4 /* HomeNavigationBarView.swift in Sources */,
 				46168F0B2B583EBD0076EFD4 /* ToDoListView.swift in Sources */,
 				46168F092B583E7B0076EFD4 /* MainCalendarView.swift in Sources */,
+				46CD3B3F2B6910E200F5616F /* ProjectClassificationView.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				46168F072B583DF50076EFD4 /* AnnouncementView.swift in Sources */,
 				46B7B4BB2B59942200C72346 /* CalendarTask.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
+				46CD3B432B6933C200F5616F /* ProjectIconRegisterView.swift in Sources */,
 				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
 				46168F0F2B583F4E0076EFD4 /* GitHubView.swift in Sources */,
+				46CD3B3D2B690CAB00F5616F /* HistoryRegisterNavigationBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HistorySearchBarView: View {
-    @State var projectTitle: String = ""
     
     var body: some View {
         // 서치바
@@ -20,11 +19,11 @@ struct HistorySearchBarView: View {
                 .padding(.leading, 4)
                 .padding(.trailing, 8)
             
-            TextField("프로젝트명, 관련 해시태그",
-                      text: $projectTitle,
-                      prompt: Text("프로젝트명, 관련 해시태그").foregroundColor(Color.tdlGray))
+            Text("프로젝트명, 관련 해시태그")
                 .font(.system(size: 14))
+                .fontWeight(.regular)
                 .kerning(-1.0)
+                .foregroundColor(Color.tdlGray)
             
             Spacer()
         } // HStack

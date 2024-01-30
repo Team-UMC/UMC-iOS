@@ -65,3 +65,4 @@ struct HistorySearchView: View {
 #Preview {
     HistorySearchView()
 }
+

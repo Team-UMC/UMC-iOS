@@ -41,6 +41,8 @@ struct HomeView: View {
                         }
                         .padding(.top, 24)
                         .padding(.bottom, 24)
+                        
+                        Spacer()
                     } // VStack
                     
                 } // ZStack
