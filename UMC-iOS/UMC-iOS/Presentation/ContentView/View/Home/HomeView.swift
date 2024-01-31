@@ -24,8 +24,11 @@ struct HomeView: View {
                     
                     VStack(spacing: 0) {
                         HomeNavigationBarView().padding(.top, 16)
+                        
                         UserInformationView().padding(.top, 8)
+                        
                         AnnouncementView(shouldShowAnnouncementPopup: $vm.shouldShowAnnouncementPopup).padding(.top, 8)
+                        
                         MainCalendarView(currentDate: $vm.currentDate, shouldShowCalendarPopup: $vm.shouldShowCalendarPopup).padding(.top, 8)
                         ToDoListView().padding(.top, 24)
                         
