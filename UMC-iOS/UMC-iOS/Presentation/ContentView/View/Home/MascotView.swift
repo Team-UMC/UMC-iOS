@@ -27,10 +27,10 @@ struct MascotView: View {
                     .cornerRadius(12.0)
                 
                 VStack(spacing: 0) {
-                    Image("mascotImage")
+                    Image("mascotImage2")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 120)
+                        .frame(width: 154, height: 154)
                         .padding(.bottom, 5)
                 } // VStack
             } // ZStack
@@ -39,3 +39,6 @@ struct MascotView: View {
     }
 }
 
+#Preview {
+    MascotView()
+}
