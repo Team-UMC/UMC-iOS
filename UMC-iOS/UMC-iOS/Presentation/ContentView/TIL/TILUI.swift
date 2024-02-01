@@ -1,6 +1,6 @@
 //
 //  TILUI.swift
-//  UMC-iOS
+//  BulletinBoard
 //
 //  Created by 나예은 on 2024/02/01.
 //
@@ -9,10 +9,33 @@ import SwiftUI
 
 struct TILUI: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                TodoDate()
+                    .padding(.bottom, -25)
+                    .padding(.leading, 15)
+                
+                ZStack {
+                    TILList()
+                    NavigationLink(destination: TILWriteUI(title: "", subtitle: "", content: "")) {
+                        Image("TILButton")
+                            .resizable()
+                            .frame(width: 46, height: 46)
+                            .padding(.top, 600)
+                            .padding(.leading, 300)
+                    }
+                }
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 
-#Preview {
-    TILUI()
+// 미리보기
+struct TILUI_Previews: PreviewProvider {
+    static var previews: some View {
+        TILUI()
+    }
 }
+
+

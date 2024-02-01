@@ -1,6 +1,6 @@
 //
 //  TILList.swift
-//  UMC-iOS
+//  BulletinBoard
 //
 //  Created by 나예은 on 2024/02/01.
 //
@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct TILList: View {
+    @State private var contentData: [Int] = Array(0..<5)
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(contentData, id: \.self) { index in
+               TILCell(ToDoTitle: "")
+                    .listRowInsets(EdgeInsets())
+                    .listRowSeparator(.hidden)
+                    .padding(.bottom,-15)
+            }
+        }
+        .listStyle(PlainListStyle())
+        .onAppear {
+            UITableView.appearance().separatorStyle = .none
+        }
     }
-}
+    }
+
+
+
 
 #Preview {
     TILList()
 }
+
