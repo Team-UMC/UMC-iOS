@@ -15,6 +15,9 @@
 		425EF9DA2B65916200123D6D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9D92B65916200123D6D /* UserProfileView.swift */; };
 		425EF9DF2B66944300123D6D /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9DE2B66944300123D6D /* FriendsListView.swift */; };
 		425EF9E32B66CBA800123D6D /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9E22B66CBA800123D6D /* HomeNotificationView.swift */; };
+		425EF9E52B67E10D00123D6D /* MascotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9E42B67E10D00123D6D /* MascotViewModel.swift */; };
+		425EF9E72B67E21800123D6D /* UnivRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9E62B67E21800123D6D /* UnivRankingView.swift */; };
+		425EF9E92B67E23A00123D6D /* MascotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EF9E82B67E23A00123D6D /* MascotModel.swift */; };
 		4295589F2B4EE3AC00DDAE57 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */; };
 		429558A12B4EE94800DDAE57 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A02B4EE94800DDAE57 /* SelectGeneration.swift */; };
 		429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */; };
@@ -81,6 +84,9 @@
 		425EF9D92B65916200123D6D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		425EF9DE2B66944300123D6D /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		425EF9E22B66CBA800123D6D /* HomeNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
+		425EF9E42B67E10D00123D6D /* MascotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotViewModel.swift; sourceTree = "<group>"; };
+		425EF9E62B67E21800123D6D /* UnivRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnivRankingView.swift; sourceTree = "<group>"; };
+		425EF9E82B67E23A00123D6D /* MascotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotModel.swift; sourceTree = "<group>"; };
 		4295589E2B4EE3AC00DDAE57 /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		429558A02B4EE94800DDAE57 /* SelectGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
 		429558A22B4EEF8300DDAE57 /* JoinCircleBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCircleBorderButton.swift; sourceTree = "<group>"; };
@@ -224,6 +230,9 @@
 		42BAC2692B50760200EF1319 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				425EF9E42B67E10D00123D6D /* MascotViewModel.swift */,
+				425EF9E62B67E21800123D6D /* UnivRankingView.swift */,
+				425EF9E82B67E23A00123D6D /* MascotModel.swift */,
 				425EF9DD2B66940000123D6D /* HomeTopMenuView */,
 				422B49AB2B62FA0E008C533A /* ManagerModel.swift */,
 				422B49AA2B62F9C4008C533A /* ViewModel */,
@@ -576,15 +585,18 @@
 				42AFC98B2B5EEABB009FB0AC /* CirclePlusButton.swift in Sources */,
 				429558A32B4EEF8300DDAE57 /* JoinCircleBorderButton.swift in Sources */,
 				42D74B832B5E7E4600DE22D5 /* CircleFillButton.swift in Sources */,
+				425EF9E92B67E23A00123D6D /* MascotModel.swift in Sources */,
 				425EF9D82B658DB700123D6D /* SideMenuNavigationButton.swift in Sources */,
 				42D74B812B5D966800DE22D5 /* ManagerPinButton.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				42BAC2632B4FDB0400EF1319 /* LoginView.swift in Sources */,
 				42A605D42B4EBB720068D5E9 /* JoinTextFieldStyle.swift in Sources */,
 				42BAC2702B510F9200EF1319 /* ManagerCalender.swift in Sources */,
+				425EF9E52B67E10D00123D6D /* MascotViewModel.swift in Sources */,
 				F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
 				425EF9E32B66CBA800123D6D /* HomeNotificationView.swift in Sources */,
+				425EF9E72B67E21800123D6D /* UnivRankingView.swift in Sources */,
 				429558AB2B4F032100DDAE57 /* JoinAgreement.swift in Sources */,
 				425EF9D62B650E1B00123D6D /* HomeSideView.swift in Sources */,
 				42A605CD2B4D30B80068D5E9 /* JoinNavigationButton.swift in Sources */,
