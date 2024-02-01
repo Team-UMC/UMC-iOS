@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		4212F1352B5CE991008C68C0 /* SettingBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212F1342B5CE990008C68C0 /* SettingBackButton.swift */; };
 		422B49A92B62F9BB008C533A /* GenerationPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B49A82B62F9BB008C533A /* GenerationPartViewModel.swift */; };
 		422B49AC2B62FA0E008C533A /* ManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B49AB2B62FA0E008C533A /* ManagerModel.swift */; };
@@ -301,7 +302,6 @@
 			children = (
 				42BAC2692B50760200EF1319 /* Home */,
 				F332F0482B4C5A1800F0CDD0 /* Utils */,
-				423DC0542B4D29D500033A7D /* Login */,
 				F332F0452B4C59E900F0CDD0 /* ContentView */,
 			);
 			path = Presentation;
@@ -560,8 +560,6 @@
 				42BAC2702B510F9200EF1319 /* ManagerCalender.swift in Sources */,
 				F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
-				429558AB2B4F032100DDAE57 /* JoinAgreement.swift in Sources */,
-				42A605CD2B4D30B80068D5E9 /* JoinNavigationButton.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
 				42BAC26E2B510F4300EF1319 /* ManagerPin.swift in Sources */,
@@ -743,16 +741,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UMC-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = UF85X5VUH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -774,16 +769,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UMC-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = UF85X5VUH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,7 +815,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UF85X5VUH7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -859,7 +850,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UF85X5VUH7;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kyungsoo.UMC-iOSUITests";
