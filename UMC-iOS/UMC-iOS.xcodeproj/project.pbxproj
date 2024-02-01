@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		448F64512B6B8AB900880A85 /* BulletinBoardContentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64502B6B8AB900880A85 /* BulletinBoardContentDetail.swift */; };
+		448F64532B6B8ACB00880A85 /* DetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64522B6B8ACB00880A85 /* DetailButton.swift */; };
+		448F64552B6B8ADB00880A85 /* BulletinBoardContentDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64542B6B8ADB00880A85 /* BulletinBoardContentDetailUI.swift */; };
+		448F64572B6B8AEB00880A85 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64562B6B8AEB00880A85 /* Comment.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F01A2B4C599000F0CDD0 /* ContentView.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		448F64502B6B8AB900880A85 /* BulletinBoardContentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardContentDetail.swift; sourceTree = "<group>"; };
+		448F64522B6B8ACB00880A85 /* DetailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButton.swift; sourceTree = "<group>"; };
+		448F64542B6B8ADB00880A85 /* BulletinBoardContentDetailUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardContentDetailUI.swift; sourceTree = "<group>"; };
+		448F64562B6B8AEB00880A85 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01A2B4C599000F0CDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		448F644F2B6B8AAA00880A85 /* ContentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				448F64502B6B8AB900880A85 /* BulletinBoardContentDetail.swift */,
+				448F64522B6B8ACB00880A85 /* DetailButton.swift */,
+				448F64542B6B8ADB00880A85 /* BulletinBoardContentDetailUI.swift */,
+				448F64562B6B8AEB00880A85 /* Comment.swift */,
+			);
+			path = ContentDetail;
+			sourceTree = "<group>";
+		};
 		F332F00C2B4C599000F0CDD0 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +192,7 @@
 		F332F0452B4C59E900F0CDD0 /* ContentView */ = {
 			isa = PBXGroup;
 			children = (
+				448F644F2B6B8AAA00880A85 /* ContentDetail */,
 				F332F0472B4C59FB00F0CDD0 /* ViewModel */,
 				F332F0462B4C59F800F0CDD0 /* View */,
 			);
@@ -404,12 +424,16 @@
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
 				F332F04D2B4C5A4000F0CDD0 /* ContentViewModel.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
+				448F64572B6B8AEB00880A85 /* Comment.swift in Sources */,
 				F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */,
+				448F64532B6B8ACB00880A85 /* DetailButton.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
+				448F64552B6B8ADB00880A85 /* BulletinBoardContentDetailUI.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
+				448F64512B6B8AB900880A85 /* BulletinBoardContentDetail.swift in Sources */,
 				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
