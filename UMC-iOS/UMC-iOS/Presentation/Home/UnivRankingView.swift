@@ -138,8 +138,13 @@ struct UnivRankingView:View {
                                 .cornerRadius(12)
                                 .padding(4)
                             Image(systemName: "building")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .clipShape(Circle())
                             Text("아주대학교")
+                                .font(.system(size: 16, weight: .semibold))
                             Text("1123point")
+                                .font(.system(size: 12))
                             
                         }
                         .frame(width: 98, height: 140)
