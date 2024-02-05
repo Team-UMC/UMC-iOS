@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44190BA92B70C13E002C34E2 /* BulletinBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44190BA82B70C13E002C34E2 /* BulletinBoardViewModel.swift */; };
+		448F64242B6B504A00880A85 /* BulletinBoardFirstBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64232B6B504A00880A85 /* BulletinBoardFirstBtn.swift */; };
+		448F64262B6B505F00880A85 /* BulletinBoardSecondBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64252B6B505F00880A85 /* BulletinBoardSecondBtn.swift */; };
+		448F64282B6B507200880A85 /* UserContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64272B6B507200880A85 /* UserContentPreList.swift */; };
+		448F642A2B6B508600880A85 /* BulletinBoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64292B6B508600880A85 /* BulletinBoardList.swift */; };
+		448F642C2B6B509A00880A85 /* BulletinBoardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F642B2B6B509A00880A85 /* BulletinBoardUI.swift */; };
 		44190BAD2B70CB6B002C34E2 /* BulletinBoardSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44190BAC2B70CB6B002C34E2 /* BulletinBoardSearchViewModel.swift */; };
 		448F643A2B6B553A00880A85 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64392B6B553A00880A85 /* SearchBar.swift */; };
 		448F643C2B6B555200880A85 /* BulletinBoardSearchUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F643B2B6B555200880A85 /* BulletinBoardSearchUI.swift */; };
@@ -140,6 +146,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44190BA82B70C13E002C34E2 /* BulletinBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewModel.swift; sourceTree = "<group>"; };
+		448F64232B6B504A00880A85 /* BulletinBoardFirstBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardFirstBtn.swift; sourceTree = "<group>"; };
+		448F64252B6B505F00880A85 /* BulletinBoardSecondBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardSecondBtn.swift; sourceTree = "<group>"; };
+		448F64272B6B507200880A85 /* UserContentPreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentPreList.swift; sourceTree = "<group>"; };
+		448F64292B6B508600880A85 /* BulletinBoardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardList.swift; sourceTree = "<group>"; };
+		448F642B2B6B509A00880A85 /* BulletinBoardUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardUI.swift; sourceTree = "<group>"; };
 		44190BAC2B70CB6B002C34E2 /* BulletinBoardSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardSearchViewModel.swift; sourceTree = "<group>"; };
 		448F64392B6B553A00880A85 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		448F643B2B6B555200880A85 /* BulletinBoardSearchUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardSearchUI.swift; sourceTree = "<group>"; };
@@ -284,6 +296,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		448F64222B6B502B00880A85 /* BulletinBoardUI */ = {
+			isa = PBXGroup;
+			children = (
+				448F64232B6B504A00880A85 /* BulletinBoardFirstBtn.swift */,
+				448F64252B6B505F00880A85 /* BulletinBoardSecondBtn.swift */,
+				448F64272B6B507200880A85 /* UserContentPreList.swift */,
+				448F64292B6B508600880A85 /* BulletinBoardList.swift */,
+				448F642B2B6B509A00880A85 /* BulletinBoardUI.swift */,
+			);
+			path = BulletinBoardUI;
 		448F64382B6B552900880A85 /* BulletinBoardSearchUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +466,7 @@
 		F332F0452B4C59E900F0CDD0 /* ContentView */ = {
 			isa = PBXGroup;
 			children = (
+				448F64222B6B502B00880A85 /* BulletinBoardUI */,
 				448F64382B6B552900880A85 /* BulletinBoardSearchUI */,
 				F332F0472B4C59FB00F0CDD0 /* ViewModel */,
 				F332F0462B4C59F800F0CDD0 /* View */,
@@ -463,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				F332F04C2B4C5A4000F0CDD0 /* ContentViewModel.swift */,
+				44190BA82B70C13E002C34E2 /* BulletinBoardViewModel.swift */,
 				44190BAC2B70CB6B002C34E2 /* BulletinBoardSearchViewModel.swift */,
 			);
 			path = ViewModel;
@@ -1003,6 +1027,8 @@
 				F391ADAD2B6E4111006ECF1D /* Comment.swift in Sources */,
 				44F71E062B71352D00D5500A /* TILUI.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
+				448F64242B6B504A00880A85 /* BulletinBoardFirstBtn.swift in Sources */,
+				448F642C2B6B509A00880A85 /* BulletinBoardUI.swift in Sources */,
 				F3CE1BC92B6D395C00463130 /* CircleFillButton.swift in Sources */,
 				424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */,
 				F391ADAB2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift in Sources */,
@@ -1023,6 +1049,12 @@
 				F3CE1B732B6D206300463130 /* HotProjectView.swift in Sources */,
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
+				44190BA92B70C13E002C34E2 /* BulletinBoardViewModel.swift in Sources */,
+				448F642A2B6B508600880A85 /* BulletinBoardList.swift in Sources */,
+				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
+				448F64262B6B505F00880A85 /* BulletinBoardSecondBtn.swift in Sources */,
+				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
+				448F64282B6B507200880A85 /* UserContentPreList.swift in Sources */,
 				F3CE1B712B6D206300463130 /* HistoryView.swift in Sources */,
 				F3CE1B4C2B6D17D000463130 /* RankView.swift in Sources */,
 				F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */,
