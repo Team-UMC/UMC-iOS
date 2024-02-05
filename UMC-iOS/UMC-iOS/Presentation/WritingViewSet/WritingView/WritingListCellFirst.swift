@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WritingListCellFirst: View {
+    @StateObject private var viewModel =  WritingListCellFirstViewModel()
     var body: some View {
         
         HStack(spacing: 0) {
@@ -23,6 +24,7 @@ struct WritingListCellFirst: View {
             
             Button {
                 print("iconAddBtn Tapped")
+                viewModel.presentFilePicker()
             } label: {
                 Image("iconAddButtonImage")
                     .resizable()
@@ -36,7 +38,9 @@ struct WritingListCellFirst: View {
     }
 }
 
-#Preview {
-    WritingListCellFirst()
+struct WritingListCellFirst_Previews: PreviewProvider {
+    static var previews: some View {
+        WritingListCellFirst()
+    }
 }
 

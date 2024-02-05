@@ -8,31 +8,29 @@
 import SwiftUI
 
 struct WritingListCellSecond: View {
-    @State private var title: String = ""
+    @StateObject private var viewModel = WritingListCellSecondViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 TextField("제목",
-                          text: $title,
+                          text: $viewModel.title,
                           prompt: Text("제목")
-                    .font(.system(size: 18))
-                    .fontWeight(.semibold)
-                    .kerning(-1)
-                    .foregroundColor(Color.buttonDisabled))
-                .padding(.horizontal, 8)
-                .padding(.vertical, 6.5)
+                            .font(.system(size: 18))
+                            .fontWeight(.semibold)
+                            .kerning(-1)
+                            .foregroundColor(Color.buttonDisabled))
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 6.5)
                 
                 Spacer()
             }
-            
-            
-        } 
+        }
         .padding(.horizontal, 16.5)
         .padding(.vertical, 8)
-        
     }
 }
+
 
 #Preview {
     WritingListCellSecond()
