@@ -15,8 +15,10 @@
 		42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3D2B70D81C000C2025 /* Token.swift */; };
 		42CDBF412B70D84F000C2025 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF402B70D84F000C2025 /* User.swift */; };
 		42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF422B70D932000C2025 /* UserViewModel.swift */; };
-		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
-		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
+		44397CC22B71805E007CE3B5 /* MyContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CBF2B71805D007CE3B5 /* MyContentList.swift */; };
+		44397CC32B71805E007CE3B5 /* UserMyContentUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CC02B71805E007CE3B5 /* UserMyContentUI.swift */; };
+		44397CC42B71805E007CE3B5 /* MyContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CC12B71805E007CE3B5 /* MyContentPreList.swift */; };
+		44397CC62B718068007CE3B5 /* MyContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CC52B718068007CE3B5 /* MyContentViewModel.swift */; };
 		44F71E042B71352D00D5500A /* TILList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71DFF2B71352C00D5500A /* TILList.swift */; };
 		44F71E052B71352D00D5500A /* TILWriteUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E002B71352C00D5500A /* TILWriteUI.swift */; };
 		44F71E062B71352D00D5500A /* TILUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E012B71352C00D5500A /* TILUI.swift */; };
@@ -145,8 +147,10 @@
 		42CDBF3D2B70D81C000C2025 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		42CDBF402B70D84F000C2025 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42CDBF422B70D932000C2025 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
-		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		44397CBF2B71805D007CE3B5 /* MyContentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentList.swift; sourceTree = "<group>"; };
+		44397CC02B71805E007CE3B5 /* UserMyContentUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMyContentUI.swift; sourceTree = "<group>"; };
+		44397CC12B71805E007CE3B5 /* MyContentPreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentPreList.swift; sourceTree = "<group>"; };
+		44397CC52B718068007CE3B5 /* MyContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentViewModel.swift; sourceTree = "<group>"; };
 		44F71DFF2B71352C00D5500A /* TILList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILList.swift; sourceTree = "<group>"; };
 		44F71E002B71352C00D5500A /* TILWriteUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILWriteUI.swift; sourceTree = "<group>"; };
 		44F71E012B71352C00D5500A /* TILUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILUI.swift; sourceTree = "<group>"; };
@@ -285,6 +289,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		44397CBC2B718025007CE3B5 /* MyContent */ = {
+			isa = PBXGroup;
+			children = (
+				44397CBE2B718034007CE3B5 /* ModeoView */,
+				44397CBD2B71802E007CE3B5 /* View */,
+			);
+			path = MyContent;
+			sourceTree = "<group>";
+		};
+		44397CBD2B71802E007CE3B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44397CBF2B71805D007CE3B5 /* MyContentList.swift */,
+				44397CC12B71805E007CE3B5 /* MyContentPreList.swift */,
+				44397CC02B71805E007CE3B5 /* UserMyContentUI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44397CBE2B718034007CE3B5 /* ModeoView */ = {
+			isa = PBXGroup;
+			children = (
+				44397CC52B718068007CE3B5 /* MyContentViewModel.swift */,
+			);
+			path = ModeoView;
+			sourceTree = "<group>";
+		};
 		44F71DFD2B71351700D5500A /* TodayILearned */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +439,7 @@
 		F332F0442B4C59E000F0CDD0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				44397CBC2B718025007CE3B5 /* MyContent */,
 				44F71E092B7139FA00D5500A /* MyWriteComment */,
 				44F71DFD2B71351700D5500A /* TodayILearned */,
 				F391ADA52B6E4035006ECF1D /* ContentDetail */,
@@ -977,6 +1009,7 @@
 				44F71E052B71352D00D5500A /* TILWriteUI.swift in Sources */,
 				F391AD8D2B6E2FD5006ECF1D /* ToDoDate.swift in Sources */,
 				F391AD8B2B6E2FD5006ECF1D /* ToDoListUI.swift in Sources */,
+				44397CC22B71805E007CE3B5 /* MyContentList.swift in Sources */,
 				F3CE1AC52B6D0D7000463130 /* JoinViewModel.swift in Sources */,
 				F3CE1AC92B6D0D7000463130 /* JoinCircleBorderButton.swift in Sources */,
 				F3CE1B762B6D206300463130 /* HistoryRegisterNavigationBarView.swift in Sources */,
@@ -1028,6 +1061,7 @@
 				F3CE1AC22B6D0D7000463130 /* SelectParts.swift in Sources */,
 				F3CE1B6F2B6D206300463130 /* ProjectTypeButtonView.swift in Sources */,
 				44F71E082B71352D00D5500A /* TILCell.swift in Sources */,
+				44397CC42B71805E007CE3B5 /* MyContentPreList.swift in Sources */,
 				F3CE1B4F2B6D185900463130 /* HomeViewModel.swift in Sources */,
 				F3CE1B452B6D17D000463130 /* UserInformationView.swift in Sources */,
 				F391ADA92B6E40E8006ECF1D /* BulletinBoardContentDetail.swift in Sources */,
@@ -1036,6 +1070,7 @@
 				44F71E0D2B713A1D00D5500A /* MyWriteSearch.swift in Sources */,
 				F3CE1B7B2B6D206300463130 /* ProjectInformationRegisterView.swift in Sources */,
 				F3CE1B4B2B6D17D000463130 /* HomeNavigationBarView.swift in Sources */,
+				44397CC32B71805E007CE3B5 /* UserMyContentUI.swift in Sources */,
 				F391AD902B6E2FD5006ECF1D /* ToDoListCell.swift in Sources */,
 				F391AD8C2B6E2FD5006ECF1D /* ToDoEditSecondActionSheet.swift in Sources */,
 				F391AD9B2B6E3D07006ECF1D /* ButtonWithIcon.swift in Sources */,
@@ -1045,6 +1080,7 @@
 				F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,
+				44397CC62B718068007CE3B5 /* MyContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
