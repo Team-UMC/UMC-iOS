@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44190BA52B70BEA2002C34E2 /* MyComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44190BA42B70BEA2002C34E2 /* MyComment.swift */; };
+		44190BA72B70BEBC002C34E2 /* MywriteSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44190BA62B70BEBC002C34E2 /* MywriteSearch.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F01A2B4C599000F0CDD0 /* ContentView.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
@@ -114,6 +116,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44190BA42B70BEA2002C34E2 /* MyComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComment.swift; sourceTree = "<group>"; };
+		44190BA62B70BEBC002C34E2 /* MywriteSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MywriteSearch.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01A2B4C599000F0CDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -231,6 +235,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44190BA12B70BE79002C34E2 /* MywiiteComment */ = {
+			isa = PBXGroup;
+			children = (
+				44190BA32B70BE94002C34E2 /* View */,
+				44190BA22B70BE8A002C34E2 /* ViewModel */,
+			);
+			path = MywiiteComment;
+			sourceTree = "<group>";
+		};
+		44190BA22B70BE8A002C34E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44190BA32B70BE94002C34E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44190BA42B70BEA2002C34E2 /* MyComment.swift */,
+				44190BA62B70BEBC002C34E2 /* MywriteSearch.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F332F00C2B4C599000F0CDD0 = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +337,7 @@
 		F332F0442B4C59E000F0CDD0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				44190BA12B70BE79002C34E2 /* MywiiteComment */,
 				F391AD942B6E3C72006ECF1D /* WritingView */,
 				F3CE1BCA2B6D3E6500463130 /* TodoList */,
 				F3CE1BAE2B6D391100463130 /* HomeManager */,
@@ -858,6 +888,7 @@
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F3CE1B752B6D206300463130 /* HistoryRegisterView.swift in Sources */,
 				F3CE1B722B6D206300463130 /* HistoryProjectListView.swift in Sources */,
+				44190BA72B70BEBC002C34E2 /* MywriteSearch.swift in Sources */,
 				F3CE1B792B6D206300463130 /* ProjectHashtagRegisterView.swift in Sources */,
 				F3CE1B702B6D206300463130 /* HistoryProjectView.swift in Sources */,
 				F3CE1B772B6D206300463130 /* ProjectIconRegisterView.swift in Sources */,
@@ -903,6 +934,7 @@
 				F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,
+				44190BA52B70BEA2002C34E2 /* MyComment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
