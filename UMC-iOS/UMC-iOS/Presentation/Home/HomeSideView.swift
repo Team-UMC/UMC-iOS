@@ -57,7 +57,23 @@ struct SideMenuViewContents: View {
                     }
                     Spacer().frame(height: 16)
                     HStack{
-                        ProfileImageView()
+                        HStack{
+                            Image(systemName:"person.crop.circle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 60, height: 60)
+                                
+                                .cornerRadius(50)
+                            VStack(alignment: .leading){
+                                Text("델로")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.black)
+                                
+                                Text("인하대학교")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.black.opacity(0.5))
+                            }
+                        }
                         Spacer().frame(width: 58)
                         SideMenuNavigationButton(destination: UserProfileView(), MenuName: "프로필", ImageName: "person.crop.circle.fill")
                         Spacer().frame(width: 16)
@@ -111,26 +127,4 @@ struct SideMenuViewContents: View {
 
         }
     }
-    
-    
-    func ProfileImageView() -> some View{
-        HStack{
-            Image(systemName:"person.crop.circle")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 60, height: 60)
-                
-                .cornerRadius(50)
-            VStack(alignment: .leading){
-                Text("델로")
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundColor(.black)
-                
-                Text("인하대학교")
-                    .font(.system(size: 12))
-                    .foregroundColor(.black.opacity(0.5))
-            }
-        }
-    }
-        
 }
