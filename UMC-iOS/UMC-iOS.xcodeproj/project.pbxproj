@@ -15,8 +15,10 @@
 		42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3D2B70D81C000C2025 /* Token.swift */; };
 		42CDBF412B70D84F000C2025 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF402B70D84F000C2025 /* User.swift */; };
 		42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF422B70D932000C2025 /* UserViewModel.swift */; };
-		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
-		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
+		44397CD42B71A97A007CE3B5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CD32B71A97A007CE3B5 /* CommentViewModel.swift */; };
+		44397CD62B71A990007CE3B5 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CD52B71A990007CE3B5 /* ContentDetailViewModel.swift */; };
+		44397CD82B71A99F007CE3B5 /* DetailButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CD72B71A99F007CE3B5 /* DetailButtonViewModel.swift */; };
+		44397CDA2B71A9AE007CE3B5 /*  CommentInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CD92B71A9AE007CE3B5 /*  CommentInputViewModel.swift */; };
 		44F71E042B71352D00D5500A /* TILList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71DFF2B71352C00D5500A /* TILList.swift */; };
 		44F71E052B71352D00D5500A /* TILWriteUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E002B71352C00D5500A /* TILWriteUI.swift */; };
 		44F71E062B71352D00D5500A /* TILUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E012B71352C00D5500A /* TILUI.swift */; };
@@ -145,8 +147,10 @@
 		42CDBF3D2B70D81C000C2025 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		42CDBF402B70D84F000C2025 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42CDBF422B70D932000C2025 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
-		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		44397CD32B71A97A007CE3B5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		44397CD52B71A990007CE3B5 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
+		44397CD72B71A99F007CE3B5 /* DetailButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonViewModel.swift; sourceTree = "<group>"; };
+		44397CD92B71A9AE007CE3B5 /*  CommentInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CommentInputViewModel.swift"; sourceTree = "<group>"; };
 		44F71DFF2B71352C00D5500A /* TILList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILList.swift; sourceTree = "<group>"; };
 		44F71E002B71352C00D5500A /* TILWriteUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILWriteUI.swift; sourceTree = "<group>"; };
 		44F71E012B71352C00D5500A /* TILUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILUI.swift; sourceTree = "<group>"; };
@@ -283,6 +287,17 @@
 				42CDBF402B70D84F000C2025 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		44397CD22B71A956007CE3B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44397CD32B71A97A007CE3B5 /* CommentViewModel.swift */,
+				44397CD52B71A990007CE3B5 /* ContentDetailViewModel.swift */,
+				44397CD72B71A99F007CE3B5 /* DetailButtonViewModel.swift */,
+				44397CD92B71A9AE007CE3B5 /*  CommentInputViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		44F71DFD2B71351700D5500A /* TodayILearned */ = {
@@ -566,6 +581,7 @@
 		F391ADA52B6E4035006ECF1D /* ContentDetail */ = {
 			isa = PBXGroup;
 			children = (
+				44397CD22B71A956007CE3B5 /* ViewModel */,
 				F391ADA62B6E404F006ECF1D /* View */,
 			);
 			path = ContentDetail;
@@ -962,12 +978,15 @@
 				F3CE1B532B6D189000463130 /* AnnouncementInfo.swift in Sources */,
 				42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */,
 				F3CE1AC32B6D0D7000463130 /* SelectPosition.swift in Sources */,
+				44397CD42B71A97A007CE3B5 /* CommentViewModel.swift in Sources */,
 				F391ADB12B6E4138006ECF1D /* DetailButton.swift in Sources */,
 				F391AD9C2B6E3D07006ECF1D /* WritingListCell.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
 				F391ADAF2B6E4120006ECF1D /* CommetAddbar.swift in Sources */,
 				F3CE1BBF2B6D394C00463130 /* ManagerPinButton.swift in Sources */,
+				44397CDA2B71A9AE007CE3B5 /*  CommentInputViewModel.swift in Sources */,
+				44397CD82B71A99F007CE3B5 /* DetailButtonViewModel.swift in Sources */,
 				F3CE1BC62B6D395C00463130 /* CircleCheckButton.swift in Sources */,
 				F3CE1B542B6D189000463130 /* CalendarTask.swift in Sources */,
 				F3CE1ABE2B6D0D7000463130 /* JoinAgreement.swift in Sources */,
@@ -1001,6 +1020,7 @@
 				F391AD8F2B6E2FD5006ECF1D /* ToDoListAdd.swift in Sources */,
 				F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */,
 				F391AD9D2B6E3D07006ECF1D /* WritingList.swift in Sources */,
+				44397CD62B71A990007CE3B5 /* ContentDetailViewModel.swift in Sources */,
 				F3CE1B732B6D206300463130 /* HotProjectView.swift in Sources */,
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,

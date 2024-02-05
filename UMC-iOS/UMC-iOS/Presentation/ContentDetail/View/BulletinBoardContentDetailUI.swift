@@ -1,8 +1,8 @@
 //
 //  BulletinBoardContentDetailUI.swift
-//  UMC-iOS
+//  BulletinBoard
 //
-//  Created by Kyungsoo Lee on 2/3/24.
+//  Created by 나예은 on 2024/02/01.
 //
 
 import SwiftUI
@@ -15,10 +15,10 @@ struct BulletinBoardContentDetailUI: View {
             ForEach(contentData, id: \.self) { index in
                 Comment()
             }
-
+            
         }
         .listStyle(PlainListStyle())
-
+        
         //TextField
         CommetAddbar(text: .constant(""))
     }
@@ -27,3 +27,4 @@ struct BulletinBoardContentDetailUI: View {
 #Preview {
     BulletinBoardContentDetailUI()
 }
+
