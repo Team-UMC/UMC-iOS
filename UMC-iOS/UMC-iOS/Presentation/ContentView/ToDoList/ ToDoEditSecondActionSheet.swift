@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ToDoEditSecondActionSheet: View {
     
-    @State var hour : String
-    @State var Minute : String
+    @State private var editActionSheetVisible = false
+    @StateObject private var toDoListCellViewModel = ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00")
     
     var body: some View {
         ZStack{
@@ -55,9 +55,7 @@ struct ToDoEditSecondActionSheet: View {
                     }
                     .padding(.trailing,20)
                     
-                    
-                    
-                    TextField("00", text: $hour)
+                    TextField("00", text: $toDoListCellViewModel.hour)
                         .padding(EdgeInsets(top:11, leading: 13.5, bottom: 11, trailing: 13.5))
                         .frame(width: 44,height: 44)
                         .background(.white)
@@ -72,7 +70,7 @@ struct ToDoEditSecondActionSheet: View {
                         .bold()
                         .padding(.trailing,20)
                     
-                    TextField("00", text: $Minute)
+                    TextField("00", text: $toDoListCellViewModel.minute)
                         .padding(EdgeInsets(top:11, leading: 13.5, bottom: 11, trailing: 13.5))
                         .frame(width: 44,height: 44)
                         .background(.white)
@@ -102,7 +100,7 @@ struct ToDoEditSecondActionSheet: View {
                     .padding(.trailing,12)
                     
                     Button(action: {
-                        
+                        editActionSheetVisible.toggle()
                     }) {
                         Text("완료")
                             .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
@@ -112,6 +110,9 @@ struct ToDoEditSecondActionSheet: View {
                             .bold()
                             .cornerRadius(12)
                     }
+                    .sheet(isPresented: $editActionSheetVisible) {
+                        ToDoEditSecondActionSheet()
+                    }
                 }
             }
         }
@@ -119,7 +120,6 @@ struct ToDoEditSecondActionSheet: View {
 }
 
 #Preview {
-    ToDoEditSecondActionSheet(hour: "00", Minute: "00")
+    ToDoEditSecondActionSheet()
 }
-
 

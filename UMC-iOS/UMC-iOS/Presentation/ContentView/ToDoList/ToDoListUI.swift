@@ -16,7 +16,7 @@ struct ToDoListUI: View {
                 .padding(.bottom,-10)
                 
             ToDoList()
-            ToDoListAdd(ToDoTitle: "할일을 입력해주세요.")
+            ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00"))
             
             
             Image("Underbar")

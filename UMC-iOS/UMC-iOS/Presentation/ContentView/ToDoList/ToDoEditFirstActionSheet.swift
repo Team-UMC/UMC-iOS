@@ -24,7 +24,7 @@ struct ToDoEditFirstActionSheet: View {
                     ToDoEditSheet()
 
                     HStack(spacing: 52) {
-                        NavigationLink(destination: ToDoEditSecondActionSheet(hour: "00", Minute: "00")) {
+                        NavigationLink(destination: ToDoEditSecondActionSheet()) {
                             IconWithText(imageName: "ClockIcon", text: "시간 설정")
                         }
 
@@ -53,8 +53,7 @@ struct ToDoEditFirstActionSheet: View {
 
 struct ToDoEditFirstActionSheet_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoEditFirstActionSheet()
+        ToDoEditFirstActionSheet(viewModel: ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00"))
     }
 }
-
 
