@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
+		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F01A2B4C599000F0CDD0 /* ContentView.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
@@ -43,7 +45,6 @@
 		F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */; };
 		F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */; };
 		F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A832B6CF2D900463130 /* UserProfileView.swift */; };
-		F3CE1AAB2B6D0D5B00463130 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAA2B6D0D5B00463130 /* LoginView.swift */; };
 		F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */; };
 		F3CE1ABE2B6D0D7000463130 /* JoinAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */; };
 		F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */; };
@@ -119,6 +120,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
+		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01A2B4C599000F0CDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,7 +161,6 @@
 		F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButtonSet.swift; sourceTree = "<group>"; };
 		F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEdit.swift; sourceTree = "<group>"; };
 		F3CE1A832B6CF2D900463130 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		F3CE1AAA2B6D0D5B00463130 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = "../../../../../../temp/iOS temp/SocialLogin/UMC-iOS/UMC-iOS/Presentation/Login/LoginView.swift"; sourceTree = "<group>"; };
 		F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUniv.swift; sourceTree = "<group>"; };
 		F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinAgreement.swift; sourceTree = "<group>"; };
 		F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				F3CE1BC02B6D395C00463130 /* CirclePlusButton.swift */,
 				F3CE1BC22B6D395C00463130 /* DropDownPicker.swift */,
 				F3CE1BC32B6D395C00463130 /* SettingBackButton.swift */,
+				424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */,
 				F332F04E2B4C5A4700F0CDD0 /* Extension */,
 				F332F0492B4C5A2E00F0CDD0 /* DummyUtilView.swift */,
 			);
@@ -552,7 +555,6 @@
 				F3CE1AB72B6D0D7000463130 /* Helper */,
 				F3CE1AAC2B6D0D7000463130 /* JoinView */,
 				F3CE1AB52B6D0D7000463130 /* ViewModel */,
-				F3CE1AAA2B6D0D5B00463130 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -613,6 +615,7 @@
 				F3CE1B3D2B6D17D000463130 /* TodayILearnedView.swift */,
 				F3CE1B402B6D17D000463130 /* ToDoListView.swift */,
 				F3CE1B3B2B6D17D000463130 /* UserInformationView.swift */,
+				424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -857,6 +860,7 @@
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
 				F3CE1B472B6D17D000463130 /* TodayILearnedView.swift in Sources */,
 				F3CE1AC82B6D0D7000463130 /* JoinNavigationButton.swift in Sources */,
+				424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */,
 				F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */,
 				F3CE1B782B6D206300463130 /* ProjectClassificationView.swift in Sources */,
 				F391AD9E2B6E3D07006ECF1D /* WritingButton.swift in Sources */,
@@ -868,7 +872,6 @@
 				F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */,
 				F3CE1B532B6D189000463130 /* AnnouncementInfo.swift in Sources */,
 				F3CE1AC32B6D0D7000463130 /* SelectPosition.swift in Sources */,
-				F3CE1AAB2B6D0D5B00463130 /* LoginView.swift in Sources */,
 				F391ADB12B6E4138006ECF1D /* DetailButton.swift in Sources */,
 				F391AD9C2B6E3D07006ECF1D /* WritingListCell.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
@@ -889,6 +892,7 @@
 				F391ADAD2B6E4111006ECF1D /* Comment.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
 				F3CE1BC92B6D395C00463130 /* CircleFillButton.swift in Sources */,
+				424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */,
 				F391ADAB2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F3CE1B752B6D206300463130 /* HistoryRegisterView.swift in Sources */,

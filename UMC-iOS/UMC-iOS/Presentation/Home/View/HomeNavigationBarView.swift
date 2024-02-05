@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeNavigationBarView: View {
+    @Binding var presentSideMenu: Bool // 상태 바인딩
     // 버튼 이름 리스트
     let imageNames: [String] = ["menuButtonImage",
                                 "reportButtonImage",
@@ -18,6 +19,7 @@ struct HomeNavigationBarView: View {
         HStack {
             Button { // 왼쪽 메뉴 버튼
                 print("\(imageNames[0]) Clicked")
+                presentSideMenu.toggle()
             } label: {
                 Image(imageNames[0])
                     .resizable()
