@@ -1,18 +1,19 @@
 //
-//  ToDoList.swift
+//  TILList.swift
 //  BulletinBoard
 //
-//  Created by 나예은 on 2024/01/31.
+//  Created by 나예은 on 2024/02/01.
 //
 
 import SwiftUI
 
-struct ToDoList: View {
+struct TILList: View {
     @State private var contentData: [Int] = Array(0..<5)
     var body: some View {
         List {
             ForEach(contentData, id: \.self) { index in
-                ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "🌕"))
+               TILCell(ToDoTitle: "")
+                    .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                     .padding(.bottom,-15)
             }
@@ -25,8 +26,9 @@ struct ToDoList: View {
     }
 
 
-#Preview {
-    ToDoList()
-}
 
+
+#Preview {
+    TILList()
+}
 
