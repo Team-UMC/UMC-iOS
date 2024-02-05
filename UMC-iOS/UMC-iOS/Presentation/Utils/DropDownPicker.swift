@@ -21,6 +21,7 @@ struct DropDownPicker: View {
     var height: CGFloat = 40
     var minHeight: CGFloat = 500
     var fontSize: CGFloat = 18
+    var corner: CGFloat = 12
     var placeholder: String = ""
     var BackColor: Color = .white
     var TextColor: Color = .black
@@ -74,11 +75,11 @@ struct DropDownPicker: View {
             }
             .clipped()
             .background(BackColor)
-            .cornerRadius(12)
+            .cornerRadius(corner)
             .overlay (
                 Group{
                     if border{
-                        RoundedRectangle(cornerRadius: 10)
+                        RoundedRectangle(cornerRadius: corner-2)
                             .stroke(.gray)
                     }
                 }
