@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct BulletinBoaardSearchResultUI: View {
-    @State private var searchText = ""
+    @StateObject private var viewModel = BulletinBoardViewModel()
     @State private var searchColor = "barSecond"
     
     var body: some View {
         ZStack {
             VStack {
                 HStack{
-                    SearchBar(text: $searchText, color: $searchColor)
+                    SearchBar(color: $searchColor)
                         .padding(.top, 20)
                         .padding(.leading,-10)
                     Button("취소") {
@@ -28,7 +28,7 @@ struct BulletinBoaardSearchResultUI: View {
                     .background(.clear)
                 }
                 // 게시글 리스트
-                BulletinBoardList()
+                BulletinBoardList(BulletinBoardList: viewModel.filteredList)
                     .padding(.leading, 16)
                     .padding(.trailing, 16)
             }

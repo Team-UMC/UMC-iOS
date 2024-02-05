@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct BulletinBoardSearchUI: View {
-    @State private var searchText = ""
+    @StateObject private var viewModel = BulletinBoardViewModel()
     @State private var searchColor = "searchbar"
     var body: some View {
         VStack {
             HStack{
-                SearchBar(text: $searchText, color: $searchColor)
+                SearchBar(color: $searchColor)
                     .padding(.top, 20)
                     .onTapGesture {
                         hideKeyboard()
