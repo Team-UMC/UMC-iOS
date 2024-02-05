@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44190BAB2B70C59B002C34E2 /* BulletinBoardSearchModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44190BAA2B70C59B002C34E2 /* BulletinBoardSearchModelView.swift */; };
 		448F643A2B6B553A00880A85 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64392B6B553A00880A85 /* SearchBar.swift */; };
 		448F643C2B6B555200880A85 /* BulletinBoardSearchUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F643B2B6B555200880A85 /* BulletinBoardSearchUI.swift */; };
 		448F643E2B6B556B00880A85 /* BulletinBoaardSearchResultUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F643D2B6B556B00880A85 /* BulletinBoaardSearchResultUI.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44190BAA2B70C59B002C34E2 /* BulletinBoardSearchModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardSearchModelView.swift; sourceTree = "<group>"; };
 		448F64392B6B553A00880A85 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		448F643B2B6B555200880A85 /* BulletinBoardSearchUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardSearchUI.swift; sourceTree = "<group>"; };
 		448F643D2B6B556B00880A85 /* BulletinBoaardSearchResultUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoaardSearchResultUI.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F332F04C2B4C5A4000F0CDD0 /* ContentViewModel.swift */,
+				44190BAA2B70C59B002C34E2 /* BulletinBoardSearchModelView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
+				44190BAB2B70C59B002C34E2 /* BulletinBoardSearchModelView.swift in Sources */,
 				448F643C2B6B555200880A85 /* BulletinBoardSearchUI.swift in Sources */,
 				448F643A2B6B553A00880A85 /* SearchBar.swift in Sources */,
 				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
