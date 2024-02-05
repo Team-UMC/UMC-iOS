@@ -7,37 +7,36 @@
 
 import SwiftUI
 
+//홈 슬라이드
 struct HomeSideView:View {
     @Binding var isShowing: Bool
         var content: AnyView
         var direction: Edge
         
-        var body: some View {
-            ZStack(alignment: .topLeading) {
-                if isShowing {
-                    Color.black
-                        .opacity(0.05)
-                        .onTapGesture {
-                            isShowing.toggle()
-                        }
-                    content
-                        .transition(.move(edge: direction))
-                        .background(
-                            Color.white
-                        )
-                }
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            if isShowing {
+                Color.black
+                    .opacity(0.05)
+                    .onTapGesture {
+                        isShowing.toggle()
+                    }
+                content
+                    .transition(.move(edge: direction))
+                    .background(
+                        Color.white
+                    )
             }
-            .ignoresSafeArea()
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-            .animation(.easeInOut, value: isShowing)
         }
+        .ignoresSafeArea()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .animation(.easeInOut, value: isShowing)
+    }
 }
 
-
-
+//사이드 메뉴
 struct SideMenuViewContents: View {
     @Binding var presentSideMenu: Bool
-
 
     var body: some View {
         HStack {
@@ -124,7 +123,6 @@ struct SideMenuViewContents: View {
                 .padding(EdgeInsets(top: 55, leading: 17.5, bottom: 0, trailing: 30.5))
                 .frame(width: 320)
             }
-
         }
     }
 }
