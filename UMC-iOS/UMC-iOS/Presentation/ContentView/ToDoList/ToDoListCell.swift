@@ -40,7 +40,7 @@ struct ToDoListCell: View {
                         .cornerRadius(6)
                         .padding(.leading, 24)
                     
-                    Text("🌕")
+                    Text(viewModel.todoIcon)
                         .padding(.leading, 24)
                 }
                 
@@ -90,9 +90,10 @@ struct ToDoListCell: View {
 }
 struct ToDoListCell_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00"))
+        ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "0"))
             .previewLayout(.sizeThatFits)
             .padding()
     }
 }
+
 

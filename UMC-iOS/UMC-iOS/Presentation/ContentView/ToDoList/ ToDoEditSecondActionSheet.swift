@@ -10,7 +10,7 @@ import SwiftUI
 struct ToDoEditSecondActionSheet: View {
     
     @State private var editActionSheetVisible = false
-    @StateObject private var toDoListCellViewModel = ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00")
+    @StateObject private var toDoListCellViewModel = ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "🌕")
     
     var body: some View {
         ZStack{

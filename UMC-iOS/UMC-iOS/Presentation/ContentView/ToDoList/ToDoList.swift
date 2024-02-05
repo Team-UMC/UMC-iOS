@@ -12,7 +12,7 @@ struct ToDoList: View {
     var body: some View {
         List {
             ForEach(contentData, id: \.self) { index in
-                ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00"))
+                ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "🌕"))
                     .listRowSeparator(.hidden)
                     .padding(.bottom,-15)
             }
