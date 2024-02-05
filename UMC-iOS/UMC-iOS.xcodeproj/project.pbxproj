@@ -15,8 +15,11 @@
 		42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3D2B70D81C000C2025 /* Token.swift */; };
 		42CDBF412B70D84F000C2025 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF402B70D84F000C2025 /* User.swift */; };
 		42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF422B70D932000C2025 /* UserViewModel.swift */; };
-		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
-		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
+		44397CB32B7159B5007CE3B5 /* BulletinBoardSearchUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CB22B7159B5007CE3B5 /* BulletinBoardSearchUI.swift */; };
+		44397CB52B7159C2007CE3B5 /* BulletinBoaardSearchResultUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CB42B7159C2007CE3B5 /* BulletinBoaardSearchResultUI.swift */; };
+		44397CB72B7159CF007CE3B5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CB62B7159CF007CE3B5 /* SearchBar.swift */; };
+		44397CB92B7159DD007CE3B5 /* BulletinBoaardSearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CB82B7159DD007CE3B5 /* BulletinBoaardSearchResultViewModel.swift */; };
+		44397CBB2B7159ED007CE3B5 /* BulletinBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397CBA2B7159ED007CE3B5 /* BulletinBoardViewModel.swift */; };
 		44F71E042B71352D00D5500A /* TILList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71DFF2B71352C00D5500A /* TILList.swift */; };
 		44F71E052B71352D00D5500A /* TILWriteUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E002B71352C00D5500A /* TILWriteUI.swift */; };
 		44F71E062B71352D00D5500A /* TILUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E012B71352C00D5500A /* TILUI.swift */; };
@@ -145,8 +148,11 @@
 		42CDBF3D2B70D81C000C2025 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		42CDBF402B70D84F000C2025 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42CDBF422B70D932000C2025 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
-		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		44397CB22B7159B5007CE3B5 /* BulletinBoardSearchUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardSearchUI.swift; sourceTree = "<group>"; };
+		44397CB42B7159C2007CE3B5 /* BulletinBoaardSearchResultUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoaardSearchResultUI.swift; sourceTree = "<group>"; };
+		44397CB62B7159CF007CE3B5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		44397CB82B7159DD007CE3B5 /* BulletinBoaardSearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoaardSearchResultViewModel.swift; sourceTree = "<group>"; };
+		44397CBA2B7159ED007CE3B5 /* BulletinBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewModel.swift; sourceTree = "<group>"; };
 		44F71DFF2B71352C00D5500A /* TILList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILList.swift; sourceTree = "<group>"; };
 		44F71E002B71352C00D5500A /* TILWriteUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILWriteUI.swift; sourceTree = "<group>"; };
 		44F71E012B71352C00D5500A /* TILUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILUI.swift; sourceTree = "<group>"; };
@@ -285,6 +291,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		44397CAF2B71598A007CE3B5 /* BulletinBoardSearch */ = {
+			isa = PBXGroup;
+			children = (
+				44397CB12B71599E007CE3B5 /* ViewModel */,
+				44397CB02B71599A007CE3B5 /* View */,
+			);
+			path = BulletinBoardSearch;
+			sourceTree = "<group>";
+		};
+		44397CB02B71599A007CE3B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44397CB22B7159B5007CE3B5 /* BulletinBoardSearchUI.swift */,
+				44397CB42B7159C2007CE3B5 /* BulletinBoaardSearchResultUI.swift */,
+				44397CB62B7159CF007CE3B5 /* SearchBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44397CB12B71599E007CE3B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44397CB82B7159DD007CE3B5 /* BulletinBoaardSearchResultViewModel.swift */,
+				44397CBA2B7159ED007CE3B5 /* BulletinBoardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		44F71DFD2B71351700D5500A /* TodayILearned */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +442,7 @@
 		F332F0442B4C59E000F0CDD0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				44397CAF2B71598A007CE3B5 /* BulletinBoardSearch */,
 				44F71E092B7139FA00D5500A /* MyWriteComment */,
 				44F71DFD2B71351700D5500A /* TodayILearned */,
 				F391ADA52B6E4035006ECF1D /* ContentDetail */,
@@ -957,6 +992,7 @@
 				F3CE1B482B6D17D000463130 /* HomeView.swift in Sources */,
 				F3CE1BBA2B6D393B00463130 /* GenerationPartViewModel.swift in Sources */,
 				F332F04D2B4C5A4000F0CDD0 /* ContentViewModel.swift in Sources */,
+				44397CB72B7159CF007CE3B5 /* SearchBar.swift in Sources */,
 				F391AD9A2B6E3D07006ECF1D /* WritingListCellFirst.swift in Sources */,
 				F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */,
 				F3CE1B532B6D189000463130 /* AnnouncementInfo.swift in Sources */,
@@ -967,6 +1003,7 @@
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
 				F391ADAF2B6E4120006ECF1D /* CommetAddbar.swift in Sources */,
+				44397CB92B7159DD007CE3B5 /* BulletinBoaardSearchResultViewModel.swift in Sources */,
 				F3CE1BBF2B6D394C00463130 /* ManagerPinButton.swift in Sources */,
 				F3CE1BC62B6D395C00463130 /* CircleCheckButton.swift in Sources */,
 				F3CE1B542B6D189000463130 /* CalendarTask.swift in Sources */,
@@ -1006,6 +1043,7 @@
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				F3CE1B712B6D206300463130 /* HistoryView.swift in Sources */,
 				F3CE1B4C2B6D17D000463130 /* RankView.swift in Sources */,
+				44397CBB2B7159ED007CE3B5 /* BulletinBoardViewModel.swift in Sources */,
 				F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
 				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
@@ -1037,6 +1075,7 @@
 				F3CE1B7B2B6D206300463130 /* ProjectInformationRegisterView.swift in Sources */,
 				F3CE1B4B2B6D17D000463130 /* HomeNavigationBarView.swift in Sources */,
 				F391AD902B6E2FD5006ECF1D /* ToDoListCell.swift in Sources */,
+				44397CB32B7159B5007CE3B5 /* BulletinBoardSearchUI.swift in Sources */,
 				F391AD8C2B6E2FD5006ECF1D /* ToDoEditSecondActionSheet.swift in Sources */,
 				F391AD9B2B6E3D07006ECF1D /* ButtonWithIcon.swift in Sources */,
 				F391AD8A2B6E2FD5006ECF1D /* ToDoEditSheet.swift in Sources */,
@@ -1044,6 +1083,7 @@
 				44F71E112B71467900D5500A /* ContentViewModel.swift in Sources */,
 				F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
+				44397CB52B7159C2007CE3B5 /* BulletinBoaardSearchResultUI.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
