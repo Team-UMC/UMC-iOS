@@ -24,6 +24,7 @@
 		44F71E082B71352D00D5500A /* TILCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E032B71352D00D5500A /* TILCell.swift */; };
 		44F71E0D2B713A1D00D5500A /* MyWriteSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E0B2B713A1D00D5500A /* MyWriteSearch.swift */; };
 		44F71E0E2B713A1D00D5500A /* MyComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E0C2B713A1D00D5500A /* MyComment.swift */; };
+		44F71E112B71467900D5500A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E102B71467900D5500A /* ContentViewModel.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F01A2B4C599000F0CDD0 /* ContentView.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
@@ -153,6 +154,7 @@
 		44F71E032B71352D00D5500A /* TILCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILCell.swift; sourceTree = "<group>"; };
 		44F71E0B2B713A1D00D5500A /* MyWriteSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWriteSearch.swift; sourceTree = "<group>"; };
 		44F71E0C2B713A1D00D5500A /* MyComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyComment.swift; sourceTree = "<group>"; };
+		44F71E102B71467900D5500A /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01A2B4C599000F0CDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -318,6 +320,14 @@
 				44F71E0B2B713A1D00D5500A /* MyWriteSearch.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		44F71E0F2B71466B00D5500A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44F71E102B71467900D5500A /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F332F00C2B4C599000F0CDD0 = {
@@ -792,6 +802,7 @@
 		F3CE1BCA2B6D3E6500463130 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				44F71E0F2B71466B00D5500A /* ViewModel */,
 				F391AD812B6E2FCF006ECF1D /* View */,
 			);
 			path = TodoList;
@@ -1030,6 +1041,7 @@
 				F391AD9B2B6E3D07006ECF1D /* ButtonWithIcon.swift in Sources */,
 				F391AD8A2B6E2FD5006ECF1D /* ToDoEditSheet.swift in Sources */,
 				F3CE1B432B6D17D000463130 /* MainCalendarView.swift in Sources */,
+				44F71E112B71467900D5500A /* ContentViewModel.swift in Sources */,
 				F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,

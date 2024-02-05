@@ -16,6 +16,8 @@ struct IconWithText: View {
 }
 
 struct ToDoEditFirstActionSheet: View {
+    var viewModel: ToDoListCellViewModel
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -24,18 +26,18 @@ struct ToDoEditFirstActionSheet: View {
                     ToDoEditSheet()
 
                     HStack(spacing: 52) {
-                        NavigationLink(destination: ToDoEditSecondActionSheet(hour: "00", Minute: "00")) {
+                        NavigationLink(destination: ToDoEditSecondActionSheet()) {
                             IconWithText(imageName: "ClockIcon", text: "시간 설정")
                         }
 
                         Button(action: {
-                            // Action for the "수정하기" button
+                            // "수정하기" 버튼에 대한 액션 추가
                         }) {
                             IconWithText(imageName: "EditIcon", text: "수정하기")
                         }
 
                         Button(action: {
-                            // Action for the "삭제하기" button
+                            // "삭제하기" 버튼에 대한 액션 추가
                         }) {
                             IconWithText(imageName: "DeleteIcon", text: "삭제하기")
                         }
@@ -53,7 +55,7 @@ struct ToDoEditFirstActionSheet: View {
 
 struct ToDoEditFirstActionSheet_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoEditFirstActionSheet()
+        ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
     }
 }
 

@@ -12,8 +12,7 @@ struct ToDoList: View {
     var body: some View {
         List {
             ForEach(contentData, id: \.self) { index in
-                ToDoListCell(ToDoTitle: "")
-                    .listRowInsets(EdgeInsets())
+                ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "🌕"))
                     .listRowSeparator(.hidden)
                     .padding(.bottom,-15)
             }
@@ -29,4 +28,5 @@ struct ToDoList: View {
 #Preview {
     ToDoList()
 }
+
 
