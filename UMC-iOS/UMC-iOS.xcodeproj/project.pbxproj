@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44190BA92B70C13E002C34E2 /* BulletinBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44190BA82B70C13E002C34E2 /* BulletinBoardViewModel.swift */; };
 		448F64242B6B504A00880A85 /* BulletinBoardFirstBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64232B6B504A00880A85 /* BulletinBoardFirstBtn.swift */; };
 		448F64262B6B505F00880A85 /* BulletinBoardSecondBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64252B6B505F00880A85 /* BulletinBoardSecondBtn.swift */; };
 		448F64282B6B507200880A85 /* UserContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F64272B6B507200880A85 /* UserContentPreList.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44190BA82B70C13E002C34E2 /* BulletinBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewModel.swift; sourceTree = "<group>"; };
 		448F64232B6B504A00880A85 /* BulletinBoardFirstBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardFirstBtn.swift; sourceTree = "<group>"; };
 		448F64252B6B505F00880A85 /* BulletinBoardSecondBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardSecondBtn.swift; sourceTree = "<group>"; };
 		448F64272B6B507200880A85 /* UserContentPreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentPreList.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				F332F04C2B4C5A4000F0CDD0 /* ContentViewModel.swift */,
+				44190BA82B70C13E002C34E2 /* BulletinBoardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
+				44190BA92B70C13E002C34E2 /* BulletinBoardViewModel.swift in Sources */,
 				448F642A2B6B508600880A85 /* BulletinBoardList.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
 				448F64262B6B505F00880A85 /* BulletinBoardSecondBtn.swift in Sources */,

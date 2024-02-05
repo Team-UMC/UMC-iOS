@@ -30,16 +30,18 @@ struct BulletinBoardUI: View {
                     
                     // 공지사항 ~ 워크북 게시판
                     BulletinBoardSecondBtn()
-                        .padding(.top, 16)
+                        .padding(.top, -150)
                         .padding(.bottom, 16)
                         .padding(.leading, 16)
                     
                     // 게시글 리스트
                     BulletinBoardList()
+                        .padding(.top, -350)
                         .padding(.leading, 16)
                         .padding(.trailing, 16)
+                    
+                    Spacer()
                 }
-                Spacer()
                 
                 Image("TILButton")
                     .resizable()

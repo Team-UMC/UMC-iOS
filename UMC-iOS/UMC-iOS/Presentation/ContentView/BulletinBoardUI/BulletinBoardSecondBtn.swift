@@ -12,16 +12,19 @@ struct BulletinBoardSecondBtn: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8){
-            HStack{
-                ButtonView_2(text: "공지사항", index: 1, selectedButton: $selectedButton)
-                ButtonView_2(text: "자유게시판", index: 2, selectedButton: $selectedButton)
-                ButtonView_2(text: "질문게시판", index: 3, selectedButton: $selectedButton)
+        
+                HStack{
+                    ButtonView_2(text: "공지사항", index: 1, selectedButton: $selectedButton)
+                    ButtonView_2(text: "자유게시판", index: 2, selectedButton: $selectedButton)
+                    ButtonView_2(text: "질문게시판", index: 3, selectedButton: $selectedButton)
+                }
+                HStack {
+                    ButtonView_2(text: "이전기수 게시판", index: 4, selectedButton: $selectedButton)
+                    ButtonView_2(text: "위크북 게시판", index: 5, selectedButton: $selectedButton)
+                }
+            Spacer()
             }
-            HStack {
-                ButtonView_2(text: "이전기수 게시판", index: 4, selectedButton: $selectedButton)
-                ButtonView_2(text: "위크북 게시판", index: 5, selectedButton: $selectedButton)
-            }
-        }
+        
     }
 }
 

@@ -19,14 +19,14 @@ struct BulletinBoardFirstBtn: View {
                 
                 ButtonView(text: "건의함", imageName: nil, index: 4, selectedButton: $selectedButton)
                 
-                NavigationLink( destination:BulletinBoardSearchUI()){
+
                     ButtonView(text: nil, imageName: "magnifyingglass", index: 5, selectedButton: $selectedButton)
                 }
             }
             .navigationBarHidden(true)
         }
     }
-}
+
 
 
 struct ButtonView: View {
@@ -39,18 +39,22 @@ struct ButtonView: View {
         Button(action: {
             selectedButton = index
         }) {
-            HStack {
-                if let imageName = imageName {
-                    Image(systemName: imageName)
-                        .font(.system(size: 26))
-                        .padding(8)
-                        .applyButtonStyle(selected: selectedButton == index)
+            VStack{
+                HStack {
+                    if let imageName = imageName {
+                        Image(systemName: imageName)
+                            .font(.system(size: 26))
+                            .padding(8)
+                            .applyButtonStyle(selected: selectedButton == index)
+                    }
+                    if let text = text {
+                        Text(text)
+                            .padding(8)
+                            .applyButtonStyle(selected: selectedButton == index)
+                    }
+                    
                 }
-                if let text = text {
-                    Text(text)
-                        .padding(8)
-                        .applyButtonStyle(selected: selectedButton == index)
-                }
+            Spacer()
             }
         }
     }
