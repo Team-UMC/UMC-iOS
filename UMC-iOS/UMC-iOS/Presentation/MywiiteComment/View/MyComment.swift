@@ -24,6 +24,7 @@ struct MyComment: View {
         
         MyContentList()
             .padding(.top,-10)
+            .padding(.leading,10)
     }
 }
 

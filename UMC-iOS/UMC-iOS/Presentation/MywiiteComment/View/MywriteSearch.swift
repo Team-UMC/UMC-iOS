@@ -13,7 +13,7 @@ struct MyWriteSearch: View {
     var body: some View {
         VStack {
             HStack{
-                SearchBar(text: $searchText, color: $searchColor)
+                SearchBarNobutton(text: $searchText, color: $searchColor)
                     .padding(.top, 20)
                     .onTapGesture {
                         hideKeyboard()
