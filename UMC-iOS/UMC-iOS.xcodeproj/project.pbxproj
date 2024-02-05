@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
+		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
 		42CDBF372B70C24D000C2025 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF362B70C24D000C2025 /* LoginView.swift */; };
 		42CDBF3A2B70D685000C2025 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF392B70D685000C2025 /* AppleLoginButton.swift */; };
 		42CDBF3C2B70D6CB000C2025 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3B2B70D6CB000C2025 /* LoginViewModel.swift */; };
 		42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3D2B70D81C000C2025 /* Token.swift */; };
 		42CDBF412B70D84F000C2025 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF402B70D84F000C2025 /* User.swift */; };
 		42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF422B70D932000C2025 /* UserViewModel.swift */; };
+		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
+		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
 		44F71E042B71352D00D5500A /* TILList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71DFF2B71352C00D5500A /* TILList.swift */; };
 		44F71E052B71352D00D5500A /* TILWriteUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E002B71352C00D5500A /* TILWriteUI.swift */; };
 		44F71E062B71352D00D5500A /* TILUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E012B71352C00D5500A /* TILUI.swift */; };
@@ -131,6 +135,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
+		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
 		42CDBF362B70C24D000C2025 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		42CDBF382B70D637000C2025 /* UMC-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UMC-iOS.entitlements"; sourceTree = "<group>"; };
 		42CDBF392B70D685000C2025 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 		42CDBF3D2B70D81C000C2025 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		42CDBF402B70D84F000C2025 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42CDBF422B70D932000C2025 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
+		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
 		44F71DFF2B71352C00D5500A /* TILList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILList.swift; sourceTree = "<group>"; };
 		44F71E002B71352C00D5500A /* TILWriteUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILWriteUI.swift; sourceTree = "<group>"; };
 		44F71E012B71352C00D5500A /* TILUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILUI.swift; sourceTree = "<group>"; };
@@ -440,6 +448,7 @@
 				F3CE1BC02B6D395C00463130 /* CirclePlusButton.swift */,
 				F3CE1BC22B6D395C00463130 /* DropDownPicker.swift */,
 				F3CE1BC32B6D395C00463130 /* SettingBackButton.swift */,
+				424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */,
 				F332F04E2B4C5A4700F0CDD0 /* Extension */,
 				F332F0492B4C5A2E00F0CDD0 /* DummyUtilView.swift */,
 			);
@@ -684,6 +693,7 @@
 				F3CE1B3D2B6D17D000463130 /* TodayILearnedView.swift */,
 				F3CE1B402B6D17D000463130 /* ToDoListView.swift */,
 				F3CE1B3B2B6D17D000463130 /* UserInformationView.swift */,
+				424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -927,6 +937,7 @@
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
 				F3CE1B472B6D17D000463130 /* TodayILearnedView.swift in Sources */,
 				F3CE1AC82B6D0D7000463130 /* JoinNavigationButton.swift in Sources */,
+				424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */,
 				F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */,
 				F3CE1B782B6D206300463130 /* ProjectClassificationView.swift in Sources */,
 				F391AD9E2B6E3D07006ECF1D /* WritingButton.swift in Sources */,
@@ -963,6 +974,7 @@
 				44F71E062B71352D00D5500A /* TILUI.swift in Sources */,
 				F332F0502B4C5A5800F0CDD0 /* Extension+View.swift in Sources */,
 				F3CE1BC92B6D395C00463130 /* CircleFillButton.swift in Sources */,
+				424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */,
 				F391ADAB2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
 				F3CE1B752B6D206300463130 /* HistoryRegisterView.swift in Sources */,
