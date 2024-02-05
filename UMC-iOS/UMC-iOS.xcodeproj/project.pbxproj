@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44CCD1FC2B7100F2009B7B19 /* WritingListCellSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CCD1FB2B7100F2009B7B19 /* WritingListCellSecond.swift */; };
+		44CCD1FE2B71016D009B7B19 /* WritingListThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CCD1FD2B71016D009B7B19 /* WritingListThirdCell.swift */; };
+		44CCD2002B7103CB009B7B19 /* WrititngNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CCD1FF2B7103CB009B7B19 /* WrititngNavigationBar.swift */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01B2B4C599000F0CDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F01A2B4C599000F0CDD0 /* ContentView.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
@@ -38,7 +41,6 @@
 		F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */; };
 		F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */; };
 		F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A832B6CF2D900463130 /* UserProfileView.swift */; };
-		F3CE1AAB2B6D0D5B00463130 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAA2B6D0D5B00463130 /* LoginView.swift */; };
 		F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */; };
 		F3CE1ABE2B6D0D7000463130 /* JoinAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */; };
 		F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */; };
@@ -114,6 +116,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44CCD1FB2B7100F2009B7B19 /* WritingListCellSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingListCellSecond.swift; sourceTree = "<group>"; };
+		44CCD1FD2B71016D009B7B19 /* WritingListThirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingListThirdCell.swift; sourceTree = "<group>"; };
+		44CCD1FF2B7103CB009B7B19 /* WrititngNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrititngNavigationBar.swift; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01A2B4C599000F0CDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,7 +153,6 @@
 		F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButtonSet.swift; sourceTree = "<group>"; };
 		F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEdit.swift; sourceTree = "<group>"; };
 		F3CE1A832B6CF2D900463130 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		F3CE1AAA2B6D0D5B00463130 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = "../../../../../../temp/iOS temp/SocialLogin/UMC-iOS/UMC-iOS/Presentation/Login/LoginView.swift"; sourceTree = "<group>"; };
 		F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUniv.swift; sourceTree = "<group>"; };
 		F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinAgreement.swift; sourceTree = "<group>"; };
 		F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
@@ -462,6 +466,9 @@
 				F391AD982B6E3D07006ECF1D /* WritingList.swift */,
 				F391AD972B6E3D07006ECF1D /* WritingListCell.swift */,
 				F391AD952B6E3D07006ECF1D /* WritingListCellFirst.swift */,
+				44CCD1FB2B7100F2009B7B19 /* WritingListCellSecond.swift */,
+				44CCD1FD2B71016D009B7B19 /* WritingListThirdCell.swift */,
+				44CCD1FF2B7103CB009B7B19 /* WrititngNavigationBar.swift */,
 			);
 			path = WritingView;
 			sourceTree = "<group>";
@@ -521,7 +528,6 @@
 				F3CE1AB72B6D0D7000463130 /* Helper */,
 				F3CE1AAC2B6D0D7000463130 /* JoinView */,
 				F3CE1AB52B6D0D7000463130 /* ViewModel */,
-				F3CE1AAA2B6D0D5B00463130 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -824,6 +830,7 @@
 			files = (
 				F391AD8E2B6E2FD5006ECF1D /* ToDoList.swift in Sources */,
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
+				44CCD1FE2B71016D009B7B19 /* WritingListThirdCell.swift in Sources */,
 				F3CE1B472B6D17D000463130 /* TodayILearnedView.swift in Sources */,
 				F3CE1AC82B6D0D7000463130 /* JoinNavigationButton.swift in Sources */,
 				F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */,
@@ -837,7 +844,6 @@
 				F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */,
 				F3CE1B532B6D189000463130 /* AnnouncementInfo.swift in Sources */,
 				F3CE1AC32B6D0D7000463130 /* SelectPosition.swift in Sources */,
-				F3CE1AAB2B6D0D5B00463130 /* LoginView.swift in Sources */,
 				F391AD9C2B6E3D07006ECF1D /* WritingListCell.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
@@ -868,6 +874,7 @@
 				F391AD8F2B6E2FD5006ECF1D /* ToDoListAdd.swift in Sources */,
 				F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */,
 				F391AD9D2B6E3D07006ECF1D /* WritingList.swift in Sources */,
+				44CCD2002B7103CB009B7B19 /* WrititngNavigationBar.swift in Sources */,
 				F3CE1B732B6D206300463130 /* HotProjectView.swift in Sources */,
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
@@ -876,6 +883,7 @@
 				F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
 				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
+				44CCD1FC2B7100F2009B7B19 /* WritingListCellSecond.swift in Sources */,
 				F3CE1B442B6D17D000463130 /* AnnouncementView.swift in Sources */,
 				F3CE1B552B6D189000463130 /* DateValue.swift in Sources */,
 				F3CE1B6E2B6D206300463130 /* HistorySearchBarView.swift in Sources */,

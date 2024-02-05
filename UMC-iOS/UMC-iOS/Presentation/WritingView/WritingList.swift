@@ -10,60 +10,52 @@ import SwiftUI
 struct WritingList: View {
     @State var title: String
     @State var content: String
+    
     var body: some View {
-        List{
-            //list1
-            VStack{
-                HStack{
-                    Text("게시판 선택")
-                        .bold()
-                        .font(.system(size:18))
-                Spacer()
-                }
-                WritingListCellFirst()
-            }
-            //list2
-            WritingListCell()
-            //list3
-            HStack{
-                Text("첨부파일")
-                    .foregroundColor(Color("#999999"))
-                    .bold()
-                    .font(.system(size:18))
-                    .padding(.top,14)
-                    .padding(.bottom,14)
-                
-                Spacer()
-                Button(action: {
-                }) {
-                    Image("PlusButton")
-                        .resizable()
-                        .frame(width: 16, height: 16)
-                }
-            }
-            // list4
-            TextField("제목", text: $title)
-                .foregroundColor(Color("#999999"))
-                .bold()
-                .font(.system(size: 18))
-                .padding(.top,14)
-                .padding(.bottom,14)
-
+        VStack(alignment: .leading) {
             
-            // list5
-            TextField("내용을 입력해주세요", text: $content)
-                .foregroundColor(Color("#999999"))
-                .bold()
-                .font(.system(size: 14))
-                
-                
+            MyWritingNavigationView()
             
+            ButtonWithIcon()
+            
+            Divider().background(Color.gray)
+                .padding(.horizontal, 14)
+                .padding(.bottom, 8)
+            
+            HStack {
+                WitingButton(title: "공지사항")
+                WitingButton(title: "자유게시판")
+                WitingButton(title: "질문게시판")
+                WitingButton(title: "이전 기수 게시판")
+            }
+            .padding(.leading, 14)
+            .padding(.bottom, 8)
+            WitingButton(title: "워크북 게시판")
+                .padding(.leading, 14)
+            
+            Divider().background(Color.gray)
+                .padding(.horizontal, 14)
+                .padding(.bottom, 8)
+            
+            WritingListCellFirst()
+            
+            Divider().background(Color.gray)
+                .padding(.horizontal, 14)
+                .padding(.bottom, 8)
+            
+            WritingListCellSecond()
+            
+            Divider().background(Color.gray)
+                .padding(.horizontal, 14)
+                .padding(.bottom, 8)
+            
+            WritingListThirdCell()
+            
+            Spacer()
         }
-        .listStyle(PlainListStyle())
     }
 }
 
 #Preview {
     WritingList(title: "제목", content: "")
 }
-

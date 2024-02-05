@@ -9,12 +9,30 @@ import SwiftUI
 
 struct WritingListCellFirst: View {
     var body: some View {
-        HStack{
-            ButtonWithIcon(title: "학교", icon: "school")
-            ButtonWithIcon(title: "학교", icon: "school")
-            ButtonWithIcon(title: "학교", icon: "school")
-            ButtonWithIcon(title: "학교", icon: "school")
+        
+        HStack(spacing: 0) {
+            Text("첨부파일")
+                .font(.system(size: 18))
+                .fontWeight(.semibold)
+                .kerning(-1)
+                .foregroundColor(Color.buttonDisabled)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 5.5)
+            
+            Spacer()
+            
+            Button {
+                print("iconAddBtn Tapped")
+            } label: {
+                Image("iconAddButtonImage")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 16, height: 16)
+                    .padding(8)
+            }
         }
+        .padding(.horizontal, 16.5)
+        .padding(.vertical, 9)
     }
 }
 

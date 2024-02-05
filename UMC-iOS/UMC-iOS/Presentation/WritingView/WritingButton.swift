@@ -13,19 +13,18 @@ struct WitingButton: View {
     
     var body: some View {
         Button(action: {
-            // 클릭 이벤트에 대한 로직을 추가할 수 있습니다.
-            // 클릭되었을 때 상태를 변경합니다.
+
             isCompleted.toggle()
         }) {
             Text(title)
                 .font(.system(size: 12))
                 .bold()
                 .padding(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
-                .foregroundColor(isCompleted ? Color("searchPurple") : Color("#D1D1D1"))
+                .foregroundColor(isCompleted ? Color.historyPurple : Color.historyDisabledGray)
                 .cornerRadius(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(isCompleted ? Color("searchPurple") : Color("#D1D1D1"), lineWidth: 1.2)
+                        .stroke(isCompleted ? Color.historyPurple : Color.historyDisabledGray)
                 )
         }
     }
