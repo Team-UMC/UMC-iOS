@@ -34,6 +34,11 @@
 		4430A6602B721C9A0045BF79 /* UMCseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65F2B721C9A0045BF79 /* UMCseason.swift */; };
 		4430A6622B721CAA0045BF79 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6612B721CAA0045BF79 /* UserProfile.swift */; };
 		4430A6662B721CC80045BF79 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6652B721CC80045BF79 /* UserMessage.swift */; };
+		4430A6512B7217460045BF79 /* UserProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6502B7217460045BF79 /* UserProfileEditViewModel.swift */; };
+		4430A6532B7217650045BF79 /* UserProfileEditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6522B7217650045BF79 /* UserProfileEditImageViewModel.swift */; };
+		4430A6562B72179D0045BF79 /* UserProfileEditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6552B72179D0045BF79 /* UserProfileEditImage.swift */; };
+		4430A6582B7217B50045BF79 /* UserProfileEditList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6572B7217B50045BF79 /* UserProfileEditList.swift */; };
+		4430A65A2B7217D80045BF79 /* UserProfileSocialAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6592B7217D80045BF79 /* UserProfileSocialAdd.swift */; };
 		44397C942B715227007CE3B5 /* WritingListCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */; };
 		44397C952B715227007CE3B5 /* WritingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8D2B715226007CE3B5 /* WritingList.swift */; };
 		44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */; };
@@ -183,6 +188,11 @@
 		4430A65F2B721C9A0045BF79 /* UMCseason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMCseason.swift; sourceTree = "<group>"; };
 		4430A6612B721CAA0045BF79 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		4430A6652B721CC80045BF79 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
+		4430A6502B7217460045BF79 /* UserProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileEditViewModel.swift; path = "UMC-iOS/Presentation/UserProfileEditView/ViewModel/UserProfileEditViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		4430A6522B7217650045BF79 /* UserProfileEditImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileEditImageViewModel.swift; path = "UMC-iOS/Presentation/UserProfileEditView/ViewModel/UserProfileEditImageViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		4430A6552B72179D0045BF79 /* UserProfileEditImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditImage.swift; sourceTree = "<group>"; };
+		4430A6572B7217B50045BF79 /* UserProfileEditList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditList.swift; sourceTree = "<group>"; };
+		4430A6592B7217D80045BF79 /* UserProfileSocialAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSocialAdd.swift; sourceTree = "<group>"; };
 		44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirst.swift; sourceTree = "<group>"; };
 		44397C8D2B715226007CE3B5 /* WritingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingList.swift; sourceTree = "<group>"; };
 		44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrititngNavigationBar.swift; sourceTree = "<group>"; };
@@ -402,6 +412,15 @@
 			isa = PBXGroup;
 			children = (
 				4430A64E2B7213C90045BF79 /* MyContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4430A6542B72176D0045BF79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4430A6502B7217460045BF79 /* UserProfileEditViewModel.swift */,
+				4430A6522B7217650045BF79 /* UserProfileEditImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -705,7 +724,7 @@
 		F3CE1A762B6CEF4D00463130 /* UserProfileEditView */ = {
 			isa = PBXGroup;
 			children = (
-				F3CE1A782B6CEF8E00463130 /* ViewModel */,
+				4430A6542B72176D0045BF79 /* ViewModel */,
 				F3CE1A772B6CEF6B00463130 /* View */,
 			);
 			path = UserProfileEditView;
@@ -716,15 +735,11 @@
 			children = (
 				F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */,
 				F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */,
+				4430A6552B72179D0045BF79 /* UserProfileEditImage.swift */,
+				4430A6572B7217B50045BF79 /* UserProfileEditList.swift */,
+				4430A6592B7217D80045BF79 /* UserProfileSocialAdd.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F3CE1A782B6CEF8E00463130 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F3CE1A7B2B6CF0BD00463130 /* UserProfileView */ = {
@@ -1060,12 +1075,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				44397C952B715227007CE3B5 /* WritingList.swift in Sources */,
+				4430A6562B72179D0045BF79 /* UserProfileEditImage.swift in Sources */,
 				F391AD8E2B6E2FD5006ECF1D /* ToDoList.swift in Sources */,
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
 				F3CE1B472B6D17D000463130 /* TodayILearnedView.swift in Sources */,
 				F3CE1AC82B6D0D7000463130 /* JoinNavigationButton.swift in Sources */,
 				4430A6332B7211790045BF79 /* BulletinBoardUI.swift in Sources */,
 				424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */,
+				4430A6512B7217460045BF79 /* UserProfileEditViewModel.swift in Sources */,
 				44397C992B715227007CE3B5 /* WritingListThirdCell.swift in Sources */,
 				44397C972B715227007CE3B5 /* WritingListCellSecond.swift in Sources */,
 				F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */,
@@ -1090,6 +1107,7 @@
 				44397C982B715227007CE3B5 /* ButtonWithIcon.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
+				4430A65A2B7217D80045BF79 /* UserProfileSocialAdd.swift in Sources */,
 				F391ADAF2B6E4120006ECF1D /* CommetAddbar.swift in Sources */,
 				F3CE1BBF2B6D394C00463130 /* ManagerPinButton.swift in Sources */,
 				4430A64B2B7213A70045BF79 /* UserMyContentUI.swift in Sources */,
@@ -1143,9 +1161,11 @@
 				44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */,
 				F3CE1BB72B6D392D00463130 /* ManagerPin.swift in Sources */,
 				44F71E072B71352D00D5500A /* TILFile.swift in Sources */,
+				4430A6532B7217650045BF79 /* UserProfileEditImageViewModel.swift in Sources */,
 				44397C9A2B715227007CE3B5 /* WritingListCell.swift in Sources */,
 				4430A6372B7211B10045BF79 /* BulletinBoradViewModel.swift in Sources */,
 				F3CE1BBC2B6D393E00463130 /* ManagerModel.swift in Sources */,
+				4430A6582B7217B50045BF79 /* UserProfileEditList.swift in Sources */,
 				F3CE1BB82B6D392D00463130 /* ManagerInfo.swift in Sources */,
 				F3CE1BB52B6D392D00463130 /* ManagerSetting.swift in Sources */,
 				F3CE1B742B6D206300463130 /* HistorySearchView.swift in Sources */,
