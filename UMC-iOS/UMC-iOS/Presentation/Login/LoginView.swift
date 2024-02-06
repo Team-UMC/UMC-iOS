@@ -36,14 +36,14 @@ struct LoginView:View {
                         .cornerRadius(12)
                         .padding(12)
                     }
-                
-                //apple login button
-                AppleLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
-                
-                //kakao login button
-                KakaoLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
-
-     
+                    
+                    //apple login button
+                    AppleLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
+                    
+                    //kakao login button
+                    KakaoLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
+                    
+                    
                     
                 }
                 .padding(.bottom, 128)
@@ -55,6 +55,7 @@ struct LoginView:View {
                 } else {
                     JoinCode()
                 }
+            }
         }
     }
 }
