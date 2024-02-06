@@ -15,9 +15,9 @@ struct MyComment: View {
         
         HStack{
             //머지하고 연결
-            RadioButtonset(name: "게시글")
-            RadioButtonset(name: "댓글")
-            RadioButtonset(name: "좋아요 한 글")
+//            RadioButtonset(name: "게시글")
+//            RadioButtonset(name: "댓글")
+//            RadioButtonset(name: "좋아요 한 글")
             Spacer()
         }
         .padding(.leading,240)
