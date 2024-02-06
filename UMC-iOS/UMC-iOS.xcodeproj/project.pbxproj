@@ -79,7 +79,7 @@
 		F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0542B4C5A7D00F0CDD0 /* Member.swift */; };
 		F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0592B4C5AB600F0CDD0 /* MemberRequestDTO.swift */; };
 		F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F05B2B4C5AC200F0CDD0 /* MemberResponseDTO.swift */; };
-		F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F05D2B4C5AD000F0CDD0 /* APiEndpoints.swift */; };
+		F332F05E2B4C5AD000F0CDD0 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F05D2B4C5AD000F0CDD0 /* ApiEndpoints.swift */; };
 		F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0612B4C5AF800F0CDD0 /* DummyResponseRepository.swift */; };
 		F391AD8A2B6E2FD5006ECF1D /* ToDoEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD822B6E2FD5006ECF1D /* ToDoEditSheet.swift */; };
 		F391AD8B2B6E2FD5006ECF1D /* ToDoListUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD832B6E2FD5006ECF1D /* ToDoListUI.swift */; };
@@ -247,7 +247,7 @@
 		F332F0542B4C5A7D00F0CDD0 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F332F0592B4C5AB600F0CDD0 /* MemberRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRequestDTO.swift; sourceTree = "<group>"; };
 		F332F05B2B4C5AC200F0CDD0 /* MemberResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberResponseDTO.swift; sourceTree = "<group>"; };
-		F332F05D2B4C5AD000F0CDD0 /* APiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APiEndpoints.swift; sourceTree = "<group>"; };
+		F332F05D2B4C5AD000F0CDD0 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
 		F332F0612B4C5AF800F0CDD0 /* DummyResponseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyResponseRepository.swift; sourceTree = "<group>"; };
 		F391AD822B6E2FD5006ECF1D /* ToDoEditSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoEditSheet.swift; sourceTree = "<group>"; };
 		F391AD832B6E2FD5006ECF1D /* ToDoListUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListUI.swift; sourceTree = "<group>"; };
@@ -688,7 +688,7 @@
 			isa = PBXGroup;
 			children = (
 				F332F0582B4C5AA600F0CDD0 /* DataMapping */,
-				F332F05D2B4C5AD000F0CDD0 /* APiEndpoints.swift */,
+				F332F05D2B4C5AD000F0CDD0 /* ApiEndpoints.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1175,7 +1175,7 @@
 				424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */,
 				F391ADAB2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift in Sources */,
 				4430A68C2B722D830045BF79 /* TILListFirstViewsub.swift in Sources */,
-				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
+				F332F05E2B4C5AD000F0CDD0 /* ApiEndpoints.swift in Sources */,
 				4430A6962B722E6A0045BF79 /* TILListSixthCell.swift in Sources */,
 				F3CE1B752B6D206300463130 /* HistoryRegisterView.swift in Sources */,
 				F3CE1B722B6D206300463130 /* HistoryProjectListView.swift in Sources */,
