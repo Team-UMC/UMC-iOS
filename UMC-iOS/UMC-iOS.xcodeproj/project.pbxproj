@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
 		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
+		429497AB2B72A9E500BF22CF /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429497AA2B72A9E500BF22CF /* FriendsListView.swift */; };
 		42B4F9532B7226BD00421905 /* KakaoLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B4F9522B7226BD00421905 /* KakaoLoginButton.swift */; };
 		42CDBF372B70C24D000C2025 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF362B70C24D000C2025 /* LoginView.swift */; };
 		42CDBF3A2B70D685000C2025 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF392B70D685000C2025 /* AppleLoginButton.swift */; };
@@ -179,9 +180,9 @@
 		3CF9D2C226E332662C478DF1 /* Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
 		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		429497AA2B72A9E500BF22CF /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsListView.swift; path = "UMC-iOS/FriendsListView.swift"; sourceTree = SOURCE_ROOT; };
 		42B4F9522B7226BD00421905 /* KakaoLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
 		42B4F9542B722C1100421905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		42B4F9552B72323D00421905 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		42CDBF362B70C24D000C2025 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		42CDBF382B70D637000C2025 /* UMC-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UMC-iOS.entitlements"; sourceTree = "<group>"; };
 		42CDBF392B70D685000C2025 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
@@ -367,6 +368,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		429497A92B72A9B400BF22CF /* HomeTopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				429497AA2B72A9E500BF22CF /* FriendsListView.swift */,
+			);
+			path = HomeTopMenu;
+			sourceTree = "<group>";
+		};
 		42CDBF3F2B70D830000C2025 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,7 +621,6 @@
 				F332F0432B4C59CB00F0CDD0 /* Resource */,
 				F332F0422B4C599D00F0CDD0 /* App */,
 				F332F01E2B4C599100F0CDD0 /* Preview Content */,
-				42B4F9552B72323D00421905 /* Config.xcconfig */,
 			);
 			path = "UMC-iOS";
 			sourceTree = "<group>";
@@ -671,6 +679,7 @@
 				F3CE1BCA2B6D3E6500463130 /* TodoList */,
 				F3CE1BAE2B6D391100463130 /* HomeManager */,
 				F3CE1B5B2B6D206300463130 /* History */,
+				429497A92B72A9B400BF22CF /* HomeTopMenu */,
 				F3CE1B372B6D17BD00463130 /* Home */,
 				F3CE1AA72B6D0D4E00463130 /* Login */,
 				F3CE1A7B2B6CF0BD00463130 /* UserProfileView */,
@@ -1353,6 +1362,7 @@
 				4430A62F2B7211790045BF79 /* UserContentPreList.swift in Sources */,
 				F3CE1B482B6D17D000463130 /* HomeView.swift in Sources */,
 				F3CE1BBA2B6D393B00463130 /* GenerationPartViewModel.swift in Sources */,
+				429497AB2B72A9E500BF22CF /* FriendsListView.swift in Sources */,
 				4430A6492B72138E0045BF79 /* MyContentPreList.swift in Sources */,
 				44397C942B715227007CE3B5 /* WritingListCellFirst.swift in Sources */,
 				4430A62E2B7211790045BF79 /* BulletinBoardList.swift in Sources */,
@@ -1511,7 +1521,6 @@
 /* Begin XCBuildConfiguration section */
 		F332F0372B4C599100F0CDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42B4F9552B72323D00421905 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1575,7 +1584,6 @@
 		};
 		F332F0382B4C599100F0CDD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42B4F9552B72323D00421905 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
