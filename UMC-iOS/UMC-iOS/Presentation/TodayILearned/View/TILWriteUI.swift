@@ -12,74 +12,37 @@ struct TILWriteUI: View {
     @State var subtitle: String
     @State var content: String
     var body: some View {
-        List{
+        VStack{
+            TILNavigationbar()
+                .padding(.bottom,16)
+            
             //list1
-            VStack{
-                HStack{
-                    Text("분류")
-                        .bold()
-                        .font(.system(size:18))
-                        .padding(.leading,10)
-                    Spacer()
-                }
-                WritingListCellFirst()
-            }
-            
+            // TILListFirstCell()
+            // TILListFirstViewsub()
+            Divider()
+                .frame(width:350,height: 1)
             //list2
-            HStack{
-                Text("첨부파일")
-                    .foregroundColor(Color("#999999"))
-                    .bold()
-                    .font(.system(size:18))
-                Spacer()
-                Button(action: {
-                
-                }) {
-                    Image("PlusButton")
-                        .resizable()
-                        .frame(width: 16, height: 16)
-                }
-            }
-            
-            HStack{
-                Text("노션연동")
-                    .foregroundColor(Color("#999999"))
-                    .bold()
-                    .font(.system(size:18))
-                Spacer()
-                Button(action: {
-                }) {
-                    Image("PlusButton")
-                        .resizable()
-                        .frame(width: 16, height: 16)
-                }
-            }
-            
+            TILSecondCell()
+            Divider()
+                .frame(width:350,height: 1)
             // list3
-            TextField("제목", text: $title)
-                .foregroundColor(Color("#999999"))
-                .bold()
-                .font(.system(size: 18))
-            
-            // list3
-            TextField("소제목", text: $subtitle)
-                .foregroundColor(Color("#999999"))
-                .bold()
-                .font(.system(size: 18))
-            
-            
+            TILListThirdCell()
+            Divider()
+                .frame(width:350,height: 1)
             // list4
-            TextField("내용을 입력해주세요", text: $content)
-                .foregroundColor(Color("#999999"))
-                .bold()
-                .font(.system(size: 14))
-            
-            
-            
+            TILListFourthCell()
+            Divider()
+                .frame(width:350,height: 1)
+            // list5
+            TILLIstfifthCell()
+            Divider()
+                .frame(width:350,height: 1)
+            // list6
+            TILListSixthCell()
+            Divider()
+                .frame(width:350,height: 1)
+        Spacer()
         }
-        .listStyle(PlainListStyle())
-        .padding(.leading,20)
-        .padding(.trailing,20)
     }
 }
 
