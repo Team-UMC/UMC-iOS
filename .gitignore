@@ -1,3 +1,4 @@
+
 .DS_Store
 
 # Created by https://www.toptal.com/developers/gitignore/api/swift
@@ -88,3 +89,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 # End of https://www.toptal.com/developers/gitignore/api/swift
+
+# api-key
+*.xcconfig
