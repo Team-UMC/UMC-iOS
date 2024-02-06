@@ -32,7 +32,7 @@ struct PlaceholderTextEditor: View {
 
 struct UserProfileEditList: View {
     
-    @ObservedObject var viewModel: UserProfileEditViewModel
+    @ObservedObject var viewModel = UserProfileEditViewModel()
     let textColor = Color(#colorLiteral(red: 0.250980407, green: 0.270588248, blue: 0.4470588276, alpha: 1))
     
     var body: some View {
@@ -64,8 +64,8 @@ struct UserProfileEditList: View {
 
 struct UserProfileEditList_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = UserProfileEditViewModel(userNickname: "더기", userName: "양유진", message: "")
-        UserProfileEditList(viewModel: viewModel)
+        let viewModel = UserProfileEditViewModel()
+        UserProfileEditList()
     }
 }
 

@@ -8,15 +8,15 @@
 import SwiftUI
 
 class UserProfileEditViewModel: ObservableObject {
-    @Published var userNickname: String
-    @Published var userName: String
-    @Published var message: String
+    @Published var userNickname: String = ""
+    @Published var userName: String = ""
+    @Published var message: String = ""
 
-    init(userNickname: String, userName: String, message: String) {
-        self.userNickname = userNickname
-        self.userName = userName
-        self.message = message
-    }
+//    init(userNickname: String, userName: String, message: String) {
+//        self.userNickname = userNickname
+//        self.userName = userName
+//        self.message = message
+//    }
 }
 
 
