@@ -38,7 +38,7 @@ struct TILSecondCell: View {
             .padding(.vertical, 9)
 
             if isFileVisible {
-                TILFile(viewModel: FileAttachmentViewModel())
+                TILFile()
                     .padding(.top, 8)
             }
         }
