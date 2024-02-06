@@ -35,27 +35,15 @@ struct LoginView:View {
                         .foregroundColor(.black)
                         .cornerRadius(12)
                         .padding(12)
-                        
                     }
-                    
-                    //apple login button
-                    AppleLoginButton(alreadyMember: $alreadyMember)
-                    
-                    //kakao login button
-                    Button {
-                    } label: {
-                        HStack(spacing: 32) {
-                            Image("Kakao")
-                                .frame(width: 20, height: 20)
-                            Text("Kakao로 계속하기")
-                        }
-                        .frame(width: 272, height: 44)
-                        //카카오 container color (#FEE500)
-                        .background(Color(red: 254/255, green: 229/255, blue: 0/255))
-                        .foregroundColor(.black)
-                        .cornerRadius(12)
-                        .padding(12)
-                    }
+                
+                //apple login button
+                AppleLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
+                
+                //kakao login button
+                KakaoLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
+
+     
                     
                 }
                 .padding(.bottom, 128)
@@ -67,7 +55,6 @@ struct LoginView:View {
                 } else {
                     JoinCode()
                 }
-            }
         }
     }
 }
