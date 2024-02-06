@@ -37,6 +37,9 @@
 		4430A6722B721FDE0045BF79 /* TILLIstfifthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6712B721FDE0045BF79 /* TILLIstfifthCell.swift */; };
 		4430A6742B721FF50045BF79 /* TILListSixthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6732B721FF50045BF79 /* TILListSixthCell.swift */; };
 		4430A6762B7220080045BF79 /* TILNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6752B7220080045BF79 /* TILNavigationbar.swift */; };
+		4430A67B2B7220790045BF79 /* TILViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A67A2B7220790045BF79 /* TILViewModel.swift */; };
+		4430A67D2B72208F0045BF79 /* TILFileAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A67C2B72208F0045BF79 /* TILFileAddViewModel.swift */; };
+		4430A67F2B7220A60045BF79 /* TILListThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A67E2B7220A60045BF79 /* TILListThirdViewModel.swift */; };
 		44397C942B715227007CE3B5 /* WritingListCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */; };
 		44397C952B715227007CE3B5 /* WritingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8D2B715226007CE3B5 /* WritingList.swift */; };
 		44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */; };
@@ -190,6 +193,9 @@
 		4430A6712B721FDE0045BF79 /* TILLIstfifthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILLIstfifthCell.swift; sourceTree = "<group>"; };
 		4430A6732B721FF50045BF79 /* TILListSixthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILListSixthCell.swift; sourceTree = "<group>"; };
 		4430A6752B7220080045BF79 /* TILNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILNavigationbar.swift; sourceTree = "<group>"; };
+		4430A67A2B7220790045BF79 /* TILViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILViewModel.swift; sourceTree = "<group>"; };
+		4430A67C2B72208F0045BF79 /* TILFileAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILFileAddViewModel.swift; sourceTree = "<group>"; };
+		4430A67E2B7220A60045BF79 /* TILListThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILListThirdViewModel.swift; sourceTree = "<group>"; };
 		44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirst.swift; sourceTree = "<group>"; };
 		44397C8D2B715226007CE3B5 /* WritingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingList.swift; sourceTree = "<group>"; };
 		44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrititngNavigationBar.swift; sourceTree = "<group>"; };
@@ -414,6 +420,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4430A6772B7220500045BF79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4430A67A2B7220790045BF79 /* TILViewModel.swift */,
+				4430A67C2B72208F0045BF79 /* TILFileAddViewModel.swift */,
+				4430A67E2B7220A60045BF79 /* TILListThirdViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		44397C8A2B71520F007CE3B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +457,7 @@
 		44F71DFD2B71351700D5500A /* TodayILearned */ = {
 			isa = PBXGroup;
 			children = (
+				4430A6772B7220500045BF79 /* ViewModel */,
 				44F71DFE2B71351C00D5500A /* View */,
 			);
 			path = TodayILearned;
@@ -1173,9 +1190,11 @@
 				F3CE1BB82B6D392D00463130 /* ManagerInfo.swift in Sources */,
 				F3CE1BB52B6D392D00463130 /* ManagerSetting.swift in Sources */,
 				F3CE1B742B6D206300463130 /* HistorySearchView.swift in Sources */,
+				4430A67B2B7220790045BF79 /* TILViewModel.swift in Sources */,
 				42CDBF412B70D84F000C2025 /* User.swift in Sources */,
 				F3CE1B4A2B6D17D000463130 /* ToDoListView.swift in Sources */,
 				42CDBF3C2B70D6CB000C2025 /* LoginViewModel.swift in Sources */,
+				4430A67F2B7220A60045BF79 /* TILListThirdViewModel.swift in Sources */,
 				F3CE1AC62B6D0D7000463130 /* JoinAgreCircleCheckButton.swift in Sources */,
 				F3CE1B7A2B6D206300463130 /* ProjectCardinalNumberView.swift in Sources */,
 				F3CE1BC72B6D395C00463130 /* DropDownPicker.swift in Sources */,
@@ -1192,6 +1211,7 @@
 				F3CE1BC82B6D395C00463130 /* SettingBackButton.swift in Sources */,
 				44F71E0D2B713A1D00D5500A /* MyWriteSearch.swift in Sources */,
 				F3CE1B7B2B6D206300463130 /* ProjectInformationRegisterView.swift in Sources */,
+				4430A67D2B72208F0045BF79 /* TILFileAddViewModel.swift in Sources */,
 				4430A66E2B721F980045BF79 /* TILListThirdCell.swift in Sources */,
 				44397C9B2B715227007CE3B5 /* WritingButton.swift in Sources */,
 				4430A6322B7211790045BF79 /* BulletinBoardSecondBtn.swift in Sources */,
