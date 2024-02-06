@@ -94,6 +94,7 @@
 		F391ADAD2B6E4111006ECF1D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391ADAC2B6E4111006ECF1D /* Comment.swift */; };
 		F391ADAF2B6E4120006ECF1D /* CommetAddbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391ADAE2B6E4120006ECF1D /* CommetAddbar.swift */; };
 		F391ADB12B6E4138006ECF1D /* DetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391ADB02B6E4138006ECF1D /* DetailButton.swift */; };
+		F393A4362B7239B60063123B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393A4352B7239B60063123B /* LoginResponse.swift */; };
 		F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */; };
 		F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */; };
 		F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */; };
@@ -262,6 +263,7 @@
 		F391ADAC2B6E4111006ECF1D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F391ADAE2B6E4120006ECF1D /* CommetAddbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommetAddbar.swift; sourceTree = "<group>"; };
 		F391ADB02B6E4138006ECF1D /* DetailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButton.swift; sourceTree = "<group>"; };
+		F393A4352B7239B60063123B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButtonSet.swift; sourceTree = "<group>"; };
 		F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEdit.swift; sourceTree = "<group>"; };
 		F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUniv.swift; sourceTree = "<group>"; };
@@ -762,6 +764,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F393A4322B72395F0063123B /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				F393A4342B72396A0063123B /* Response */,
+				F393A4332B7239650063123B /* Request */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		F393A4332B7239650063123B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		F393A4342B72396A0063123B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F393A4352B7239B60063123B /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		F3CE1A762B6CEF4D00463130 /* UserProfileEditView */ = {
 			isa = PBXGroup;
 			children = (
@@ -806,6 +832,7 @@
 		F3CE1AA72B6D0D4E00463130 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F393A4322B72395F0063123B /* DTO */,
 				F3CE1AB72B6D0D7000463130 /* Helper */,
 				F3CE1AAC2B6D0D7000463130 /* JoinView */,
 				F3CE1AB52B6D0D7000463130 /* ViewModel */,
@@ -1201,6 +1228,7 @@
 				4430A6302B7211790045BF79 /* BulletinBoardNotice.swift in Sources */,
 				F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */,
 				F332F05A2B4C5AB600F0CDD0 /* MemberRequestDTO.swift in Sources */,
+				F393A4362B7239B60063123B /* LoginResponse.swift in Sources */,
 				F332F0622B4C5AF800F0CDD0 /* DummyResponseRepository.swift in Sources */,
 				F3CE1B442B6D17D000463130 /* AnnouncementView.swift in Sources */,
 				4430A6312B7211790045BF79 /* BulletinBoardFirstBtn.swift in Sources */,

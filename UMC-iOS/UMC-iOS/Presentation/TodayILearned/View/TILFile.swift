@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TILFile: View {
-    @State var name : String
-    @ObservedObject var viewModel: FileAttachmentViewModel
+    @State var name: String = ""
+    @ObservedObject var viewModel = FileAttachmentViewModel()
     var body: some View {
         Text(name)
             .font(.system(size:12))
@@ -22,7 +22,7 @@ struct TILFile: View {
     }
 }
 
-#Preview {
-    TILFile(name: "file name")
-}
+//#Preview {
+//    TILFile(name: "file name")
+//}
 
