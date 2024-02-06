@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct TILList: View {
-    @State private var contentData: [Int] = Array(0..<5)
+    @StateObject private var viewModel: TILCellViewModel
+
+    init() {
+        let dummyViewModel = TILCellViewModel(toDoTitle: "Dummy Title", tilIcon: "😀", dayAndNight: "AM", hour: "08", minute: "45")
+        _viewModel = StateObject(wrappedValue: dummyViewModel)
+    }
+
     var body: some View {
         List {
-            ForEach(contentData, id: \.self) { index in
-               TILCell(ToDoTitle: "")
-                    .listRowInsets(EdgeInsets())
-                    .listRowSeparator(.hidden)
-                    .padding(.bottom,-15)
+            ForEach(0..<5, id: \.self) { index in
+                TILCell(viewModel: viewModel)
+                    .previewLayout(.fixed(width: 375, height: 100))
             }
+            .listRowInsets(EdgeInsets())
+            .listRowSeparator(.hidden)
+            .padding(.bottom, -15)
         }
         .listStyle(PlainListStyle())
-        .onAppear {
-            UITableView.appearance().separatorStyle = .none
-        }
     }
+}
+
+struct TILList_Previews: PreviewProvider {
+    static var previews: some View {
+        TILList()
     }
-
-
-
-
-#Preview {
-    TILList()
 }
 
