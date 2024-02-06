@@ -21,6 +21,7 @@ struct UMC_iOSApp: App {
         // kakao SDK 초기화
         KakaoSDK.initSDK(appKey: kakaoAppKey as! String)
     }
+
     var body: some Scene {
         WindowGroup {
             LoginView()
@@ -32,5 +33,7 @@ struct UMC_iOSApp: App {
                 .environmentObject(loginViewModel)
                 .environmentObject(userViewModel)
         }
+        .environmentObject(loginViewModel)
+        .environmentObject(userViewModel)
     }
 }

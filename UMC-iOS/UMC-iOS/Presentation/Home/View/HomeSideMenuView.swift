@@ -74,16 +74,16 @@ struct SideMenuViewContents: View {
                             }
                         }
                         Spacer().frame(width: 56)
-                        SideMenuNavigationButton(destination: UserProfileView(), MenuName: "프로필", ImageName: "person.crop.circle.fill")
+                        SideMenuNavigationButton(destination:UserProfileUI(), MenuName: "프로필", ImageName: "person.crop.circle.fill")
                         Spacer().frame(width: 16)
-                        SideMenuNavigationButton(destination: UserProfileView(), MenuName: "프로필", ImageName: "gearshape.fill")
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "프로필", ImageName: "gearshape.fill")
                     }
                     Spacer().frame(height: 20)
                     HStack(spacing: 32){
-                        SideMenuNavigationButton(destination: UserProfileView(), MenuName: "글쓰기", ImageName: "pencil")
-                        SideMenuNavigationButton(destination: UserProfileView(), MenuName: "내글", ImageName: "doc.text.fill")
-                        SideMenuNavigationButton(destination: UserProfileView(), MenuName: "쪽지함", ImageName: "envelope.fill")
-                        SideMenuNavigationButton(destination: UserProfileView(), MenuName: "마스코드", ImageName: "pawprint.fill")
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "글쓰기", ImageName: "pencil")
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "내글", ImageName: "doc.text.fill")
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "쪽지함", ImageName: "envelope.fill")
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "마스코드", ImageName: "pawprint.fill")
                     }
                     Spacer().frame(height: 32)
                     Text("즐겨찾기")
