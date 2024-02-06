@@ -29,16 +29,24 @@
 		4430A6492B72138E0045BF79 /* MyContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6482B72138E0045BF79 /* MyContentPreList.swift */; };
 		4430A64B2B7213A70045BF79 /* UserMyContentUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A64A2B7213A70045BF79 /* UserMyContentUI.swift */; };
 		4430A64F2B7213C90045BF79 /* MyContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A64E2B7213C90045BF79 /* MyContentViewModel.swift */; };
-		4430A65C2B721C650045BF79 /* UserProfileUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65B2B721C650045BF79 /* UserProfileUI.swift */; };
-		4430A65E2B721C8C0045BF79 /* AbleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65D2B721C8C0045BF79 /* AbleStack.swift */; };
-		4430A6602B721C9A0045BF79 /* UMCseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65F2B721C9A0045BF79 /* UMCseason.swift */; };
-		4430A6622B721CAA0045BF79 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6612B721CAA0045BF79 /* UserProfile.swift */; };
-		4430A6662B721CC80045BF79 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6652B721CC80045BF79 /* UserMessage.swift */; };
 		4430A6512B7217460045BF79 /* UserProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6502B7217460045BF79 /* UserProfileEditViewModel.swift */; };
 		4430A6532B7217650045BF79 /* UserProfileEditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6522B7217650045BF79 /* UserProfileEditImageViewModel.swift */; };
 		4430A6562B72179D0045BF79 /* UserProfileEditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6552B72179D0045BF79 /* UserProfileEditImage.swift */; };
 		4430A6582B7217B50045BF79 /* UserProfileEditList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6572B7217B50045BF79 /* UserProfileEditList.swift */; };
 		4430A65A2B7217D80045BF79 /* UserProfileSocialAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6592B7217D80045BF79 /* UserProfileSocialAdd.swift */; };
+		4430A65C2B721C650045BF79 /* UserProfileUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65B2B721C650045BF79 /* UserProfileUI.swift */; };
+		4430A65E2B721C8C0045BF79 /* AbleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65D2B721C8C0045BF79 /* AbleStack.swift */; };
+		4430A6602B721C9A0045BF79 /* UMCseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65F2B721C9A0045BF79 /* UMCseason.swift */; };
+		4430A6622B721CAA0045BF79 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6612B721CAA0045BF79 /* UserProfile.swift */; };
+		4430A6662B721CC80045BF79 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6652B721CC80045BF79 /* UserMessage.swift */; };
+		4430A68A2B722BDB0045BF79 /* TILListFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6892B722BDB0045BF79 /* TILListFirstCell.swift */; };
+		4430A68C2B722D830045BF79 /* TILListFirstViewsub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A68B2B722D830045BF79 /* TILListFirstViewsub.swift */; };
+		4430A68E2B722DAB0045BF79 /* TILSecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A68D2B722DAB0045BF79 /* TILSecondCell.swift */; };
+		4430A6902B722DE00045BF79 /* TILListThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A68F2B722DE00045BF79 /* TILListThirdCell.swift */; };
+		4430A6922B722E480045BF79 /* TILListFourthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6912B722E480045BF79 /* TILListFourthCell.swift */; };
+		4430A6942B722E580045BF79 /* TILLIstfifthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6932B722E580045BF79 /* TILLIstfifthCell.swift */; };
+		4430A6962B722E6A0045BF79 /* TILListSixthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6952B722E6A0045BF79 /* TILListSixthCell.swift */; };
+		4430A6982B722E8A0045BF79 /* TILNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6972B722E8A0045BF79 /* TILNavigationbar.swift */; };
 		44397C942B715227007CE3B5 /* WritingListCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */; };
 		44397C952B715227007CE3B5 /* WritingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8D2B715226007CE3B5 /* WritingList.swift */; };
 		44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */; };
@@ -183,16 +191,24 @@
 		4430A6482B72138E0045BF79 /* MyContentPreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentPreList.swift; sourceTree = "<group>"; };
 		4430A64A2B7213A70045BF79 /* UserMyContentUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMyContentUI.swift; sourceTree = "<group>"; };
 		4430A64E2B7213C90045BF79 /* MyContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentViewModel.swift; sourceTree = "<group>"; };
-		4430A65B2B721C650045BF79 /* UserProfileUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUI.swift; sourceTree = "<group>"; };
-		4430A65D2B721C8C0045BF79 /* AbleStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbleStack.swift; sourceTree = "<group>"; };
-		4430A65F2B721C9A0045BF79 /* UMCseason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMCseason.swift; sourceTree = "<group>"; };
-		4430A6612B721CAA0045BF79 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		4430A6652B721CC80045BF79 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
 		4430A6502B7217460045BF79 /* UserProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileEditViewModel.swift; path = "UMC-iOS/Presentation/UserProfileEditView/ViewModel/UserProfileEditViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		4430A6522B7217650045BF79 /* UserProfileEditImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileEditImageViewModel.swift; path = "UMC-iOS/Presentation/UserProfileEditView/ViewModel/UserProfileEditImageViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		4430A6552B72179D0045BF79 /* UserProfileEditImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditImage.swift; sourceTree = "<group>"; };
 		4430A6572B7217B50045BF79 /* UserProfileEditList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditList.swift; sourceTree = "<group>"; };
 		4430A6592B7217D80045BF79 /* UserProfileSocialAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSocialAdd.swift; sourceTree = "<group>"; };
+		4430A65B2B721C650045BF79 /* UserProfileUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUI.swift; sourceTree = "<group>"; };
+		4430A65D2B721C8C0045BF79 /* AbleStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbleStack.swift; sourceTree = "<group>"; };
+		4430A65F2B721C9A0045BF79 /* UMCseason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMCseason.swift; sourceTree = "<group>"; };
+		4430A6612B721CAA0045BF79 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		4430A6652B721CC80045BF79 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
+		4430A6892B722BDB0045BF79 /* TILListFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILListFirstCell.swift; sourceTree = "<group>"; };
+		4430A68B2B722D830045BF79 /* TILListFirstViewsub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILListFirstViewsub.swift; sourceTree = "<group>"; };
+		4430A68D2B722DAB0045BF79 /* TILSecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILSecondCell.swift; sourceTree = "<group>"; };
+		4430A68F2B722DE00045BF79 /* TILListThirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILListThirdCell.swift; sourceTree = "<group>"; };
+		4430A6912B722E480045BF79 /* TILListFourthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILListFourthCell.swift; sourceTree = "<group>"; };
+		4430A6932B722E580045BF79 /* TILLIstfifthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILLIstfifthCell.swift; sourceTree = "<group>"; };
+		4430A6952B722E6A0045BF79 /* TILListSixthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILListSixthCell.swift; sourceTree = "<group>"; };
+		4430A6972B722E8A0045BF79 /* TILNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILNavigationbar.swift; sourceTree = "<group>"; };
 		44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirst.swift; sourceTree = "<group>"; };
 		44397C8D2B715226007CE3B5 /* WritingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingList.swift; sourceTree = "<group>"; };
 		44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrititngNavigationBar.swift; sourceTree = "<group>"; };
@@ -465,6 +481,14 @@
 				44F71DFF2B71352C00D5500A /* TILList.swift */,
 				44F71E012B71352C00D5500A /* TILUI.swift */,
 				44F71E002B71352C00D5500A /* TILWriteUI.swift */,
+				4430A6892B722BDB0045BF79 /* TILListFirstCell.swift */,
+				4430A68B2B722D830045BF79 /* TILListFirstViewsub.swift */,
+				4430A68D2B722DAB0045BF79 /* TILSecondCell.swift */,
+				4430A68F2B722DE00045BF79 /* TILListThirdCell.swift */,
+				4430A6912B722E480045BF79 /* TILListFourthCell.swift */,
+				4430A6932B722E580045BF79 /* TILLIstfifthCell.swift */,
+				4430A6952B722E6A0045BF79 /* TILListSixthCell.swift */,
+				4430A6972B722E8A0045BF79 /* TILNavigationbar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1105,6 +1129,7 @@
 				44397C9F2B71522E007CE3B5 /* WritingListCellFirstViewModel.swift in Sources */,
 				F391ADB12B6E4138006ECF1D /* DetailButton.swift in Sources */,
 				44397C982B715227007CE3B5 /* ButtonWithIcon.swift in Sources */,
+				4430A6942B722E580045BF79 /* TILLIstfifthCell.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
 				4430A65A2B7217D80045BF79 /* UserProfileSocialAdd.swift in Sources */,
@@ -1122,6 +1147,7 @@
 				F3CE1AC52B6D0D7000463130 /* JoinViewModel.swift in Sources */,
 				F3CE1AC92B6D0D7000463130 /* JoinCircleBorderButton.swift in Sources */,
 				F3CE1B762B6D206300463130 /* HistoryRegisterNavigationBarView.swift in Sources */,
+				4430A6982B722E8A0045BF79 /* TILNavigationbar.swift in Sources */,
 				42CDBF3A2B70D685000C2025 /* AppleLoginButton.swift in Sources */,
 				F391ADAD2B6E4111006ECF1D /* Comment.swift in Sources */,
 				44F71E062B71352D00D5500A /* TILUI.swift in Sources */,
@@ -1129,7 +1155,9 @@
 				F3CE1BC92B6D395C00463130 /* CircleFillButton.swift in Sources */,
 				424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */,
 				F391ADAB2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift in Sources */,
+				4430A68C2B722D830045BF79 /* TILListFirstViewsub.swift in Sources */,
 				F332F05E2B4C5AD000F0CDD0 /* APiEndpoints.swift in Sources */,
+				4430A6962B722E6A0045BF79 /* TILListSixthCell.swift in Sources */,
 				F3CE1B752B6D206300463130 /* HistoryRegisterView.swift in Sources */,
 				F3CE1B722B6D206300463130 /* HistoryProjectListView.swift in Sources */,
 				F3CE1B792B6D206300463130 /* ProjectHashtagRegisterView.swift in Sources */,
@@ -1137,8 +1165,10 @@
 				4430A6452B72134C0045BF79 /* MyContentList.swift in Sources */,
 				F3CE1B772B6D206300463130 /* ProjectIconRegisterView.swift in Sources */,
 				44F71E042B71352D00D5500A /* TILList.swift in Sources */,
+				4430A6902B722DE00045BF79 /* TILListThirdCell.swift in Sources */,
 				F332F04A2B4C5A2E00F0CDD0 /* DummyUtilView.swift in Sources */,
 				F3CE1ACA2B6D0D7000463130 /* JoinTextFieldStyle.swift in Sources */,
+				4430A6922B722E480045BF79 /* TILListFourthCell.swift in Sources */,
 				F3CE1AC42B6D0D7000463130 /* JoinNickname.swift in Sources */,
 				F3CE1B492B6D17D000463130 /* MascotView.swift in Sources */,
 				F391AD8F2B6E2FD5006ECF1D /* ToDoListAdd.swift in Sources */,
@@ -1156,6 +1186,7 @@
 				F3CE1B442B6D17D000463130 /* AnnouncementView.swift in Sources */,
 				4430A6312B7211790045BF79 /* BulletinBoardFirstBtn.swift in Sources */,
 				42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */,
+				4430A68E2B722DAB0045BF79 /* TILSecondCell.swift in Sources */,
 				F3CE1B552B6D189000463130 /* DateValue.swift in Sources */,
 				F3CE1B6E2B6D206300463130 /* HistorySearchBarView.swift in Sources */,
 				44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */,
@@ -1200,6 +1231,7 @@
 				4430A6662B721CC80045BF79 /* UserMessage.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
 				44397C9E2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift in Sources */,
+				4430A68A2B722BDB0045BF79 /* TILListFirstCell.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
