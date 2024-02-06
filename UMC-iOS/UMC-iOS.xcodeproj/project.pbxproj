@@ -29,6 +29,11 @@
 		4430A6492B72138E0045BF79 /* MyContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6482B72138E0045BF79 /* MyContentPreList.swift */; };
 		4430A64B2B7213A70045BF79 /* UserMyContentUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A64A2B7213A70045BF79 /* UserMyContentUI.swift */; };
 		4430A64F2B7213C90045BF79 /* MyContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A64E2B7213C90045BF79 /* MyContentViewModel.swift */; };
+		4430A65C2B721C650045BF79 /* UserProfileUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65B2B721C650045BF79 /* UserProfileUI.swift */; };
+		4430A65E2B721C8C0045BF79 /* AbleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65D2B721C8C0045BF79 /* AbleStack.swift */; };
+		4430A6602B721C9A0045BF79 /* UMCseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A65F2B721C9A0045BF79 /* UMCseason.swift */; };
+		4430A6622B721CAA0045BF79 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6612B721CAA0045BF79 /* UserProfile.swift */; };
+		4430A6662B721CC80045BF79 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6652B721CC80045BF79 /* UserMessage.swift */; };
 		4430A6512B7217460045BF79 /* UserProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6502B7217460045BF79 /* UserProfileEditViewModel.swift */; };
 		4430A6532B7217650045BF79 /* UserProfileEditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6522B7217650045BF79 /* UserProfileEditImageViewModel.swift */; };
 		4430A6562B72179D0045BF79 /* UserProfileEditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6552B72179D0045BF79 /* UserProfileEditImage.swift */; };
@@ -80,7 +85,6 @@
 		F391ADB12B6E4138006ECF1D /* DetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391ADB02B6E4138006ECF1D /* DetailButton.swift */; };
 		F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */; };
 		F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */; };
-		F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A832B6CF2D900463130 /* UserProfileView.swift */; };
 		F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */; };
 		F3CE1ABE2B6D0D7000463130 /* JoinAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */; };
 		F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */; };
@@ -179,6 +183,11 @@
 		4430A6482B72138E0045BF79 /* MyContentPreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentPreList.swift; sourceTree = "<group>"; };
 		4430A64A2B7213A70045BF79 /* UserMyContentUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMyContentUI.swift; sourceTree = "<group>"; };
 		4430A64E2B7213C90045BF79 /* MyContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentViewModel.swift; sourceTree = "<group>"; };
+		4430A65B2B721C650045BF79 /* UserProfileUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUI.swift; sourceTree = "<group>"; };
+		4430A65D2B721C8C0045BF79 /* AbleStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbleStack.swift; sourceTree = "<group>"; };
+		4430A65F2B721C9A0045BF79 /* UMCseason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMCseason.swift; sourceTree = "<group>"; };
+		4430A6612B721CAA0045BF79 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		4430A6652B721CC80045BF79 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
 		4430A6502B7217460045BF79 /* UserProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileEditViewModel.swift; path = "UMC-iOS/Presentation/UserProfileEditView/ViewModel/UserProfileEditViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		4430A6522B7217650045BF79 /* UserProfileEditImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileEditImageViewModel.swift; path = "UMC-iOS/Presentation/UserProfileEditView/ViewModel/UserProfileEditImageViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		4430A6552B72179D0045BF79 /* UserProfileEditImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditImage.swift; sourceTree = "<group>"; };
@@ -233,7 +242,6 @@
 		F391ADB02B6E4138006ECF1D /* DetailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButton.swift; sourceTree = "<group>"; };
 		F3CE1A792B6CEFCF00463130 /* SocialButtonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButtonSet.swift; sourceTree = "<group>"; };
 		F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEdit.swift; sourceTree = "<group>"; };
-		F3CE1A832B6CF2D900463130 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUniv.swift; sourceTree = "<group>"; };
 		F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinAgreement.swift; sourceTree = "<group>"; };
 		F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
@@ -737,7 +745,6 @@
 		F3CE1A7B2B6CF0BD00463130 /* UserProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				F3CE1A7D2B6CF0C500463130 /* ViewModel */,
 				F3CE1A7C2B6CF0C200463130 /* View */,
 			);
 			path = UserProfileView;
@@ -746,16 +753,13 @@
 		F3CE1A7C2B6CF0C200463130 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3CE1A832B6CF2D900463130 /* UserProfileView.swift */,
+				4430A65B2B721C650045BF79 /* UserProfileUI.swift */,
+				4430A65D2B721C8C0045BF79 /* AbleStack.swift */,
+				4430A65F2B721C9A0045BF79 /* UMCseason.swift */,
+				4430A6612B721CAA0045BF79 /* UserProfile.swift */,
+				4430A6652B721CC80045BF79 /* UserMessage.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F3CE1A7D2B6CF0C500463130 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F3CE1AA72B6D0D4E00463130 /* Login */ = {
@@ -1084,6 +1088,7 @@
 				F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */,
 				F3CE1B782B6D206300463130 /* ProjectClassificationView.swift in Sources */,
 				F3CE1AC02B6D0D7000463130 /* JoinCode.swift in Sources */,
+				4430A65E2B721C8C0045BF79 /* AbleStack.swift in Sources */,
 				42CDBF372B70C24D000C2025 /* LoginView.swift in Sources */,
 				4430A63D2B72129D0045BF79 /* BulletinBoaardSearchResultUI.swift in Sources */,
 				4430A62F2B7211790045BF79 /* UserContentPreList.swift in Sources */,
@@ -1142,6 +1147,7 @@
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				F3CE1B712B6D206300463130 /* HistoryView.swift in Sources */,
+				4430A6602B721C9A0045BF79 /* UMCseason.swift in Sources */,
 				F3CE1B4C2B6D17D000463130 /* RankView.swift in Sources */,
 				4430A6302B7211790045BF79 /* BulletinBoardNotice.swift in Sources */,
 				F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */,
@@ -1179,6 +1185,7 @@
 				F391ADA92B6E40E8006ECF1D /* BulletinBoardContentDetail.swift in Sources */,
 				44F71E0E2B713A1D00D5500A /* MyComment.swift in Sources */,
 				F3CE1BC82B6D395C00463130 /* SettingBackButton.swift in Sources */,
+				4430A6622B721CAA0045BF79 /* UserProfile.swift in Sources */,
 				44F71E0D2B713A1D00D5500A /* MyWriteSearch.swift in Sources */,
 				F3CE1B7B2B6D206300463130 /* ProjectInformationRegisterView.swift in Sources */,
 				44397C9B2B715227007CE3B5 /* WritingButton.swift in Sources */,
@@ -1188,8 +1195,9 @@
 				F391AD8C2B6E2FD5006ECF1D /* ToDoEditSecondActionSheet.swift in Sources */,
 				F391AD8A2B6E2FD5006ECF1D /* ToDoEditSheet.swift in Sources */,
 				F3CE1B432B6D17D000463130 /* MainCalendarView.swift in Sources */,
+				4430A65C2B721C650045BF79 /* UserProfileUI.swift in Sources */,
 				44F71E112B71467900D5500A /* ToDoListCellViewModel.swift in Sources */,
-				F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */,
+				4430A6662B721CC80045BF79 /* UserMessage.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
 				44397C9E2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,
