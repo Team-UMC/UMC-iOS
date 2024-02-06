@@ -15,8 +15,16 @@
 		42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3D2B70D81C000C2025 /* Token.swift */; };
 		42CDBF412B70D84F000C2025 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF402B70D84F000C2025 /* User.swift */; };
 		42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF422B70D932000C2025 /* UserViewModel.swift */; };
-		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
-		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
+		44397C942B715227007CE3B5 /* WritingListCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */; };
+		44397C952B715227007CE3B5 /* WritingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8D2B715226007CE3B5 /* WritingList.swift */; };
+		44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */; };
+		44397C972B715227007CE3B5 /* WritingListCellSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C8F2B715226007CE3B5 /* WritingListCellSecond.swift */; };
+		44397C982B715227007CE3B5 /* ButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C902B715227007CE3B5 /* ButtonWithIcon.swift */; };
+		44397C992B715227007CE3B5 /* WritingListThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C912B715227007CE3B5 /* WritingListThirdCell.swift */; };
+		44397C9A2B715227007CE3B5 /* WritingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C922B715227007CE3B5 /* WritingListCell.swift */; };
+		44397C9B2B715227007CE3B5 /* WritingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C932B715227007CE3B5 /* WritingButton.swift */; };
+		44397C9E2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C9C2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift */; };
+		44397C9F2B71522E007CE3B5 /* WritingListCellFirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44397C9D2B71522E007CE3B5 /* WritingListCellFirstViewModel.swift */; };
 		44F71E042B71352D00D5500A /* TILList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71DFF2B71352C00D5500A /* TILList.swift */; };
 		44F71E052B71352D00D5500A /* TILWriteUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E002B71352C00D5500A /* TILWriteUI.swift */; };
 		44F71E062B71352D00D5500A /* TILUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E012B71352C00D5500A /* TILUI.swift */; };
@@ -48,11 +56,6 @@
 		F391AD8F2B6E2FD5006ECF1D /* ToDoListAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD872B6E2FD5006ECF1D /* ToDoListAdd.swift */; };
 		F391AD902B6E2FD5006ECF1D /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD882B6E2FD5006ECF1D /* ToDoListCell.swift */; };
 		F391AD912B6E2FD5006ECF1D /* ToDoEditFirstActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD892B6E2FD5006ECF1D /* ToDoEditFirstActionSheet.swift */; };
-		F391AD9A2B6E3D07006ECF1D /* WritingListCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD952B6E3D07006ECF1D /* WritingListCellFirst.swift */; };
-		F391AD9B2B6E3D07006ECF1D /* ButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD962B6E3D07006ECF1D /* ButtonWithIcon.swift */; };
-		F391AD9C2B6E3D07006ECF1D /* WritingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD972B6E3D07006ECF1D /* WritingListCell.swift */; };
-		F391AD9D2B6E3D07006ECF1D /* WritingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD982B6E3D07006ECF1D /* WritingList.swift */; };
-		F391AD9E2B6E3D07006ECF1D /* WritingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391AD992B6E3D07006ECF1D /* WritingButton.swift */; };
 		F391ADA92B6E40E8006ECF1D /* BulletinBoardContentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391ADA82B6E40E8006ECF1D /* BulletinBoardContentDetail.swift */; };
 		F391ADAB2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391ADAA2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift */; };
 		F391ADAD2B6E4111006ECF1D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391ADAC2B6E4111006ECF1D /* Comment.swift */; };
@@ -145,8 +148,16 @@
 		42CDBF3D2B70D81C000C2025 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		42CDBF402B70D84F000C2025 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42CDBF422B70D932000C2025 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
-		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirst.swift; sourceTree = "<group>"; };
+		44397C8D2B715226007CE3B5 /* WritingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingList.swift; sourceTree = "<group>"; };
+		44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrititngNavigationBar.swift; sourceTree = "<group>"; };
+		44397C8F2B715226007CE3B5 /* WritingListCellSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellSecond.swift; sourceTree = "<group>"; };
+		44397C902B715227007CE3B5 /* ButtonWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithIcon.swift; sourceTree = "<group>"; };
+		44397C912B715227007CE3B5 /* WritingListThirdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListThirdCell.swift; sourceTree = "<group>"; };
+		44397C922B715227007CE3B5 /* WritingListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCell.swift; sourceTree = "<group>"; };
+		44397C932B715227007CE3B5 /* WritingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingButton.swift; sourceTree = "<group>"; };
+		44397C9C2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingSecondThirdViewModel.swift; sourceTree = "<group>"; };
+		44397C9D2B71522E007CE3B5 /* WritingListCellFirstViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirstViewModel.swift; sourceTree = "<group>"; };
 		44F71DFF2B71352C00D5500A /* TILList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILList.swift; sourceTree = "<group>"; };
 		44F71E002B71352C00D5500A /* TILWriteUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILWriteUI.swift; sourceTree = "<group>"; };
 		44F71E012B71352C00D5500A /* TILUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILUI.swift; sourceTree = "<group>"; };
@@ -181,11 +192,6 @@
 		F391AD872B6E2FD5006ECF1D /* ToDoListAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListAdd.swift; sourceTree = "<group>"; };
 		F391AD882B6E2FD5006ECF1D /* ToDoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 		F391AD892B6E2FD5006ECF1D /* ToDoEditFirstActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoEditFirstActionSheet.swift; sourceTree = "<group>"; };
-		F391AD952B6E3D07006ECF1D /* WritingListCellFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirst.swift; sourceTree = "<group>"; };
-		F391AD962B6E3D07006ECF1D /* ButtonWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithIcon.swift; sourceTree = "<group>"; };
-		F391AD972B6E3D07006ECF1D /* WritingListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCell.swift; sourceTree = "<group>"; };
-		F391AD982B6E3D07006ECF1D /* WritingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingList.swift; sourceTree = "<group>"; };
-		F391AD992B6E3D07006ECF1D /* WritingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingButton.swift; sourceTree = "<group>"; };
 		F391ADA82B6E40E8006ECF1D /* BulletinBoardContentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardContentDetail.swift; sourceTree = "<group>"; };
 		F391ADAA2B6E4100006ECF1D /* BulletinBoardContentDetailUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardContentDetailUI.swift; sourceTree = "<group>"; };
 		F391ADAC2B6E4111006ECF1D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -283,6 +289,30 @@
 				42CDBF402B70D84F000C2025 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		44397C8A2B71520F007CE3B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44397C902B715227007CE3B5 /* ButtonWithIcon.swift */,
+				44397C932B715227007CE3B5 /* WritingButton.swift */,
+				44397C8D2B715226007CE3B5 /* WritingList.swift */,
+				44397C922B715227007CE3B5 /* WritingListCell.swift */,
+				44397C8C2B715226007CE3B5 /* WritingListCellFirst.swift */,
+				44397C8F2B715226007CE3B5 /* WritingListCellSecond.swift */,
+				44397C912B715227007CE3B5 /* WritingListThirdCell.swift */,
+				44397C8E2B715226007CE3B5 /* WrititngNavigationBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44397C8B2B715214007CE3B5 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				44397C9D2B71522E007CE3B5 /* WritingListCellFirstViewModel.swift */,
+				44397C9C2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 		44F71DFD2B71351700D5500A /* TodayILearned */ = {
@@ -554,11 +584,8 @@
 		F391AD942B6E3C72006ECF1D /* WritingView */ = {
 			isa = PBXGroup;
 			children = (
-				F391AD962B6E3D07006ECF1D /* ButtonWithIcon.swift */,
-				F391AD992B6E3D07006ECF1D /* WritingButton.swift */,
-				F391AD982B6E3D07006ECF1D /* WritingList.swift */,
-				F391AD972B6E3D07006ECF1D /* WritingListCell.swift */,
-				F391AD952B6E3D07006ECF1D /* WritingListCellFirst.swift */,
+				44397C8B2B715214007CE3B5 /* ModelView */,
+				44397C8A2B71520F007CE3B5 /* View */,
 			);
 			path = WritingView;
 			sourceTree = "<group>";
@@ -944,26 +971,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44397C952B715227007CE3B5 /* WritingList.swift in Sources */,
 				F391AD8E2B6E2FD5006ECF1D /* ToDoList.swift in Sources */,
 				F332F05C2B4C5AC200F0CDD0 /* MemberResponseDTO.swift in Sources */,
 				F3CE1B472B6D17D000463130 /* TodayILearnedView.swift in Sources */,
 				F3CE1AC82B6D0D7000463130 /* JoinNavigationButton.swift in Sources */,
 				424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */,
+				44397C992B715227007CE3B5 /* WritingListThirdCell.swift in Sources */,
+				44397C972B715227007CE3B5 /* WritingListCellSecond.swift in Sources */,
 				F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */,
 				F3CE1B782B6D206300463130 /* ProjectClassificationView.swift in Sources */,
-				F391AD9E2B6E3D07006ECF1D /* WritingButton.swift in Sources */,
 				F3CE1AC02B6D0D7000463130 /* JoinCode.swift in Sources */,
 				42CDBF372B70C24D000C2025 /* LoginView.swift in Sources */,
 				F3CE1B482B6D17D000463130 /* HomeView.swift in Sources */,
 				F3CE1BBA2B6D393B00463130 /* GenerationPartViewModel.swift in Sources */,
 				F332F04D2B4C5A4000F0CDD0 /* ContentViewModel.swift in Sources */,
-				F391AD9A2B6E3D07006ECF1D /* WritingListCellFirst.swift in Sources */,
+				44397C942B715227007CE3B5 /* WritingListCellFirst.swift in Sources */,
 				F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */,
 				F3CE1B532B6D189000463130 /* AnnouncementInfo.swift in Sources */,
 				42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */,
 				F3CE1AC32B6D0D7000463130 /* SelectPosition.swift in Sources */,
+				44397C9F2B71522E007CE3B5 /* WritingListCellFirstViewModel.swift in Sources */,
 				F391ADB12B6E4138006ECF1D /* DetailButton.swift in Sources */,
-				F391AD9C2B6E3D07006ECF1D /* WritingListCell.swift in Sources */,
+				44397C982B715227007CE3B5 /* ButtonWithIcon.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
 				F391ADAF2B6E4120006ECF1D /* CommetAddbar.swift in Sources */,
@@ -1000,7 +1030,6 @@
 				F3CE1B492B6D17D000463130 /* MascotView.swift in Sources */,
 				F391AD8F2B6E2FD5006ECF1D /* ToDoListAdd.swift in Sources */,
 				F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */,
-				F391AD9D2B6E3D07006ECF1D /* WritingList.swift in Sources */,
 				F3CE1B732B6D206300463130 /* HotProjectView.swift in Sources */,
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
@@ -1013,8 +1042,10 @@
 				42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */,
 				F3CE1B552B6D189000463130 /* DateValue.swift in Sources */,
 				F3CE1B6E2B6D206300463130 /* HistorySearchBarView.swift in Sources */,
+				44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */,
 				F3CE1BB72B6D392D00463130 /* ManagerPin.swift in Sources */,
 				44F71E072B71352D00D5500A /* TILFile.swift in Sources */,
+				44397C9A2B715227007CE3B5 /* WritingListCell.swift in Sources */,
 				F3CE1BBC2B6D393E00463130 /* ManagerModel.swift in Sources */,
 				F3CE1BB82B6D392D00463130 /* ManagerInfo.swift in Sources */,
 				F3CE1BB52B6D392D00463130 /* ManagerSetting.swift in Sources */,
@@ -1035,15 +1066,16 @@
 				F3CE1BC82B6D395C00463130 /* SettingBackButton.swift in Sources */,
 				44F71E0D2B713A1D00D5500A /* MyWriteSearch.swift in Sources */,
 				F3CE1B7B2B6D206300463130 /* ProjectInformationRegisterView.swift in Sources */,
+				44397C9B2B715227007CE3B5 /* WritingButton.swift in Sources */,
 				F3CE1B4B2B6D17D000463130 /* HomeNavigationBarView.swift in Sources */,
 				F391AD902B6E2FD5006ECF1D /* ToDoListCell.swift in Sources */,
 				F391AD8C2B6E2FD5006ECF1D /* ToDoEditSecondActionSheet.swift in Sources */,
-				F391AD9B2B6E3D07006ECF1D /* ButtonWithIcon.swift in Sources */,
 				F391AD8A2B6E2FD5006ECF1D /* ToDoEditSheet.swift in Sources */,
 				F3CE1B432B6D17D000463130 /* MainCalendarView.swift in Sources */,
 				44F71E112B71467900D5500A /* ContentViewModel.swift in Sources */,
 				F3CE1A842B6CF2D900463130 /* UserProfileView.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
+				44397C9E2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
