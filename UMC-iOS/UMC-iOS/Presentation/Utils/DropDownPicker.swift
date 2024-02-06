@@ -21,6 +21,7 @@ struct DropDownPicker: View {
     var height: CGFloat = 40
     var minHeight: CGFloat = 500
     var fontSize: CGFloat = 18
+    var corner: CGFloat = 12
     var placeholder: String = ""
     var BackColor: Color = .white
     var TextColor: Color = .black
