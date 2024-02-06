@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
 		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
+		42B4F9532B7226BD00421905 /* KakaoLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B4F9522B7226BD00421905 /* KakaoLoginButton.swift */; };
 		42CDBF372B70C24D000C2025 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF362B70C24D000C2025 /* LoginView.swift */; };
 		42CDBF3A2B70D685000C2025 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF392B70D685000C2025 /* AppleLoginButton.swift */; };
 		42CDBF3C2B70D6CB000C2025 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3B2B70D6CB000C2025 /* LoginViewModel.swift */; };
@@ -47,6 +48,9 @@
 		44F71E0D2B713A1D00D5500A /* MyWriteSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E0B2B713A1D00D5500A /* MyWriteSearch.swift */; };
 		44F71E0E2B713A1D00D5500A /* MyComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E0C2B713A1D00D5500A /* MyComment.swift */; };
 		44F71E112B71467900D5500A /* ToDoListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E102B71467900D5500A /* ToDoListCellViewModel.swift */; };
+		49D3261A653E97DA8F44B2B0 /* Pods_UMC_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEDA1F9AF3BCBDF58A1720D /* Pods_UMC_iOS.framework */; };
+		6942CA471CE8CF2AD63C9195 /* Pods_UMC_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A0A3D886FC438B9A04D3BB /* Pods_UMC_iOSTests.framework */; };
+		7A4740E60E0B6DA7BD1DC156 /* Pods_UMC_iOS_UMC_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658912E55A6555B178F47711 /* Pods_UMC_iOS_UMC_iOSUITests.framework */; };
 		F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */; };
 		F332F01D2B4C599100F0CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01C2B4C599100F0CDD0 /* Assets.xcassets */; };
 		F332F0202B4C599100F0CDD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F332F01F2B4C599100F0CDD0 /* Preview Assets.xcassets */; };
@@ -151,8 +155,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CF9D2C226E332662C478DF1 /* Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
 		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		42B4F9522B7226BD00421905 /* KakaoLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
+		42B4F9542B722C1100421905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		42B4F9552B72323D00421905 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		42CDBF362B70C24D000C2025 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		42CDBF382B70D637000C2025 /* UMC-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UMC-iOS.entitlements"; sourceTree = "<group>"; };
 		42CDBF392B70D685000C2025 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
@@ -192,6 +200,14 @@
 		44F71E0B2B713A1D00D5500A /* MyWriteSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWriteSearch.swift; sourceTree = "<group>"; };
 		44F71E0C2B713A1D00D5500A /* MyComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyComment.swift; sourceTree = "<group>"; };
 		44F71E102B71467900D5500A /* ToDoListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListCellViewModel.swift; sourceTree = "<group>"; };
+		532F778C0547507EB63020A9 /* Pods-UMC-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS.debug.xcconfig"; path = "Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		658912E55A6555B178F47711 /* Pods_UMC_iOS_UMC_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UMC_iOS_UMC_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A0A3D886FC438B9A04D3BB /* Pods_UMC_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UMC_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E7408AD729EBBACDDDA550 /* Pods-UMC-iOS-UMC-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-UMC-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE228813E8C102BA381D1A6D /* Pods-UMC-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-UMC-iOSTests/Pods-UMC-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBEDA1F9AF3BCBDF58A1720D /* Pods_UMC_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UMC_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D751EB812D8857DA9195FB79 /* Pods-UMC-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS.release.xcconfig"; path = "Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		DDDDEEF7F375E47FDB882240 /* Pods-UMC-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-UMC-iOSTests/Pods-UMC-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		F332F0152B4C599000F0CDD0 /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F332F0182B4C599000F0CDD0 /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F332F01C2B4C599100F0CDD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -286,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3CE1B582B6D1B1A00463130 /* PopupView in Frameworks */,
+				49D3261A653E97DA8F44B2B0 /* Pods_UMC_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6942CA471CE8CF2AD63C9195 /* Pods_UMC_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +318,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4740E60E0B6DA7BD1DC156 /* Pods_UMC_iOS_UMC_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +486,29 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AFA933177FC8C0E05C356FBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				532F778C0547507EB63020A9 /* Pods-UMC-iOS.debug.xcconfig */,
+				D751EB812D8857DA9195FB79 /* Pods-UMC-iOS.release.xcconfig */,
+				A5E7408AD729EBBACDDDA550 /* Pods-UMC-iOS-UMC-iOSUITests.debug.xcconfig */,
+				3CF9D2C226E332662C478DF1 /* Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig */,
+				BE228813E8C102BA381D1A6D /* Pods-UMC-iOSTests.debug.xcconfig */,
+				DDDDEEF7F375E47FDB882240 /* Pods-UMC-iOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8587149D0AC5A89E4737ADF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBEDA1F9AF3BCBDF58A1720D /* Pods_UMC_iOS.framework */,
+				658912E55A6555B178F47711 /* Pods_UMC_iOS_UMC_iOSUITests.framework */,
+				65A0A3D886FC438B9A04D3BB /* Pods_UMC_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F332F00C2B4C599000F0CDD0 = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +516,8 @@
 				F332F0282B4C599100F0CDD0 /* UMC-iOSTests */,
 				F332F0322B4C599100F0CDD0 /* UMC-iOSUITests */,
 				F332F0162B4C599000F0CDD0 /* Products */,
+				AFA933177FC8C0E05C356FBE /* Pods */,
+				D8587149D0AC5A89E4737ADF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -490,6 +534,7 @@
 		F332F0172B4C599000F0CDD0 /* UMC-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				42B4F9542B722C1100421905 /* Info.plist */,
 				42CDBF382B70D637000C2025 /* UMC-iOS.entitlements */,
 				F332F0562B4C5A8E00F0CDD0 /* Data */,
 				F332F0512B4C5A6300F0CDD0 /* Domain */,
@@ -497,6 +542,7 @@
 				F332F0432B4C59CB00F0CDD0 /* Resource */,
 				F332F0422B4C599D00F0CDD0 /* App */,
 				F332F01E2B4C599100F0CDD0 /* Preview Content */,
+				42B4F9552B72323D00421905 /* Config.xcconfig */,
 			);
 			path = "UMC-iOS";
 			sourceTree = "<group>";
@@ -788,6 +834,7 @@
 				F3CE1ABB2B6D0D7000463130 /* JoinCircleBorderButton.swift */,
 				F3CE1ABC2B6D0D7000463130 /* JoinTextFieldStyle.swift */,
 				42CDBF392B70D685000C2025 /* AppleLoginButton.swift */,
+				42B4F9522B7226BD00421905 /* KakaoLoginButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -926,9 +973,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F332F0392B4C599100F0CDD0 /* Build configuration list for PBXNativeTarget "UMC-iOS" */;
 			buildPhases = (
+				78094F9CA0BF76281582C38A /* [CP] Check Pods Manifest.lock */,
 				F332F0112B4C599000F0CDD0 /* Sources */,
 				F332F0122B4C599000F0CDD0 /* Frameworks */,
 				F332F0132B4C599000F0CDD0 /* Resources */,
+				54C30B0A365CC162C2030358 /* [CP] Embed Pods Frameworks */,
+				E0CD643B60CE8EF1DA4B6403 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -946,6 +996,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F332F03C2B4C599100F0CDD0 /* Build configuration list for PBXNativeTarget "UMC-iOSTests" */;
 			buildPhases = (
+				A45C4B243BA9AD91D5B5A4D7 /* [CP] Check Pods Manifest.lock */,
 				F332F0212B4C599100F0CDD0 /* Sources */,
 				F332F0222B4C599100F0CDD0 /* Frameworks */,
 				F332F0232B4C599100F0CDD0 /* Resources */,
@@ -964,9 +1015,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F332F03F2B4C599100F0CDD0 /* Build configuration list for PBXNativeTarget "UMC-iOSUITests" */;
 			buildPhases = (
+				AA6D6D805F25A371DA53FE42 /* [CP] Check Pods Manifest.lock */,
 				F332F02B2B4C599100F0CDD0 /* Sources */,
 				F332F02C2B4C599100F0CDD0 /* Frameworks */,
 				F332F02D2B4C599100F0CDD0 /* Resources */,
+				BBA4ED7EA166846E9C0048AB /* [CP] Embed Pods Frameworks */,
+				9674678D259E8A9BC88CE126 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1049,6 +1103,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54C30B0A365CC162C2030358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78094F9CA0BF76281582C38A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UMC-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9674678D259E8A9BC88CE126 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A45C4B243BA9AD91D5B5A4D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UMC-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA6D6D805F25A371DA53FE42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UMC-iOS-UMC-iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA4ED7EA166846E9C0048AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0CD643B60CE8EF1DA4B6403 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS/Pods-UMC-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F332F0112B4C599000F0CDD0 /* Sources */ = {
@@ -1137,6 +1328,7 @@
 				44397C962B715227007CE3B5 /* WrititngNavigationBar.swift in Sources */,
 				F3CE1BB72B6D392D00463130 /* ManagerPin.swift in Sources */,
 				44F71E072B71352D00D5500A /* TILFile.swift in Sources */,
+				42B4F9532B7226BD00421905 /* KakaoLoginButton.swift in Sources */,
 				44397C9A2B715227007CE3B5 /* WritingListCell.swift in Sources */,
 				4430A6372B7211B10045BF79 /* BulletinBoradViewModel.swift in Sources */,
 				F3CE1BBC2B6D393E00463130 /* ManagerModel.swift in Sources */,
@@ -1211,6 +1403,7 @@
 /* Begin XCBuildConfiguration section */
 		F332F0372B4C599100F0CDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B4F9552B72323D00421905 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1246,7 +1439,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1274,6 +1467,7 @@
 		};
 		F332F0382B4C599100F0CDD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B4F9552B72323D00421905 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1309,7 +1503,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1330,6 +1524,7 @@
 		};
 		F332F03A2B4C599100F0CDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532F778C0547507EB63020A9 /* Pods-UMC-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1340,6 +1535,7 @@
 				DEVELOPMENT_TEAM = G64N5NJ4Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UMC-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1360,6 +1556,7 @@
 		};
 		F332F03B2B4C599100F0CDD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D751EB812D8857DA9195FB79 /* Pods-UMC-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1370,6 +1567,7 @@
 				DEVELOPMENT_TEAM = G64N5NJ4Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UMC-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1390,6 +1588,7 @@
 		};
 		F332F03D2B4C599100F0CDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE228813E8C102BA381D1A6D /* Pods-UMC-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1409,6 +1608,7 @@
 		};
 		F332F03E2B4C599100F0CDD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDDEEF7F375E47FDB882240 /* Pods-UMC-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1428,6 +1628,7 @@
 		};
 		F332F0402B4C599100F0CDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E7408AD729EBBACDDDA550 /* Pods-UMC-iOS-UMC-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1445,6 +1646,7 @@
 		};
 		F332F0412B4C599100F0CDD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CF9D2C226E332662C478DF1 /* Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  UMC-iOS
+//
+//  Created by 이태현 on 2/6/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_NATIVE_APP_KEY = 41f38191c2dd2d1d72b8744c9b314151
