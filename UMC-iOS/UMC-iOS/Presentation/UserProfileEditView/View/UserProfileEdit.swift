@@ -18,7 +18,7 @@ struct UserProfileEdit: View {
         NavigationView {
             VStack {
                 UserProfileEditImage()
-                UserProfileEditList(message: message, userNickname: userNickname, userName: userName)
+                UserProfileEditList()
             }
             .navigationBarTitle("프로필 수정", displayMode: .inline) // 가운데 정렬
             .navigationBarItems(
