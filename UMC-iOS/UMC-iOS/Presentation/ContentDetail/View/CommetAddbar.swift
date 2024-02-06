@@ -1,27 +1,27 @@
 //
 //  CommetAddbar.swift
-//  UMC-iOS
+//  BulletinBoard
 //
-//  Created by Kyungsoo Lee on 2/3/24.
+//  Created by 나예은 on 2024/02/01.
 //
 
 import SwiftUI
 
 struct CommetAddbar: View {
-    @Binding var text: String
+    @ObservedObject var viewModel: CommentInputViewModel
     
     var body: some View {
         HStack {
-            //검색창
+            
             HStack {
-                TextField("글 제목, 내용을 입력해주세요", text: $text) //텍스트 필드
+                TextField("댓글을 입력해주세요",  text: $viewModel.commentText) //텍스트 필드
                     .foregroundColor(Color("#4B4B4B"))
                     .font(.system(size: 12))
                     .padding(.leading,13.5)
-
-                //x버튼
+                
+                
                 Button(action: {
-                    print("지우기 버튼을 눌렀습니다")
+                    viewModel.postComment()
                 }) {
                     Image("commentAdd")
                         .resizable()
@@ -30,21 +30,24 @@ struct CommetAddbar: View {
                         .padding(.leading,13.5)
                         .padding(.trailing,13.5)
                 }
-
+                
             }
             .frame(width: 343,height: 39)
             .foregroundColor(Color("#F0F4FF"))
             .background(Color("#F0F4FF"))
             .cornerRadius(14)
-
-
-
+            
+            
+            
         }
-
+    
     }
 }
 
-
-#Preview {
-    CommetAddbar(text: .constant(""))
+struct CommetAddbar_Previews: PreviewProvider {
+    static var previews: some View {
+        CommetAddbar(viewModel: CommentInputViewModel())
+    }
 }
+                 
+
