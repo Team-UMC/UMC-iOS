@@ -8,40 +8,43 @@
 import SwiftUI
 
 struct TILCell: View {
-    @State private var isCompleted = false
-    @State private var showToDoEditSheet = false
-    @State var ToDoTitle: String
-    
+    @StateObject private var viewModel: TILCellViewModel
+
+    init(viewModel: TILCellViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+
     var body: some View {
         ZStack {
+            // 배경
             Rectangle()
                 .fill(Color("#F0F4FF"))
                 .frame(width: 341, height: 68)
                 .cornerRadius(12)
                 
+            // 이모지
             HStack {
-                
                 Rectangle()
                     .fill(.white)
-                    .frame(width: 34, height: 34)
+                    .cornerRadius(12)
+                    .frame(width: 40, height: 40)
                     .padding(EdgeInsets(top: 18, leading: 20, bottom: 18, trailing: 0))
                     .overlay(
-                        Text("😀")
+                        Text(viewModel.tilIcon)
                             .padding(EdgeInsets(top: 18, leading: 20, bottom: 18, trailing: 0))
                     )
                 
-                
                 VStack {
-                    HStack {
-                        Text("피그마 3주차 강의 듣기")
+                    HStack { // 제목
+                        Text("\(viewModel.toDoTitle)")
                             .foregroundColor(.black)
                             .font(.system(size: 16))
                         Spacer()
                     }
                     
                     HStack {
-                        
-                        Text("오전 11:30")
+                        // 시간
+                        Text("\(viewModel.dayAndNight) \(viewModel.hour):\(viewModel.minute)")
                             .foregroundColor(.black)
                             .font(.system(size: 10))
                             .padding(EdgeInsets(top: -6, leading: 0, bottom: -1, trailing: 0))
@@ -50,9 +53,9 @@ struct TILCell: View {
                     }
                 }
                 
+                // 더보기 버튼
                 Button(action: {
                     print("더보기를 눌렀습니다")
-                    
                     
                 }) {
                     Image("MoreButtondarken")
@@ -61,20 +64,19 @@ struct TILCell: View {
                         .frame(width: 32, height: 32)
                         .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 20))
                 }
-                .sheet(isPresented: $showToDoEditSheet) {
-                    ToDoEditFirstActionSheet()
-                    
-                }
                 
                 Spacer()
             }
             .padding()
         }
-        
     }
 }
 
-#Preview {
-    TILCell(ToDoTitle: "dskflf")
+struct TILCell_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = TILCellViewModel(toDoTitle: "Dummy Title", tilIcon: "😀", dayAndNight: "오전", hour: "08", minute: "45")
+        TILCell(viewModel: viewModel)
+            .previewLayout(.fixed(width: 375, height: 100))
+    }
 }
 

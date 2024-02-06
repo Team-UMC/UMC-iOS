@@ -15,8 +15,7 @@
 		42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF3D2B70D81C000C2025 /* Token.swift */; };
 		42CDBF412B70D84F000C2025 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF402B70D84F000C2025 /* User.swift */; };
 		42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF422B70D932000C2025 /* UserViewModel.swift */; };
-		424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */; };
-		424136AE2B710590004CEEBC /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */; };
+		445D32412B71D60500576EB4 /* TILViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445D32402B71D60500576EB4 /* TILViewModel.swift */; };
 		44F71E042B71352D00D5500A /* TILList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71DFF2B71352C00D5500A /* TILList.swift */; };
 		44F71E052B71352D00D5500A /* TILWriteUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E002B71352C00D5500A /* TILWriteUI.swift */; };
 		44F71E062B71352D00D5500A /* TILUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F71E012B71352C00D5500A /* TILUI.swift */; };
@@ -145,8 +144,7 @@
 		42CDBF3D2B70D81C000C2025 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		42CDBF402B70D84F000C2025 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42CDBF422B70D932000C2025 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
-		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		445D32402B71D60500576EB4 /* TILViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILViewModel.swift; sourceTree = "<group>"; };
 		44F71DFF2B71352C00D5500A /* TILList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILList.swift; sourceTree = "<group>"; };
 		44F71E002B71352C00D5500A /* TILWriteUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILWriteUI.swift; sourceTree = "<group>"; };
 		44F71E012B71352C00D5500A /* TILUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILUI.swift; sourceTree = "<group>"; };
@@ -285,9 +283,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		445D323D2B71D1D000576EB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				445D32402B71D60500576EB4 /* TILViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		44F71DFD2B71351700D5500A /* TodayILearned */ = {
 			isa = PBXGroup;
 			children = (
+				445D323D2B71D1D000576EB4 /* ViewModel */,
 				44F71DFE2B71351C00D5500A /* View */,
 			);
 			path = TodayILearned;
@@ -1004,6 +1011,7 @@
 				F3CE1B732B6D206300463130 /* HotProjectView.swift in Sources */,
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
+				445D32412B71D60500576EB4 /* TILViewModel.swift in Sources */,
 				F3CE1B712B6D206300463130 /* HistoryView.swift in Sources */,
 				F3CE1B4C2B6D17D000463130 /* RankView.swift in Sources */,
 				F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */,
