@@ -8,12 +8,164 @@
 
 /* Begin PBXBuildFile section */
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
-		F34D2BD12B73671700491EBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BD02B73671700491EBE /* ContentView.swift */; };
-		F34D2BD32B73671800491EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD22B73671800491EBE /* Assets.xcassets */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
 		F34D2BEA2B73671800491EBE /* UMC_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BE92B73671800491EBE /* UMC_iOSUITests.swift */; };
 		F34D2BEC2B73671800491EBE /* UMC_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BEB2B73671800491EBE /* UMC_iOSUITestsLaunchTests.swift */; };
+		F34D2CBA2B73675300491EBE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BFB2B73675300491EBE /* HomeViewModel.swift */; };
+		F34D2CBB2B73675300491EBE /* HomeNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BFD2B73675300491EBE /* HomeNavigationBarView.swift */; };
+		F34D2CBC2B73675300491EBE /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BFE2B73675300491EBE /* UserInformationView.swift */; };
+		F34D2CBD2B73675300491EBE /* MascotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BFF2B73675300491EBE /* MascotView.swift */; };
+		F34D2CBE2B73675300491EBE /* AnnouncementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C002B73675300491EBE /* AnnouncementView.swift */; };
+		F34D2CBF2B73675300491EBE /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C012B73675300491EBE /* RankView.swift */; };
+		F34D2CC02B73675300491EBE /* TodayILearnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C022B73675300491EBE /* TodayILearnedView.swift */; };
+		F34D2CC12B73675300491EBE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C032B73675300491EBE /* HomeView.swift */; };
+		F34D2CC22B73675300491EBE /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C042B73675300491EBE /* GitHubView.swift */; };
+		F34D2CC32B73675300491EBE /* MainCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C052B73675300491EBE /* MainCalendarView.swift */; };
+		F34D2CC42B73675300491EBE /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C062B73675300491EBE /* HomeSideMenuView.swift */; };
+		F34D2CC52B73675300491EBE /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C072B73675300491EBE /* ToDoListView.swift */; };
+		F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0A2B73675300491EBE /* BulletinBoradViewModel.swift */; };
+		F34D2CC72B73675300491EBE /* BulletinBoardSecondBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0C2B73675300491EBE /* BulletinBoardSecondBtn.swift */; };
+		F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0D2B73675300491EBE /* BulletinBoardNotice.swift */; };
+		F34D2CC92B73675300491EBE /* BulletinBoardFirstBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0E2B73675300491EBE /* BulletinBoardFirstBtn.swift */; };
+		F34D2CCA2B73675300491EBE /* BulletinBoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0F2B73675300491EBE /* BulletinBoardList.swift */; };
+		F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C102B73675300491EBE /* BulletinBoardUI.swift */; };
+		F34D2CCC2B73675300491EBE /* UserContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C112B73675300491EBE /* UserContentPreList.swift */; };
+		F34D2CCD2B73675300491EBE /* WritingSecondThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C142B73675300491EBE /* WritingSecondThirdViewModel.swift */; };
+		F34D2CCE2B73675300491EBE /* WritingListCellFirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C152B73675300491EBE /* WritingListCellFirstViewModel.swift */; };
+		F34D2CCF2B73675300491EBE /* WritingListCellSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C172B73675300491EBE /* WritingListCellSecond.swift */; };
+		F34D2CD02B73675300491EBE /* WrititngNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C182B73675300491EBE /* WrititngNavigationBar.swift */; };
+		F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C192B73675300491EBE /* ButtonWithIcon.swift */; };
+		F34D2CD22B73675300491EBE /* WritingListCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C1A2B73675300491EBE /* WritingListCellFirst.swift */; };
+		F34D2CD32B73675300491EBE /* WritingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C1B2B73675300491EBE /* WritingListCell.swift */; };
+		F34D2CD42B73675300491EBE /* WritingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C1C2B73675300491EBE /* WritingButton.swift */; };
+		F34D2CD52B73675300491EBE /* WritingListThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C1D2B73675300491EBE /* WritingListThirdCell.swift */; };
+		F34D2CD62B73675300491EBE /* WritingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C1E2B73675300491EBE /* WritingList.swift */; };
+		F34D2CD72B73675300491EBE /* BulletinBoardSearchUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C212B73675300491EBE /* BulletinBoardSearchUI.swift */; };
+		F34D2CD82B73675300491EBE /* BulletinBoaardSearchResultUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C222B73675300491EBE /* BulletinBoaardSearchResultUI.swift */; };
+		F34D2CD92B73675300491EBE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C232B73675300491EBE /* SearchBar.swift */; };
+		F34D2CDA2B73675300491EBE /* GenerationPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C262B73675300491EBE /* GenerationPartViewModel.swift */; };
+		F34D2CDB2B73675300491EBE /* ManagerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C282B73675300491EBE /* ManagerSetting.swift */; };
+		F34D2CDC2B73675300491EBE /* ManagerCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C292B73675300491EBE /* ManagerCalender.swift */; };
+		F34D2CDD2B73675300491EBE /* ManagerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C2A2B73675300491EBE /* ManagerInfo.swift */; };
+		F34D2CDE2B73675300491EBE /* ManagerPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C2B2B73675300491EBE /* ManagerPin.swift */; };
+		F34D2CDF2B73675300491EBE /* ManagerPinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C2D2B73675300491EBE /* ManagerPinButton.swift */; };
+		F34D2CE02B73675300491EBE /* BulletinBoardContentDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C302B73675300491EBE /* BulletinBoardContentDetailUI.swift */; };
+		F34D2CE12B73675300491EBE /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C312B73675300491EBE /* Comment.swift */; };
+		F34D2CE22B73675300491EBE /* BulletinBoardContentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C322B73675300491EBE /* BulletinBoardContentDetail.swift */; };
+		F34D2CE32B73675300491EBE /* DetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C332B73675300491EBE /* DetailButton.swift */; };
+		F34D2CE42B73675300491EBE /* CommetAddbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C342B73675300491EBE /* CommetAddbar.swift */; };
+		F34D2CE52B73675300491EBE /* SettingBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C362B73675300491EBE /* SettingBackButton.swift */; };
+		F34D2CE62B73675300491EBE /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C372B73675300491EBE /* DropDownPicker.swift */; };
+		F34D2CE72B73675300491EBE /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C392B73675300491EBE /* Extension+View.swift */; };
+		F34D2CE82B73675300491EBE /* CirclePlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C3A2B73675300491EBE /* CirclePlusButton.swift */; };
+		F34D2CE92B73675300491EBE /* CircleCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C3B2B73675300491EBE /* CircleCheckButton.swift */; };
+		F34D2CEA2B73675300491EBE /* SideMenuNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C3C2B73675300491EBE /* SideMenuNavigationButton.swift */; };
+		F34D2CEB2B73675300491EBE /* CircleFillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C3D2B73675300491EBE /* CircleFillButton.swift */; };
+		F34D2CEC2B73675300491EBE /* DummyUtilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C3E2B73675300491EBE /* DummyUtilView.swift */; };
+		F34D2CED2B73675300491EBE /* MascotRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C412B73675300491EBE /* MascotRankingViewModel.swift */; };
+		F34D2CEE2B73675300491EBE /* MascotRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C432B73675300491EBE /* MascotRankingModel.swift */; };
+		F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C452B73675300491EBE /* RankingDetailView.swift */; };
+		F34D2CF02B73675300491EBE /* ToDoListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C492B73675300491EBE /* ToDoListCellViewModel.swift */; };
+		F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C4B2B73675300491EBE /* ToDoEditSecondActionSheet.swift */; };
+		F34D2CF22B73675300491EBE /* ToDoEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C4C2B73675300491EBE /* ToDoEditSheet.swift */; };
+		F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C4D2B73675300491EBE /* ToDoDate.swift */; };
+		F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C4E2B73675300491EBE /* ToDoListAdd.swift */; };
+		F34D2CF52B73675300491EBE /* ToDoEditFirstActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C4F2B73675300491EBE /* ToDoEditFirstActionSheet.swift */; };
+		F34D2CF62B73675300491EBE /* ToDoListUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C502B73675300491EBE /* ToDoListUI.swift */; };
+		F34D2CF72B73675300491EBE /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C512B73675300491EBE /* ToDoList.swift */; };
+		F34D2CF82B73675300491EBE /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C522B73675300491EBE /* ToDoListCell.swift */; };
+		F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C552B73675300491EBE /* MyContentViewModel.swift */; };
+		F34D2CFA2B73675300491EBE /* MyContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C572B73675300491EBE /* MyContentList.swift */; };
+		F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C582B73675300491EBE /* MyContentPreList.swift */; };
+		F34D2CFC2B73675300491EBE /* UserMyContentUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C592B73675300491EBE /* UserMyContentUI.swift */; };
+		F34D2CFD2B73675300491EBE /* MyComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C5C2B73675300491EBE /* MyComment.swift */; };
+		F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C5D2B73675300491EBE /* MyWriteSearch.swift */; };
+		F34D2CFF2B73675300491EBE /* TILListThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C602B73675300491EBE /* TILListThirdViewModel.swift */; };
+		F34D2D002B73675300491EBE /* TILFileAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C612B73675300491EBE /* TILFileAddViewModel.swift */; };
+		F34D2D012B73675300491EBE /* TILViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C622B73675300491EBE /* TILViewModel.swift */; };
+		F34D2D022B73675300491EBE /* TILLIstfifthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C642B73675300491EBE /* TILLIstfifthCell.swift */; };
+		F34D2D032B73675300491EBE /* TILListFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C652B73675300491EBE /* TILListFirstCell.swift */; };
+		F34D2D042B73675300491EBE /* TILFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C662B73675300491EBE /* TILFile.swift */; };
+		F34D2D052B73675300491EBE /* TILList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C672B73675300491EBE /* TILList.swift */; };
+		F34D2D062B73675300491EBE /* TILUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C682B73675300491EBE /* TILUI.swift */; };
+		F34D2D072B73675300491EBE /* TILListFirstViewsub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C692B73675300491EBE /* TILListFirstViewsub.swift */; };
+		F34D2D082B73675300491EBE /* TILWriteUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C6A2B73675300491EBE /* TILWriteUI.swift */; };
+		F34D2D092B73675300491EBE /* TILSecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C6B2B73675300491EBE /* TILSecondCell.swift */; };
+		F34D2D0A2B73675300491EBE /* TILListSixthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C6C2B73675300491EBE /* TILListSixthCell.swift */; };
+		F34D2D0B2B73675300491EBE /* TILListFourthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C6D2B73675300491EBE /* TILListFourthCell.swift */; };
+		F34D2D0C2B73675300491EBE /* TILCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C6E2B73675300491EBE /* TILCell.swift */; };
+		F34D2D0D2B73675300491EBE /* TILNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C6F2B73675300491EBE /* TILNavigationbar.swift */; };
+		F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C702B73675300491EBE /* TILListThirdCell.swift */; };
+		F34D2D0F2B73675300491EBE /* HistorySearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C732B73675300491EBE /* HistorySearchBarView.swift */; };
+		F34D2D102B73675300491EBE /* ProjectTypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C742B73675300491EBE /* ProjectTypeButtonView.swift */; };
+		F34D2D112B73675300491EBE /* HistoryProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C752B73675300491EBE /* HistoryProjectView.swift */; };
+		F34D2D122B73675300491EBE /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C762B73675300491EBE /* HistoryView.swift */; };
+		F34D2D132B73675300491EBE /* HistoryProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C772B73675300491EBE /* HistoryProjectListView.swift */; };
+		F34D2D142B73675300491EBE /* HotProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C782B73675300491EBE /* HotProjectView.swift */; };
+		F34D2D152B73675300491EBE /* HistorySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C7A2B73675300491EBE /* HistorySearchView.swift */; };
+		F34D2D162B73675300491EBE /* HistoryRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C7C2B73675300491EBE /* HistoryRegisterView.swift */; };
+		F34D2D172B73675300491EBE /* HistoryRegisterNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C7D2B73675300491EBE /* HistoryRegisterNavigationBarView.swift */; };
+		F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C7E2B73675300491EBE /* ProjectIconRegisterView.swift */; };
+		F34D2D192B73675300491EBE /* ProjectClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C7F2B73675300491EBE /* ProjectClassificationView.swift */; };
+		F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C802B73675300491EBE /* ProjectHashtagRegisterView.swift */; };
+		F34D2D1B2B73675300491EBE /* ProjectCardinalNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C812B73675300491EBE /* ProjectCardinalNumberView.swift */; };
+		F34D2D1C2B73675300491EBE /* ProjectInformationRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C822B73675300491EBE /* ProjectInformationRegisterView.swift */; };
+		F34D2D1D2B73675300491EBE /* ProjectNameRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C832B73675300491EBE /* ProjectNameRegisterView.swift */; };
+		F34D2D1E2B73675300491EBE /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C862B73675300491EBE /* NotificationModel.swift */; };
+		F34D2D1F2B73675300491EBE /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C882B73675300491EBE /* HomeNotificationView.swift */; };
+		F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C892B73675300491EBE /* FriendsListView.swift */; };
+		F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8C2B73675300491EBE /* UserProfileUI.swift */; };
+		F34D2D222B73675300491EBE /* AbleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8D2B73675300491EBE /* AbleStack.swift */; };
+		F34D2D232B73675300491EBE /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8E2B73675300491EBE /* UserMessage.swift */; };
+		F34D2D242B73675300491EBE /* UMCseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8F2B73675300491EBE /* UMCseason.swift */; };
+		F34D2D252B73675300491EBE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C902B73675300491EBE /* UserProfile.swift */; };
+		F34D2D262B73675300491EBE /* UserProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C932B73675300491EBE /* UserProfileEditViewModel.swift */; };
+		F34D2D272B73675300491EBE /* UserProfileEditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C942B73675300491EBE /* UserProfileEditImageViewModel.swift */; };
+		F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C962B73675300491EBE /* UserProfileEditImage.swift */; };
+		F34D2D292B73675300491EBE /* UserProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C972B73675300491EBE /* UserProfileEdit.swift */; };
+		F34D2D2A2B73675300491EBE /* SocialButtonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C982B73675300491EBE /* SocialButtonSet.swift */; };
+		F34D2D2B2B73675300491EBE /* UserProfileSocialAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C992B73675300491EBE /* UserProfileSocialAdd.swift */; };
+		F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C9A2B73675300491EBE /* UserProfileEditList.swift */; };
+		F34D2D2D2B73675300491EBE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C9E2B73675300491EBE /* LoginResponse.swift */; };
+		F34D2D2E2B73675300491EBE /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA12B73675300491EBE /* UserViewModel.swift */; };
+		F34D2D2F2B73675300491EBE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA22B73675300491EBE /* LoginViewModel.swift */; };
+		F34D2D302B73675300491EBE /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA32B73675300491EBE /* JoinViewModel.swift */; };
+		F34D2D312B73675300491EBE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA42B73675300491EBE /* LoginView.swift */; };
+		F34D2D322B73675300491EBE /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA62B73675300491EBE /* JoinModel.swift */; };
+		F34D2D332B73675300491EBE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA72B73675300491EBE /* User.swift */; };
+		F34D2D342B73675300491EBE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA82B73675300491EBE /* Token.swift */; };
+		F34D2D352B73675300491EBE /* JoinAgreCircleCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CAA2B73675300491EBE /* JoinAgreCircleCheckButton.swift */; };
+		F34D2D362B73675300491EBE /* JoinNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CAB2B73675300491EBE /* JoinNavigationButton.swift */; };
+		F34D2D372B73675300491EBE /* JoinGenerationPartPickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CAC2B73675300491EBE /* JoinGenerationPartPickers.swift */; };
+		F34D2D382B73675300491EBE /* JoinCircleBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CAD2B73675300491EBE /* JoinCircleBorderButton.swift */; };
+		F34D2D392B73675300491EBE /* KakaoLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CAE2B73675300491EBE /* KakaoLoginButton.swift */; };
+		F34D2D3A2B73675300491EBE /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CAF2B73675300491EBE /* AppleLoginButton.swift */; };
+		F34D2D3B2B73675300491EBE /* JoinTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB02B73675300491EBE /* JoinTextFieldStyle.swift */; };
+		F34D2D3C2B73675300491EBE /* JoinFinalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB22B73675300491EBE /* JoinFinalMessage.swift */; };
+		F34D2D3D2B73675300491EBE /* SelectUniv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB32B73675300491EBE /* SelectUniv.swift */; };
+		F34D2D3E2B73675300491EBE /* JoinAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB42B73675300491EBE /* JoinAgreement.swift */; };
+		F34D2D3F2B73675300491EBE /* SelectPartAndGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB52B73675300491EBE /* SelectPartAndGeneration.swift */; };
+		F34D2D402B73675300491EBE /* JoinCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB62B73675300491EBE /* JoinCode.swift */; };
+		F34D2D412B73675300491EBE /* JoinName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB72B73675300491EBE /* JoinName.swift */; };
+		F34D2D422B73675300491EBE /* SelectPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB82B73675300491EBE /* SelectPosition.swift */; };
+		F34D2D432B73675300491EBE /* JoinNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB92B73675300491EBE /* JoinNickname.swift */; };
+		F34D2D472B7367C600491EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2D462B7367C600491EBE /* Assets.xcassets */; };
+		F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */; };
+		F34D2D522B7367D400491EBE /* MemberRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4C2B7367D400491EBE /* MemberRequestDTO.swift */; };
+		F34D2D532B7367D400491EBE /* MemberResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4D2B7367D400491EBE /* MemberResponseDTO.swift */; };
+		F34D2D542B7367D400491EBE /* DummyResponseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D502B7367D400491EBE /* DummyResponseRepository.swift */; };
+		F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D572B7367DC00491EBE /* ManagerModel.swift */; };
+		F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D582B7367DC00491EBE /* CalendarTask.swift */; };
+		F34D2D5E2B7367DC00491EBE /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D592B7367DC00491EBE /* DateValue.swift */; };
+		F34D2D5F2B7367DC00491EBE /* AnnouncementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D5A2B7367DC00491EBE /* AnnouncementInfo.swift */; };
+		F34D2D602B7367DC00491EBE /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D5B2B7367DC00491EBE /* Member.swift */; };
+		F34D2D632B73683000491EBE /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D622B73683000491EBE /* PopupView */; };
+		F34D2D662B73687100491EBE /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D652B73687100491EBE /* KakaoSDK */; };
+		F34D2D682B73687100491EBE /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D672B73687100491EBE /* KakaoSDKAuth */; };
+		F34D2D6A2B73687100491EBE /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D692B73687100491EBE /* KakaoSDKCommon */; };
+		F34D2D6C2B73687100491EBE /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D6B2B73687100491EBE /* KakaoSDKUser */; };
+		F34D2D722B7379E200491EBE /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D712B7379E200491EBE /* KakaoSDKCert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +188,163 @@
 /* Begin PBXFileReference section */
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
-		F34D2BD02B73671700491EBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F34D2BD22B73671800491EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F34D2BDB2B73671800491EBE /* UMC-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UMC-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSTests.swift; sourceTree = "<group>"; };
 		F34D2BE52B73671800491EBE /* UMC-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UMC-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BE92B73671800491EBE /* UMC_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSUITests.swift; sourceTree = "<group>"; };
 		F34D2BEB2B73671800491EBE /* UMC_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F34D2BFB2B73675300491EBE /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F34D2BFD2B73675300491EBE /* HomeNavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationBarView.swift; sourceTree = "<group>"; };
+		F34D2BFE2B73675300491EBE /* UserInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
+		F34D2BFF2B73675300491EBE /* MascotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotView.swift; sourceTree = "<group>"; };
+		F34D2C002B73675300491EBE /* AnnouncementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementView.swift; sourceTree = "<group>"; };
+		F34D2C012B73675300491EBE /* RankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
+		F34D2C022B73675300491EBE /* TodayILearnedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayILearnedView.swift; sourceTree = "<group>"; };
+		F34D2C032B73675300491EBE /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F34D2C042B73675300491EBE /* GitHubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
+		F34D2C052B73675300491EBE /* MainCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCalendarView.swift; sourceTree = "<group>"; };
+		F34D2C062B73675300491EBE /* HomeSideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
+		F34D2C072B73675300491EBE /* ToDoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
+		F34D2C0A2B73675300491EBE /* BulletinBoradViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoradViewModel.swift; sourceTree = "<group>"; };
+		F34D2C0C2B73675300491EBE /* BulletinBoardSecondBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardSecondBtn.swift; sourceTree = "<group>"; };
+		F34D2C0D2B73675300491EBE /* BulletinBoardNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardNotice.swift; sourceTree = "<group>"; };
+		F34D2C0E2B73675300491EBE /* BulletinBoardFirstBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardFirstBtn.swift; sourceTree = "<group>"; };
+		F34D2C0F2B73675300491EBE /* BulletinBoardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardList.swift; sourceTree = "<group>"; };
+		F34D2C102B73675300491EBE /* BulletinBoardUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardUI.swift; sourceTree = "<group>"; };
+		F34D2C112B73675300491EBE /* UserContentPreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserContentPreList.swift; sourceTree = "<group>"; };
+		F34D2C142B73675300491EBE /* WritingSecondThirdViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingSecondThirdViewModel.swift; sourceTree = "<group>"; };
+		F34D2C152B73675300491EBE /* WritingListCellFirstViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirstViewModel.swift; sourceTree = "<group>"; };
+		F34D2C172B73675300491EBE /* WritingListCellSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellSecond.swift; sourceTree = "<group>"; };
+		F34D2C182B73675300491EBE /* WrititngNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrititngNavigationBar.swift; sourceTree = "<group>"; };
+		F34D2C192B73675300491EBE /* ButtonWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithIcon.swift; sourceTree = "<group>"; };
+		F34D2C1A2B73675300491EBE /* WritingListCellFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCellFirst.swift; sourceTree = "<group>"; };
+		F34D2C1B2B73675300491EBE /* WritingListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListCell.swift; sourceTree = "<group>"; };
+		F34D2C1C2B73675300491EBE /* WritingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingButton.swift; sourceTree = "<group>"; };
+		F34D2C1D2B73675300491EBE /* WritingListThirdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingListThirdCell.swift; sourceTree = "<group>"; };
+		F34D2C1E2B73675300491EBE /* WritingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingList.swift; sourceTree = "<group>"; };
+		F34D2C212B73675300491EBE /* BulletinBoardSearchUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardSearchUI.swift; sourceTree = "<group>"; };
+		F34D2C222B73675300491EBE /* BulletinBoaardSearchResultUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoaardSearchResultUI.swift; sourceTree = "<group>"; };
+		F34D2C232B73675300491EBE /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F34D2C262B73675300491EBE /* GenerationPartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationPartViewModel.swift; sourceTree = "<group>"; };
+		F34D2C282B73675300491EBE /* ManagerSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerSetting.swift; sourceTree = "<group>"; };
+		F34D2C292B73675300491EBE /* ManagerCalender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerCalender.swift; sourceTree = "<group>"; };
+		F34D2C2A2B73675300491EBE /* ManagerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerInfo.swift; sourceTree = "<group>"; };
+		F34D2C2B2B73675300491EBE /* ManagerPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerPin.swift; sourceTree = "<group>"; };
+		F34D2C2D2B73675300491EBE /* ManagerPinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerPinButton.swift; sourceTree = "<group>"; };
+		F34D2C302B73675300491EBE /* BulletinBoardContentDetailUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardContentDetailUI.swift; sourceTree = "<group>"; };
+		F34D2C312B73675300491EBE /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		F34D2C322B73675300491EBE /* BulletinBoardContentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardContentDetail.swift; sourceTree = "<group>"; };
+		F34D2C332B73675300491EBE /* DetailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailButton.swift; sourceTree = "<group>"; };
+		F34D2C342B73675300491EBE /* CommetAddbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommetAddbar.swift; sourceTree = "<group>"; };
+		F34D2C362B73675300491EBE /* SettingBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingBackButton.swift; sourceTree = "<group>"; };
+		F34D2C372B73675300491EBE /* DropDownPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
+		F34D2C392B73675300491EBE /* Extension+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		F34D2C3A2B73675300491EBE /* CirclePlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePlusButton.swift; sourceTree = "<group>"; };
+		F34D2C3B2B73675300491EBE /* CircleCheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCheckButton.swift; sourceTree = "<group>"; };
+		F34D2C3C2B73675300491EBE /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
+		F34D2C3D2B73675300491EBE /* CircleFillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleFillButton.swift; sourceTree = "<group>"; };
+		F34D2C3E2B73675300491EBE /* DummyUtilView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyUtilView.swift; sourceTree = "<group>"; };
+		F34D2C412B73675300491EBE /* MascotRankingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotRankingViewModel.swift; sourceTree = "<group>"; };
+		F34D2C432B73675300491EBE /* MascotRankingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotRankingModel.swift; sourceTree = "<group>"; };
+		F34D2C452B73675300491EBE /* RankingDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingDetailView.swift; sourceTree = "<group>"; };
+		F34D2C492B73675300491EBE /* ToDoListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListCellViewModel.swift; sourceTree = "<group>"; };
+		F34D2C4B2B73675300491EBE /* ToDoEditSecondActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoEditSecondActionSheet.swift; sourceTree = "<group>"; };
+		F34D2C4C2B73675300491EBE /* ToDoEditSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoEditSheet.swift; sourceTree = "<group>"; };
+		F34D2C4D2B73675300491EBE /* ToDoDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoDate.swift; sourceTree = "<group>"; };
+		F34D2C4E2B73675300491EBE /* ToDoListAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListAdd.swift; sourceTree = "<group>"; };
+		F34D2C4F2B73675300491EBE /* ToDoEditFirstActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoEditFirstActionSheet.swift; sourceTree = "<group>"; };
+		F34D2C502B73675300491EBE /* ToDoListUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListUI.swift; sourceTree = "<group>"; };
+		F34D2C512B73675300491EBE /* ToDoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		F34D2C522B73675300491EBE /* ToDoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
+		F34D2C552B73675300491EBE /* MyContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentViewModel.swift; sourceTree = "<group>"; };
+		F34D2C572B73675300491EBE /* MyContentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentList.swift; sourceTree = "<group>"; };
+		F34D2C582B73675300491EBE /* MyContentPreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentPreList.swift; sourceTree = "<group>"; };
+		F34D2C592B73675300491EBE /* UserMyContentUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMyContentUI.swift; sourceTree = "<group>"; };
+		F34D2C5C2B73675300491EBE /* MyComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyComment.swift; sourceTree = "<group>"; };
+		F34D2C5D2B73675300491EBE /* MyWriteSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWriteSearch.swift; sourceTree = "<group>"; };
+		F34D2C602B73675300491EBE /* TILListThirdViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILListThirdViewModel.swift; sourceTree = "<group>"; };
+		F34D2C612B73675300491EBE /* TILFileAddViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILFileAddViewModel.swift; sourceTree = "<group>"; };
+		F34D2C622B73675300491EBE /* TILViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILViewModel.swift; sourceTree = "<group>"; };
+		F34D2C642B73675300491EBE /* TILLIstfifthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILLIstfifthCell.swift; sourceTree = "<group>"; };
+		F34D2C652B73675300491EBE /* TILListFirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILListFirstCell.swift; sourceTree = "<group>"; };
+		F34D2C662B73675300491EBE /* TILFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILFile.swift; sourceTree = "<group>"; };
+		F34D2C672B73675300491EBE /* TILList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILList.swift; sourceTree = "<group>"; };
+		F34D2C682B73675300491EBE /* TILUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILUI.swift; sourceTree = "<group>"; };
+		F34D2C692B73675300491EBE /* TILListFirstViewsub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILListFirstViewsub.swift; sourceTree = "<group>"; };
+		F34D2C6A2B73675300491EBE /* TILWriteUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILWriteUI.swift; sourceTree = "<group>"; };
+		F34D2C6B2B73675300491EBE /* TILSecondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILSecondCell.swift; sourceTree = "<group>"; };
+		F34D2C6C2B73675300491EBE /* TILListSixthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILListSixthCell.swift; sourceTree = "<group>"; };
+		F34D2C6D2B73675300491EBE /* TILListFourthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILListFourthCell.swift; sourceTree = "<group>"; };
+		F34D2C6E2B73675300491EBE /* TILCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILCell.swift; sourceTree = "<group>"; };
+		F34D2C6F2B73675300491EBE /* TILNavigationbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILNavigationbar.swift; sourceTree = "<group>"; };
+		F34D2C702B73675300491EBE /* TILListThirdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TILListThirdCell.swift; sourceTree = "<group>"; };
+		F34D2C732B73675300491EBE /* HistorySearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySearchBarView.swift; sourceTree = "<group>"; };
+		F34D2C742B73675300491EBE /* ProjectTypeButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTypeButtonView.swift; sourceTree = "<group>"; };
+		F34D2C752B73675300491EBE /* HistoryProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryProjectView.swift; sourceTree = "<group>"; };
+		F34D2C762B73675300491EBE /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		F34D2C772B73675300491EBE /* HistoryProjectListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryProjectListView.swift; sourceTree = "<group>"; };
+		F34D2C782B73675300491EBE /* HotProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotProjectView.swift; sourceTree = "<group>"; };
+		F34D2C7A2B73675300491EBE /* HistorySearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySearchView.swift; sourceTree = "<group>"; };
+		F34D2C7C2B73675300491EBE /* HistoryRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRegisterView.swift; sourceTree = "<group>"; };
+		F34D2C7D2B73675300491EBE /* HistoryRegisterNavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRegisterNavigationBarView.swift; sourceTree = "<group>"; };
+		F34D2C7E2B73675300491EBE /* ProjectIconRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectIconRegisterView.swift; sourceTree = "<group>"; };
+		F34D2C7F2B73675300491EBE /* ProjectClassificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectClassificationView.swift; sourceTree = "<group>"; };
+		F34D2C802B73675300491EBE /* ProjectHashtagRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectHashtagRegisterView.swift; sourceTree = "<group>"; };
+		F34D2C812B73675300491EBE /* ProjectCardinalNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCardinalNumberView.swift; sourceTree = "<group>"; };
+		F34D2C822B73675300491EBE /* ProjectInformationRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInformationRegisterView.swift; sourceTree = "<group>"; };
+		F34D2C832B73675300491EBE /* ProjectNameRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectNameRegisterView.swift; sourceTree = "<group>"; };
+		F34D2C862B73675300491EBE /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		F34D2C882B73675300491EBE /* HomeNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
+		F34D2C892B73675300491EBE /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
+		F34D2C8C2B73675300491EBE /* UserProfileUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileUI.swift; sourceTree = "<group>"; };
+		F34D2C8D2B73675300491EBE /* AbleStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbleStack.swift; sourceTree = "<group>"; };
+		F34D2C8E2B73675300491EBE /* UserMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
+		F34D2C8F2B73675300491EBE /* UMCseason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMCseason.swift; sourceTree = "<group>"; };
+		F34D2C902B73675300491EBE /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F34D2C932B73675300491EBE /* UserProfileEditViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditViewModel.swift; sourceTree = "<group>"; };
+		F34D2C942B73675300491EBE /* UserProfileEditImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditImageViewModel.swift; sourceTree = "<group>"; };
+		F34D2C962B73675300491EBE /* UserProfileEditImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditImage.swift; sourceTree = "<group>"; };
+		F34D2C972B73675300491EBE /* UserProfileEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEdit.swift; sourceTree = "<group>"; };
+		F34D2C982B73675300491EBE /* SocialButtonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialButtonSet.swift; sourceTree = "<group>"; };
+		F34D2C992B73675300491EBE /* UserProfileSocialAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileSocialAdd.swift; sourceTree = "<group>"; };
+		F34D2C9A2B73675300491EBE /* UserProfileEditList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditList.swift; sourceTree = "<group>"; };
+		F34D2C9E2B73675300491EBE /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		F34D2CA12B73675300491EBE /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F34D2CA22B73675300491EBE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F34D2CA32B73675300491EBE /* JoinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
+		F34D2CA42B73675300491EBE /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F34D2CA62B73675300491EBE /* JoinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
+		F34D2CA72B73675300491EBE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F34D2CA82B73675300491EBE /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		F34D2CAA2B73675300491EBE /* JoinAgreCircleCheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinAgreCircleCheckButton.swift; sourceTree = "<group>"; };
+		F34D2CAB2B73675300491EBE /* JoinNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinNavigationButton.swift; sourceTree = "<group>"; };
+		F34D2CAC2B73675300491EBE /* JoinGenerationPartPickers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinGenerationPartPickers.swift; sourceTree = "<group>"; };
+		F34D2CAD2B73675300491EBE /* JoinCircleBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinCircleBorderButton.swift; sourceTree = "<group>"; };
+		F34D2CAE2B73675300491EBE /* KakaoLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
+		F34D2CAF2B73675300491EBE /* AppleLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
+		F34D2CB02B73675300491EBE /* JoinTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinTextFieldStyle.swift; sourceTree = "<group>"; };
+		F34D2CB22B73675300491EBE /* JoinFinalMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinFinalMessage.swift; sourceTree = "<group>"; };
+		F34D2CB32B73675300491EBE /* SelectUniv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUniv.swift; sourceTree = "<group>"; };
+		F34D2CB42B73675300491EBE /* JoinAgreement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinAgreement.swift; sourceTree = "<group>"; };
+		F34D2CB52B73675300491EBE /* SelectPartAndGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPartAndGeneration.swift; sourceTree = "<group>"; };
+		F34D2CB62B73675300491EBE /* JoinCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinCode.swift; sourceTree = "<group>"; };
+		F34D2CB72B73675300491EBE /* JoinName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinName.swift; sourceTree = "<group>"; };
+		F34D2CB82B73675300491EBE /* SelectPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPosition.swift; sourceTree = "<group>"; };
+		F34D2CB92B73675300491EBE /* JoinNickname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinNickname.swift; sourceTree = "<group>"; };
+		F34D2D462B7367C600491EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		F34D2D4C2B7367D400491EBE /* MemberRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberRequestDTO.swift; sourceTree = "<group>"; };
+		F34D2D4D2B7367D400491EBE /* MemberResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberResponseDTO.swift; sourceTree = "<group>"; };
+		F34D2D502B7367D400491EBE /* DummyResponseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyResponseRepository.swift; sourceTree = "<group>"; };
+		F34D2D572B7367DC00491EBE /* ManagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerModel.swift; sourceTree = "<group>"; };
+		F34D2D582B7367DC00491EBE /* CalendarTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTask.swift; sourceTree = "<group>"; };
+		F34D2D592B7367DC00491EBE /* DateValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		F34D2D5A2B7367DC00491EBE /* AnnouncementInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementInfo.swift; sourceTree = "<group>"; };
+		F34D2D5B2B7367DC00491EBE /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F34D2D6D2B73698400491EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UMC-iOS.entitlements"; sourceTree = "<group>"; };
+		F34D2D702B7378B000491EBE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +352,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34D2D6A2B73687100491EBE /* KakaoSDKCommon in Frameworks */,
+				F34D2D632B73683000491EBE /* PopupView in Frameworks */,
+				F34D2D662B73687100491EBE /* KakaoSDK in Frameworks */,
+				F34D2D722B7379E200491EBE /* KakaoSDKCert in Frameworks */,
+				F34D2D6C2B73687100491EBE /* KakaoSDKUser in Frameworks */,
+				F34D2D682B73687100491EBE /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +381,7 @@
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
+				F34D2D702B7378B000491EBE /* Config.xcconfig */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
 				F34D2BE82B73671800491EBE /* UMC-iOSUITests */,
@@ -94,9 +402,13 @@
 		F34D2BCD2B73671700491EBE /* UMC-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */,
-				F34D2BD02B73671700491EBE /* ContentView.swift */,
-				F34D2BD22B73671800491EBE /* Assets.xcassets */,
+				F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */,
+				F34D2D6D2B73698400491EBE /* Info.plist */,
+				F34D2D552B7367DC00491EBE /* Domain */,
+				F34D2D482B7367D400491EBE /* Data */,
+				F34D2D452B7367C600491EBE /* Resource */,
+				F34D2D442B73675A00491EBE /* App */,
+				F34D2BF82B73675300491EBE /* Presentation */,
 				F34D2BD42B73671800491EBE /* Preview Content */,
 			);
 			path = "UMC-iOS";
@@ -127,6 +439,670 @@
 			path = "UMC-iOSUITests";
 			sourceTree = "<group>";
 		};
+		F34D2BF82B73675300491EBE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2BF92B73675300491EBE /* Home */,
+				F34D2C082B73675300491EBE /* BulletinBoard */,
+				F34D2C122B73675300491EBE /* WritingView */,
+				F34D2C1F2B73675300491EBE /* BulletinBoardSearch */,
+				F34D2C242B73675300491EBE /* HomeManager */,
+				F34D2C2E2B73675300491EBE /* ContentDetail */,
+				F34D2C352B73675300491EBE /* Utils */,
+				F34D2C3F2B73675300491EBE /* MascotRanking */,
+				F34D2C462B73675300491EBE /* ContentView */,
+				F34D2C472B73675300491EBE /* TodoList */,
+				F34D2C532B73675300491EBE /* MyContent */,
+				F34D2C5A2B73675300491EBE /* MyWriteComment */,
+				F34D2C5E2B73675300491EBE /* TodayILearned */,
+				F34D2C712B73675300491EBE /* History */,
+				F34D2C842B73675300491EBE /* HomeTopMenu */,
+				F34D2C8A2B73675300491EBE /* UserProfileView */,
+				F34D2C912B73675300491EBE /* UserProfileEditView */,
+				F34D2C9B2B73675300491EBE /* Login */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F34D2BF92B73675300491EBE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2BFA2B73675300491EBE /* ViewModel */,
+				F34D2BFC2B73675300491EBE /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F34D2BFA2B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2BFB2B73675300491EBE /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2BFC2B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2BFD2B73675300491EBE /* HomeNavigationBarView.swift */,
+				F34D2BFE2B73675300491EBE /* UserInformationView.swift */,
+				F34D2BFF2B73675300491EBE /* MascotView.swift */,
+				F34D2C002B73675300491EBE /* AnnouncementView.swift */,
+				F34D2C012B73675300491EBE /* RankView.swift */,
+				F34D2C022B73675300491EBE /* TodayILearnedView.swift */,
+				F34D2C032B73675300491EBE /* HomeView.swift */,
+				F34D2C042B73675300491EBE /* GitHubView.swift */,
+				F34D2C052B73675300491EBE /* MainCalendarView.swift */,
+				F34D2C062B73675300491EBE /* HomeSideMenuView.swift */,
+				F34D2C072B73675300491EBE /* ToDoListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C082B73675300491EBE /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C092B73675300491EBE /* ViewModel */,
+				F34D2C0B2B73675300491EBE /* View */,
+			);
+			path = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		F34D2C092B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C0A2B73675300491EBE /* BulletinBoradViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2C0B2B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C0C2B73675300491EBE /* BulletinBoardSecondBtn.swift */,
+				F34D2C0D2B73675300491EBE /* BulletinBoardNotice.swift */,
+				F34D2C0E2B73675300491EBE /* BulletinBoardFirstBtn.swift */,
+				F34D2C0F2B73675300491EBE /* BulletinBoardList.swift */,
+				F34D2C102B73675300491EBE /* BulletinBoardUI.swift */,
+				F34D2C112B73675300491EBE /* UserContentPreList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C122B73675300491EBE /* WritingView */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C132B73675300491EBE /* ModelView */,
+				F34D2C162B73675300491EBE /* View */,
+			);
+			path = WritingView;
+			sourceTree = "<group>";
+		};
+		F34D2C132B73675300491EBE /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C142B73675300491EBE /* WritingSecondThirdViewModel.swift */,
+				F34D2C152B73675300491EBE /* WritingListCellFirstViewModel.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		F34D2C162B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C172B73675300491EBE /* WritingListCellSecond.swift */,
+				F34D2C182B73675300491EBE /* WrititngNavigationBar.swift */,
+				F34D2C192B73675300491EBE /* ButtonWithIcon.swift */,
+				F34D2C1A2B73675300491EBE /* WritingListCellFirst.swift */,
+				F34D2C1B2B73675300491EBE /* WritingListCell.swift */,
+				F34D2C1C2B73675300491EBE /* WritingButton.swift */,
+				F34D2C1D2B73675300491EBE /* WritingListThirdCell.swift */,
+				F34D2C1E2B73675300491EBE /* WritingList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C1F2B73675300491EBE /* BulletinBoardSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C202B73675300491EBE /* View */,
+			);
+			path = BulletinBoardSearch;
+			sourceTree = "<group>";
+		};
+		F34D2C202B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C212B73675300491EBE /* BulletinBoardSearchUI.swift */,
+				F34D2C222B73675300491EBE /* BulletinBoaardSearchResultUI.swift */,
+				F34D2C232B73675300491EBE /* SearchBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C242B73675300491EBE /* HomeManager */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C252B73675300491EBE /* ViewModel */,
+				F34D2C272B73675300491EBE /* View */,
+				F34D2C2C2B73675300491EBE /* Helper */,
+			);
+			path = HomeManager;
+			sourceTree = "<group>";
+		};
+		F34D2C252B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C262B73675300491EBE /* GenerationPartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2C272B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C282B73675300491EBE /* ManagerSetting.swift */,
+				F34D2C292B73675300491EBE /* ManagerCalender.swift */,
+				F34D2C2A2B73675300491EBE /* ManagerInfo.swift */,
+				F34D2C2B2B73675300491EBE /* ManagerPin.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C2C2B73675300491EBE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C2D2B73675300491EBE /* ManagerPinButton.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F34D2C2E2B73675300491EBE /* ContentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C2F2B73675300491EBE /* View */,
+			);
+			path = ContentDetail;
+			sourceTree = "<group>";
+		};
+		F34D2C2F2B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C302B73675300491EBE /* BulletinBoardContentDetailUI.swift */,
+				F34D2C312B73675300491EBE /* Comment.swift */,
+				F34D2C322B73675300491EBE /* BulletinBoardContentDetail.swift */,
+				F34D2C332B73675300491EBE /* DetailButton.swift */,
+				F34D2C342B73675300491EBE /* CommetAddbar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C352B73675300491EBE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C362B73675300491EBE /* SettingBackButton.swift */,
+				F34D2C372B73675300491EBE /* DropDownPicker.swift */,
+				F34D2C382B73675300491EBE /* Extension */,
+				F34D2C3A2B73675300491EBE /* CirclePlusButton.swift */,
+				F34D2C3B2B73675300491EBE /* CircleCheckButton.swift */,
+				F34D2C3C2B73675300491EBE /* SideMenuNavigationButton.swift */,
+				F34D2C3D2B73675300491EBE /* CircleFillButton.swift */,
+				F34D2C3E2B73675300491EBE /* DummyUtilView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F34D2C382B73675300491EBE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C392B73675300491EBE /* Extension+View.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F34D2C3F2B73675300491EBE /* MascotRanking */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C402B73675300491EBE /* ViewModel */,
+				F34D2C422B73675300491EBE /* Model */,
+				F34D2C442B73675300491EBE /* View */,
+			);
+			path = MascotRanking;
+			sourceTree = "<group>";
+		};
+		F34D2C402B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C412B73675300491EBE /* MascotRankingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2C422B73675300491EBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C432B73675300491EBE /* MascotRankingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F34D2C442B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C452B73675300491EBE /* RankingDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C462B73675300491EBE /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		F34D2C472B73675300491EBE /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C482B73675300491EBE /* ViewModel */,
+				F34D2C4A2B73675300491EBE /* View */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		F34D2C482B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C492B73675300491EBE /* ToDoListCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2C4A2B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C4B2B73675300491EBE /* ToDoEditSecondActionSheet.swift */,
+				F34D2C4C2B73675300491EBE /* ToDoEditSheet.swift */,
+				F34D2C4D2B73675300491EBE /* ToDoDate.swift */,
+				F34D2C4E2B73675300491EBE /* ToDoListAdd.swift */,
+				F34D2C4F2B73675300491EBE /* ToDoEditFirstActionSheet.swift */,
+				F34D2C502B73675300491EBE /* ToDoListUI.swift */,
+				F34D2C512B73675300491EBE /* ToDoList.swift */,
+				F34D2C522B73675300491EBE /* ToDoListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C532B73675300491EBE /* MyContent */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C542B73675300491EBE /* ViewModel */,
+				F34D2C562B73675300491EBE /* View */,
+			);
+			path = MyContent;
+			sourceTree = "<group>";
+		};
+		F34D2C542B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C552B73675300491EBE /* MyContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2C562B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C572B73675300491EBE /* MyContentList.swift */,
+				F34D2C582B73675300491EBE /* MyContentPreList.swift */,
+				F34D2C592B73675300491EBE /* UserMyContentUI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C5A2B73675300491EBE /* MyWriteComment */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C5B2B73675300491EBE /* View */,
+			);
+			path = MyWriteComment;
+			sourceTree = "<group>";
+		};
+		F34D2C5B2B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C5C2B73675300491EBE /* MyComment.swift */,
+				F34D2C5D2B73675300491EBE /* MyWriteSearch.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C5E2B73675300491EBE /* TodayILearned */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C5F2B73675300491EBE /* ViewModel */,
+				F34D2C632B73675300491EBE /* View */,
+			);
+			path = TodayILearned;
+			sourceTree = "<group>";
+		};
+		F34D2C5F2B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C602B73675300491EBE /* TILListThirdViewModel.swift */,
+				F34D2C612B73675300491EBE /* TILFileAddViewModel.swift */,
+				F34D2C622B73675300491EBE /* TILViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2C632B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C642B73675300491EBE /* TILLIstfifthCell.swift */,
+				F34D2C652B73675300491EBE /* TILListFirstCell.swift */,
+				F34D2C662B73675300491EBE /* TILFile.swift */,
+				F34D2C672B73675300491EBE /* TILList.swift */,
+				F34D2C682B73675300491EBE /* TILUI.swift */,
+				F34D2C692B73675300491EBE /* TILListFirstViewsub.swift */,
+				F34D2C6A2B73675300491EBE /* TILWriteUI.swift */,
+				F34D2C6B2B73675300491EBE /* TILSecondCell.swift */,
+				F34D2C6C2B73675300491EBE /* TILListSixthCell.swift */,
+				F34D2C6D2B73675300491EBE /* TILListFourthCell.swift */,
+				F34D2C6E2B73675300491EBE /* TILCell.swift */,
+				F34D2C6F2B73675300491EBE /* TILNavigationbar.swift */,
+				F34D2C702B73675300491EBE /* TILListThirdCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C712B73675300491EBE /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C722B73675300491EBE /* HistoryMain */,
+				F34D2C792B73675300491EBE /* HistorySearch */,
+				F34D2C7B2B73675300491EBE /* HistoryRegister */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		F34D2C722B73675300491EBE /* HistoryMain */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C732B73675300491EBE /* HistorySearchBarView.swift */,
+				F34D2C742B73675300491EBE /* ProjectTypeButtonView.swift */,
+				F34D2C752B73675300491EBE /* HistoryProjectView.swift */,
+				F34D2C762B73675300491EBE /* HistoryView.swift */,
+				F34D2C772B73675300491EBE /* HistoryProjectListView.swift */,
+				F34D2C782B73675300491EBE /* HotProjectView.swift */,
+			);
+			path = HistoryMain;
+			sourceTree = "<group>";
+		};
+		F34D2C792B73675300491EBE /* HistorySearch */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C7A2B73675300491EBE /* HistorySearchView.swift */,
+			);
+			path = HistorySearch;
+			sourceTree = "<group>";
+		};
+		F34D2C7B2B73675300491EBE /* HistoryRegister */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C7C2B73675300491EBE /* HistoryRegisterView.swift */,
+				F34D2C7D2B73675300491EBE /* HistoryRegisterNavigationBarView.swift */,
+				F34D2C7E2B73675300491EBE /* ProjectIconRegisterView.swift */,
+				F34D2C7F2B73675300491EBE /* ProjectClassificationView.swift */,
+				F34D2C802B73675300491EBE /* ProjectHashtagRegisterView.swift */,
+				F34D2C812B73675300491EBE /* ProjectCardinalNumberView.swift */,
+				F34D2C822B73675300491EBE /* ProjectInformationRegisterView.swift */,
+				F34D2C832B73675300491EBE /* ProjectNameRegisterView.swift */,
+			);
+			path = HistoryRegister;
+			sourceTree = "<group>";
+		};
+		F34D2C842B73675300491EBE /* HomeTopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C852B73675300491EBE /* Model */,
+				F34D2C872B73675300491EBE /* View */,
+			);
+			path = HomeTopMenu;
+			sourceTree = "<group>";
+		};
+		F34D2C852B73675300491EBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C862B73675300491EBE /* NotificationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F34D2C872B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C882B73675300491EBE /* HomeNotificationView.swift */,
+				F34D2C892B73675300491EBE /* FriendsListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C8A2B73675300491EBE /* UserProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C8B2B73675300491EBE /* View */,
+			);
+			path = UserProfileView;
+			sourceTree = "<group>";
+		};
+		F34D2C8B2B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C8C2B73675300491EBE /* UserProfileUI.swift */,
+				F34D2C8D2B73675300491EBE /* AbleStack.swift */,
+				F34D2C8E2B73675300491EBE /* UserMessage.swift */,
+				F34D2C8F2B73675300491EBE /* UMCseason.swift */,
+				F34D2C902B73675300491EBE /* UserProfile.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C912B73675300491EBE /* UserProfileEditView */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C922B73675300491EBE /* ViewModel */,
+				F34D2C952B73675300491EBE /* View */,
+			);
+			path = UserProfileEditView;
+			sourceTree = "<group>";
+		};
+		F34D2C922B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C932B73675300491EBE /* UserProfileEditViewModel.swift */,
+				F34D2C942B73675300491EBE /* UserProfileEditImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2C952B73675300491EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C962B73675300491EBE /* UserProfileEditImage.swift */,
+				F34D2C972B73675300491EBE /* UserProfileEdit.swift */,
+				F34D2C982B73675300491EBE /* SocialButtonSet.swift */,
+				F34D2C992B73675300491EBE /* UserProfileSocialAdd.swift */,
+				F34D2C9A2B73675300491EBE /* UserProfileEditList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F34D2C9B2B73675300491EBE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C9C2B73675300491EBE /* DTO */,
+				F34D2CA02B73675300491EBE /* ViewModel */,
+				F34D2CA42B73675300491EBE /* LoginView.swift */,
+				F34D2CA52B73675300491EBE /* Model */,
+				F34D2CA92B73675300491EBE /* Helper */,
+				F34D2CB12B73675300491EBE /* JoinView */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F34D2C9C2B73675300491EBE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C9D2B73675300491EBE /* Response */,
+				F34D2C9F2B73675300491EBE /* Request */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		F34D2C9D2B73675300491EBE /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2C9E2B73675300491EBE /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		F34D2C9F2B73675300491EBE /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		F34D2CA02B73675300491EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2CA12B73675300491EBE /* UserViewModel.swift */,
+				F34D2CA22B73675300491EBE /* LoginViewModel.swift */,
+				F34D2CA32B73675300491EBE /* JoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F34D2CA52B73675300491EBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2CA62B73675300491EBE /* JoinModel.swift */,
+				F34D2CA72B73675300491EBE /* User.swift */,
+				F34D2CA82B73675300491EBE /* Token.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F34D2CA92B73675300491EBE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2CAA2B73675300491EBE /* JoinAgreCircleCheckButton.swift */,
+				F34D2CAB2B73675300491EBE /* JoinNavigationButton.swift */,
+				F34D2CAC2B73675300491EBE /* JoinGenerationPartPickers.swift */,
+				F34D2CAD2B73675300491EBE /* JoinCircleBorderButton.swift */,
+				F34D2CAE2B73675300491EBE /* KakaoLoginButton.swift */,
+				F34D2CAF2B73675300491EBE /* AppleLoginButton.swift */,
+				F34D2CB02B73675300491EBE /* JoinTextFieldStyle.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F34D2CB12B73675300491EBE /* JoinView */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2CB22B73675300491EBE /* JoinFinalMessage.swift */,
+				F34D2CB32B73675300491EBE /* SelectUniv.swift */,
+				F34D2CB42B73675300491EBE /* JoinAgreement.swift */,
+				F34D2CB52B73675300491EBE /* SelectPartAndGeneration.swift */,
+				F34D2CB62B73675300491EBE /* JoinCode.swift */,
+				F34D2CB72B73675300491EBE /* JoinName.swift */,
+				F34D2CB82B73675300491EBE /* SelectPosition.swift */,
+				F34D2CB92B73675300491EBE /* JoinNickname.swift */,
+			);
+			path = JoinView;
+			sourceTree = "<group>";
+		};
+		F34D2D442B73675A00491EBE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F34D2D452B7367C600491EBE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D462B7367C600491EBE /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F34D2D482B7367D400491EBE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D492B7367D400491EBE /* Network */,
+				F34D2D4E2B7367D400491EBE /* PersistentStroage */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F34D2D492B7367D400491EBE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */,
+				F34D2D4B2B7367D400491EBE /* DataMapping */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F34D2D4B2B7367D400491EBE /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D4C2B7367D400491EBE /* MemberRequestDTO.swift */,
+				F34D2D4D2B7367D400491EBE /* MemberResponseDTO.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		F34D2D4E2B7367D400491EBE /* PersistentStroage */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D4F2B7367D400491EBE /* ResponseStorage */,
+			);
+			path = PersistentStroage;
+			sourceTree = "<group>";
+		};
+		F34D2D4F2B7367D400491EBE /* ResponseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D502B7367D400491EBE /* DummyResponseRepository.swift */,
+			);
+			path = ResponseStorage;
+			sourceTree = "<group>";
+		};
+		F34D2D552B7367DC00491EBE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D562B7367DC00491EBE /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F34D2D562B7367DC00491EBE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D572B7367DC00491EBE /* ManagerModel.swift */,
+				F34D2D582B7367DC00491EBE /* CalendarTask.swift */,
+				F34D2D592B7367DC00491EBE /* DateValue.swift */,
+				F34D2D5A2B7367DC00491EBE /* AnnouncementInfo.swift */,
+				F34D2D5B2B7367DC00491EBE /* Member.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +1119,14 @@
 			dependencies = (
 			);
 			name = "UMC-iOS";
+			packageProductDependencies = (
+				F34D2D622B73683000491EBE /* PopupView */,
+				F34D2D652B73687100491EBE /* KakaoSDK */,
+				F34D2D672B73687100491EBE /* KakaoSDKAuth */,
+				F34D2D692B73687100491EBE /* KakaoSDKCommon */,
+				F34D2D6B2B73687100491EBE /* KakaoSDKUser */,
+				F34D2D712B7379E200491EBE /* KakaoSDKCert */,
+			);
 			productName = "UMC-iOS";
 			productReference = F34D2BCB2B73671700491EBE /* UMC-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +1199,10 @@
 				Base,
 			);
 			mainGroup = F34D2BC22B73671700491EBE;
+			packageReferences = (
+				F34D2D612B73683000491EBE /* XCRemoteSwiftPackageReference "PopupView" */,
+				F34D2D642B73687100491EBE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = F34D2BCC2B73671700491EBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,8 +1219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34D2D472B7367C600491EBE /* Assets.xcassets in Resources */,
 				F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */,
-				F34D2BD32B73671800491EBE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +1245,154 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F34D2BD12B73671700491EBE /* ContentView.swift in Sources */,
+				F34D2CC22B73675300491EBE /* GitHubView.swift in Sources */,
+				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
+				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
+				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
+				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
+				F34D2D332B73675300491EBE /* User.swift in Sources */,
+				F34D2D3B2B73675300491EBE /* JoinTextFieldStyle.swift in Sources */,
+				F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */,
+				F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */,
+				F34D2CDC2B73675300491EBE /* ManagerCalender.swift in Sources */,
+				F34D2CCF2B73675300491EBE /* WritingListCellSecond.swift in Sources */,
+				F34D2D302B73675300491EBE /* JoinViewModel.swift in Sources */,
+				F34D2D0D2B73675300491EBE /* TILNavigationbar.swift in Sources */,
+				F34D2CD82B73675300491EBE /* BulletinBoaardSearchResultUI.swift in Sources */,
+				F34D2CBF2B73675300491EBE /* RankView.swift in Sources */,
+				F34D2CCC2B73675300491EBE /* UserContentPreList.swift in Sources */,
+				F34D2CF62B73675300491EBE /* ToDoListUI.swift in Sources */,
+				F34D2D132B73675300491EBE /* HistoryProjectListView.swift in Sources */,
+				F34D2CF52B73675300491EBE /* ToDoEditFirstActionSheet.swift in Sources */,
+				F34D2D542B7367D400491EBE /* DummyResponseRepository.swift in Sources */,
+				F34D2D192B73675300491EBE /* ProjectClassificationView.swift in Sources */,
+				F34D2D082B73675300491EBE /* TILWriteUI.swift in Sources */,
+				F34D2CBA2B73675300491EBE /* HomeViewModel.swift in Sources */,
+				F34D2CDE2B73675300491EBE /* ManagerPin.swift in Sources */,
+				F34D2D002B73675300491EBE /* TILFileAddViewModel.swift in Sources */,
+				F34D2D152B73675300491EBE /* HistorySearchView.swift in Sources */,
+				F34D2D032B73675300491EBE /* TILListFirstCell.swift in Sources */,
+				F34D2CEB2B73675300491EBE /* CircleFillButton.swift in Sources */,
+				F34D2CF82B73675300491EBE /* ToDoListCell.swift in Sources */,
+				F34D2CFD2B73675300491EBE /* MyComment.swift in Sources */,
+				F34D2CD22B73675300491EBE /* WritingListCellFirst.swift in Sources */,
+				F34D2CC42B73675300491EBE /* HomeSideMenuView.swift in Sources */,
+				F34D2D1C2B73675300491EBE /* ProjectInformationRegisterView.swift in Sources */,
+				F34D2D172B73675300491EBE /* HistoryRegisterNavigationBarView.swift in Sources */,
+				F34D2CE32B73675300491EBE /* DetailButton.swift in Sources */,
+				F34D2D162B73675300491EBE /* HistoryRegisterView.swift in Sources */,
+				F34D2D012B73675300491EBE /* TILViewModel.swift in Sources */,
+				F34D2CC12B73675300491EBE /* HomeView.swift in Sources */,
+				F34D2CC52B73675300491EBE /* ToDoListView.swift in Sources */,
+				F34D2D422B73675300491EBE /* SelectPosition.swift in Sources */,
+				F34D2CED2B73675300491EBE /* MascotRankingViewModel.swift in Sources */,
+				F34D2CCD2B73675300491EBE /* WritingSecondThirdViewModel.swift in Sources */,
+				F34D2CD32B73675300491EBE /* WritingListCell.swift in Sources */,
+				F34D2CCE2B73675300491EBE /* WritingListCellFirstViewModel.swift in Sources */,
+				F34D2CE02B73675300491EBE /* BulletinBoardContentDetailUI.swift in Sources */,
+				F34D2CFF2B73675300491EBE /* TILListThirdViewModel.swift in Sources */,
+				F34D2D312B73675300491EBE /* LoginView.swift in Sources */,
+				F34D2CE82B73675300491EBE /* CirclePlusButton.swift in Sources */,
+				F34D2CE42B73675300491EBE /* CommetAddbar.swift in Sources */,
+				F34D2CD92B73675300491EBE /* SearchBar.swift in Sources */,
+				F34D2CE22B73675300491EBE /* BulletinBoardContentDetail.swift in Sources */,
+				F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */,
+				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
+				F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */,
+				F34D2D342B73675300491EBE /* Token.swift in Sources */,
+				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,
+				F34D2D432B73675300491EBE /* JoinNickname.swift in Sources */,
+				F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */,
+				F34D2D1B2B73675300491EBE /* ProjectCardinalNumberView.swift in Sources */,
+				F34D2CBE2B73675300491EBE /* AnnouncementView.swift in Sources */,
+				F34D2D1D2B73675300491EBE /* ProjectNameRegisterView.swift in Sources */,
+				F34D2D292B73675300491EBE /* UserProfileEdit.swift in Sources */,
+				F34D2CFA2B73675300491EBE /* MyContentList.swift in Sources */,
+				F34D2CF22B73675300491EBE /* ToDoEditSheet.swift in Sources */,
+				F34D2D092B73675300491EBE /* TILSecondCell.swift in Sources */,
+				F34D2D412B73675300491EBE /* JoinName.swift in Sources */,
+				F34D2CD02B73675300491EBE /* WrititngNavigationBar.swift in Sources */,
+				F34D2CD72B73675300491EBE /* BulletinBoardSearchUI.swift in Sources */,
+				F34D2D3E2B73675300491EBE /* JoinAgreement.swift in Sources */,
+				F34D2D3A2B73675300491EBE /* AppleLoginButton.swift in Sources */,
+				F34D2CC02B73675300491EBE /* TodayILearnedView.swift in Sources */,
+				F34D2CD52B73675300491EBE /* WritingListThirdCell.swift in Sources */,
 				F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */,
+				F34D2D232B73675300491EBE /* UserMessage.swift in Sources */,
+				F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */,
+				F34D2D102B73675300491EBE /* ProjectTypeButtonView.swift in Sources */,
+				F34D2CC92B73675300491EBE /* BulletinBoardFirstBtn.swift in Sources */,
+				F34D2CBD2B73675300491EBE /* MascotView.swift in Sources */,
+				F34D2D052B73675300491EBE /* TILList.swift in Sources */,
+				F34D2D2F2B73675300491EBE /* LoginViewModel.swift in Sources */,
+				F34D2D392B73675300491EBE /* KakaoLoginButton.swift in Sources */,
+				F34D2D142B73675300491EBE /* HotProjectView.swift in Sources */,
+				F34D2D532B7367D400491EBE /* MemberResponseDTO.swift in Sources */,
+				F34D2D242B73675300491EBE /* UMCseason.swift in Sources */,
+				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
+				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
+				F34D2CE92B73675300491EBE /* CircleCheckButton.swift in Sources */,
+				F34D2D122B73675300491EBE /* HistoryView.swift in Sources */,
+				F34D2D062B73675300491EBE /* TILUI.swift in Sources */,
+				F34D2CEE2B73675300491EBE /* MascotRankingModel.swift in Sources */,
+				F34D2CEA2B73675300491EBE /* SideMenuNavigationButton.swift in Sources */,
+				F34D2CBC2B73675300491EBE /* UserInformationView.swift in Sources */,
+				F34D2D272B73675300491EBE /* UserProfileEditImageViewModel.swift in Sources */,
+				F34D2CF02B73675300491EBE /* ToDoListCellViewModel.swift in Sources */,
+				F34D2CD42B73675300491EBE /* WritingButton.swift in Sources */,
+				F34D2D0F2B73675300491EBE /* HistorySearchBarView.swift in Sources */,
+				F34D2D2E2B73675300491EBE /* UserViewModel.swift in Sources */,
+				F34D2CE52B73675300491EBE /* SettingBackButton.swift in Sources */,
+				F34D2CE72B73675300491EBE /* Extension+View.swift in Sources */,
+				F34D2D3F2B73675300491EBE /* SelectPartAndGeneration.swift in Sources */,
+				F34D2D602B7367DC00491EBE /* Member.swift in Sources */,
+				F34D2D112B73675300491EBE /* HistoryProjectView.swift in Sources */,
+				F34D2D362B73675300491EBE /* JoinNavigationButton.swift in Sources */,
+				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,
+				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
+				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
+				F34D2D222B73675300491EBE /* AbleStack.swift in Sources */,
+				F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */,
+				F34D2CE12B73675300491EBE /* Comment.swift in Sources */,
+				F34D2D262B73675300491EBE /* UserProfileEditViewModel.swift in Sources */,
+				F34D2D2A2B73675300491EBE /* SocialButtonSet.swift in Sources */,
+				F34D2CDD2B73675300491EBE /* ManagerInfo.swift in Sources */,
+				F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */,
+				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,
+				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
+				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,
+				F34D2CDB2B73675300491EBE /* ManagerSetting.swift in Sources */,
+				F34D2CD62B73675300491EBE /* WritingList.swift in Sources */,
+				F34D2D3D2B73675300491EBE /* SelectUniv.swift in Sources */,
+				F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */,
+				F34D2D5F2B7367DC00491EBE /* AnnouncementInfo.swift in Sources */,
+				F34D2CE62B73675300491EBE /* DropDownPicker.swift in Sources */,
+				F34D2D0A2B73675300491EBE /* TILListSixthCell.swift in Sources */,
+				F34D2D1F2B73675300491EBE /* HomeNotificationView.swift in Sources */,
+				F34D2D022B73675300491EBE /* TILLIstfifthCell.swift in Sources */,
+				F34D2CCA2B73675300491EBE /* BulletinBoardList.swift in Sources */,
+				F34D2D072B73675300491EBE /* TILListFirstViewsub.swift in Sources */,
+				F34D2D2D2B73675300491EBE /* LoginResponse.swift in Sources */,
+				F34D2CEC2B73675300491EBE /* DummyUtilView.swift in Sources */,
+				F34D2CBB2B73675300491EBE /* HomeNavigationBarView.swift in Sources */,
+				F34D2D2B2B73675300491EBE /* UserProfileSocialAdd.swift in Sources */,
+				F34D2D1E2B73675300491EBE /* NotificationModel.swift in Sources */,
+				F34D2D522B7367D400491EBE /* MemberRequestDTO.swift in Sources */,
+				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
+				F34D2CF72B73675300491EBE /* ToDoList.swift in Sources */,
+				F34D2CC72B73675300491EBE /* BulletinBoardSecondBtn.swift in Sources */,
+				F34D2D0B2B73675300491EBE /* TILListFourthCell.swift in Sources */,
+				F34D2CC32B73675300491EBE /* MainCalendarView.swift in Sources */,
+				F34D2D3C2B73675300491EBE /* JoinFinalMessage.swift in Sources */,
+				F34D2D5E2B7367DC00491EBE /* DateValue.swift in Sources */,
+				F34D2D0C2B73675300491EBE /* TILCell.swift in Sources */,
+				F34D2CDA2B73675300491EBE /* GenerationPartViewModel.swift in Sources */,
+				F34D2D352B73675300491EBE /* JoinAgreCircleCheckButton.swift in Sources */,
+				F34D2CDF2B73675300491EBE /* ManagerPinButton.swift in Sources */,
+				F34D2D382B73675300491EBE /* JoinCircleBorderButton.swift in Sources */,
+				F34D2D372B73675300491EBE /* JoinGenerationPartPickers.swift in Sources */,
+				F34D2CFC2B73675300491EBE /* UserMyContentUI.swift in Sources */,
+				F34D2D402B73675300491EBE /* JoinCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +1550,18 @@
 		};
 		F34D2BF02B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "UMC-iOS/UMC-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UMC-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = G64N5NJ4Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UMC-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,7 +1572,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyungsoo.UMC-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UMC-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -444,14 +1582,18 @@
 		};
 		F34D2BF12B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "UMC-iOS/UMC-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UMC-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = G64N5NJ4Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UMC-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,7 +1604,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyungsoo.UMC-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UMC-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -472,6 +1614,7 @@
 		};
 		F34D2BF32B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +1634,7 @@
 		};
 		F34D2BF42B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -582,6 +1726,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F34D2D612B73683000491EBE /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		F34D2D642B73687100491EBE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F34D2D622B73683000491EBE /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34D2D612B73683000491EBE /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		F34D2D652B73687100491EBE /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34D2D642B73687100491EBE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		F34D2D672B73687100491EBE /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34D2D642B73687100491EBE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		F34D2D692B73687100491EBE /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34D2D642B73687100491EBE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		F34D2D6B2B73687100491EBE /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34D2D642B73687100491EBE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		F34D2D712B7379E200491EBE /* KakaoSDKCert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34D2D642B73687100491EBE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCert;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F34D2BC32B73671700491EBE /* Project object */;
 }
