@@ -22,6 +22,10 @@
 		42ED927C2B72CAB30094AE0A /* RankingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */; };
 		42ED92802B72CCE90094AE0A /* MascotRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED927F2B72CCE90094AE0A /* MascotRankingViewModel.swift */; };
 		42ED92832B72CD090094AE0A /* MascotRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92822B72CD090094AE0A /* MascotRankingModel.swift */; };
+		42ED92852B72D9C70094AE0A /* JoinFinalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92842B72D9C70094AE0A /* JoinFinalMessage.swift */; };
+		42ED92872B72D9FB0094AE0A /* SelectPartAndGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92862B72D9FB0094AE0A /* SelectPartAndGeneration.swift */; };
+		42ED92892B72DA1D0094AE0A /* JoinGenerationPartPickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92882B72DA1D0094AE0A /* JoinGenerationPartPickers.swift */; };
+		42ED928B2B72DA470094AE0A /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED928A2B72DA470094AE0A /* JoinModel.swift */; };
 		4430A62E2B7211790045BF79 /* BulletinBoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6282B7211780045BF79 /* BulletinBoardList.swift */; };
 		4430A62F2B7211790045BF79 /* UserContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6292B7211780045BF79 /* UserContentPreList.swift */; };
 		4430A6302B7211790045BF79 /* BulletinBoardNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A62A2B7211790045BF79 /* BulletinBoardNotice.swift */; };
@@ -109,10 +113,8 @@
 		F3CE1A822B6CF29700463130 /* UserProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */; };
 		F3CE1ABD2B6D0D7000463130 /* SelectUniv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */; };
 		F3CE1ABE2B6D0D7000463130 /* JoinAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */; };
-		F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */; };
 		F3CE1AC02B6D0D7000463130 /* JoinCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AB02B6D0D7000463130 /* JoinCode.swift */; };
 		F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AB12B6D0D7000463130 /* JoinName.swift */; };
-		F3CE1AC22B6D0D7000463130 /* SelectParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AB22B6D0D7000463130 /* SelectParts.swift */; };
 		F3CE1AC32B6D0D7000463130 /* SelectPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AB32B6D0D7000463130 /* SelectPosition.swift */; };
 		F3CE1AC42B6D0D7000463130 /* JoinNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AB42B6D0D7000463130 /* JoinNickname.swift */; };
 		F3CE1AC52B6D0D7000463130 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE1AB62B6D0D7000463130 /* JoinViewModel.swift */; };
@@ -200,6 +202,10 @@
 		42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDetailView.swift; sourceTree = "<group>"; };
 		42ED927F2B72CCE90094AE0A /* MascotRankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotRankingViewModel.swift; sourceTree = "<group>"; };
 		42ED92822B72CD090094AE0A /* MascotRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotRankingModel.swift; sourceTree = "<group>"; };
+		42ED92842B72D9C70094AE0A /* JoinFinalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFinalMessage.swift; sourceTree = "<group>"; };
+		42ED92862B72D9FB0094AE0A /* SelectPartAndGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPartAndGeneration.swift; sourceTree = "<group>"; };
+		42ED92882B72DA1D0094AE0A /* JoinGenerationPartPickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGenerationPartPickers.swift; sourceTree = "<group>"; };
+		42ED928A2B72DA470094AE0A /* JoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
 		4430A6282B7211780045BF79 /* BulletinBoardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardList.swift; sourceTree = "<group>"; };
 		4430A6292B7211780045BF79 /* UserContentPreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserContentPreList.swift; sourceTree = "<group>"; };
 		4430A62A2B7211790045BF79 /* BulletinBoardNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardNotice.swift; sourceTree = "<group>"; };
@@ -295,10 +301,8 @@
 		F3CE1A812B6CF29700463130 /* UserProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEdit.swift; sourceTree = "<group>"; };
 		F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUniv.swift; sourceTree = "<group>"; };
 		F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinAgreement.swift; sourceTree = "<group>"; };
-		F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGeneration.swift; sourceTree = "<group>"; };
 		F3CE1AB02B6D0D7000463130 /* JoinCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinCode.swift; sourceTree = "<group>"; };
 		F3CE1AB12B6D0D7000463130 /* JoinName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinName.swift; sourceTree = "<group>"; };
-		F3CE1AB22B6D0D7000463130 /* SelectParts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectParts.swift; sourceTree = "<group>"; };
 		F3CE1AB32B6D0D7000463130 /* SelectPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPosition.swift; sourceTree = "<group>"; };
 		F3CE1AB42B6D0D7000463130 /* JoinNickname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinNickname.swift; sourceTree = "<group>"; };
 		F3CE1AB62B6D0D7000463130 /* JoinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
@@ -392,6 +396,7 @@
 			children = (
 				42CDBF3D2B70D81C000C2025 /* Token.swift */,
 				42CDBF402B70D84F000C2025 /* User.swift */,
+				42ED928A2B72DA470094AE0A /* JoinModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -961,12 +966,12 @@
 			children = (
 				F3CE1AAD2B6D0D7000463130 /* SelectUniv.swift */,
 				F3CE1AAE2B6D0D7000463130 /* JoinAgreement.swift */,
-				F3CE1AAF2B6D0D7000463130 /* SelectGeneration.swift */,
 				F3CE1AB02B6D0D7000463130 /* JoinCode.swift */,
+				42ED92842B72D9C70094AE0A /* JoinFinalMessage.swift */,
 				F3CE1AB12B6D0D7000463130 /* JoinName.swift */,
-				F3CE1AB22B6D0D7000463130 /* SelectParts.swift */,
 				F3CE1AB32B6D0D7000463130 /* SelectPosition.swift */,
 				F3CE1AB42B6D0D7000463130 /* JoinNickname.swift */,
+				42ED92862B72D9FB0094AE0A /* SelectPartAndGeneration.swift */,
 			);
 			path = JoinView;
 			sourceTree = "<group>";
@@ -990,6 +995,7 @@
 				F3CE1ABC2B6D0D7000463130 /* JoinTextFieldStyle.swift */,
 				42CDBF392B70D685000C2025 /* AppleLoginButton.swift */,
 				42B4F9522B7226BD00421905 /* KakaoLoginButton.swift */,
+				42ED92882B72DA1D0094AE0A /* JoinGenerationPartPickers.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1430,6 +1436,7 @@
 				F3CE1B532B6D189000463130 /* AnnouncementInfo.swift in Sources */,
 				42CDBF3E2B70D81C000C2025 /* Token.swift in Sources */,
 				4430A69B2B722F290045BF79 /* TILViewModel.swift in Sources */,
+				42ED92852B72D9C70094AE0A /* JoinFinalMessage.swift in Sources */,
 				4430A63C2B72129D0045BF79 /* SearchBar.swift in Sources */,
 				F3CE1AC32B6D0D7000463130 /* SelectPosition.swift in Sources */,
 				44397C9F2B71522E007CE3B5 /* WritingListCellFirstViewModel.swift in Sources */,
@@ -1439,6 +1446,7 @@
 				4430A6942B722E580045BF79 /* TILLIstfifthCell.swift in Sources */,
 				42ED927C2B72CAB30094AE0A /* RankingDetailView.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
+				42ED92872B72D9FB0094AE0A /* SelectPartAndGeneration.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
 				4430A65A2B7217D80045BF79 /* UserProfileSocialAdd.swift in Sources */,
 				F391ADAF2B6E4120006ECF1D /* CommetAddbar.swift in Sources */,
@@ -1481,7 +1489,6 @@
 				F3CE1AC42B6D0D7000463130 /* JoinNickname.swift in Sources */,
 				F3CE1B492B6D17D000463130 /* MascotView.swift in Sources */,
 				F391AD8F2B6E2FD5006ECF1D /* ToDoListAdd.swift in Sources */,
-				F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */,
 				F3CE1B732B6D206300463130 /* HotProjectView.swift in Sources */,
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
 				42ED92752B72C4F90094AE0A /* HomeNotificationView.swift in Sources */,
@@ -1519,7 +1526,6 @@
 				F3CE1B7A2B6D206300463130 /* ProjectCardinalNumberView.swift in Sources */,
 				F3CE1BC72B6D395C00463130 /* DropDownPicker.swift in Sources */,
 				4430A69F2B722F530045BF79 /* TILListThirdViewModel.swift in Sources */,
-				F3CE1AC22B6D0D7000463130 /* SelectParts.swift in Sources */,
 				F3CE1B6F2B6D206300463130 /* ProjectTypeButtonView.swift in Sources */,
 				4430A63E2B72129D0045BF79 /* BulletinBoardSearchUI.swift in Sources */,
 				44F71E082B71352D00D5500A /* TILCell.swift in Sources */,
@@ -1545,7 +1551,9 @@
 				4430A6662B721CC80045BF79 /* UserMessage.swift in Sources */,
 				F3CE1BC52B6D395C00463130 /* CirclePlusButton.swift in Sources */,
 				44397C9E2B71522E007CE3B5 /* WritingSecondThirdViewModel.swift in Sources */,
+				42ED928B2B72DA470094AE0A /* JoinModel.swift in Sources */,
 				4430A68A2B722BDB0045BF79 /* TILListFirstCell.swift in Sources */,
+				42ED92892B72DA1D0094AE0A /* JoinGenerationPartPickers.swift in Sources */,
 				F3CE1B7C2B6D206300463130 /* ProjectNameRegisterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

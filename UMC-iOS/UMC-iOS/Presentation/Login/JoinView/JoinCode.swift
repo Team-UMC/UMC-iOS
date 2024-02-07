@@ -75,10 +75,3 @@ struct JoinCode: View {
         }
     }
 }
-
-
-#Preview {
-    JoinCode()
-}
-
-//git checkout feature/#4-joinview
