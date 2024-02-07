@@ -11,7 +11,8 @@ struct SettingBackButton: ViewModifier {
     let title: String
     let onDismiss: (() -> Void)?
     var showTrailingItem: Bool = true
-
+    var ImageName: String = "chevron.left"
+    
     func body(content: Content) -> some View {
         content
             .navigationTitle(title)
@@ -19,7 +20,7 @@ struct SettingBackButton: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: { onDismiss?() }) {
-                        Image(systemName: "chevron.left").foregroundColor(.black)
+                        Image(systemName: ImageName).foregroundColor(.black)
                     }
                 }
                 if showTrailingItem{
