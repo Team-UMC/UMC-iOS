@@ -20,6 +20,8 @@
 		42ED927C2B72CAB30094AE0A /* RankingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */; };
 		42ED92802B72CCE90094AE0A /* MascotRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED927F2B72CCE90094AE0A /* MascotRankingViewModel.swift */; };
 		42ED92832B72CD090094AE0A /* MascotRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92822B72CD090094AE0A /* MascotRankingModel.swift */; };
+		42ED92752B72C4F90094AE0A /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92742B72C4F80094AE0A /* HomeNotificationView.swift */; };
+		42ED92772B72C5BC0094AE0A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92762B72C5BC0094AE0A /* NotificationModel.swift */; };
 		4430A62E2B7211790045BF79 /* BulletinBoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6282B7211780045BF79 /* BulletinBoardList.swift */; };
 		4430A62F2B7211790045BF79 /* UserContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6292B7211780045BF79 /* UserContentPreList.swift */; };
 		4430A6302B7211790045BF79 /* BulletinBoardNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A62A2B7211790045BF79 /* BulletinBoardNotice.swift */; };
@@ -183,7 +185,7 @@
 		3CF9D2C226E332662C478DF1 /* Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-UMC-iOSUITests/Pods-UMC-iOS-UMC-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		424136AB2B71010B004CEEBC /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
 		424136AD2B710590004CEEBC /* SideMenuNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationButton.swift; sourceTree = "<group>"; };
-		429497AA2B72A9E500BF22CF /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsListView.swift; path = "UMC-iOS/FriendsListView.swift"; sourceTree = SOURCE_ROOT; };
+		429497AA2B72A9E500BF22CF /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsListView.swift; path = "UMC-iOS/Presentation/HomeTopMenu/View/FriendsListView.swift"; sourceTree = SOURCE_ROOT; };
 		42B4F9522B7226BD00421905 /* KakaoLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
 		42B4F9542B722C1100421905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		42CDBF362B70C24D000C2025 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,8 @@
 		42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDetailView.swift; sourceTree = "<group>"; };
 		42ED927F2B72CCE90094AE0A /* MascotRankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotRankingViewModel.swift; sourceTree = "<group>"; };
 		42ED92822B72CD090094AE0A /* MascotRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotRankingModel.swift; sourceTree = "<group>"; };
+		42ED92742B72C4F80094AE0A /* HomeNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
+		42ED92762B72C5BC0094AE0A /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		4430A6282B7211780045BF79 /* BulletinBoardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardList.swift; sourceTree = "<group>"; };
 		4430A6292B7211780045BF79 /* UserContentPreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserContentPreList.swift; sourceTree = "<group>"; };
 		4430A62A2B7211790045BF79 /* BulletinBoardNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardNotice.swift; sourceTree = "<group>"; };
@@ -377,7 +381,8 @@
 		429497A92B72A9B400BF22CF /* HomeTopMenu */ = {
 			isa = PBXGroup;
 			children = (
-				429497AA2B72A9E500BF22CF /* FriendsListView.swift */,
+				42ED92792B72C6390094AE0A /* View */,
+				42ED92782B72C6260094AE0A /* Model */,
 			);
 			path = HomeTopMenu;
 			sourceTree = "<group>";
@@ -404,7 +409,21 @@
 		42ED927D2B72CC970094AE0A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */,
+				42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */,  
+		};
+		42ED92782B72C6260094AE0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42ED92762B72C5BC0094AE0A /* NotificationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42ED92792B72C6390094AE0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				429497AA2B72A9E500BF22CF /* FriendsListView.swift */,
+				42ED92742B72C4F80094AE0A /* HomeNotificationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1392,6 +1411,7 @@
 				4430A6332B7211790045BF79 /* BulletinBoardUI.swift in Sources */,
 				424136AC2B71010B004CEEBC /* HomeSideMenuView.swift in Sources */,
 				4430A6512B7217460045BF79 /* UserProfileEditViewModel.swift in Sources */,
+				42ED92772B72C5BC0094AE0A /* NotificationModel.swift in Sources */,
 				44397C992B715227007CE3B5 /* WritingListThirdCell.swift in Sources */,
 				44397C972B715227007CE3B5 /* WritingListCellSecond.swift in Sources */,
 				F3CE1A7A2B6CEFCF00463130 /* SocialButtonSet.swift in Sources */,
@@ -1465,6 +1485,7 @@
 				F3CE1ABF2B6D0D7000463130 /* SelectGeneration.swift in Sources */,
 				F3CE1B732B6D206300463130 /* HotProjectView.swift in Sources */,
 				F3CE1AC12B6D0D7000463130 /* JoinName.swift in Sources */,
+				42ED92752B72C4F90094AE0A /* HomeNotificationView.swift in Sources */,
 				F332F0192B4C599000F0CDD0 /* UMC_iOSApp.swift in Sources */,
 				F3CE1B712B6D206300463130 /* HistoryView.swift in Sources */,
 				4430A6602B721C9A0045BF79 /* UMCseason.swift in Sources */,
