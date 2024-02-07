@@ -19,6 +19,9 @@
 		42CDBF432B70D932000C2025 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDBF422B70D932000C2025 /* UserViewModel.swift */; };
 		42ED92752B72C4F90094AE0A /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92742B72C4F80094AE0A /* HomeNotificationView.swift */; };
 		42ED92772B72C5BC0094AE0A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92762B72C5BC0094AE0A /* NotificationModel.swift */; };
+		42ED927C2B72CAB30094AE0A /* RankingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */; };
+		42ED92802B72CCE90094AE0A /* MascotRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED927F2B72CCE90094AE0A /* MascotRankingViewModel.swift */; };
+		42ED92832B72CD090094AE0A /* MascotRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED92822B72CD090094AE0A /* MascotRankingModel.swift */; };
 		4430A62E2B7211790045BF79 /* BulletinBoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6282B7211780045BF79 /* BulletinBoardList.swift */; };
 		4430A62F2B7211790045BF79 /* UserContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A6292B7211780045BF79 /* UserContentPreList.swift */; };
 		4430A6302B7211790045BF79 /* BulletinBoardNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A62A2B7211790045BF79 /* BulletinBoardNotice.swift */; };
@@ -194,6 +197,9 @@
 		42CDBF422B70D932000C2025 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		42ED92742B72C4F80094AE0A /* HomeNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
 		42ED92762B72C5BC0094AE0A /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDetailView.swift; sourceTree = "<group>"; };
+		42ED927F2B72CCE90094AE0A /* MascotRankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotRankingViewModel.swift; sourceTree = "<group>"; };
+		42ED92822B72CD090094AE0A /* MascotRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotRankingModel.swift; sourceTree = "<group>"; };
 		4430A6282B7211780045BF79 /* BulletinBoardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardList.swift; sourceTree = "<group>"; };
 		4430A6292B7211780045BF79 /* UserContentPreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserContentPreList.swift; sourceTree = "<group>"; };
 		4430A62A2B7211790045BF79 /* BulletinBoardNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardNotice.swift; sourceTree = "<group>"; };
@@ -403,8 +409,38 @@
 			children = (
 				429497AA2B72A9E500BF22CF /* FriendsListView.swift */,
 				42ED92742B72C4F80094AE0A /* HomeNotificationView.swift */,
+		42ED927A2B72CA860094AE0A /* MascotRanking */ = {
+			isa = PBXGroup;
+			children = (
+				42ED92812B72CCF90094AE0A /* Model */,
+				42ED927E2B72CCAA0094AE0A /* ViewModel */,
+				42ED927D2B72CC970094AE0A /* View */,
+			);
+			path = MascotRanking;
+			sourceTree = "<group>";
+		};
+		42ED927D2B72CC970094AE0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42ED927B2B72CAB30094AE0A /* RankingDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		42ED927E2B72CCAA0094AE0A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42ED927F2B72CCE90094AE0A /* MascotRankingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		42ED92812B72CCF90094AE0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42ED92822B72CD090094AE0A /* MascotRankingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4430A6272B7211660045BF79 /* BulletinBoard */ = {
@@ -700,6 +736,7 @@
 				F391AD942B6E3C72006ECF1D /* WritingView */,
 				F3CE1BCA2B6D3E6500463130 /* TodoList */,
 				F3CE1BAE2B6D391100463130 /* HomeManager */,
+				42ED927A2B72CA860094AE0A /* MascotRanking */,
 				F3CE1B5B2B6D206300463130 /* History */,
 				429497A92B72A9B400BF22CF /* HomeTopMenu */,
 				F3CE1B372B6D17BD00463130 /* Home */,
@@ -1400,6 +1437,7 @@
 				F391ADB12B6E4138006ECF1D /* DetailButton.swift in Sources */,
 				44397C982B715227007CE3B5 /* ButtonWithIcon.swift in Sources */,
 				4430A6942B722E580045BF79 /* TILLIstfifthCell.swift in Sources */,
+				42ED927C2B72CAB30094AE0A /* RankingDetailView.swift in Sources */,
 				F332F0552B4C5A7D00F0CDD0 /* Member.swift in Sources */,
 				F3CE1B462B6D17D000463130 /* GitHubView.swift in Sources */,
 				4430A65A2B7217D80045BF79 /* UserProfileSocialAdd.swift in Sources */,
@@ -1433,6 +1471,7 @@
 				F3CE1B792B6D206300463130 /* ProjectHashtagRegisterView.swift in Sources */,
 				F3CE1B702B6D206300463130 /* HistoryProjectView.swift in Sources */,
 				4430A6452B72134C0045BF79 /* MyContentList.swift in Sources */,
+				42ED92832B72CD090094AE0A /* MascotRankingModel.swift in Sources */,
 				F3CE1B772B6D206300463130 /* ProjectIconRegisterView.swift in Sources */,
 				44F71E042B71352D00D5500A /* TILList.swift in Sources */,
 				4430A6902B722DE00045BF79 /* TILListThirdCell.swift in Sources */,
@@ -1491,6 +1530,7 @@
 				44F71E0E2B713A1D00D5500A /* MyComment.swift in Sources */,
 				F3CE1BC82B6D395C00463130 /* SettingBackButton.swift in Sources */,
 				4430A6622B721CAA0045BF79 /* UserProfile.swift in Sources */,
+				42ED92802B72CCE90094AE0A /* MascotRankingViewModel.swift in Sources */,
 				44F71E0D2B713A1D00D5500A /* MyWriteSearch.swift in Sources */,
 				F3CE1B7B2B6D206300463130 /* ProjectInformationRegisterView.swift in Sources */,
 				44397C9B2B715227007CE3B5 /* WritingButton.swift in Sources */,
