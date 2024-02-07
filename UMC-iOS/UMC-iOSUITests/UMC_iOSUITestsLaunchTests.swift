@@ -2,7 +2,7 @@
 //  UMC_iOSUITestsLaunchTests.swift
 //  UMC-iOSUITests
 //
-//  Created by Kyungsoo Lee on 1/9/24.
+//  Created by Kyungsoo Lee on 2/7/24.
 //
 
 import XCTest
