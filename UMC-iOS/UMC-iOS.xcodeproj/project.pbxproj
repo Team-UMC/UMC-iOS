@@ -186,6 +186,7 @@
 		F3DABB492B754FB200BBF00B /* BaseResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */; };
 		F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */; };
 		F3DABB512B755BE200BBF00B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB502B755BE200BBF00B /* UserData.swift */; };
+		F3DABB532B756D2F00BBF00B /* SemesterPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB522B756D2F00BBF00B /* SemesterPart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -385,6 +386,7 @@
 		F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseProtocol.swift; sourceTree = "<group>"; };
 		F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		F3DABB502B755BE200BBF00B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		F3DABB522B756D2F00BBF00B /* SemesterPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterPart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1221,6 +1223,7 @@
 				F34D2D8A2B74F61900491EBE /* Branch.swift */,
 				F34D2D8E2B74FAE100491EBE /* PositionType.swift */,
 				F34D2D902B74FC5100491EBE /* Role.swift */,
+				F3DABB522B756D2F00BBF00B /* SemesterPart.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1564,6 +1567,7 @@
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
 				46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */,
 				F34D2CF72B73675300491EBE /* ToDoList.swift in Sources */,
+				F3DABB532B756D2F00BBF00B /* SemesterPart.swift in Sources */,
 				F34D2D0B2B73675300491EBE /* TILListFourthCell.swift in Sources */,
 				F34D2CC32B73675300491EBE /* MainCalendarView.swift in Sources */,
 				F34D2D3C2B73675300491EBE /* JoinFinalMessage.swift in Sources */,

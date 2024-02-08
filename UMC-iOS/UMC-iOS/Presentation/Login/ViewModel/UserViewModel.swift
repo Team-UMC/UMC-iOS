@@ -84,6 +84,10 @@ extension UserViewModel {
 
         do {
             let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.SignUpMember>.self, from: data)
+            UserDefaults.standard.set(jsonDictionary.result.memberId, forKey: "memberId")
+            UserDefaults.standard.set(jsonDictionary.result.accessToken, forKey: "Authorization")
+            UserDefaults.standard.set(jsonDictionary.result.refreshToken, forKey: "refreshToken")
+            
             print(jsonDictionary.result)
         } catch {
             print("Error decoding JSON: \(error)")

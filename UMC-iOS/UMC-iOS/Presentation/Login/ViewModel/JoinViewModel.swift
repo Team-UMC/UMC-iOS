@@ -111,6 +111,7 @@ extension JoinViewModel {
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.setValue(UserDefaults.standard.string(forKey: "jwtAccessToken"), forHTTPHeaderField: "Authorization")
         request.httpBody = sendData
         
         let (data, response) = try await URLSession.shared.data(for: request)

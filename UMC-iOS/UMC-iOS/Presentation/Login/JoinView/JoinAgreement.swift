@@ -94,6 +94,10 @@ struct JoinAgreement:View {
                         Spacer()
                         Button {
                             print(userData)
+                            Task {
+                                // 수정 필요
+                                await viewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: userData.name!, nickname: userData.nickname!, semesterParts: [MemberRequest.SemesterPart(part: "SPRING", semester: "FIFTH")], universityName: userData.university!, campusPostions: [], centerPositions: []))
+                            }
                             isClicked.toggle()
                         } label: {
                             Image(systemName: "arrow.right.circle.fill")
