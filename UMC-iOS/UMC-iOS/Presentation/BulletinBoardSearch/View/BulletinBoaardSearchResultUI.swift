@@ -10,6 +10,7 @@ import SwiftUI
 struct BulletinBoaardSearchResultUI: View {
     @State private var searchText = ""
     @State private var searchColor = "barSecond"
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack {
@@ -20,6 +21,7 @@ struct BulletinBoaardSearchResultUI: View {
                         .padding(.leading,-10)
                     Button("취소") {
                         print("취소버튼을 눌렀습니다")
+                        presentationMode.wrappedValue.dismiss()
                     }
                     .font(.system(size: 14))
                     .padding(.top, 20)
@@ -34,6 +36,7 @@ struct BulletinBoaardSearchResultUI: View {
             }
         }
         .background(Color("searchbar").edgesIgnoringSafeArea(.all))
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -44,4 +47,5 @@ struct BulletinBoaardSearchResultUI_Previews: PreviewProvider {
     }
 }
 #endif
+
 

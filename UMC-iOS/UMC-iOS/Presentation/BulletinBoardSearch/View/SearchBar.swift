@@ -67,3 +67,4 @@ struct SearchBar_Previews: PreviewProvider {
     }
 }
 
+

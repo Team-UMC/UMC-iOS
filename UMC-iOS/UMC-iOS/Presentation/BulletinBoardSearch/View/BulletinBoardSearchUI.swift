@@ -10,25 +10,38 @@ import SwiftUI
 struct BulletinBoardSearchUI: View {
     @State private var searchText = ""
     @State private var searchColor = "searchbar"
+    @State private var isSearchResultVisible = false
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack {
-            HStack{
-                SearchBar(text: $searchText, color: $searchColor)
-                    .padding(.top, 20)
-                    .onTapGesture {
-                        hideKeyboard()
+        NavigationView {
+            VStack {
+                HStack {
+                    SearchBar(text: $searchText, color: $searchColor)
+                        .padding(.top, 20)
+                        .onTapGesture {
+                            hideKeyboard()
+                        }
+                    Button("검색") {
+                        print("취소버튼을 눌렀습니다")
+                        isSearchResultVisible = true
                     }
-                Button("취소") {
-                    print("취소버튼을 눌렀습니다")
+                    .font(.system(size: 14))
+                    .padding(.top, 20)
+                    .padding(.leading, 8)
+                    .foregroundColor(Color("textColor"))
+                    .background(.clear)
                 }
-                .font(.system(size: 14))
-                .padding(.top, 20)
-                .padding(.leading,8)
-                .foregroundColor(Color("textColor"))
-                .background(.clear)
+                Spacer()
             }
-            Spacer()
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .background(
+                NavigationLink("", destination: BulletinBoaardSearchResultUI(), isActive: $isSearchResultVisible)
+            .hidden()
+            )
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -45,3 +58,4 @@ extension View {
     }
 }
 #endif
+
