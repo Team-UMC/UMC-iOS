@@ -185,6 +185,7 @@
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
 		F3DABB492B754FB200BBF00B /* BaseResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */; };
 		F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */; };
+		F3DABB512B755BE200BBF00B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB502B755BE200BBF00B /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -383,6 +384,7 @@
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseProtocol.swift; sourceTree = "<group>"; };
 		F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		F3DABB502B755BE200BBF00B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1103,6 +1105,7 @@
 				F34D2CA62B73675300491EBE /* JoinModel.swift */,
 				F34D2CA72B73675300491EBE /* User.swift */,
 				F34D2CA82B73675300491EBE /* Token.swift */,
+				F3DABB502B755BE200BBF00B /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1520,6 +1523,7 @@
 				F34D2CE72B73675300491EBE /* Extension+View.swift in Sources */,
 				F34D2D3F2B73675300491EBE /* SelectPartAndGeneration.swift in Sources */,
 				F34D2D602B7367DC00491EBE /* Member.swift in Sources */,
+				F3DABB512B755BE200BBF00B /* UserData.swift in Sources */,
 				F34D2D112B73675300491EBE /* HistoryProjectView.swift in Sources */,
 				F34D2D362B73675300491EBE /* JoinNavigationButton.swift in Sources */,
 				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,

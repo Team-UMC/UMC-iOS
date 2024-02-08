@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SelectPosition: View {
     @ObservedObject private var viewModel = JoinViewModel()
+    @Binding var userData: UserData
     @State private var position:[String] = ["회장", "부회장", "운영국장", "PM 파트장", "Design 파트장", "Spring 파트장", "Node 파트장", "Web 파트장", "iOS 파트장", "Android 파트장"]
     @State private var newPosition = "" // 사용자가 입력할 새 직책
 
@@ -194,7 +195,7 @@ struct SelectPosition: View {
 
                     if (!viewModel.selectedPosition_central.isEmpty || !viewModel.selectedPosition_inUnivs.isEmpty)
                     {
-                        JoinNavigationButton(destination: SelectUniv())
+                        JoinNavigationButton(destination: SelectUniv(userData: $userData))
                     }
                     Spacer().frame(width: 137)
                 }
