@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -187,6 +188,7 @@
 
 /* Begin PBXFileReference section */
 		46C37FBD2B74CE160084CA4D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -378,6 +380,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46C37FBE2B74CE540084CA4D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				46C37FC02B74EED40084CA4D /* Response */,
+				46C37FBF2B74EEAC0084CA4D /* Request */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		46C37FBF2B74EEAC0084CA4D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		46C37FC02B74EED40084CA4D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +493,7 @@
 		F34D2BF92B73675300491EBE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				46C37FBE2B74CE540084CA4D /* DTO */,
 				F34D2BFA2B73675300491EBE /* ViewModel */,
 				F34D2BFC2B73675300491EBE /* View */,
 			);
@@ -1379,6 +1406,7 @@
 				F34D2D1E2B73675300491EBE /* NotificationModel.swift in Sources */,
 				F34D2D522B7367D400491EBE /* MemberRequestDTO.swift in Sources */,
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
+				46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */,
 				F34D2CF72B73675300491EBE /* ToDoList.swift in Sources */,
 				F34D2CC72B73675300491EBE /* BulletinBoardSecondBtn.swift in Sources */,
 				F34D2D0B2B73675300491EBE /* TILListFourthCell.swift in Sources */,
