@@ -7,7 +7,7 @@
 
 import Foundation
 
-fileprivate enum ApiEndpoints {
+enum ApiEndpoints {
     static let scheme = "http"
     static let host = "umcservice.shop"
     static let port = 8080
@@ -32,4 +32,14 @@ fileprivate enum ApiEndpoints {
         case boards_comments_member_comments_app = "/boards/comments/member/comments/app"
         case boards_comments_member_comments_web = "/boards/comments/member/comments/web"
     }
+}
+
+extension ApiEndpoints {
+    static func getBasicUrlComponents() -> URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = ApiEndpoints.scheme
+        urlComponents.host = ApiEndpoints.host
+        urlComponents.port = ApiEndpoints.port
+    return urlComponents
+}
 }
