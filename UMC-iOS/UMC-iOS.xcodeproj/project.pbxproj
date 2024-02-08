@@ -136,9 +136,8 @@
 		F34D2D2A2B73675300491EBE /* SocialButtonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C982B73675300491EBE /* SocialButtonSet.swift */; };
 		F34D2D2B2B73675300491EBE /* UserProfileSocialAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C992B73675300491EBE /* UserProfileSocialAdd.swift */; };
 		F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C9A2B73675300491EBE /* UserProfileEditList.swift */; };
-		F34D2D2D2B73675300491EBE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C9E2B73675300491EBE /* LoginResponse.swift */; };
 		F34D2D2E2B73675300491EBE /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA12B73675300491EBE /* UserViewModel.swift */; };
-		F34D2D2F2B73675300491EBE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA22B73675300491EBE /* LoginViewModel.swift */; };
+		F34D2D2F2B73675300491EBE /* SocialLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA22B73675300491EBE /* SocialLoginViewModel.swift */; };
 		F34D2D302B73675300491EBE /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA32B73675300491EBE /* JoinViewModel.swift */; };
 		F34D2D312B73675300491EBE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA42B73675300491EBE /* LoginView.swift */; };
 		F34D2D322B73675300491EBE /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA62B73675300491EBE /* JoinModel.swift */; };
@@ -161,8 +160,8 @@
 		F34D2D432B73675300491EBE /* JoinNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB92B73675300491EBE /* JoinNickname.swift */; };
 		F34D2D472B7367C600491EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2D462B7367C600491EBE /* Assets.xcassets */; };
 		F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */; };
-		F34D2D522B7367D400491EBE /* MemberRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4C2B7367D400491EBE /* MemberRequestDTO.swift */; };
-		F34D2D532B7367D400491EBE /* MemberResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4D2B7367D400491EBE /* MemberResponseDTO.swift */; };
+		F34D2D522B7367D400491EBE /* MemberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4C2B7367D400491EBE /* MemberRequest.swift */; };
+		F34D2D532B7367D400491EBE /* MemberResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4D2B7367D400491EBE /* MemberResponse.swift */; };
 		F34D2D542B7367D400491EBE /* DummyResponseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D502B7367D400491EBE /* DummyResponseRepository.swift */; };
 		F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D572B7367DC00491EBE /* ManagerModel.swift */; };
 		F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D582B7367DC00491EBE /* CalendarTask.swift */; };
@@ -176,7 +175,6 @@
 		F34D2D6C2B73687100491EBE /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D6B2B73687100491EBE /* KakaoSDKUser */; };
 		F34D2D722B7379E200491EBE /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = F34D2D712B7379E200491EBE /* KakaoSDKCert */; };
 		F34D2D752B74A8D100491EBE /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D742B74A8D100491EBE /* UserProfileViewModel.swift */; };
-		F34D2D7A2B74AD0700491EBE /* MemberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D792B74AD0700491EBE /* MemberRequest.swift */; };
 		F34D2D7C2B74B05500491EBE /* ExchangeRateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D7B2B74B05500491EBE /* ExchangeRateError.swift */; };
 		F34D2D832B74B31200491EBE /* ApiTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D822B74B31200491EBE /* ApiTestView.swift */; };
 		F34D2D852B74BB1200491EBE /* SocialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D842B74BB1200491EBE /* SocialType.swift */; };
@@ -185,7 +183,8 @@
 		F34D2D8B2B74F61900491EBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8A2B74F61900491EBE /* Branch.swift */; };
 		F34D2D8F2B74FAE100491EBE /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8E2B74FAE100491EBE /* PositionType.swift */; };
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
-		F34D2D932B75051400491EBE /* MemberResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D922B75051400491EBE /* MemberResponse.swift */; };
+		F3DABB492B754FB200BBF00B /* BaseResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */; };
+		F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,9 +338,8 @@
 		F34D2C982B73675300491EBE /* SocialButtonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialButtonSet.swift; sourceTree = "<group>"; };
 		F34D2C992B73675300491EBE /* UserProfileSocialAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileSocialAdd.swift; sourceTree = "<group>"; };
 		F34D2C9A2B73675300491EBE /* UserProfileEditList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditList.swift; sourceTree = "<group>"; };
-		F34D2C9E2B73675300491EBE /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		F34D2CA12B73675300491EBE /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		F34D2CA22B73675300491EBE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F34D2CA22B73675300491EBE /* SocialLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLoginViewModel.swift; sourceTree = "<group>"; };
 		F34D2CA32B73675300491EBE /* JoinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
 		F34D2CA42B73675300491EBE /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F34D2CA62B73675300491EBE /* JoinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
@@ -364,8 +362,8 @@
 		F34D2CB92B73675300491EBE /* JoinNickname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinNickname.swift; sourceTree = "<group>"; };
 		F34D2D462B7367C600491EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
-		F34D2D4C2B7367D400491EBE /* MemberRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberRequestDTO.swift; sourceTree = "<group>"; };
-		F34D2D4D2B7367D400491EBE /* MemberResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberResponseDTO.swift; sourceTree = "<group>"; };
+		F34D2D4C2B7367D400491EBE /* MemberRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberRequest.swift; sourceTree = "<group>"; };
+		F34D2D4D2B7367D400491EBE /* MemberResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberResponse.swift; sourceTree = "<group>"; };
 		F34D2D502B7367D400491EBE /* DummyResponseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyResponseRepository.swift; sourceTree = "<group>"; };
 		F34D2D572B7367DC00491EBE /* ManagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerModel.swift; sourceTree = "<group>"; };
 		F34D2D582B7367DC00491EBE /* CalendarTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTask.swift; sourceTree = "<group>"; };
@@ -374,9 +372,7 @@
 		F34D2D5B2B7367DC00491EBE /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F34D2D6D2B73698400491EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UMC-iOS.entitlements"; sourceTree = "<group>"; };
-		F34D2D702B7378B000491EBE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		F34D2D742B74A8D100491EBE /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
-		F34D2D792B74AD0700491EBE /* MemberRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRequest.swift; sourceTree = "<group>"; };
 		F34D2D7B2B74B05500491EBE /* ExchangeRateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateError.swift; sourceTree = "<group>"; };
 		F34D2D822B74B31200491EBE /* ApiTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTestView.swift; sourceTree = "<group>"; };
 		F34D2D842B74BB1200491EBE /* SocialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialType.swift; sourceTree = "<group>"; };
@@ -385,7 +381,8 @@
 		F34D2D8A2B74F61900491EBE /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		F34D2D8E2B74FAE100491EBE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
-		F34D2D922B75051400491EBE /* MemberResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberResponse.swift; sourceTree = "<group>"; };
+		F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseProtocol.swift; sourceTree = "<group>"; };
+		F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1030,7 +1027,6 @@
 		F34D2C8A2B73675300491EBE /* UserProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2D762B74A91B00491EBE /* DTO */,
 				F34D2D732B74A8BB00491EBE /* ViewModel */,
 				F34D2C8B2B73675300491EBE /* View */,
 			);
@@ -1082,7 +1078,6 @@
 		F34D2C9B2B73675300491EBE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2C9C2B73675300491EBE /* DTO */,
 				F34D2CA02B73675300491EBE /* ViewModel */,
 				F34D2CA42B73675300491EBE /* LoginView.swift */,
 				F34D2CA52B73675300491EBE /* Model */,
@@ -1092,35 +1087,11 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		F34D2C9C2B73675300491EBE /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				F34D2C9D2B73675300491EBE /* Response */,
-				F34D2C9F2B73675300491EBE /* Request */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
-		F34D2C9D2B73675300491EBE /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				F34D2C9E2B73675300491EBE /* LoginResponse.swift */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		F34D2C9F2B73675300491EBE /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
 		F34D2CA02B73675300491EBE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				F34D2CA12B73675300491EBE /* UserViewModel.swift */,
-				F34D2CA22B73675300491EBE /* LoginViewModel.swift */,
+				F34D2CA22B73675300491EBE /* SocialLoginViewModel.swift */,
 				F34D2CA32B73675300491EBE /* JoinViewModel.swift */,
 			);
 			path = ViewModel;
@@ -1203,8 +1174,8 @@
 		F34D2D4B2B7367D400491EBE /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2D4C2B7367D400491EBE /* MemberRequestDTO.swift */,
-				F34D2D4D2B7367D400491EBE /* MemberResponseDTO.swift */,
+				F3DABB4B2B754FED00BBF00B /* Response */,
+				F3DABB4A2B754FE700BBF00B /* Request */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -1259,37 +1230,38 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F34D2D762B74A91B00491EBE /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				F34D2D782B74A92400491EBE /* Response */,
-				F34D2D772B74A91E00491EBE /* Request */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
-		F34D2D772B74A91E00491EBE /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				F34D2D792B74AD0700491EBE /* MemberRequest.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		F34D2D782B74A92400491EBE /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				F34D2D922B75051400491EBE /* MemberResponse.swift */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
 		F34D2D812B74B2EF00491EBE /* Test */ = {
 			isa = PBXGroup;
 			children = (
 				F34D2D822B74B31200491EBE /* ApiTestView.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		F3DABB4A2B754FE700BBF00B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				F34D2D4C2B7367D400491EBE /* MemberRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		F3DABB4B2B754FED00BBF00B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F3DABB4E2B75537300BBF00B /* Protocol */,
+				F34D2D4D2B7367D400491EBE /* MemberResponse.swift */,
+				F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		F3DABB4E2B75537300BBF00B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1447,6 +1419,7 @@
 				F34D2CCF2B73675300491EBE /* WritingListCellSecond.swift in Sources */,
 				F34D2D302B73675300491EBE /* JoinViewModel.swift in Sources */,
 				F34D2D0D2B73675300491EBE /* TILNavigationbar.swift in Sources */,
+				F3DABB492B754FB200BBF00B /* BaseResponseProtocol.swift in Sources */,
 				F34D2CD82B73675300491EBE /* BulletinBoaardSearchResultUI.swift in Sources */,
 				F34D2CBF2B73675300491EBE /* RankView.swift in Sources */,
 				F34D2CCC2B73675300491EBE /* UserContentPreList.swift in Sources */,
@@ -1489,7 +1462,6 @@
 				F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */,
 				427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */,
 				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
-				F34D2D932B75051400491EBE /* MemberResponse.swift in Sources */,
 				F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */,
 				F34D2D342B73675300491EBE /* Token.swift in Sources */,
 				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,
@@ -1517,16 +1489,15 @@
 				F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */,
 				F34D2D102B73675300491EBE /* ProjectTypeButtonView.swift in Sources */,
 				F34D2D752B74A8D100491EBE /* UserProfileViewModel.swift in Sources */,
-				F34D2CC92B73675300491EBE /* BulletinBoardFirstBtn.swift in Sources */,
 				F34D2CBD2B73675300491EBE /* MascotView.swift in Sources */,
 				F34D2D052B73675300491EBE /* TILList.swift in Sources */,
-				F34D2D2F2B73675300491EBE /* LoginViewModel.swift in Sources */,
+				F34D2D2F2B73675300491EBE /* SocialLoginViewModel.swift in Sources */,
 				4278204B2B75214C0024476C /* ManagerInfoRequest.swift in Sources */,
 				4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */,
 				F34D2D392B73675300491EBE /* KakaoLoginButton.swift in Sources */,
 				F34D2D142B73675300491EBE /* HotProjectView.swift in Sources */,
 				F34D2D7C2B74B05500491EBE /* ExchangeRateError.swift in Sources */,
-				F34D2D532B7367D400491EBE /* MemberResponseDTO.swift in Sources */,
+				F34D2D532B7367D400491EBE /* MemberResponse.swift in Sources */,
 				F34D2D242B73675300491EBE /* UMCseason.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
 				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
@@ -1554,7 +1525,6 @@
 				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
 				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
-				F34D2D7A2B74AD0700491EBE /* MemberRequest.swift in Sources */,
 				F34D2D222B73675300491EBE /* AbleStack.swift in Sources */,
 				F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */,
 				F34D2CE12B73675300491EBE /* Comment.swift in Sources */,
@@ -1566,6 +1536,7 @@
 				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
 				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,
 				44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */,
+				F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */,
 				F34D2CDB2B73675300491EBE /* ManagerSetting.swift in Sources */,
 				F34D2CD62B73675300491EBE /* WritingList.swift in Sources */,
 				4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */,
@@ -1580,13 +1551,12 @@
 				F34D2D022B73675300491EBE /* TILLIstfifthCell.swift in Sources */,
 				F34D2CCA2B73675300491EBE /* BulletinBoardList.swift in Sources */,
 				F34D2D072B73675300491EBE /* TILListFirstViewsub.swift in Sources */,
-				F34D2D2D2B73675300491EBE /* LoginResponse.swift in Sources */,
 				F34D2D892B74C75F00491EBE /* Part.swift in Sources */,
 				F34D2CEC2B73675300491EBE /* DummyUtilView.swift in Sources */,
 				F34D2CBB2B73675300491EBE /* HomeNavigationBarView.swift in Sources */,
 				F34D2D2B2B73675300491EBE /* UserProfileSocialAdd.swift in Sources */,
 				F34D2D1E2B73675300491EBE /* NotificationModel.swift in Sources */,
-				F34D2D522B7367D400491EBE /* MemberRequestDTO.swift in Sources */,
+				F34D2D522B7367D400491EBE /* MemberRequest.swift in Sources */,
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
 				46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */,
 				F34D2CF72B73675300491EBE /* ToDoList.swift in Sources */,

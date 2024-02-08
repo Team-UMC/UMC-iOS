@@ -10,7 +10,7 @@ import Foundation
 enum ApiEndpoints {
     static let scheme = "http"
     static let host = "umcservice.shop"
-    static let port = 8080
+    static let port = 8000
     
     enum Path: String {
         // members

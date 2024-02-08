@@ -18,7 +18,13 @@ struct MemberResponse: Codable {
         let semesterParts: [String]
         let statusMessage: String
         let owner: String
-        
+    }
+    
+    struct SignUpMember: Codable {
+        let memberId: String
+        let accessToken: String
+        let refreshToken: String
+        let serviceMember: Bool
     }
 }
 
