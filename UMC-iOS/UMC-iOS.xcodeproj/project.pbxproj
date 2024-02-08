@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44B0C7802B74BBC6000AF621 /* BoardSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C77F2B74BBC6000AF621 /* BoardSearchRequest.swift */; };
+		44B0C7842B74CE31000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7832B74CE31000AF621 /* BoardSearchResultRequest.swift */; };
+		44B0C7862B74F396000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7852B74F396000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
+		44B0C7882B74F543000AF621 /* BoardSearchLikedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7872B74F543000AF621 /* BoardSearchLikedResultRequest.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -186,6 +190,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44B0C7692B73FAEC000AF621 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		44B0C77F2B74BBC6000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
+		44B0C7832B74CE31000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
+		44B0C7852B74F396000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
+		44B0C7872B74F543000AF621 /* BoardSearchLikedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchLikedResultRequest.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -344,7 +353,6 @@
 		F34D2D5B2B7367DC00491EBE /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F34D2D6D2B73698400491EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UMC-iOS.entitlements"; sourceTree = "<group>"; };
-		F34D2D702B7378B000491EBE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,10 +386,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44B0C77C2B74BB3C000AF621 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				44B0C77E2B74BB47000AF621 /* Request */,
+				44B0C77D2B74BB42000AF621 /* Response */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		44B0C77D2B74BB42000AF621 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		44B0C77E2B74BB47000AF621 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				44B0C77F2B74BBC6000AF621 /* BoardSearchRequest.swift */,
+				44B0C7832B74CE31000AF621 /* BoardSearchResultRequest.swift */,
+				44B0C7852B74F396000AF621 /* BoardSearchMyWritedResultRequest.swift */,
+				44B0C7872B74F543000AF621 /* BoardSearchLikedResultRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
-				F34D2D702B7378B000491EBE /* Config.xcconfig */,
+				44B0C7692B73FAEC000AF621 /* Config.xcconfig */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
 				F34D2BE82B73671800491EBE /* UMC-iOSUITests */,
@@ -565,6 +600,7 @@
 		F34D2C1F2B73675300491EBE /* BulletinBoardSearch */ = {
 			isa = PBXGroup;
 			children = (
+				44B0C77C2B74BB3C000AF621 /* DTO */,
 				F34D2C202B73675300491EBE /* View */,
 			);
 			path = BulletinBoardSearch;
@@ -1318,6 +1354,7 @@
 				F34D2CC02B73675300491EBE /* TodayILearnedView.swift in Sources */,
 				F34D2CD52B73675300491EBE /* WritingListThirdCell.swift in Sources */,
 				F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */,
+				44B0C7802B74BBC6000AF621 /* BoardSearchRequest.swift in Sources */,
 				F34D2D232B73675300491EBE /* UserMessage.swift in Sources */,
 				F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */,
 				F34D2D102B73675300491EBE /* ProjectTypeButtonView.swift in Sources */,
@@ -1336,6 +1373,7 @@
 				F34D2D062B73675300491EBE /* TILUI.swift in Sources */,
 				F34D2CEE2B73675300491EBE /* MascotRankingModel.swift in Sources */,
 				F34D2CEA2B73675300491EBE /* SideMenuNavigationButton.swift in Sources */,
+				44B0C7862B74F396000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */,
 				F34D2CBC2B73675300491EBE /* UserInformationView.swift in Sources */,
 				F34D2D272B73675300491EBE /* UserProfileEditImageViewModel.swift in Sources */,
 				F34D2CF02B73675300491EBE /* ToDoListCellViewModel.swift in Sources */,
@@ -1360,6 +1398,7 @@
 				F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */,
 				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,
 				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
+				44B0C7882B74F543000AF621 /* BoardSearchLikedResultRequest.swift in Sources */,
 				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,
 				F34D2CDB2B73675300491EBE /* ManagerSetting.swift in Sources */,
 				F34D2CD62B73675300491EBE /* WritingList.swift in Sources */,
@@ -1387,6 +1426,7 @@
 				F34D2D5E2B7367DC00491EBE /* DateValue.swift in Sources */,
 				F34D2D0C2B73675300491EBE /* TILCell.swift in Sources */,
 				F34D2CDA2B73675300491EBE /* GenerationPartViewModel.swift in Sources */,
+				44B0C7842B74CE31000AF621 /* BoardSearchResultRequest.swift in Sources */,
 				F34D2D352B73675300491EBE /* JoinAgreCircleCheckButton.swift in Sources */,
 				F34D2CDF2B73675300491EBE /* ManagerPinButton.swift in Sources */,
 				F34D2D382B73675300491EBE /* JoinCircleBorderButton.swift in Sources */,
@@ -1550,7 +1590,6 @@
 		};
 		F34D2BF02B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1582,7 +1621,6 @@
 		};
 		F34D2BF12B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1614,7 +1652,6 @@
 		};
 		F34D2BF32B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1634,7 +1671,6 @@
 		};
 		F34D2BF42B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34D2D702B7378B000491EBE /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
