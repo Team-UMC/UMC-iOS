@@ -31,3 +31,4 @@ struct BulletinBoardList_Previews: PreviewProvider {
     }
 }
 
+
