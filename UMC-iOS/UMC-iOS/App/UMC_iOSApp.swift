@@ -11,7 +11,7 @@ import KakaoSDKAuth
 
 @main
 struct UMC_iOSApp: App {
-    @StateObject var loginViewModel = LoginViewModel()
+    @StateObject var loginViewModel = SocialLoginViewModel()
     @StateObject var userViewModel = UserViewModel()
     
     init(){

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct KakaoLoginButton: View {
-    @EnvironmentObject var loginViewModel: LoginViewModel
+    @EnvironmentObject var loginViewModel: SocialLoginViewModel
     @EnvironmentObject var userViewModel: UserViewModel
     @Binding var isLoggedIn: Bool
     @Binding var alreadyMember: Bool
