@@ -83,3 +83,52 @@ class JoinViewModel: ObservableObject {
         }
     }
 }
+
+extension JoinViewModel {
+    // API 연결
+    
+    // POST
+    @MainActor
+    func fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember) async {
+        do {
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            let sendData = try encoder.encode(signUpMemberInfo)
+            try await signUpMember(sendData: sendData)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    func signUpMember(sendData: Data) async throws {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.members.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = sendData
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badResponse
+        }
+//        
+//        guard let jsonString = String(data: data, encoding: .utf8) else {
+//            print("Error: Failed to convert data to string")
+//            throw ExchangeRateError.decodeFailed
+//        }
+//        
+//        do {
+//            let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.SignUpMember>.self, from: data)
+//        } catch {
+//            print("Error decoding JSON: \(error)")
+//        }
+    }
+}
