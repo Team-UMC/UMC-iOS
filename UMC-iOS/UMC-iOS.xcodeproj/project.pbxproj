@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */; };
+		44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
+		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
+		44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */; };
 		46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -187,7 +191,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46C37FBD2B74CE160084CA4D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		44B0C7892B74FAA1000AF621 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/teamUMC 오후 8.59.53/UMC-iOS/UMC-iOS/Config.xcconfig"; sourceTree = "<group>"; };
+		44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " BoardSearchLikedResultRequest.swift"; sourceTree = "<group>"; };
+		44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
+		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
+		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -380,6 +388,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44B0C78A2B74FAFE000AF621 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				44B0C78C2B74FB12000AF621 /* Request */,
+				44B0C78B2B74FB09000AF621 /* Response */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		44B0C78B2B74FB09000AF621 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		44B0C78C2B74FB12000AF621 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */,
+				44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */,
+				44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */,
+				44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		46C37FBE2B74CE540084CA4D /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,7 +442,7 @@
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
-				46C37FBD2B74CE160084CA4D /* Config.xcconfig */,
+				44B0C7892B74FAA1000AF621 /* Config.xcconfig */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
 				F34D2BE82B73671800491EBE /* UMC-iOSUITests */,
@@ -592,6 +627,7 @@
 		F34D2C1F2B73675300491EBE /* BulletinBoardSearch */ = {
 			isa = PBXGroup;
 			children = (
+				44B0C78A2B74FAFE000AF621 /* DTO */,
 				F34D2C202B73675300491EBE /* View */,
 			);
 			path = BulletinBoardSearch;
@@ -1293,6 +1329,7 @@
 				F34D2CF52B73675300491EBE /* ToDoEditFirstActionSheet.swift in Sources */,
 				F34D2D542B7367D400491EBE /* DummyResponseRepository.swift in Sources */,
 				F34D2D192B73675300491EBE /* ProjectClassificationView.swift in Sources */,
+				44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */,
 				F34D2D082B73675300491EBE /* TILWriteUI.swift in Sources */,
 				F34D2CBA2B73675300491EBE /* HomeViewModel.swift in Sources */,
 				F34D2CDE2B73675300491EBE /* ManagerPin.swift in Sources */,
@@ -1343,9 +1380,11 @@
 				F34D2D3E2B73675300491EBE /* JoinAgreement.swift in Sources */,
 				F34D2D3A2B73675300491EBE /* AppleLoginButton.swift in Sources */,
 				F34D2CC02B73675300491EBE /* TodayILearnedView.swift in Sources */,
+				44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */,
 				F34D2CD52B73675300491EBE /* WritingListThirdCell.swift in Sources */,
 				F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */,
 				F34D2D232B73675300491EBE /* UserMessage.swift in Sources */,
+				44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */,
 				F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */,
 				F34D2D102B73675300491EBE /* ProjectTypeButtonView.swift in Sources */,
 				F34D2CC92B73675300491EBE /* BulletinBoardFirstBtn.swift in Sources */,
@@ -1363,6 +1402,7 @@
 				F34D2D062B73675300491EBE /* TILUI.swift in Sources */,
 				F34D2CEE2B73675300491EBE /* MascotRankingModel.swift in Sources */,
 				F34D2CEA2B73675300491EBE /* SideMenuNavigationButton.swift in Sources */,
+				44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */,
 				F34D2CBC2B73675300491EBE /* UserInformationView.swift in Sources */,
 				F34D2D272B73675300491EBE /* UserProfileEditImageViewModel.swift in Sources */,
 				F34D2CF02B73675300491EBE /* ToDoListCellViewModel.swift in Sources */,
