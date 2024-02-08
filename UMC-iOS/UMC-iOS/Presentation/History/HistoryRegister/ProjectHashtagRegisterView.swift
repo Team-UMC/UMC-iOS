@@ -27,31 +27,12 @@ struct ProjectHashtagRegisterView: View {
                     ForEach(0..<3) { index in
                         
                         HStack(spacing: 0) {
-                            Text("#")
-                            TextField("",
-                                      text: $projectHashtags[index],
-                                      prompt: Text("")
-                            )
-                            .frame(width: 0)
+                            
+                            HashTagTextField(text: $projectHashtags[index])
+                            
                         } // HStack
-                         
-                        
-                        /*
-                        Text("#")
-                            .font(.system(size: 12))
-                            .fontWeight(.regular)
-                            .kerning(-0.48)
-                            .foregroundColor(Color.disabledGray)
-                         */
+
                     }
-                    .font(.system(size: 12))
-                    .fontWeight(.regular)
-                    .kerning(-0.48)
-                    .foregroundColor(Color.disabledGray)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 6)
-                    .background(Color.hashtagBackground)
-                    .cornerRadius(12)
                     
                     Spacer()
                 } // HStack (해시태그)
@@ -66,7 +47,39 @@ struct ProjectHashtagRegisterView: View {
         .padding(.horizontal, 16.5)
         .padding(.vertical, 8)
     }
+    
 }
+
+struct HashTagTextField: View {
+    
+    @Binding var text: String
+    
+    var body: some View {
+        
+        HStack(spacing: 0) {
+            Text("#")
+                .foregroundColor(text.isEmpty ? Color.disabledGray : Color.historyPurple)
+            TextField("",
+                      text: $text,
+                      prompt: Text(""))
+            .foregroundColor(Color.historyPurple)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .font(.system(size: 12))
+        .fontWeight(.regular)
+        .kerning(-0.48)
+        .foregroundColor(Color.disabledGray)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 6)
+        .background(text.isEmpty ?  Color.hashtagDisabledBackground : Color.hashtagAbledBackground)
+        .cornerRadius(12)
+        
+        
+    }
+    
+}
+
+
 
 #Preview {
     ProjectHashtagRegisterView()
