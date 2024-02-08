@@ -11,6 +11,7 @@
 		44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
 		44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */; };
+		44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */; };
 		46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -30,9 +31,7 @@
 		F34D2CC42B73675300491EBE /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C062B73675300491EBE /* HomeSideMenuView.swift */; };
 		F34D2CC52B73675300491EBE /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C072B73675300491EBE /* ToDoListView.swift */; };
 		F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0A2B73675300491EBE /* BulletinBoradViewModel.swift */; };
-		F34D2CC72B73675300491EBE /* BulletinBoardSecondBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0C2B73675300491EBE /* BulletinBoardSecondBtn.swift */; };
 		F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0D2B73675300491EBE /* BulletinBoardNotice.swift */; };
-		F34D2CC92B73675300491EBE /* BulletinBoardFirstBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0E2B73675300491EBE /* BulletinBoardFirstBtn.swift */; };
 		F34D2CCA2B73675300491EBE /* BulletinBoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C0F2B73675300491EBE /* BulletinBoardList.swift */; };
 		F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C102B73675300491EBE /* BulletinBoardUI.swift */; };
 		F34D2CCC2B73675300491EBE /* UserContentPreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C112B73675300491EBE /* UserContentPreList.swift */; };
@@ -196,6 +195,7 @@
 		44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
+		44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardButton.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -218,9 +218,7 @@
 		F34D2C062B73675300491EBE /* HomeSideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
 		F34D2C072B73675300491EBE /* ToDoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		F34D2C0A2B73675300491EBE /* BulletinBoradViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoradViewModel.swift; sourceTree = "<group>"; };
-		F34D2C0C2B73675300491EBE /* BulletinBoardSecondBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardSecondBtn.swift; sourceTree = "<group>"; };
 		F34D2C0D2B73675300491EBE /* BulletinBoardNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardNotice.swift; sourceTree = "<group>"; };
-		F34D2C0E2B73675300491EBE /* BulletinBoardFirstBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardFirstBtn.swift; sourceTree = "<group>"; };
 		F34D2C0F2B73675300491EBE /* BulletinBoardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardList.swift; sourceTree = "<group>"; };
 		F34D2C102B73675300491EBE /* BulletinBoardUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardUI.swift; sourceTree = "<group>"; };
 		F34D2C112B73675300491EBE /* UserContentPreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserContentPreList.swift; sourceTree = "<group>"; };
@@ -581,12 +579,11 @@
 		F34D2C0B2B73675300491EBE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2C0C2B73675300491EBE /* BulletinBoardSecondBtn.swift */,
 				F34D2C0D2B73675300491EBE /* BulletinBoardNotice.swift */,
-				F34D2C0E2B73675300491EBE /* BulletinBoardFirstBtn.swift */,
 				F34D2C0F2B73675300491EBE /* BulletinBoardList.swift */,
 				F34D2C102B73675300491EBE /* BulletinBoardUI.swift */,
 				F34D2C112B73675300491EBE /* UserContentPreList.swift */,
+				44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1387,7 +1384,6 @@
 				44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */,
 				F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */,
 				F34D2D102B73675300491EBE /* ProjectTypeButtonView.swift in Sources */,
-				F34D2CC92B73675300491EBE /* BulletinBoardFirstBtn.swift in Sources */,
 				F34D2CBD2B73675300491EBE /* MascotView.swift in Sources */,
 				F34D2D052B73675300491EBE /* TILList.swift in Sources */,
 				F34D2D2F2B73675300491EBE /* LoginViewModel.swift in Sources */,
@@ -1428,6 +1424,7 @@
 				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,
 				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
 				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,
+				44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */,
 				F34D2CDB2B73675300491EBE /* ManagerSetting.swift in Sources */,
 				F34D2CD62B73675300491EBE /* WritingList.swift in Sources */,
 				F34D2D3D2B73675300491EBE /* SelectUniv.swift in Sources */,
@@ -1448,7 +1445,6 @@
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
 				46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */,
 				F34D2CF72B73675300491EBE /* ToDoList.swift in Sources */,
-				F34D2CC72B73675300491EBE /* BulletinBoardSecondBtn.swift in Sources */,
 				F34D2D0B2B73675300491EBE /* TILListFourthCell.swift in Sources */,
 				F34D2CC32B73675300491EBE /* MainCalendarView.swift in Sources */,
 				F34D2D3C2B73675300491EBE /* JoinFinalMessage.swift in Sources */,

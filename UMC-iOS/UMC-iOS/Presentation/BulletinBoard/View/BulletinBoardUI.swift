@@ -1,60 +1,82 @@
-//
-//  BulletinBoardUI.swift
-//  BulletinBoardUI
-//
-//  Created by 나예은 on 2024/01/25.
-//
-
 import SwiftUI
 
 struct BulletinBoardUI: View {
     var background = "background_BB"
-    
+    @State private var isWritingListActive = false
+    @Environment(\.presentationMode) var presentationMode
+    @State private var isBulletinBoardNoticeVisible = false
     var body: some View {
         NavigationView {
-            ZStack {
-                // 배경
-                Image(background)
-                    .resizable()
-                    .scaledToFit()
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                
-                VStack(alignment: .leading) {
-                    // 학교 ~ 건의함
-                    NavigationLink(destination: Text("학교")) {
-                        BulletinBoardFirstBtn()
-                            .padding(.top, 60)
+            
+            ZStack{
+                ZStack {
+                    
+                    // 배경
+                    Image(background)
+                        .resizable()
+                        .scaledToFit()
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    
+                    
+                    
+                    VStack(alignment: .leading) {
+                        Spacer()
+                        Spacer()
+                        //버튼
+                        BulletinBoardButton()
+                            .padding(.top,50)
+                            .padding(.leading,30)
+                            .padding(.bottom,30)
+
+                        // 게시글 리스트
+                        BulletinBoardList()
                             .padding(.leading, 16)
+                            .padding(.trailing, 16)
                     }
+                    Spacer()
                     
-                    // 공지사항 ~ 워크북 게시판
-                    BulletinBoardSecondBtn()
-                        .padding(.top, 16)
-                        .padding(.bottom, 16)
-                        .padding(.leading, 16)
+                    Button(action: {
+                        isWritingListActive = true
+                    }) {
+                        Image("TILButton")
+                            .resizable()
+                            .frame(width: 46, height: 46)
+                            .padding(.top, 600)
+                            .padding(.leading, 300)
+                    }
+                    .buttonStyle(PlainButtonStyle())
                     
-                    // 게시글 리스트
-                    BulletinBoardList()
-                        .padding(.leading, 16)
-                        .padding(.trailing, 16)
+                    // WritingList로 이동하는 NavigationLink
+                    NavigationLink(destination: WritingList(title: "제목", content: ""), isActive: $isWritingListActive) {
+                        EmptyView()
+                    }
+                  
                 }
-                Spacer()
+                VStack{
+                    
+                    Spacer()
+                    
+                 //   Image("bottomBarImage")
+                   //     .resizable()
+                     //   .frame(width: 400, height: 80)
+                       
+                     
+                    
+                }
                 
-                Image("TILButton")
-                    .resizable()
-                    .frame(width: 46, height: 46)
-                    .padding(.top, 600)
-                    .padding(.leading, 300)
             }
-            .navigationBarHidden(true)
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
         }
     }
 }
+
 
 struct BulletinBoardUI_Previews: PreviewProvider {
     static var previews: some View {
         BulletinBoardUI()
     }
 }
+
 
