@@ -35,6 +35,6 @@ var tasks: [TaskMetaData] = [
     TaskMetaData(task: [Task(title: "[연합] 데모데이 신청 마감",
                              mainText: "데모데이 신청 마감일 입니다.\n잊지말고 신청해 주세요~🥳",
                              writer: "우디")],
-                 taskDate: getSampleDate(offset: 3)
+                 taskDate: getSampleDate(offset: 30)
                 )
 ]

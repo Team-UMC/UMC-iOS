@@ -145,9 +145,10 @@ extension HomeView {
         }
         
         func formattedDateString(date: Date) -> String {
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "MM/dd"
-                return dateFormatter.string(from: date)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd (E)"
+            dateFormatter.locale = Locale(identifier: "ko_KR")
+            return dateFormatter.string(from: date)
         }
         
         func isSameDay(date1: Date, date2: Date) -> Bool {

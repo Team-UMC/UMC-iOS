@@ -11,9 +11,9 @@ import PopupView
 struct MainCalendarView: View {
     @Binding var currentDate: Date
     @State var currentMonth: Int = 0 // 화살표 버튼 클릭시 월 업데이트
+    @State var monthTap: Int = 0 // 날짜를 눌렀을 때 currentMonth와 동기화
     
     @Binding var shouldShowCalendarPopup: Bool
-   
     
     let days: [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     let colums = Array(repeating: GridItem(.flexible()), count: 7)
@@ -28,7 +28,7 @@ struct MainCalendarView: View {
                 .shadow(color: Color.gray.opacity(0.5), radius: 6, x: 0, y: 2)
             
             VStack(spacing: 4) { // 달력 전체
-                HStack(spacing: 10) { // 월, 버튼
+                HStack(spacing: 28) { // 월, 버튼
                     VStack(alignment: .leading, spacing: 0) {
                         Text(extraDate()[0]) // January .. Febuary ...
                             .font(.system(size: 16))
@@ -48,12 +48,14 @@ struct MainCalendarView: View {
                         Image(systemName: "chevron.left")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 10, height: 10)
+                            .frame(width: 12, height: 12)
                             .foregroundStyle(Color.main2)
                     } // Button
                     
                     Button { // 오른쪽 버튼, 다음 달
                         print("CalendarRightBtn Tapped")
+                        
+                        
                         withAnimation {
                             currentMonth += 1
                         }
@@ -61,7 +63,7 @@ struct MainCalendarView: View {
                         Image(systemName: "chevron.right")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 10, height: 10)
+                            .frame(width: 12, height: 12)
                             .foregroundStyle(Color.main2)
                     } // Button
                     
@@ -93,11 +95,11 @@ struct MainCalendarView: View {
                                     .padding(.top, -4)
                                     .padding(.bottom, 6)
                                     .padding(.horizontal, 10)
-                                    .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
-                                    //.opacity((currentMonth == 0) ? 1 : 0)
+                                    .opacity(isSameDay(date1: value.date, date2: currentDate) && (currentMonth == monthTap) ? 1 : 0)
                             )
                             .onTapGesture {
                                 currentDate = value.date
+                                monthTap = currentMonth
                                 print("날짜 정보 : \(currentDate.formatted())")
                                 
                                 // 일정이 있는 경우에 shouldShowPopup = true 없다면 false
@@ -158,7 +160,10 @@ struct MainCalendarView: View {
                 } else { // Task 없을 때
                     Text("\(value.day)")
                         .font(.system(size: 12))
-                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? Color.white : Color.calendar)
+                        // .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? Color.white : Color.calendar)
+                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate)
+                                         && (currentMonth == monthTap) ? Color.white : Color.calendar)
+                        // .foregroundColor()
                         .frame(maxWidth: .infinity)
                         .fontWeight(.regular)
                     
