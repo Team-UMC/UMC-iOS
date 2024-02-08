@@ -10,38 +10,54 @@ import SwiftUI
 struct ProjectInformationRegisterView: View {
     
     @State private var projectInfo: String = ""
+    private let placeholder = "앱 설명을 간단하게 적어주세요 (50자 이내)"
+    private let maxCharacterCount: Int = 50 // 인포 50글자 제한
     
     var body: some View {
         
-        VStack(alignment:.trailing, spacing:0) {
+        VStack(alignment: .trailing, spacing: 0) {
+            PlaceholderTextEditor(text: $projectInfo, placeholder: placeholder, maxCharacterCount: maxCharacterCount)
+                .frame(height: 150)
             
-            HStack(spacing: 0) {
-                TextField("앱 이름",
-                          text: $projectInfo,
-                          prompt: Text("앱 설명을 간단하게 적어주세요 (50자 이내)")
-                    .font(.system(size: 14))
-                    .fontWeight(.semibold)
-                    .kerning(-1)
-                    .foregroundColor(Color.buttonDisabled)
-                )
-                .frame(width: .infinity, height: 150, alignment: .topLeading)
-                .padding(.horizontal, 8)
-                .padding(.vertical, 7.5)
-                
-            } // HStack
-            
-            Text("\(projectInfo.count) / 50")
+            Text("\(projectInfo.count) / \(maxCharacterCount)")
                 .font(.system(size: 14))
                 .fontWeight(.regular)
                 .kerning(-1)
-                .foregroundColor(Color.buttonDisabled)
+                .foregroundColor(projectInfo.count >= maxCharacterCount ? Color.red : Color.buttonDisabled)
                 .padding(.horizontal, 8)
-            
-        } // VStack
+        }
         .padding(.horizontal, 16.5)
         .padding(.vertical, 8)
     }
+    
+    
+    struct PlaceholderTextEditor: View {
+        @Binding var text: String
+        let placeholder: String
+        let maxCharacterCount: Int
+
+        var body: some View {
+            ZStack(alignment: .topLeading) {
+                if text.isEmpty {
+                    Text(placeholder)
+                        .foregroundColor(Color.buttonDisabled)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 7.5)
+                }
+                TextEditor(text: $text)
+                    .onChange(of: text) { newValue in
+                        if newValue.count > maxCharacterCount {
+                            text = String(newValue.prefix(maxCharacterCount))
+                        }
+                    }
+                    .opacity(text.isEmpty ? 0.25 : 1.0)
+                    .padding(.horizontal, 4)
+            }
+        }
+    }
 }
+
+
 
 #Preview {
     ProjectInformationRegisterView()

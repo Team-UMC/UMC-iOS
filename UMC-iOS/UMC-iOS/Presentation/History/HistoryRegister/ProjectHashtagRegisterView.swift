@@ -25,22 +25,29 @@ struct ProjectHashtagRegisterView: View {
                 
                 HStack(spacing: 8) {
                     ForEach(0..<3) { index in
-                        /*
-                        TextField("#",
-                                  text: $projectHashtags[index],
-                                  prompt: Text("#")
-                            .font(.system(size: 12))
-                            .fontWeight(.regular)
-                            .kerning(-0.48)
-                            .foregroundColor(Color.disabledGray))
-                         */
                         
+                        HStack(spacing: 0) {
+                            Text("#")
+                            TextField("",
+                                      text: $projectHashtags[index],
+                                      prompt: Text("")
+                            )
+                            .frame(width: 0)
+                        } // HStack
+                         
+                        
+                        /*
                         Text("#")
                             .font(.system(size: 12))
                             .fontWeight(.regular)
                             .kerning(-0.48)
                             .foregroundColor(Color.disabledGray)
+                         */
                     }
+                    .font(.system(size: 12))
+                    .fontWeight(.regular)
+                    .kerning(-0.48)
+                    .foregroundColor(Color.disabledGray)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 6)
                     .background(Color.hashtagBackground)
