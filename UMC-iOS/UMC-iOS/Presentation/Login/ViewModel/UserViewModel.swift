@@ -18,7 +18,7 @@ class UserViewModel: ObservableObject {
         print("로그아웃 성공(유저 초기화)")
     }
     
-    // MARK: 오월이 API FUNCTIONS (Post)
+    
         // 얘를 인터페이스로 바꾸기.
     func joinMember(socialToken: Token, completion: @escaping () -> Void) {
         // UserDefaults에 사용자 인증 정보 저장

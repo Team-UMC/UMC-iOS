@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView:View {
-    @EnvironmentObject var loginViewModel: LoginViewModel
+    @EnvironmentObject var loginViewModel: SocialLoginViewModel
     @EnvironmentObject var userViewModel: UserViewModel
     @State var isLoggedIn: Bool = false
     @State private var alreadyMember: Bool = false

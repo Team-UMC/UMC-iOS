@@ -11,7 +11,7 @@ import KakaoSDKAuth
 
 @main
 struct UMC_iOSApp: App {
-    @StateObject var loginViewModel = LoginViewModel()
+    @StateObject var loginViewModel = SocialLoginViewModel()
     @StateObject var userViewModel = UserViewModel()
     
     init(){
@@ -26,7 +26,7 @@ struct UMC_iOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            ApiTestView()
                 .onOpenURL(perform: { url in
                     if (AuthApi.isKakaoTalkLoginUrl(url)) {
                         _ = AuthController.handleOpenUrl(url: url)

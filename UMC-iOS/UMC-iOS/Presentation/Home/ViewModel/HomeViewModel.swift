@@ -80,10 +80,10 @@ extension HomeView {
             var popupMainText: String = ""
             var popupWriter: String = ""
             
-            if let task = tasks.first(where: { taskIndex in
+            if let task = calendarTasks.first(where: { taskIndex in
                 return isSameDay(date1: taskIndex.taskDate, date2: currentDate)
             }) {
-                for index in task.task {
+                for index in task.calendarTasks {
                     popupDate = formattedDateString(date: currentDate)
                     popupTitle = index.title
                     popupMainText = index.mainText

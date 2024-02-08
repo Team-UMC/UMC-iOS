@@ -12,7 +12,7 @@ import KakaoSDKAuth
 import KakaoSDKUser
 import AuthenticationServices
 
-class LoginViewModel:ObservableObject {
+class SocialLoginViewModel:ObservableObject {
     // MARK: 카카오 로그인 관련 PROPERTIES
     @Published var kakaoUser: KakaoSDKUser.User?
     @Published var kakaoToken:  OAuthToken?
@@ -192,10 +192,4 @@ class LoginViewModel:ObservableObject {
     }
 }
 
-//extension UIApplication {
-//    func rootController() -> UIViewController {
-//        guard let window = connectedScenes.first as? UIWindowScene else { return .init() }
-//        guard let viewController = window.windows.last?.rootViewController else { return .init() }
-//        return viewController
-//    }
-//}
+
