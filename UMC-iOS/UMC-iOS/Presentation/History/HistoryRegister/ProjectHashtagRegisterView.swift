@@ -42,13 +42,13 @@ struct ProjectHashtagRegisterView: View {
                             .foregroundColor(Color.disabledGray)
                     }
                     .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, 6)
                     .background(Color.hashtagBackground)
                     .cornerRadius(12)
                     
                     Spacer()
                 } // HStack (해시태그)
-                .padding(.top, 13.5)
+                .padding(.top, 8)
                 
             } // VStack
             .padding(.horizontal, 8)
