@@ -13,6 +13,8 @@ class UserProfileViewModel: ObservableObject {
     @Published var userName: String = ""
     @Published var message: String = ""
     @Published var selectedImage: UIImage?
+    
+    @Published var member = Member()
 
     // Image selection
     func pickImage() {
@@ -47,13 +49,20 @@ extension UserProfileViewModel {
     
     
     // GET
-    func fetchGetUserProfile(memberId: String) async {
+    
+    @MainActor
+    func fetchGetUserProfile(/*memberId: String?*/) async {
         do {
-//            self.
+            let getUserProfileDTO = try await getUserProfile(/*memberId: memberId*/)
+            print(getUserProfileDTO)
+            member.id = getUserProfileDTO.memberId
+//            member.clientId = 0
+        } catch {
+            print("Error: \(error)")
         }
     }
     
-    func getUserProfile(memberId: String) async throws -> MemberRequest.GetMemberProfile {
+    func getUserProfile(/*memberId: String?*/) async throws -> MemberResponse.GetMemberProfile {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
         
@@ -63,21 +72,25 @@ extension UserProfileViewModel {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = "GET"
         
         let (data, response) = try await URLSession.shared.data(for: request)
-        
-        guard let jsonString = String(data: data, encoding: .utf8) else {
-            print("Error: Failed to convert data to string")
-            throw ExchangeRateError.decodeFailed
-        }
         
         if let response = response as? HTTPURLResponse,
            !(200..<300).contains(response.statusCode) {
             throw ExchangeRateError.badResponse
         }
         
-        return MemberRequest.GetMemberProfile(id: 1, memberId: "1", profileImage: "1", universityName: "1", name: "!", nickname: "!", semesterParts: [], statusMessage: "1", owner: "1")
+        guard let jsonString = String(data: data, encoding: .utf8) else {
+            print("Error: Failed to convert data to string")
+            throw ExchangeRateError.decodeFailed
+        }
+        print(jsonString)
+        
+        let decoder = JSONDecoder()
+        let getMemberProfile: MemberResponse.GetMemberProfile = try decoder.decode(MemberResponse.GetMemberProfile.self, from: data)
+        
+        return getMemberProfile
         
     }
     

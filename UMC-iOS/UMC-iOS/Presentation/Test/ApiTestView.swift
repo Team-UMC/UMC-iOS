@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ApiTestView: View {
-    var userProfileViewModel = UserProfileViewModel()
+    @ObservedObject var userProfileViewModel = UserProfileViewModel()
+    
     var body: some View {
         Button {
-            
+            Task {
+                await userProfileViewModel.fetchGetUserProfile()
+            }
         } label: {
             Text("UserProfileViewModel.")
         }

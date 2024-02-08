@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Role {
+enum Role: Codable {
     case ADMIN
     case TOTAL_STAFF
     case CENTER_STAFF

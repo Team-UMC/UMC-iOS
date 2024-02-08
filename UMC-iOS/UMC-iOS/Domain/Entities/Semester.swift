@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Semester {
+enum Semester: Codable {
     case FIRST
     case SECOND
     case THIRD

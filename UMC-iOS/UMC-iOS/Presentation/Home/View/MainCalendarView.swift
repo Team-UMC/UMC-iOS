@@ -103,7 +103,7 @@ struct MainCalendarView: View {
                                 print("날짜 정보 : \(currentDate.formatted())")
                                 
                                 // 일정이 있는 경우에 shouldShowPopup = true 없다면 false
-                                if let task = tasks.first(where: { task in
+                                if let task = calendarTasks.first(where: { task in
                                     return isSameDay(date1: task.taskDate, date2: currentDate)
                                 }) {
                                     self.shouldShowCalendarPopup = true
@@ -139,7 +139,7 @@ struct MainCalendarView: View {
         VStack(spacing: 0) {
             if value.day != -1 {
                 
-                if let task = tasks.first(where: { task in
+                if let task = calendarTasks.first(where: { task in
                     
                     return isSameDay(date1: task.taskDate,
                                      date2: value.date)

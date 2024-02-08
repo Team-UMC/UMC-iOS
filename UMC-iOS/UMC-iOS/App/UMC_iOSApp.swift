@@ -26,7 +26,7 @@ struct UMC_iOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            ApiTestView()
                 .onOpenURL(perform: { url in
                     if (AuthApi.isKakaoTalkLoginUrl(url)) {
                         _ = AuthController.handleOpenUrl(url: url)

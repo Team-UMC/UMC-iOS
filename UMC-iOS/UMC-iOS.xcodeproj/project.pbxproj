@@ -185,6 +185,7 @@
 		F34D2D8B2B74F61900491EBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8A2B74F61900491EBE /* Branch.swift */; };
 		F34D2D8F2B74FAE100491EBE /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8E2B74FAE100491EBE /* PositionType.swift */; };
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
+		F34D2D932B75051400491EBE /* MemberResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D922B75051400491EBE /* MemberResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,6 +385,7 @@
 		F34D2D8A2B74F61900491EBE /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		F34D2D8E2B74FAE100491EBE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		F34D2D922B75051400491EBE /* MemberResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1277,6 +1279,7 @@
 		F34D2D782B74A92400491EBE /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				F34D2D922B75051400491EBE /* MemberResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1486,6 +1489,7 @@
 				F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */,
 				427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */,
 				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
+				F34D2D932B75051400491EBE /* MemberResponse.swift in Sources */,
 				F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */,
 				F34D2D342B73675300491EBE /* Token.swift in Sources */,
 				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,

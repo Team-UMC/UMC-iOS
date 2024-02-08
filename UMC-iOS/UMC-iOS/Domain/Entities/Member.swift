@@ -7,8 +7,9 @@
 
 import Foundation
 
-class Member {
-    var id: String = ""
+struct Member {    
+    typealias Identifier = String
+    var id: Identifier = ""
     var clientId: String = ""
     var university: String = ""
     var branch: String = ""
@@ -18,12 +19,18 @@ class Member {
     var nickname: String = ""
     var name: String = ""
     var statusMessage: String = ""
-    var socialType: SocialType
-    var semesterParts: [SemesterParts]
-    var positions: [MemberPosition]
-    var role: Role
+    var socialType: SocialType?
+    var semesterParts: [SemesterParts]?
+    var positions: [MemberPosition]?
+    var role: Role?
     var gitNickname: String = ""
     
+    init() {
+        self.socialType = .none
+        self.semesterParts = []
+        self.positions = []
+        self.role = .none
+    }
     
     init(socialType: SocialType, semesterParts: [SemesterParts], positions: [MemberPosition], role: Role) {
         self.socialType = socialType

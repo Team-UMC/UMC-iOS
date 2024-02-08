@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PositionType {
+enum PositionType: Codable {
     case CENTER
     case CAMPUS
     

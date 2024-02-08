@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Branch {
+class Branch: Codable {
     // id, name, image, semester
     var id: String = ""
     var name: String = ""

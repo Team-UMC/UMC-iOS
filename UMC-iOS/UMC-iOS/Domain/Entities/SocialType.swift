@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SocialType: String {
+enum SocialType: String, Codable {
     case KAKAO = "카카오"
     case GOOGLE = "구글"
     case NAVER = "네이버"

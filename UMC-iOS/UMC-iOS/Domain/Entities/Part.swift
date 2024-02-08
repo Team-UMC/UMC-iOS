@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Part {
+enum Part: Codable {
     case PM
     case DESIGN
     case SPRING
