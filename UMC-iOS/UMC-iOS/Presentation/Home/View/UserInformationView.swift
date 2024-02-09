@@ -11,7 +11,7 @@ struct UserInformationView: View {
     var memberInfo: Member
     var body: some View {
         HStack {
-            Image("univPictureEx") // 학교 사진
+            Image("\(memberInfo.university)_로고") // 학교 사진
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 36, height: 36)
