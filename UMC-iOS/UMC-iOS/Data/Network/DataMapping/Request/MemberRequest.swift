@@ -13,7 +13,7 @@ class MemberRequest {
         let nickname: String
         let semesterParts: [SemesterPart]
         let universityName: String
-        let campusPostions: [String]
+        let campusPositions: [String]
         let centerPositions: [String]
     }
     

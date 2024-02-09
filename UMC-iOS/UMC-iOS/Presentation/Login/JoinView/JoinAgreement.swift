@@ -96,7 +96,7 @@ struct JoinAgreement:View {
                             print(userData)
                             Task {
                                 // 수정 필요
-                                await viewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: userData.name!, nickname: userData.nickname!, semesterParts: [MemberRequest.SemesterPart(part: "SPRING", semester: "FIFTH")], universityName: userData.university!, campusPostions: [], centerPositions: []))
+                                await viewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: userData.name!, nickname: userData.nickname!, semesterParts: [MemberRequest.SemesterPart(part: "SPRING", semester: "FIFTH")], universityName: userData.university!, campusPositions: [], centerPositions: []))
                             }
                             isClicked.toggle()
                         } label: {
