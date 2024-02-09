@@ -16,7 +16,7 @@ struct AppleLoginButton: View {
     var body: some View {
         socialLoginViewModel.appleLoginButton() {
             if socialLoginViewModel.isLoggedIn {
-                loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken) {alreadyMember = loginViewModel.serviceMember
+                loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken) {
                     isLoggedIn = true
                 }
             } else {

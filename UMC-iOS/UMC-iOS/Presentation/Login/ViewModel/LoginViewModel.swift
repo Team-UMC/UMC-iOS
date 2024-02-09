@@ -36,27 +36,29 @@ class LoginViewModel: ObservableObject {
         print("Saved Auth Provider: \(UserDefaults.standard.string(forKey: "authProvider") ?? "")")
         print("Saved Authorization Code: \(UserDefaults.standard.string(forKey: "authorizationCode") ?? "")")
         
-        // 로그인 상태 업데이트
-        self.isLogined = true
-        // 필요한 경우 추가적인 로직 수행
+
     }
 }
 
 extension LoginViewModel {
     
     // POST
+    
+    // 인증 API - 소셜 로그인 API
     @MainActor
     func fetchGetAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async {
         do {
             try await getAccessTokenWithSocialLogin(socialLoginInfo: socialLoginInfo)
+            // 로그인 상태 업데이트
+            self.isLogined = true
+            // 필요한 경우 추가적인 로직 수행
         } catch {
             print("Error: \(error)")
         }
     }
     
+    // 인증 API - 소셜 로그인 API
     func getAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async throws {
-        
-        
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members_login.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "accessToken", value: socialLoginInfo.accessToken), URLQueryItem(name: "socialType", value: socialLoginInfo.socialType)]
@@ -92,11 +94,12 @@ extension LoginViewModel {
                 self?.serviceMember = jsonDictionary.result.serviceMember
                 
                 print(jsonDictionary.result)
+                print(response)
             } catch {
                 print("Error decoding JSON: \(error)")
             }
         }
-        
-        
     }
 }
+
+

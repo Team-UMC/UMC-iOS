@@ -88,6 +88,7 @@ extension JoinViewModel {
     // API 연결
     
     // POST
+    // 인증 API - 회원가입 API
     @MainActor
     func fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember) async {
         do {
@@ -99,11 +100,14 @@ extension JoinViewModel {
             if let jsonString = String(data: sendData, encoding: .utf8) {
                 print("fetchSignUpMemberLog : \(jsonString)")
             }
+            
+            let memberId = try await signUpMember(sendData: sendData)
         } catch {
             print("Error: \(error)")
         }
     }
     
+    // 인증 API - 회원가입 API
     func signUpMember(sendData: Data) async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
@@ -128,18 +132,15 @@ extension JoinViewModel {
             throw ExchangeRateError.badResponse
         }
         
+        
         let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<MemberResponse.MemberId>.self, from: data)
+        
         var memberId: MemberResponse.MemberId
-        memberId = try decoder.decode(MemberResponse.MemberId.self, from: data)
+        memberId = jsonDictionary.result
+        print(memberId)
         
         return memberId
-        
-//        do {
-//            let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.MemberId>.self, from: data)
-//            print("signUpMember log : \(jsonDictionary.result.memberId)")
-//            
-//        } catch {
-//            print("Error decoding JSON: \(error)")
-//        }
     }
 }

@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @StateObject private var vm = ViewModel()
+    @ObservedObject var viewModel = HomeViewModel()
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
     var body: some View {
         ZStack {
@@ -19,8 +18,9 @@ struct HomeView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: UIScreen.main.bounds.width)
-                        // .offset(x: 0)
+                    // .offset(x: 0)
                         .position(x: UIScreen.main.bounds.width/2, y: 170)
+                    
                     HomeSideView(isShowing: $presentSideMenu, content: AnyView(SideMenuViewContents(presentSideMenu: $presentSideMenu)), direction: .leading)
                         .zIndex(1)
                     
@@ -30,9 +30,9 @@ struct HomeView: View {
                         
                         UserInformationView().padding(.top, 20)
                         
-                        AnnouncementView(shouldShowAnnouncementPopup: $vm.shouldShowAnnouncementPopup).padding(.top, 8)
+                        AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup).padding(.top, 8)
                         
-                        MainCalendarView(currentDate: $vm.currentDate, shouldShowCalendarPopup: $vm.shouldShowCalendarPopup).padding(.top, 8)
+                        MainCalendarView(currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
                         ToDoListView().padding(.top, 24)
                         
                         HStack(spacing: 18) {
@@ -58,13 +58,13 @@ struct HomeView: View {
             
             Rectangle() // 팝업 뷰 뒤에 회색 배경
                 .foregroundColor(.black)
-                .opacity(vm.shouldShowCalendarPopup||vm.shouldShowAnnouncementPopup ? 0.6 : 0) // 공지사항, 캘린더 둘 다 적용
+                .opacity(viewModel.shouldShowCalendarPopup || viewModel.shouldShowAnnouncementPopup ? 0.6 : 0) // 공지사항, 캘린더 둘 다 적용
                 .edgesIgnoringSafeArea(.all)
             
         } // ZStack (최 상단에 팝업 뷰 배치)
         .ignoresSafeArea()
         // 공지사항 팝업
-        .popup(isPresented: $vm.shouldShowAnnouncementPopup, view: {self.vm.createAnnouncementPopup()},
+        .popup(isPresented: $viewModel.shouldShowAnnouncementPopup, view: {self.viewModel.createAnnouncementPopup()},
                customize: {
             $0
                 .type(.default)
@@ -75,7 +75,7 @@ struct HomeView: View {
         })
         
         // 캘린더 팝업
-        .popup(isPresented: $vm.shouldShowCalendarPopup, view: {self.vm.createCalendarPopup()},
+        .popup(isPresented: $viewModel.shouldShowCalendarPopup, view: {self.viewModel.createCalendarPopup()},
                customize: {
             $0
                 .type(.default)

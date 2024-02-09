@@ -49,9 +49,10 @@ struct LoginView:View {
                 .padding(.bottom, 128)
             }
             .ignoresSafeArea()
-            .navigationDestination(isPresented: $socialLoginViewModel.isLoggedIn) {
-                if loginViewModel.isLogined {
+            .navigationDestination(isPresented: $loginViewModel.isLogined) {
+                if loginViewModel.serviceMember {
                     HomeView()
+                        .navigationBarBackButtonHidden()
                 } else {
                     JoinCode()
                 }

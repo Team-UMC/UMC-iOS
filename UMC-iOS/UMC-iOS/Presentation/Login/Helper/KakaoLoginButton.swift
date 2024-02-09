@@ -18,7 +18,6 @@ struct KakaoLoginButton: View {
             socialLoginViewModel.kakaoLogin(UMCUser: loginViewModel.member) {
                 if (socialLoginViewModel.isLoggedIn) {
                     loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken){
-//                        alreadyMember = userViewModel.member.is_service_member!
                         isLoggedIn = true
                     }
                 } else {
