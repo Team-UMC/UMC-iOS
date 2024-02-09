@@ -17,20 +17,25 @@ struct JoinNavigationButton<Destination: View>: View {
             isClicked.toggle()
         }) {
             HStack {
-                Spacer()
                 Image(systemName: "arrow.right.circle.fill")
                     .resizable()
                     .frame(width: 50, height: 50)
                     .foregroundColor(.white)
-                Spacer().frame(width: 16)
             }
-            .padding(10)
             
         }
         //네비게이션 페이지 전환
         .navigationDestination(isPresented: $isClicked) {
             //다음 전환하고자 하는 페이지 / 백버튼 안보이게
-            destination.navigationBarBackButtonHidden()
+            if destination is HomeView {
+                destination.navigationBarBackButtonHidden()
+            } else {
+                destination/*.navigationBarBackButtonHidden()*/
+            }
         }
     }
+}
+
+#Preview {
+    JoinNavigationButton(destination: HomeView())
 }

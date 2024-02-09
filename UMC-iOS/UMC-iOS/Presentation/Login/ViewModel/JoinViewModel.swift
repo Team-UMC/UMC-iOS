@@ -1,5 +1,5 @@
 //
-//  JoinCodeViewModel.swift
+//  JoinViewModel.swift
 //  UMC-iOS
 //
 //  Created by 이태현 on 1/10/24.
@@ -88,19 +88,27 @@ extension JoinViewModel {
     // API 연결
     
     // POST
+    // 인증 API - 회원가입 API
     @MainActor
     func fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember) async {
         do {
+            print("fetchSignUpMemberLog : \(signUpMemberInfo)")
             let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
+            print(signUpMemberInfo)
             let sendData = try encoder.encode(signUpMemberInfo)
-            try await signUpMember(sendData: sendData)
+            if let jsonString = String(data: sendData, encoding: .utf8) {
+                print("fetchSignUpMemberLog : \(jsonString)")
+            }
+            
+            let memberId = try await signUpMember(sendData: sendData)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    func signUpMember(sendData: Data) async throws {
+    // 인증 API - 회원가입 API
+    func signUpMember(sendData: Data) async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
         
@@ -111,24 +119,28 @@ extension JoinViewModel {
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = sendData
         
         let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
         
         if let response = response as? HTTPURLResponse,
            !(200..<300).contains(response.statusCode) {
             throw ExchangeRateError.badResponse
         }
-//        
-//        guard let jsonString = String(data: data, encoding: .utf8) else {
-//            print("Error: Failed to convert data to string")
-//            throw ExchangeRateError.decodeFailed
-//        }
-//        
-//        do {
-//            let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.SignUpMember>.self, from: data)
-//        } catch {
-//            print("Error decoding JSON: \(error)")
-//        }
+        
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<MemberResponse.MemberId>.self, from: data)
+        
+        var memberId: MemberResponse.MemberId
+        memberId = jsonDictionary.result
+        print(memberId)
+        
+        return memberId
     }
 }

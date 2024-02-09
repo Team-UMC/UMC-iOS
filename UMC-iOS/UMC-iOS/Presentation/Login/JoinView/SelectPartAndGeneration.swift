@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SelectPartAndGeneration:View {
     @StateObject private var viewModel = JoinViewModel()
+    @State private var isClicked = false
+    @Binding var userData: UserData
     let generations = ["1기", "2기", "3기", "4기", "5기", "6기"]
     let parts = ["PM", "Design", "Spring", "Node", "Web", "iOS", "Android"]
     
@@ -56,9 +58,24 @@ struct SelectPartAndGeneration:View {
                 Spacer()
                 
                 if viewModel.isAtLeastOneSelected {
-                    JoinNavigationButton(destination: JoinAgreement())
+                    HStack {
+                        Spacer()
+                        Button {
+                            userData.partSemesters = viewModel.selections
+                            print(userData)
+                            isClicked.toggle()
+                        } label: {
+                            Image(systemName: "arrow.right.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(.white)
+                        }
+                        .navigationDestination(isPresented: $isClicked) {
+                            JoinAgreement(userData: $userData)
+                        }
+                        Spacer().frame(width: 10)
+                    }
                 }
-                
                 Spacer().frame(height: 137)
             }
         }

@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct AppleLoginButton: View {
-    @EnvironmentObject var loginViewModel: SocialLoginViewModel
-    @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @Binding var isLoggedIn: Bool
     @Binding var alreadyMember: Bool
     
     var body: some View {
-        loginViewModel.appleLoginButton() {
-            if loginViewModel.isLoggedIn {
-                userViewModel.joinMember(socialToken: loginViewModel.socialToken) {
-                    alreadyMember = userViewModel.user.is_service_member!
+        socialLoginViewModel.appleLoginButton() {
+            if socialLoginViewModel.isLoggedIn {
+                loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken) {
                     isLoggedIn = true
                 }
             } else {

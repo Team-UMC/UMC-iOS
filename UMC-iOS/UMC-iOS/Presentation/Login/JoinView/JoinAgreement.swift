@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct JoinAgreement:View {
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @ObservedObject private var viewModel = JoinViewModel()
+    @State private var isClicked = false
+    @Binding var userData: UserData
     
     var body: some View {
         ZStack{
@@ -87,9 +90,29 @@ struct JoinAgreement:View {
                 
                 Spacer().frame(height: 273)
                 
-                if (viewModel.isAllAgreed){
-//                    JoinNavigationButton(destination: ContentView())
+                if (viewModel.isAllAgreed) {
+                    HStack {
+                        Spacer()
+                        Button {
+                            print(userData)
+                            Task {
+                                // 수정 필요
+                                await viewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: userData.name!, nickname: userData.nickname!, semesterParts: [MemberRequest.SemesterPart(part: "SPRING", semester: "FIFTH")], universityName: userData.university!, campusPositions: [], centerPositions: []))
+                            }
+                            isClicked.toggle()
+                        } label: {
+                            Image(systemName: "arrow.right.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(.white)
+                        }
+                        .navigationDestination(isPresented: $isClicked) {
+                            HomeView()
+                                .navigationBarBackButtonHidden()
+                        }
+                        Spacer().frame(width: 10)
                     }
+                }
                 
                 Spacer()
             }

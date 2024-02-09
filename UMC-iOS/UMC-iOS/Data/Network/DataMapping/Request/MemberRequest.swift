@@ -9,11 +9,11 @@ import Foundation
 
 class MemberRequest {
     struct SignUpMember: Codable {
-        let id: Int
         let name: String
-        let semesterParts: [SemesterParts]
+        let nickname: String
+        let semesterParts: [SemesterPart]
         let universityName: String
-        let campusPostions: [String]
+        let campusPositions: [String]
         let centerPositions: [String]
     }
     
@@ -25,7 +25,7 @@ class MemberRequest {
 }
 
 extension MemberRequest {
-    struct SemesterParts: Codable {
+    struct SemesterPart: Codable {
         let part: String
         let semester: String
     }

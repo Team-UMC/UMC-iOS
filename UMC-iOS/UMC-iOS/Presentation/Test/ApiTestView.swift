@@ -9,22 +9,22 @@ import SwiftUI
 
 struct ApiTestView: View {
     @ObservedObject var userProfileViewModel = UserProfileViewModel()
-    @EnvironmentObject var loginViewModel: SocialLoginViewModel
-    @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
+    @EnvironmentObject var loginViewModel: LoginViewModel
     
     var body: some View {
         VStack {
             
             //apple login button
-            loginViewModel.appleLoginButton() {
-                userViewModel.joinMember(socialToken: loginViewModel.socialToken) {
+            socialLoginViewModel.appleLoginButton() {
+                loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken) {
                 }
             }
             
             //kakao login button
             Button {
                 
-                loginViewModel.kakaoLogin(UMCUser: userViewModel.user) {}
+//                socialLoginViewModel.kakaoLogin(UMCUser: loginViewModel.member) {}
             } label: {
                 Text("kakaoLogin")
             }

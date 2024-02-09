@@ -1,5 +1,5 @@
 //
-//  UserViewModel.swift
+//  LoginViewModel.swift
 //  UMC-iOS
 //
 //  Created by 이태현 on 2/5/24.
@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-class UserViewModel: ObservableObject {
-    @Published var user: User = User()
+class LoginViewModel: ObservableObject {
+    @Published var member: Member = Member()
+    @Published var serviceMember = false
     @Published var isLogined = false
     
     func userLogout() {
-        self.user = User()
+        self.member = Member()
         isLogined = false
-        print(user)
+        print(member)
         print("로그아웃 성공(유저 초기화)")
     }
     
@@ -27,7 +28,7 @@ class UserViewModel: ObservableObject {
         UserDefaults.standard.set(socialToken.authorizationCode, forKey: "authorizationCode")
         
         Task {
-            await fetchSignUpWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin(accessToken: socialToken.accessToken!, socialType: socialToken.authProvider!))
+            await fetchGetAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin(accessToken: socialToken.accessToken!, socialType: socialToken.authProvider!))
         }
         
         // UserDefaults에 저장된 데이터 확인
@@ -35,27 +36,29 @@ class UserViewModel: ObservableObject {
         print("Saved Auth Provider: \(UserDefaults.standard.string(forKey: "authProvider") ?? "")")
         print("Saved Authorization Code: \(UserDefaults.standard.string(forKey: "authorizationCode") ?? "")")
         
-        // 로그인 상태 업데이트
-        self.isLogined = true
-        // 필요한 경우 추가적인 로직 수행
+
     }
 }
 
-extension UserViewModel {
+extension LoginViewModel {
     
     // POST
+    
+    // 인증 API - 소셜 로그인 API
     @MainActor
-    func fetchSignUpWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async {
+    func fetchGetAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async {
         do {
-            try await signUpWithSocialLogin(socialLoginInfo: socialLoginInfo)
+            try await getAccessTokenWithSocialLogin(socialLoginInfo: socialLoginInfo)
+            // 로그인 상태 업데이트
+            self.isLogined = true
+            // 필요한 경우 추가적인 로직 수행
         } catch {
             print("Error: \(error)")
         }
     }
     
-    func signUpWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async throws {
-        
-        
+    // 인증 API - 소셜 로그인 API
+    func getAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async throws {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members_login.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "accessToken", value: socialLoginInfo.accessToken), URLQueryItem(name: "socialType", value: socialLoginInfo.socialType)]
@@ -81,13 +84,22 @@ extension UserViewModel {
 //            print("Error: Failed to convert data to string")
 //            throw ExchangeRateError.decodeFailed
 //        }
-
-        do {
-            let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.SignUpMember>.self, from: data)
-            print(jsonDictionary.result)
-        } catch {
-            print("Error decoding JSON: \(error)")
-        }
         
+        DispatchQueue.main.async { [weak self] in
+            do {
+                let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.GetAccessTokenWithSocialLogin>.self, from: data)
+                UserDefaults.standard.set(jsonDictionary.result.memberId, forKey: "memberId")
+                UserDefaults.standard.set(jsonDictionary.result.accessToken, forKey: "Authorization")
+                UserDefaults.standard.set(jsonDictionary.result.refreshToken, forKey: "refreshToken")
+                self?.serviceMember = jsonDictionary.result.serviceMember
+                
+                print(jsonDictionary.result)
+                print(response)
+            } catch {
+                print("Error decoding JSON: \(error)")
+            }
+        }
     }
 }
+
+

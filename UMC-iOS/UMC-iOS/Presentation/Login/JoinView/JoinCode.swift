@@ -9,6 +9,8 @@ import SwiftUI
 
 struct JoinCode: View {
     @StateObject private var viewModel = JoinViewModel()
+    @State private var userData = UserData()
+    @State private var isClicked = false
     
     var body: some View {
         ZStack {
@@ -29,9 +31,7 @@ struct JoinCode: View {
                     TextField("", text: $viewModel.inviteCode,
                               prompt: Text("초대코드를 입력해주세요!")
                         .font(.system(size:18))
-                        .foregroundColor(.black.opacity(0.5)
-                                        )
-                              
+                        .foregroundColor(.black.opacity(0.5))
                     )
                     .padding(10)
                     .modifier(JoinTextFieldStyle())
@@ -64,8 +64,24 @@ struct JoinCode: View {
                 Spacer().frame(height:150)
                 
                 // 초대코드 또는 QR 인증이 완료되면 보이는 버튼
-                if viewModel.isInviteCodeValid || viewModel.isQRAuthenticated {
-                    JoinNavigationButton(destination: SelectUniv())
+                if viewModel.isInviteCodeValid /*|| viewModel.isQRAuthenticated*/ {
+                    
+                    HStack {
+                        Spacer()
+                        Button {
+                            print(userData)
+                            isClicked.toggle()
+                        } label: {
+                            Image(systemName: "arrow.right.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(.white)
+                        }
+                        .navigationDestination(isPresented: $isClicked) {
+                            SelectUniv(userData: $userData)
+                        }
+                        Spacer().frame(width: 10)
+                    }
                 }
                 Spacer()
             }
@@ -73,4 +89,8 @@ struct JoinCode: View {
         .ignoresSafeArea()
         
     }
+}
+
+#Preview {
+    JoinCode()
 }

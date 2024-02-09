@@ -9,6 +9,8 @@ import SwiftUI
 
 struct  JoinNickname:View {
     @State var nickname:String = ""
+    @State private var isClicked = false
+    @Binding var userData: UserData
     
     var body: some View {
         ZStack{
@@ -38,7 +40,23 @@ struct  JoinNickname:View {
                 Spacer().frame(height: 373)
                 
                 if (!nickname.isEmpty){
-                    JoinNavigationButton(destination: SelectPartAndGeneration())
+                    HStack {
+                        Spacer()
+                        Button {
+                            userData.nickname = nickname
+                            print(userData)
+                            isClicked.toggle()
+                        } label: {
+                            Image(systemName: "arrow.right.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(.white)
+                        }
+                        .navigationDestination(isPresented: $isClicked) {
+                            SelectPartAndGeneration(userData: $userData)
+                        }
+                        Spacer().frame(width: 10)
+                    }
                 }
                 Spacer()
             }
