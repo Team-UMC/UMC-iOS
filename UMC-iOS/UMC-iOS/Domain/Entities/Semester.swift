@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum Semester: Codable {
-    case FIRST
-    case SECOND
-    case THIRD
-    case FOURTH
-    case FIFTH
+enum Semester: String, Codable {
+    case FIRST = "FIRST"
+    case SECOND = "SECOND"
+    case THIRD = "THIRD"
+    case FOURTH = "FOURTH"
+    case FIFTH = "FIFTH"
     
-    var name: String {
+    var toKorean: String {
         switch self {
         case .FIRST:
             return "1기"

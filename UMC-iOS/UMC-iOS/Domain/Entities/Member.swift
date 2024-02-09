@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Member {    
+struct Member {
     typealias Identifier = String
     var id: Identifier = ""
     var clientId: String = ""
@@ -39,24 +39,24 @@ struct Member {
         self.role = role
     }
     
-    
-    
-    
 }
 
 extension Member {
     struct SemesterParts {
-        var id: String = ""
-        var member: Member
         var semester: Semester
         var part: Part
         
-        init(member: Member, semester: Semester, part: Part) {
-            self.member = member
+        init(semester: Semester, part: Part) {
             self.semester = semester
             self.part = part
         }
+        
+        init(semesterPart: MemberResponse.SemesterParts) {
+            self.semester = Semester(rawValue: semesterPart.semester)!
+            self.part = Part(rawValue: semesterPart.part)!
+        }
     }
+    
     
     struct MemberPosition {
         var id: String = ""
@@ -66,8 +66,16 @@ extension Member {
         init(positionType: PositionType) {
             self.positionType = positionType
         }
-        
     }
-    
+}
 
+
+extension Member {
+    init(memberProfile: MemberResponse.GetMemberProfile) {
+        self.clientId = memberProfile.memberId
+        self.university = memberProfile.universityName
+        self.nickname = memberProfile.nickname
+        self.name = memberProfile.name
+        self.semesterParts = memberProfile.semesterParts.map { SemesterParts(semesterPart: $0) }
+    }
 }

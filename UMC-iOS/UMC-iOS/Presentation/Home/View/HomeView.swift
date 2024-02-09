@@ -28,7 +28,7 @@ struct HomeView: View {
                         Spacer().frame(height: 50)
                         HomeNavigationBarView(presentSideMenu: $presentSideMenu).padding(.top, 7)
                         
-                        UserInformationView().padding(.top, 20)
+                        UserInformationView(memberInfo: viewModel.member).padding(.top, 20)
                         
                         AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup).padding(.top, 8)
                         
@@ -62,6 +62,11 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
         } // ZStack (최 상단에 팝업 뷰 배치)
+        .onAppear {
+            Task {
+                await viewModel.fetchGetMemberProfile()
+            }
+        }
         .ignoresSafeArea()
         // 공지사항 팝업
         .popup(isPresented: $viewModel.shouldShowAnnouncementPopup, view: {self.viewModel.createAnnouncementPopup()},

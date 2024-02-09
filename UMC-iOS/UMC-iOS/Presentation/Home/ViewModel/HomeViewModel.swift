@@ -12,6 +12,7 @@ class HomeViewModel:ObservableObject {
     @Published var currentDate: Date = Date() // 캘린더 날짜 변수
     @Published var shouldShowCalendarPopup: Bool = false // 캘린더 팝업 뷰 State변수
     @Published var shouldShowAnnouncementPopup: Bool = false // 공지사항 팝업 뷰 State변수
+    @Published var member = Member()
     
     func createAnnouncementPopup() -> some View { // 공지사항 팝업 뷰 만드는 함수
         let popupTitle: String = "[교내]12월 26일 회식 개최!"
@@ -162,27 +163,20 @@ extension HomeViewModel {
     // API
     
     // GET
-    // 인증 API - 회원가입 API
+    // 멤버 API - 유저 프로필 조회 API(fetch)
     @MainActor
-    func fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember) async {
+    func fetchGetMemberProfile() async {
         do {
-            print("fetchSignUpMemberLog : \(signUpMemberInfo)")
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = .prettyPrinted
-            print(signUpMemberInfo)
-            let sendData = try encoder.encode(signUpMemberInfo)
-            if let jsonString = String(data: sendData, encoding: .utf8) {
-                print("fetchSignUpMemberLog : \(jsonString)")
-            }
-            
-            let memberId = try await signUpMember(sendData: sendData)
+            let memberProfile = try await getMemberProfile()
+            print(memberProfile)
+            member = Member(memberProfile: memberProfile)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    // 인증 API - 회원가입 API
-    func signUpMember(sendData: Data) async throws -> MemberResponse.MemberId {
+    // 멤버 API - 유저 프로필 조회 API
+    func getMemberProfile() async throws -> MemberResponse.GetMemberProfile {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
         
@@ -192,10 +186,8 @@ extension HomeViewModel {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = "GET"
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = sendData
         
         let (data, response) = try await URLSession.shared.data(for: request)
         print(data)
@@ -207,9 +199,12 @@ extension HomeViewModel {
         }
         
         let decoder = JSONDecoder()
-        var memberId: MemberResponse.MemberId
-        memberId = try decoder.decode(MemberResponse.MemberId.self, from: data)
         
-        return memberId
+        let jsonDictionary = try decoder.decode(BaseResponse<MemberResponse.GetMemberProfile>.self, from: data)
+        
+        var memberProfile: MemberResponse.GetMemberProfile
+        memberProfile = jsonDictionary.result
+        
+        return memberProfile
     }
 }

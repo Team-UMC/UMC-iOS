@@ -9,14 +9,14 @@ import Foundation
 
 struct MemberResponse: Codable {
     struct GetMemberProfile: Codable {
-        let id: Int
+        let id: Int?
         let memberId: String
-        let profileImage: String
+        let profileImage: String?
         let universityName: String
         let name: String
         let nickname: String
-        let semesterParts: [String]
-        let statusMessage: String
+        let semesterParts: [MemberResponse.SemesterParts]
+        let statusMessage: String?
         let owner: String
     }
     
@@ -30,6 +30,7 @@ struct MemberResponse: Codable {
     struct MemberId: Codable {
         let memberId: String
     }
+    
 }
 
 extension MemberResponse {
