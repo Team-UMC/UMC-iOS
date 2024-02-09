@@ -62,6 +62,11 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
         } // ZStack (최 상단에 팝업 뷰 배치)
+        .onAppear {
+            Task {
+                await viewModel.fetchGetMemberProfile()
+            }
+        }
         .ignoresSafeArea()
         // 공지사항 팝업
         .popup(isPresented: $viewModel.shouldShowAnnouncementPopup, view: {self.viewModel.createAnnouncementPopup()},
