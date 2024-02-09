@@ -71,7 +71,7 @@ struct HashTagTextField: View {
         .foregroundColor(Color.disabledGray)
         .padding(.horizontal, 16)
         .padding(.vertical, 6)
-        .background(text.isEmpty ?  Color.hashtagDisabledBackground : Color.hashtagAbledBackground)
+        .background(text.isEmpty ?  Color.hashtagBackground : Color.hashtagAbledBackground)
         .cornerRadius(12)
         
         
