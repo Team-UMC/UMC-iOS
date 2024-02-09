@@ -17,6 +17,7 @@
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
 		44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */; };
 		44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */; };
+		44B0C7A22B765275000AF621 /* PreViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7A12B765275000AF621 /* PreViewContent.swift */; };
 		46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -216,6 +217,7 @@
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
 		44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardButton.swift; sourceTree = "<group>"; };
+		44B0C7A12B765275000AF621 /* PreViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewContent.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -486,6 +488,14 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		44B0C7A02B765238000AF621 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44B0C7A12B765275000AF621 /* PreViewContent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		46C37FBE2B74CE540084CA4D /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				F34D2C092B73675300491EBE /* ViewModel */,
+				44B0C7A02B765238000AF621 /* Model */,
 				F34D2C0B2B73675300491EBE /* View */,
 			);
 			path = BulletinBoard;
@@ -1530,6 +1541,7 @@
 				F34D2CE12B73675300491EBE /* Comment.swift in Sources */,
 				F34D2D262B73675300491EBE /* UserProfileEditViewModel.swift in Sources */,
 				F34D2D2A2B73675300491EBE /* SocialButtonSet.swift in Sources */,
+				44B0C7A22B765275000AF621 /* PreViewContent.swift in Sources */,
 				F34D2CDD2B73675300491EBE /* ManagerInfo.swift in Sources */,
 				F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */,
 				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,

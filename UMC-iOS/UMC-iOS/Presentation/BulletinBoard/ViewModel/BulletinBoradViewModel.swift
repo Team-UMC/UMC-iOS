@@ -1,85 +1,57 @@
 //
 //  BulletinBoradViewModel.swift
 //  UMC-iOS
-//
+//BulletinBoradPreview
 //  Created by 나예은 on 2024/02/06.
 //
 
+import SwiftUI
 import Foundation
-import Combine
 
-class UserContentPreListViewModel: ObservableObject {
-    @Published var profileImage: String = ""
-    @Published var userName: String = ""
-    @Published var userNickname: String = ""
-    @Published var contentTitle: String = ""
-    @Published var contentPreview: String = ""
-    @Published var likeCount: Int = 0
-    @Published var commentCount: Int = 0
-    @Published var viewingCount: Int = 0
-    @Published var timeline: Int = 0
-    @Published var contentImage: String = ""
-
-    private var cancellables: Set<AnyCancellable> = []
-
-    init() {
-        fetchDataFromServer()
+class BulletinBoardViewModel: ObservableObject {
+    @Published var boardPosts: [BoardPageResponse] = []
+    
+    // 게시판 목록 조회 메서드
+    func fetchBoardPosts(completion: @escaping () -> Void) {
+        Task {
+            do {
+                let posts = try await getBoardPosts()
+                boardPosts = posts
+                completion()
+            } catch {
+                print("게시판 포스트 가져오기 오류: \(error)")
+            }
+        }
     }
 
-    func fetchDataFromServer() {
-        fetchDataPublisher()
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: { [weak self] data in
-                      self?.updateUI(with: data)
-                  })
-            .store(in: &cancellables)
-    }
+    // 게시판 목록 조회 비동기 메서드
+    func getBoardPosts() async throws -> [BoardPageResponse] {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards.rawValue
 
-    func fetchDataPublisher() -> AnyPublisher<YourDataType, Error> {
-        return Just(DummyData.sampleData)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
+        guard let url = urlComponents.url else {
+            print("오류: URL을 생성할 수 없습니다.")
+            throw ExchangeRateError.cannotCreateURL
+        }
 
-    func updateUI(with data: YourDataType) {
-        profileImage = data.profileImage
-        userName = data.userName
-        userNickname = data.userNickname
-        contentTitle = data.contentTitle
-        contentPreview = data.contentPreview
-        likeCount = data.likeCount
-        commentCount = data.commentCount
-        viewingCount = data.viewingCount
-        timeline = data.timeline
-        contentImage = data.contentImage
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        if let response = response as? HTTPURLResponse, !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badResponse
+        }
+
+        do {
+            let posts = try JSONDecoder().decode([BoardPageResponse].self, from: data)
+            return posts
+        } catch {
+            print("JSON 디코딩 오류: \(error)")
+            throw ExchangeRateError.decodeFailed
+        }
     }
 }
-
-
-struct YourDataType {
-    var profileImage: String
-    var userName: String
-    var userNickname: String
-    var contentTitle: String
-    var contentPreview: String
-    var likeCount: Int
-    var commentCount: Int
-    var viewingCount: Int
-    var timeline: Int
-    var contentImage: String
-}
-
-struct DummyData {
-    static let sampleData = YourDataType(
-        profileImage: "profileImage",
-        userName: "양유진",
-        userNickname: "더기",
-        contentTitle: "규칙적인 생활 그거 어떻게 하냐고..",
-        contentPreview: "대체 게시판은 언제 맘에 들까.. 음음음 그러게 정말 언제 마음에 들까까... 알다가도 모르겠다.... 흑흑...",
-        likeCount: 123,
-        commentCount: 4,
-        viewingCount: 4,
-        timeline: 1,
-        contentImage: "ContentImage"
-    )
-}
+        
+        
+      
