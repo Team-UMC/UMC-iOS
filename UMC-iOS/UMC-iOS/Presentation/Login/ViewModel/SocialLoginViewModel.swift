@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  SocialLoginViewModel.swift
 //  UMC-iOS
 //
 //  Created by 이태현 on 2/5/24.
@@ -29,7 +29,7 @@ class SocialLoginViewModel:ObservableObject {
     }
     
     // MARK: 카카오 로그인 관련 FUNCTIONS
-    func kakaoLogin(UMCUser: User, completion: @escaping () -> Void) {
+    func kakaoLogin(UMCUser: Member, completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
         if UserApi.isKakaoTalkLoginAvailable() {
             dispatchGroup.enter()
@@ -96,7 +96,7 @@ class SocialLoginViewModel:ObservableObject {
             }
         }
     }
-    func setUserInfo(UMCUser: User, completion: @escaping () -> Void) {
+    func setUserInfo(UMCUser: Member, completion: @escaping () -> Void) {
         UserApi.shared.me() { (user, error) in
             if let error = error {
                 print(error)

@@ -20,11 +20,15 @@ struct MemberResponse: Codable {
         let owner: String
     }
     
-    struct SignUpMember: Codable {
+    struct GetAccessTokenWithSocialLogin: Codable {
         let memberId: String
         let accessToken: String
         let refreshToken: String
         let serviceMember: Bool
+    }
+    
+    struct MemberId: Codable {
+        let memberId: String
     }
 }
 

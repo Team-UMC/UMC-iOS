@@ -11,8 +11,8 @@ import KakaoSDKAuth
 
 @main
 struct UMC_iOSApp: App {
-    @StateObject var loginViewModel = SocialLoginViewModel()
-    @StateObject var userViewModel = UserViewModel()
+    @StateObject var socialLoginViewModel = SocialLoginViewModel()
+    @StateObject var loginViewModel = LoginViewModel()
     
     init(){
         // 메인번들에 있는 카카오 앱키 불러오기
@@ -32,10 +32,10 @@ struct UMC_iOSApp: App {
                         _ = AuthController.handleOpenUrl(url: url)
                     }
                 })
+                .environmentObject(socialLoginViewModel)
                 .environmentObject(loginViewModel)
-                .environmentObject(userViewModel)
         }
+        .environmentObject(socialLoginViewModel)
         .environmentObject(loginViewModel)
-        .environmentObject(userViewModel)
     }
 }

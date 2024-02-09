@@ -136,7 +136,7 @@
 		F34D2D2A2B73675300491EBE /* SocialButtonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C982B73675300491EBE /* SocialButtonSet.swift */; };
 		F34D2D2B2B73675300491EBE /* UserProfileSocialAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C992B73675300491EBE /* UserProfileSocialAdd.swift */; };
 		F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C9A2B73675300491EBE /* UserProfileEditList.swift */; };
-		F34D2D2E2B73675300491EBE /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA12B73675300491EBE /* UserViewModel.swift */; };
+		F34D2D2E2B73675300491EBE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA12B73675300491EBE /* LoginViewModel.swift */; };
 		F34D2D2F2B73675300491EBE /* SocialLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA22B73675300491EBE /* SocialLoginViewModel.swift */; };
 		F34D2D302B73675300491EBE /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA32B73675300491EBE /* JoinViewModel.swift */; };
 		F34D2D312B73675300491EBE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CA42B73675300491EBE /* LoginView.swift */; };
@@ -340,7 +340,7 @@
 		F34D2C982B73675300491EBE /* SocialButtonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialButtonSet.swift; sourceTree = "<group>"; };
 		F34D2C992B73675300491EBE /* UserProfileSocialAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileSocialAdd.swift; sourceTree = "<group>"; };
 		F34D2C9A2B73675300491EBE /* UserProfileEditList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditList.swift; sourceTree = "<group>"; };
-		F34D2CA12B73675300491EBE /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F34D2CA12B73675300491EBE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F34D2CA22B73675300491EBE /* SocialLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLoginViewModel.swift; sourceTree = "<group>"; };
 		F34D2CA32B73675300491EBE /* JoinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
 		F34D2CA42B73675300491EBE /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -1094,7 +1094,7 @@
 		F34D2CA02B73675300491EBE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2CA12B73675300491EBE /* UserViewModel.swift */,
+				F34D2CA12B73675300491EBE /* LoginViewModel.swift */,
 				F34D2CA22B73675300491EBE /* SocialLoginViewModel.swift */,
 				F34D2CA32B73675300491EBE /* JoinViewModel.swift */,
 			);
@@ -1104,10 +1104,6 @@
 		F34D2CA52B73675300491EBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2CA62B73675300491EBE /* JoinModel.swift */,
-				F34D2CA72B73675300491EBE /* User.swift */,
-				F34D2CA82B73675300491EBE /* Token.swift */,
-				F3DABB502B755BE200BBF00B /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1212,6 +1208,10 @@
 		F34D2D562B7367DC00491EBE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				F34D2CA62B73675300491EBE /* JoinModel.swift */,
+				F34D2CA72B73675300491EBE /* User.swift */,
+				F34D2CA82B73675300491EBE /* Token.swift */,
+				F3DABB502B755BE200BBF00B /* UserData.swift */,
 				F34D2D572B7367DC00491EBE /* ManagerModel.swift */,
 				F34D2D582B7367DC00491EBE /* CalendarTask.swift */,
 				F34D2D592B7367DC00491EBE /* DateValue.swift */,
@@ -1520,7 +1520,7 @@
 				F34D2D912B74FC5100491EBE /* Role.swift in Sources */,
 				F34D2D8B2B74F61900491EBE /* Branch.swift in Sources */,
 				F34D2D0F2B73675300491EBE /* HistorySearchBarView.swift in Sources */,
-				F34D2D2E2B73675300491EBE /* UserViewModel.swift in Sources */,
+				F34D2D2E2B73675300491EBE /* LoginViewModel.swift in Sources */,
 				F34D2CE52B73675300491EBE /* SettingBackButton.swift in Sources */,
 				F34D2D8F2B74FAE100491EBE /* PositionType.swift in Sources */,
 				F34D2CE72B73675300491EBE /* Extension+View.swift in Sources */,

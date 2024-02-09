@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct JoinAgreement:View {
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @ObservedObject private var viewModel = JoinViewModel()
     @State private var isClicked = false
     @Binding var userData: UserData

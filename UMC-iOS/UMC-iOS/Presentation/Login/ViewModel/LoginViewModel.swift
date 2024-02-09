@@ -1,5 +1,5 @@
 //
-//  UserViewModel.swift
+//  LoginViewModel.swift
 //  UMC-iOS
 //
 //  Created by 이태현 on 2/5/24.
@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-class UserViewModel: ObservableObject {
-    @Published var user: User = User()
+class LoginViewModel: ObservableObject {
+    @Published var member: Member = Member()
+    @Published var serviceMember = false
     @Published var isLogined = false
     
     func userLogout() {
-        self.user = User()
+        self.member = Member()
         isLogined = false
-        print(user)
+        print(member)
         print("로그아웃 성공(유저 초기화)")
     }
     
@@ -27,7 +28,7 @@ class UserViewModel: ObservableObject {
         UserDefaults.standard.set(socialToken.authorizationCode, forKey: "authorizationCode")
         
         Task {
-            await fetchSignUpWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin(accessToken: socialToken.accessToken!, socialType: socialToken.authProvider!))
+            await fetchGetAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin(accessToken: socialToken.accessToken!, socialType: socialToken.authProvider!))
         }
         
         // UserDefaults에 저장된 데이터 확인
@@ -41,19 +42,19 @@ class UserViewModel: ObservableObject {
     }
 }
 
-extension UserViewModel {
+extension LoginViewModel {
     
     // POST
     @MainActor
-    func fetchSignUpWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async {
+    func fetchGetAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async {
         do {
-            try await signUpWithSocialLogin(socialLoginInfo: socialLoginInfo)
+            try await getAccessTokenWithSocialLogin(socialLoginInfo: socialLoginInfo)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    func signUpWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async throws {
+    func getAccessTokenWithSocialLogin(socialLoginInfo: MemberRequest.SocialLogin) async throws {
         
         
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
@@ -81,17 +82,21 @@ extension UserViewModel {
 //            print("Error: Failed to convert data to string")
 //            throw ExchangeRateError.decodeFailed
 //        }
-
-        do {
-            let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.SignUpMember>.self, from: data)
-            UserDefaults.standard.set(jsonDictionary.result.memberId, forKey: "memberId")
-            UserDefaults.standard.set(jsonDictionary.result.accessToken, forKey: "Authorization")
-            UserDefaults.standard.set(jsonDictionary.result.refreshToken, forKey: "refreshToken")
-            
-            print(jsonDictionary.result)
-        } catch {
-            print("Error decoding JSON: \(error)")
+        
+        DispatchQueue.main.async { [weak self] in
+            do {
+                let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.GetAccessTokenWithSocialLogin>.self, from: data)
+                UserDefaults.standard.set(jsonDictionary.result.memberId, forKey: "memberId")
+                UserDefaults.standard.set(jsonDictionary.result.accessToken, forKey: "Authorization")
+                UserDefaults.standard.set(jsonDictionary.result.refreshToken, forKey: "refreshToken")
+                self?.serviceMember = jsonDictionary.result.serviceMember
+                
+                print(jsonDictionary.result)
+            } catch {
+                print("Error decoding JSON: \(error)")
+            }
         }
+        
         
     }
 }

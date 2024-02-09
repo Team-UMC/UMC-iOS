@@ -1,5 +1,5 @@
 //
-//  JoinCodeViewModel.swift
+//  JoinViewModel.swift
 //  UMC-iOS
 //
 //  Created by 이태현 on 1/10/24.
@@ -99,13 +99,12 @@ extension JoinViewModel {
             if let jsonString = String(data: sendData, encoding: .utf8) {
                 print("fetchSignUpMemberLog : \(jsonString)")
             }
-            try await signUpMember(sendData: sendData)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    func signUpMember(sendData: Data) async throws {
+    func signUpMember(sendData: Data) async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
         
@@ -118,7 +117,6 @@ extension JoinViewModel {
         request.httpMethod = "POST"
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        print("TESTSET\(UserDefaults.standard.string(forKey: "Authorization"))")
         request.httpBody = sendData
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -129,14 +127,17 @@ extension JoinViewModel {
            !(200..<300).contains(response.statusCode) {
             throw ExchangeRateError.badResponse
         }
-//        
-//        guard let jsonString = String(data: data, encoding: .utf8) else {
-//            print("Error: Failed to convert data to string")
-//            throw ExchangeRateError.decodeFailed
-//        }
-//        
+        
+        let decoder = JSONDecoder()
+        var memberId: MemberResponse.MemberId
+        memberId = try decoder.decode(MemberResponse.MemberId.self, from: data)
+        
+        return memberId
+        
 //        do {
-//            let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.SignUpMember>.self, from: data)
+//            let jsonDictionary = try JSONDecoder().decode(BaseResponse<MemberResponse.MemberId>.self, from: data)
+//            print("signUpMember log : \(jsonDictionary.result.memberId)")
+//            
 //        } catch {
 //            print("Error decoding JSON: \(error)")
 //        }

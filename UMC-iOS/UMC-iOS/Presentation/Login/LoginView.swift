@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginView:View {
-    @EnvironmentObject var loginViewModel: SocialLoginViewModel
-    @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @State var isLoggedIn: Bool = false
     @State private var alreadyMember: Bool = false
     
@@ -38,10 +38,10 @@ struct LoginView:View {
                     }
                     
                     //apple login button
-                    AppleLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
+                    AppleLoginButton(isLoggedIn: $socialLoginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
                     
                     //kakao login button
-                    KakaoLoginButton(isLoggedIn: $loginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
+                    KakaoLoginButton(isLoggedIn: $socialLoginViewModel.isLoggedIn, alreadyMember: $alreadyMember)
                     
                     
                     
@@ -49,8 +49,8 @@ struct LoginView:View {
                 .padding(.bottom, 128)
             }
             .ignoresSafeArea()
-            .navigationDestination(isPresented: $loginViewModel.isLoggedIn) {
-                if alreadyMember {
+            .navigationDestination(isPresented: $socialLoginViewModel.isLoggedIn) {
+                if loginViewModel.isLogined {
                     HomeView()
                 } else {
                     JoinCode()
