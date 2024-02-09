@@ -12,6 +12,7 @@ class HomeViewModel:ObservableObject {
     @Published var currentDate: Date = Date() // 캘린더 날짜 변수
     @Published var shouldShowCalendarPopup: Bool = false // 캘린더 팝업 뷰 State변수
     @Published var shouldShowAnnouncementPopup: Bool = false // 공지사항 팝업 뷰 State변수
+    @Published var member = Member()
     
     func createAnnouncementPopup() -> some View { // 공지사항 팝업 뷰 만드는 함수
         let popupTitle: String = "[교내]12월 26일 회식 개최!"
@@ -168,6 +169,7 @@ extension HomeViewModel {
         do {
             let memberProfile = try await getMemberProfile()
             print(memberProfile)
+            member = Member(memberProfile: memberProfile)
         } catch {
             print("Error: \(error)")
         }

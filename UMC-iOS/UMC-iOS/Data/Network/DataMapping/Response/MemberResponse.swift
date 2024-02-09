@@ -15,7 +15,7 @@ struct MemberResponse: Codable {
         let universityName: String
         let name: String
         let nickname: String
-        let semesterParts: [SemesterParts]
+        let semesterParts: [MemberResponse.SemesterParts]
         let statusMessage: String?
         let owner: String
     }

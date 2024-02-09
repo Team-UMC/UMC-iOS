@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum Part: Codable {
-    case PM
-    case DESIGN
-    case SPRING
-    case NODE
-    case IOS
-    case ANDROID
-    case WEB
-    case ETC
+enum Part: String, Codable {
+    case PM = "PM"
+    case DESIGN = "DESIGN"
+    case SPRING = "SPRING"
+    case NODE = "NODE"
+    case IOS = "IOS"
+    case ANDROID = "ANDROID"
+    case WEB = "WEB"
+    case ETC = "ETC"
     
     var toKorean: String {
         switch self {

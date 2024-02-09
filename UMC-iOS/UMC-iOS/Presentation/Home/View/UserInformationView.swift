@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserInformationView: View {
+    var memberInfo: Member
     var body: some View {
         HStack {
             Image("univPictureEx") // 학교 사진
@@ -18,7 +19,7 @@ struct UserInformationView: View {
                 .background(Circle().foregroundColor(Color.white))
                 .padding(.leading, 16)
             
-            Text("가톨릭대학교") // 학교 이름
+            Text(memberInfo.university) // 학교 이름
                 .foregroundColor(.white)
                 .font(.system(size: 18, weight: .bold))
                 .kerning(-1.07)
@@ -26,7 +27,7 @@ struct UserInformationView: View {
             Spacer()
             
             HStack(spacing: 0) { // ( )님 반가워요!
-                Text("원")
+                Text(memberInfo.name)
                     .foregroundColor(.white)
                     .font(.system(size: 16, weight: .bold))
                     // .kerning(-1.032)
