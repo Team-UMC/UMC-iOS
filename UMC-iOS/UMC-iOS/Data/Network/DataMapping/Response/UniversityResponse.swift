@@ -26,4 +26,13 @@ struct UniversityResponse: Codable {
         let universityPoint: Int
         let universityRank: Int
     }
+    
+    struct GetMascotInfo: Codable {
+        let level: Int
+        let point: Int
+        let rank: Int
+        let mascotImage: String
+        let mascotDialog: String
+        let universityImage: String
+    }
 }
