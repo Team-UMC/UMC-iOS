@@ -128,7 +128,7 @@ struct TodoEmptyCell: View {
                         VStack { // ( )님의 투두를 기다리는 중이에요
                             HStack(spacing: 0) {
                                 Text(memberNickname)
-                                    .fontWeight(.semibold)
+                                    .fontWeight(.semibold) +
                                 Text("님의 투두를 기다리는 중이에요..😴")
                             }
                             .frame(width: 122)
