@@ -23,4 +23,9 @@ struct TodoListResponse: Codable {
     struct TodoListId: Codable {
         let todoListId: String
     }
+    
+    struct CompleteTodo: Codable {
+        let todoListId: String
+        let pointAcquired: Bool
+    }
 }

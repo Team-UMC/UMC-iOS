@@ -16,4 +16,8 @@ class TodoListRequest {
     struct DeleteTodo: Codable {
         let todoListId: String
     }
+    
+    struct CompleteTodo: Codable {
+        let todoListId: String
+    }
 }

@@ -12,7 +12,8 @@ struct TodoListAPITestView: View {
     @ObservedObject var todoListViewModel = TodoListViewModel()
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
-    @State private var todoListId: String = ""
+    @State private var deleteTodoListId: String = ""
+    @State private var completeTodoListId: String = ""
     
     var body: some View {
         VStack {
@@ -31,13 +32,22 @@ struct TodoListAPITestView: View {
                 Text("투두리스트 생성")
             }
             
-            TextField("삭제할 투두리스트 아이디를 입력하세요.", text: $todoListId)
+            TextField("삭제할 투두리스트 아이디를 입력하세요.", text: $deleteTodoListId)
             Button {
                 Task {
-                    await todoListViewModel.fetchDeleteTodoList(todoListId: TodoListRequest.DeleteTodo(todoListId: todoListId))
+                    await todoListViewModel.fetchDeleteTodoList(todoListId: TodoListRequest.DeleteTodo(todoListId: deleteTodoListId))
                 }
             } label: {
                 Text("투두리스트 삭제")
+            }
+            
+            TextField("완료할 투두리스트 아이디를 입력하세요.", text: $completeTodoListId)
+            Button {
+                Task {
+                    await todoListViewModel.fetchCompleteTodoList(todoListId: TodoListRequest.CompleteTodo(todoListId: completeTodoListId))
+                }
+            } label: {
+                Text("투두리스트 완료")
             }
         }
     }

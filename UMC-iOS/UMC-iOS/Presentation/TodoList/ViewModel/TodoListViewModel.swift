@@ -45,6 +45,7 @@ extension TodoListViewModel {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
+        print("UserDefaults : \(UserDefaults.standard.string(forKey: "Authorization"))")
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -123,6 +124,54 @@ extension TodoListViewModel {
         return todoListId
     }
     
+    // TodoList API - 투두리스트 완료 API(fetch)
+    @MainActor
+    func fetchCompleteTodoList(todoListId: TodoListRequest.CompleteTodo) async {
+        do {
+            print("fetchCompleteTodoList : \(todoListId)")
+            let completeTodoInfo = try await completeTodoList(todoListId: todoListId.todoListId)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // TodoList API - 투두리스트 완료 API
+    func completeTodoList(todoListId: String) async throws -> TodoListResponse.CompleteTodo {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue + "/\(todoListId)"
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.CompleteTodo>.self, from: data)
+        print(jsonDictionary)
+        
+        var todoListId: TodoListResponse.CompleteTodo
+        todoListId = jsonDictionary.result
+        print(todoListId)
+        
+        return todoListId
+    }
+    
     // DELETE
     
     // TodoList API - 투두리스트 삭제 API(fetch)
@@ -139,8 +188,7 @@ extension TodoListViewModel {
     // TodoList API - 투두리스트 삭제 API
     func deleteTodoList(todoListId: String) async throws -> TodoListResponse.TodoListId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue
-        urlComponents.queryItems = [URLQueryItem(name: "todoListId", value: todoListId)]
+        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue + "/\(todoListId)"
         
         guard let url = urlComponents.url else {
             print("Error: cannot create URL")
