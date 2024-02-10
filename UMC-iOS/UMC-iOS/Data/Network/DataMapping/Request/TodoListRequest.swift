@@ -17,6 +17,11 @@ class TodoListRequest {
         let todoListId: String
     }
     
+    struct UpdateTodo: Codable {
+        let title: String
+        let deadline: String
+    }
+    
     struct CompleteTodo: Codable {
         let todoListId: String
     }

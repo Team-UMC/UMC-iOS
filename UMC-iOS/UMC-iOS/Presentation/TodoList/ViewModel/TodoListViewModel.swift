@@ -124,6 +124,61 @@ extension TodoListViewModel {
         return todoListId
     }
     
+    // TodoList API - 투두리스트 수정 API(fetch)
+    @MainActor
+    func fetchUpdateTodoList(todoListId: String, todoInfo: TodoListRequest.UpdateTodo) async {
+        do {
+            print("fetchUpdateTodoList : \(todoInfo)")
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            print(todoInfo)
+            let sendData = try encoder.encode(todoInfo)
+            if let jsonString = String(data: sendData, encoding: .utf8) {
+                print("fetchUpdateTodoList : \(jsonString)")
+            }
+            
+            let todoListId = try await updateTodoList(todoListId: todoListId, sendData: sendData)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // TodoList API - 투두리스트 수정 API
+    func updateTodoList(todoListId: String, sendData: Data) async throws -> TodoListResponse.TodoListId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.todoLists_update.rawValue + "/\(todoListId)"
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        request.httpBody = sendData
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.TodoListId>.self, from: data)
+        
+        var todoListId: TodoListResponse.TodoListId
+        todoListId = jsonDictionary.result
+        print(todoListId)
+        
+        return todoListId
+    }
+    
     // TodoList API - 투두리스트 완료 API(fetch)
     @MainActor
     func fetchCompleteTodoList(todoListId: TodoListRequest.CompleteTodo) async {

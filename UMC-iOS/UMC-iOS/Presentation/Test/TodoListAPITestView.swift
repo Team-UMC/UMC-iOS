@@ -13,6 +13,7 @@ struct TodoListAPITestView: View {
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var deleteTodoListId: String = ""
+    @State private var updateTodoListId: String = ""
     @State private var completeTodoListId: String = ""
     
     var body: some View {
@@ -30,6 +31,14 @@ struct TodoListAPITestView: View {
                 }
             } label: {
                 Text("투두리스트 생성")
+            }
+            TextField("수정할 투두리스트 아이디를 입력하세요.", text: $updateTodoListId)
+            Button {
+                Task {
+                    await todoListViewModel.fetchUpdateTodoList(todoListId: updateTodoListId, todoInfo: TodoListRequest.UpdateTodo(title: "수정 테스트 투두리스트", deadline: String.currentLocalDateTimeWithLocaleAndTimeZoneToString()))
+                }
+            } label: {
+                Text("투두리스트 수정")
             }
             
             TextField("삭제할 투두리스트 아이디를 입력하세요.", text: $deleteTodoListId)
