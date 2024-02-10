@@ -71,6 +71,7 @@ extension Member {
 
 
 extension Member {
+    // Mapper
     init(memberProfile: MemberResponse.GetMemberProfile) {
         self.clientId = memberProfile.memberId
         self.university = memberProfile.universityName

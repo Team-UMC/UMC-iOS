@@ -33,7 +33,7 @@ struct HomeView: View {
                         AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup).padding(.top, 8)
                         
                         MainCalendarView(currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
-                        ToDoListView().padding(.top, 24)
+                        TodoSummaryListView(memberInfo: viewModel.member).padding(.top, 24)
                         
                         HStack(spacing: 18) {
                             TodayILearnedView()
@@ -65,6 +65,7 @@ struct HomeView: View {
         .onAppear {
             Task {
                 await viewModel.fetchGetMemberProfile()
+                await viewModel.fetchGetTodoList()
             }
         }
         .ignoresSafeArea()

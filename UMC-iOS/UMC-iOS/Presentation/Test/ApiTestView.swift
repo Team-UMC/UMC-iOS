@@ -14,6 +14,11 @@ struct ApiTestView: View {
     
     var body: some View {
         VStack {
+            Button {
+                print(String.currentLocalDateToString())
+            } label: {
+                Text(String.currentLocalDateToString())
+            }
             
             //apple login button
             socialLoginViewModel.appleLoginButton() {
@@ -43,4 +48,6 @@ struct ApiTestView: View {
 
 #Preview {
     ApiTestView()
+        .environmentObject(SocialLoginViewModel())
+        .environmentObject(LoginViewModel())
 }
