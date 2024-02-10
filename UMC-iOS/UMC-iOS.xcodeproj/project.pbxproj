@@ -12,6 +12,7 @@
 		4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204C2B7521620024476C /* ManagerPinRequest.swift */; };
 		4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */; };
 		427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427820502B75218F0024476C /* ManagerInfoResponce.swift */; };
+		449DB8612B77819D00415113 /* Boards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8602B77819D00415113 /* Boards.swift */; };
 		44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */; };
 		44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
@@ -217,6 +218,8 @@
 		4278204C2B7521620024476C /* ManagerPinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerPinRequest.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerPinRequest.swift"; sourceTree = SOURCE_ROOT; };
 		4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerCalenderResponse.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerCalenderResponse.swift"; sourceTree = SOURCE_ROOT; };
 		427820502B75218F0024476C /* ManagerInfoResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerInfoResponce.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerInfoResponce.swift"; sourceTree = SOURCE_ROOT; };
+		449DB85F2B77817D00415113 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/teamUMC 오후 7.01.03/UMC-iOS/UMC-iOS/Config.xcconfig"; sourceTree = "<group>"; };
+		449DB8602B77819D00415113 /* Boards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Boards.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/teamUMC 오후 6.55.33/UMC-iOS/UMC-iOS/UMC-iOS/Domain/Entities/Boards.swift"; sourceTree = "<group>"; };
 		44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " BoardSearchLikedResultRequest.swift"; sourceTree = "<group>"; };
 		44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
@@ -387,7 +390,6 @@
 		F34D2D8A2B74F61900491EBE /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		F34D2D8E2B74FAE100491EBE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
-		F39189362B76845200449509 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListResponse.swift; sourceTree = "<group>"; };
 		F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
@@ -527,7 +529,7 @@
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
-				F39189362B76845200449509 /* Config.xcconfig */,
+				449DB85F2B77817D00415113 /* Config.xcconfig */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
 				F34D2BE82B73671800491EBE /* UMC-iOSUITests */,
@@ -1230,6 +1232,7 @@
 				F34D2D902B74FC5100491EBE /* Role.swift */,
 				F3DABB522B756D2F00BBF00B /* SemesterPart.swift */,
 				F3B689342B7756FC00A4FBB5 /* TodoList.swift */,
+				449DB8602B77819D00415113 /* Boards.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1423,6 +1426,7 @@
 				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
 				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
+				449DB8612B77819D00415113 /* Boards.swift in Sources */,
 				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
 				F34D2D332B73675300491EBE /* User.swift in Sources */,
 				F34D2D3B2B73675300491EBE /* JoinTextFieldStyle.swift in Sources */,
@@ -1631,7 +1635,6 @@
 /* Begin XCBuildConfiguration section */
 		F34D2BED2B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F39189362B76845200449509 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1695,7 +1698,6 @@
 		};
 		F34D2BEE2B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F39189362B76845200449509 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1752,7 +1754,6 @@
 		};
 		F34D2BF02B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F39189362B76845200449509 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1784,7 +1785,6 @@
 		};
 		F34D2BF12B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F39189362B76845200449509 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
