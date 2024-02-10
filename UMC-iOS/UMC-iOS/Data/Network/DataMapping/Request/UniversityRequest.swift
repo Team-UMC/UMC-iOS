@@ -14,10 +14,10 @@ struct UniversityRequest {
 }
 
 extension UniversityRequest {
-    struct StaffCreateUniversity {
+    struct CreateUniversityForStaff: Codable {
         let universityName: String
         let universityLogo: String
         let semesterLogo: String
-        let semester: Semester
+        let semester: String
     }
 }
