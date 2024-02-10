@@ -14,7 +14,7 @@ struct University {
     var universityLogo: String = ""
     var semesterLogo: String = ""
     var name: String = ""
-    var totalPotin: Int = 0
+    var totalPoint: Int = 0
     var currentLevel: Int = 1
     
     

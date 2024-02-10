@@ -123,7 +123,7 @@ class UniversityNetwork: ObservableObject {
     }
     
     // University API - 우리 학교 마스코트 조회 API
-    func getMascotInfo() async throws -> UniversityResponse.GetMascotInfo {
+    func getMascotInfo() async throws -> UniversityResponse.GetUniversityMascotInfo {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities_mascot.rawValue
         
@@ -148,14 +148,64 @@ class UniversityNetwork: ObservableObject {
         
         let decoder = JSONDecoder()
         
-        let jsonDictionary = try decoder.decode(BaseResponse<UniversityResponse.GetMascotInfo>.self, from: data)
+        let jsonDictionary = try decoder.decode(BaseResponse<UniversityResponse.GetUniversityMascotInfo>.self, from: data)
         
         print(jsonDictionary)
         
-        var mascotInfo: UniversityResponse.GetMascotInfo
+        var mascotInfo: UniversityResponse.GetUniversityMascotInfo
         mascotInfo = jsonDictionary.result
         
         return mascotInfo
+    }
+    
+    // University API - 전체 학교 랭킹 조회 API(fetch)
+    @MainActor
+    func fetchGetUniversityRanks() async {
+        do {
+            let universityRanks = try await getUniversityRanks()
+            self.universities = universityRanks.joinUniversityRanks.mapToUniversityList()
+            
+            print(universityRanks)
+            print(self.universities)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // University API - 전체 학교 랭킹 조회 API
+    func getUniversityRanks() async throws -> UniversityResponse.GetUniversityRanks {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.universities_ranks.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        print("UserDefaults : \(UserDefaults.standard.string(forKey: "Authorization"))")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<UniversityResponse.GetUniversityRanks>.self, from: data)
+        
+        print(jsonDictionary)
+        
+        var universityRanks: UniversityResponse.GetUniversityRanks
+        universityRanks = jsonDictionary.result
+        
+        return universityRanks
     }
     
 }

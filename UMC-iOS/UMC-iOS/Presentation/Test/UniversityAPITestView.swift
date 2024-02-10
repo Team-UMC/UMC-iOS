@@ -38,6 +38,13 @@ struct UniversityAPITestView: View {
                 Text("우리 학교 마스코트 조회")
             }
             
+            Button {
+                Task {
+                    await universityNetwork.fetchGetUniversityRanks()
+                }
+            } label: {
+                Text("전체 학교 랭킹 조회")
+            }
             
 //            TextField("수정할 투두리스트 아이디를 입력하세요.", text: $updateTodoListId)
 //            Button {

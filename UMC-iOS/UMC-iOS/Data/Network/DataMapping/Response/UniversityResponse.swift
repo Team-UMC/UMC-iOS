@@ -27,12 +27,23 @@ struct UniversityResponse: Codable {
         let universityRank: Int
     }
     
-    struct GetMascotInfo: Codable {
+    struct GetUniversityMascotInfo: Codable {
         let level: Int
         let point: Int
         let rank: Int
         let mascotImage: String
         let mascotDialog: String
         let universityImage: String
+    }
+    
+    struct UniversityRank: Codable {
+        let universityName: String
+        let universityLogo: String
+        let universityPoint: Int
+        let universityRank: Int
+    }
+    
+    struct GetUniversityRanks: Codable {
+        let joinUniversityRanks: [UniversityRank]
     }
 }

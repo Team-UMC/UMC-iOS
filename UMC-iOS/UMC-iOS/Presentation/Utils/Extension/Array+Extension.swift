@@ -23,3 +23,11 @@ extension Array where Element == UniversityResponse.UniversityInfo {
         }
     }
 }
+
+extension Array where Element == UniversityResponse.UniversityRank {
+    func mapToUniversityList() -> [University] {
+        return self.map { universityRankInfo in
+            return University(universityLogo: universityRankInfo.universityLogo, name: universityRankInfo.universityName, totalPoint: universityRankInfo.universityPoint)
+        }
+    }
+}
