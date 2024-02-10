@@ -13,6 +13,7 @@ class HomeViewModel:ObservableObject {
     @Published var shouldShowCalendarPopup: Bool = false // 캘린더 팝업 뷰 State변수
     @Published var shouldShowAnnouncementPopup: Bool = false // 공지사항 팝업 뷰 State변수
     @Published var member = Member()
+//    @Published var todoList =
     
     func createAnnouncementPopup() -> some View { // 공지사항 팝업 뷰 만드는 함수
         let popupTitle: String = "[교내]12월 26일 회식 개최!"
@@ -207,4 +208,52 @@ extension HomeViewModel {
         
         return memberProfile
     }
+    
+    // TodoList API - 투두리스트 조회 API(fetch)
+    @MainActor
+    func fetchGetTodoList() async {
+        do {
+            let memberProfile = try await getMemberProfile()
+            print(memberProfile)
+            member = Member(memberProfile: memberProfile)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // TodoList API - 투두리스트 조회 API
+    func getTodoList() async throws -> TodoListResponse.GetTodoList {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.queryItems = [URLQueryItem(name: "date", value: Date.currentLocalDateToString())]
+        urlComponents.path = ApiEndpoints.Path.todoList.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badResponse
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.GetTodoList>.self, from: data)
+        
+        var memberProfile: TodoListResponse.GetTodoList
+        memberProfile = jsonDictionary.result
+        
+        return memberProfile
+    }
+    
+    
 }

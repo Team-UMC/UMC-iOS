@@ -1,5 +1,5 @@
 //
-//  ToDoList.swift
+//  ToDoListView.swift
 //  BulletinBoard
 //
 //  Created by 나예은 on 2024/01/31.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToDoList: View {
+struct ToDoListView: View {
     @State private var contentData: [Int] = Array(0..<5)
     var body: some View {
         List {
@@ -26,7 +26,7 @@ struct ToDoList: View {
 
 
 #Preview {
-    ToDoList()
+    ToDoListView()
 }
 
 

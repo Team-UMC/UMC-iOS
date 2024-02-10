@@ -1,5 +1,5 @@
 //
-//  ToDoListView.swift
+//  ToDoSummaryListView.swift
 //  UMC-iOS
 //
 //  Created by 김승원 on 2024/01/18.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToDoListView: View {
+struct ToDoSummaryListView: View {
     var TDLList : [String] = ["1", "2", "3"]
     var memberInfo: Member
     
@@ -161,5 +161,5 @@ struct TodoEmptyCell: View {
 }
 
 #Preview {
-    ToDoListView(TDLList: ["1", "2"], memberInfo: Member())
+    ToDoSummaryListView(TDLList: ["1", "2"], memberInfo: Member())
 }
