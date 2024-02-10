@@ -10,6 +10,58 @@ import Foundation
 class UniversityNetwork: ObservableObject {
     @Published var universities: [University] = []
     
+    
+    // POST
+    
+    // University API - 우리 학교 마스코트 먹이주기 API(fetch)
+    @MainActor
+    func fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot) async {
+        do {
+            print("fetchFeedUniversityMascot : \(request)")
+            print(request.pointType.rawValue)
+            
+            let response = try await createTodoList(pointType: request.pointType.rawValue)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // University API - 우리 학교 마스코트 먹이주기 API
+    func createTodoList(pointType: String) async throws -> UniversityResponse.FeedUniversityMascot {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.universities_mascot.rawValue
+        urlComponents.queryItems = [URLQueryItem(name: "pointType", value: pointType)]
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<UniversityResponse.FeedUniversityMascot>.self, from: data)
+        
+        var feedResponse: UniversityResponse.FeedUniversityMascot
+        feedResponse = jsonDictionary.result
+        print(feedResponse)
+        
+        return feedResponse
+    }
+    
     // GET
     
     // University API - 전체 학교 조회 API(fetch)

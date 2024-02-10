@@ -54,6 +54,22 @@ struct UniversityAPITestView: View {
                 Text("우리 학교 전체 기여도 랭킹 조회")
             }
             
+            Button {
+                Task {
+                    await universityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: PointType.PUDDING))
+                }
+            } label: {
+                Text("우리 학교 마스코트 먹이주기 - PUDDING")
+            }
+            
+            Button {
+                Task {
+                    await universityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: PointType.DOUGHNUT))
+                }
+            } label: {
+                Text("우리 학교 마스코트 먹이주기 - DOUGHNUT")
+            }
+            
 //            TextField("수정할 투두리스트 아이디를 입력하세요.", text: $updateTodoListId)
 //            Button {
 //                Task {

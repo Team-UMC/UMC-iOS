@@ -58,4 +58,10 @@ struct UniversityResponse: Codable {
     struct GetUniversityContributors: Codable {
         let joinContributionRanks: [UniversityContributorInfo]
     }
+    
+    struct FeedUniversityMascot: Codable {
+        let universityTotalpoint: Int
+        let memberRemainPoint: Int
+    }
+    
 }
