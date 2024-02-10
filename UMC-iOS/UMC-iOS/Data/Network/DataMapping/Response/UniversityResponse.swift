@@ -46,4 +46,16 @@ struct UniversityResponse: Codable {
     struct GetUniversityRanks: Codable {
         let joinUniversityRanks: [UniversityRank]
     }
+    
+    struct UniversityContributorInfo: Codable {
+        let nickname: String
+        let name: String
+        let profileImage: String?
+        let usedPoint: Int
+        let rank: Int
+    }
+    
+    struct GetUniversityContributors: Codable {
+        let joinContributionRanks: [UniversityContributorInfo]
+    }
 }

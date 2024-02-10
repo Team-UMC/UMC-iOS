@@ -46,6 +46,14 @@ struct UniversityAPITestView: View {
                 Text("전체 학교 랭킹 조회")
             }
             
+            Button {
+                Task {
+                    await universityNetwork.fetchGetUniversityContributors()
+                }
+            } label: {
+                Text("우리 학교 전체 기여도 랭킹 조회")
+            }
+            
 //            TextField("수정할 투두리스트 아이디를 입력하세요.", text: $updateTodoListId)
 //            Button {
 //                Task {
