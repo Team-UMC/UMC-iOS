@@ -31,7 +31,7 @@ extension UserContentPreListViewModel{
         }
     }
 }
-func getContentPreView() async throws -> BoardCellResponse.BoardPageInfo {
+func getContentPreView() async throws -> BoardCellResponse.Boards {
     //URL 생성
     var urlComponents = ApiEndpoints.getBasicUrlComponents()
     urlComponents.path = ApiEndpoints.Path.members.rawValue
@@ -51,16 +51,14 @@ func getContentPreView() async throws -> BoardCellResponse.BoardPageInfo {
     if let response = response as? HTTPURLResponse,
        !(200...299).contains(response.statusCode) {
         throw ExchangeRateError.badResponse
-    } else {
-        print("Received status code: \((response as? HTTPURLResponse)?.statusCode ?? -1)")
     }
 
 
     let decoder = JSONDecoder()
     
-    let jsonDictionary = try decoder.decode(BaseResponse<BoardCellResponse.BoardPageInfo>.self, from: data)
+    let jsonDictionary = try decoder.decode(BaseResponse<BoardCellResponse.Boards>.self, from: data)
     
-    var contentPreView: BoardCellResponse.BoardPageInfo
+    var contentPreView: BoardCellResponse.Boards
     contentPreView = jsonDictionary.result
     
     return contentPreView

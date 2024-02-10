@@ -13,6 +13,7 @@
 		4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */; };
 		427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427820502B75218F0024476C /* ManagerInfoResponce.swift */; };
 		449DB8612B77819D00415113 /* Boards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8602B77819D00415113 /* Boards.swift */; };
+		449DB8632B77A74900415113 /* BoardCellResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8622B77A74900415113 /* BoardCellResponse.swift */; };
 		44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */; };
 		44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
@@ -220,6 +221,7 @@
 		427820502B75218F0024476C /* ManagerInfoResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerInfoResponce.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerInfoResponce.swift"; sourceTree = SOURCE_ROOT; };
 		449DB85F2B77817D00415113 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/teamUMC 오후 7.01.03/UMC-iOS/UMC-iOS/Config.xcconfig"; sourceTree = "<group>"; };
 		449DB8602B77819D00415113 /* Boards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Boards.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/teamUMC 오후 6.55.33/UMC-iOS/UMC-iOS/UMC-iOS/Domain/Entities/Boards.swift"; sourceTree = "<group>"; };
+		449DB8622B77A74900415113 /* BoardCellResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellResponse.swift; sourceTree = "<group>"; };
 		44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " BoardSearchLikedResultRequest.swift"; sourceTree = "<group>"; };
 		44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
@@ -1268,6 +1270,7 @@
 				F3DABB4E2B75537300BBF00B /* Protocol */,
 				F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */,
 				F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */,
+				449DB8622B77A74900415113 /* BoardCellResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1543,6 +1546,7 @@
 				F3B689392B776F5600A4FBB5 /* Array+Extension.swift in Sources */,
 				F3DABB512B755BE200BBF00B /* UserData.swift in Sources */,
 				F34D2D112B73675300491EBE /* HistoryProjectView.swift in Sources */,
+				449DB8632B77A74900415113 /* BoardCellResponse.swift in Sources */,
 				F34D2D362B73675300491EBE /* JoinNavigationButton.swift in Sources */,
 				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
