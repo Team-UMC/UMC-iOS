@@ -17,4 +17,13 @@ struct UniversityResponse: Codable {
     struct GetUniversityList: Codable {
         let joinUniversities: [UniversityInfo]
     }
+    
+    struct GetUniverSityDetail: Codable {
+        let id: String?
+        let universityId: String
+        let universityName: String
+        let universityLogo: String
+        let universityPoint: Int
+        let universityRank: Int
+    }
 }

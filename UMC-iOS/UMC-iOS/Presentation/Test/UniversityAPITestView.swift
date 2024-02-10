@@ -22,6 +22,14 @@ struct UniversityAPITestView: View {
                 Text("전체 학교 조회 조회")
             }
             
+            Button {
+                Task {
+                    await universityNetwork.fetchGetUniversityDetail()
+                }
+            } label: {
+                Text("우리 학교 세부 정보 조회")
+            }
+            
             
 //            TextField("수정할 투두리스트 아이디를 입력하세요.", text: $updateTodoListId)
 //            Button {
