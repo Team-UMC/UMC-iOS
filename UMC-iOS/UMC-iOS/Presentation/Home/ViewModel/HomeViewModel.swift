@@ -197,7 +197,7 @@ extension HomeViewModel {
         
         if let response = response as? HTTPURLResponse,
            !(200..<300).contains(response.statusCode) {
-            throw ExchangeRateError.badResponse
+            throw ExchangeRateError.badRequest
         }
         
         let decoder = JSONDecoder()
@@ -243,7 +243,7 @@ extension HomeViewModel {
         
         if let response = response as? HTTPURLResponse,
            !(200..<300).contains(response.statusCode) {
-            throw ExchangeRateError.badResponse
+            throw ExchangeRateError.badRequest
         }
         
         let decoder = JSONDecoder()
