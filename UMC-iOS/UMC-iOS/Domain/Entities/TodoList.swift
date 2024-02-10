@@ -14,6 +14,8 @@ struct TodoList {
     var title: String
     var deadline: Date
     var isCompleted: Bool
+    
+    
 }
 
 extension TodoList {

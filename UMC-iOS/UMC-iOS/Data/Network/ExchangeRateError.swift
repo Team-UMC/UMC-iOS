@@ -8,7 +8,7 @@
 import Foundation
 
 enum ExchangeRateError: Error {
-    case badResponse
+    case badRequest
     case decodeFailed
     case cannotCreateURL
 }

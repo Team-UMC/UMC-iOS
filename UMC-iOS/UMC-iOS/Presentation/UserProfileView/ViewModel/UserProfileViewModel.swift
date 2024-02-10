@@ -78,7 +78,7 @@ extension UserProfileViewModel {
         
         if let response = response as? HTTPURLResponse,
            !(200..<300).contains(response.statusCode) {
-            throw ExchangeRateError.badResponse
+            throw ExchangeRateError.badRequest
         }
         
         guard let jsonString = String(data: data, encoding: .utf8) else {

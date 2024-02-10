@@ -188,6 +188,9 @@
 		F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689342B7756FC00A4FBB5 /* TodoList.swift */; };
 		F3B689372B77681700A4FBB5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689362B77681700A4FBB5 /* String+Extension.swift */; };
 		F3B689392B776F5600A4FBB5 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689382B776F5600A4FBB5 /* Array+Extension.swift */; };
+		F3B6893B2B77960A00A4FBB5 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6893A2B77960A00A4FBB5 /* TodoListViewModel.swift */; };
+		F3B6893F2B7797C500A4FBB5 /* TodoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */; };
+		F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */; };
 		F3DABB492B754FB200BBF00B /* BaseResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */; };
 		F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */; };
 		F3DABB512B755BE200BBF00B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB502B755BE200BBF00B /* UserData.swift */; };
@@ -393,6 +396,9 @@
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		F3B689362B77681700A4FBB5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F3B689382B776F5600A4FBB5 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		F3B6893A2B77960A00A4FBB5 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRequest.swift; sourceTree = "<group>"; };
+		F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAPITestView.swift; sourceTree = "<group>"; };
 		F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseProtocol.swift; sourceTree = "<group>"; };
 		F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		F3DABB502B755BE200BBF00B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -866,6 +872,7 @@
 			isa = PBXGroup;
 			children = (
 				F34D2C492B73675300491EBE /* ToDoListCellViewModel.swift */,
+				F3B6893A2B77960A00A4FBB5 /* TodoListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1246,6 +1253,7 @@
 			isa = PBXGroup;
 			children = (
 				F34D2D822B74B31200491EBE /* ApiTestView.swift */,
+				F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1254,6 +1262,7 @@
 			isa = PBXGroup;
 			children = (
 				F34D2D4C2B7367D400491EBE /* MemberRequest.swift */,
+				F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1424,6 +1433,7 @@
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
 				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
 				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
+				F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */,
 				F34D2D332B73675300491EBE /* User.swift in Sources */,
 				F34D2D3B2B73675300491EBE /* JoinTextFieldStyle.swift in Sources */,
 				F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */,
@@ -1478,6 +1488,7 @@
 				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
 				F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */,
 				F34D2D342B73675300491EBE /* Token.swift in Sources */,
+				F3B6893F2B7797C500A4FBB5 /* TodoListRequest.swift in Sources */,
 				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,
 				F34D2D432B73675300491EBE /* JoinNickname.swift in Sources */,
 				F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */,
@@ -1568,6 +1579,7 @@
 				F34D2D0A2B73675300491EBE /* TILListSixthCell.swift in Sources */,
 				F34D2D1F2B73675300491EBE /* HomeNotificationView.swift in Sources */,
 				F34D2D022B73675300491EBE /* TILLIstfifthCell.swift in Sources */,
+				F3B6893B2B77960A00A4FBB5 /* TodoListViewModel.swift in Sources */,
 				F34D2CCA2B73675300491EBE /* BulletinBoardList.swift in Sources */,
 				F34D2D072B73675300491EBE /* TILListFirstViewsub.swift in Sources */,
 				F34D2D892B74C75F00491EBE /* Part.swift in Sources */,
