@@ -10,7 +10,7 @@ import Foundation
 
 class BulletinBoardViewModel: ObservableObject {
     @Published var boardPosts: [BoardPageResponse] = []
-    
+
     // 게시판 목록 조회 메서드
     func fetchBoardPosts(completion: @escaping () -> Void) {
         Task {
@@ -52,6 +52,3 @@ class BulletinBoardViewModel: ObservableObject {
         }
     }
 }
-        
-        
-      

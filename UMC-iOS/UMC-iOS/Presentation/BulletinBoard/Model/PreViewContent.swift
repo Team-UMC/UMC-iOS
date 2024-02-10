@@ -4,7 +4,6 @@
 //
 //  Created by 나예은 on 2024/02/09.
 //
-
 import SwiftUI
 
 struct BoardInfo: Codable {
