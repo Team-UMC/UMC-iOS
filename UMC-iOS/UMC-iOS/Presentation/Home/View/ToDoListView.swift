@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ToDoListView: View {
     var TDLList : [String] = ["1", "2", "3"]
+    var memberInfo: Member
     
     var body: some View {
         VStack(spacing: 0) {
@@ -25,8 +26,11 @@ struct ToDoListView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(0..<3) { index in
-                        TodoEmptyCell()
+                        TodoSummaryCell()
                     } // ForEach
+                    
+                    
+                    TodoEmptyCell(memberNickname: memberInfo.nickname)
                 } // HStack
                 .padding(.trailing, 18)
             } // ScrollView
@@ -36,8 +40,70 @@ struct ToDoListView: View {
     }
 }
 
+struct TodoSummaryCell: View {
+    @State private var isClicked: Bool = false
+    let todoInfo: String = ""
+    var body: some View {
+        Button {
+            print("TDLPlusButton Clicked")
+            isClicked.toggle()
+        } label: {
+            ZStack {
+                Rectangle()
+                    .frame(width: 122, height: 134)
+                    .foregroundColor(Color.main3)
+                    .cornerRadius(20)
+                    .padding(.leading, 18)
+                VStack {
+                    VStack(spacing: 5) { // ( )님의 투두를 기다리는 중이에요
+                        
+                        // 이모티콘
+                        Text("🍨")
+                            .font(.system(size: 30))
+                        
+                        // contents
+                        Text("더기랑 요거트월드 먹기")
+                            .padding(.leading, 5)
+                            .padding(.trailing, 5)
+                            .fontWeight(.semibold)
+                            .frame(width: 122)
+                        
+                        // time
+                        HStack(spacing: 5) {
+                            Text("🕒")
+                            Text("오전 08:00")
+                        }
+                        .font(.system(size: 10))
+                        
+                    } // VStack
+                    .font(.system(size: 14))
+                    .kerning(-1.05)
+                    .padding(.leading, 18)
+                    .foregroundStyle(Color.white)
+                }
+            }
+        } // Button
+        .padding(.bottom, 8)
+        .navigationDestination(isPresented: $isClicked) {
+            ToDoListUI()
+                .navigationTitle("To-Do List")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            print("완료 버튼 클릭")
+                        } label: {
+                            Text("완료")
+                        }
+                    }
+                }
+        }
+    }
+}
+
 struct TodoEmptyCell: View {
     @State private var isClicked: Bool = false
+    let memberNickname: String
+    
     var body: some View {
         
         
@@ -61,11 +127,13 @@ struct TodoEmptyCell: View {
                             .offset(x: 8, y: 0)
                         VStack { // ( )님의 투두를 기다리는 중이에요
                             HStack(spacing: 0) {
-                                Text("원")
+                                Text(memberNickname)
                                     .fontWeight(.semibold)
-                                Text("님의 투두를")
+                                Text("님의 투두를 기다리는 중이에요..😴")
                             }
-                            Text("기다리는 중이에요..😴")
+                            .frame(width: 122)
+                            .padding(5)
+                            
                         } // VStack
                         .font(.system(size: 12))
                         .kerning(-1.05)
@@ -93,5 +161,5 @@ struct TodoEmptyCell: View {
 }
 
 #Preview {
-    ToDoListView(TDLList: ["1", "2"])
+    ToDoListView(TDLList: ["1", "2"], memberInfo: Member())
 }
