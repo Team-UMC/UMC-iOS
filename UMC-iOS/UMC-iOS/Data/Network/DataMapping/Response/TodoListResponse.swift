@@ -9,7 +9,7 @@ import Foundation
 
 struct TodoListResponse: Codable {
     struct TodoListInfo: Codable {
-        let id: Int?
+        let id: String?
         let todoListId: String
         let title: String
         let deadline: String

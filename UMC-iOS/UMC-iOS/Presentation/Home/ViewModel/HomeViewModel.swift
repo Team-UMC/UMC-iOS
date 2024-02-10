@@ -13,6 +13,7 @@ class HomeViewModel:ObservableObject {
     @Published var shouldShowCalendarPopup: Bool = false // 캘린더 팝업 뷰 State변수
     @Published var shouldShowAnnouncementPopup: Bool = false // 공지사항 팝업 뷰 State변수
     @Published var member = Member()
+    @Published var toDoLists: [TodoList] = []
 //    @Published var todoList =
     
     func createAnnouncementPopup() -> some View { // 공지사항 팝업 뷰 만드는 함수
@@ -213,9 +214,9 @@ extension HomeViewModel {
     @MainActor
     func fetchGetTodoList() async {
         do {
-            let memberProfile = try await getMemberProfile()
-            print(memberProfile)
-            member = Member(memberProfile: memberProfile)
+            let toDoList = try await getTodoList()
+            print(toDoList)
+            self.toDoLists = toDoList.todoLists.mapToToDoList()
         } catch {
             print("Error: \(error)")
         }
@@ -224,7 +225,7 @@ extension HomeViewModel {
     // TodoList API - 투두리스트 조회 API
     func getTodoList() async throws -> TodoListResponse.GetTodoList {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.queryItems = [URLQueryItem(name: "date", value: Date.currentLocalDateToString())]
+        urlComponents.queryItems = [URLQueryItem(name: "date", value: String.currentLocalDateToString())]
         urlComponents.path = ApiEndpoints.Path.todoList.rawValue
         
         guard let url = urlComponents.url else {
@@ -249,10 +250,10 @@ extension HomeViewModel {
         
         let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.GetTodoList>.self, from: data)
         
-        var memberProfile: TodoListResponse.GetTodoList
-        memberProfile = jsonDictionary.result
+        var todoLists: TodoListResponse.GetTodoList
+        todoLists = jsonDictionary.result
         
-        return memberProfile
+        return todoLists
     }
     
     

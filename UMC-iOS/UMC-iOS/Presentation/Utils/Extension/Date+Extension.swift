@@ -8,9 +8,17 @@
 import Foundation
 
 extension Date {
-    static func currentLocalDateToString() -> String {
+
+    
+    static func stringToDateTime(dateString: String) -> Date {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: Date())
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        guard let date = dateFormatter.date(from: dateString) else {
+            fatalError("string to date 날짜 변환 실패")
+            return Date()
+        }
+        
+        return date
     }
 }

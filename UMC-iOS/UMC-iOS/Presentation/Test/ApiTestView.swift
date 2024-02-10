@@ -15,9 +15,9 @@ struct ApiTestView: View {
     var body: some View {
         VStack {
             Button {
-                print(Date.currentLocalDateToString())
+                print(String.currentLocalDateToString())
             } label: {
-                Text(Date.currentLocalDateToString())
+                Text(String.currentLocalDateToString())
             }
             
             //apple login button
