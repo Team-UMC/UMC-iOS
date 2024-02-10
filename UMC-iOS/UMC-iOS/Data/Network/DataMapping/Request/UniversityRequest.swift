@@ -12,3 +12,12 @@ struct UniversityRequest {
         let pointType: PointType
     }
 }
+
+extension UniversityRequest {
+    struct StaffCreateUniversity {
+        let universityName: String
+        let universityLogo: String
+        let semesterLogo: String
+        let semester: Semester
+    }
+}

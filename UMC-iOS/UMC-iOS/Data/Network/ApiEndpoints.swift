@@ -42,6 +42,9 @@ enum ApiEndpoints {
         case universities_mascot = "/universities/mascot"
         case universities_members = "/universities/members"
         case universities_ranks = "/universities/ranks"
+        
+        // staff-university
+        case staff_universities = "/staff/universities"
     }
 }
 

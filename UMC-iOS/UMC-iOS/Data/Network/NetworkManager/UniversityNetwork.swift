@@ -20,14 +20,14 @@ class UniversityNetwork: ObservableObject {
             print("fetchFeedUniversityMascot : \(request)")
             print(request.pointType.rawValue)
             
-            let response = try await createTodoList(pointType: request.pointType.rawValue)
+            let response = try await feedUniversityMascot(pointType: request.pointType.rawValue)
         } catch {
             print("Error: \(error)")
         }
     }
     
     // University API - 우리 학교 마스코트 먹이주기 API
-    func createTodoList(pointType: String) async throws -> UniversityResponse.FeedUniversityMascot {
+    func feedUniversityMascot(pointType: String) async throws -> UniversityResponse.FeedUniversityMascot {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities_mascot.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "pointType", value: pointType)]
