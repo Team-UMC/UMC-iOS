@@ -49,10 +49,13 @@ func getContentPreView() async throws -> BoardCellResponse.BoardPageInfo {
     print(response)
     
     if let response = response as? HTTPURLResponse,
-       !(200..<300).contains(response.statusCode) {
+       !(200...299).contains(response.statusCode) {
         throw ExchangeRateError.badResponse
+    } else {
+        print("Received status code: \((response as? HTTPURLResponse)?.statusCode ?? -1)")
     }
-    
+
+
     let decoder = JSONDecoder()
     
     let jsonDictionary = try decoder.decode(BaseResponse<BoardCellResponse.BoardPageInfo>.self, from: data)
