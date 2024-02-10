@@ -12,6 +12,7 @@ struct ApiTestView: View {
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var goToTodoListAPITestView: Bool = false
+    @State private var goToUniversityAPITestView: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -47,10 +48,18 @@ struct ApiTestView: View {
                 Button {
                     goToTodoListAPITestView.toggle()
                 } label: {
-                    Text("goToTodoListAPITestView")
+                    Text("투두리스트 API 테스트 뷰")
                 }
                 .navigationDestination(isPresented: $goToTodoListAPITestView) {
                     TodoListAPITestView()
+                }
+                Button {
+                    goToUniversityAPITestView.toggle()
+                } label: {
+                    Text("대학교 API 테스트 뷰")
+                }
+                .navigationDestination(isPresented: $goToUniversityAPITestView) {
+                    UniversityAPITestView()
                 }
             }
         }
