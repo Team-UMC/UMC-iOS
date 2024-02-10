@@ -226,7 +226,7 @@ extension HomeViewModel {
     func getTodoList() async throws -> TodoListResponse.GetTodoList {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.queryItems = [URLQueryItem(name: "date", value: String.currentLocalDateToString())]
-        urlComponents.path = ApiEndpoints.Path.todoList.rawValue
+        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue
         
         guard let url = urlComponents.url else {
             print("Error: cannot create URL")

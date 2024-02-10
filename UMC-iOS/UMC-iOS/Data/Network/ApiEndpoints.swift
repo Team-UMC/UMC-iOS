@@ -33,8 +33,8 @@ enum ApiEndpoints {
         case boards_comments_member_comments_web = "/boards/comments/member/comments/web"
         
         // todoList
-        case todoList = "/to-do-lists"
-        case todoList_update = "/to-do-lists/update"
+        case todoLists = "/to-do-lists"
+        case todoLists_update = "/to-do-lists/update"
     }
 }
 

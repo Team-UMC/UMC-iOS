@@ -19,4 +19,8 @@ struct TodoListResponse: Codable {
     struct GetTodoList: Codable {
         let todoLists: [TodoListInfo]
     }
+    
+    struct TodoListId: Codable {
+        let todoListId: String
+    }
 }
