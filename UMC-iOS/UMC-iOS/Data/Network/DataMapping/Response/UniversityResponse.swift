@@ -64,4 +64,8 @@ struct UniversityResponse: Codable {
         let memberRemainPoint: Int
     }
     
+    struct UniversityId: Codable {
+        let universityId: String
+    }
+    
 }
