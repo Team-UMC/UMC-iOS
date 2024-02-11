@@ -16,3 +16,18 @@ extension Array where Element == TodoListResponse.TodoListInfo {
     }
 }
 
+extension Array where Element == UniversityResponse.UniversityInfo {
+    func mapToUniversityList() -> [University] {
+        return self.map { universityInfo in
+            return University(id: universityInfo.universityId, name: universityInfo.universityName)
+        }
+    }
+}
+
+extension Array where Element == UniversityResponse.UniversityRank {
+    func mapToUniversityList() -> [University] {
+        return self.map { universityRankInfo in
+            return University(universityLogo: universityRankInfo.universityLogo, name: universityRankInfo.universityName, totalPoint: universityRankInfo.universityPoint)
+        }
+    }
+}

@@ -191,6 +191,13 @@
 		F3B6893B2B77960A00A4FBB5 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6893A2B77960A00A4FBB5 /* TodoListViewModel.swift */; };
 		F3B6893F2B7797C500A4FBB5 /* TodoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */; };
 		F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */; };
+		F3B689432B77F05F00A4FBB5 /* UniversityAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689422B77F05F00A4FBB5 /* UniversityAPITestView.swift */; };
+		F3B689462B77F1AE00A4FBB5 /* UniversityNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689452B77F1AE00A4FBB5 /* UniversityNetwork.swift */; };
+		F3B689482B77F38800A4FBB5 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689472B77F38800A4FBB5 /* University.swift */; };
+		F3B6894A2B77F3E000A4FBB5 /* Mascot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689492B77F3E000A4FBB5 /* Mascot.swift */; };
+		F3B6894C2B77F55C00A4FBB5 /* UniversityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6894B2B77F55C00A4FBB5 /* UniversityResponse.swift */; };
+		F3B6894E2B780E3400A4FBB5 /* PointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6894D2B780E3400A4FBB5 /* PointType.swift */; };
+		F3B689502B78116500A4FBB5 /* UniversityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6894F2B78116500A4FBB5 /* UniversityRequest.swift */; };
 		F3DABB492B754FB200BBF00B /* BaseResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */; };
 		F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */; };
 		F3DABB512B755BE200BBF00B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DABB502B755BE200BBF00B /* UserData.swift */; };
@@ -399,6 +406,13 @@
 		F3B6893A2B77960A00A4FBB5 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRequest.swift; sourceTree = "<group>"; };
 		F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAPITestView.swift; sourceTree = "<group>"; };
+		F3B689422B77F05F00A4FBB5 /* UniversityAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityAPITestView.swift; sourceTree = "<group>"; };
+		F3B689452B77F1AE00A4FBB5 /* UniversityNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityNetwork.swift; sourceTree = "<group>"; };
+		F3B689472B77F38800A4FBB5 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		F3B689492B77F3E000A4FBB5 /* Mascot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mascot.swift; sourceTree = "<group>"; };
+		F3B6894B2B77F55C00A4FBB5 /* UniversityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityResponse.swift; sourceTree = "<group>"; };
+		F3B6894D2B780E3400A4FBB5 /* PointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointType.swift; sourceTree = "<group>"; };
+		F3B6894F2B78116500A4FBB5 /* UniversityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRequest.swift; sourceTree = "<group>"; };
 		F3DABB482B754FB200BBF00B /* BaseResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseProtocol.swift; sourceTree = "<group>"; };
 		F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		F3DABB502B755BE200BBF00B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -1177,6 +1191,7 @@
 		F34D2D492B7367D400491EBE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F3B689442B77F11200A4FBB5 /* NetworkManager */,
 				F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */,
 				F34D2D4B2B7367D400491EBE /* DataMapping */,
 				F34D2D7B2B74B05500491EBE /* ExchangeRateError.swift */,
@@ -1237,6 +1252,9 @@
 				F34D2D902B74FC5100491EBE /* Role.swift */,
 				F3DABB522B756D2F00BBF00B /* SemesterPart.swift */,
 				F3B689342B7756FC00A4FBB5 /* TodoList.swift */,
+				F3B689472B77F38800A4FBB5 /* University.swift */,
+				F3B689492B77F3E000A4FBB5 /* Mascot.swift */,
+				F3B6894D2B780E3400A4FBB5 /* PointType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1254,8 +1272,17 @@
 			children = (
 				F34D2D822B74B31200491EBE /* ApiTestView.swift */,
 				F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */,
+				F3B689422B77F05F00A4FBB5 /* UniversityAPITestView.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		F3B689442B77F11200A4FBB5 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F3B689452B77F1AE00A4FBB5 /* UniversityNetwork.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		F3DABB4A2B754FE700BBF00B /* Request */ = {
@@ -1263,6 +1290,7 @@
 			children = (
 				F34D2D4C2B7367D400491EBE /* MemberRequest.swift */,
 				F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */,
+				F3B6894F2B78116500A4FBB5 /* UniversityRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1270,10 +1298,11 @@
 		F3DABB4B2B754FED00BBF00B /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */,
+				F3B6894B2B77F55C00A4FBB5 /* UniversityResponse.swift */,
+				F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */,
 				F34D2D4D2B7367D400491EBE /* MemberResponse.swift */,
 				F3DABB4E2B75537300BBF00B /* Protocol */,
-				F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */,
-				F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1437,6 +1466,7 @@
 				F34D2D332B73675300491EBE /* User.swift in Sources */,
 				F34D2D3B2B73675300491EBE /* JoinTextFieldStyle.swift in Sources */,
 				F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */,
+				F3B6894E2B780E3400A4FBB5 /* PointType.swift in Sources */,
 				F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */,
 				F34D2CDC2B73675300491EBE /* ManagerCalender.swift in Sources */,
 				F34D2CCF2B73675300491EBE /* WritingListCellSecond.swift in Sources */,
@@ -1457,6 +1487,7 @@
 				F34D2CBA2B73675300491EBE /* HomeViewModel.swift in Sources */,
 				F34D2CDE2B73675300491EBE /* ManagerPin.swift in Sources */,
 				F34D2D002B73675300491EBE /* TILFileAddViewModel.swift in Sources */,
+				F3B689482B77F38800A4FBB5 /* University.swift in Sources */,
 				F34D2D152B73675300491EBE /* HistorySearchView.swift in Sources */,
 				F34D2D032B73675300491EBE /* TILListFirstCell.swift in Sources */,
 				F34D2CEB2B73675300491EBE /* CircleFillButton.swift in Sources */,
@@ -1483,6 +1514,7 @@
 				F34D2CE42B73675300491EBE /* CommetAddbar.swift in Sources */,
 				F34D2CD92B73675300491EBE /* SearchBar.swift in Sources */,
 				F34D2CE22B73675300491EBE /* BulletinBoardContentDetail.swift in Sources */,
+				F3B689462B77F1AE00A4FBB5 /* UniversityNetwork.swift in Sources */,
 				F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */,
 				427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */,
 				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
@@ -1494,6 +1526,7 @@
 				F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */,
 				F34D2D1B2B73675300491EBE /* ProjectCardinalNumberView.swift in Sources */,
 				F34D2CBE2B73675300491EBE /* AnnouncementView.swift in Sources */,
+				F3B689502B78116500A4FBB5 /* UniversityRequest.swift in Sources */,
 				F34D2D1D2B73675300491EBE /* ProjectNameRegisterView.swift in Sources */,
 				F3B689372B77681700A4FBB5 /* String+Extension.swift in Sources */,
 				F34D2D292B73675300491EBE /* UserProfileEdit.swift in Sources */,
@@ -1520,6 +1553,7 @@
 				F34D2D2F2B73675300491EBE /* SocialLoginViewModel.swift in Sources */,
 				4278204B2B75214C0024476C /* ManagerInfoRequest.swift in Sources */,
 				4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */,
+				F3B6894C2B77F55C00A4FBB5 /* UniversityResponse.swift in Sources */,
 				F34D2D392B73675300491EBE /* KakaoLoginButton.swift in Sources */,
 				F34D2D142B73675300491EBE /* HotProjectView.swift in Sources */,
 				F34D2D7C2B74B05500491EBE /* ExchangeRateError.swift in Sources */,
@@ -1563,6 +1597,7 @@
 				F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */,
 				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,
 				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
+				F3B6894A2B77F3E000A4FBB5 /* Mascot.swift in Sources */,
 				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,
 				F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */,
 				44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */,
@@ -1588,6 +1623,7 @@
 				F34D2D2B2B73675300491EBE /* UserProfileSocialAdd.swift in Sources */,
 				F34D2D1E2B73675300491EBE /* NotificationModel.swift in Sources */,
 				F34D2D522B7367D400491EBE /* MemberRequest.swift in Sources */,
+				F3B689432B77F05F00A4FBB5 /* UniversityAPITestView.swift in Sources */,
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
 				46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */,
 				F34D2CF72B73675300491EBE /* ToDoListView.swift in Sources */,
