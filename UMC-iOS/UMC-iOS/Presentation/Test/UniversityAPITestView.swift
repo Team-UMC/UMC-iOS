@@ -70,13 +70,13 @@ struct UniversityAPITestView: View {
                 Text("우리 학교 마스코트 먹이주기 - DOUGHNUT")
             }
             
-            Button {
-                Task {
-                    await universityNetwork.fetchCreateUniversityForStaff(request: UniversityRequest.CreateUniversityForStaff(universityName: "리버대학교", universityLogo: "", semesterLogo: "", semester: Semester.FIFTH.rawValue))
-                }
-            } label: {
-                Text("학교 생성하기")
-            }
+//            Button {
+//                Task {
+//                    await universityNetwork.fetchCreateUniversityForStaff(request: UniversityRequest.CreateUniversityForStaff(universityName: "리버대학교", universityLogo: "", semesterLogo: "", semester: Semester.FIFTH.rawValue))
+//                }
+//            } label: {
+//                Text("학교 생성하기")
+//            }
             
 //            TextField("수정할 투두리스트 아이디를 입력하세요.", text: $updateTodoListId)
 //            Button {
