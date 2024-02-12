@@ -15,9 +15,10 @@ struct ToDoListAdd: View {
     @ObservedObject private var cellViewModel: ToDoListCellViewModel
     
     init(viewModel: ToDoListCellViewModel) {
-            self._cellViewModel = ObservedObject(wrappedValue: viewModel)
-        }
-    @State private var title: String = ""
+        self._cellViewModel = ObservedObject(wrappedValue: viewModel)
+    }
+    @State var title: String = ""
+    @State var todoicon: String = ""
     
     var body: some View {
         ZStack{
@@ -33,9 +34,10 @@ struct ToDoListAdd: View {
                         .frame(width:30, height: 30)
                         .cornerRadius(6)
                         .padding(.leading,24)
-                    
-                    Text("🌕")
-                        .padding(.leading,24)
+                        .overlay(
+                            TextField("🌕",text:$todoicon)
+                                .padding(.leading,27)
+                        )
                 }
                 
                 TextField("할일을 입력해주세요.",text: $title)
@@ -58,17 +60,18 @@ struct ToDoListAdd: View {
                         .foregroundColor(Color("searchPurple"))
                         .background(.white)
                         .cornerRadius(12)
-
+                    
                 }
+                .padding(.leading,-10)
                 
                 Spacer()
             }
             .padding()
             
-
-                
+            
+            
         }
-
+        
         
     }
 }
