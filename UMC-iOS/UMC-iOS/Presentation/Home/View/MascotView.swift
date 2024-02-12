@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MascotView: View {
+    @State private var isClicked = false
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -35,6 +36,9 @@ struct MascotView: View {
                 } // VStack
             } // ZStack
         } // VStack
+        .navigationDestination(isPresented: $isClicked) {
+            RankView()
+        }
         .padding(.leading, 18)
     }
 }

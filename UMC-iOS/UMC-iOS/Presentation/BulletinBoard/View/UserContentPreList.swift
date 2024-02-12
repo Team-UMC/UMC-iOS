@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserContentPreList: View {
     var body: some View {
+        
         let profileImage = "profileImage"
         let userName = "양유진"
         let userNickname = "더기"
@@ -20,8 +21,7 @@ struct UserContentPreList: View {
         let TimeLine = 1
         let ContentImage = "ContentImage"
         @Environment(\.presentationMode) var presentationMode
-            
-        NavigationLink(destination: BulletinBoardContentDetailUI()) {
+        @State var isClicked = false
             VStack(alignment: .leading, spacing: 8){
                 HStack{
                     //프로필 이미지
@@ -100,10 +100,16 @@ struct UserContentPreList: View {
                 }
             }
             .padding(.horizontal, 21)
-            .navigationBarBackButtonHidden(true)
+            .onTapGesture {
+                print("UserContentPreList tapped!")
+                isClicked.toggle()
+            }
+            .navigationDestination(isPresented: $isClicked) {
+                
+            }
         }
     }
-}
+
 
 struct UserContentPreList_Previews: PreviewProvider {
     static var previews: some View {

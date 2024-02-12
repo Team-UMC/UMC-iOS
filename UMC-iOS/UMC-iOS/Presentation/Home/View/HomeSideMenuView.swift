@@ -76,14 +76,14 @@ struct SideMenuViewContents: View {
                         Spacer().frame(width: 56)
                         SideMenuNavigationButton(destination:UserProfileUI(), MenuName: "프로필", ImageName: "person.crop.circle.fill")
                         Spacer().frame(width: 16)
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "프로필", ImageName: "gearshape.fill")
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "설정", ImageName: "gearshape.fill") //추후 구현
                     }
                     Spacer().frame(height: 20)
                     HStack(spacing: 32){
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "글쓰기", ImageName: "pencil")
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "내글", ImageName: "doc.text.fill")
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "쪽지함", ImageName: "envelope.fill")
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "마스코드", ImageName: "pawprint.fill")
+                        SideMenuNavigationButton(destination: WritingList(title: "", content: ""), MenuName: "글쓰기", ImageName: "pencil")
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "내글", ImageName: "doc.text.fill") //추후 구현
+                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "쪽지함", ImageName: "envelope.fill") //추후 구현
+                        SideMenuNavigationButton(destination: RankingDetailView(), MenuName: "마스코드", ImageName: "pawprint.fill")
                     }
                     Spacer().frame(height: 32)
                     Text("즐겨찾기")
