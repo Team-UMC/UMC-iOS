@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HistoryView: View {
+    
+    @State var isActive: Bool = false
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack {
@@ -25,6 +28,12 @@ struct HistoryView: View {
                         .padding(.top, 32)
                     HistorySearchBarView()
                         .padding(.top, 8)
+                        .onTapGesture {
+                            isActive = true
+                        }
+                        .fullScreenCover(isPresented: $isActive) {
+                            HistorySearchView(isActice: $isActive)
+                        }
                     HistoryProjectListView()
                         .padding(.top, 16)
                     
