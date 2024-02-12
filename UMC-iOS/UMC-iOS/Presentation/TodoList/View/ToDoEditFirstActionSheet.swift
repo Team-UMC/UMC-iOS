@@ -37,8 +37,9 @@ struct ToDoEditFirstActionSheet: View {
                         }
 
                         Button(action: {
+                            // "수정하기" 버튼에 대한 액션 추가
                             Task {
-                                await viewModel.fetchUpdateTodoList(todoListId: String, todoInfo: TodoListRequest.UpdateTodo(title: title, deadline: "2024-02-10T14:35:03"))
+                                await viewModel.fetchUpdateTodoList(todoListId: "123", todoInfo: TodoListRequest.UpdateTodo(title: title, deadline: "2024-02-10T14:35:03"))
                             }
                         }) {
                             IconWithText(imageName: "EditIcon", text: "수정하기")

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ToDoListCell: View {
+    
     @StateObject private var viewModel: ToDoListCellViewModel
     @State private var showToDoEditSheet = false
     
@@ -15,13 +16,18 @@ struct ToDoListCell: View {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
+    
     var body: some View {
         ZStack {
+            
+            //선택할때 색 변경됨
+            //상자
             Rectangle()
                 .fill(viewModel.isCompleted ? Color("#F0F4FF") : Color("#F6F6F6"))
                 .frame(width: 341, height: 68)
                 .cornerRadius(12)
             
+            //별 모양
             HStack {
                 Button(action: {
                     viewModel.isCompleted.toggle()
@@ -33,6 +39,7 @@ struct ToDoListCell: View {
                         .padding(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: -20))
                 }
                 
+                //아이콘
                 ZStack {
                     Rectangle()
                         .fill(.white)
@@ -46,12 +53,13 @@ struct ToDoListCell: View {
                 
                 VStack {
                     HStack {
-                        Text(viewModel.toDoTitle)
+                        Text(viewModel.toDoTitle) //할일
                             .foregroundColor(.black)
                             .font(.system(size: 16))
                         Spacer()
                     }
                     
+                    //시간
                     HStack {
                         Image("ClockIcon")
                             .resizable()
@@ -68,6 +76,7 @@ struct ToDoListCell: View {
                     }
                 }
                 
+                //더보기 버튼
                 Button(action: {
                     print("더보기를 눌렀습니다")
                     showToDoEditSheet = true
