@@ -79,7 +79,7 @@ struct ToDoListCell: View {
                         .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0))
                 }
                 .sheet(isPresented: $showToDoEditSheet) {
-                    ToDoEditFirstActionSheet(viewModel: viewModel)
+                    ToDoEditFirstActionSheet(toDoListCellViewModel: ToDoListCellViewModel(toDoTitle: "", time: "", todoIcon: ""), viewModel: TodoListViewModel())
                 }
                 
                 Spacer()
