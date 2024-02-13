@@ -22,6 +22,11 @@
 		44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */; };
 		44CD3DD32B7AA3570089B04F /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */; };
 		44CD3DD52B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */; };
+		44CD3DD82B7B6E8E0089B04F /* CommentInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD72B7B6E8E0089B04F /* CommentInputViewModel.swift */; };
+		44CD3DDA2B7B6E9F0089B04F /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD92B7B6E9F0089B04F /* CommentViewModel.swift */; };
+		44CD3DDC2B7B6EB80089B04F /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DDB2B7B6EB80089B04F /* ContentDetailViewModel.swift */; };
+		44FCC3802B7B6EF500C41278 /* DetailButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC37F2B7B6EF500C41278 /* DetailButtonViewModel.swift */; };
+		44FCC3822B7B6F0800C41278 /* DetailNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */; };
 		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -249,6 +254,11 @@
 		44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNavigationbar.swift; sourceTree = "<group>"; };
 		44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
 		44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSubNavigationButton.swift; sourceTree = "<group>"; };
+		44CD3DD72B7B6E8E0089B04F /* CommentInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputViewModel.swift; sourceTree = "<group>"; };
+		44CD3DD92B7B6E9F0089B04F /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		44CD3DDB2B7B6EB80089B04F /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
+		44FCC37F2B7B6EF500C41278 /* DetailButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonViewModel.swift; sourceTree = "<group>"; };
+		44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigationBar.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -558,6 +568,17 @@
 			path = BottomTabbar;
 			sourceTree = "<group>";
 		};
+		44CD3DD62B7B6E7F0089B04F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44CD3DD72B7B6E8E0089B04F /* CommentInputViewModel.swift */,
+				44CD3DD92B7B6E9F0089B04F /* CommentViewModel.swift */,
+				44CD3DDB2B7B6EB80089B04F /* ContentDetailViewModel.swift */,
+				44FCC37F2B7B6EF500C41278 /* DetailButtonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		46C37FBE2B74CE540084CA4D /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -820,6 +841,7 @@
 		F34D2C2E2B73675300491EBE /* ContentDetail */ = {
 			isa = PBXGroup;
 			children = (
+				44CD3DD62B7B6E7F0089B04F /* ViewModel */,
 				F34D2C2F2B73675300491EBE /* View */,
 			);
 			path = ContentDetail;
@@ -833,6 +855,7 @@
 				F34D2C322B73675300491EBE /* BulletinBoardContentDetail.swift */,
 				F34D2C332B73675300491EBE /* DetailButton.swift */,
 				F34D2C342B73675300491EBE /* CommetAddbar.swift */,
+				44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1502,6 +1525,7 @@
 				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
 				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
+				44FCC3802B7B6EF500C41278 /* DetailButtonViewModel.swift in Sources */,
 				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
 				F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */,
 				F34D2D332B73675300491EBE /* User.swift in Sources */,
@@ -1613,10 +1637,12 @@
 				F34D2D122B73675300491EBE /* HistoryView.swift in Sources */,
 				F34D2D062B73675300491EBE /* TILUI.swift in Sources */,
 				F34D2CEE2B73675300491EBE /* MascotRankingModel.swift in Sources */,
+				44FCC3822B7B6F0800C41278 /* DetailNavigationBar.swift in Sources */,
 				F34D2CEA2B73675300491EBE /* SideMenuNavigationButton.swift in Sources */,
 				44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */,
 				F34D2CBC2B73675300491EBE /* UserInformationView.swift in Sources */,
 				F34D2D272B73675300491EBE /* UserProfileEditImageViewModel.swift in Sources */,
+				44CD3DDA2B7B6E9F0089B04F /* CommentViewModel.swift in Sources */,
 				F34D2CF02B73675300491EBE /* ToDoListCellViewModel.swift in Sources */,
 				F34D2CD42B73675300491EBE /* WritingButton.swift in Sources */,
 				F34D2D912B74FC5100491EBE /* Role.swift in Sources */,
@@ -1642,6 +1668,7 @@
 				44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */,
 				F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */,
 				F34D2CE12B73675300491EBE /* Comment.swift in Sources */,
+				44CD3DDC2B7B6EB80089B04F /* ContentDetailViewModel.swift in Sources */,
 				F34D2D262B73675300491EBE /* UserProfileEditViewModel.swift in Sources */,
 				F34D2D2A2B73675300491EBE /* SocialButtonSet.swift in Sources */,
 				F34D2CDD2B73675300491EBE /* ManagerInfo.swift in Sources */,
@@ -1655,6 +1682,7 @@
 				F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */,
 				F34D2CDB2B73675300491EBE /* ManagerSetting.swift in Sources */,
 				F34D2CD62B73675300491EBE /* WritingList.swift in Sources */,
+				44CD3DD82B7B6E8E0089B04F /* CommentInputViewModel.swift in Sources */,
 				4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */,
 				F34D2D3D2B73675300491EBE /* SelectUniv.swift in Sources */,
 				F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */,
