@@ -20,71 +20,117 @@ struct ManagerCalender:View {
         ZStack{
             //배경화면 색깔
             Color.textfieldBack.ignoresSafeArea()
-
+            
             VStack(spacing: 16){
                 VStack{
-                    TextField("제목", text: $CalTitle)
+                    
+                    // 내용
+                    TextField("제목",
+                              text: $CalTitle,
+                              prompt: Text("제목")
+                        .font(.system(size: 16))
+                        .fontWeight(.regular)
+                        .kerning(-0.5)
+                        .foregroundColor(Color.buttonDisabled))
+                    
                     Divider()
-                    TextField("", text: $CalContent, prompt: Text("내용")
-                    )
+                        .foregroundColor(Color.settingDivider)
+                    
+                    // 내용
+                    TextField("내용",
+                              text: $CalContent,
+                              prompt: Text("내용")
+                        .font(.system(size: 16))
+                        .fontWeight(.regular)
+                        .kerning(-0.5)
+                        .foregroundColor(Color.buttonDisabled))
                     .frame(height: 180, alignment: .topLeading)
                 }
-                .padding()
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
                 .background(.white)
                 .cornerRadius(12)
                                 
-                VStack{
-                    HStack {
+                VStack(spacing: 8){
+                    
+                    HStack(spacing: 0) {
                         DatePicker(
                               "시작일",
                               selection: $StartDate,
                               displayedComponents: [.date, .hourAndMinute]
                         )
+                        .font(.system(size: 16))
+                        .fontWeight(.regular)
+                        .kerning(-0.5)
                         .accentColor(.main)
+                        
                     }
+                    
                 Divider()
+                        .foregroundColor(Color.settingDivider)
+                    
                     HStack{
                         DatePicker(
                               "종료일",
                               selection: $FinishDate,
                               displayedComponents: [.date, .hourAndMinute]
                         )
+                        .font(.system(size: 16))
+                        .fontWeight(.regular)
+                        .kerning(-0.5)
                         .accentColor(.main)
                         
                     }
                 }
-                .padding(10)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
                 .background(.white)
                 .cornerRadius(12)
                 
                 //장소설정 TextField
-                TextField("장소설정", text: $CalSpot)
-                    .padding(10)
-                    .background(.white)
-                    .cornerRadius(12)
+                TextField("장소설정",
+                          text: $CalSpot,
+                          prompt: Text("장소설정")
+                    .font(.system(size: 16))
+                    .fontWeight(.regular)
+                    .kerning(-0.5)
+                    .foregroundColor(Color.buttonDisabled))
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
+                .background(Color.white)
+                .cornerRadius(12)
                 
-                VStack(alignment: .leading){
+                // 분류 버튼
+                VStack(alignment: .leading, spacing: 8){
+                    
                     Text("분류")
-                    HStack{
+                        .font(.system(size: 16))
+                        .fontWeight(.regular)
+                        .foregroundColor(Color.black)
+                    
+                    HStack(spacing: 16){
                         CircleFillButton(title: "전체")
                         CircleFillButton(title: "이전기수")
                         CircleFillButton(title: "현재기수")
                     }
+                    
                 Divider()
-                    HStack{
+                        .foregroundColor(Color.settingDivider)
+                    
+                    HStack(spacing: 16){
                         CircleFillButton(title: "학교")
                         CircleFillButton(title: "지부")
                         CircleFillButton(title: "연합")
                     }
                 }
-                               
-                .padding()
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
                 .background(.white)
                 .cornerRadius(12)
                 
                 Spacer()
             }
-            .padding()
+            .padding(16.5)
         }
         .modifier(SettingBackButton(title: "캘린더 추가", onDismiss: { dismiss() }, showTrailingItem: true))
         
