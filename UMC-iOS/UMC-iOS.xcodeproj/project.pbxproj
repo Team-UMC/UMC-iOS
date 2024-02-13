@@ -12,7 +12,7 @@
 		4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204C2B7521620024476C /* ManagerPinRequest.swift */; };
 		4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */; };
 		427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427820502B75218F0024476C /* ManagerInfoResponce.swift */; };
-		449DB8632B77A74900415113 /* BoardCellResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8622B77A74900415113 /* BoardCellResponse.swift */; };
+		449DB8632B77A74900415113 /* BoardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8622B77A74900415113 /* BoardResponse.swift */; };
 		44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */; };
 		44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
@@ -199,6 +199,9 @@
 		F3935D242B7B53230036E77A /* ScheduleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D232B7B53230036E77A /* ScheduleNetwork.swift */; };
 		F3935D262B7B54F00036E77A /* ScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D252B7B54F00036E77A /* ScheduleRequest.swift */; };
 		F3935D2A2B7B58790036E77A /* ScheduleAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */; };
+		F3935D2C2B7B75B70036E77A /* BoardNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */; };
+		F3935D302B7B76A10036E77A /* BoardAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */; };
+		F3935D322B7B7C850036E77A /* BoardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D312B7B7C850036E77A /* BoardRequest.swift */; };
 		F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */; };
 		F3B689312B774C3F00A4FBB5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */; };
 		F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689342B7756FC00A4FBB5 /* TodoList.swift */; };
@@ -243,7 +246,7 @@
 		4278204C2B7521620024476C /* ManagerPinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerPinRequest.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerPinRequest.swift"; sourceTree = SOURCE_ROOT; };
 		4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerCalenderResponse.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerCalenderResponse.swift"; sourceTree = SOURCE_ROOT; };
 		427820502B75218F0024476C /* ManagerInfoResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerInfoResponce.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerInfoResponce.swift"; sourceTree = SOURCE_ROOT; };
-		449DB8622B77A74900415113 /* BoardCellResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellResponse.swift; sourceTree = "<group>"; };
+		449DB8622B77A74900415113 /* BoardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardResponse.swift; sourceTree = "<group>"; };
 		44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " BoardSearchLikedResultRequest.swift"; sourceTree = "<group>"; };
 		44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
@@ -430,6 +433,9 @@
 		F3935D232B7B53230036E77A /* ScheduleNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNetwork.swift; sourceTree = "<group>"; };
 		F3935D252B7B54F00036E77A /* ScheduleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequest.swift; sourceTree = "<group>"; };
 		F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPITestView.swift; sourceTree = "<group>"; };
+		F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNetwork.swift; sourceTree = "<group>"; };
+		F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAPITestView.swift; sourceTree = "<group>"; };
+		F3935D312B7B7C850036E77A /* BoardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRequest.swift; sourceTree = "<group>"; };
 		F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListResponse.swift; sourceTree = "<group>"; };
 		F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
@@ -1333,6 +1339,7 @@
 				F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */,
 				F3B689422B77F05F00A4FBB5 /* UniversityAPITestView.swift */,
 				F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */,
+				F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1342,6 +1349,7 @@
 			children = (
 				F3B689452B77F1AE00A4FBB5 /* UniversityNetwork.swift */,
 				F3935D232B7B53230036E77A /* ScheduleNetwork.swift */,
+				F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -1353,6 +1361,7 @@
 				F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */,
 				F3B6894F2B78116500A4FBB5 /* UniversityRequest.swift */,
 				F3935D252B7B54F00036E77A /* ScheduleRequest.swift */,
+				F3935D312B7B7C850036E77A /* BoardRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1364,7 +1373,7 @@
 				46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */,
 				F3B6894B2B77F55C00A4FBB5 /* UniversityResponse.swift */,
 				F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */,
-				449DB8622B77A74900415113 /* BoardCellResponse.swift */,
+				449DB8622B77A74900415113 /* BoardResponse.swift */,
 				F34D2D4D2B7367D400491EBE /* MemberResponse.swift */,
 				F3DABB4E2B75537300BBF00B /* Protocol */,
 			);
@@ -1533,6 +1542,7 @@
 				F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */,
 				F3B6894E2B780E3400A4FBB5 /* PointType.swift in Sources */,
 				F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */,
+				F3935D322B7B7C850036E77A /* BoardRequest.swift in Sources */,
 				F34D2CDC2B73675300491EBE /* ManagerCalender.swift in Sources */,
 				F34D2CCF2B73675300491EBE /* WritingListCellSecond.swift in Sources */,
 				F34D2D302B73675300491EBE /* JoinViewModel.swift in Sources */,
@@ -1559,6 +1569,7 @@
 				F34D2CEB2B73675300491EBE /* CircleFillButton.swift in Sources */,
 				F34D2CF82B73675300491EBE /* ToDoListCell.swift in Sources */,
 				F34D2CFD2B73675300491EBE /* MyComment.swift in Sources */,
+				F3935D2C2B7B75B70036E77A /* BoardNetwork.swift in Sources */,
 				F34D2CD22B73675300491EBE /* WritingListCellFirst.swift in Sources */,
 				F34D2CC42B73675300491EBE /* HomeSideMenuView.swift in Sources */,
 				F34D2D1C2B73675300491EBE /* ProjectInformationRegisterView.swift in Sources */,
@@ -1658,8 +1669,9 @@
 				F3B689392B776F5600A4FBB5 /* Array+Extension.swift in Sources */,
 				F3DABB512B755BE200BBF00B /* UserData.swift in Sources */,
 				F34D2D112B73675300491EBE /* HistoryProjectView.swift in Sources */,
-				449DB8632B77A74900415113 /* BoardCellResponse.swift in Sources */,
+				449DB8632B77A74900415113 /* BoardResponse.swift in Sources */,
 				F34D2D362B73675300491EBE /* JoinNavigationButton.swift in Sources */,
+				F3935D302B7B76A10036E77A /* BoardAPITestView.swift in Sources */,
 				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
 				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,

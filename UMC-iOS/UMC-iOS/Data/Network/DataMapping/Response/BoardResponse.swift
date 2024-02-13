@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct BoardCellResponse: Codable {
+struct BoardResponse: Codable {
     
-    struct Boards: Codable {
+    struct SpecificBoards: Codable {
         let id: Int?
-        let boardPageElements: [BoardCellResponse.BoardPageElement]
+        let boardPageElements: [BoardResponse.BoardPageElement]
         let page: Int
         let totalElements: Int
         let totalPages: Int
@@ -22,7 +22,7 @@ struct BoardCellResponse: Codable {
     
     
 }
-    extension BoardCellResponse{
+    extension BoardResponse {
         struct BoardPageElement: Codable {
             let title: String
             let profileImage: String
@@ -34,7 +34,7 @@ struct BoardCellResponse: Codable {
             let commentCount: Int
             let heartCount: Int
             let createdAt: String
-           // let fixed: Bool
+            let fixed: Bool
         }
     }
 

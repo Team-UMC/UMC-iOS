@@ -28,7 +28,8 @@ enum ApiEndpoints {
         case scheudles_detail = "/schedules/detail"
         
         // boards
-        case boards = "/boards/comments"
+        case boards = "/boards"
+        case boards_comments = "/boards/comments"
         case boards_comments_member_comments_app = "/boards/comments/member/comments/app"
         case boards_comments_member_comments_web = "/boards/comments/member/comments/web"
         

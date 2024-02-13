@@ -16,50 +16,6 @@ class UserContentPreListViewModel: ObservableObject {
 }
 
 extension UserContentPreListViewModel{
-    // API
-    // GET
-    // 글 조회 API - 글 조회 조회 API(fetch)
-    // 게시글 조회용
-    @MainActor
-    func fetchGetContentPreView() async {
-        do {
-            let ContentPreView = try await getContentPreView()
-            print(ContentPreView)
-//            boards = Board(contentPreview: ContentPreView)
-        } catch {
-            print("Error: \(error)")
-        }
-    }
+
 }
-func getContentPreView() async throws -> BoardCellResponse.Boards {
-    //URL 생성
-    var urlComponents = ApiEndpoints.getBasicUrlComponents()
-    urlComponents.path = ApiEndpoints.Path.members.rawValue
 
-    guard let url = urlComponents.url else {
-        print("Error: cannot create URL")
-        throw ExchangeRateError.cannotCreateURL
-    }
-    var request = URLRequest(url: url)
-    request.httpMethod = "GET"
-    request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
-    
-    let (data, response) = try await URLSession.shared.data(for: request)
-    print(data)
-    print(response)
-    
-    if let response = response as? HTTPURLResponse,
-       !(200...299).contains(response.statusCode) {
-        throw ExchangeRateError.badRequest
-    }
-
-
-    let decoder = JSONDecoder()
-    
-    let jsonDictionary = try decoder.decode(BaseResponse<BoardCellResponse.Boards>.self, from: data)
-    
-    var contentPreView: BoardCellResponse.Boards
-    contentPreView = jsonDictionary.result
-    
-    return contentPreView
-}

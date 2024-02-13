@@ -14,6 +14,7 @@ struct ApiTestView: View {
     @State private var goToTodoListAPITestView: Bool = false
     @State private var goToUniversityAPITestView: Bool = false
     @State private var goToScheduleAPITestView: Bool = false
+    @State private var goToBoardAPITestView: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -54,6 +55,7 @@ struct ApiTestView: View {
                 .navigationDestination(isPresented: $goToTodoListAPITestView) {
                     TodoListAPITestView()
                 }
+                
                 Button {
                     goToUniversityAPITestView.toggle()
                 } label: {
@@ -62,6 +64,7 @@ struct ApiTestView: View {
                 .navigationDestination(isPresented: $goToUniversityAPITestView) {
                     UniversityAPITestView()
                 }
+                
                 Button {
                     goToScheduleAPITestView.toggle()
                 } label: {
@@ -69,6 +72,15 @@ struct ApiTestView: View {
                 }
                 .navigationDestination(isPresented: $goToScheduleAPITestView) {
                     ScheduleAPITestView()
+                }
+                
+                Button {
+                    goToBoardAPITestView.toggle()
+                } label: {
+                    Text("게시판 API 테스트 뷰")
+                }
+                .navigationDestination(isPresented: $goToBoardAPITestView) {
+                    BoardAPITestView()
                 }
             }
         }
