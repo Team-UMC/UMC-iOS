@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ToDoListCell: View {
     
-    @StateObject private var viewModel: ToDoListCellViewModel
+    @StateObject var viewModel: ToDoListCellViewModel
     @State private var showToDoEditSheet = false
     
     init(viewModel: ToDoListCellViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
+    @State var todoListId: String = ""
     
     var body: some View {
         ZStack {
