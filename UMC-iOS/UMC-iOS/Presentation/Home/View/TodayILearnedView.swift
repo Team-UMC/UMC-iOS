@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TodayILearnedView: View {
+    @State private var isClicked = false
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -41,6 +42,7 @@ struct TodayILearnedView: View {
                     
                     Button {
                         print("TILButton Clicked")
+                        isClicked.toggle()
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
@@ -53,5 +55,8 @@ struct TodayILearnedView: View {
             } // ZStack
         } // VStack
         .padding(.leading, 18)
+        .navigationDestination(isPresented: $isClicked) {
+            TILWriteUI(title: "", subtitle: "", content: "")
+        }
     }
 }

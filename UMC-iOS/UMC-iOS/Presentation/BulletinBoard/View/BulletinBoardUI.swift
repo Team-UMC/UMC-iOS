@@ -28,7 +28,7 @@ struct BulletinBoardUI: View {
                             .padding(.top,50)
                             .padding(.leading,30)
                             .padding(.bottom,30)
-
+                        
                         // 게시글 리스트
                         BulletinBoardList()
                             .padding(.leading, 16)
@@ -37,7 +37,7 @@ struct BulletinBoardUI: View {
                     Spacer()
                     
                     Button(action: {
-                        isWritingListActive = true
+//                        isWritingListActive.toggle()
                     }) {
                         Image("TILButton")
                             .resizable()
@@ -46,28 +46,22 @@ struct BulletinBoardUI: View {
                             .padding(.leading, 300)
                     }
                     .buttonStyle(PlainButtonStyle())
-                    
-                    // WritingList로 이동하는 NavigationLink
-                    NavigationLink(destination: WritingList(title: "제목", content: ""), isActive: $isWritingListActive) {
-                        EmptyView()
+                    .navigationDestination(isPresented: $isWritingListActive) {
+                        WritingList(title: "", content: "")
                     }
-                  
+                    
                 }
                 VStack{
                     
                     Spacer()
                     
-                 //   Image("bottomBarImage")
-                   //     .resizable()
-                     //   .frame(width: 400, height: 80)
-                       
-                     
+                    
                     
                 }
                 
             }
-                .navigationBarHidden(true)
-                .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

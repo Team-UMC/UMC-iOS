@@ -16,93 +16,94 @@ struct BulletinBoardButton: View {
     @State private var isSearchUIActive = false
     @State private var isEditingProfile = false
     
+    @State private var isClicked = false
     
     var body: some View {
-            // FirstButton
-            VStack{
-                HStack{
-                    Button("학교") {
-                        showButtons1.toggle()
-                        showButtons2 = false
-                        selectedButton1 = nil
-                        isBulletinBoardNoticeVisible = false
-                    }
-                    .font(.system(size: 26))
-                    .bold()
-                    .foregroundColor(selectedButton1 == 0 ? Color("searchPurple") : Color.gray)
-                    .padding(.trailing, 20)
-                    
-                    Button("지부") {
-                        showButtons1 = false
-                        showButtons2.toggle()
-                        selectedButton1 = 1
-                        isBulletinBoardNoticeVisible = false
-                    }
-                    .font(.system(size: 26))
-                    .bold()
-                    .foregroundColor(selectedButton1 == 1 ? Color("searchPurple") : Color.gray)
-                    .padding(.trailing, 20)
-                    
-                    Button("연합") {
-                        showButtons1 = false
-                        showButtons2.toggle()
-                        selectedButton1 = 2
-                        isBulletinBoardNoticeVisible = false
-                    }
-                    .font(.system(size: 26))
-                    .bold()
-                    .foregroundColor(selectedButton1 == 2 ? Color("searchPurple") : Color.gray)
-                    .padding(.trailing, 20)
-                    
-                    Button("건의함") {
-                        showButtons1 = false
-                        showButtons2 = false
-                        selectedButton1 = 3
-                        isBulletinBoardNoticeVisible.toggle()
-                    }
-                    .font(.system(size: 26))
-                    .bold()
-                    .foregroundColor(selectedButton1 == 3 ? Color("searchPurple") : Color.gray)
-                    .padding(.trailing, 20)
-
-                    
-                    Button(action: {
-                        showButtons1 = false
-                        showButtons2 = false
-                        selectedButton1 = nil
-                        isBulletinBoardNoticeVisible = false
-                        isSearchUIActive = true
-                    }) {
-                        Image(systemName: "magnifyingglass")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(selectedButton1 == nil ? Color("searchPurple") : Color.gray)
-                    }
-                    .font(.system(size: 26))
-                    .bold()
-                    NavigationLink(destination: BulletinBoardSearchUI(), isActive:$isSearchUIActive){
-                        EmptyView()
-                    }
-                    .navigationBarBackButtonHidden(true)
-                                    
-                    Spacer()
+        // FirstButton
+        VStack{
+            HStack{
+                Button("학교") {
+                    showButtons1.toggle()
+                    showButtons2 = false
+                    selectedButton1 = nil
+                    isBulletinBoardNoticeVisible = false
                 }
+                .font(.system(size: 26))
+                .bold()
+                .foregroundColor(selectedButton1 == 0 ? Color("searchPurple") : Color.gray)
+                .padding(.trailing, 20)
                 
-                // SecondButton
-                if showButtons1 {
-                    ButtonGrid(buttons: ["공지사항", "자유게시판", "질문게시판", "이전기수게시판", "위크북게시판"], selectedButton: $selectedButton2)
+                Button("지부") {
+                    showButtons1 = false
+                    showButtons2.toggle()
+                    selectedButton1 = 1
+                    isBulletinBoardNoticeVisible = false
                 }
-                if showButtons2 {
-                    ButtonGrid(buttons: ["공지사항", "자유게시판", "질문게시판", "이전기수게시판"], selectedButton: $selectedButton2)
-                }
+                .font(.system(size: 26))
+                .bold()
+                .foregroundColor(selectedButton1 == 1 ? Color("searchPurple") : Color.gray)
+                .padding(.trailing, 20)
                 
-                if isBulletinBoardNoticeVisible {
-                    //Spacer()
-                    BulletinBoardNotice()
+                Button("연합") {
+                    showButtons1 = false
+                    showButtons2.toggle()
+                    selectedButton1 = 2
+                    isBulletinBoardNoticeVisible = false
                 }
+                .font(.system(size: 26))
+                .bold()
+                .foregroundColor(selectedButton1 == 2 ? Color("searchPurple") : Color.gray)
+                .padding(.trailing, 20)
+                
+                Button("건의함") {
+                    showButtons1 = false
+                    showButtons2 = false
+                    selectedButton1 = 3
+                    isBulletinBoardNoticeVisible.toggle()
+                }
+                .font(.system(size: 26))
+                .bold()
+                .foregroundColor(selectedButton1 == 3 ? Color("searchPurple") : Color.gray)
+                .padding(.trailing, 20)
+                
+                
+                Button(action: {
+                    showButtons1 = false
+                    showButtons2 = false
+                    selectedButton1 = nil
+                    isBulletinBoardNoticeVisible = false
+                    isSearchUIActive = true
+                }) {
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(selectedButton1 == nil ? Color("searchPurple") : Color.gray)
+                }
+                .font(.system(size: 26))
+                .bold()
+                .navigationDestination(isPresented: $isClicked) {
+                    BulletinBoardSearchUI()
+                }
+                .navigationBarBackButtonHidden(true)
+                
+                Spacer()
+            }
+            
+            // SecondButton
+            if showButtons1 {
+                ButtonGrid(buttons: ["공지사항", "자유게시판", "질문게시판", "이전기수게시판", "위크북게시판"], selectedButton: $selectedButton2)
+            }
+            if showButtons2 {
+                ButtonGrid(buttons: ["공지사항", "자유게시판", "질문게시판", "이전기수게시판"], selectedButton: $selectedButton2)
+            }
+            
+            if isBulletinBoardNoticeVisible {
+                //Spacer()
+                BulletinBoardNotice()
+            }
         }
-       
+        
     }
 }
 

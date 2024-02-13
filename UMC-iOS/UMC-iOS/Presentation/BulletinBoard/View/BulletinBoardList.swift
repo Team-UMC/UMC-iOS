@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BulletinBoardList: View {
     @State private var contentData: [Int] = Array(0..<10)
-
+    
     var body: some View {
         List {
             ForEach(contentData, id: \.self) { index in
@@ -17,7 +17,7 @@ struct BulletinBoardList: View {
                     .listRowInsets(EdgeInsets())
                     .padding(.bottom,20)
                     .padding(.top,20)
-                    
+                
             }
         }
         .listStyle(PlainListStyle())
