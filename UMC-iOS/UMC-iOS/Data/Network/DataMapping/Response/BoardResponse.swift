@@ -20,6 +20,12 @@ struct BoardResponse: Codable {
         
     }
     
+
+    struct BoardId: Codable {
+        let id: Int?
+        let boardId: String
+    }
+    
     
 }
     extension BoardResponse {

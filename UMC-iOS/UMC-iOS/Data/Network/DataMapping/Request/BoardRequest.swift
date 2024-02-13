@@ -8,5 +8,11 @@
 import Foundation
 
 struct BoardRequest {
+    struct CreateBoard: Codable {
+        let title: String
+        let content: String
+        let host: String
+        let board: String
+    }
     
 }

@@ -202,6 +202,7 @@
 		F3935D2C2B7B75B70036E77A /* BoardNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */; };
 		F3935D302B7B76A10036E77A /* BoardAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */; };
 		F3935D322B7B7C850036E77A /* BoardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D312B7B7C850036E77A /* BoardRequest.swift */; };
+		F3935D342B7B83270036E77A /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D332B7B83270036E77A /* Data+Extension.swift */; };
 		F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */; };
 		F3B689312B774C3F00A4FBB5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */; };
 		F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689342B7756FC00A4FBB5 /* TodoList.swift */; };
@@ -436,6 +437,7 @@
 		F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNetwork.swift; sourceTree = "<group>"; };
 		F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAPITestView.swift; sourceTree = "<group>"; };
 		F3935D312B7B7C850036E77A /* BoardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRequest.swift; sourceTree = "<group>"; };
+		F3935D332B7B83270036E77A /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListResponse.swift; sourceTree = "<group>"; };
 		F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
@@ -624,6 +626,7 @@
 		F34D2BCD2B73671700491EBE /* UMC-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F34D2C382B73675300491EBE /* Extension */,
 				F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */,
 				F34D2D6D2B73698400491EBE /* Info.plist */,
 				F34D2D552B7367DC00491EBE /* Domain */,
@@ -872,7 +875,6 @@
 				F34D2C362B73675300491EBE /* SettingBackButton.swift */,
 				F34D2C372B73675300491EBE /* DropDownPicker.swift */,
 				44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */,
-				F34D2C382B73675300491EBE /* Extension */,
 				F34D2C3A2B73675300491EBE /* CirclePlusButton.swift */,
 				F34D2C3B2B73675300491EBE /* CircleCheckButton.swift */,
 				F34D2C3C2B73675300491EBE /* SideMenuNavigationButton.swift */,
@@ -889,6 +891,7 @@
 				F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */,
 				F3B689362B77681700A4FBB5 /* String+Extension.swift */,
 				F3B689382B776F5600A4FBB5 /* Array+Extension.swift */,
+				F3935D332B7B83270036E77A /* Data+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1667,6 +1670,7 @@
 				F34D2D602B7367DC00491EBE /* Member.swift in Sources */,
 				F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */,
 				F3B689392B776F5600A4FBB5 /* Array+Extension.swift in Sources */,
+				F3935D342B7B83270036E77A /* Data+Extension.swift in Sources */,
 				F3DABB512B755BE200BBF00B /* UserData.swift in Sources */,
 				F34D2D112B73675300491EBE /* HistoryProjectView.swift in Sources */,
 				449DB8632B77A74900415113 /* BoardResponse.swift in Sources */,

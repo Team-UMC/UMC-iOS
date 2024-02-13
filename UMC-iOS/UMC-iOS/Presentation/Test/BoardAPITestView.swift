@@ -19,6 +19,14 @@ struct BoardAPITestView: View {
             } label: {
                 Text("특정 게시판의 게시글 목록 조회")
             }
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchCreateBoard(request: BoardRequest.CreateBoard(title: "TEST", content: "TEST", host: "CENTER", board: "NOTICE"), files: [])
+                }
+            } label: {
+                Text("게시판 작성")
+            }
         }
     }
 }

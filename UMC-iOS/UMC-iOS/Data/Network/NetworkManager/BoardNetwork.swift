@@ -7,6 +7,58 @@
 
 import Foundation
 
+extension NSMutableData {
+    func appendString(_ string: String) {
+        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
+        append(data!)
+    }
+}
+
+extension Data {
+    static func createJsonStringData(boundary: String, data: Data) -> Data {
+        let body = NSMutableData()
+        let boundaryPrefix = "--\(boundary)\r\n"
+
+        body.appendString(boundaryPrefix)
+        body.appendString("Content-Disposition: form-data; name=\"request\"\r\n")
+        body.appendString("Content-Type: application/json\r\n\r\n")
+        body.append(data)
+        body.appendString("\r\n")
+        body.appendString("--".appending(boundary.appending("--")))
+
+        return body as Data
+    }
+    
+    static func createFileData(boundary: String, data: Data, mimeType: String, fileName: String) -> Data {
+        let body = NSMutableData()
+        let boundaryPrefix = "--\(boundary)\r\n"
+
+        body.appendString(boundaryPrefix)
+        body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(fileName)\"\r\n")
+        body.appendString("Content-Type: \(mimeType)\r\n\r\n")
+        body.append(data)
+        body.appendString("\r\n")
+        body.appendString("--".appending(boundary.appending("--")))
+
+        return body as Data
+    }
+    
+    func combineData(datas: [Data]) -> Data {
+        let combinedData = NSMutableData()
+        
+        for data in datas {
+            combinedData.append(data)
+        }
+        return combinedData as Data
+    }
+}
+
+struct FileInfo {
+    var data: Data
+    var fileName: String
+    var mimeType: String
+}
+
 class BoardNetwork: ObservableObject {
     
     // API
@@ -61,5 +113,112 @@ class BoardNetwork: ObservableObject {
         specificBoards = jsonDictionary.result
         
         return specificBoards
+    }
+    
+    // POST
+    
+    // 게시판 API - 게시글 작성 API(fetch)
+    @MainActor
+    func fetchCreateBoard(request: BoardRequest.CreateBoard, files: [FileInfo]) async {
+        do {
+            print("fetchCreateBoard : \(request)")
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            print(request)
+            let sendData = try encoder.encode(request)
+            if let jsonString = String(data: sendData, encoding: .utf8) {
+                print("fetchCreateTodoList : \(jsonString)")
+            }
+            print(request)
+            
+            
+            
+            let response = try await createBoard(sendData: sendData, files: [])
+//            print(response)
+            
+
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+
+    
+
+
+    
+    // 게시판 API - 게시글 작성 API
+    func createBoard(sendData: Data, files: [FileInfo]) async throws -> BoardResponse.BoardId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let boundary = "Boundary-\(UUID().uuidString)"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        
+        
+        
+        // -------------
+        
+//        var body = Data()
+////        request.httpBody = createjson
+//        
+//        // 이미지 추가
+//        for file in files {
+//            
+//        }
+        
+//        if let sendData = sendData {
+//            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+//            body.append("Content-Disposition: form-data; name=\"file\"; filename=\"image.jpg\"\r\n".data(using: .utf8)!)
+//            body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+//            body.append(sendData)
+//            body.append("\r\n".data(using: .utf8)!)
+//        }
+        var body = NSMutableData()
+        
+        
+        for file in files {
+            var fileData = Data.createFileData(boundary: boundary, data: file.data, mimeType: file.mimeType, fileName: file.fileName)
+            body.append(fileData)
+        }
+
+        // JSON 데이터 추가
+        var jsonData = Data.createJsonStringData(boundary: boundary, data: sendData)
+        body.append(jsonData)
+        
+        request.httpBody = body as Data
+        
+        // ----------
+        
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.BoardId>.self, from: data)
+        
+        var boardId: BoardResponse.BoardId
+        boardId = jsonDictionary.result
+        print(boardId)
+        
+        return boardId
     }
 }
