@@ -8,51 +8,54 @@
     import SwiftUI
 
     struct ManagerSetting:View {
-        @State private var isPressed: Bool = false
-        @State private var isPressed2: Bool = false
-        @State private var isPressed3: Bool = false
+        
+        private let buttonNames: [String] = ["공지사항 핀 설정", "캘린더 추가", "챌린저 정보 변경", "히스토리 추가"]
+        
+        @State private var isPressed: [Bool] = [false, false, false, false]
+        
         @Environment(\.dismiss) private var dismiss
         
         var body: some View {
-                VStack{
-                    Button(action: {
-                        isPressed.toggle()
-                    }, label: {Text("공지사항 핀 설정")
-                            .foregroundStyle(.black)
-                        Spacer()
-                    })
-                    .padding(.vertical, 16)
-                    .navigationDestination(isPresented: $isPressed){ ManagerPin()}
-                    
-                    Divider()
-                    
-                    Button(action: {
-                        isPressed2.toggle()
-                    }, label: {Text("캘린더 추가")
-                            .foregroundStyle(.black)
-                        Spacer()
-                    })
-                    .padding(.vertical, 16)
-                    .navigationDestination(isPresented: $isPressed2){ ManagerCalender()}
-                    
-                    Divider()
-                    
-                    Button(action: {
-                        isPressed3.toggle()
-                    }, label: {Text("챌린저 정보 변경")
-                            .foregroundStyle(.black)
-                        Spacer()
-                    })
-                    .padding(.vertical, 16)
-                    .navigationDestination(isPresented: $isPressed3){ ManagerInfo()}
-                    
-                    Divider()
-                    Spacer()
-                }
-                .padding(16)
-                
             
-                .modifier(SettingBackButton(title: "운영진 설정", onDismiss: { dismiss() }, showTrailingItem: false))
+            VStack(spacing: 0) {
+                
+                ForEach(Array(buttonNames.enumerated()), id: \.1) { index, name in
+                    
+                    VStack(spacing: 0) {
+                        
+                        HStack(spacing: 0) {
+                            
+                            Button {
+                                print("\(name) Button Tapped")
+                                isPressed[index].toggle()
+                            } label: {
+                                Text(name)
+                                    .font(.system(size: 16))
+                                    .fontWeight(.regular)
+                                    .kerning(-1.5)
+                                    .foregroundColor(.black)
+                                    .padding(.vertical, 18.5)
+                            } // Button
+                            .navigationDestination(isPresented: $isPressed[index]){ ManagerCalender() }
+                            
+                            Spacer()
+                            
+                        } // HStack
+                        
+                        Divider().foregroundColor(Color.settingDivider)
+                        
+                    } // VStack
+
+                } // ForEach
+                
+                Spacer()
+                
+            } // VStack
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
         }
     }
 
+#Preview {
+    ManagerSetting()
+}
