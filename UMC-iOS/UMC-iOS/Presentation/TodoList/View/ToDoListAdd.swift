@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ToDoListAdd: View {
-    @ObservedObject private var viewModel: ToDoListCellViewModel
+    
+    @ObservedObject var viewModel = TodoListViewModel()
+    
+    // 추후 삭제.
+    @ObservedObject private var cellViewModel: ToDoListCellViewModel
     
     init(viewModel: ToDoListCellViewModel) {
-            self._viewModel = ObservedObject(wrappedValue: viewModel)
-        }
+        self._cellViewModel = ObservedObject(wrappedValue: viewModel)
+    }
+    @State var title: String = ""
+    @State var todoicon: String = ""
     
     var body: some View {
         ZStack{
@@ -28,20 +34,24 @@ struct ToDoListAdd: View {
                         .frame(width:30, height: 30)
                         .cornerRadius(6)
                         .padding(.leading,24)
-                    
-                    Text("🌕")
-                        .padding(.leading,24)
+                        .overlay(
+                            TextField("🌕",text:$todoicon)
+                                .padding(.leading,27)
+                        )
                 }
                 
-                TextField("할일을 입력해주세요.",text: $viewModel.toDoTitle)
+                TextField("할일을 입력해주세요.",text: $title)
                     .foregroundColor(Color("textColor"))
                     .font(.system(size: 12))
                     .padding(.leading,10)
                     .frame(width:220)
                 
                 Button(action: {
+                    Task {
+                        // 추후 deadline 수정
+                        await viewModel.fetchCreateTodoList(todoInfo: TodoListRequest.CreateTodo(title: title, deadline: "2024-02-10T14:35:03"))
+                    }
                     print("추가버튼을 눌렀습니다")
-                    //시간정하는 곳으로 이동
                 }) {
                     Text("추가")
                         .font(.system(size: 12))
@@ -50,17 +60,18 @@ struct ToDoListAdd: View {
                         .foregroundColor(Color("searchPurple"))
                         .background(.white)
                         .cornerRadius(12)
-
+                    
                 }
+                .padding(.leading,-10)
                 
                 Spacer()
             }
             .padding()
             
-
-                
+            
+            
         }
-
+        
         
     }
 }

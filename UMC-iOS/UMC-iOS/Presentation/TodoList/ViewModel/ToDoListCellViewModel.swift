@@ -19,12 +19,6 @@ class ToDoListCellViewModel: ObservableObject {
     }
 }
 
-class ToDoListViewModel: ObservableObject {
-    @Published var toDoList: [ToDoListCellViewModel] = []
 
-    func addNewCell(title: String, time: String, todoIcon: String) {
-        let newCellViewModel = ToDoListCellViewModel(toDoTitle: title, time: time, todoIcon: todoIcon)
-        toDoList.append(newCellViewModel)
-    }
-}
+
 

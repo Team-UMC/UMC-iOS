@@ -11,38 +11,58 @@ struct ApiTestView: View {
     @ObservedObject var userProfileViewModel = UserProfileViewModel()
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
+    @State private var goToTodoListAPITestView: Bool = false
+    @State private var goToUniversityAPITestView: Bool = false
     
     var body: some View {
-        VStack {
-            Button {
-                print(String.currentLocalDateToString())
-            } label: {
-                Text(String.currentLocalDateToString())
-            }
-            
-            //apple login button
-            socialLoginViewModel.appleLoginButton() {
-                loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken) {
+        NavigationStack {
+            VStack {
+                Button {
+                    print(String.currentLocalDateToString())
+                } label: {
+                    Text(String.currentLocalDateToString())
                 }
-            }
-            
-            //kakao login button
-            Button {
                 
-//                socialLoginViewModel.kakaoLogin(UMCUser: loginViewModel.member) {}
-            } label: {
-                Text("kakaoLogin")
-            }
-            
-            Button {
-                Task {
-                    await userProfileViewModel.fetchGetUserProfile()
+                //apple login button
+                socialLoginViewModel.appleLoginButton() {
+                    loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken) {
+                    }
                 }
-            } label: {
-                Text("UserProfileViewModel.")
+                
+                //kakao login button
+                Button {
+                    
+                    //                socialLoginViewModel.kakaoLogin(UMCUser: loginViewModel.member) {}
+                } label: {
+                    Text("kakaoLogin")
+                }
+                
+                Button {
+                    Task {
+                        await userProfileViewModel.fetchGetUserProfile()
+                    }
+                } label: {
+                    Text("유저 프로필 조회")
+                }
+                
+                Button {
+                    goToTodoListAPITestView.toggle()
+                } label: {
+                    Text("투두리스트 API 테스트 뷰")
+                }
+                .navigationDestination(isPresented: $goToTodoListAPITestView) {
+                    TodoListAPITestView()
+                }
+                Button {
+                    goToUniversityAPITestView.toggle()
+                } label: {
+                    Text("대학교 API 테스트 뷰")
+                }
+                .navigationDestination(isPresented: $goToUniversityAPITestView) {
+                    UniversityAPITestView()
+                }
             }
         }
-        
     }
 }
 

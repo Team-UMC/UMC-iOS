@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ToDoEditSecondActionSheet: View {
+    @ObservedObject var viewModel = TodoListViewModel()
+    @ObservedObject private var cellViewModel: ToDoListCellViewModel
     
     @State private var editActionSheetVisible = false
     @StateObject private var toDoListCellViewModel = ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "🌕")
+    
+    init(viewModel: ToDoListCellViewModel) {
+            self._cellViewModel = ObservedObject(wrappedValue: viewModel)
+        }
+    
+    @State private var title: String = ""
+    @State private var todoListId: String = ""
     
     var body: some View {
         ZStack{
@@ -87,7 +96,9 @@ struct ToDoEditSecondActionSheet: View {
                 }
                 HStack{
                     Button(action: {
-                        
+                        Task {
+                            await viewModel.fetchDeleteTodoList(todoListId: TodoListRequest.DeleteTodo(todoListId: todoListId))
+                        }
                     }) {
                         Text("삭제")
                             .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
@@ -101,6 +112,9 @@ struct ToDoEditSecondActionSheet: View {
                     
                     Button(action: {
                         editActionSheetVisible.toggle()
+                        Task {
+                            await viewModel.fetchUpdateTodoList(todoListId: todoListId, todoInfo: TodoListRequest.UpdateTodo(title: title, deadline: "2024-02-10T14:35:03"))
+                        }
                     }) {
                         Text("완료")
                             .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
@@ -111,7 +125,7 @@ struct ToDoEditSecondActionSheet: View {
                             .cornerRadius(12)
                     }
                     .sheet(isPresented: $editActionSheetVisible) {
-                        ToDoEditSecondActionSheet()
+                        ToDoEditSecondActionSheet(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
                     }
                 }
             }
@@ -120,7 +134,7 @@ struct ToDoEditSecondActionSheet: View {
 }
 
 #Preview {
-    ToDoEditSecondActionSheet()
+    ToDoEditSecondActionSheet(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
 }
 
 

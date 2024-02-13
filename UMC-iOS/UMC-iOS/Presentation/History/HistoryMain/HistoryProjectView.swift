@@ -87,6 +87,9 @@ struct HistoryProjectView: View {
         .padding(.vertical, 10)
         .background(Color.white)
         .cornerRadius(12.0)
+        .onTapGesture {
+            print("HistoryProjectView Tapped")
+        }
     }
 }
 

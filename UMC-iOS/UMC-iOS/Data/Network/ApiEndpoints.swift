@@ -33,8 +33,18 @@ enum ApiEndpoints {
         case boards_comments_member_comments_web = "/boards/comments/member/comments/web"
         
         // todoList
-        case todoList = "/to-do-lists"
-        case todoList_update = "/to-do-lists/update"
+        case todoLists = "/to-do-lists"
+        case todoLists_update = "/to-do-lists/update"
+        
+        // university
+        case universities = "/universities"
+        case universities_details = "/universities/details"
+        case universities_mascot = "/universities/mascot"
+        case universities_members = "/universities/members"
+        case universities_ranks = "/universities/ranks"
+        
+        // staff-university
+        case staff_universities = "/staff/universities"
     }
 }
 
