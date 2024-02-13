@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CircleFillButton: View {
+    
+    
     var title: String
     @State var isChecked: Bool = false
     
@@ -15,27 +17,37 @@ struct CircleFillButton: View {
         Button(action: {
             isChecked.toggle()
         }) {
-            HStack {
+            HStack(spacing: 4) {
                 Text(title)
-                    .foregroundStyle(isChecked ? .main : Color(.lightGray))
-                    .font(.system(size: 16))
+                    .foregroundColor(isChecked ? .main : Color.buttonDisabled)
+                    .font(.system(size: 14))
+                    .fontWeight(.regular)
+                    .kerning(-0.5)
                 
                 if isChecked {
                     ZStack{
-                        Image(systemName: "circle")
-                            .resizable()
+                        Circle()
                             .frame(width: 24, height: 24)
-                            .foregroundStyle(.main)
+                            .foregroundColor(Color.white)
+                            .overlay(
+                            RoundedRectangle(cornerRadius: 90)
+                                .stroke(Color.main, lineWidth: 1)
+                            )
+                        
                         Image(systemName: "circle.fill")
                             .resizable()
                             .frame(width: 12, height: 12)
                             .foregroundStyle(.main)
                     }
                 } else{
-                    Image(systemName: "circle")
-                        .resizable()
+                    Circle()
                         .frame(width: 24, height: 24)
-                        .foregroundStyle(Color(.lightGray))
+                        .foregroundColor(Color.white)
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 90)
+                            .stroke(Color.buttonDisabled, lineWidth: 1)
+                        )
+                        
                 }
             }
         }

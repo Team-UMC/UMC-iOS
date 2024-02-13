@@ -15,6 +15,17 @@ struct HomeNavigationBarView: View {
                                 "friendsButtonImage",
                                 "noticeButtonImage",
                                 "hammerButtonImage"]
+    
+    @Binding var isNavigationBtnTapped: [Bool]
+    private let buttonViews: [AnyView] = [
+    
+        AnyView(ManagerSetting()), // 추후 수정 예정
+        AnyView(ManagerSetting()), // 추후 수정 예정
+        AnyView(ManagerSetting()), // 추후 수정 예정
+        AnyView(ManagerSetting())
+    
+    ]
+    
     var body: some View {
         HStack {
             Button { // 왼쪽 메뉴 버튼
@@ -34,6 +45,9 @@ struct HomeNavigationBarView: View {
                 ForEach(1..<imageNames.count, id: \.self) { index in
                     Button {
                         print("\(imageNames[index]) Clicked")
+                        print(index - 1)
+                        self.isNavigationBtnTapped[index-1].toggle()
+                        print(isNavigationBtnTapped)
                     } label: {
                         Image(imageNames[index])
                             .resizable()
@@ -41,9 +55,17 @@ struct HomeNavigationBarView: View {
                             .frame(width: 20, height: 20)
                             .padding(.leading, 16)
                     } // Button
+                    .navigationDestination(isPresented: $isNavigationBtnTapped[index - 1]){
+                        buttonViews[index - 1]
+                    }
+                    
                 }
             } // HStack
             .padding(.trailing, 20)
         } // HStack
     }
+}
+
+#Preview {
+    HomeView()
 }
