@@ -11,48 +11,65 @@
         
         private let buttonNames: [String] = ["공지사항 핀 설정", "캘린더 추가", "챌린저 정보 변경", "히스토리 추가"]
         
+        private let buttonViews: [AnyView] = [
+        
+            AnyView(ManagerPin()),
+            AnyView(ManagerCalender()),
+            AnyView(ManagerInfo()),
+            AnyView(HistoryRegisterView())
+        
+        ]
+        
         @State private var isPressed: [Bool] = [false, false, false, false]
+        
         
         @Environment(\.dismiss) private var dismiss
         
         var body: some View {
             
-            VStack(spacing: 0) {
+            NavigationStack {
                 
-                ForEach(Array(buttonNames.enumerated()), id: \.1) { index, name in
+                VStack(spacing: 0) {
                     
-                    VStack(spacing: 0) {
+                    ForEach(Array(buttonNames.enumerated()), id: \.1) { index, name in
                         
-                        HStack(spacing: 0) {
+                        VStack(spacing: 0) {
                             
-                            Button {
-                                print("\(name) Button Tapped")
-                                isPressed[index].toggle()
-                            } label: {
-                                Text(name)
-                                    .font(.system(size: 16))
-                                    .fontWeight(.regular)
-                                    .kerning(-1.5)
-                                    .foregroundColor(.black)
-                                    .padding(.vertical, 18.5)
-                            } // Button
-                            .navigationDestination(isPresented: $isPressed[index]){ ManagerCalender() }
+                            HStack(spacing: 0) {
+                                
+                                Button {
+                                    print("\(name) Button Tapped")
+                                    isPressed[index].toggle()
+                                    print("\(buttonViews[index])")
+                                } label: {
+                                    Text(name)
+                                        .font(.system(size: 16))
+                                        .fontWeight(.regular)
+                                        .kerning(-1.5)
+                                        .foregroundColor(.black)
+                                        .padding(.vertical, 18.5)
+                                } // Button
+                                .navigationDestination(isPresented: $isPressed[index]){ buttonViews[index] }
+                                
+                                Spacer()
+                                
+                            } // HStack
                             
-                            Spacer()
+                            Divider().foregroundColor(Color.settingDivider)
                             
-                        } // HStack
-                        
-                        Divider().foregroundColor(Color.settingDivider)
-                        
-                    } // VStack
+                        } // VStack
 
-                } // ForEach
+                    } // ForEach
+                    
+                    Spacer()
+                    
+                } // VStack
+                .padding(.vertical, 8)
+                .padding(.horizontal, 16)
+                // .modifier(SettingBackButton(title: "운영진 설정", onDismiss: { dismiss() }, showTrailingItem: true))
                 
-                Spacer()
-                
-            } // VStack
-            .padding(.vertical, 8)
-            .padding(.horizontal, 16)
+            } // NavigationStack
+            
         }
     }
 
