@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HistorySearchView: View {
+    
     @State var projectTitle: String = ""
+    @Binding var isActice: Bool
     
     var body: some View {
         VStack {
@@ -38,6 +40,7 @@ struct HistorySearchView: View {
                 // 취소 버튼
                 Button {
                     print("HistorySearchCancelButton Tapped")
+                    self.isActice = false
                 } label: {
                     Text("취소")
                         .font(.system(size: 14))
@@ -63,6 +66,5 @@ struct HistorySearchView: View {
 }
 
 #Preview {
-    HistorySearchView()
+    HistoryView()
 }
-

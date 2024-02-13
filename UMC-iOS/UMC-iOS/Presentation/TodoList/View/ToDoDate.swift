@@ -49,6 +49,3 @@ struct TodoDate_Previews: PreviewProvider {
     }
 }
 
-
-
-

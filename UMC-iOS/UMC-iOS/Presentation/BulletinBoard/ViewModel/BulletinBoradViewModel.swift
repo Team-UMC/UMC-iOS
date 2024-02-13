@@ -9,77 +9,57 @@ import Foundation
 import Combine
 
 class UserContentPreListViewModel: ObservableObject {
-    @Published var profileImage: String = ""
-    @Published var userName: String = ""
-    @Published var userNickname: String = ""
-    @Published var contentTitle: String = ""
-    @Published var contentPreview: String = ""
-    @Published var likeCount: Int = 0
-    @Published var commentCount: Int = 0
-    @Published var viewingCount: Int = 0
-    @Published var timeline: Int = 0
-    @Published var contentImage: String = ""
-
-    private var cancellables: Set<AnyCancellable> = []
-
-    init() {
-        fetchDataFromServer()
-    }
-
-    func fetchDataFromServer() {
-        fetchDataPublisher()
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: { [weak self] data in
-                      self?.updateUI(with: data)
-                  })
-            .store(in: &cancellables)
-    }
-
-    func fetchDataPublisher() -> AnyPublisher<YourDataType, Error> {
-        return Just(DummyData.sampleData)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func updateUI(with data: YourDataType) {
-        profileImage = data.profileImage
-        userName = data.userName
-        userNickname = data.userNickname
-        contentTitle = data.contentTitle
-        contentPreview = data.contentPreview
-        likeCount = data.likeCount
-        commentCount = data.commentCount
-        viewingCount = data.viewingCount
-        timeline = data.timeline
-        contentImage = data.contentImage
-    }
+    
+    @Published var member = Member()
+    @Published var boards = Boards()
+    
 }
 
-
-struct YourDataType {
-    var profileImage: String
-    var userName: String
-    var userNickname: String
-    var contentTitle: String
-    var contentPreview: String
-    var likeCount: Int
-    var commentCount: Int
-    var viewingCount: Int
-    var timeline: Int
-    var contentImage: String
+extension UserContentPreListViewModel{
+    // API
+    // GET
+    // 글 조회 API - 글 조회 조회 API(fetch)
+    // 게시글 조회용
+    @MainActor
+    func fetchGetContentPreView() async {
+        do {
+            let ContentPreView = try await getContentPreView()
+            print(ContentPreView)
+            boards = Boards(contentPreview: ContentPreView)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
 }
+func getContentPreView() async throws -> BoardCellResponse.Boards {
+    //URL 생성
+    var urlComponents = ApiEndpoints.getBasicUrlComponents()
+    urlComponents.path = ApiEndpoints.Path.members.rawValue
 
-struct DummyData {
-    static let sampleData = YourDataType(
-        profileImage: "profileImage",
-        userName: "양유진",
-        userNickname: "더기",
-        contentTitle: "규칙적인 생활 그거 어떻게 하냐고..",
-        contentPreview: "대체 게시판은 언제 맘에 들까.. 음음음 그러게 정말 언제 마음에 들까까... 알다가도 모르겠다.... 흑흑...",
-        likeCount: 123,
-        commentCount: 4,
-        viewingCount: 4,
-        timeline: 1,
-        contentImage: "ContentImage"
-    )
+    guard let url = urlComponents.url else {
+        print("Error: cannot create URL")
+        throw ExchangeRateError.cannotCreateURL
+    }
+    var request = URLRequest(url: url)
+    request.httpMethod = "GET"
+    request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+    
+    let (data, response) = try await URLSession.shared.data(for: request)
+    print(data)
+    print(response)
+    
+    if let response = response as? HTTPURLResponse,
+       !(200...299).contains(response.statusCode) {
+        throw ExchangeRateError.badResponse
+    }
+
+
+    let decoder = JSONDecoder()
+    
+    let jsonDictionary = try decoder.decode(BaseResponse<BoardCellResponse.Boards>.self, from: data)
+    
+    var contentPreView: BoardCellResponse.Boards
+    contentPreView = jsonDictionary.result
+    
+    return contentPreView
 }
