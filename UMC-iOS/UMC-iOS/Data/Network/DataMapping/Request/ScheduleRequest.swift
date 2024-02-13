@@ -11,4 +11,14 @@ struct ScheduleRequest {
     struct GetCalendar: Codable {
         let date: String
     }
+    
+    struct CreateSchedule: Codable {
+        let title: String
+        let content: String
+        let startDateTime: String
+        let endDateTime: String
+        let semesterPermission: [String]
+        let hostType: String
+        let placeSetting: String
+    }
 }

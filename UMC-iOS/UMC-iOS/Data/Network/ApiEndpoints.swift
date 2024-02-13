@@ -45,6 +45,9 @@ enum ApiEndpoints {
         
         // staff-university
         case staff_universities = "/staff/universities"
+        
+        // staff-schedule
+        case staff_schedules = "/staff/schedules"
     }
 }
 

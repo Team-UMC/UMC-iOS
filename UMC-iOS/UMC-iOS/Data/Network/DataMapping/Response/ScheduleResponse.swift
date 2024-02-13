@@ -33,6 +33,11 @@ class ScheduleResponse {
         
     }
     
+    struct ScheduleId: Codable {
+        let id: Int?
+        let scheduleId: String
+    }
+    
 }
 
 extension ScheduleResponse {
