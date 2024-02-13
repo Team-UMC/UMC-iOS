@@ -20,55 +20,52 @@
         
         ]
         
-        @State private var isPressed: [Bool] = [false, false, false, false]
+        @State private var isTapped: [Bool] = [false, false, false, false]
         
         
         @Environment(\.dismiss) private var dismiss
         
         var body: some View {
             
-            NavigationStack {
+            VStack(spacing: 0) {
                 
-                VStack(spacing: 0) {
+                ForEach(Array(buttonNames.enumerated()), id: \.1) { index, name in
                     
-                    ForEach(Array(buttonNames.enumerated()), id: \.1) { index, name in
+                    VStack(spacing: 0) {
                         
-                        VStack(spacing: 0) {
+                        HStack(spacing: 0) {
                             
-                            HStack(spacing: 0) {
-                                
-                                Button {
-                                    print("\(name) Button Tapped")
-                                    isPressed[index].toggle()
-                                    print("\(buttonViews[index])")
-                                } label: {
-                                    Text(name)
-                                        .font(.system(size: 16))
-                                        .fontWeight(.regular)
-                                        .kerning(-1.5)
-                                        .foregroundColor(.black)
-                                        .padding(.vertical, 18.5)
-                                } // Button
-                                .navigationDestination(isPresented: $isPressed[index]){ buttonViews[index] }
-                                
-                                Spacer()
-                                
-                            } // HStack
+                            Button {
+                                print("\(name) Button Tapped")
+                                isTapped[index].toggle()
+                            } label: {
+                                Text(name)
+                                    .font(.system(size: 16))
+                                    .fontWeight(.regular)
+                                    .kerning(-1.5)
+                                    .foregroundColor(.black)
+                                    .padding(.vertical, 18.5)
+                            } // Button
+                            .navigationDestination(isPresented: $isTapped[index]){
+                                buttonViews[index]
+                            }
                             
-                            Divider().foregroundColor(Color.settingDivider)
+                            Spacer()
                             
-                        } // VStack
+                        } // HStack
+                        
+                        Divider().foregroundColor(Color.settingDivider)
+                        
+                    } // VStack
 
-                    } // ForEach
-                    
-                    Spacer()
-                    
-                } // VStack
-                .padding(.vertical, 8)
-                .padding(.horizontal, 16)
-                // .modifier(SettingBackButton(title: "운영진 설정", onDismiss: { dismiss() }, showTrailingItem: true))
+                } // ForEach
                 
-            } // NavigationStack
+                Spacer()
+                
+            } // VStack
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
+            .modifier(SettingBackButton(title: "운영진 설정", onDismiss: { dismiss() }, showTrailingItem: false))
             
         }
     }
