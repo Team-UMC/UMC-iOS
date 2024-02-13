@@ -12,7 +12,6 @@
 		4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204C2B7521620024476C /* ManagerPinRequest.swift */; };
 		4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */; };
 		427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427820502B75218F0024476C /* ManagerInfoResponce.swift */; };
-		449DB8612B77819D00415113 /* Boards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8602B77819D00415113 /* Boards.swift */; };
 		449DB8632B77A74900415113 /* BoardCellResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8622B77A74900415113 /* BoardCellResponse.swift */; };
 		44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */; };
 		44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
@@ -229,8 +228,6 @@
 		4278204C2B7521620024476C /* ManagerPinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerPinRequest.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerPinRequest.swift"; sourceTree = SOURCE_ROOT; };
 		4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerCalenderResponse.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerCalenderResponse.swift"; sourceTree = SOURCE_ROOT; };
 		427820502B75218F0024476C /* ManagerInfoResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerInfoResponce.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerInfoResponce.swift"; sourceTree = SOURCE_ROOT; };
-		449DB85F2B77817D00415113 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/teamUMC 오후 7.01.03/UMC-iOS/UMC-iOS/Config.xcconfig"; sourceTree = "<group>"; };
-		449DB8602B77819D00415113 /* Boards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Boards.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/teamUMC 오후 6.55.33/UMC-iOS/UMC-iOS/UMC-iOS/Domain/Entities/Boards.swift"; sourceTree = "<group>"; };
 		449DB8622B77A74900415113 /* BoardCellResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellResponse.swift; sourceTree = "<group>"; };
 		44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " BoardSearchLikedResultRequest.swift"; sourceTree = "<group>"; };
 		44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
@@ -552,7 +549,6 @@
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
-				449DB85F2B77817D00415113 /* Config.xcconfig */,
 				44CD3DC32B7949020089B04F /* Config.xcconfig */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
@@ -1258,7 +1254,6 @@
 				F34D2D902B74FC5100491EBE /* Role.swift */,
 				F3DABB522B756D2F00BBF00B /* SemesterPart.swift */,
 				F3B689342B7756FC00A4FBB5 /* TodoList.swift */,
-				449DB8602B77819D00415113 /* Boards.swift */,
 				F3B689472B77F38800A4FBB5 /* University.swift */,
 				F3B689492B77F3E000A4FBB5 /* Mascot.swift */,
 				F3B6894D2B780E3400A4FBB5 /* PointType.swift */,
@@ -1469,7 +1464,6 @@
 				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
 				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
-				449DB8612B77819D00415113 /* Boards.swift in Sources */,
 				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
 				F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */,
 				F34D2D332B73675300491EBE /* User.swift in Sources */,
