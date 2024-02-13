@@ -15,7 +15,7 @@ struct Board {
     var content: String
     var semesterPermission: [Semester]
     var hostType: HostType?
-//    var boardType: BoardType?
+    var boardType: BoardType?
     
     
 
