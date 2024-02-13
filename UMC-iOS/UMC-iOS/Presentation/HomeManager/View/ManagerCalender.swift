@@ -7,7 +7,14 @@
 
 import SwiftUI
 
-struct ManagerCalender:View {
+struct ManagerCalender: View {
+    
+    // Api
+    @ObservedObject var scheduleNetwork = ScheduleNetwork()
+    @State private var deleteScheduleId: String = ""
+    @State private var updateScheduleId: String = ""
+    @State private var getScheduleDetailScheduleId: String = ""
+    
     @Environment(\.dismiss) private var dismiss
     @State private var CalTitle: String = ""
     @State private var CalContent: String = ""
@@ -128,6 +135,25 @@ struct ManagerCalender:View {
                 .background(.white)
                 .cornerRadius(12)
                 
+                // 임시 버튼
+                Button {
+                    
+                    Task {
+                        await scheduleNetwork.fetchCreateSchedule(
+                            request: ScheduleRequest.CreateSchedule(title: CalTitle,
+                                                                    content: CalContent,
+                                                                    startDateTime: convertDateToString(date: StartDate),
+                                                                    endDateTime: convertDateToString(date: StartDate),
+                                                                    semesterPermission: [Semester.FIFTH.rawValue],
+                                                                    hostType: HostType.CENTER.rawValue,
+                                                                    placeSetting: CalSpot)
+                        )
+                    }
+                    
+                } label: {
+                    Text("Create Schedule Test")
+                }
+                
                 Spacer()
             }
             .padding(16.5)
@@ -135,8 +161,17 @@ struct ManagerCalender:View {
         .modifier(SettingBackButton(title: "캘린더 추가", onDismiss: { dismiss() }, showTrailingItem: true))
         
     }
+    
+    func convertDateToString(date: Date) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        return dateFormatter.string(from: date)
+        
+    }
 }
 
 #Preview {
     ManagerCalender()
 }
+
