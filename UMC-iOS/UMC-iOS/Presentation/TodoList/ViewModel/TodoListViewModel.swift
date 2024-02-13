@@ -20,6 +20,9 @@ class TodoListViewModel: ObservableObject {
 
 extension TodoListViewModel {
     
+    
+    //GET
+    
     // TodoList API - 투두리스트 조회 API(fetch)
     @MainActor
     func fetchGetTodoList() async {
