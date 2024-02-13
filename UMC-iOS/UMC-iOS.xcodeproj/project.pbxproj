@@ -188,6 +188,8 @@
 		F34D2D8B2B74F61900491EBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8A2B74F61900491EBE /* Branch.swift */; };
 		F34D2D8F2B74FAE100491EBE /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8E2B74FAE100491EBE /* PositionType.swift */; };
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
+		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
+		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */; };
 		F3B689312B774C3F00A4FBB5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */; };
 		F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689342B7756FC00A4FBB5 /* TodoList.swift */; };
@@ -238,12 +240,11 @@
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
 		44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardButton.swift; sourceTree = "<group>"; };
-		44CD3DC92B7A6F720089B04F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		44CD3DC32B7949020089B04F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingMascotUI.swift; sourceTree = "<group>"; };
 		44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNavigationbar.swift; sourceTree = "<group>"; };
 		44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
 		44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSubNavigationButton.swift; sourceTree = "<group>"; };
-		44CD3DC32B7949020089B04F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -409,6 +410,8 @@
 		F34D2D8A2B74F61900491EBE /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		F34D2D8E2B74FAE100491EBE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListResponse.swift; sourceTree = "<group>"; };
 		F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
@@ -1286,6 +1289,8 @@
 				F3B689472B77F38800A4FBB5 /* University.swift */,
 				F3B689492B77F3E000A4FBB5 /* Mascot.swift */,
 				F3B6894D2B780E3400A4FBB5 /* PointType.swift */,
+				F3935D1D2B7B4CD40036E77A /* Board.swift */,
+				F3935D1F2B7B4E4B0036E77A /* HostType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1593,6 +1598,7 @@
 				F34D2D142B73675300491EBE /* HotProjectView.swift in Sources */,
 				F34D2D7C2B74B05500491EBE /* ExchangeRateError.swift in Sources */,
 				F34D2D532B7367D400491EBE /* MemberResponse.swift in Sources */,
+				F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */,
 				F34D2D242B73675300491EBE /* UMCseason.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
 				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
@@ -1625,6 +1631,7 @@
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
 				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
 				F34D2D222B73675300491EBE /* AbleStack.swift in Sources */,
+				F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */,
 				44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */,
 				F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */,
 				F34D2CE12B73675300491EBE /* Comment.swift in Sources */,

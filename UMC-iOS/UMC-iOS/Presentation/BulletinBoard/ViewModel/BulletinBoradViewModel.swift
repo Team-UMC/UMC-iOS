@@ -11,7 +11,7 @@ import Combine
 class UserContentPreListViewModel: ObservableObject {
     
     @Published var member = Member()
-    @Published var boards = Boards()
+    @Published var boards = Board()
     
 }
 
@@ -25,7 +25,7 @@ extension UserContentPreListViewModel{
         do {
             let ContentPreView = try await getContentPreView()
             print(ContentPreView)
-            boards = Boards(contentPreview: ContentPreView)
+//            boards = Board(contentPreview: ContentPreView)
         } catch {
             print("Error: \(error)")
         }
@@ -50,7 +50,7 @@ func getContentPreView() async throws -> BoardCellResponse.Boards {
     
     if let response = response as? HTTPURLResponse,
        !(200...299).contains(response.statusCode) {
-        throw ExchangeRateError.badResponse
+        throw ExchangeRateError.badRequest
     }
 
 
