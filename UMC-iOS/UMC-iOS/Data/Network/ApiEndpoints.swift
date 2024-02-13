@@ -48,6 +48,7 @@ enum ApiEndpoints {
         
         // staff-schedule
         case staff_schedules = "/staff/schedules"
+        case staff_schedules_update = "/staff/schedules/update"
     }
 }
 

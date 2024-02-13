@@ -25,4 +25,14 @@ struct ScheduleRequest {
     struct DeleteSchedule: Codable {
         let scheduleId: String
     }
+    
+    struct UpdateSchedule: Codable {
+        let title: String
+        let content: String
+        let startDateTime: String
+        let endDateTime: String
+        let semesterPermission: [String]
+        let hostType: String
+        let placeSetting: String
+    }
 }

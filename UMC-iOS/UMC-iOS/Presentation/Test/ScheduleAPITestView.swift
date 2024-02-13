@@ -10,6 +10,8 @@ import SwiftUI
 struct ScheduleAPITestView: View {
     @ObservedObject var scheduleNetwork = ScheduleNetwork()
     @State private var deleteScheduleId: String = ""
+    @State private var updateScheduleId: String = ""
+    
     
     var body: some View {
         VStack {
@@ -18,7 +20,7 @@ struct ScheduleAPITestView: View {
                     await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: "2024-02-13"))
                 }
             } label: {
-                Text("전체 학교 조회")
+                Text("캘린더 조회")
             }
             
             Button {
@@ -27,6 +29,15 @@ struct ScheduleAPITestView: View {
                 }
             } label: {
                 Text("일정 추가")
+            }
+            TextField("수정할 캘린더 아이디를 입력하세요.", text: $updateScheduleId)
+            
+            Button {
+                Task {
+                    await scheduleNetwork.fetchUpdateSchedule(scheduleId: updateScheduleId, request: ScheduleRequest.UpdateSchedule(title: "TEST", content: "TEST", startDateTime: "2024-02-13T08:08:41", endDateTime: "2024-02-15T08:08:41", semesterPermission: [Semester.FIFTH.rawValue], hostType: HostType.CENTER.rawValue, placeSetting: "가천대"))
+                }
+            } label: {
+                Text("일정 수정")
             }
             
             TextField("삭제할 캘린더 아이디를 입력하세요.", text: $deleteScheduleId)
