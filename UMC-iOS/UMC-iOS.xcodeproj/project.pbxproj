@@ -17,6 +17,10 @@
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
 		44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */; };
 		44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */; };
+		44CD3DCE2B7A9D390089B04F /* GrowingMascotUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */; };
+		44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */; };
+		44CD3DD32B7AA3570089B04F /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */; };
+		44CD3DD52B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */; };
 		46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -233,6 +237,10 @@
 		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
 		44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardButton.swift; sourceTree = "<group>"; };
 		44CD3DC92B7A6F720089B04F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingMascotUI.swift; sourceTree = "<group>"; };
+		44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNavigationbar.swift; sourceTree = "<group>"; };
+		44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
+		44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSubNavigationButton.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -520,6 +528,22 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		44CD3DCC2B7A9D160089B04F /* GrowingMascot */ = {
+			isa = PBXGroup;
+			children = (
+				44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */,
+			);
+			path = GrowingMascot;
+			sourceTree = "<group>";
+		};
+		44CD3DD12B7AA3360089B04F /* BottomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */,
+			);
+			path = BottomTabbar;
+			sourceTree = "<group>";
+		};
 		46C37FBE2B74CE540084CA4D /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +634,8 @@
 			children = (
 				F34D2D812B74B2EF00491EBE /* Test */,
 				F34D2BF92B73675300491EBE /* Home */,
+				44CD3DD12B7AA3360089B04F /* BottomTabbar */,
+				44CD3DCC2B7A9D160089B04F /* GrowingMascot */,
 				F34D2C082B73675300491EBE /* BulletinBoard */,
 				F34D2C122B73675300491EBE /* WritingView */,
 				F34D2C1F2B73675300491EBE /* BulletinBoardSearch */,
@@ -811,6 +837,7 @@
 			children = (
 				F34D2C362B73675300491EBE /* SettingBackButton.swift */,
 				F34D2C372B73675300491EBE /* DropDownPicker.swift */,
+				44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */,
 				F34D2C382B73675300491EBE /* Extension */,
 				F34D2C3A2B73675300491EBE /* CirclePlusButton.swift */,
 				F34D2C3B2B73675300491EBE /* CircleCheckButton.swift */,
@@ -902,6 +929,7 @@
 				F34D2C502B73675300491EBE /* ToDoListUI.swift */,
 				F34D2C512B73675300491EBE /* ToDoListView.swift */,
 				F34D2C522B73675300491EBE /* ToDoListCell.swift */,
+				44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1487,6 +1515,7 @@
 				F34D2CBA2B73675300491EBE /* HomeViewModel.swift in Sources */,
 				F34D2CDE2B73675300491EBE /* ManagerPin.swift in Sources */,
 				F34D2D002B73675300491EBE /* TILFileAddViewModel.swift in Sources */,
+				44CD3DD32B7AA3570089B04F /* BottomTabBar.swift in Sources */,
 				F3B689482B77F38800A4FBB5 /* University.swift in Sources */,
 				F34D2D152B73675300491EBE /* HistorySearchView.swift in Sources */,
 				F34D2D032B73675300491EBE /* TILListFirstCell.swift in Sources */,
@@ -1503,6 +1532,7 @@
 				F34D2CC12B73675300491EBE /* HomeView.swift in Sources */,
 				F34D2CC52B73675300491EBE /* TodoSummaryListView.swift in Sources */,
 				F34D2D422B73675300491EBE /* SelectPosition.swift in Sources */,
+				44CD3DCE2B7A9D390089B04F /* GrowingMascotUI.swift in Sources */,
 				F34D2CED2B73675300491EBE /* MascotRankingViewModel.swift in Sources */,
 				F34D2CCD2B73675300491EBE /* WritingSecondThirdViewModel.swift in Sources */,
 				F34D2CD32B73675300491EBE /* WritingListCell.swift in Sources */,
@@ -1523,6 +1553,7 @@
 				F3B6893F2B7797C500A4FBB5 /* TodoListRequest.swift in Sources */,
 				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,
 				F34D2D432B73675300491EBE /* JoinNickname.swift in Sources */,
+				44CD3DD52B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift in Sources */,
 				F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */,
 				F34D2D1B2B73675300491EBE /* ProjectCardinalNumberView.swift in Sources */,
 				F34D2CBE2B73675300491EBE /* AnnouncementView.swift in Sources */,
@@ -1589,6 +1620,7 @@
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
 				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
 				F34D2D222B73675300491EBE /* AbleStack.swift in Sources */,
+				44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */,
 				F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */,
 				F34D2CE12B73675300491EBE /* Comment.swift in Sources */,
 				F34D2D262B73675300491EBE /* UserProfileEditViewModel.swift in Sources */,

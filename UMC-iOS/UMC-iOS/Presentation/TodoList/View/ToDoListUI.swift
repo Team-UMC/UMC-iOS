@@ -11,6 +11,9 @@ struct ToDoListUI: View {
     var body: some View {
         
         VStack{
+            
+            ToDoListNavigationbar()
+            
             TodoDate()
                 .padding(.leading,25)
                 .padding(.bottom,-10)

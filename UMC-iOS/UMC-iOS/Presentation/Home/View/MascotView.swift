@@ -20,25 +20,29 @@ struct MascotView: View {
                 Spacer()
             }
             .padding(.bottom, 12)
-            ZStack {
-                Image("mascotRankBackgroundImage")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 160)
-                    .cornerRadius(12.0)
-                
-                VStack(spacing: 0) {
-                    Image("mascotImage2")
+            Button(action: {
+                isClicked.toggle()
+            }) {
+                ZStack {
+                    Image("mascotRankBackgroundImage")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 154, height: 154)
-                        .padding(.bottom, 5)
-                } // VStack
-            } // ZStack
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 160)
+                        .cornerRadius(12.0)
+                    
+                    VStack(spacing: 0) {
+                        Image("mascotImage2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 154, height: 154)
+                            .padding(.bottom, 5)
+                    } // VStack
+                } // ZStack
+            }
+            .navigationDestination(isPresented: $isClicked) {
+                GrowingMascotUI()
+            }
         } // VStack
-        .navigationDestination(isPresented: $isClicked) {
-            RankView()
-        }
         .padding(.leading, 18)
     }
 }

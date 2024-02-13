@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct TILNavigationbar: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
                HStack(spacing: 0) { // navigation bar
 
                    // X Button
                    Button {
                        print("navigation bar - X Button Tapped")
+                       presentationMode.wrappedValue.dismiss()
                    } label : {
                        Image("xButtonImage")
                            .resizable()

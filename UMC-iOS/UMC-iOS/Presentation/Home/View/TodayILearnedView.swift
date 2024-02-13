@@ -42,6 +42,7 @@ struct TodayILearnedView: View {
                     
                     Button {
                         print("TILButton Clicked")
+                        isClicked.toggle()
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()

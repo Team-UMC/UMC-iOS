@@ -83,20 +83,20 @@ struct SideMenuViewContents: View {
                         SideMenuNavigationButton(destination: WritingList(title: "", content: ""), MenuName: "글쓰기", ImageName: "pencil")
                         SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "내글", ImageName: "doc.text.fill") //추후 구현
                         SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "쪽지함", ImageName: "envelope.fill") //추후 구현
-                        SideMenuNavigationButton(destination: RankingDetailView(), MenuName: "마스코드", ImageName: "pawprint.fill")
+                        SideMenuNavigationButton(destination: GrowingMascotUI(), MenuName: "마스코드", ImageName: "pawprint.fill")
                     }
                     Spacer().frame(height: 32)
                     Text("즐겨찾기")
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.black)
                     Spacer().frame(height: 25)
-                    VStack(alignment: .leading, spacing: 20){
-                        Text("공지사항")
-                        Text("자유게시판")
-                        Text("사진첩")
-                        Text("프로젝트 매칭")
-                        Text("네트워킹 게시판")
-                        Text("연합 게시판")
+                    VStack(alignment: .leading, spacing: 20) {
+                        SideMenuSubNavigationButton(destination: GrowingMascotUI(), MenuName: "공지사항")
+                        SideMenuSubNavigationButton(destination: GrowingMascotUI(), MenuName: "자유게시판")
+                        SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "사진첩") //추후 구현
+                        SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "프로젝트 매칭") //추후 구현
+                        SideMenuSubNavigationButton(destination: GrowingMascotUI(), MenuName: "네트워킹 게시판")
+                        SideMenuSubNavigationButton(destination: GrowingMascotUI(), MenuName: "연합 게시판")
                     }
                     .font(.system(size: 14))
                     .foregroundStyle(.black)

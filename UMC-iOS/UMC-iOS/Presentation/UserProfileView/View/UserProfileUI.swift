@@ -7,33 +7,62 @@
 import SwiftUI
 
 struct UserProfileUI: View {
+    @State private var isClicked = false
+    @Environment(\.presentationMode) var presentationMode
+    @State private var isEditingProfile = false
     var profileImage = "profileImage"
-    var backgroundColor = Color(#colorLiteral(red: 0.250980407, green: 0.270588248, blue: 0.4470588276, alpha: 1))
 
+    
     var body: some View {
-        ZStack {
-            // Background
-            Image("backgroundImage_2")
-                .resizable()
-                .scaledToFit()
-                .edgesIgnoringSafeArea(.all)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        NavigationView {
+            ZStack {
+                // Background
+                Image("backgroundImage_2")
+                    .resizable()
+                    .scaledToFit()
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
-            VStack {
-                UserProfile() // Photo and university label
+                VStack {
+                    UserProfile() // Photo and university label
+                    
+                    HStack(spacing: 8) {
+                        AbleStack() // Technical skills
+                        UMCSeason() // UMC season
+                    }
+                    
+                    UserMessage() // Status message and buttons
+                        .padding(.top,70)
+                        .padding(.bottom,30)
+                    
 
-                HStack(spacing: 8) {
-                    AbleStack() // Technical skills
-                    UMCSeason() // UMC season
+                    Button(action: {
+                        print("수정하기 버튼")
+                        isClicked.toggle()
+                    }) {
+                        Text("수정하기")
+                            .font(.system(size: 16, weight: .black))
+                            .padding(EdgeInsets(top: 9, leading: 16, bottom: 9, trailing: 16))
+                            .foregroundColor(.white)
+                            .background(Color.black)
+                            .cornerRadius(17.5)
+                            .shadow(radius: 10)
+                    }
+                    .navigationDestination(isPresented: $isClicked) {
+                        UserProfileEdit(message: "", userNickname: "", userName: "")
+                    }
                 }
-
-                UserMessage() // Status message and buttons
+                .padding(.bottom, 60)
             }
-            .padding(.bottom, 60)
+            .background(.white)
         }
-        .background(backgroundColor)
+
+        .navigationBarBackButtonHidden(true)
     }
 }
+
+// Remaining code remains the same
+
 
 #if DEBUG
 struct UserProfileUI_Previews: PreviewProvider {
@@ -42,4 +71,6 @@ struct UserProfileUI_Previews: PreviewProvider {
     }
 }
 #endif
+
+
 

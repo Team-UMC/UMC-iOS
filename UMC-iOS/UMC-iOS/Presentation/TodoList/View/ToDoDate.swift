@@ -9,36 +9,26 @@ import SwiftUI
 
 struct TodoDate: View {
     @State private var date = Date()
-    @State private var isDatePickerPresented = false
 
     var body: some View {
         HStack {
+            Spacer()
             Image("CalenderIcon")
                 .resizable()
-                .frame(width: 20, height: 20)
-                .onTapGesture {
-                    isDatePickerPresented.toggle()
-                }
-
-            Text("\(formattedDate(date))")
-                .foregroundColor(Color("searchPurple"))
-                .font(.system(size: 16))
-                .bold()
+                .frame(width: 24, height: 24)
+               
+            DatePicker(
+                "",
+                selection: $date,
+                displayedComponents: [.date]
+            )
+            .datePickerStyle(.compact)
+            .labelsHidden()
+            .foregroundColor(Color("searchPurple"))
 
             Spacer()
         }
-        .padding()
-        .sheet(isPresented: $isDatePickerPresented) {
-            VStack {
-                DatePicker(
-                    "",
-                    selection: $date,
-                    displayedComponents: [.date]
-                )
-                .datePickerStyle(.compact)
-                .padding()
-            }
-        }
+        .padding(.trailing,190)
     }
 
     func formattedDate(_ date: Date) -> String {
@@ -49,6 +39,8 @@ struct TodoDate: View {
     }
 }
 
+
+
 struct TodoDate_Previews: PreviewProvider {
     static var previews: some View {
         TodoDate()
@@ -56,5 +48,7 @@ struct TodoDate_Previews: PreviewProvider {
             .padding()
     }
 }
+
+
 
 
