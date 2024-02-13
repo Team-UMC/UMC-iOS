@@ -249,7 +249,6 @@
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
 		44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardButton.swift; sourceTree = "<group>"; };
-		44CD3DC32B7949020089B04F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingMascotUI.swift; sourceTree = "<group>"; };
 		44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNavigationbar.swift; sourceTree = "<group>"; };
 		44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
@@ -259,6 +258,7 @@
 		44CD3DDB2B7B6EB80089B04F /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
 		44FCC37F2B7B6EF500C41278 /* DetailButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonViewModel.swift; sourceTree = "<group>"; };
 		44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigationBar.swift; sourceTree = "<group>"; };
+		44FCC3832B7B922B00C41278 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -597,7 +597,7 @@
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
-				44CD3DC32B7949020089B04F /* Config.xcconfig */,
+				44FCC3832B7B922B00C41278 /* Config.xcconfig */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
 				F34D2BE82B73671800491EBE /* UMC-iOSUITests */,

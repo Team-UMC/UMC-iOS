@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ToDoListView: View {
     @State private var contentData: [Int] = Array(0..<5)
+    @ObservedObject var todoListViewModel: TodoListViewModel
     var body: some View {
         List {
-            ForEach(contentData, id: \.self) { index in
+            ForEach(contentData, id: \.self) { todo in
                 ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "🌕"))
                     .listRowSeparator(.hidden)
                     .padding(.bottom,-15)
@@ -20,13 +21,16 @@ struct ToDoListView: View {
         .listStyle(PlainListStyle())
         .onAppear {
             UITableView.appearance().separatorStyle = .none
+            Task {
+                            await todoListViewModel.fetchGetTodoList()
+                        }
         }
     }
     }
 
 
 #Preview {
-    ToDoListView()
+    ToDoListView(todoListViewModel: TodoListViewModel())
 }
 
 
