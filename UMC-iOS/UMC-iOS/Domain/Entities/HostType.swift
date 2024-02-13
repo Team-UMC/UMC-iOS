@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum HostType: Codable {
-    case CENTER
-    case BRANCH
-    case CAMPUS
-    case ALL
+enum HostType: String, Codable {
+    case CENTER = "CENTER"
+    case BRANCH = "BRANCH"
+    case CAMPUS = "CAMPUS"
+    case ALL = "ALL"
     
     var toKorean: String {
         switch self {

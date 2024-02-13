@@ -1,5 +1,5 @@
 //
-//  CalendarResponse.swift
+//  ScheduleResponse.swift
 //  UMC-iOS
 //
 //  Created by 김승원 on 2024/02/08.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-class CalendarResponse {
+class ScheduleResponse {
     
     // 캘린더 조회 API
     struct GetCalendar: Codable {
         
         let id: Int?
-        let schedules: [Schedules]
+        let schedules: [ScheduleInfo]
         
     }
     
@@ -33,12 +33,17 @@ class CalendarResponse {
         
     }
     
+    struct ScheduleId: Codable {
+        let id: Int?
+        let scheduleId: String
+    }
+    
 }
 
-extension CalendarResponse {
+extension ScheduleResponse {
     
-    // 캘린더 조회 API - [Schedules]
-    struct Schedules: Codable {
+    // 캘린더 조회 API - [ScheduleInfo]
+    struct ScheduleInfo: Codable {
         
         let scheduleId: String
         let startDateTime: String

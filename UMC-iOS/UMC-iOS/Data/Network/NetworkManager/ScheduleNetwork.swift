@@ -1,45 +1,33 @@
 //
-//  TodoListViewModel.swift
+//  ScheduleNetwork.swift
 //  UMC-iOS
 //
-//  Created by Kyungsoo Lee on 2/10/24.
+//  Created by Kyungsoo Lee on 2/13/24.
 //
 
 import Foundation
 
-class TodoListViewModel: ObservableObject {
-    @Published var todoList: [TodoList] = []
-
-    func addNewCell(title: String, time: String, todoIcon: String) {
-//        let newTodo = T
-//        let newCellViewModel = ToDoListCellViewModel(toDoTitle: title, time: time, todoIcon: todoIcon)
-//        todoList.append(newCellViewModel)
-    }
-}
-
-
-extension TodoListViewModel {
+class ScheduleNetwork: ObservableObject {
     
     
-    //GET
-    
-    // TodoList API - 투두리스트 조회 API(fetch)
+    // GET
+    // Schedule API - 일정 조회(상세조회) API(fetch)
     @MainActor
-    func fetchGetTodoList() async {
+    func fetchGetScheduleDetail(scheduleId: String) async {
         do {
-            let todoList = try await getTodoList()
-            print(todoList)
-            self.todoList = todoList.todoLists.mapToToDoList()
+            print("fetchGetScheduleDetail : \(scheduleId)")
+            
+            let response = try await getScheduleDetail(scheduleId: scheduleId)
+            print(response)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    // TodoList API - 투두리스트 조회 API
-    func getTodoList() async throws -> TodoListResponse.GetTodoList {
+    // Schedule API - 일정 조회(상세조회) API
+    func getScheduleDetail(scheduleId: String) async throws -> ScheduleResponse.GetSchedulesDetail {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.queryItems = [URLQueryItem(name: "date", value: String.currentLocalDateToString())]
-        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue
+        urlComponents.path = ApiEndpoints.Path.scheudles_detail.rawValue + "/\(scheduleId)"
         
         guard let url = urlComponents.url else {
             print("Error: cannot create URL")
@@ -48,7 +36,7 @@ extension TodoListViewModel {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        print("UserDefaults : \(UserDefaults.standard.string(forKey: "Authorization"))")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -62,39 +50,92 @@ extension TodoListViewModel {
         
         let decoder = JSONDecoder()
         
-        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.GetTodoList>.self, from: data)
+        let jsonDictionary = try decoder.decode(BaseResponse<ScheduleResponse.GetSchedulesDetail>.self, from: data)
         
-        var todoLists: TodoListResponse.GetTodoList
-        todoLists = jsonDictionary.result
+        var scheduleDetail: ScheduleResponse.GetSchedulesDetail
+        scheduleDetail = jsonDictionary.result
+        print(scheduleDetail)
         
-        return todoLists
+        return scheduleDetail
     }
     
     // POST
     
-    // TodoList API - 투두리스트 작성 API(fetch)
+    // Schedule API - 캘린더 조회 API(fetch)
     @MainActor
-    func fetchCreateTodoList(todoInfo: TodoListRequest.CreateTodo) async {
+    func fetchGetCalendar(request: ScheduleRequest.GetCalendar) async {
         do {
-            print("fetchCreateTodoList : \(todoInfo)")
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = .prettyPrinted
-            print(todoInfo)
-            let sendData = try encoder.encode(todoInfo)
-            if let jsonString = String(data: sendData, encoding: .utf8) {
-                print("fetchCreateTodoList : \(jsonString)")
-            }
+            print("fetchGetCalendar : \(request)")
+            print(request)
             
-            let todoListId = try await createTodoList(sendData: sendData)
+            let response = try await getCalendar(date: request.date)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    // TodoList API - 투두리스트 작성 API
-    func createTodoList(sendData: Data) async throws -> TodoListResponse.TodoListId {
+    // Schedule API - 캘린더 조회 API
+    func getCalendar(date: String) async throws -> ScheduleResponse.GetCalendar {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue
+        urlComponents.path = ApiEndpoints.Path.schedules_calendar.rawValue
+        urlComponents.queryItems = [URLQueryItem(name: "date", value: date)]
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<ScheduleResponse.GetCalendar>.self, from: data)
+        
+        var calendarResponse: ScheduleResponse.GetCalendar
+        calendarResponse = jsonDictionary.result
+        print(calendarResponse)
+        
+        return calendarResponse
+    }
+    
+    // Schedule API - 일정 추가 API(fetch)
+    @MainActor
+    func fetchCreateSchedule(request: ScheduleRequest.CreateSchedule) async {
+        do {
+            print("fetchCreateSchedule : \(request)")
+            print(request)
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            print(request)
+            let sendData = try encoder.encode(request)
+            if let jsonString = String(data: sendData, encoding: .utf8) {
+                print("fetchCreateSchedule : \(jsonString)")
+            }
+            let response = try await createSchedule(
+                sendData: sendData)
+            print(response)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // Schedule API - 일정 추가 API
+    func createSchedule(sendData: Data) async throws -> ScheduleResponse.ScheduleId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.staff_schedules.rawValue
         
         guard let url = urlComponents.url else {
             print("Error: cannot create URL")
@@ -118,135 +159,33 @@ extension TodoListViewModel {
         
         let decoder = JSONDecoder()
         
-        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.TodoListId>.self, from: data)
+        let jsonDictionary = try decoder.decode(BaseResponse<ScheduleResponse.ScheduleId>.self, from: data)
         
-        var todoListId: TodoListResponse.TodoListId
-        todoListId = jsonDictionary.result
-        print(todoListId)
+        var createScheduleResponse: ScheduleResponse.ScheduleId
+        createScheduleResponse = jsonDictionary.result
         
-        return todoListId
+        
+        return createScheduleResponse
     }
     
-    // TodoList API - 투두리스트 수정 API(fetch)
+    // Schedule API - 일정 삭제 API(fetch)
     @MainActor
-    func fetchUpdateTodoList(todoListId: String, todoInfo: TodoListRequest.UpdateTodo) async {
+    func fetchDeleteSchedule(request: ScheduleRequest.DeleteSchedule) async {
         do {
-            print("fetchUpdateTodoList : \(todoInfo)")
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = .prettyPrinted
-            print(todoInfo)
-            let sendData = try encoder.encode(todoInfo)
-            if let jsonString = String(data: sendData, encoding: .utf8) {
-                print("fetchUpdateTodoList : \(jsonString)")
-            }
+            print("fetchCreateSchedule : \(request)")
+            print(request)
             
-            let todoListId = try await updateTodoList(todoListId: todoListId, sendData: sendData)
+            let scheduleId = try await deleteSchedule(scheduleId: request.scheduleId)
+            print(scheduleId)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    // TodoList API - 투두리스트 수정 API
-    func updateTodoList(todoListId: String, sendData: Data) async throws -> TodoListResponse.TodoListId {
+    // Schedule API - 일정 삭제 API
+    func deleteSchedule(scheduleId: String) async throws -> ScheduleResponse.ScheduleId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.path = ApiEndpoints.Path.todoLists_update.rawValue + "/\(todoListId)"
-        
-        guard let url = urlComponents.url else {
-            print("Error: cannot create URL")
-            throw ExchangeRateError.cannotCreateURL
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
-        request.httpBody = sendData
-        
-        let (data, response) = try await URLSession.shared.data(for: request)
-        print(data)
-        print(response)
-        
-        if let response = response as? HTTPURLResponse,
-           !(200..<300).contains(response.statusCode) {
-            throw ExchangeRateError.badRequest
-        }
-        
-        let decoder = JSONDecoder()
-        
-        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.TodoListId>.self, from: data)
-        
-        var todoListId: TodoListResponse.TodoListId
-        todoListId = jsonDictionary.result
-        print(todoListId)
-        
-        return todoListId
-    }
-    
-    // TodoList API - 투두리스트 완료 API(fetch)
-    @MainActor
-    func fetchCompleteTodoList(todoListId: TodoListRequest.CompleteTodo) async {
-        do {
-            print("fetchCompleteTodoList : \(todoListId)")
-            let completeTodoInfo = try await completeTodoList(todoListId: todoListId.todoListId)
-        } catch {
-            print("Error: \(error)")
-        }
-    }
-    
-    // TodoList API - 투두리스트 완료 API
-    func completeTodoList(todoListId: String) async throws -> TodoListResponse.CompleteTodo {
-        var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue + "/\(todoListId)"
-        
-        guard let url = urlComponents.url else {
-            print("Error: cannot create URL")
-            throw ExchangeRateError.cannotCreateURL
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
-
-        
-        let (data, response) = try await URLSession.shared.data(for: request)
-        print(data)
-        print(response)
-        
-        if let response = response as? HTTPURLResponse,
-           !(200..<300).contains(response.statusCode) {
-            throw ExchangeRateError.badRequest
-        }
-        
-        let decoder = JSONDecoder()
-        
-        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.CompleteTodo>.self, from: data)
-        print(jsonDictionary)
-        
-        var todoListId: TodoListResponse.CompleteTodo
-        todoListId = jsonDictionary.result
-        print(todoListId)
-        
-        return todoListId
-    }
-    
-    // DELETE
-    
-    // TodoList API - 투두리스트 삭제 API(fetch)
-    @MainActor
-    func fetchDeleteTodoList(todoListId: TodoListRequest.DeleteTodo) async {
-        do {
-            print("fetchDeleteTodoList : \(todoListId)")
-            let todoListId = try await deleteTodoList(todoListId: todoListId.todoListId)
-        } catch {
-            print("Error: \(error)")
-        }
-    }
-    
-    // TodoList API - 투두리스트 삭제 API
-    func deleteTodoList(todoListId: String) async throws -> TodoListResponse.TodoListId {
-        var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.path = ApiEndpoints.Path.todoLists.rawValue + "/\(todoListId)"
+        urlComponents.path = ApiEndpoints.Path.staff_schedules.rawValue + "/\(scheduleId)"
         
         guard let url = urlComponents.url else {
             print("Error: cannot create URL")
@@ -255,6 +194,7 @@ extension TodoListViewModel {
         
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -268,12 +208,72 @@ extension TodoListViewModel {
         
         let decoder = JSONDecoder()
         
-        let jsonDictionary = try decoder.decode(BaseResponse<TodoListResponse.TodoListId>.self, from: data)
+        let jsonDictionary = try decoder.decode(BaseResponse<ScheduleResponse.ScheduleId>.self, from: data)
         
-        var todoListId: TodoListResponse.TodoListId
-        todoListId = jsonDictionary.result
-        print(todoListId)
+        var scheduleId: ScheduleResponse.ScheduleId
+        scheduleId = jsonDictionary.result
+    
         
-        return todoListId
+        return scheduleId
     }
+    
+    
+    // Schedule API - 일정 수정 API(fetch)
+    @MainActor
+    func fetchUpdateSchedule(scheduleId: String, request: ScheduleRequest.UpdateSchedule) async {
+        do {
+            print("fetchUpdateSchedule : \(request)")
+            print(request)
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            print(request)
+            let sendData = try encoder.encode(request)
+            if let jsonString = String(data: sendData, encoding: .utf8) {
+                print("fetchUpdateSchedule : \(jsonString)")
+            }
+            let response = try await updateSchedule(
+                scheduleId: scheduleId, sendData: sendData)
+            print(response)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // Schedule API - 일정 수정 API
+    func updateSchedule(scheduleId: String, sendData: Data) async throws -> ScheduleResponse.ScheduleId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.staff_schedules_update.rawValue + "/\(scheduleId)"
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        request.httpBody = sendData
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<ScheduleResponse.ScheduleId>.self, from: data)
+        
+        var scheduleId: ScheduleResponse.ScheduleId
+        scheduleId = jsonDictionary.result
+        
+        
+        return scheduleId
+    }
+    
 }

@@ -22,7 +22,7 @@
 		44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */; };
 		44CD3DD32B7AA3570089B04F /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */; };
 		44CD3DD52B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */; };
-		46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */; };
+		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -191,6 +191,9 @@
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
+		F3935D242B7B53230036E77A /* ScheduleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D232B7B53230036E77A /* ScheduleNetwork.swift */; };
+		F3935D262B7B54F00036E77A /* ScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D252B7B54F00036E77A /* ScheduleRequest.swift */; };
+		F3935D2A2B7B58790036E77A /* ScheduleAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */; };
 		F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */; };
 		F3B689312B774C3F00A4FBB5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */; };
 		F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689342B7756FC00A4FBB5 /* TodoList.swift */; };
@@ -246,7 +249,7 @@
 		44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNavigationbar.swift; sourceTree = "<group>"; };
 		44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
 		44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSubNavigationButton.swift; sourceTree = "<group>"; };
-		46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
+		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -414,6 +417,9 @@
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
+		F3935D232B7B53230036E77A /* ScheduleNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNetwork.swift; sourceTree = "<group>"; };
+		F3935D252B7B54F00036E77A /* ScheduleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequest.swift; sourceTree = "<group>"; };
+		F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPITestView.swift; sourceTree = "<group>"; };
 		F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListResponse.swift; sourceTree = "<group>"; };
 		F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
@@ -556,22 +562,13 @@
 			isa = PBXGroup;
 			children = (
 				46C37FC02B74EED40084CA4D /* Response */,
-				46C37FBF2B74EEAC0084CA4D /* Request */,
 			);
 			path = DTO;
-			sourceTree = "<group>";
-		};
-		46C37FBF2B74EEAC0084CA4D /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		46C37FC02B74EED40084CA4D /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				46C37FC12B74EFB80084CA4D /* CalendarResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1312,6 +1309,7 @@
 				F34D2D822B74B31200491EBE /* ApiTestView.swift */,
 				F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */,
 				F3B689422B77F05F00A4FBB5 /* UniversityAPITestView.swift */,
+				F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1320,6 +1318,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B689452B77F1AE00A4FBB5 /* UniversityNetwork.swift */,
+				F3935D232B7B53230036E77A /* ScheduleNetwork.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -1330,6 +1329,7 @@
 				F34D2D4C2B7367D400491EBE /* MemberRequest.swift */,
 				F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */,
 				F3B6894F2B78116500A4FBB5 /* UniversityRequest.swift */,
+				F3935D252B7B54F00036E77A /* ScheduleRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1338,6 +1338,7 @@
 			isa = PBXGroup;
 			children = (
 				F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */,
+				46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */,
 				F3B6894B2B77F55C00A4FBB5 /* UniversityResponse.swift */,
 				F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */,
 				449DB8622B77A74900415113 /* BoardCellResponse.swift */,
@@ -1572,6 +1573,7 @@
 				F34D2CBE2B73675300491EBE /* AnnouncementView.swift in Sources */,
 				F3B689502B78116500A4FBB5 /* UniversityRequest.swift in Sources */,
 				F34D2D1D2B73675300491EBE /* ProjectNameRegisterView.swift in Sources */,
+				F3935D2A2B7B58790036E77A /* ScheduleAPITestView.swift in Sources */,
 				F3B689372B77681700A4FBB5 /* String+Extension.swift in Sources */,
 				F34D2D292B73675300491EBE /* UserProfileEdit.swift in Sources */,
 				F34D2CFA2B73675300491EBE /* MyContentList.swift in Sources */,
@@ -1602,6 +1604,7 @@
 				F34D2D142B73675300491EBE /* HotProjectView.swift in Sources */,
 				F34D2D7C2B74B05500491EBE /* ExchangeRateError.swift in Sources */,
 				F34D2D532B7367D400491EBE /* MemberResponse.swift in Sources */,
+				F3935D242B7B53230036E77A /* ScheduleNetwork.swift in Sources */,
 				F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */,
 				F34D2D242B73675300491EBE /* UMCseason.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
@@ -1673,7 +1676,7 @@
 				F34D2D522B7367D400491EBE /* MemberRequest.swift in Sources */,
 				F3B689432B77F05F00A4FBB5 /* UniversityAPITestView.swift in Sources */,
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
-				46C37FC22B74EFB80084CA4D /* CalendarResponse.swift in Sources */,
+				46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */,
 				F34D2CF72B73675300491EBE /* ToDoListView.swift in Sources */,
 				F3DABB532B756D2F00BBF00B /* SemesterPart.swift in Sources */,
 				F34D2D0B2B73675300491EBE /* TILListFourthCell.swift in Sources */,
@@ -1682,6 +1685,7 @@
 				F34D2D5E2B7367DC00491EBE /* DateValue.swift in Sources */,
 				F34D2D0C2B73675300491EBE /* TILCell.swift in Sources */,
 				F34D2CDA2B73675300491EBE /* GenerationPartViewModel.swift in Sources */,
+				F3935D262B7B54F00036E77A /* ScheduleRequest.swift in Sources */,
 				F34D2D832B74B31200491EBE /* ApiTestView.swift in Sources */,
 				F34D2D352B73675300491EBE /* JoinAgreCircleCheckButton.swift in Sources */,
 				F34D2CDF2B73675300491EBE /* ManagerPinButton.swift in Sources */,
