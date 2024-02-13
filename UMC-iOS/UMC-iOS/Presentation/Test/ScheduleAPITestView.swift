@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScheduleAPITestView: View {
     @ObservedObject var scheduleNetwork = ScheduleNetwork()
+    @State private var deleteScheduleId: String = ""
     
     var body: some View {
         VStack {
@@ -28,6 +29,15 @@ struct ScheduleAPITestView: View {
                 Text("일정 추가")
             }
             
+            TextField("삭제할 캘린더 아이디를 입력하세요.", text: $deleteScheduleId)
+            
+            Button {
+                Task {
+                    await scheduleNetwork.fetchDeleteSchedule(request: ScheduleRequest.DeleteSchedule(scheduleId: deleteScheduleId))
+                }
+            } label: {
+                Text("일정 삭제")
+            }
             
         }
     }

@@ -21,4 +21,8 @@ struct ScheduleRequest {
         let hostType: String
         let placeSetting: String
     }
+    
+    struct DeleteSchedule: Codable {
+        let scheduleId: String
+    }
 }
