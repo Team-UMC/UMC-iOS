@@ -11,6 +11,7 @@ struct ScheduleAPITestView: View {
     @ObservedObject var scheduleNetwork = ScheduleNetwork()
     @State private var deleteScheduleId: String = ""
     @State private var updateScheduleId: String = ""
+    @State private var getScheduleDetailScheduleId: String = ""
     
     
     var body: some View {
@@ -38,6 +39,16 @@ struct ScheduleAPITestView: View {
                 }
             } label: {
                 Text("일정 수정")
+            }
+            
+            TextField("상세 조회할 캘린더 아이디를 입력하세요.", text: $getScheduleDetailScheduleId)
+            
+            Button {
+                Task {
+                    await scheduleNetwork.fetchGetScheduleDetail(scheduleId: getScheduleDetailScheduleId)
+                }
+            } label: {
+                Text("일정 상세 조회")
             }
             
             TextField("삭제할 캘린더 아이디를 입력하세요.", text: $deleteScheduleId)

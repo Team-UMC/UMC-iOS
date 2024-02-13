@@ -9,6 +9,56 @@ import Foundation
 
 class ScheduleNetwork: ObservableObject {
     
+    
+    // GET
+    // Schedule API - 일정 조회(상세조회) API(fetch)
+    @MainActor
+    func fetchGetScheduleDetail(scheduleId: String) async {
+        do {
+            print("fetchGetScheduleDetail : \(scheduleId)")
+            
+            let response = try await getScheduleDetail(scheduleId: scheduleId)
+            print(response)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // Schedule API - 일정 조회(상세조회) API
+    func getScheduleDetail(scheduleId: String) async throws -> ScheduleResponse.GetSchedulesDetail {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.scheudles_detail.rawValue + "/\(scheduleId)"
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<ScheduleResponse.GetSchedulesDetail>.self, from: data)
+        
+        var scheduleDetail: ScheduleResponse.GetSchedulesDetail
+        scheduleDetail = jsonDictionary.result
+        print(scheduleDetail)
+        
+        return scheduleDetail
+    }
+    
     // POST
     
     // Schedule API - 캘린더 조회 API(fetch)
