@@ -56,6 +56,10 @@ struct BoardResponse: Codable {
         let myBoardPageElements: [MyBoardPageElement]
     }
     
+    struct GetMyHeartsBoards: Codable {
+        let myBoardPageElements: [MyBoardPageElement]
+    }
+    
 }
     extension BoardResponse {
         struct BoardPageElement: Codable {

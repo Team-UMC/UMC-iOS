@@ -17,6 +17,7 @@ struct BoardAPITestView: View {
     @State private var updateBoardCommentId: String = ""
     @State private var deleteBoardCommentId: String = ""
     @State private var myBoardsSearchKeyword: String = ""
+    @State private var myHeartsBoardsSearchKeyword: String = ""
     
     var body: some View {
         VStack {
@@ -114,6 +115,16 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("내가 쓴 게시글 조회/검색")
+            }
+            
+            TextField("검색할 키워드를 입력하세요.", text: $myHeartsBoardsSearchKeyword)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchGetMyHeartsBoards(keyword: myHeartsBoardsSearchKeyword, page: 0)
+                }
+            } label: {
+                Text("내가 좋아요한 게시글 조회/검색")
             }
         }
     }

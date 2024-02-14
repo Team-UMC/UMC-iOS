@@ -37,6 +37,7 @@ enum ApiEndpoints {
         case boards = "/boards"
         case heart = "/heart"
         case boards_member_app = "/boards/member/app"
+        case boards_member_hearts_app = "/boards/member/hearts/app"
         case boards_search = "/boards/search"
         case boards_comments = "/boards/comments"
         case boards_comments_member_comments_app = "/boards/comments/member/comments/app"
