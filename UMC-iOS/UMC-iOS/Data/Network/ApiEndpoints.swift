@@ -8,9 +8,15 @@
 import Foundation
 
 enum ApiEndpoints {
+    // dev
     static let scheme = "http"
     static let host = "umcservice.shop"
     static let port = 8000
+    
+    // local
+//    static let scheme = "http"
+//    static let host = "localhost"
+//    static let port = 8080
     
     enum Path: String {
         // members
@@ -59,6 +65,6 @@ extension ApiEndpoints {
         urlComponents.scheme = ApiEndpoints.scheme
         urlComponents.host = ApiEndpoints.host
         urlComponents.port = ApiEndpoints.port
-    return urlComponents
-}
+        return urlComponents
+    }
 }
