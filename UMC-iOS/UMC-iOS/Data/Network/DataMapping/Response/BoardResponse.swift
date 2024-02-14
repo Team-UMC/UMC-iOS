@@ -54,14 +54,38 @@ struct BoardResponse: Codable {
     
     struct GetMyBoards: Codable {
         let myBoardPageElements: [MyBoardPageElement]
+        let page: Int
+        let totalElements: Int
+        let totalPages: Int
+        let isFirst: Bool
+        let isLast: Bool
     }
     
     struct GetMyHeartBoards: Codable {
         let myBoardPageElements: [MyBoardPageElement]
+        let page: Int
+        let totalElements: Int
+        let totalPages: Int
+        let isFirst: Bool
+        let isLast: Bool
     }
     
     struct GetMyCommentBoards: Codable {
         let myBoardPageElements: [MyBoardPageElement]
+        let page: Int
+        let totalElements: Int
+        let totalPages: Int
+        let isFirst: Bool
+        let isLast: Bool
+    }
+    
+    struct GetStaffNoticeBoards: Codable {
+        let noticePageElements: [NoticePageElement]
+        let page: Int
+        let totalElements: Int
+        let totalPages: Int
+        let isFirst: Bool
+        let isLast: Bool
     }
     
 }
@@ -88,6 +112,17 @@ struct BoardResponse: Codable {
             let hitCount: Int
             let heartCount: Int
             let createdAt: String
+        }
+        
+        struct NoticePageElement: Codable {
+            let boardId: String
+            let hostType: String
+            let writer: String
+            let title: String
+            let hitCount: Int
+            let createdAt: String
+            let fixed: Bool
+            
         }
         
     }

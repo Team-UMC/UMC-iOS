@@ -19,6 +19,7 @@ struct BoardAPITestView: View {
     @State private var myBoardsSearchKeyword: String = ""
     @State private var myHeartBoardsSearchKeyword: String = ""
     @State private var myCommentBoardsSearchKeyword: String = ""
+    @State private var staffNoticeBoardsSearchKeyword: String = ""
     
     var body: some View {
         VStack {
@@ -137,6 +138,17 @@ struct BoardAPITestView: View {
             } label: {
                 Text("내가 댓글 쓴 게시글 조회/검색")
             }
+            
+            TextField("검색할 키워드를 입력하세요.", text: $staffNoticeBoardsSearchKeyword)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchGetStaffNoticeBoards(host: "CENTER",keyword: staffNoticeBoardsSearchKeyword, page: 0)
+                }
+            } label: {
+                Text("운영진 공지사항 목록 조회/검색")
+            }
+
         }
     }
 }
