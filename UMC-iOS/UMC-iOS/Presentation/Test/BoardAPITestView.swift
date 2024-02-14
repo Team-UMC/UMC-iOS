@@ -20,6 +20,8 @@ struct BoardAPITestView: View {
     @State private var myHeartBoardsSearchKeyword: String = ""
     @State private var myCommentBoardsSearchKeyword: String = ""
     @State private var staffNoticeBoardsSearchKeyword: String = ""
+    @State private var pinnedBoardId: String = ""
+    @State private var isPinned: Bool = false
     
     var body: some View {
         VStack {
@@ -147,6 +149,22 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("운영진 공지사항 목록 조회/검색")
+            }
+            
+            TextField("핀 설정할 공지사항 아이디를 입력하세요.", text: $pinnedBoardId)
+            Button {
+                isPinned.toggle()
+                print("isPinned: \(isPinned)")
+            } label: {
+                Text("isPinned")
+            }
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchPinnedBoard(boardId: pinnedBoardId, isPinned: isPinned)
+                }
+            } label: {
+                Text("교내 공지사항 핀 설정")
             }
 
         }

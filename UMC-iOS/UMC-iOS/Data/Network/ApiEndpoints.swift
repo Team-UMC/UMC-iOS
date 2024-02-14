@@ -36,6 +36,7 @@ enum ApiEndpoints {
         // boards
         case boards = "/boards"
         case heart = "/heart"
+        case pin = "/pin"
         case boards_member_app = "/boards/member/app"
         case boards_member_hearts_app = "/boards/member/hearts/app"
         case boards_search = "/boards/search"

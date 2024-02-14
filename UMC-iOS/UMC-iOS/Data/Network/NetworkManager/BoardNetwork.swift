@@ -734,6 +734,58 @@ class BoardNetwork: ObservableObject {
         return boardId
     }
     
+    // 운영진 게시판 API - 교내 공지사항 핀 설정 API(fetch)
+    @MainActor
+    func fetchPinnedBoard(boardId: String, isPinned: Bool) async {
+        do {
+            print("fetchPinnedBoard : \(boardId)")
+            print(boardId)
+            print("fetchPinnedBoard : \(isPinned)")
+            print(isPinned)
+            
+            let boardId = try await pinnedBoard(boardId: boardId, isPinned: isPinned)
+            print(boardId)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 운영진 게시판 API - 교내 공지사항 핀 설정 API(fetch)
+    func pinnedBoard(boardId: String, isPinned: Bool) async throws -> BoardResponse.BoardId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.staff_boards_notices.rawValue + "/\(boardId)" + ApiEndpoints.Path.pin.rawValue
+        urlComponents.queryItems = [URLQueryItem(name: "isPinned", value: "\(isPinned)")]
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.BoardId>.self, from: data)
+        
+        var boardId: BoardResponse.BoardId
+        boardId = jsonDictionary.result
+    
+        
+        return boardId
+    }
+    
     // GET
     // 게시판 API - 게시글 특정 게시글 상세 조회 API(fetch)
     @MainActor
