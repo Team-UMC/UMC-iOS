@@ -17,10 +17,18 @@ struct BoardResponse: Codable {
         let totalPages: Int
         let isFirst: Bool
         let isLast: Bool
-        
     }
     
-
+    struct SearchBoards: Codable {
+        let id: Int?
+        let boardSearchPageElements: [BoardResponse.BoardPageElement]
+        let page: Int
+        let totalElements: Int
+        let totalPages: Int
+        let isFirst: Bool
+        let isLast: Bool
+    }
+    
     struct BoardId: Codable {
         let id: Int?
         let boardId: String
@@ -59,5 +67,6 @@ struct BoardResponse: Codable {
             let createdAt: String
             let fixed: Bool
         }
+        
     }
 

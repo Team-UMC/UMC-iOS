@@ -11,6 +11,7 @@ struct BoardAPITestView: View {
     @ObservedObject var boardNetwork = BoardNetwork()
     @State private var deleteBoardId: String = ""
     @State private var getBoardDetailId: String = ""
+    @State private var searchKeyword: String = ""
     
     var body: some View {
         VStack {
@@ -48,6 +49,16 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("게시판 상세 조회")
+            }
+            
+            TextField("검색할 키워드를 입력하세요.", text: $searchKeyword)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchSearchBoards(keyword: searchKeyword, page: 0)
+                }
+            } label: {
+                Text("게시글 검색")
             }
         }
     }
