@@ -70,7 +70,7 @@ struct FileUploadTestView: View {
 //                
 //                let sendData = Data.createFileData(boundary: boundary, data: fileData, mimeType: fileExtension, fileName: fileNameWithoutExtension)
                 
-                let fileInfo = FileInfo(data: fileData, fileName: fileNameWithoutExtension, mimeType: fileExtension)
+                let fileInfo = BoardNetwork.FileInfo(data: fileData, fileName: fileNameWithoutExtension, mimeType: fileExtension)
                 
                 print("fileInfo: \(fileInfo)")
                 

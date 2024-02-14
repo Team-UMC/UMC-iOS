@@ -194,6 +194,7 @@
 		F34D2D8F2B74FAE100491EBE /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8E2B74FAE100491EBE /* PositionType.swift */; };
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
 		F38547922B7CD725001F5E70 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F38547912B7CD725001F5E70 /* audio.mp3 */; };
+		F38547942B7D2515001F5E70 /* NSMutableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547932B7D2515001F5E70 /* NSMutableData.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -431,6 +432,7 @@
 		F34D2D8E2B74FAE100491EBE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		F38547912B7CD725001F5E70 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		F38547932B7D2515001F5E70 /* NSMutableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableData.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -631,7 +633,6 @@
 		F34D2BCD2B73671700491EBE /* UMC-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				44CD3DC32B7949020089B04F /* Config.xcconfig */,
 				F34D2C382B73675300491EBE /* Extension */,
 				F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */,
 				F34D2D6D2B73698400491EBE /* Info.plist */,
@@ -898,6 +899,7 @@
 				F3B689362B77681700A4FBB5 /* String+Extension.swift */,
 				F3B689382B776F5600A4FBB5 /* Array+Extension.swift */,
 				F3935D332B7B83270036E77A /* Data+Extension.swift */,
+				F38547932B7D2515001F5E70 /* NSMutableData.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1718,6 +1720,7 @@
 				F34D2D0A2B73675300491EBE /* TILListSixthCell.swift in Sources */,
 				F34D2D1F2B73675300491EBE /* HomeNotificationView.swift in Sources */,
 				F34D2D022B73675300491EBE /* TILLIstfifthCell.swift in Sources */,
+				F38547942B7D2515001F5E70 /* NSMutableData.swift in Sources */,
 				F3B6893B2B77960A00A4FBB5 /* TodoListViewModel.swift in Sources */,
 				F34D2CCA2B73675300491EBE /* BulletinBoardList.swift in Sources */,
 				F34D2D072B73675300491EBE /* TILListFirstViewsub.swift in Sources */,
