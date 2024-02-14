@@ -166,9 +166,9 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 내가 좋아요한 게시글 조회/검색 API(fetch)
     @MainActor
-    func fetchGetMyHeartsBoards(keyword: String, page: Int) async {
+    func fetchGetMyHeartBoards(keyword: String, page: Int) async {
         do {
-            let response = try await getMyHeartsBoards(keyword: keyword, page: page)
+            let response = try await getMyHeartBoards(keyword: keyword, page: page)
             print(response)
 //            boards = Board(contentPreview: ContentPreView)
         } catch {
@@ -177,7 +177,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 내가 좋아요한 게시글 조회/검색 API
-    func getMyHeartsBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyHeartsBoards {
+    func getMyHeartBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyHeartBoards {
         //URL 생성
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_member_hearts_app.rawValue
@@ -206,9 +206,59 @@ class BoardNetwork: ObservableObject {
 
         let decoder = JSONDecoder()
         
-        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.GetMyHeartsBoards>.self, from: data)
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.GetMyHeartBoards>.self, from: data)
         
-        var myBoards: BoardResponse.GetMyHeartsBoards
+        var myBoards: BoardResponse.GetMyHeartBoards
+        myBoards = jsonDictionary.result
+        
+        return myBoards
+    }
+    
+    // 게시판 API - 내가 댓글 쓴 글 조회/검색 API(fetch)
+    @MainActor
+    func fetchGetMyCommentBoards(keyword: String, page: Int) async {
+        do {
+            let response = try await getMyCommentBoards(keyword: keyword, page: page)
+            print(response)
+//            boards = Board(contentPreview: ContentPreView)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 게시판 API - 내가 댓글 쓴 글 조회/검색 API
+    func getMyCommentBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyCommentBoards {
+        //URL 생성
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards_comments_member_comments_app.rawValue
+        urlComponents.queryItems = [
+            URLQueryItem(name: "keyword", value: keyword),
+            URLQueryItem(name: "page", value: "\(page)"),
+        ]
+
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200...299).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+
+
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.GetMyCommentBoards>.self, from: data)
+        
+        var myBoards: BoardResponse.GetMyCommentBoards
         myBoards = jsonDictionary.result
         
         return myBoards
