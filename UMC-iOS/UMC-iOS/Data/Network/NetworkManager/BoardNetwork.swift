@@ -386,6 +386,55 @@ class BoardNetwork: ObservableObject {
         return boardCommentId
     }
     
+    // 게시판 댓글 API - 댓글 삭제 API(fetch)
+    @MainActor
+    func fetchDeleteBoardComment(commentId: String) async {
+        do {
+            print("fetchDeleteBoardComment : \(commentId)")
+            print(commentId)
+            
+            let commentId = try await deleteBoardComment(commentId: commentId)
+            print(commentId)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 게시판 댓글 API - 댓글 삭제 API
+    func deleteBoardComment(commentId: String) async throws -> BoardCommentResponse.BoardCommentId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards_comments.rawValue + "/\(commentId)"
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardCommentResponse.BoardCommentId>.self, from: data)
+        
+        var boardCommentId: BoardCommentResponse.BoardCommentId
+        boardCommentId = jsonDictionary.result
+    
+        
+        return boardCommentId
+    }
+    
     // 게시판 API - 게시글 삭제 API(fetch)
     @MainActor
     func fetchDeleteBoard(request: BoardRequest.BoardId) async {

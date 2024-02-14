@@ -15,6 +15,7 @@ struct BoardAPITestView: View {
     @State private var heartBoardId: String = ""
     @State private var createBoardCommentId: String = ""
     @State private var updateBoardCommentId: String = ""
+    @State private var deleteBoardCommentId: String = ""
     
     var body: some View {
         VStack {
@@ -92,6 +93,16 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("댓글 수정")
+            }
+            
+            TextField("삭제할 댓글 아이디를 입력하세요.", text: $deleteBoardCommentId)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchDeleteBoardComment(commentId: deleteBoardCommentId)
+                }
+            } label: {
+                Text("댓글 삭제")
             }
         }
     }
