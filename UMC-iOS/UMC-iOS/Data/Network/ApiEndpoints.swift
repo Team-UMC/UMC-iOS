@@ -8,9 +8,15 @@
 import Foundation
 
 enum ApiEndpoints {
+    // dev
     static let scheme = "http"
     static let host = "umcservice.shop"
     static let port = 8000
+    
+    // local
+//    static let scheme = "http"
+//    static let host = "localhost"
+//    static let port = 8080
     
     enum Path: String {
         // members
@@ -28,9 +34,15 @@ enum ApiEndpoints {
         case scheudles_detail = "/schedules/detail"
         
         // boards
-        case boards = "/boards/comments"
+        case boards = "/boards"
+        case heart = "/heart"
+        case pin = "/pin"
+        case boards_member_app = "/boards/member/app"
+        case boards_member_hearts_app = "/boards/member/hearts/app"
+        case boards_search = "/boards/search"
+        case boards_comments = "/boards/comments"
         case boards_comments_member_comments_app = "/boards/comments/member/comments/app"
-        case boards_comments_member_comments_web = "/boards/comments/member/comments/web"
+        case staff_boards_notices = "/staff/boards/notices"
         
         // todoList
         case todoLists = "/to-do-lists"
@@ -58,6 +70,6 @@ extension ApiEndpoints {
         urlComponents.scheme = ApiEndpoints.scheme
         urlComponents.host = ApiEndpoints.host
         urlComponents.port = ApiEndpoints.port
-    return urlComponents
-}
+        return urlComponents
+    }
 }

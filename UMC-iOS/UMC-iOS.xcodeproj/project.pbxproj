@@ -12,7 +12,7 @@
 		4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204C2B7521620024476C /* ManagerPinRequest.swift */; };
 		4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */; };
 		427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427820502B75218F0024476C /* ManagerInfoResponce.swift */; };
-		449DB8632B77A74900415113 /* BoardCellResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8622B77A74900415113 /* BoardCellResponse.swift */; };
+		449DB8632B77A74900415113 /* BoardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DB8622B77A74900415113 /* BoardResponse.swift */; };
 		44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */; };
 		44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */; };
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
@@ -193,12 +193,22 @@
 		F34D2D8B2B74F61900491EBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8A2B74F61900491EBE /* Branch.swift */; };
 		F34D2D8F2B74FAE100491EBE /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8E2B74FAE100491EBE /* PositionType.swift */; };
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
+		F38547922B7CD725001F5E70 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F38547912B7CD725001F5E70 /* audio.mp3 */; };
+		F38547942B7D2515001F5E70 /* NSMutableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547932B7D2515001F5E70 /* NSMutableData.swift */; };
+		F38547962B7D3C73001F5E70 /* BoardComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547952B7D3C73001F5E70 /* BoardComment.swift */; };
+		F38547982B7D3D0D001F5E70 /* BoardCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */; };
+		F385479A2B7D3D20001F5E70 /* BoardCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
 		F3935D242B7B53230036E77A /* ScheduleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D232B7B53230036E77A /* ScheduleNetwork.swift */; };
 		F3935D262B7B54F00036E77A /* ScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D252B7B54F00036E77A /* ScheduleRequest.swift */; };
 		F3935D2A2B7B58790036E77A /* ScheduleAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */; };
+		F3935D2C2B7B75B70036E77A /* BoardNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */; };
+		F3935D302B7B76A10036E77A /* BoardAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */; };
+		F3935D322B7B7C850036E77A /* BoardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D312B7B7C850036E77A /* BoardRequest.swift */; };
+		F3935D342B7B83270036E77A /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D332B7B83270036E77A /* Data+Extension.swift */; };
+		F3935D382B7BE9870036E77A /* FileUploadTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D372B7BE9870036E77A /* FileUploadTestView.swift */; };
 		F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */; };
 		F3B689312B774C3F00A4FBB5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */; };
 		F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689342B7756FC00A4FBB5 /* TodoList.swift */; };
@@ -243,7 +253,7 @@
 		4278204C2B7521620024476C /* ManagerPinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerPinRequest.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerPinRequest.swift"; sourceTree = SOURCE_ROOT; };
 		4278204E2B75217B0024476C /* ManagerCalenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerCalenderResponse.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerCalenderResponse.swift"; sourceTree = SOURCE_ROOT; };
 		427820502B75218F0024476C /* ManagerInfoResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerInfoResponce.swift; path = "UMC-iOS/Presentation/HomeTopMenu/ManagerInfoResponce.swift"; sourceTree = SOURCE_ROOT; };
-		449DB8622B77A74900415113 /* BoardCellResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellResponse.swift; sourceTree = "<group>"; };
+		449DB8622B77A74900415113 /* BoardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardResponse.swift; sourceTree = "<group>"; };
 		44B0C78F2B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " BoardSearchLikedResultRequest.swift"; sourceTree = "<group>"; };
 		44B0C7912B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchMyWritedResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
@@ -424,12 +434,22 @@
 		F34D2D8A2B74F61900491EBE /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		F34D2D8E2B74FAE100491EBE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		F38547912B7CD725001F5E70 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		F38547932B7D2515001F5E70 /* NSMutableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableData.swift; sourceTree = "<group>"; };
+		F38547952B7D3C73001F5E70 /* BoardComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardComment.swift; sourceTree = "<group>"; };
+		F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCommentResponse.swift; sourceTree = "<group>"; };
+		F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCommentRequest.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
 		F3935D232B7B53230036E77A /* ScheduleNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNetwork.swift; sourceTree = "<group>"; };
 		F3935D252B7B54F00036E77A /* ScheduleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequest.swift; sourceTree = "<group>"; };
 		F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPITestView.swift; sourceTree = "<group>"; };
+		F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNetwork.swift; sourceTree = "<group>"; };
+		F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAPITestView.swift; sourceTree = "<group>"; };
+		F3935D312B7B7C850036E77A /* BoardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRequest.swift; sourceTree = "<group>"; };
+		F3935D332B7B83270036E77A /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		F3935D372B7BE9870036E77A /* FileUploadTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploadTestView.swift; sourceTree = "<group>"; };
 		F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListResponse.swift; sourceTree = "<group>"; };
 		F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
@@ -598,6 +618,7 @@
 			isa = PBXGroup;
 			children = (
 				44FCC3832B7B922B00C41278 /* Config.xcconfig */,
+				F38547912B7CD725001F5E70 /* audio.mp3 */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
 				F34D2BE82B73671800491EBE /* UMC-iOSUITests */,
@@ -618,6 +639,7 @@
 		F34D2BCD2B73671700491EBE /* UMC-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F34D2C382B73675300491EBE /* Extension */,
 				F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */,
 				F34D2D6D2B73698400491EBE /* Info.plist */,
 				F34D2D552B7367DC00491EBE /* Domain */,
@@ -866,7 +888,6 @@
 				F34D2C362B73675300491EBE /* SettingBackButton.swift */,
 				F34D2C372B73675300491EBE /* DropDownPicker.swift */,
 				44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */,
-				F34D2C382B73675300491EBE /* Extension */,
 				F34D2C3A2B73675300491EBE /* CirclePlusButton.swift */,
 				F34D2C3B2B73675300491EBE /* CircleCheckButton.swift */,
 				F34D2C3C2B73675300491EBE /* SideMenuNavigationButton.swift */,
@@ -883,6 +904,8 @@
 				F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */,
 				F3B689362B77681700A4FBB5 /* String+Extension.swift */,
 				F3B689382B776F5600A4FBB5 /* Array+Extension.swift */,
+				F3935D332B7B83270036E77A /* Data+Extension.swift */,
+				F38547932B7D2515001F5E70 /* NSMutableData.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1314,6 +1337,7 @@
 				F3B6894D2B780E3400A4FBB5 /* PointType.swift */,
 				F3935D1D2B7B4CD40036E77A /* Board.swift */,
 				F3935D1F2B7B4E4B0036E77A /* HostType.swift */,
+				F38547952B7D3C73001F5E70 /* BoardComment.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1333,6 +1357,8 @@
 				F3B689402B77BA1C00A4FBB5 /* TodoListAPITestView.swift */,
 				F3B689422B77F05F00A4FBB5 /* UniversityAPITestView.swift */,
 				F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */,
+				F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */,
+				F3935D372B7BE9870036E77A /* FileUploadTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1342,6 +1368,7 @@
 			children = (
 				F3B689452B77F1AE00A4FBB5 /* UniversityNetwork.swift */,
 				F3935D232B7B53230036E77A /* ScheduleNetwork.swift */,
+				F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -1353,6 +1380,8 @@
 				F3B6893E2B7797C500A4FBB5 /* TodoListRequest.swift */,
 				F3B6894F2B78116500A4FBB5 /* UniversityRequest.swift */,
 				F3935D252B7B54F00036E77A /* ScheduleRequest.swift */,
+				F3935D312B7B7C850036E77A /* BoardRequest.swift */,
+				F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1360,11 +1389,12 @@
 		F3DABB4B2B754FED00BBF00B /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */,
 				F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */,
 				46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */,
 				F3B6894B2B77F55C00A4FBB5 /* UniversityResponse.swift */,
 				F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */,
-				449DB8622B77A74900415113 /* BoardCellResponse.swift */,
+				449DB8622B77A74900415113 /* BoardResponse.swift */,
 				F34D2D4D2B7367D400491EBE /* MemberResponse.swift */,
 				F3DABB4E2B75537300BBF00B /* Protocol */,
 			);
@@ -1497,6 +1527,7 @@
 			files = (
 				F34D2D472B7367C600491EBE /* Assets.xcassets in Resources */,
 				F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */,
+				F38547922B7CD725001F5E70 /* audio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1533,6 +1564,7 @@
 				F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */,
 				F3B6894E2B780E3400A4FBB5 /* PointType.swift in Sources */,
 				F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */,
+				F3935D322B7B7C850036E77A /* BoardRequest.swift in Sources */,
 				F34D2CDC2B73675300491EBE /* ManagerCalender.swift in Sources */,
 				F34D2CCF2B73675300491EBE /* WritingListCellSecond.swift in Sources */,
 				F34D2D302B73675300491EBE /* JoinViewModel.swift in Sources */,
@@ -1549,6 +1581,7 @@
 				F34D2D192B73675300491EBE /* ProjectClassificationView.swift in Sources */,
 				44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */,
 				F34D2D082B73675300491EBE /* TILWriteUI.swift in Sources */,
+				F3935D382B7BE9870036E77A /* FileUploadTestView.swift in Sources */,
 				F34D2CBA2B73675300491EBE /* HomeViewModel.swift in Sources */,
 				F34D2CDE2B73675300491EBE /* ManagerPin.swift in Sources */,
 				F34D2D002B73675300491EBE /* TILFileAddViewModel.swift in Sources */,
@@ -1559,6 +1592,7 @@
 				F34D2CEB2B73675300491EBE /* CircleFillButton.swift in Sources */,
 				F34D2CF82B73675300491EBE /* ToDoListCell.swift in Sources */,
 				F34D2CFD2B73675300491EBE /* MyComment.swift in Sources */,
+				F3935D2C2B7B75B70036E77A /* BoardNetwork.swift in Sources */,
 				F34D2CD22B73675300491EBE /* WritingListCellFirst.swift in Sources */,
 				F34D2CC42B73675300491EBE /* HomeSideMenuView.swift in Sources */,
 				F34D2D1C2B73675300491EBE /* ProjectInformationRegisterView.swift in Sources */,
@@ -1581,6 +1615,7 @@
 				F34D2CE82B73675300491EBE /* CirclePlusButton.swift in Sources */,
 				F34D2CE42B73675300491EBE /* CommetAddbar.swift in Sources */,
 				F34D2CD92B73675300491EBE /* SearchBar.swift in Sources */,
+				F38547982B7D3D0D001F5E70 /* BoardCommentResponse.swift in Sources */,
 				F34D2CE22B73675300491EBE /* BulletinBoardContentDetail.swift in Sources */,
 				F3B689462B77F1AE00A4FBB5 /* UniversityNetwork.swift in Sources */,
 				F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */,
@@ -1622,6 +1657,7 @@
 				F34D2D052B73675300491EBE /* TILList.swift in Sources */,
 				F34D2D2F2B73675300491EBE /* SocialLoginViewModel.swift in Sources */,
 				4278204B2B75214C0024476C /* ManagerInfoRequest.swift in Sources */,
+				F38547962B7D3C73001F5E70 /* BoardComment.swift in Sources */,
 				4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */,
 				F3B6894C2B77F55C00A4FBB5 /* UniversityResponse.swift in Sources */,
 				F34D2D392B73675300491EBE /* KakaoLoginButton.swift in Sources */,
@@ -1638,6 +1674,7 @@
 				F34D2D062B73675300491EBE /* TILUI.swift in Sources */,
 				F34D2CEE2B73675300491EBE /* MascotRankingModel.swift in Sources */,
 				44FCC3822B7B6F0800C41278 /* DetailNavigationBar.swift in Sources */,
+				F385479A2B7D3D20001F5E70 /* BoardCommentRequest.swift in Sources */,
 				F34D2CEA2B73675300491EBE /* SideMenuNavigationButton.swift in Sources */,
 				44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */,
 				F34D2CBC2B73675300491EBE /* UserInformationView.swift in Sources */,
@@ -1656,10 +1693,12 @@
 				F34D2D602B7367DC00491EBE /* Member.swift in Sources */,
 				F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */,
 				F3B689392B776F5600A4FBB5 /* Array+Extension.swift in Sources */,
+				F3935D342B7B83270036E77A /* Data+Extension.swift in Sources */,
 				F3DABB512B755BE200BBF00B /* UserData.swift in Sources */,
 				F34D2D112B73675300491EBE /* HistoryProjectView.swift in Sources */,
-				449DB8632B77A74900415113 /* BoardCellResponse.swift in Sources */,
+				449DB8632B77A74900415113 /* BoardResponse.swift in Sources */,
 				F34D2D362B73675300491EBE /* JoinNavigationButton.swift in Sources */,
+				F3935D302B7B76A10036E77A /* BoardAPITestView.swift in Sources */,
 				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
 				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
@@ -1693,6 +1732,7 @@
 				F34D2D0A2B73675300491EBE /* TILListSixthCell.swift in Sources */,
 				F34D2D1F2B73675300491EBE /* HomeNotificationView.swift in Sources */,
 				F34D2D022B73675300491EBE /* TILLIstfifthCell.swift in Sources */,
+				F38547942B7D2515001F5E70 /* NSMutableData.swift in Sources */,
 				F3B6893B2B77960A00A4FBB5 /* TodoListViewModel.swift in Sources */,
 				F34D2CCA2B73675300491EBE /* BulletinBoardList.swift in Sources */,
 				F34D2D072B73675300491EBE /* TILListFirstViewsub.swift in Sources */,
@@ -1894,6 +1934,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1925,6 +1966,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
