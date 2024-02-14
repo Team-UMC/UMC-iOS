@@ -24,7 +24,7 @@ extension Data {
         body.appendString("Content-Type: application/json\r\n\r\n")
         body.append(data)
         body.appendString("\r\n")
-        body.appendString("--".appending(boundary.appending("--")))
+//        body.appendString("--".appending(boundary.appending("--")))
 
         return body as Data
     }
@@ -34,11 +34,11 @@ extension Data {
         let boundaryPrefix = "--\(boundary)\r\n"
 
         body.appendString(boundaryPrefix)
-        body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(fileName)\"\r\n")
-        body.appendString("Content-Type: \(mimeType)\r\n\r\n")
+        body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(fileName).\(mimeType)\"\r\n")
+        body.appendString("Content-Type: application/\(mimeType)\r\n\r\n")
         body.append(data)
         body.appendString("\r\n")
-        body.appendString("--".appending(boundary.appending("--")))
+//        body.appendString("--".appending(boundary.appending("--")))
 
         return body as Data
     }
@@ -134,7 +134,7 @@ class BoardNetwork: ObservableObject {
             
             
             
-            let response = try await createBoard(sendData: sendData, files: [])
+            let response = try await createBoard(sendData: sendData, files: files)
 //            print(response)
             
 
@@ -185,21 +185,30 @@ class BoardNetwork: ObservableObject {
 //            body.append(sendData)
 //            body.append("\r\n".data(using: .utf8)!)
 //        }
-        var body = NSMutableData()
+        var body = Data()
         
         
         for file in files {
-            var fileData = Data.createFileData(boundary: boundary, data: file.data, mimeType: file.mimeType, fileName: file.fileName)
+            let fileData = Data.createFileData(boundary: boundary, data: file.data, mimeType: file.mimeType, fileName: file.fileName)
+            // 로그찍기
+            print("-----file : \(fileData)")
+            
+            //
             body.append(fileData)
         }
 
         // JSON 데이터 추가
-        var jsonData = Data.createJsonStringData(boundary: boundary, data: sendData)
+        let jsonData = Data.createJsonStringData(boundary: boundary, data: sendData)
         body.append(jsonData)
         
-        request.httpBody = body as Data
+        body.append("--".appending(boundary.appending("--")).data(using: .utf8)!)
+        
+        request.httpBody = body
         
         // ----------
+        
+
+        
         
         
         let (data, response) = try await URLSession.shared.data(for: request)

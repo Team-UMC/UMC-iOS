@@ -193,6 +193,7 @@
 		F34D2D8B2B74F61900491EBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8A2B74F61900491EBE /* Branch.swift */; };
 		F34D2D8F2B74FAE100491EBE /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D8E2B74FAE100491EBE /* PositionType.swift */; };
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
+		F38547922B7CD725001F5E70 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F38547912B7CD725001F5E70 /* audio.mp3 */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -203,6 +204,7 @@
 		F3935D302B7B76A10036E77A /* BoardAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */; };
 		F3935D322B7B7C850036E77A /* BoardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D312B7B7C850036E77A /* BoardRequest.swift */; };
 		F3935D342B7B83270036E77A /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D332B7B83270036E77A /* Data+Extension.swift */; };
+		F3935D382B7BE9870036E77A /* FileUploadTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D372B7BE9870036E77A /* FileUploadTestView.swift */; };
 		F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */; };
 		F3B689312B774C3F00A4FBB5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */; };
 		F3B689352B7756FC00A4FBB5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B689342B7756FC00A4FBB5 /* TodoList.swift */; };
@@ -428,6 +430,7 @@
 		F34D2D8A2B74F61900491EBE /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		F34D2D8E2B74FAE100491EBE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		F38547912B7CD725001F5E70 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -438,6 +441,7 @@
 		F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAPITestView.swift; sourceTree = "<group>"; };
 		F3935D312B7B7C850036E77A /* BoardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRequest.swift; sourceTree = "<group>"; };
 		F3935D332B7B83270036E77A /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		F3935D372B7BE9870036E77A /* FileUploadTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploadTestView.swift; sourceTree = "<group>"; };
 		F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListResponse.swift; sourceTree = "<group>"; };
 		F3B689302B774C3F00A4FBB5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3B689342B7756FC00A4FBB5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
@@ -606,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				44FCC3832B7B922B00C41278 /* Config.xcconfig */,
+				F38547912B7CD725001F5E70 /* audio.mp3 */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
 				F34D2BE82B73671800491EBE /* UMC-iOSUITests */,
@@ -626,6 +631,7 @@
 		F34D2BCD2B73671700491EBE /* UMC-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				44CD3DC32B7949020089B04F /* Config.xcconfig */,
 				F34D2C382B73675300491EBE /* Extension */,
 				F34D2D6F2B7374C900491EBE /* UMC-iOS.entitlements */,
 				F34D2D6D2B73698400491EBE /* Info.plist */,
@@ -1343,6 +1349,7 @@
 				F3B689422B77F05F00A4FBB5 /* UniversityAPITestView.swift */,
 				F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */,
 				F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */,
+				F3935D372B7BE9870036E77A /* FileUploadTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1509,6 +1516,7 @@
 			files = (
 				F34D2D472B7367C600491EBE /* Assets.xcassets in Resources */,
 				F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */,
+				F38547922B7CD725001F5E70 /* audio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1562,6 +1570,7 @@
 				F34D2D192B73675300491EBE /* ProjectClassificationView.swift in Sources */,
 				44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */,
 				F34D2D082B73675300491EBE /* TILWriteUI.swift in Sources */,
+				F3935D382B7BE9870036E77A /* FileUploadTestView.swift in Sources */,
 				F34D2CBA2B73675300491EBE /* HomeViewModel.swift in Sources */,
 				F34D2CDE2B73675300491EBE /* ManagerPin.swift in Sources */,
 				F34D2D002B73675300491EBE /* TILFileAddViewModel.swift in Sources */,
@@ -1910,6 +1919,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1941,6 +1951,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
