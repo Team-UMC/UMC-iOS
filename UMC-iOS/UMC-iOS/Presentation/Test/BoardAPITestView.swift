@@ -12,6 +12,7 @@ struct BoardAPITestView: View {
     @State private var deleteBoardId: String = ""
     @State private var getBoardDetailId: String = ""
     @State private var searchKeyword: String = ""
+    @State private var heartBoardId: String = ""
     
     var body: some View {
         VStack {
@@ -59,6 +60,16 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("게시글 검색")
+            }
+            
+            TextField("좋아요/취소할 게시글 아이디를 입력하세요.", text: $heartBoardId)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchHeartBoard(boardId: heartBoardId)
+                }
+            } label: {
+                Text("게시판 좋아요/취소")
             }
         }
     }

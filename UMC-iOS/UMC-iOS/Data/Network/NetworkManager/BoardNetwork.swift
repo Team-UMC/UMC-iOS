@@ -275,8 +275,8 @@ class BoardNetwork: ObservableObject {
             print("fetchDeleteBoard : \(request)")
             print(request)
             
-            let scheduleId = try await deleteBoard(boardId: request.boardId)
-            print(scheduleId)
+            let boardId = try await deleteBoard(boardId: request.boardId)
+            print(boardId)
         } catch {
             print("Error: \(error)")
         }
@@ -294,6 +294,55 @@ class BoardNetwork: ObservableObject {
         
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.BoardId>.self, from: data)
+        
+        var boardId: BoardResponse.BoardId
+        boardId = jsonDictionary.result
+    
+        
+        return boardId
+    }
+    
+    // 게시판 API - 게시글 좋아요/취소 API(fetch)
+    @MainActor
+    func fetchHeartBoard(boardId: String) async {
+        do {
+            print("fetchHeartBoard : \(boardId)")
+            print(boardId)
+            
+            let boardId = try await heartBoard(boardId: boardId)
+            print(boardId)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 게시판 API - 게시글 좋아요/취소 API
+    func heartBoard(boardId: String) async throws -> BoardResponse.BoardId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards.rawValue + "/\(boardId)" + ApiEndpoints.Path.heart.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         

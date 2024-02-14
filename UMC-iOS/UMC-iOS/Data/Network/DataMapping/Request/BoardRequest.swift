@@ -26,4 +26,5 @@ struct BoardRequest {
         let boardId: String
     }
     
+    
 }
