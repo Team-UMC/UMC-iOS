@@ -10,6 +10,7 @@ import SwiftUI
 struct BoardAPITestView: View {
     @ObservedObject var boardNetwork = BoardNetwork()
     @State private var deleteBoardId: String = ""
+    @State private var getBoardDetailId: String = ""
     
     var body: some View {
         VStack {
@@ -29,14 +30,24 @@ struct BoardAPITestView: View {
                 Text("게시판 작성")
             }
             
-            TextField("삭제할 캘린더 아이디를 입력하세요.", text: $deleteBoardId)
+            TextField("삭제할 게시판 아이디를 입력하세요.", text: $deleteBoardId)
             
             Button {
                 Task {
                     await boardNetwork.fetchDeleteBoard(request: BoardRequest.BoardId(boardId: deleteBoardId))
                 }
             } label: {
-                Text("일정 삭제")
+                Text("게시판 삭제")
+            }
+            
+            TextField("상세 조회할 게시판 아이디를 입력하세요.", text: $getBoardDetailId)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchGetBoardDetail(boardId: getBoardDetailId)
+                }
+            } label: {
+                Text("게시판 상세 조회")
             }
         }
     }

@@ -266,6 +266,55 @@ class BoardNetwork: ObservableObject {
         
         return boardId
     }
+    
+    // GET
+    // 게시판 API - 게시글 특정 게시글 상세 조회 API(fetch)
+    @MainActor
+    func fetchGetBoardDetail(boardId: String) async {
+        do {
+            print("fetchGetBoardDetail : \(boardId)")
+            
+            let response = try await getBoardDetail(boardId: boardId)
+            print(response)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 게시판 API - 게시글 특정 게시글 상세 조회 API(fetch)
+    func getBoardDetail(boardId: String) async throws -> BoardResponse.GetBoardDetail {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards.rawValue + "/\(boardId)"
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.GetBoardDetail>.self, from: data)
+        
+        var boardDetail: BoardResponse.GetBoardDetail
+        boardDetail = jsonDictionary.result
+        print(boardDetail)
+        
+        return boardDetail
+    }
 }
 
 extension BoardNetwork {
