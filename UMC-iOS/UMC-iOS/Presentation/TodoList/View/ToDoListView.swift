@@ -8,25 +8,36 @@
 import SwiftUI
 
 struct ToDoListView: View {
-    @State private var contentData: [Int] = Array(0..<5)
+    @ObservedObject var todoListViewModel: TodoListViewModel
+    
     var body: some View {
         List {
-            ForEach(contentData, id: \.self) { index in
-                ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: "Sample Task", time: "12:00", todoIcon: "🌕"))
+            ForEach(todoListViewModel.todoList, id: \.id) { todo in
+                ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: todo.title, time: formattedDate(todo.deadline), todoIcon: "0"))
                     .listRowSeparator(.hidden)
-                    .padding(.bottom,-15)
+                    .padding(.bottom, -15)
             }
         }
         .listStyle(PlainListStyle())
         .onAppear {
             UITableView.appearance().separatorStyle = .none
+            Task {
+                await todoListViewModel.fetchGetTodoList()
+            }
         }
     }
+    
+    // Format Date to String
+    private func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm" 
+        return formatter.string(from: date)
     }
-
-
-#Preview {
-    ToDoListView()
 }
 
+struct ToDoListView_Previews: PreviewProvider {
+    static var previews: some View {
+        ToDoListView(todoListViewModel: TodoListViewModel())
+    }
+}
 

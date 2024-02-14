@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ToDoListUI: View {
+    
+    @State var title: String = ""
+    @State var deadline: String = ""
+    @State var todoIcon: String = ""
+    
     var body: some View {
         
         VStack{
@@ -18,8 +23,8 @@ struct ToDoListUI: View {
                 .padding(.leading,25)
                 .padding(.bottom,-10)
                 
-            ToDoListView()
-            ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
+            ToDoListView(todoListViewModel: TodoListViewModel())
+            ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: title, time: deadline, todoIcon: todoIcon))
             
             
             Image("Underbar")

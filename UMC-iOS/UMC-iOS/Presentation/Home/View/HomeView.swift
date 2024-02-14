@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
+    @State private var isNavigationBtnTapped: [Bool] = [false, false, false, false]
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
@@ -26,7 +27,7 @@ struct HomeView: View {
                     
                     VStack(spacing: 0) {
                         Spacer().frame(height: 50)
-                        HomeNavigationBarView(presentSideMenu: $presentSideMenu).padding(.top, 7)
+                        HomeNavigationBarView(presentSideMenu: $presentSideMenu, isNavigationBtnTapped: $isNavigationBtnTapped).padding(.top, 7)
                         
                         UserInformationView(memberInfo: viewModel.member).padding(.top, 20)
                         
