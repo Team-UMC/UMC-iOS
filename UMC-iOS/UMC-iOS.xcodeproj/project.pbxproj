@@ -195,6 +195,7 @@
 		F34D2D912B74FC5100491EBE /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D902B74FC5100491EBE /* Role.swift */; };
 		F38547922B7CD725001F5E70 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F38547912B7CD725001F5E70 /* audio.mp3 */; };
 		F38547942B7D2515001F5E70 /* NSMutableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547932B7D2515001F5E70 /* NSMutableData.swift */; };
+		F38547962B7D3C73001F5E70 /* BoardComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547952B7D3C73001F5E70 /* BoardComment.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -433,6 +434,7 @@
 		F34D2D902B74FC5100491EBE /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		F38547912B7CD725001F5E70 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		F38547932B7D2515001F5E70 /* NSMutableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableData.swift; sourceTree = "<group>"; };
+		F38547952B7D3C73001F5E70 /* BoardComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardComment.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -1331,6 +1333,7 @@
 				F3B6894D2B780E3400A4FBB5 /* PointType.swift */,
 				F3935D1D2B7B4CD40036E77A /* Board.swift */,
 				F3935D1F2B7B4E4B0036E77A /* HostType.swift */,
+				F38547952B7D3C73001F5E70 /* BoardComment.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1647,6 +1650,7 @@
 				F34D2D052B73675300491EBE /* TILList.swift in Sources */,
 				F34D2D2F2B73675300491EBE /* SocialLoginViewModel.swift in Sources */,
 				4278204B2B75214C0024476C /* ManagerInfoRequest.swift in Sources */,
+				F38547962B7D3C73001F5E70 /* BoardComment.swift in Sources */,
 				4278204F2B75217B0024476C /* ManagerCalenderResponse.swift in Sources */,
 				F3B6894C2B77F55C00A4FBB5 /* UniversityResponse.swift in Sources */,
 				F34D2D392B73675300491EBE /* KakaoLoginButton.swift in Sources */,
