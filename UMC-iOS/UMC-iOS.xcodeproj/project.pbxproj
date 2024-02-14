@@ -31,6 +31,10 @@
 		44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */; };
 		44FCC3932B7DE34100C41278 /* TodayILearnedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */; };
 		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
+		E376F8262B7D41E800C874B6 /* GrowMascotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F8252B7D41E800C874B6 /* GrowMascotView.swift */; };
+		E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F8292B7D538800C874B6 /* UniversityExpView.swift */; };
+		E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */; };
+		E376F82E2B7D559700C874B6 /* MyContributionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -276,6 +280,10 @@
 		44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigationbar.swift; sourceTree = "<group>"; };
 		44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedResponse.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		E376F8252B7D41E800C874B6 /* GrowMascotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowMascotView.swift; sourceTree = "<group>"; };
+		E376F8292B7D538800C874B6 /* UniversityExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityExpView.swift; sourceTree = "<group>"; };
+		E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRankButtonView.swift; sourceTree = "<group>"; };
+		E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContributionButtonView.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -633,6 +641,10 @@
 		E376F8222B7D413C00C874B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E376F8252B7D41E800C874B6 /* GrowMascotView.swift */,
+				E376F8292B7D538800C874B6 /* UniversityExpView.swift */,
+				E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */,
+				E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1664,6 +1676,7 @@
 				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
 				F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */,
 				44FCC3932B7DE34100C41278 /* TodayILearnedResponse.swift in Sources */,
+				E376F82E2B7D559700C874B6 /* MyContributionButtonView.swift in Sources */,
 				F34D2D342B73675300491EBE /* Token.swift in Sources */,
 				F3B6893F2B7797C500A4FBB5 /* TodoListRequest.swift in Sources */,
 				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,
@@ -1708,7 +1721,9 @@
 				F34D2D532B7367D400491EBE /* MemberResponse.swift in Sources */,
 				F3935D242B7B53230036E77A /* ScheduleNetwork.swift in Sources */,
 				F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */,
+				E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */,
 				F34D2D242B73675300491EBE /* UMCseason.swift in Sources */,
+				E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
 				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
 				F34D2CE92B73675300491EBE /* CircleCheckButton.swift in Sources */,
@@ -1797,6 +1812,7 @@
 				F34D2D0C2B73675300491EBE /* TILCell.swift in Sources */,
 				F34D2CDA2B73675300491EBE /* GenerationPartViewModel.swift in Sources */,
 				F3935D262B7B54F00036E77A /* ScheduleRequest.swift in Sources */,
+				E376F8262B7D41E800C874B6 /* GrowMascotView.swift in Sources */,
 				F34D2D832B74B31200491EBE /* ApiTestView.swift in Sources */,
 				F34D2D352B73675300491EBE /* JoinAgreCircleCheckButton.swift in Sources */,
 				F34D2CDF2B73675300491EBE /* ManagerPinButton.swift in Sources */,
