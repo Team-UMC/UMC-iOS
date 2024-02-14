@@ -52,6 +52,10 @@ struct BoardResponse: Codable {
         let liked: Bool
     }
     
+    struct GetMyBoards: Codable {
+        let myBoardPageElements: [MyBoardPageElement]
+    }
+    
 }
     extension BoardResponse {
         struct BoardPageElement: Codable {
@@ -66,6 +70,16 @@ struct BoardResponse: Codable {
             let heartCount: Int
             let createdAt: String
             let fixed: Bool
+        }
+        
+        struct MyBoardPageElement: Codable {
+            let boardId: String
+            let hostType: String
+            let boardType: String
+            let title: String
+            let hitCount: Int
+            let heartCount: Int
+            let createdAt: String
         }
         
     }

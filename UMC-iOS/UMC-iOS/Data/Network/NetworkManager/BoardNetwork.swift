@@ -114,6 +114,56 @@ class BoardNetwork: ObservableObject {
         return searchBoards
     }
     
+    // 게시판 API - 내가 쓴 게시글 조회/검색 API(fetch)
+    @MainActor
+    func fetchGetMyBoards(keyword: String, page: Int) async {
+        do {
+            let response = try await getMyBoards(keyword: keyword, page: page)
+            print(response)
+//            boards = Board(contentPreview: ContentPreView)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 게시판 API - 내가 쓴 게시글 조회/검색 API
+    func getMyBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyBoards {
+        //URL 생성
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards_member_app.rawValue
+        urlComponents.queryItems = [
+            URLQueryItem(name: "keyword", value: keyword),
+            URLQueryItem(name: "page", value: "\(page)"),
+        ]
+
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200...299).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+
+
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.GetMyBoards>.self, from: data)
+        
+        var myBoards: BoardResponse.GetMyBoards
+        myBoards = jsonDictionary.result
+        
+        return myBoards
+    }
+    
     // POST
     
     // 게시판 API - 게시글 작성 API(fetch)
