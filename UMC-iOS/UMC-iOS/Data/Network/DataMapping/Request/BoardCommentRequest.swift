@@ -12,4 +12,8 @@ struct BoardCommentRequest {
         let boardId: String
         let content: String
     }
+    
+    struct UpdateBoardComment: Codable {
+        let content: String
+    }
 }

@@ -13,7 +13,8 @@ struct BoardAPITestView: View {
     @State private var getBoardDetailId: String = ""
     @State private var searchKeyword: String = ""
     @State private var heartBoardId: String = ""
-    @State private var boardCommentId: String = ""
+    @State private var createBoardCommentId: String = ""
+    @State private var updateBoardCommentId: String = ""
     
     var body: some View {
         VStack {
@@ -73,14 +74,24 @@ struct BoardAPITestView: View {
                 Text("게시판 좋아요/취소")
             }
             
-            TextField("댓글을 작성 게시글 아이디를 입력하세요.", text: $boardCommentId)
+            TextField("댓글을 작성할 게시글 아이디를 입력하세요.", text: $createBoardCommentId)
             
             Button {
                 Task {
-                    await boardNetwork.fetchCreateBoardComment(request: BoardCommentRequest.CreateBoardComment(boardId: boardCommentId, content: "댓글111"))
+                    await boardNetwork.fetchCreateBoardComment(request: BoardCommentRequest.CreateBoardComment(boardId: createBoardCommentId, content: "댓글111"))
                 }
             } label: {
                 Text("댓글 작성")
+            }
+            
+            TextField("수정할 댓글 아이디를 입력하세요.", text: $updateBoardCommentId)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchUpdateBoardComment(commentId: updateBoardCommentId, request: BoardCommentRequest.UpdateBoardComment(content: "댓글 수정정"))
+                }
+            } label: {
+                Text("댓글 수정")
             }
         }
     }
