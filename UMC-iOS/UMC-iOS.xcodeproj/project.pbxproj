@@ -27,6 +27,8 @@
 		44CD3DDC2B7B6EB80089B04F /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DDB2B7B6EB80089B04F /* ContentDetailViewModel.swift */; };
 		44FCC3802B7B6EF500C41278 /* DetailButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC37F2B7B6EF500C41278 /* DetailButtonViewModel.swift */; };
 		44FCC3822B7B6F0800C41278 /* DetailNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */; };
+		44FCC3872B7D2A8700C41278 /* RankingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3862B7D2A8700C41278 /* RankingTitle.swift */; };
+		44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */; };
 		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -269,6 +271,8 @@
 		44FCC37F2B7B6EF500C41278 /* DetailButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonViewModel.swift; sourceTree = "<group>"; };
 		44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigationBar.swift; sourceTree = "<group>"; };
 		44FCC3832B7B922B00C41278 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		44FCC3862B7D2A8700C41278 /* RankingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTitle.swift; sourceTree = "<group>"; };
+		44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigationbar.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -940,6 +944,8 @@
 			isa = PBXGroup;
 			children = (
 				F34D2C452B73675300491EBE /* RankingDetailView.swift */,
+				44FCC3862B7D2A8700C41278 /* RankingTitle.swift */,
+				44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1702,6 +1708,7 @@
 				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
 				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
+				44FCC3872B7D2A8700C41278 /* RankingTitle.swift in Sources */,
 				F34D2D222B73675300491EBE /* AbleStack.swift in Sources */,
 				F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */,
 				44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */,
@@ -1760,6 +1767,7 @@
 				F34D2D382B73675300491EBE /* JoinCircleBorderButton.swift in Sources */,
 				F34D2D372B73675300491EBE /* JoinGenerationPartPickers.swift in Sources */,
 				F34D2CFC2B73675300491EBE /* UserMyContentUI.swift in Sources */,
+				44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */,
 				F34D2D402B73675300491EBE /* JoinCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
