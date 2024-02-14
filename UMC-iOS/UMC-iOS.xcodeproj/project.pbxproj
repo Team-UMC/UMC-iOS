@@ -196,6 +196,8 @@
 		F38547922B7CD725001F5E70 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F38547912B7CD725001F5E70 /* audio.mp3 */; };
 		F38547942B7D2515001F5E70 /* NSMutableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547932B7D2515001F5E70 /* NSMutableData.swift */; };
 		F38547962B7D3C73001F5E70 /* BoardComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547952B7D3C73001F5E70 /* BoardComment.swift */; };
+		F38547982B7D3D0D001F5E70 /* BoardCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */; };
+		F385479A2B7D3D20001F5E70 /* BoardCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -435,6 +437,8 @@
 		F38547912B7CD725001F5E70 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		F38547932B7D2515001F5E70 /* NSMutableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableData.swift; sourceTree = "<group>"; };
 		F38547952B7D3C73001F5E70 /* BoardComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardComment.swift; sourceTree = "<group>"; };
+		F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCommentResponse.swift; sourceTree = "<group>"; };
+		F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCommentRequest.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -1377,6 +1381,7 @@
 				F3B6894F2B78116500A4FBB5 /* UniversityRequest.swift */,
 				F3935D252B7B54F00036E77A /* ScheduleRequest.swift */,
 				F3935D312B7B7C850036E77A /* BoardRequest.swift */,
+				F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1384,6 +1389,7 @@
 		F3DABB4B2B754FED00BBF00B /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */,
 				F3DABB4C2B75533D00BBF00B /* BaseResponse.swift */,
 				46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */,
 				F3B6894B2B77F55C00A4FBB5 /* UniversityResponse.swift */,
@@ -1609,6 +1615,7 @@
 				F34D2CE82B73675300491EBE /* CirclePlusButton.swift in Sources */,
 				F34D2CE42B73675300491EBE /* CommetAddbar.swift in Sources */,
 				F34D2CD92B73675300491EBE /* SearchBar.swift in Sources */,
+				F38547982B7D3D0D001F5E70 /* BoardCommentResponse.swift in Sources */,
 				F34D2CE22B73675300491EBE /* BulletinBoardContentDetail.swift in Sources */,
 				F3B689462B77F1AE00A4FBB5 /* UniversityNetwork.swift in Sources */,
 				F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */,
@@ -1667,6 +1674,7 @@
 				F34D2D062B73675300491EBE /* TILUI.swift in Sources */,
 				F34D2CEE2B73675300491EBE /* MascotRankingModel.swift in Sources */,
 				44FCC3822B7B6F0800C41278 /* DetailNavigationBar.swift in Sources */,
+				F385479A2B7D3D20001F5E70 /* BoardCommentRequest.swift in Sources */,
 				F34D2CEA2B73675300491EBE /* SideMenuNavigationButton.swift in Sources */,
 				44B0C7922B74FB4B000AF621 /* BoardSearchMyWritedResultRequest.swift in Sources */,
 				F34D2CBC2B73675300491EBE /* UserInformationView.swift in Sources */,

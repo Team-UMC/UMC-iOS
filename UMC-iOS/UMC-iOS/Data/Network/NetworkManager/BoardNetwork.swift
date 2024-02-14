@@ -268,6 +268,65 @@ class BoardNetwork: ObservableObject {
         return boardId
     }
     
+    // 게시판 댓글 API - 댓글 작성 API(fetch)
+    @MainActor
+    func fetchCreateBoardComment(request: BoardCommentRequest.CreateBoardComment) async {
+        do {
+            print("fetchCreateBoardComment : \(request)")
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            print(request)
+            let sendData = try encoder.encode(request)
+            if let jsonString = String(data: sendData, encoding: .utf8) {
+                print("fetchCreateBoardComment : \(jsonString)")
+            }
+            print(request)
+            
+            let response = try await createBoardComment(sendData: sendData)
+            print(response)
+
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 게시판 댓글 API - 댓글 작성 API
+    func createBoardComment(sendData: Data) async throws -> BoardCommentResponse.BoardCommentId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards_comments.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        request.httpBody = sendData
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardCommentResponse.BoardCommentId>.self, from: data)
+        
+        var boardCommentId: BoardCommentResponse.BoardCommentId
+        boardCommentId = jsonDictionary.result
+        print(boardCommentId)
+        
+        return boardCommentId
+    }
+    
     // 게시판 API - 게시글 삭제 API(fetch)
     @MainActor
     func fetchDeleteBoard(request: BoardRequest.BoardId) async {

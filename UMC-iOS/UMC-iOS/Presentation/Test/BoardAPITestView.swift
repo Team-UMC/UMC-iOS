@@ -13,6 +13,7 @@ struct BoardAPITestView: View {
     @State private var getBoardDetailId: String = ""
     @State private var searchKeyword: String = ""
     @State private var heartBoardId: String = ""
+    @State private var boardCommentId: String = ""
     
     var body: some View {
         VStack {
@@ -70,6 +71,16 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("게시판 좋아요/취소")
+            }
+            
+            TextField("댓글을 작성 게시글 아이디를 입력하세요.", text: $boardCommentId)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchCreateBoardComment(request: BoardCommentRequest.CreateBoardComment(boardId: boardCommentId, content: "댓글111"))
+                }
+            } label: {
+                Text("댓글 작성")
             }
         }
     }
