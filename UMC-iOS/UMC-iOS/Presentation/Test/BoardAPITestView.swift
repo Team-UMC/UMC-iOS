@@ -14,6 +14,7 @@ struct BoardAPITestView: View {
     @State private var searchKeyword: String = ""
     @State private var heartBoardId: String = ""
     @State private var createBoardCommentId: String = ""
+    @State private var searchBoardCommentId: String = ""
     @State private var updateBoardCommentId: String = ""
     @State private var deleteBoardCommentId: String = ""
     @State private var myBoardsSearchKeyword: String = ""
@@ -89,6 +90,16 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("댓글 작성")
+            }
+            
+            TextField("댓글을 조회할 게시글 아이디를 입력하세요.", text: $searchBoardCommentId)
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchGetSpecificBoardComment(boardId: searchBoardCommentId, page: 0)
+                }
+            } label: {
+                Text("댓글 조회")
             }
             
             TextField("수정할 댓글 아이디를 입력하세요.", text: $updateBoardCommentId)
