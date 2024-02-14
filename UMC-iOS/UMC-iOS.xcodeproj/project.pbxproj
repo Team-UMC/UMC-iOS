@@ -620,6 +620,37 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		E376F8212B7D40BA00C874B6 /* GrowMascot */ = {
+			isa = PBXGroup;
+			children = (
+				E376F8242B7D414A00C874B6 /* ViewModel */,
+				E376F8232B7D414400C874B6 /* Model */,
+				E376F8222B7D413C00C874B6 /* View */,
+			);
+			path = GrowMascot;
+			sourceTree = "<group>";
+		};
+		E376F8222B7D413C00C874B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E376F8232B7D414400C874B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E376F8242B7D414A00C874B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
@@ -697,6 +728,7 @@
 				F34D2C2E2B73675300491EBE /* ContentDetail */,
 				F34D2C352B73675300491EBE /* Utils */,
 				F34D2C3F2B73675300491EBE /* MascotRanking */,
+				E376F8212B7D40BA00C874B6 /* GrowMascot */,
 				F34D2C462B73675300491EBE /* ContentView */,
 				F34D2C472B73675300491EBE /* TodoList */,
 				F34D2C532B73675300491EBE /* MyContent */,
