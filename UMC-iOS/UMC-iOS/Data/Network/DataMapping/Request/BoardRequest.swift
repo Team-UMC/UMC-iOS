@@ -22,4 +22,8 @@ struct BoardRequest {
         let board: String
     }
     
+    struct BoardId: Codable {
+        let boardId: String
+    }
+    
 }

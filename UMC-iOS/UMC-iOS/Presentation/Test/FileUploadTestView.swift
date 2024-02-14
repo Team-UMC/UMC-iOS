@@ -26,7 +26,7 @@ struct FileUploadTestView: View {
     var body: some View {
         VStack {
             VStack {
-                Text("게시글 작성")
+                Text("-------게시글 작성-------")
                 Text(fileName)
                     .fontWeight(.bold)
                 
@@ -104,7 +104,7 @@ struct FileUploadTestView: View {
                 }
             }
             VStack {
-                Text("게시글 수정")
+                Text("\n-------게시글 수정-------")
                 TextField("수정할 게시글의 아이디를 입력하세요.", text: $updateBoardId)
                 Text(fileName)
                     .fontWeight(.bold)
