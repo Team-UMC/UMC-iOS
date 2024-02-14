@@ -15,4 +15,11 @@ struct BoardRequest {
         let board: String
     }
     
+    struct UpdateBoard: Codable {
+        let title: String
+        let content: String
+        let host: String
+        let board: String
+    }
+    
 }
