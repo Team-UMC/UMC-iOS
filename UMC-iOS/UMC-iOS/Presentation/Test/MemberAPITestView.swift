@@ -82,7 +82,7 @@ struct MemberAPITestView: View {
                     print("fileInfo: \(fileInfo)")
                     
                     Task {
-                        await memberNetwork.fetchUpdateUserProfile(request: MemberRequest.UpdateUserProfile(name: "경경수", nickname: "리버버", statusMessage: "포항항") , profileImage: fileInfo)
+                        await memberNetwork.fetchUpdateMyProfile(request: MemberRequest.UpdateUserProfile(name: "경경수", nickname: "리버버", statusMessage: "포항항") , profileImage: fileInfo)
                     }
                     
                 } catch {

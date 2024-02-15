@@ -60,10 +60,10 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 유저 프로필 조회 API(fetch)
     @MainActor
-    func fetchGetUserProfile(memberId: String) async {
+    func fetchGetMemberProfile(memberId: String) async {
         do {
-            let userProfile = try await getUserProfile(memberId: memberId)
-            print(userProfile)
+            let memberProfile = try await getMemberProfile(memberId: memberId)
+            print(memberProfile)
             
         } catch {
             print("Error: \(error)")
@@ -71,7 +71,7 @@ class MemberNetwork: ObservableObject {
     }
     
     // 멤버 API - 유저 프로필 조회 API
-    func getUserProfile(memberId: String) async throws -> MemberResponse.GetMemberProfile {
+    func getMemberProfile(memberId: String) async throws -> MemberResponse.GetMemberProfile {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
         if memberId != "" {
@@ -117,20 +117,20 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 나의 프로필 수정 API(fetch)
     @MainActor
-    func fetchUpdateUserProfile(request: MemberRequest.UpdateUserProfile, profileImage: FileInfo) async {
+    func fetchUpdateMyProfile(request: MemberRequest.UpdateUserProfile, profileImage: FileInfo) async {
         do {
-            print("fetchUpdateUserProfile : \(request)")
+            print("fetchUpdateMyProfile : \(request)")
             
             let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
             print(request)
             let sendData = try encoder.encode(request)
             if let jsonString = String(data: sendData, encoding: .utf8) {
-                print("fetchUpdateUserProfile : \(jsonString)")
+                print("fetchUpdateMyProfile : \(jsonString)")
             }
             print(request)
             
-            let response = try await updateUserProfile(sendData: sendData, profileImage: profileImage)
+            let response = try await updateMyProfile(sendData: sendData, profileImage: profileImage)
             print(response)
 
         } catch {
@@ -138,8 +138,8 @@ class MemberNetwork: ObservableObject {
         }
     }
     
-    // 게시판 API - 게시글 수정 API
-    func updateUserProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
+    // 멤버 API - 나의 프로필 수정 API
+    func updateMyProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members_update.rawValue
         
