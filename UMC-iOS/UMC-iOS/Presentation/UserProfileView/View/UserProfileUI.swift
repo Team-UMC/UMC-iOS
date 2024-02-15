@@ -24,7 +24,7 @@ struct UserProfileUI: View {
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
                 VStack {
-                    UserProfile() // Photo and university label
+                    UserProfile(user: Member()) // Photo and university label
                     
                     HStack(spacing: 8) {
                         AbleStack() // Technical skills

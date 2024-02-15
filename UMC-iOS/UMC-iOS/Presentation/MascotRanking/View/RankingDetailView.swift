@@ -7,26 +7,15 @@
 
 import SwiftUI
 
-
 struct RankingDetailView:View {
     @Environment(\.dismiss) private var dismiss
+    var user = Member()
+    var univ = University()
+    
     @ObservedObject var viewModel = MascotRankingViewModel()
-    var Date: String = "2023.12.01"
     
-    var Univ: String = "인하대학교"
-    var UnivLogo: String = "인하대학교_로고"
-    var UnivPoint: Int = 1200
     var UnivRank: Int = 1
-    
-    var User: String = "델로"
-    var UserImage: String = "userProfileEx"
-    var UserPoint: Int = 670
     var UserRank: Int = 4
-    
-    var name: String = "가톨릭대학교"
-    var point: Int = 119
-    var rank: Int = 4
-    
     var mascot: String = "mascotImage2"
     
     var body: some View {
@@ -59,13 +48,13 @@ struct RankingDetailView:View {
                             self.viewModel.selectedRanking = .school
                         }) {
                             VStack {
-                                Image(UnivLogo)
+                                Image(univ.universityLogo)
                                     .resizable()
                                     .frame(width: 100, height: 100)
                                     .clipShape(Circle())
                                     .padding(.bottom,14)
                                 
-                                Text("**\(Univ)**\n**\(UnivPoint)**포인트로\n현재 **\(UnivRank)**등이에요 👏")
+                                Text("**\(user.university)**\n**\(univ.totalPoint)**포인트로\n현재 **\(UnivRank)**등이에요 👏")
                                     .fontWeight(.regular)
                                     .multilineTextAlignment(.center)
                                     .font(.system(size: 12))
@@ -104,13 +93,13 @@ struct RankingDetailView:View {
                             self.viewModel.selectedRanking = .personal
                         }) {
                             VStack {
-                                Image(UserImage)
+                                Image(user.profileImage)
                                     .resizable()
                                     .frame(width: 100, height: 100)
                                     .clipShape(Circle())
                                     .padding(.bottom,14)
                                 
-                                Text("**\(User)** 님은\n**\(UserPoint)** 기여도로\n현재 **\(UserRank)**등이에요 👏")
+                                Text("**\(user.name)** 님은\n**\(user.contributionPoint)** 기여도로\n현재 **\(UserRank)**등이에요 👏")
                                     .fontWeight(.regular)
                                     .multilineTextAlignment(.center)
                                     .font(.system(size: 12))
@@ -158,13 +147,13 @@ struct RankingDetailView:View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image(UnivLogo)
+                                Image(viewModel.schoolRankings[1].name)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text("\(name)")
+                                Text("\(viewModel.schoolRankings[1].name)")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("\(point)")
+                                Text("\(viewModel.schoolRankings[1].points)")
                                     .font(.system(size: 12))
                                 
                             }
@@ -188,13 +177,13 @@ struct RankingDetailView:View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image(UnivLogo)
+                                Image(viewModel.schoolRankings[0].name)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text("\(name)")
+                                Text("\(viewModel.schoolRankings[0].name)")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("\(point)")
+                                Text("\(viewModel.schoolRankings[0].points)")
                                     .font(.system(size: 12))
                                 
                             }
@@ -211,20 +200,20 @@ struct RankingDetailView:View {
                             
                             //랭킹 3등
                             VStack{
-                                Text("3등")
+                                Text("\(viewModel.schoolRankings[2].rank)등")
                                     .padding(4)
                                     .font(.system(size: 10, weight: .medium))
                                     .foregroundStyle(.main)
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image(UnivLogo)
+                                Image(viewModel.schoolRankings[2].name)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text("\(name)")
+                                Text("\(viewModel.schoolRankings[2].name)")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("\(point)")
+                                Text("\(viewModel.schoolRankings[2].points)")
                                     .font(.system(size: 12))
                                 
                                 
@@ -282,11 +271,11 @@ struct RankingDetailView:View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image(UserImage)
+                                Image(viewModel.myContributions[1].name)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text(viewModel.myContributions[1].name)
+                                Text("\(viewModel.myContributions[1].name)")
                                     .font(.system(size: 16, weight: .semibold))
                                 Text("\(viewModel.myContributions[1].points)point")
                                     .font(.system(size: 12))
@@ -309,11 +298,11 @@ struct RankingDetailView:View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image(UserImage)
+                                Image(viewModel.myContributions[0].name)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text(viewModel.myContributions[0].name)
+                                Text("\(viewModel.myContributions[0].name)")
                                     .font(.system(size: 16, weight: .semibold))
                                 Text("\(viewModel.myContributions[0].points)point")
                                     .font(.system(size: 12))
@@ -339,11 +328,11 @@ struct RankingDetailView:View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image(UserImage)
+                                Image(viewModel.myContributions[2].name)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text(viewModel.myContributions[2].name)
+                                Text("\(viewModel.myContributions[2].name)")
                                     .font(.system(size: 16, weight: .semibold))
                                 Text("\(viewModel.myContributions[2].points)point")
                                     .font(.system(size: 12))

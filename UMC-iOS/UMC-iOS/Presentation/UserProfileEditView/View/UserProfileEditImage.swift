@@ -39,7 +39,7 @@ struct UserProfileEditImage: View {
                     .foregroundColor(.white)
                     .font(.system(size: 16))
                     .padding(8)
-                    .background(Color(viewModel.selectedImage != nil ? .clear : .blue))
+                    .background(Color(viewModel.selectedImage != nil ? .clear : Color(textColor)))
                     .clipShape(Circle())
                     .offset(x: 40, y: 38)
             }
@@ -47,6 +47,7 @@ struct UserProfileEditImage: View {
         .onAppear {
             
         }
+        .background(.lightGray)
     }
 }
 

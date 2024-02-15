@@ -9,16 +9,22 @@ import SwiftUI
 
 struct RankingTitle: View {
     @ObservedObject var viewModel = MascotRankingViewModel()
-    var Date: String = "2023.12.01"
+    @State private var date = Date()
+
+    var formattedDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        return dateFormatter.string(from: date)
+    }
+
     var body: some View {
-        //타이틀
+        // 타이틀
         Text("우리 학교 지금은?")
             .font(.system(size: 24, weight: .semibold))
             .foregroundStyle(.white)
-        Text("\(Date) 기준")
+        Text("\(formattedDate) 기준")
             .font(.system(size: 12))
             .foregroundStyle(.grayDivider)
-        
     }
 }
 

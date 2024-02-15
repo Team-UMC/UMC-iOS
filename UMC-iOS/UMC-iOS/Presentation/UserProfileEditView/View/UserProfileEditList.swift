@@ -58,6 +58,8 @@ struct UserProfileEditList: View {
                 PlaceholderTextEditor(text: $viewModel.message, placeholder: "상태메세지를 입력해주세요")
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(.lightGray)
     }
 }
 
