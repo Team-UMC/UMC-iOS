@@ -35,6 +35,8 @@
 		E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F8292B7D538800C874B6 /* UniversityExpView.swift */; };
 		E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */; };
 		E376F82E2B7D559700C874B6 /* MyContributionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */; };
+		E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */; };
+		E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -284,6 +286,8 @@
 		E376F8292B7D538800C874B6 /* UniversityExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityExpView.swift; sourceTree = "<group>"; };
 		E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRankButtonView.swift; sourceTree = "<group>"; };
 		E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContributionButtonView.swift; sourceTree = "<group>"; };
+		E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotFoodView.swift; sourceTree = "<group>"; };
+		E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotImageView.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -645,6 +649,8 @@
 				E376F8292B7D538800C874B6 /* UniversityExpView.swift */,
 				E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */,
 				E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */,
+				E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */,
+				E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1608,6 +1614,7 @@
 				F34D2CC22B73675300491EBE /* GitHubView.swift in Sources */,
 				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
+				E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */,
 				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
 				44FCC3802B7B6EF500C41278 /* DetailButtonViewModel.swift in Sources */,
 				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
@@ -1783,6 +1790,7 @@
 				4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */,
 				F34D2D3D2B73675300491EBE /* SelectUniv.swift in Sources */,
 				F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */,
+				E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */,
 				F34D2D5F2B7367DC00491EBE /* AnnouncementInfo.swift in Sources */,
 				F34D2D852B74BB1200491EBE /* SocialType.swift in Sources */,
 				F34D2CE62B73675300491EBE /* DropDownPicker.swift in Sources */,
