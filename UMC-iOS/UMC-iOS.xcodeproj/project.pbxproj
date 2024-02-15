@@ -215,6 +215,7 @@
 		F385479A2B7D3D20001F5E70 /* BoardCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */; };
 		F3896FC82B7DCAAE0075E0AB /* MemberNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FC72B7DCAAE0075E0AB /* MemberNetwork.swift */; };
 		F3896FCB2B7DCF8B0075E0AB /* MemberAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FCA2B7DCF8B0075E0AB /* MemberAPITestView.swift */; };
+		F3896FCE2B7DE0190075E0AB /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FCD2B7DE0190075E0AB /* FileInfo.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -473,6 +474,7 @@
 		F3896FC72B7DCAAE0075E0AB /* MemberNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberNetwork.swift; sourceTree = "<group>"; };
 		F3896FC92B7DCD5E0075E0AB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		F3896FCA2B7DCF8B0075E0AB /* MemberAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAPITestView.swift; sourceTree = "<group>"; };
+		F3896FCD2B7DE0190075E0AB /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -1386,6 +1388,7 @@
 		F34D2D552B7367DC00491EBE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F3896FCC2B7DE0000075E0AB /* Common */,
 				F34D2D562B7367DC00491EBE /* Entities */,
 			);
 			path = Domain;
@@ -1442,6 +1445,14 @@
 				F3896FCA2B7DCF8B0075E0AB /* MemberAPITestView.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		F3896FCC2B7DE0000075E0AB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F3896FCD2B7DE0190075E0AB /* FileInfo.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F3B689442B77F11200A4FBB5 /* NetworkManager */ = {
@@ -1676,6 +1687,7 @@
 				F34D2D032B73675300491EBE /* TILListFirstCell.swift in Sources */,
 				F34D2CEB2B73675300491EBE /* CircleFillButton.swift in Sources */,
 				F34D2CF82B73675300491EBE /* ToDoListCell.swift in Sources */,
+				F3896FCE2B7DE0190075E0AB /* FileInfo.swift in Sources */,
 				F34D2CFD2B73675300491EBE /* MyComment.swift in Sources */,
 				E333D76C2B7E558000D335AD /* ManagerInfomation.swift in Sources */,
 				F3935D2C2B7B75B70036E77A /* BoardNetwork.swift in Sources */,

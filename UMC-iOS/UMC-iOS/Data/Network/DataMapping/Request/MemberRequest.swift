@@ -22,6 +22,11 @@ class MemberRequest {
         let socialType: String
     }
     
+    struct UpdateUserProfile: Codable {
+        let name: String
+        let nickname: String
+        let statusMessage: String
+    }
 
 }
 

@@ -21,12 +21,13 @@ enum ApiEndpoints {
     enum Path: String {
         // members
         case members = "/members"
+        case members_update = "/members/update"
         case members_login = "/members/login"
         case members_logout = "/members/logout"
         case members_token_refresh = "/members/token/refresh"
         case members_github = "/members/github"
         case members_points = "/members/points"
-        case members_rank = "/members/update"
+        case members_rank = "/members/rank"
         
         // schedules
         case schedules = "/schedules"

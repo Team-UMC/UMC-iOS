@@ -11,6 +11,7 @@ struct ApiTestView: View {
     @ObservedObject var userProfileViewModel = UserProfileViewModel()
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
+    @ObservedObject var memberNetwork = MemberNetwork()
     @State private var goToTodoListAPITestView: Bool = false
     @State private var goToMembeerAPITestView: Bool = false
     @State private var goToUniversityAPITestView: Bool = false
@@ -48,7 +49,7 @@ struct ApiTestView: View {
                 TextField("검색할 유저 아이디를 입력하세요", text: $searchMemberId)
                 Button {
                     Task {
-                        await userProfileViewModel.fetchGetUserProfile(memberId: searchMemberId)
+                        await memberNetwork.fetchGetUserProfile(memberId: searchMemberId)
                     }
                 } label: {
                     Text("유저 프로필 조회")

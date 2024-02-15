@@ -44,6 +44,20 @@ extension Data {
         return body as Data
     }
     
+    static func createImageData(boundary: String, data: Data, mimeType: String, imageName: String) -> Data {
+        let body = NSMutableData()
+        let boundaryPrefix = "--\(boundary)\r\n"
+
+        body.appendString(boundaryPrefix)
+        body.appendString("Content-Disposition: form-data; name=\"profileImage\"; filename=\"\(imageName).\(mimeType)\"\r\n")
+        body.appendString("Content-Type: image/\(mimeType)\r\n\r\n")
+        body.append(data)
+        body.appendString("\r\n")
+//        body.appendString("--".appending(boundary.appending("--")))
+
+        return body as Data
+    }
+    
     func combineData(datas: [Data]) -> Data {
         let combinedData = NSMutableData()
         
