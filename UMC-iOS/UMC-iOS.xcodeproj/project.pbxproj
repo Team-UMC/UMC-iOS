@@ -29,6 +29,7 @@
 		44FCC3822B7B6F0800C41278 /* DetailNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */; };
 		44FCC3872B7D2A8700C41278 /* RankingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3862B7D2A8700C41278 /* RankingTitle.swift */; };
 		44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */; };
+		44FCC3932B7DE34100C41278 /* TodayILearnedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */; };
 		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -273,6 +274,7 @@
 		44FCC3832B7B922B00C41278 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		44FCC3862B7D2A8700C41278 /* RankingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTitle.swift; sourceTree = "<group>"; };
 		44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigationbar.swift; sourceTree = "<group>"; };
+		44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedResponse.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -1402,6 +1404,7 @@
 				F3B6892E2B771CD500A4FBB5 /* TodoListResponse.swift */,
 				449DB8622B77A74900415113 /* BoardResponse.swift */,
 				F34D2D4D2B7367D400491EBE /* MemberResponse.swift */,
+				44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */,
 				F3DABB4E2B75537300BBF00B /* Protocol */,
 			);
 			path = Response;
@@ -1628,6 +1631,7 @@
 				427820512B75218F0024476C /* ManagerInfoResponce.swift in Sources */,
 				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
 				F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */,
+				44FCC3932B7DE34100C41278 /* TodayILearnedResponse.swift in Sources */,
 				F34D2D342B73675300491EBE /* Token.swift in Sources */,
 				F3B6893F2B7797C500A4FBB5 /* TodoListRequest.swift in Sources */,
 				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,
