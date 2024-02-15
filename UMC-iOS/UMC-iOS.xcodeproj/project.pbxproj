@@ -37,6 +37,7 @@
 		E376F82E2B7D559700C874B6 /* MyContributionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */; };
 		E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */; };
 		E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */; };
+		E3C5A6412B7DCD6A009518D8 /* mascotFeedPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -288,6 +289,7 @@
 		E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContributionButtonView.swift; sourceTree = "<group>"; };
 		E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotFoodView.swift; sourceTree = "<group>"; };
 		E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotImageView.swift; sourceTree = "<group>"; };
+		E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mascotFeedPopupView.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 				E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */,
 				E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */,
 				E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */,
+				E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1778,6 +1781,7 @@
 				F34D2CDD2B73675300491EBE /* ManagerInfo.swift in Sources */,
 				F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */,
 				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,
+				E3C5A6412B7DCD6A009518D8 /* mascotFeedPopupView.swift in Sources */,
 				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
 				F3B6894A2B77F3E000A4FBB5 /* Mascot.swift in Sources */,
 				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,

@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct GrowMascotView: View {
+    
+    @State var shouldShowFeedPopup: Bool = false
+    
     var body: some View {
         ZStack {
             
             // 배경
             Color.gray.ignoresSafeArea(.all)
+            
             
             // 지구 이미지, 마스코트
             VStack(spacing: 0) {
@@ -56,10 +61,10 @@ struct GrowMascotView: View {
                 // 마스코트 먹이
                 VStack(spacing: 12) {
                     
-                    MascotFoodView(exp: 1, foodInfo: "은하수를 살짝 얹은 커스터드 푸딩")
-                    MascotFoodView(exp: 5, foodInfo: "별빛 스프링클이 가득한 블랙홀 도넛")
-                    MascotFoodView(exp: 10, foodInfo: "태양이 물든 선샤인 샤베트 아이스크림 ")
-                    MascotFoodView(exp: 30, foodInfo: "찬란한 별들이 쏙쏙 박힌 우주맛 롤케이크")
+                    MascotFoodView(exp: 1, foodInfo: "은하수를 살짝 얹은 커스터드 푸딩", shouldShowFeedPopup: $shouldShowFeedPopup)
+                    MascotFoodView(exp: 5, foodInfo: "별빛 스프링클이 가득한 블랙홀 도넛", shouldShowFeedPopup: $shouldShowFeedPopup)
+                    MascotFoodView(exp: 10, foodInfo: "태양이 물든 선샤인 샤베트 아이스크림", shouldShowFeedPopup: $shouldShowFeedPopup)
+                    MascotFoodView(exp: 30, foodInfo: "찬란한 별들이 쏙쏙 박힌 우주맛 롤케이크", shouldShowFeedPopup: $shouldShowFeedPopup)
                     
                 } // VStack
                 
@@ -69,7 +74,27 @@ struct GrowMascotView: View {
             .padding(.vertical, 20)
             .padding(.horizontal, 22.5)
             
+            Color(.black)
+                .ignoresSafeArea(.all)
+                .opacity(self.shouldShowFeedPopup ? 0.3 : 0)
+            
         } // ZStack
+        .popup(isPresented: $shouldShowFeedPopup, view: {self.createFeedPopup()},
+               customize: {
+            $0
+                .type(.default)
+                .position(.center)
+                .animation(.bouncy)
+                .closeOnTap(false)
+                .closeOnTapOutside(true)
+        })
+        
+    }
+    
+    func createFeedPopup() -> some View {
+        
+        return mascotFeedPopupView(shouldShowFeedPopup: $shouldShowFeedPopup)
+        
     }
 }
 
