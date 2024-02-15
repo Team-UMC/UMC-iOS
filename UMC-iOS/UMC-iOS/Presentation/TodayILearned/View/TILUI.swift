@@ -6,40 +6,36 @@
 //
 
 import SwiftUI
-
 struct TILUI: View {
-    @State private var isClicked = false
-    
     var body: some View {
-        VStack {
+        NavigationView {
             
-            TILNavigationbar()
-                .padding(.bottom, 10)
-            
-            TodoDate()
-                .padding(.bottom, 0)
-                .padding(.leading, 15)
-            
-            ZStack {
-                TILList()
-                Button(action: {
-                    isClicked = true
-                }) {
-                    Image("TILButton")
-                        .resizable()
-                        .frame(width: 46, height: 46)
-                        .padding(.top, 600)
-                        .padding(.leading, 300)
+            VStack {
+                
+                TILNavigationbar()
+                    .padding(.bottom, 10)
+                
+                TodoDate()
+                    .padding(.bottom, -25)
+                    .padding(.leading, 15)
+                
+                ZStack {
+                    TILList()
+                    NavigationLink(destination: TILWriteUI(title: "", subtitle: "", content: "")) {
+                        Image("TILButton")
+                            .resizable()
+                            .frame(width: 46, height: 46)
+                            .padding(.top, 600)
+                            .padding(.leading, 300)
+                            .buttonStyle(PlainButtonStyle())
+                    }
                 }
             }
         }
-        .navigationBarHidden(true)
-        .navigationDestination(isPresented: $isClicked) {
-            TILWriteUI(title: "", subtitle: "", content: "")
-        }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
     }
 }
-
 
 // 미리보기
 struct TILUI_Previews: PreviewProvider {
@@ -47,5 +43,6 @@ struct TILUI_Previews: PreviewProvider {
         TILUI()
     }
 }
+
 
 

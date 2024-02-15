@@ -29,6 +29,7 @@
 		44FCC3822B7B6F0800C41278 /* DetailNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */; };
 		44FCC3872B7D2A8700C41278 /* RankingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3862B7D2A8700C41278 /* RankingTitle.swift */; };
 		44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */; };
+		44FCC3912B7DDD2D00C41278 /* TodayILearned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3902B7DDD2D00C41278 /* TodayILearned.swift */; };
 		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
@@ -273,6 +274,7 @@
 		44FCC3832B7B922B00C41278 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		44FCC3862B7D2A8700C41278 /* RankingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTitle.swift; sourceTree = "<group>"; };
 		44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigationbar.swift; sourceTree = "<group>"; };
+		44FCC3902B7DDD2D00C41278 /* TodayILearned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearned.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
@@ -1057,19 +1059,19 @@
 		F34D2C632B73675300491EBE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2C642B73675300491EBE /* TILLIstfifthCell.swift */,
-				F34D2C652B73675300491EBE /* TILListFirstCell.swift */,
-				F34D2C662B73675300491EBE /* TILFile.swift */,
-				F34D2C672B73675300491EBE /* TILList.swift */,
 				F34D2C682B73675300491EBE /* TILUI.swift */,
-				F34D2C692B73675300491EBE /* TILListFirstViewsub.swift */,
-				F34D2C6A2B73675300491EBE /* TILWriteUI.swift */,
-				F34D2C6B2B73675300491EBE /* TILSecondCell.swift */,
-				F34D2C6C2B73675300491EBE /* TILListSixthCell.swift */,
-				F34D2C6D2B73675300491EBE /* TILListFourthCell.swift */,
-				F34D2C6E2B73675300491EBE /* TILCell.swift */,
 				F34D2C6F2B73675300491EBE /* TILNavigationbar.swift */,
+				F34D2C672B73675300491EBE /* TILList.swift */,
+				F34D2C652B73675300491EBE /* TILListFirstCell.swift */,
+				F34D2C692B73675300491EBE /* TILListFirstViewsub.swift */,
+				F34D2C6B2B73675300491EBE /* TILSecondCell.swift */,
 				F34D2C702B73675300491EBE /* TILListThirdCell.swift */,
+				F34D2C6D2B73675300491EBE /* TILListFourthCell.swift */,
+				F34D2C642B73675300491EBE /* TILLIstfifthCell.swift */,
+				F34D2C6C2B73675300491EBE /* TILListSixthCell.swift */,
+				F34D2C662B73675300491EBE /* TILFile.swift */,
+				F34D2C6A2B73675300491EBE /* TILWriteUI.swift */,
+				F34D2C6E2B73675300491EBE /* TILCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1344,6 +1346,7 @@
 				F3935D1D2B7B4CD40036E77A /* Board.swift */,
 				F3935D1F2B7B4E4B0036E77A /* HostType.swift */,
 				F38547952B7D3C73001F5E70 /* BoardComment.swift */,
+				44FCC3902B7DDD2D00C41278 /* TodayILearned.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1765,6 +1768,7 @@
 				F34D2D352B73675300491EBE /* JoinAgreCircleCheckButton.swift in Sources */,
 				F34D2CDF2B73675300491EBE /* ManagerPinButton.swift in Sources */,
 				F34D2D382B73675300491EBE /* JoinCircleBorderButton.swift in Sources */,
+				44FCC3912B7DDD2D00C41278 /* TodayILearned.swift in Sources */,
 				F34D2D372B73675300491EBE /* JoinGenerationPartPickers.swift in Sources */,
 				F34D2CFC2B73675300491EBE /* UserMyContentUI.swift in Sources */,
 				44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */,

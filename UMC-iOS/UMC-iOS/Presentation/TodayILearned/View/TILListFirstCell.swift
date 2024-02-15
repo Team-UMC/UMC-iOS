@@ -12,48 +12,47 @@ struct TILListFirstCell: View {
                                                     "Spring",
                                                     "Node.js"]
     
-    private var projectType: [String] = ["Figma", "SpringBoot","Node.js"]
+    private var projectType: [String] = ["Figma", "Spring Boot", "Node.js"]
     
     @State private var isProjectTypeButtonTapped : [Bool] = [false, false, false]
     
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack(spacing: 0) { // 분류
+            HStack(spacing: 0) {
                 Text("분류")
                     .font(.system(size: 18))
                     .fontWeight(.regular)
-                    .kerning(-1)
                     .foregroundColor(Color.black)
                 
                 Spacer()
-            } // VStack (분류)
+            }
             .padding(.horizontal, 6.5)
             .padding(.vertical, 8)
             
             HStack(spacing: 9) {
-                ForEach(0..<4) { index in
+                ForEach(0..<3) { index in
                     Button {
                         print("\(projectTypeButtonIcon[index]) Tapped")
                         self.isProjectTypeButtonTapped[index].toggle()
                         
                     } label: {
                         
-                        HStack(spacing: 6) { // 버튼 하나 전체
+                        HStack(spacing: 6) {
                             
-                            ZStack { // 원 배경 + 아이콘
+                            ZStack {
                                 Circle()
                                     .foregroundColor(
                                         self.isProjectTypeButtonTapped[index] ?
                                         Color.white : Color.disabledButtonIconBackground)
-                                        
+                                
                                     .frame(width: 24, height: 24)
                                 
                                 Image(projectTypeButtonIcon[index])
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 16, height: 16)
-                            } // ZStack (원 + 아이콘)
+                            }
                             
                             Text("\(projectType[index])")
                                 .font(.system(size: 14))
@@ -65,7 +64,7 @@ struct TILListFirstCell: View {
                                     self.isProjectTypeButtonTapped[index] ?
                                     Color.white : Color.buttonTextBorder)
                             
-                        } // VStack (아이콘 + 글자)
+                        }
                         .padding(4)
                         .padding(.trailing, 10)
                         .background(
@@ -76,7 +75,7 @@ struct TILListFirstCell: View {
                             RoundedRectangle(cornerRadius: 32)
                                 .stroke(
                                     self.isProjectTypeButtonTapped[index] ?
-                                        Color.historyPurple : Color.historyDisabledGray,
+                                    Color.historyPurple : Color.historyDisabledGray,
                                     lineWidth: 1)
                         )
                     }
@@ -84,16 +83,18 @@ struct TILListFirstCell: View {
                 
                 Spacer()
                 
-            } // HStack
+            }
             .padding(.vertical, 8)
             
-                
-        } // VStack
+            
+        }
         .padding(.horizontal, 16.5)
     }
 }
 
+
 #Preview {
     TILListFirstCell()
 }
+
 

@@ -17,8 +17,9 @@ struct TILWriteUI: View {
                 .padding(.bottom,16)
             
             //list1
-            // TILListFirstCell()
-            // TILListFirstViewsub()
+             TILListFirstCell()
+                .padding(.bottom,-30)
+             TILListFirstViewsub()
             Divider()
                 .frame(width:350,height: 1)
             //list2
@@ -43,10 +44,13 @@ struct TILWriteUI: View {
                 .frame(width:350,height: 1)
         Spacer()
         }
+        .navigationBarBackButtonHidden(true)
     }
+    
 }
 
 #Preview {
     TILWriteUI(title: "", subtitle: "", content: " ")
 }
+
 
