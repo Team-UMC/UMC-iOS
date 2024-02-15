@@ -27,7 +27,7 @@ struct ToDoListView: View {
         }
     }
     
-    // 날짜 반환
+    // Format Date to String
     private func formattedDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm" 
