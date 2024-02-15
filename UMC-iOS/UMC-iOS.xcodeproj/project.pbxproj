@@ -1034,19 +1034,19 @@
 		F34D2C632B73675300491EBE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2C642B73675300491EBE /* TILLIstfifthCell.swift */,
+				F34D2C682B73675300491EBE /* TILUI.swift */,
+				F34D2C6A2B73675300491EBE /* TILWriteUI.swift */,
+				F34D2C6F2B73675300491EBE /* TILNavigationbar.swift */,
 				F34D2C652B73675300491EBE /* TILListFirstCell.swift */,
+				F34D2C692B73675300491EBE /* TILListFirstViewsub.swift */,
+				F34D2C6B2B73675300491EBE /* TILSecondCell.swift */,
+				F34D2C702B73675300491EBE /* TILListThirdCell.swift */,
+				F34D2C6D2B73675300491EBE /* TILListFourthCell.swift */,
+				F34D2C642B73675300491EBE /* TILLIstfifthCell.swift */,
+				F34D2C6C2B73675300491EBE /* TILListSixthCell.swift */,
 				F34D2C662B73675300491EBE /* TILFile.swift */,
 				F34D2C672B73675300491EBE /* TILList.swift */,
-				F34D2C682B73675300491EBE /* TILUI.swift */,
-				F34D2C692B73675300491EBE /* TILListFirstViewsub.swift */,
-				F34D2C6A2B73675300491EBE /* TILWriteUI.swift */,
-				F34D2C6B2B73675300491EBE /* TILSecondCell.swift */,
-				F34D2C6C2B73675300491EBE /* TILListSixthCell.swift */,
-				F34D2C6D2B73675300491EBE /* TILListFourthCell.swift */,
 				F34D2C6E2B73675300491EBE /* TILCell.swift */,
-				F34D2C6F2B73675300491EBE /* TILNavigationbar.swift */,
-				F34D2C702B73675300491EBE /* TILListThirdCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
