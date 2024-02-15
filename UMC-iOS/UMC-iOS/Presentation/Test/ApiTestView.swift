@@ -18,6 +18,8 @@ struct ApiTestView: View {
     @State private var goToBoardAPITestView: Bool = false
     @State private var goToFileUploadAPITestView: Bool = false
     
+    @State private var searchMemberId: String = ""
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -43,9 +45,10 @@ struct ApiTestView: View {
                     Text("kakaoLogin")
                 }
                 
+                TextField("검색할 유저 아이디를 입력하세요", text: $searchMemberId)
                 Button {
                     Task {
-                        await userProfileViewModel.fetchGetUserProfile()
+                        await userProfileViewModel.fetchGetUserProfile(memberId: searchMemberId)
                     }
                 } label: {
                     Text("유저 프로필 조회")
