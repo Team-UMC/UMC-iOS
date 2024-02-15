@@ -16,8 +16,11 @@ struct GrowMascotView: View {
         ZStack {
             
             // 배경
-            Color.gray.ignoresSafeArea(.all)
-            
+            Image("growMascotViewBackgroundImage")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: UIScreen.main.bounds.width)
+                .offset(y: -13)
             
             // 지구 이미지, 마스코트
             VStack(spacing: 0) {
@@ -37,7 +40,7 @@ struct GrowMascotView: View {
                     
                 } // ZStack
                 
-            } // HStack
+            } // VStack
             
             
             VStack(spacing: 61) {
@@ -61,17 +64,32 @@ struct GrowMascotView: View {
                 // 마스코트 먹이
                 VStack(spacing: 12) {
                     
-                    MascotFoodView(exp: 1, foodInfo: "은하수를 살짝 얹은 커스터드 푸딩", shouldShowFeedPopup: $shouldShowFeedPopup)
-                    MascotFoodView(exp: 5, foodInfo: "별빛 스프링클이 가득한 블랙홀 도넛", shouldShowFeedPopup: $shouldShowFeedPopup)
-                    MascotFoodView(exp: 10, foodInfo: "태양이 물든 선샤인 샤베트 아이스크림", shouldShowFeedPopup: $shouldShowFeedPopup)
-                    MascotFoodView(exp: 30, foodInfo: "찬란한 별들이 쏙쏙 박힌 우주맛 롤케이크", shouldShowFeedPopup: $shouldShowFeedPopup)
+                    MascotFoodView(foodImageName: "puddingImage",
+                                   exp: 1,
+                                   foodInfo: "은하수를 살짝 얹은 커스터드 푸딩",
+                                   shouldShowFeedPopup: $shouldShowFeedPopup)
+                    
+                    MascotFoodView(foodImageName: "puddingImage",
+                                   exp: 5,
+                                   foodInfo: "별빛 스프링클이 가득한 블랙홀 도넛",
+                                   shouldShowFeedPopup: $shouldShowFeedPopup)
+                    
+                    MascotFoodView(foodImageName: "puddingImage",
+                                   exp: 10,
+                                   foodInfo: "태양이 물든 선샤인 샤베트 아이스크림",
+                                   shouldShowFeedPopup: $shouldShowFeedPopup)
+                    
+                    MascotFoodView(foodImageName: "puddingImage",
+                                   exp: 30,
+                                   foodInfo: "찬란한 별들이 쏙쏙 박힌 우주맛 롤케이크",
+                                   shouldShowFeedPopup: $shouldShowFeedPopup)
                     
                 } // VStack
                 
                 Spacer()
                 
             } // VStack
-            .padding(.vertical, 20)
+            .padding(.top, 20)
             .padding(.horizontal, 22.5)
             
             Color(.black)
@@ -93,7 +111,7 @@ struct GrowMascotView: View {
     
     func createFeedPopup() -> some View {
         
-        return mascotFeedPopupView(shouldShowFeedPopup: $shouldShowFeedPopup)
+        return mascotFeedPopupView(exp: 30, shouldShowFeedPopup: $shouldShowFeedPopup)
         
     }
 }

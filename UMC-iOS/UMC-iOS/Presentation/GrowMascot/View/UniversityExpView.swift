@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct UniversityExpView: View {
+    
+    var universityLevel: Int = 0
+    var nowExp: Int = 0
+    
     var body: some View {
         
         HStack(spacing: 0) {
@@ -24,7 +28,7 @@ struct UniversityExpView: View {
                 // 레벨, exp
                 VStack(alignment: .leading, spacing: 0) {
                     
-                    Text("LV.11")
+                    Text("LV.\(universityLevel)")
                         .font(.system(size: 18))
                         .fontWeight(.semibold)
                         .kerning(-1.26)
@@ -32,7 +36,7 @@ struct UniversityExpView: View {
                     
                     HStack(spacing: 0) {
                         
-                        Text("240")
+                        Text("\(nowExp)")
                             .fontWeight(.semibold)
                         Text(" / 11000")
                         

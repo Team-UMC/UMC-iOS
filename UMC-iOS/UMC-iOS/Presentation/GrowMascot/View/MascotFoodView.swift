@@ -28,11 +28,20 @@ struct MascotFoodView: View {
                 HStack(spacing: 0) {
                     
                     // 먹이 이미지와 exp
-                    VStack(spacing: 0) {
+                    VStack(alignment: .center, spacing: 0) {
                         
-                        Circle()
-                            .frame(width: 48, height: 48)
-                            .foregroundColor(.white)
+                        Image(foodImageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 22, height: 22)
+                            .padding(12)
+                            .background(Color.white)
+                            .cornerRadius(90)
+                            .padding(.trailing, 2)
+                        
+//                        Circle()
+//                            .frame(width: 48, height: 48)
+//                            .foregroundColor(.white)
                         
                         Text("\(exp)" + " EXP")
                             .font(.system(size: 8))

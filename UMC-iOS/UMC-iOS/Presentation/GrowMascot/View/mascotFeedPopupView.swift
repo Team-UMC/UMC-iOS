@@ -9,12 +9,10 @@ import SwiftUI
 
 struct mascotFeedPopupView: View {
     
-    @State private var isTapped1: Bool = false
-    @State private var isTapped2: Bool = false
+    var exp: Int = 0
+    
     
     @Binding var shouldShowFeedPopup: Bool
-    
-    var exp: Int = 0
     
     var body: some View {
         VStack(spacing: 0) {
