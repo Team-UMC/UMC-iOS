@@ -27,8 +27,8 @@ struct UserProfileUI: View {
                     UserProfile(user: Member()) // Photo and university label
                     
                     HStack(spacing: 8) {
-                        AbleStack() // Technical skills
-                        UMCSeason() // UMC season
+                        AbleStack(member: Member()) // Technical skills
+                        UMCSeason(member: Member()) // UMC season
                     }
                     
                     UserMessage() // Status message and buttons
