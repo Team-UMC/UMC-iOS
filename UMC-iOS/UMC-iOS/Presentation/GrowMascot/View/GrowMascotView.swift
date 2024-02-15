@@ -11,6 +11,8 @@ import PopupView
 struct GrowMascotView: View {
     
     @Environment(\.dismiss) private var dismiss
+    @State var isTapped1: Bool = false
+    @State var isTapped2: Bool = false
     
     @State var shouldShowFeedPopup: Bool = false
     @State var popupExp: Int = 1
@@ -60,8 +62,8 @@ struct GrowMascotView: View {
                     
                     HStack(spacing: 10) {
                         
-                        UniversityRankButtonView()
-                        MyContributionButtonView()
+                        UniversityRankButtonView(isTapped1: $isTapped1)
+                        MyContributionButtonView(isTapped2: $isTapped2)
                         
                     } // HStack
                     

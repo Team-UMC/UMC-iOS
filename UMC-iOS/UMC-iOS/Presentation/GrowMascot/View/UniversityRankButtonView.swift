@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct UniversityRankButtonView: View {
+    
+    @Binding var isTapped1: Bool
+    
     var body: some View {
         
         // 학교 랭킹 버튼
         Button {
             print("랭킹버튼 Tapped")
+            self.isTapped1.toggle()
         } label: {
             
             VStack(spacing: 4) {
@@ -35,9 +39,8 @@ struct UniversityRankButtonView: View {
             .cornerRadius(12)
             
         } // Button
+        .navigationDestination(isPresented: $isTapped1) {
+            RankingDetailView()
+        }
     }
-}
-
-#Preview {
-    UniversityRankButtonView()
 }

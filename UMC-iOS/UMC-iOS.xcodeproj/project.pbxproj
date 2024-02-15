@@ -18,7 +18,6 @@
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
 		44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */; };
 		44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */; };
-		44CD3DCE2B7A9D390089B04F /* GrowingMascotUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */; };
 		44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */; };
 		44CD3DD32B7AA3570089B04F /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */; };
 		44CD3DD52B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */; };
@@ -269,7 +268,6 @@
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
 		44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardButton.swift; sourceTree = "<group>"; };
-		44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingMascotUI.swift; sourceTree = "<group>"; };
 		44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNavigationbar.swift; sourceTree = "<group>"; };
 		44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
 		44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSubNavigationButton.swift; sourceTree = "<group>"; };
@@ -592,14 +590,6 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
-		44CD3DCC2B7A9D160089B04F /* GrowingMascot */ = {
-			isa = PBXGroup;
-			children = (
-				44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */,
-			);
-			path = GrowingMascot;
-			sourceTree = "<group>";
-		};
 		44CD3DD12B7AA3360089B04F /* BottomTabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -741,7 +731,6 @@
 				F34D2D812B74B2EF00491EBE /* Test */,
 				F34D2BF92B73675300491EBE /* Home */,
 				44CD3DD12B7AA3360089B04F /* BottomTabbar */,
-				44CD3DCC2B7A9D160089B04F /* GrowingMascot */,
 				F34D2C082B73675300491EBE /* BulletinBoard */,
 				F34D2C122B73675300491EBE /* WritingView */,
 				F34D2C1F2B73675300491EBE /* BulletinBoardSearch */,
@@ -1666,7 +1655,6 @@
 				F34D2CC12B73675300491EBE /* HomeView.swift in Sources */,
 				F34D2CC52B73675300491EBE /* TodoSummaryListView.swift in Sources */,
 				F34D2D422B73675300491EBE /* SelectPosition.swift in Sources */,
-				44CD3DCE2B7A9D390089B04F /* GrowingMascotUI.swift in Sources */,
 				F34D2CED2B73675300491EBE /* MascotRankingViewModel.swift in Sources */,
 				F34D2CCD2B73675300491EBE /* WritingSecondThirdViewModel.swift in Sources */,
 				F34D2CD32B73675300491EBE /* WritingListCell.swift in Sources */,
