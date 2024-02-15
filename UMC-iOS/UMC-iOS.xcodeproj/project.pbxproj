@@ -213,6 +213,8 @@
 		F38547962B7D3C73001F5E70 /* BoardComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547952B7D3C73001F5E70 /* BoardComment.swift */; };
 		F38547982B7D3D0D001F5E70 /* BoardCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */; };
 		F385479A2B7D3D20001F5E70 /* BoardCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */; };
+		F3896FC82B7DCAAE0075E0AB /* MemberNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FC72B7DCAAE0075E0AB /* MemberNetwork.swift */; };
+		F3896FCB2B7DCF8B0075E0AB /* MemberAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FCA2B7DCF8B0075E0AB /* MemberAPITestView.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -282,7 +284,6 @@
 		44CD3DDB2B7B6EB80089B04F /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
 		44FCC37F2B7B6EF500C41278 /* DetailButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonViewModel.swift; sourceTree = "<group>"; };
 		44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigationBar.swift; sourceTree = "<group>"; };
-		44FCC3832B7B922B00C41278 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		44FCC3862B7D2A8700C41278 /* RankingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTitle.swift; sourceTree = "<group>"; };
 		44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigationbar.swift; sourceTree = "<group>"; };
 		44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedResponse.swift; sourceTree = "<group>"; };
@@ -469,6 +470,9 @@
 		F38547952B7D3C73001F5E70 /* BoardComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardComment.swift; sourceTree = "<group>"; };
 		F38547972B7D3D0D001F5E70 /* BoardCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCommentResponse.swift; sourceTree = "<group>"; };
 		F38547992B7D3D20001F5E70 /* BoardCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCommentRequest.swift; sourceTree = "<group>"; };
+		F3896FC72B7DCAAE0075E0AB /* MemberNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberNetwork.swift; sourceTree = "<group>"; };
+		F3896FC92B7DCD5E0075E0AB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F3896FCA2B7DCF8B0075E0AB /* MemberAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAPITestView.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -689,7 +693,7 @@
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
-				44FCC3832B7B922B00C41278 /* Config.xcconfig */,
+				F3896FC92B7DCD5E0075E0AB /* Config.xcconfig */,
 				F38547912B7CD725001F5E70 /* audio.mp3 */,
 				F34D2BCD2B73671700491EBE /* UMC-iOS */,
 				F34D2BDE2B73671800491EBE /* UMC-iOSTests */,
@@ -1435,6 +1439,7 @@
 				F3935D292B7B58790036E77A /* ScheduleAPITestView.swift */,
 				F3935D2F2B7B76A10036E77A /* BoardAPITestView.swift */,
 				F3935D372B7BE9870036E77A /* FileUploadTestView.swift */,
+				F3896FCA2B7DCF8B0075E0AB /* MemberAPITestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1445,6 +1450,7 @@
 				F3B689452B77F1AE00A4FBB5 /* UniversityNetwork.swift */,
 				F3935D232B7B53230036E77A /* ScheduleNetwork.swift */,
 				F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */,
+				F3896FC72B7DCAAE0075E0AB /* MemberNetwork.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -1709,6 +1715,7 @@
 				F34D2D432B73675300491EBE /* JoinNickname.swift in Sources */,
 				44CD3DD52B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift in Sources */,
 				F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */,
+				F3896FC82B7DCAAE0075E0AB /* MemberNetwork.swift in Sources */,
 				F34D2D1B2B73675300491EBE /* ProjectCardinalNumberView.swift in Sources */,
 				F34D2CBE2B73675300491EBE /* AnnouncementView.swift in Sources */,
 				F3B689502B78116500A4FBB5 /* UniversityRequest.swift in Sources */,
@@ -1817,6 +1824,7 @@
 				E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */,
 				F34D2D5F2B7367DC00491EBE /* AnnouncementInfo.swift in Sources */,
 				F34D2D852B74BB1200491EBE /* SocialType.swift in Sources */,
+				F3896FCB2B7DCF8B0075E0AB /* MemberAPITestView.swift in Sources */,
 				F34D2CE62B73675300491EBE /* DropDownPicker.swift in Sources */,
 				F34D2D872B74BC9800491EBE /* Semester.swift in Sources */,
 				F34D2D0A2B73675300491EBE /* TILListSixthCell.swift in Sources */,
@@ -1891,6 +1899,7 @@
 /* Begin XCBuildConfiguration section */
 		F34D2BED2B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3896FC92B7DCD5E0075E0AB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1954,6 +1963,7 @@
 		};
 		F34D2BEE2B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3896FC92B7DCD5E0075E0AB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -2010,6 +2020,7 @@
 		};
 		F34D2BF02B73671800491EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3896FC92B7DCD5E0075E0AB /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -2042,6 +2053,7 @@
 		};
 		F34D2BF12B73671800491EBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3896FC92B7DCD5E0075E0AB /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

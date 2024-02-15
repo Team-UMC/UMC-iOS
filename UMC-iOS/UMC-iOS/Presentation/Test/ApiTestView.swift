@@ -12,6 +12,7 @@ struct ApiTestView: View {
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var goToTodoListAPITestView: Bool = false
+    @State private var goToMembeerAPITestView: Bool = false
     @State private var goToUniversityAPITestView: Bool = false
     @State private var goToScheduleAPITestView: Bool = false
     @State private var goToBoardAPITestView: Bool = false
@@ -34,8 +35,10 @@ struct ApiTestView: View {
                 
                 //kakao login button
                 Button {
-                    
-                    //                socialLoginViewModel.kakaoLogin(UMCUser: loginViewModel.member) {}
+                    socialLoginViewModel.kakaoLogin(UMCUser: loginViewModel.member) {
+                        loginViewModel.joinMember(socialToken: socialLoginViewModel.socialToken) {
+                        }
+                    }
                 } label: {
                     Text("kakaoLogin")
                 }
@@ -46,6 +49,15 @@ struct ApiTestView: View {
                     }
                 } label: {
                     Text("유저 프로필 조회")
+                }
+                
+                Button {
+                    goToMembeerAPITestView.toggle()
+                } label: {
+                    Text("멤버 API 테스트 뷰")
+                }
+                .navigationDestination(isPresented: $goToMembeerAPITestView) {
+                    MemberAPITestView()
                 }
                 
                 Button {

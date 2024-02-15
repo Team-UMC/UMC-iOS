@@ -21,6 +21,7 @@ class MemberRequest {
         let accessToken: String
         let socialType: String
     }
+    
 
 }
 
