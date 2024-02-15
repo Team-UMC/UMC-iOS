@@ -13,7 +13,7 @@ struct UMCSeason: View {
     let backgroundColor = Color.white
     let shadowColor = Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.2)
     let textColor = Color(#colorLiteral(red: 0.250980407, green: 0.270588248, blue: 0.4470588276, alpha: 1))
-
+    var semester:String = "FIFTH"
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
@@ -22,12 +22,12 @@ struct UMCSeason: View {
                 .shadow(color: shadowColor, radius: 5)
 
             HStack(spacing: 6) {
-                Image("5th")
+                Image(semester)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 24, height: 24)
 
-                Image("6th")
+                Image(semester)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 24, height: 24)

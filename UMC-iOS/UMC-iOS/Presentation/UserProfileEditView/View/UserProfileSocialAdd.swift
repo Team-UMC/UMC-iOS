@@ -21,7 +21,7 @@ struct UserProfileSocialAdd: View {
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             
             VStack {
-                UserProfile()  // 사진, 대학 라벨
+                UserProfile(user: Member())  // 사진, 대학 라벨
                 HStack(spacing: 8) {
                     AbleStack()    // 기술
                     UMCSeason()    // 기수

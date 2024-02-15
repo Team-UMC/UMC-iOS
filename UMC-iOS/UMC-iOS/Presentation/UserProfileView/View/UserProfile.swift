@@ -8,15 +8,11 @@ import SwiftUI
 
 
 struct UserProfile: View {
-    private var profileImage = "profileImage"
-    private var UnivName = "인하대학교"
-    private var userName = "양유진"
-    private var userNickname = "더기"
-    
+    var user: Member
     var body: some View {
         VStack{
             // 프로필 이미지
-            Image(profileImage)
+            Image(user.profileImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 120, height: 120)
@@ -31,14 +27,14 @@ struct UserProfile: View {
                     .cornerRadius(20)
                     .frame(width: 89, height: 25)
                     .shadow(radius: 5)
-                Text(UnivName)
+                Text(user.university)
                     .foregroundColor(.black)
                     .font(.system(size: 14))
             }
             .padding(.bottom,-4)
             
             // 이름 라벨
-            Text("\(userNickname) / \(userName)")
+            Text("\(user.nickname) / \(user.name)")
                 .foregroundColor(.black)
                 .padding(.horizontal, 30)
                 .font(.system(size: 20).bold())
@@ -49,9 +45,6 @@ struct UserProfile: View {
     }
     }
     
-    #Preview {
-        UserProfile()
-    }
 
 
 

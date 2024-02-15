@@ -18,15 +18,18 @@ struct UserProfileEdit: View {
         NavigationView {
             VStack {
                 UserProfileEditImage()
+                    .padding(.top,20)
                 UserProfileEditList()
             }
+            .background(.lightGray)
             .navigationBarTitle("프로필 수정", displayMode: .inline) // 가운데 정렬
             .navigationBarItems(
                 leading: Button(action: {
                     print("뒤로 가기 버튼이 눌렸습니다.")
                 }) {
-                    Image("arrow_back")
+                    Image(systemName: "chevron.left")
                         .resizable()
+                        .foregroundStyle(Color(textColor))
                         .scaledToFill()
                         .frame(width: 11.25, height: 22.5)
                 },
@@ -42,6 +45,7 @@ struct UserProfileEdit: View {
                 }
             )
         }
+        .background(.lightGray)
     }
 }
 
