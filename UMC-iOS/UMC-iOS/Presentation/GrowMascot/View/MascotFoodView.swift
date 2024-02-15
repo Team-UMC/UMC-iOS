@@ -15,12 +15,14 @@ struct MascotFoodView: View {
     var mascot: String = ""
     
     @Binding var shouldShowFeedPopup: Bool
+    @Binding var popupExp: Int
     
     var body: some View {
         
         Button {
             print("\(foodInfo) Button Tapped. (\(exp) exp)")
             self.shouldShowFeedPopup = true
+            self.popupExp = exp
         } label: {
             
             HStack(spacing: 0) {
@@ -33,8 +35,8 @@ struct MascotFoodView: View {
                         Image(foodImageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 22, height: 22)
-                            .padding(12)
+                            .frame(width: 24, height: 24)
+                            .padding(10)
                             .background(Color.white)
                             .cornerRadius(90)
                             .padding(.trailing, 2)
