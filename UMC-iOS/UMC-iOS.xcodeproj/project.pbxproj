@@ -37,6 +37,9 @@
 		E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */; };
 		E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */; };
 		E3C5A6412B7DCD6A009518D8 /* mascotFeedPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */; };
+		E333D76C2B7E558000D335AD /* ManagerInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D76B2B7E558000D335AD /* ManagerInfomation.swift */; };
+		E333D76F2B7E590F00D335AD /* ManagerInfoSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */; };
+		E333D7712B7E59A700D335AD /* ManagerInfoSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -288,6 +291,9 @@
 		E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotFoodView.swift; sourceTree = "<group>"; };
 		E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotImageView.swift; sourceTree = "<group>"; };
 		E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mascotFeedPopupView.swift; sourceTree = "<group>"; };
+		E333D76B2B7E558000D335AD /* ManagerInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfomation.swift; sourceTree = "<group>"; };
+		E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfoSearchBar.swift; sourceTree = "<group>"; };
+		E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfoSelect.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -895,6 +901,9 @@
 				F34D2C282B73675300491EBE /* ManagerSetting.swift */,
 				F34D2C292B73675300491EBE /* ManagerCalender.swift */,
 				F34D2C2A2B73675300491EBE /* ManagerInfo.swift */,
+				E333D76B2B7E558000D335AD /* ManagerInfomation.swift */,
+				E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */,
+				E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */,
 				F34D2C2B2B73675300491EBE /* ManagerPin.swift */,
 			);
 			path = View;
@@ -1613,6 +1622,7 @@
 				F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */,
 				F34D2D332B73675300491EBE /* User.swift in Sources */,
 				F34D2D3B2B73675300491EBE /* JoinTextFieldStyle.swift in Sources */,
+				E333D7712B7E59A700D335AD /* ManagerInfoSelect.swift in Sources */,
 				F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */,
 				F3B6894E2B780E3400A4FBB5 /* PointType.swift in Sources */,
 				F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */,
@@ -1644,6 +1654,7 @@
 				F34D2CEB2B73675300491EBE /* CircleFillButton.swift in Sources */,
 				F34D2CF82B73675300491EBE /* ToDoListCell.swift in Sources */,
 				F34D2CFD2B73675300491EBE /* MyComment.swift in Sources */,
+				E333D76C2B7E558000D335AD /* ManagerInfomation.swift in Sources */,
 				F3935D2C2B7B75B70036E77A /* BoardNetwork.swift in Sources */,
 				F34D2CD22B73675300491EBE /* WritingListCellFirst.swift in Sources */,
 				F34D2CC42B73675300491EBE /* HomeSideMenuView.swift in Sources */,
@@ -1724,6 +1735,7 @@
 				E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
 				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
+				E333D76F2B7E590F00D335AD /* ManagerInfoSearchBar.swift in Sources */,
 				F34D2CE92B73675300491EBE /* CircleCheckButton.swift in Sources */,
 				F34D2D122B73675300491EBE /* HistoryView.swift in Sources */,
 				F34D2D062B73675300491EBE /* TILUI.swift in Sources */,
