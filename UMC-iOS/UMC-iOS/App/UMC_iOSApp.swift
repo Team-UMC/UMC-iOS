@@ -26,14 +26,15 @@ struct UMC_iOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ApiTestView()
-                .onOpenURL(perform: { url in
-                    if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                        _ = AuthController.handleOpenUrl(url: url)
-                    }
-                })
-                .environmentObject(socialLoginViewModel)
-                .environmentObject(loginViewModel)
+            LoginView()
+//            ApiTestView()
+//                .onOpenURL(perform: { url in
+//                    if (AuthApi.isKakaoTalkLoginUrl(url)) {
+//                        _ = AuthController.handleOpenUrl(url: url)
+//                    }
+//                })
+//                .environmentObject(socialLoginViewModel)
+//                .environmentObject(loginViewModel)
         }
         .environmentObject(socialLoginViewModel)
         .environmentObject(loginViewModel)

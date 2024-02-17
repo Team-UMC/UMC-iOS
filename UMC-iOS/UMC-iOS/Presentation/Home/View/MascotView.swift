@@ -40,7 +40,7 @@ struct MascotView: View {
                 } // ZStack
             }
             .navigationDestination(isPresented: $isClicked) {
-                GrowingMascotUI()
+                GrowMascotView()
             }
         } // VStack
         .padding(.leading, 18)

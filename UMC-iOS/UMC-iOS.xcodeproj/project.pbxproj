@@ -18,7 +18,6 @@
 		44B0C7942B74FB5C000AF621 /* BoardSearchResultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */; };
 		44B0C7962B74FB68000AF621 /* BoardSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */; };
 		44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */; };
-		44CD3DCE2B7A9D390089B04F /* GrowingMascotUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */; };
 		44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */; };
 		44CD3DD32B7AA3570089B04F /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */; };
 		44CD3DD52B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */; };
@@ -31,6 +30,13 @@
 		44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */; };
 		44FCC3932B7DE34100C41278 /* TodayILearnedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */; };
 		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
+		E376F8262B7D41E800C874B6 /* GrowMascotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F8252B7D41E800C874B6 /* GrowMascotView.swift */; };
+		E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F8292B7D538800C874B6 /* UniversityExpView.swift */; };
+		E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */; };
+		E376F82E2B7D559700C874B6 /* MyContributionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */; };
+		E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */; };
+		E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */; };
+		E3C5A6412B7DCD6A009518D8 /* mascotFeedPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -262,7 +268,6 @@
 		44B0C7932B74FB5C000AF621 /* BoardSearchResultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchResultRequest.swift; sourceTree = "<group>"; };
 		44B0C7952B74FB68000AF621 /* BoardSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSearchRequest.swift; sourceTree = "<group>"; };
 		44B0C79E2B750764000AF621 /* BulletinBoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardButton.swift; sourceTree = "<group>"; };
-		44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingMascotUI.swift; sourceTree = "<group>"; };
 		44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNavigationbar.swift; sourceTree = "<group>"; };
 		44CD3DD22B7AA3570089B04F /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
 		44CD3DD42B7AAFEB0089B04F /* SideMenuSubNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSubNavigationButton.swift; sourceTree = "<group>"; };
@@ -276,6 +281,13 @@
 		44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigationbar.swift; sourceTree = "<group>"; };
 		44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedResponse.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		E376F8252B7D41E800C874B6 /* GrowMascotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowMascotView.swift; sourceTree = "<group>"; };
+		E376F8292B7D538800C874B6 /* UniversityExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityExpView.swift; sourceTree = "<group>"; };
+		E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRankButtonView.swift; sourceTree = "<group>"; };
+		E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContributionButtonView.swift; sourceTree = "<group>"; };
+		E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotFoodView.swift; sourceTree = "<group>"; };
+		E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotImageView.swift; sourceTree = "<group>"; };
+		E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mascotFeedPopupView.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -578,14 +590,6 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
-		44CD3DCC2B7A9D160089B04F /* GrowingMascot */ = {
-			isa = PBXGroup;
-			children = (
-				44CD3DCD2B7A9D390089B04F /* GrowingMascotUI.swift */,
-			);
-			path = GrowingMascot;
-			sourceTree = "<group>";
-		};
 		44CD3DD12B7AA3360089B04F /* BottomTabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,6 +622,44 @@
 			children = (
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		E376F8212B7D40BA00C874B6 /* GrowMascot */ = {
+			isa = PBXGroup;
+			children = (
+				E376F8242B7D414A00C874B6 /* ViewModel */,
+				E376F8232B7D414400C874B6 /* Model */,
+				E376F8222B7D413C00C874B6 /* View */,
+			);
+			path = GrowMascot;
+			sourceTree = "<group>";
+		};
+		E376F8222B7D413C00C874B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E376F8252B7D41E800C874B6 /* GrowMascotView.swift */,
+				E376F8292B7D538800C874B6 /* UniversityExpView.swift */,
+				E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */,
+				E376F82D2B7D559700C874B6 /* MyContributionButtonView.swift */,
+				E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */,
+				E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */,
+				E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E376F8232B7D414400C874B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E376F8242B7D414A00C874B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F34D2BC22B73671700491EBE = {
@@ -689,7 +731,6 @@
 				F34D2D812B74B2EF00491EBE /* Test */,
 				F34D2BF92B73675300491EBE /* Home */,
 				44CD3DD12B7AA3360089B04F /* BottomTabbar */,
-				44CD3DCC2B7A9D160089B04F /* GrowingMascot */,
 				F34D2C082B73675300491EBE /* BulletinBoard */,
 				F34D2C122B73675300491EBE /* WritingView */,
 				F34D2C1F2B73675300491EBE /* BulletinBoardSearch */,
@@ -697,6 +738,7 @@
 				F34D2C2E2B73675300491EBE /* ContentDetail */,
 				F34D2C352B73675300491EBE /* Utils */,
 				F34D2C3F2B73675300491EBE /* MascotRanking */,
+				E376F8212B7D40BA00C874B6 /* GrowMascot */,
 				F34D2C462B73675300491EBE /* ContentView */,
 				F34D2C472B73675300491EBE /* TodoList */,
 				F34D2C532B73675300491EBE /* MyContent */,
@@ -1564,6 +1606,7 @@
 				F34D2CC22B73675300491EBE /* GitHubView.swift in Sources */,
 				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
+				E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */,
 				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
 				44FCC3802B7B6EF500C41278 /* DetailButtonViewModel.swift in Sources */,
 				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
@@ -1612,7 +1655,6 @@
 				F34D2CC12B73675300491EBE /* HomeView.swift in Sources */,
 				F34D2CC52B73675300491EBE /* TodoSummaryListView.swift in Sources */,
 				F34D2D422B73675300491EBE /* SelectPosition.swift in Sources */,
-				44CD3DCE2B7A9D390089B04F /* GrowingMascotUI.swift in Sources */,
 				F34D2CED2B73675300491EBE /* MascotRankingViewModel.swift in Sources */,
 				F34D2CCD2B73675300491EBE /* WritingSecondThirdViewModel.swift in Sources */,
 				F34D2CD32B73675300491EBE /* WritingListCell.swift in Sources */,
@@ -1632,6 +1674,7 @@
 				F34D2CC62B73675300491EBE /* BulletinBoradViewModel.swift in Sources */,
 				F34D2CEF2B73675300491EBE /* RankingDetailView.swift in Sources */,
 				44FCC3932B7DE34100C41278 /* TodayILearnedResponse.swift in Sources */,
+				E376F82E2B7D559700C874B6 /* MyContributionButtonView.swift in Sources */,
 				F34D2D342B73675300491EBE /* Token.swift in Sources */,
 				F3B6893F2B7797C500A4FBB5 /* TodoListRequest.swift in Sources */,
 				F34D2CF12B73675300491EBE /* ToDoEditSecondActionSheet.swift in Sources */,
@@ -1676,7 +1719,9 @@
 				F34D2D532B7367D400491EBE /* MemberResponse.swift in Sources */,
 				F3935D242B7B53230036E77A /* ScheduleNetwork.swift in Sources */,
 				F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */,
+				E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */,
 				F34D2D242B73675300491EBE /* UMCseason.swift in Sources */,
+				E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
 				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
 				F34D2CE92B73675300491EBE /* CircleCheckButton.swift in Sources */,
@@ -1724,6 +1769,7 @@
 				F34D2CDD2B73675300491EBE /* ManagerInfo.swift in Sources */,
 				F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */,
 				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,
+				E3C5A6412B7DCD6A009518D8 /* mascotFeedPopupView.swift in Sources */,
 				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
 				F3B6894A2B77F3E000A4FBB5 /* Mascot.swift in Sources */,
 				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,
@@ -1736,6 +1782,7 @@
 				4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */,
 				F34D2D3D2B73675300491EBE /* SelectUniv.swift in Sources */,
 				F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */,
+				E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */,
 				F34D2D5F2B7367DC00491EBE /* AnnouncementInfo.swift in Sources */,
 				F34D2D852B74BB1200491EBE /* SocialType.swift in Sources */,
 				F34D2CE62B73675300491EBE /* DropDownPicker.swift in Sources */,
@@ -1765,6 +1812,7 @@
 				F34D2D0C2B73675300491EBE /* TILCell.swift in Sources */,
 				F34D2CDA2B73675300491EBE /* GenerationPartViewModel.swift in Sources */,
 				F3935D262B7B54F00036E77A /* ScheduleRequest.swift in Sources */,
+				E376F8262B7D41E800C874B6 /* GrowMascotView.swift in Sources */,
 				F34D2D832B74B31200491EBE /* ApiTestView.swift in Sources */,
 				F34D2D352B73675300491EBE /* JoinAgreCircleCheckButton.swift in Sources */,
 				F34D2CDF2B73675300491EBE /* ManagerPinButton.swift in Sources */,
