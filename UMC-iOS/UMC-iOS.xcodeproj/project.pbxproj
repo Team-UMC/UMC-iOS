@@ -797,14 +797,14 @@
 		F34D2C162B73675300491EBE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F34D2C1E2B73675300491EBE /* WritingList.swift */,
+				F34D2C1B2B73675300491EBE /* WritingListCell.swift */,
+				F34D2C1A2B73675300491EBE /* WritingListCellFirst.swift */,
 				F34D2C172B73675300491EBE /* WritingListCellSecond.swift */,
+				F34D2C1D2B73675300491EBE /* WritingListThirdCell.swift */,
 				F34D2C182B73675300491EBE /* WrititngNavigationBar.swift */,
 				F34D2C192B73675300491EBE /* ButtonWithIcon.swift */,
-				F34D2C1A2B73675300491EBE /* WritingListCellFirst.swift */,
-				F34D2C1B2B73675300491EBE /* WritingListCell.swift */,
 				F34D2C1C2B73675300491EBE /* WritingButton.swift */,
-				F34D2C1D2B73675300491EBE /* WritingListThirdCell.swift */,
-				F34D2C1E2B73675300491EBE /* WritingList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -879,8 +879,8 @@
 			isa = PBXGroup;
 			children = (
 				F34D2C302B73675300491EBE /* BulletinBoardContentDetailUI.swift */,
-				F34D2C312B73675300491EBE /* Comment.swift */,
 				F34D2C322B73675300491EBE /* BulletinBoardContentDetail.swift */,
+				F34D2C312B73675300491EBE /* Comment.swift */,
 				F34D2C332B73675300491EBE /* DetailButton.swift */,
 				F34D2C342B73675300491EBE /* CommetAddbar.swift */,
 				44FCC3812B7B6F0800C41278 /* DetailNavigationBar.swift */,

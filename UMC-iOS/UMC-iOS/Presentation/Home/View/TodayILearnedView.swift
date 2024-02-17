@@ -56,7 +56,8 @@ struct TodayILearnedView: View {
         } // VStack
         .padding(.leading, 18)
         .navigationDestination(isPresented: $isClicked) {
-            TILWriteUI(title: "", subtitle: "", content: "")
+            TILUI()
+            
         }
     }
 }

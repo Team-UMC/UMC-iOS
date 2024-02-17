@@ -17,8 +17,8 @@ struct TILWriteUI: View {
                 .padding(.bottom,16)
             
             //list1
-            // TILListFirstCell()
-            // TILListFirstViewsub()
+             TILListFirstCell()
+             TILListFirstViewsub()
             Divider()
                 .frame(width:350,height: 1)
             //list2

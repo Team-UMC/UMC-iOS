@@ -13,7 +13,7 @@ struct RankingNavigationbar: View {
                HStack(spacing: 0) { // navigation bar
 
                    Button {
-                       print("navigation bar - X Button Tapped")
+                       print("navigation bar - < Button Tapped")
                        presentationMode.wrappedValue.dismiss()
                    } label : {
                        Image(systemName: "chevron.left")
