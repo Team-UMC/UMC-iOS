@@ -674,6 +674,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E3DDC9DA2B80980F00B2D755 /* ManagerInfomationGroup */ = {
+			isa = PBXGroup;
+			children = (
+				E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */,
+				E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */,
+				E3DDC9D82B808EEB00B2D755 /* CardinalNumberPartView.swift */,
+				E3DDC9D62B808BA700B2D755 /* PlusButtonView.swift */,
+				E3DDC9D22B8087B100B2D755 /* CheckButtonView.swift */,
+			);
+			path = ManagerInfomationGroup;
+			sourceTree = "<group>";
+		};
 		F34D2BC22B73671700491EBE = {
 			isa = PBXGroup;
 			children = (
@@ -908,11 +920,7 @@
 				F34D2C292B73675300491EBE /* ManagerCalender.swift */,
 				F34D2C2A2B73675300491EBE /* ManagerInfo.swift */,
 				E333D76B2B7E558000D335AD /* ManagerInfomation.swift */,
-				E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */,
-				E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */,
-				E3DDC9D82B808EEB00B2D755 /* CardinalNumberPartView.swift */,
-				E3DDC9D62B808BA700B2D755 /* PlusButtonView.swift */,
-				E3DDC9D22B8087B100B2D755 /* CheckButtonView.swift */,
+				E3DDC9DA2B80980F00B2D755 /* ManagerInfomationGroup */,
 				F34D2C2B2B73675300491EBE /* ManagerPin.swift */,
 			);
 			path = View;
