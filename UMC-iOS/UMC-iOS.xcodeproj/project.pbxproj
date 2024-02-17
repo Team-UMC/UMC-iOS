@@ -30,6 +30,9 @@
 		44FCC38D2B7D3F3E00C41278 /* RankingNavigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */; };
 		44FCC3932B7DE34100C41278 /* TodayILearnedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */; };
 		46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */; };
+		E333D76C2B7E558000D335AD /* ManagerInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D76B2B7E558000D335AD /* ManagerInfomation.swift */; };
+		E333D76F2B7E590F00D335AD /* ManagerInfoSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */; };
+		E333D7712B7E59A700D335AD /* ManagerInfoSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */; };
 		E376F8262B7D41E800C874B6 /* GrowMascotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F8252B7D41E800C874B6 /* GrowMascotView.swift */; };
 		E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F8292B7D538800C874B6 /* UniversityExpView.swift */; };
 		E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */; };
@@ -37,9 +40,9 @@
 		E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */; };
 		E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */; };
 		E3C5A6412B7DCD6A009518D8 /* mascotFeedPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */; };
-		E333D76C2B7E558000D335AD /* ManagerInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D76B2B7E558000D335AD /* ManagerInfomation.swift */; };
-		E333D76F2B7E590F00D335AD /* ManagerInfoSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */; };
-		E333D7712B7E59A700D335AD /* ManagerInfoSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */; };
+		E3DDC9D32B8087B100B2D755 /* CheckButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DDC9D22B8087B100B2D755 /* CheckButtonView.swift */; };
+		E3DDC9D72B808BA700B2D755 /* PlusButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DDC9D62B808BA700B2D755 /* PlusButtonView.swift */; };
+		E3DDC9D92B808EEB00B2D755 /* CardinalNumberPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DDC9D82B808EEB00B2D755 /* CardinalNumberPartView.swift */; };
 		F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */; };
 		F34D2BD62B73671800491EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2BD52B73671800491EBE /* Preview Assets.xcassets */; };
 		F34D2BE02B73671800491EBE /* UMC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2BDF2B73671800491EBE /* UMC_iOSTests.swift */; };
@@ -284,6 +287,9 @@
 		44FCC38C2B7D3F3E00C41278 /* RankingNavigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigationbar.swift; sourceTree = "<group>"; };
 		44FCC3922B7DE34100C41278 /* TodayILearnedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedResponse.swift; sourceTree = "<group>"; };
 		46C37FC12B74EFB80084CA4D /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		E333D76B2B7E558000D335AD /* ManagerInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfomation.swift; sourceTree = "<group>"; };
+		E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfoSearchBar.swift; sourceTree = "<group>"; };
+		E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfoSelect.swift; sourceTree = "<group>"; };
 		E376F8252B7D41E800C874B6 /* GrowMascotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowMascotView.swift; sourceTree = "<group>"; };
 		E376F8292B7D538800C874B6 /* UniversityExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityExpView.swift; sourceTree = "<group>"; };
 		E376F82B2B7D53DB00C874B6 /* UniversityRankButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRankButtonView.swift; sourceTree = "<group>"; };
@@ -291,9 +297,9 @@
 		E3C5A63C2B7DBF8D009518D8 /* MascotFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotFoodView.swift; sourceTree = "<group>"; };
 		E3C5A63E2B7DCBF7009518D8 /* MascotImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotImageView.swift; sourceTree = "<group>"; };
 		E3C5A6402B7DCD6A009518D8 /* mascotFeedPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mascotFeedPopupView.swift; sourceTree = "<group>"; };
-		E333D76B2B7E558000D335AD /* ManagerInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfomation.swift; sourceTree = "<group>"; };
-		E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfoSearchBar.swift; sourceTree = "<group>"; };
-		E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInfoSelect.swift; sourceTree = "<group>"; };
+		E3DDC9D22B8087B100B2D755 /* CheckButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButtonView.swift; sourceTree = "<group>"; };
+		E3DDC9D62B808BA700B2D755 /* PlusButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonView.swift; sourceTree = "<group>"; };
+		E3DDC9D82B808EEB00B2D755 /* CardinalNumberPartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardinalNumberPartView.swift; sourceTree = "<group>"; };
 		F34D2BCB2B73671700491EBE /* UMC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34D2BCE2B73671700491EBE /* UMC_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_iOSApp.swift; sourceTree = "<group>"; };
 		F34D2BD52B73671800491EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -904,6 +910,9 @@
 				E333D76B2B7E558000D335AD /* ManagerInfomation.swift */,
 				E333D76E2B7E590F00D335AD /* ManagerInfoSearchBar.swift */,
 				E333D7702B7E59A700D335AD /* ManagerInfoSelect.swift */,
+				E3DDC9D82B808EEB00B2D755 /* CardinalNumberPartView.swift */,
+				E3DDC9D62B808BA700B2D755 /* PlusButtonView.swift */,
+				E3DDC9D22B8087B100B2D755 /* CheckButtonView.swift */,
 				F34D2C2B2B73675300491EBE /* ManagerPin.swift */,
 			);
 			path = View;
@@ -1775,6 +1784,7 @@
 				44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */,
 				F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */,
 				F34D2CE12B73675300491EBE /* Comment.swift in Sources */,
+				E3DDC9D32B8087B100B2D755 /* CheckButtonView.swift in Sources */,
 				44CD3DDC2B7B6EB80089B04F /* ContentDetailViewModel.swift in Sources */,
 				F34D2D262B73675300491EBE /* UserProfileEditViewModel.swift in Sources */,
 				F34D2D2A2B73675300491EBE /* SocialButtonSet.swift in Sources */,
@@ -1787,6 +1797,7 @@
 				F34D2D042B73675300491EBE /* TILFile.swift in Sources */,
 				F3B6892F2B771CD500A4FBB5 /* TodoListResponse.swift in Sources */,
 				44B0C79F2B750764000AF621 /* BulletinBoardButton.swift in Sources */,
+				E3DDC9D92B808EEB00B2D755 /* CardinalNumberPartView.swift in Sources */,
 				F3DABB4D2B75533D00BBF00B /* BaseResponse.swift in Sources */,
 				F34D2CDB2B73675300491EBE /* ManagerSetting.swift in Sources */,
 				F34D2CD62B73675300491EBE /* WritingList.swift in Sources */,
@@ -1794,6 +1805,7 @@
 				4278204D2B7521620024476C /* ManagerPinRequest.swift in Sources */,
 				F34D2D3D2B73675300491EBE /* SelectUniv.swift in Sources */,
 				F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */,
+				E3DDC9D72B808BA700B2D755 /* PlusButtonView.swift in Sources */,
 				E3C5A63D2B7DBF8D009518D8 /* MascotFoodView.swift in Sources */,
 				F34D2D5F2B7367DC00491EBE /* AnnouncementInfo.swift in Sources */,
 				F34D2D852B74BB1200491EBE /* SocialType.swift in Sources */,

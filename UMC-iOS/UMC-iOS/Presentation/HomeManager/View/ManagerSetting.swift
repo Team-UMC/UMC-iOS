@@ -15,7 +15,7 @@
         
             AnyView(ManagerPin()),
             AnyView(ManagerCalender()),
-            AnyView(ManagerInfo()),
+            AnyView(ManagerInfomation()),
             AnyView(HistoryRegisterView())
         
         ]
