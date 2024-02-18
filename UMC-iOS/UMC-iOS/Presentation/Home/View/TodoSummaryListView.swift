@@ -10,7 +10,7 @@ import SwiftUI
 struct TodoSummaryListView: View {
     var todoList : TodoListResponse.GetTodoList
     var memberNickname: String
-    @Binding var goToTodoListUI: Bool
+    @Binding var goToTodoList: Bool
     
     var body: some View {
         VStack(spacing: 0) {
@@ -27,11 +27,11 @@ struct TodoSummaryListView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(todoList.todoLists.indices, id: \.self) { index in
-                        TodoSummaryCell(isClicked: $goToTodoListUI, todoInfo: todoList.todoLists[index])
+                        TodoSummaryCell(isClicked: $goToTodoList, todoInfo: todoList.todoLists[index])
                     } // ForEach
                     
                     
-                    TodoEmptyCell(isClicked: $goToTodoListUI, memberNickname: memberNickname)
+                    TodoEmptyCell(isClicked: $goToTodoList, memberNickname: memberNickname)
                 } // HStack
                 .padding(.trailing, 18)
             } // ScrollView

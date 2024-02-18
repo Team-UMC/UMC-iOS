@@ -21,7 +21,8 @@ struct HomeView: View {
     @State var calendarInfo = ScheduleResponse.GetCalendar()
     @State var todoList = TodoListResponse.GetTodoList()
     
-    @State var goToTodoListUI: Bool = false
+    @State var goToTodoList: Bool = false
+    @State var goToTodayILearned: Bool = false
     
     var body: some View {
         ZStack {
@@ -46,10 +47,10 @@ struct HomeView: View {
                         AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup).padding(.top, 8)
                         
                         MainCalendarView(currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
-                        TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoListUI: $goToTodoListUI).padding(.top, 24)
+                        TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoList: $goToTodoList).padding(.top, 24)
                         
                         HStack(spacing: 18) {
-                            TodayILearnedView()
+                            TodayILearnedView(goToTodayILearned: $goToTodayILearned)
                             GitHubView()
                         }
                         .padding(.top, 24)
@@ -104,8 +105,12 @@ struct HomeView: View {
                 .closeOnTap(false)
                 .closeOnTapOutside(true)
         })
-        .navigationDestination(isPresented: $goToTodoListUI) {
+        .navigationDestination(isPresented: $goToTodoList) {
             ToDoListUI()
+                .navigationBarBackButtonHidden()
+        }
+        .navigationDestination(isPresented: $goToTodayILearned) {
+            TILUI()
                 .navigationBarBackButtonHidden()
         }
         
