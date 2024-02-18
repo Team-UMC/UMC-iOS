@@ -21,7 +21,16 @@ class MemberRequest {
         let accessToken: String
         let socialType: String
     }
+    
+    struct UpdateMyProfile: Codable {
+        let name: String
+        let nickname: String
+        let statusMessage: String
+    }
 
+    struct UpdateMemberProfile: Codable {
+//        let 
+    }
 }
 
 extension MemberRequest {

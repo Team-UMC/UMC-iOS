@@ -63,6 +63,7 @@ extension LoginViewModel {
         urlComponents.path = ApiEndpoints.Path.members_login.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "accessToken", value: socialLoginInfo.accessToken), URLQueryItem(name: "socialType", value: socialLoginInfo.socialType)]
         
+        print("getAccessTokenWithSocialLogin : \(urlComponents)")
         
         guard let url = urlComponents.url else {
             print("Error: cannot create URL")

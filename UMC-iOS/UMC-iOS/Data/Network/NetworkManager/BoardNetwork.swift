@@ -887,9 +887,5 @@ class BoardNetwork: ObservableObject {
 }
 
 extension BoardNetwork {
-    struct FileInfo {
-        var data: Data
-        var fileName: String
-        var mimeType: String
-    }
+
 }
