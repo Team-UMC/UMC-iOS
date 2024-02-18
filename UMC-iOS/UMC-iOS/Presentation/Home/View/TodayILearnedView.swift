@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TodayILearnedView: View {
     @Binding var goToTodayILearned: Bool
+    let memberNickname: String
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -30,7 +31,7 @@ struct TodayILearnedView: View {
                 VStack(spacing: 0) {
                     VStack(spacing: 0) { // 글 VStack
                         HStack(spacing: 0) {
-                            Text("원")
+                            Text(memberNickname)
                                 .fontWeight(.semibold)
                             Text("님의")
                         } // HStack

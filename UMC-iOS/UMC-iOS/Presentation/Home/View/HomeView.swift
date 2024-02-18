@@ -50,7 +50,7 @@ struct HomeView: View {
                         TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoList: $goToTodoList).padding(.top, 24)
                         
                         HStack(spacing: 18) {
-                            TodayILearnedView(goToTodayILearned: $goToTodayILearned)
+                            TodayILearnedView(goToTodayILearned: $goToTodayILearned, memberNickname: memberProfile.nickname)
                             GitHubView()
                         }
                         .padding(.top, 24)
