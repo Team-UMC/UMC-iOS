@@ -49,14 +49,14 @@ struct HomeView: View {
                         TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoListUI: $goToTodoListUI).padding(.top, 24)
                         
                         HStack(spacing: 18) {
-                            TodayILearnedView()
+                            TodayILearnedView(memberInfo: memberProfile)
                             GitHubView()
                         }
                         .padding(.top, 24)
                         
                         HStack(spacing: 18) {
                             MascotView()
-                            RankView()
+                            RankView(memberInfo: memberProfile)
                         }
                         .padding(.top, 24)
                         .padding(.bottom, 24)

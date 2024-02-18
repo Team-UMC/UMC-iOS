@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TodayILearnedView: View {
+    
+    var memberInfo: MemberResponse.GetMemberProfile
+    
     @State private var isClicked = false
     var body: some View {
         VStack(spacing: 0) {
@@ -30,7 +33,7 @@ struct TodayILearnedView: View {
                 VStack(spacing: 0) {
                     VStack(spacing: 0) { // 글 VStack
                         HStack(spacing: 0) {
-                            Text("원")
+                            Text(memberInfo.nickname)
                                 .fontWeight(.semibold)
                             Text("님의")
                         } // HStack
