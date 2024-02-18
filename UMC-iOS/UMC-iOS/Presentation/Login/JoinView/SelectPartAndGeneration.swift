@@ -12,7 +12,7 @@ struct SelectPartAndGeneration:View {
     @State private var isClicked = false
     @Binding var userData: UserData
     let generations = ["1기", "2기", "3기", "4기", "5기", "6기"]
-    let parts = ["PM", "Design", "Spring", "Node", "Web", "iOS", "Android"]
+    let parts: [String] = ["PM", "Design", "Spring", "Node", "Web", "iOS", "Android"]
     
     var body: some View {
         ZStack {
@@ -31,12 +31,12 @@ struct SelectPartAndGeneration:View {
                 
                 Spacer().frame(height: 16)
                 
-                ForEach($viewModel.selections.indices, id: \.self) { index in
-                    JoinGenerationPartPickers(selection: $viewModel.selections[index],
+                ForEach($viewModel.selectionSemesterParts.indices, id: \.self) { index in
+                    JoinGenerationPartPickers(selection: $viewModel.selectionSemesterParts[index],
                                               generations: generations,
                                               parts: parts,
                                               removeAction: { viewModel.removeSelection(at: index) })
-                    .zIndex(Double(viewModel.selections.count - index)) // zIndex 역순 적용
+                    .zIndex(Double(viewModel.selectionSemesterParts.count - index)) // zIndex 역순 적용
                     .padding(5)
                 }
                 
@@ -61,8 +61,10 @@ struct SelectPartAndGeneration:View {
                     HStack {
                         Spacer()
                         Button {
-                            userData.partSemesters = viewModel.selections
-                            print(userData)
+//                            userData.partSemesters = viewModel.selections
+                            print(viewModel.selectionSemesterParts)
+                            userData.semesterParts = UserData.joinviewSelectedInfoToMemberRequestSemesterPart(mappingArr: viewModel.selectionSemesterParts)
+                            print(userData.semesterParts)
                             isClicked.toggle()
                         } label: {
                             Image(systemName: "arrow.right.circle.fill")

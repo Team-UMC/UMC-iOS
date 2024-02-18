@@ -63,6 +63,23 @@ enum Semester: String, Codable {
         // 기본값으로 마지막 항목 반환
         return .FIFTH
     }
+    
+    static func koreanToSemester(korean: String) -> Semester {
+        switch korean {
+        case "1기":
+            return .FIRST
+        case "2기":
+            return .SECOND
+        case "3기":
+            return .THIRD
+        case "4기":
+            return .FOURTH
+        case "5기":
+            return .FIFTH
+        default:
+            return .FIFTH
+        }
+    }
 }
 
 //// 사용 예시

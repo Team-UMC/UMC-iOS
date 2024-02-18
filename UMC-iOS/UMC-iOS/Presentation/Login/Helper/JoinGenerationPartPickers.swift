@@ -15,7 +15,7 @@ struct JoinGenerationPartPickers:View {
     
     var body: some View {
         HStack {
-            DropDownPicker(selection: $selection.selectedGeneration,
+            DropDownPicker(selection: $selection.selectedSemeseter,
                            options: generations,
                            maxWidth: 93,
                            height: 36,

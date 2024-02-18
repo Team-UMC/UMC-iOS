@@ -57,11 +57,11 @@ class JoinViewModel: ObservableObject {
     }
     
     //selectpartAndGeneration View에 관한 viewmodel
-    @Published var selections: [JoinViewSelectedInfo] = []
+    @Published var selectionSemesterParts: [JoinViewSelectedInfo] = []
         
     // selections 배열 내에 적어도 하나의 세트가 nil이 아닌지 확인하는 계산 속성
     var isAtLeastOneSelected: Bool {
-        selections.contains { $0.selectedGeneration != nil && $0.selectedPart != nil}
+        selectionSemesterParts.contains { $0.selectedSemeseter != nil && $0.selectedPart != nil}
     }
         
     init() {
@@ -71,15 +71,15 @@ class JoinViewModel: ObservableObject {
         
     // 새로운 선택 항목을 추가하는 메소드
     func addSelection() {
-        selections.append(JoinViewSelectedInfo())
-        print(selections)
+        selectionSemesterParts.append(JoinViewSelectedInfo())
+        print(selectionSemesterParts)
     }
         
     // 특정 인덱스의 선택 항목을 제거하는 메소드
     func removeSelection(at index: Int) {
-        if selections.count > 1 { 
+        if selectionSemesterParts.count > 1 { 
             // 최소 한 개의 선택지 유지
-            selections.remove(at: index)
+            selectionSemesterParts.remove(at: index)
         }
     }
 }

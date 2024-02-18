@@ -59,5 +59,26 @@ enum Part: String, Codable {
         }
     }
     
+    static func StringToPart(partString: String) -> Part {
+        switch partString {
+        case "PM":
+            return .PM
+        case "Design":
+            return .DESIGN
+        case "Spring":
+            return .SPRING
+        case "Node":
+            return .NODE
+        case "iOS":
+            return .IOS
+        case "Android":
+            return .ANDROID
+        case "Web":
+            return .WEB
+        default:
+            return .ETC
+        }
+    }
+    
     
 }

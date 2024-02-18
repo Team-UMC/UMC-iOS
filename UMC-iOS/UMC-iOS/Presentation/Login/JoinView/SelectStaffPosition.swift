@@ -12,6 +12,7 @@ struct SelectStaffPosition: View {
     @Binding var userData: UserData
     @State private var position:[String] = ["회장", "부회장", "운영국장", "PM 파트장", "Design 파트장", "Spring 파트장", "Node 파트장", "Web 파트장", "iOS 파트장", "Android 파트장"]
     @State private var newPosition = "" // 사용자가 입력할 새 직책
+    @State private var goToSelectUniv: Bool = false
 
     var body: some View {
         ZStack{
@@ -168,11 +169,11 @@ struct SelectStaffPosition: View {
                             .padding()
                             .offset(x:8)
                             // 직책 추가 버튼
-                            Button(action: {
+                            Button {
                                 guard !newPosition.isEmpty else { return }
                                 position.append(newPosition)
                                 newPosition = "" // 입력 필드 초기화
-                            }){
+                            } label: {
                                 HStack{
                                     Image(systemName: "plus.circle.fill")
                                         .resizable()
@@ -188,16 +189,36 @@ struct SelectStaffPosition: View {
                                 
                             )
                             .offset(x:-140)
+                            Spacer()
                         }
                         .padding(.top, -7)
                     }
                     .padding()
 
-                    if (!viewModel.selectedPosition_central.isEmpty || !viewModel.selectedPosition_inUnivs.isEmpty)
-                    {
-                        JoinNavigationButton(destination: SelectUniv(userData: $userData))
+                    HStack {
+                        Spacer()
+                        // 다음 뷰로 넘어가는 화살표 버튼
+                        if (!viewModel.selectedPosition_central.isEmpty || !viewModel.selectedPosition_inUnivs.isEmpty)
+                        {
+                            Button {
+                                userData.centerPositions = viewModel.selectedPosition_central
+                                userData.campusPositions = viewModel.selectedPosition_inUnivs
+                                print(userData)
+                                goToSelectUniv.toggle()
+                            } label: {
+                                Image(systemName: "arrow.right.circle.fill")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundColor(.white)
+                            }
+                            .navigationDestination(isPresented: $goToSelectUniv) {
+                                SelectUniv(userData: $userData)
+                            }
+                        }
+                        Spacer().frame(width: 10)
                     }
-                    Spacer().frame(width: 137)
+                    Spacer()
+                    
                 }
             }
         }

@@ -65,8 +65,8 @@ struct SelectUniv: View {
     }
 }
 
-#Preview {
-    SelectUniv(userData: .constant(UserData(partSemesters: [])))
-}
+//#Preview {
+//    SelectUniv(userData: .constant(UserData(partSemesters: [])))
+//}
 
 
