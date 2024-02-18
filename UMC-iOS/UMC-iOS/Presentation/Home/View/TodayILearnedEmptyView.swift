@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TodayILearnedView: View {
+struct TodayILearnedEmptyView: View {
     @Binding var goToTodayILearned: Bool
     let memberNickname: String
     var body: some View {

@@ -12,6 +12,7 @@ struct HomeView: View {
     @ObservedObject var memberNetwork = MemberNetwork()
     @ObservedObject var scheduleNetwork = ScheduleNetwork()
     @ObservedObject var todoListNetwork = TodoListNetwork()
+    @ObservedObject var todayILearendNetwork = TodayILearnedNetwork()
     
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
     @State private var isNavigationBtnTapped: [Bool] = [false, false, false, false]
@@ -20,6 +21,7 @@ struct HomeView: View {
     @State var memberProfile = MemberResponse.GetMemberProfile()
     @State var calendarInfo = ScheduleResponse.GetCalendar()
     @State var todoList = TodoListResponse.GetTodoList()
+    @State var todayILearneds = TodayILearnedResponse.GetTodayILearned()
     
     @State var goToTodoList: Bool = false
     @State var goToTodayILearned: Bool = false
@@ -50,7 +52,12 @@ struct HomeView: View {
                         TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoList: $goToTodoList).padding(.top, 24)
                         
                         HStack(spacing: 18) {
-                            TodayILearnedView(goToTodayILearned: $goToTodayILearned, memberNickname: memberProfile.nickname)
+                            if todayILearneds.todayILearnedInfos.isEmpty {
+                                TodayILearnedEmptyView(goToTodayILearned: $goToTodayILearned, memberNickname: memberProfile.nickname)
+                            } else {
+                                Text("Temp")
+                            }
+                            
                             GitHubView()
                         }
                         .padding(.top, 24)
@@ -81,6 +88,7 @@ struct HomeView: View {
                 memberProfile = await memberNetwork.fetchGetMemberProfile(memberId: "")
                 calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: viewModel.currentDate)))
                 todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
+                todayILearneds = await todayILearendNetwork.fetchGetTodayILearned(date: String.currentLocalDateToString())
                 
             }
         }

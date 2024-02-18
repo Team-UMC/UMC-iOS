@@ -49,6 +49,9 @@ enum ApiEndpoints {
         case todoLists = "/to-do-lists"
         case todoLists_update = "/to-do-lists/update"
         
+        // today-i-learned
+        case today_i_learned = "/today-i-learned"
+        
         // university
         case universities = "/universities"
         case universities_details = "/universities/details"

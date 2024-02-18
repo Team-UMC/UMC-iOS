@@ -9,15 +9,14 @@ import Foundation
 
 struct TodayILearnedResponse: Codable {
     struct TodayILearnedInfo: Codable {
-        let todayILearnedID, title, subTitle, part: String
+        var todayILearnedId: String = ""
+        var title: String = ""
+        var subTitle: String = ""
+        var part: String = ""
 
-            enum CodingKeys: String, CodingKey {
-                case todayILearnedID = "todayILearnedId"
-                case title, subTitle, part
-            }
     }
     struct GetTodayILearned: Codable {
-        let part, title, subTitle, content: String
+        var todayILearnedInfos: [TodayILearnedInfo] = []
     }
 
 }
