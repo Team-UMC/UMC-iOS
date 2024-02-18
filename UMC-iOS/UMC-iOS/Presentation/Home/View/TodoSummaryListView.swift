@@ -71,7 +71,7 @@ struct TodoSummaryCell: View {
                         // time
                         HStack(spacing: 5) {
                             Text("🕒")
-                            Text("오전 \(todoInfo.deadline)")
+                            Text("\(String.convertToTime(todoInfo.deadline) ?? "미정")")
                         }
                         .font(.system(size: 10))
                         

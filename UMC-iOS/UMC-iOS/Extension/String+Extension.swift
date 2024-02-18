@@ -43,4 +43,19 @@ extension String {
             return nil
         }
     }
+    
+    static func convertToTime(_ dateString: String) -> String? {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        
+        if let date = inputFormatter.date(from: dateString) {
+            let outputFormatter = DateFormatter()
+            outputFormatter.dateFormat = "a HH:mm"
+            outputFormatter.locale = Locale(identifier: "ko_KR")
+            let outputString = outputFormatter.string(from: date)
+            return outputString
+        } else {
+            return nil
+        }
+    }
 }
