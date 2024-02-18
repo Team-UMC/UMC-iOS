@@ -220,6 +220,7 @@
 		F3896FD02B81ED8F0075E0AB /* InviteNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FCF2B81ED8F0075E0AB /* InviteNetwork.swift */; };
 		F3896FD22B8200120075E0AB /* InviteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FD12B8200120075E0AB /* InviteResponse.swift */; };
 		F3896FD42B8202140075E0AB /* InviteAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FD32B8202140075E0AB /* InviteAPITestView.swift */; };
+		F391F9072B827EA500C9FD46 /* TodoListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F9062B827EA500C9FD46 /* TodoListNetwork.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -483,6 +484,7 @@
 		F3896FCF2B81ED8F0075E0AB /* InviteNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteNetwork.swift; sourceTree = "<group>"; };
 		F3896FD12B8200120075E0AB /* InviteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteResponse.swift; sourceTree = "<group>"; };
 		F3896FD32B8202140075E0AB /* InviteAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteAPITestView.swift; sourceTree = "<group>"; };
+		F391F9062B827EA500C9FD46 /* TodoListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListNetwork.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -1473,6 +1475,7 @@
 				F3935D2B2B7B75B70036E77A /* BoardNetwork.swift */,
 				F3896FC72B7DCAAE0075E0AB /* MemberNetwork.swift */,
 				F3896FCF2B81ED8F0075E0AB /* InviteNetwork.swift */,
+				F391F9062B827EA500C9FD46 /* TodoListNetwork.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -1867,6 +1870,7 @@
 				F34D2D1E2B73675300491EBE /* NotificationModel.swift in Sources */,
 				F34D2D522B7367D400491EBE /* MemberRequest.swift in Sources */,
 				F3B689432B77F05F00A4FBB5 /* UniversityAPITestView.swift in Sources */,
+				F391F9072B827EA500C9FD46 /* TodoListNetwork.swift in Sources */,
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
 				46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */,
 				F34D2CF72B73675300491EBE /* ToDoListView.swift in Sources */,

@@ -11,12 +11,15 @@ struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @ObservedObject var memberNetwork = MemberNetwork()
     @ObservedObject var scheduleNetwork = ScheduleNetwork()
+    @ObservedObject var todoListNetwork = TodoListNetwork()
+    
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
     @State private var isNavigationBtnTapped: [Bool] = [false, false, false, false]
     
     // 추후 수정...(원래 DTO를 이런 식으로 갖다쓰면 안됩니다^^... 급하니까 중간과정 생략하고 때려박는거에요...)
     @State var memberProfile = MemberResponse.GetMemberProfile()
     @State var calendarInfo = ScheduleResponse.GetCalendar()
+    @State var todoList = TodoListResponse.GetTodoList()
     
     var body: some View {
         ZStack {
@@ -41,7 +44,7 @@ struct HomeView: View {
                         AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup).padding(.top, 8)
                         
                         MainCalendarView(currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
-                        TodoSummaryListView(memberInfo: viewModel.member).padding(.top, 24)
+                        TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname).padding(.top, 24)
                         
                         HStack(spacing: 18) {
                             TodayILearnedView()
@@ -74,8 +77,8 @@ struct HomeView: View {
             Task {
                 memberProfile = await memberNetwork.fetchGetMemberProfile(memberId: "")
                 calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: viewModel.currentDate)))
+                todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
                 
-                await viewModel.fetchGetTodoList()
             }
         }
         .ignoresSafeArea()

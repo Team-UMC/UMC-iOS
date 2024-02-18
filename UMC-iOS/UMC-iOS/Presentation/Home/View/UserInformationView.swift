@@ -27,7 +27,7 @@ struct UserInformationView: View {
             Spacer()
             
             HStack(spacing: 0) { // ( )님 반가워요!
-                Text(memberInfo.name)
+                Text(memberInfo.nickname)
                     .foregroundColor(.white)
                     .font(.system(size: 16, weight: .bold))
                     // .kerning(-1.032)

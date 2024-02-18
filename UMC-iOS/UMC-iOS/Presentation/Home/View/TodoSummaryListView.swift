@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TodoSummaryListView: View {
-    var TDLList : [String] = ["1", "2", "3"]
-    var memberInfo: Member
+    var todoList : TodoListResponse.GetTodoList
+    var memberNickname: String
     
     var body: some View {
         VStack(spacing: 0) {
@@ -25,12 +25,12 @@ struct TodoSummaryListView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
-                    ForEach(0..<3) { index in
-                        TodoSummaryCell()
+                    ForEach(todoList.todoLists.indices, id: \.self) { index in
+                        TodoSummaryCell(todoInfo: todoList.todoLists[index])
                     } // ForEach
                     
                     
-                    TodoEmptyCell(memberNickname: memberInfo.nickname)
+                    TodoEmptyCell(memberNickname: memberNickname)
                 } // HStack
                 .padding(.trailing, 18)
             } // ScrollView
@@ -42,7 +42,7 @@ struct TodoSummaryListView: View {
 
 struct TodoSummaryCell: View {
     @State private var isClicked: Bool = false
-    let todoInfo: String = ""
+    let todoInfo: TodoListResponse.TodoListInfo
     var body: some View {
         Button {
             print("TDLPlusButton Clicked")
@@ -62,7 +62,7 @@ struct TodoSummaryCell: View {
                             .font(.system(size: 30))
                         
                         // contents
-                        Text("더기랑 요거트월드 먹기")
+                        Text("\(todoInfo.title)")
                             .padding(.leading, 5)
                             .padding(.trailing, 5)
                             .fontWeight(.semibold)
@@ -71,7 +71,7 @@ struct TodoSummaryCell: View {
                         // time
                         HStack(spacing: 5) {
                             Text("🕒")
-                            Text("오전 08:00")
+                            Text("오전 \(todoInfo.deadline)")
                         }
                         .font(.system(size: 10))
                         
@@ -160,6 +160,6 @@ struct TodoEmptyCell: View {
     }
 }
 
-#Preview {
-    TodoSummaryListView(TDLList: ["1", "2"], memberInfo: Member())
-}
+//#Preview {
+//    TodoSummaryListView(TDLList: ["1", "2"], memberInfo: Member())
+//}
