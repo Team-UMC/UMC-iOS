@@ -13,6 +13,8 @@ struct JoinAgreement:View {
     @State private var isClicked = false
     @Binding var userData: UserData
     
+    @State private var memberId: String = ""
+    
     var body: some View {
         ZStack{
             Image("signup_background")
@@ -97,9 +99,11 @@ struct JoinAgreement:View {
                             print(userData)
                             Task {
                                 // 수정 필요
-                                await viewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: userData.name!, nickname: userData.nickname, semesterParts: UserData.EntityToMemberRequestSemesterPart(mappingArr: userData.semesterParts), universityName: userData.university, campusPositions: userData.campusPositions, centerPositions: userData.centerPositions))
+                                memberId = await viewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: userData.name!, nickname: userData.nickname, semesterParts: UserData.EntityToMemberRequestSemesterPart(mappingArr: userData.semesterParts), universityName: userData.university, campusPositions: userData.campusPositions, centerPositions: userData.centerPositions))
+                                if memberId != "" {
+                                    isClicked.toggle()
+                                }
                             }
-                            isClicked.toggle()
                         } label: {
                             Image(systemName: "arrow.right.circle.fill")
                                 .resizable()

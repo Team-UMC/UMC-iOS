@@ -61,7 +61,7 @@ class JoinViewModel: ObservableObject {
         
     // selections 배열 내에 적어도 하나의 세트가 nil이 아닌지 확인하는 계산 속성
     var isAtLeastOneSelected: Bool {
-        selectionSemesterParts.contains { $0.selectedSemeseter != nil && $0.selectedPart != nil}
+        selectionSemesterParts.contains { $0.selectedSemeseter != "" && $0.selectedPart != ""}
     }
         
     init() {
@@ -90,7 +90,8 @@ extension JoinViewModel {
     // POST
     // 인증 API - 회원가입 API
     @MainActor
-    func fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember) async {
+    func fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember) async -> String {
+        var memberId: String = ""
         do {
             print("fetchSignUpMemberLog : \(signUpMemberInfo)")
             let encoder = JSONEncoder()
@@ -101,10 +102,11 @@ extension JoinViewModel {
                 print("fetchSignUpMemberLog : \(jsonString)")
             }
             
-            let memberId = try await signUpMember(sendData: sendData)
+            memberId = try await signUpMember(sendData: sendData).memberId
         } catch {
             print("Error: \(error)")
         }
+        return memberId
     }
     
     // 인증 API - 회원가입 API

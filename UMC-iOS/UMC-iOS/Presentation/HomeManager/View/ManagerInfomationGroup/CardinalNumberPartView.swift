@@ -10,8 +10,8 @@ import SwiftUI
 struct CardinalNumberPartView: View {
     
     @State var shoudShowMySelf: Bool = true
-    @State var selectedGeneration: String? = nil
-    @State var selectedPart: String? = nil
+    @State var selectedGeneration: String = ""
+    @State var selectedPart: String = ""
     
     let Generations = ["1기", "2기", "3기", "4기", "5기", "6기"]
     let Parts = ["PM", "Design", "Spring", "Node", "Web", "iOS", "Android"]

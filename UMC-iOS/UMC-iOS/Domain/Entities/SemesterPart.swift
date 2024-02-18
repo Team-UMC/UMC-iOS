@@ -8,6 +8,6 @@
 import Foundation
 
 struct SemesterPart {
-    var semester: Semester
     var part: Part
+    var semester: Semester
 }

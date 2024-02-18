@@ -14,7 +14,7 @@ enum DropDownPickerState {
 
 struct DropDownPicker: View {
     
-    @Binding var selection: String?
+    @Binding var selection: String
     var state: DropDownPickerState = .bottom
     var options: [String]
     var maxWidth: CGFloat = 272
@@ -44,7 +44,7 @@ struct DropDownPicker: View {
                 HStack {
                     Spacer()
                     
-                    Text(selection == nil ? placeholder : selection!)
+                    Text(selection == "" ? placeholder : selection)
                         .foregroundColor(TextColor)
                         .multilineTextAlignment(.center)
                         .font(.system(size: fontSize))

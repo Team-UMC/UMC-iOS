@@ -11,8 +11,8 @@ struct ManagerInfo:View {
     @Environment(\.dismiss) private var dismiss
     @State private var isChecked = false
     @State private var UserFindString:String = ""
-    @State var selectedGeneration: String? = nil
-    @State var selectedPart: String? = nil
+    @State var selectedGeneration: String = ""
+    @State var selectedPart: String = ""
     @EnvironmentObject var viewModel: GenerationPartViewModel
 
     let UnivPositions = ["회장", "부회장", "운영국장", "PM 파트장", "Design 파트장", "Spring 파트장", "Node 파트장", "Web 파트장", "iOS 파트장", "Android 파트장",]
