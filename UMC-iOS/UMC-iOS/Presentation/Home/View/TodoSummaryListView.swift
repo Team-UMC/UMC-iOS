@@ -30,8 +30,11 @@ struct TodoSummaryListView: View {
                         TodoSummaryCell(isClicked: $goToTodoList, todoInfo: todoList.todoLists[index])
                     } // ForEach
                     
-                    
-                    TodoEmptyCell(isClicked: $goToTodoList, memberNickname: memberNickname)
+                    if todoList.todoLists.count <= 2 {
+                        ForEach(0..<3) { index in
+                            TodoEmptyCell(isClicked: $goToTodoList, memberNickname: memberNickname)
+                        }
+                    }
                 } // HStack
                 .padding(.trailing, 18)
             } // ScrollView
