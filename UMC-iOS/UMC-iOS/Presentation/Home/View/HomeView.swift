@@ -55,7 +55,7 @@ struct HomeView: View {
                             if todayILearneds.todayILearnedInfos.isEmpty {
                                 TodayILearnedEmptyView(goToTodayILearned: $goToTodayILearned, memberNickname: memberProfile.nickname)
                             } else {
-                                Text("Temp")
+                                TodayILearnedHomeList(todayILearneds: todayILearneds)
                             }
                             
                             GitHubView()

@@ -222,6 +222,9 @@
 		F3896FD42B8202140075E0AB /* InviteAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FD32B8202140075E0AB /* InviteAPITestView.swift */; };
 		F391F9072B827EA500C9FD46 /* TodoListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F9062B827EA500C9FD46 /* TodoListNetwork.swift */; };
 		F391F9092B82A33F00C9FD46 /* TodayILearnedNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F9082B82A33F00C9FD46 /* TodayILearnedNetwork.swift */; };
+		F391F90B2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */; };
+		F391F90D2B82A89100C9FD46 /* TodayILearnedHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F90C2B82A89100C9FD46 /* TodayILearnedHomeCell.swift */; };
+		F391F90F2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F90E2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -487,6 +490,9 @@
 		F3896FD32B8202140075E0AB /* InviteAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteAPITestView.swift; sourceTree = "<group>"; };
 		F391F9062B827EA500C9FD46 /* TodoListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListNetwork.swift; sourceTree = "<group>"; };
 		F391F9082B82A33F00C9FD46 /* TodayILearnedNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedNetwork.swift; sourceTree = "<group>"; };
+		F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedHomeList.swift; sourceTree = "<group>"; };
+		F391F90C2B82A89100C9FD46 /* TodayILearnedHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedHomeCell.swift; sourceTree = "<group>"; };
+		F391F90E2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedCreateCell.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -827,6 +833,9 @@
 				F34D2C052B73675300491EBE /* MainCalendarView.swift */,
 				F34D2C062B73675300491EBE /* HomeSideMenuView.swift */,
 				F34D2C072B73675300491EBE /* TodoSummaryListView.swift */,
+				F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */,
+				F391F90C2B82A89100C9FD46 /* TodayILearnedHomeCell.swift */,
+				F391F90E2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1674,10 +1683,12 @@
 				F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */,
 				F34D2D332B73675300491EBE /* User.swift in Sources */,
 				F34D2D3B2B73675300491EBE /* JoinTextFieldStyle.swift in Sources */,
+				F391F90B2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift in Sources */,
 				E333D7712B7E59A700D335AD /* ManagerInfoSelect.swift in Sources */,
 				F34D2D182B73675300491EBE /* ProjectIconRegisterView.swift in Sources */,
 				F3B6894E2B780E3400A4FBB5 /* PointType.swift in Sources */,
 				F34D2CCB2B73675300491EBE /* BulletinBoardUI.swift in Sources */,
+				F391F90F2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift in Sources */,
 				F3935D322B7B7C850036E77A /* BoardRequest.swift in Sources */,
 				F34D2CDC2B73675300491EBE /* ManagerCalender.swift in Sources */,
 				F34D2CCF2B73675300491EBE /* WritingListCellSecond.swift in Sources */,
@@ -1838,6 +1849,7 @@
 				F34D2CDD2B73675300491EBE /* ManagerInfo.swift in Sources */,
 				F34D2D1A2B73675300491EBE /* ProjectHashtagRegisterView.swift in Sources */,
 				F34D2D322B73675300491EBE /* JoinModel.swift in Sources */,
+				F391F90D2B82A89100C9FD46 /* TodayILearnedHomeCell.swift in Sources */,
 				E3C5A6412B7DCD6A009518D8 /* mascotFeedPopupView.swift in Sources */,
 				F34D2CFE2B73675300491EBE /* MyWriteSearch.swift in Sources */,
 				F3B6894A2B77F3E000A4FBB5 /* Mascot.swift in Sources */,
