@@ -60,13 +60,15 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 유저 프로필 조회 API(fetch)
     @MainActor
-    func fetchGetMemberProfile(memberId: String) async {
+    func fetchGetMemberProfile(memberId: String) async -> MemberResponse.GetMemberProfile {
         do {
             let memberProfile = try await getMemberProfile(memberId: memberId)
             print(memberProfile)
+            return memberProfile
             
         } catch {
             print("Error: \(error)")
+            return MemberResponse.GetMemberProfile()
         }
     }
     

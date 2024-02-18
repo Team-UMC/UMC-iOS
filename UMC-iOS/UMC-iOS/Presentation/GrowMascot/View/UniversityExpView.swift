@@ -19,7 +19,7 @@ struct UniversityExpView: View {
             HStack(spacing: 12) {
                 
                 // 학교 로고
-                Image("인하대학교_로고")
+                Image("인하대학교")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(Circle())

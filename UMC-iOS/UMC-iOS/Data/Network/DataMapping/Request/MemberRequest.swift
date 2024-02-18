@@ -35,7 +35,7 @@ class MemberRequest {
 
 extension MemberRequest {
     struct SemesterPart: Codable {
-        let part: String
         let semester: String
+        let part: String
     }
 }

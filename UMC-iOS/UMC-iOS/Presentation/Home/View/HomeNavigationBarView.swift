@@ -66,6 +66,6 @@ struct HomeNavigationBarView: View {
     }
 }
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}

@@ -164,51 +164,7 @@ extension HomeViewModel {
     
     // API
     
-    // GET
-    // 멤버 API - 유저 프로필 조회 API(fetch)
-    @MainActor
-    func fetchGetMemberProfile() async {
-        do {
-            let memberProfile = try await getMemberProfile()
-            print(memberProfile)
-            member = Member(memberProfile: memberProfile)
-        } catch {
-            print("Error: \(error)")
-        }
-    }
     
-    // 멤버 API - 유저 프로필 조회 API
-    func getMemberProfile() async throws -> MemberResponse.GetMemberProfile {
-        var urlComponents = ApiEndpoints.getBasicUrlComponents()
-        urlComponents.path = ApiEndpoints.Path.members.rawValue
-        
-        guard let url = urlComponents.url else {
-            print("Error: cannot create URL")
-            throw ExchangeRateError.cannotCreateURL
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
-        
-        let (data, response) = try await URLSession.shared.data(for: request)
-        print(data)
-        print(response)
-        
-        if let response = response as? HTTPURLResponse,
-           !(200..<300).contains(response.statusCode) {
-            throw ExchangeRateError.badRequest
-        }
-        
-        let decoder = JSONDecoder()
-        
-        let jsonDictionary = try decoder.decode(BaseResponse<MemberResponse.GetMemberProfile>.self, from: data)
-        
-        var memberProfile: MemberResponse.GetMemberProfile
-        memberProfile = jsonDictionary.result
-        
-        return memberProfile
-    }
     
     // TodoList API - 투두리스트 조회 API(fetch)
     @MainActor

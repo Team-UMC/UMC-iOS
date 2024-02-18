@@ -9,15 +9,15 @@ import Foundation
 
 struct MemberResponse: Codable {
     struct GetMemberProfile: Codable {
-        let id: Int?
-        let memberId: String
-        let profileImage: String?
-        let universityName: String
-        let name: String
-        let nickname: String
-        let semesterParts: [MemberResponse.SemesterParts]
-        let statusMessage: String?
-        let owner: String
+        var id: Int? = 0
+        var memberId: String = ""
+        var profileImage: String? = ""
+        var universityName: String = ""
+        var name: String = ""
+        var nickname: String = ""
+        var semesterParts: [MemberResponse.SemesterParts] = []
+        var statusMessage: String? = ""
+        var owner: String = ""
     }
     
     struct GetAccessTokenWithSocialLogin: Codable {
@@ -35,7 +35,7 @@ struct MemberResponse: Codable {
 
 extension MemberResponse {
     struct SemesterParts: Codable {
-        let part: String
-        let semester: String
+        var part: String = ""
+        var semester: String = ""
     }
 }

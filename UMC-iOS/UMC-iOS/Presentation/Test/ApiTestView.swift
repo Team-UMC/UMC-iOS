@@ -50,7 +50,7 @@ struct ApiTestView: View {
                 
                 Button {
                     Task {
-                        await joinViewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: "이경수", nickname: "리버", semesterParts: [MemberRequest.SemesterPart(part: "SPRING", semester: "FIFTH")], universityName: "인하대학교", campusPositions: [], centerPositions: []))
+//                        await joinViewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: "이경수", nickname: "리버", semesterParts: [MemberRequest.SemesterPart(part: "SPRING", semester: "FIFTH")], universityName: "인하대학교", campusPositions: [], centerPositions: []))
                     }
                 } label: {
                     Text("회원가입")

@@ -23,9 +23,22 @@ struct UserData {
             let semester = semesterPart.selectedSemeseter
             let part = semesterPart.selectedPart
             
-            partsDictionary.append(SemesterPart(semester: Semester.koreanToSemester(korean: semester), part: Part.StringToPart(partString: part)))
+            partsDictionary.append(SemesterPart(semester: Semester.koreanToSemester(korean: semester),
+                                                              part: Part.StringToPart(partString: part)))
+        }
+        return partsDictionary
+    }
+    
+    static func EntityToMemberRequestSemesterPart(mappingArr: [SemesterPart]) -> [MemberRequest.SemesterPart] {
+        var partsDictionary: [MemberRequest.SemesterPart] = []
 
-
+        for semesterPart in mappingArr {
+            
+            let semester = semesterPart.semester
+            let part = semesterPart.part
+            
+            partsDictionary.append(MemberRequest.SemesterPart(semester: semester.rawValue,
+                                                              part: part.rawValue))
         }
         return partsDictionary
     }

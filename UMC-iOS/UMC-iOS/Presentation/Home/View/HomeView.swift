@@ -9,8 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
+    @ObservedObject var memberNetwork = MemberNetwork()
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
     @State private var isNavigationBtnTapped: [Bool] = [false, false, false, false]
+    
+    // 추후 수정...(원래 DTO를 이런 식으로 갖다쓰면 안됩니다^^... 급하니까 중간과정 생략하고 때려박는거에요...)
+    @State var memberProfile = MemberResponse.GetMemberProfile()
+    
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
@@ -29,7 +34,7 @@ struct HomeView: View {
                         Spacer().frame(height: 50)
                         HomeNavigationBarView(presentSideMenu: $presentSideMenu, isNavigationBtnTapped: $isNavigationBtnTapped).padding(.top, 7)
                         
-                        UserInformationView(memberInfo: viewModel.member).padding(.top, 20)
+                        UserInformationView(memberInfo: memberProfile).padding(.top, 20)
                         
                         AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup).padding(.top, 8)
                         
@@ -65,7 +70,9 @@ struct HomeView: View {
         } // ZStack (최 상단에 팝업 뷰 배치)
         .onAppear {
             Task {
-                await viewModel.fetchGetMemberProfile()
+                memberProfile = await memberNetwork.fetchGetMemberProfile(memberId: "")
+                print(memberProfile.memberId)
+                
                 await viewModel.fetchGetTodoList()
             }
         }

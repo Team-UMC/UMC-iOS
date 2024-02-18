@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct UserInformationView: View {
-    var memberInfo: Member
+    var memberInfo: MemberResponse.GetMemberProfile
     var body: some View {
         HStack {
-            Image("\(memberInfo.university)_로고") // 학교 사진
+            Image(memberInfo.universityName) // 학교 사진
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 36, height: 36)
@@ -19,7 +19,7 @@ struct UserInformationView: View {
                 .background(Circle().foregroundColor(Color.white))
                 .padding(.leading, 16)
             
-            Text(memberInfo.university) // 학교 이름
+            Text(memberInfo.universityName) // 학교 이름
                 .foregroundColor(.white)
                 .font(.system(size: 18, weight: .bold))
                 .kerning(-1.07)

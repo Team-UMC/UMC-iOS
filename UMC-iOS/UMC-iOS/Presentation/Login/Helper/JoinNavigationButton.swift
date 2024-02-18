@@ -36,6 +36,6 @@ struct JoinNavigationButton<Destination: View>: View {
     }
 }
 
-#Preview {
-    JoinNavigationButton(destination: HomeView())
-}
+//#Preview {
+//    JoinNavigationButton(destination: HomeView())
+//}
