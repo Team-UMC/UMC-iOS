@@ -9,23 +9,13 @@ import SwiftUI
 
 struct UserContentPreList: View {
     @State private var isClicked = false
+    var board = Board()
+    
     var body: some View {
-        let profileImage = "profileImage"
-        let userName = "양유진"
-        let userNickname = "더기"
-        let ContentTitle = "규칙적인 생활 그거 어떻게 하냐고.."
-        let ContentPreview = "대체 게시판은 언제 맘에 들까.. 음음음 그러게 정말 언제 마음에 들까까... 알다가도 모르겠다.... 흑흑..."
-        let LikeCnt = 123
-        let CommentCnt = 4
-        let ViewingCnt = 4
-        let TimeLine = 1
-        let ContentImage = "ContentImage"
-        @Environment(\.presentationMode) var presentationMode
-        
         VStack(alignment: .leading, spacing: 8){
             HStack{
                 //프로필 이미지
-                Image(profileImage)
+                Image(board.writer?.profileImage ?? "profileImage")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 24, height: 24)
@@ -33,13 +23,13 @@ struct UserContentPreList: View {
                     .overlay(Circle().stroke(Color.clear))
                 
                 //유저 이름 닉네임
-                Text("\(userNickname)/\(userName)")
+                Text("\(board.writer?.nickname ?? "")/\(board.writer?.name ?? "")")
                     .foregroundColor(.black)
                     .font(.system(size: 12))
                 Spacer()
                 
                 //타임라인
-                Text("\(TimeLine)분전")
+                Text("\(board.hitCount)분전")
                     .foregroundColor(.gray)
                     .font(.system(size: 12))
                     .padding(.horizontal, 21)
@@ -47,18 +37,18 @@ struct UserContentPreList: View {
             HStack{
                 VStack(alignment: .leading, spacing: 2){
                     //게시글 제목
-                    Text("\(ContentTitle)")
+                    Text("\(board.title)")
                         .foregroundColor(.black)
                         .font(.system(size: 14).bold())
                     
                     //게시글 미리보기
-                    Text("\(ContentPreview)").lineLimit(2)
+                    Text("\(board.content)").lineLimit(2)
                         .foregroundColor(.black)
                         .font(.system(size: 12))
                 }
                 
                 //게시글 이미지
-                Image(ContentImage)
+                Image("ContentImage")//board.contentImage
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 56, height: 56)
@@ -70,7 +60,7 @@ struct UserContentPreList: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 13.91, height: 12.41)
                     .padding(.trailing,-4)
-                Text("\(LikeCnt)")
+                Text("\(board.heartCount)")
                     .foregroundColor(Color(red: 135/255, green: 132/255, blue: 255/255))
                     .font(.system(size: 12))
                     .padding(.trailing,6)
@@ -81,7 +71,7 @@ struct UserContentPreList: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 13.91, height: 12.41)
                     .padding(.trailing,-4)
-                Text("\(CommentCnt)")
+                Text("\(board.commentCount)")
                     .foregroundColor(Color(red: 1.0, green: 199/255, blue: 0))
                     .font(.system(size: 12))
                     .padding(.trailing,6)
@@ -92,7 +82,7 @@ struct UserContentPreList: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 13.91, height: 12.41)
                     .padding(.trailing,-2)
-                Text("\(ViewingCnt)")
+                Text("\(board.hitCount)")
                     .foregroundColor(.black)
                     .font(.system(size: 12))
                     .padding(.trailing,6)
@@ -103,7 +93,6 @@ struct UserContentPreList: View {
         .navigationDestination(isPresented: $isClicked) {
             BulletinBoardContentDetailUI()
         }
-        
     }
 }
 
