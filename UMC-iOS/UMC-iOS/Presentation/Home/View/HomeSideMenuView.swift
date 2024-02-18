@@ -10,9 +10,9 @@ import SwiftUI
 //홈 슬라이드
 struct HomeSideView:View {
     @Binding var isShowing: Bool
-        var content: AnyView
-        var direction: Edge
-        
+    var content: AnyView
+    var direction: Edge
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             if isShowing {
@@ -36,8 +36,10 @@ struct HomeSideView:View {
 
 //사이드 메뉴
 struct SideMenuViewContents: View {
+    var memberProfile: MemberResponse.GetMemberProfile
     @Binding var presentSideMenu: Bool
-
+    @State private var delayLoadingImage: Bool = false
+    
     var body: some View {
         HStack {
             ZStack {
@@ -56,19 +58,33 @@ struct SideMenuViewContents: View {
                     }
                     Spacer().frame(height: 16)
                     HStack{
-                        HStack{
-                            Image(systemName:"person.crop.circle")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 60, height: 60)
-                                
-                                .cornerRadius(50)
+                        HStack {
+                            if delayLoadingImage
+                            {
+                                AsyncImage(url: URL(string: memberProfile.profileImage ?? "")) {
+                                    image in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 60, height: 60)
+                                        .cornerRadius(50)
+                                }
+                            placeholder: {
+                                Image(systemName:"person.crop.circle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 60, height: 60)
+                                    .cornerRadius(50)
+                            }
+                            }
+                            
+                            
                             VStack(alignment: .leading){
-                                Text("델로")
+                                Text(memberProfile.nickname)
                                     .font(.system(size: 18, weight: .semibold))
                                     .foregroundColor(.black)
                                 
-                                Text("인하대학교")
+                                Text(memberProfile.universityName)
                                     .font(.system(size: 12))
                                     .foregroundColor(.black.opacity(0.5))
                             }
@@ -122,6 +138,13 @@ struct SideMenuViewContents: View {
                 }
                 .padding(EdgeInsets(top: 55, leading: 17.5, bottom: 0, trailing: 30.5))
                 .frame(width: 320)
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                withAnimation {
+                    delayLoadingImage = true
+                }
             }
         }
     }

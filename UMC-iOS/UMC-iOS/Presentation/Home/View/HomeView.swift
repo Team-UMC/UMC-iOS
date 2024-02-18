@@ -37,8 +37,12 @@ struct HomeView: View {
                     // .offset(x: 0)
                         .position(x: UIScreen.main.bounds.width/2, y: 170)
                     
-                    HomeSideView(isShowing: $presentSideMenu, content: AnyView(SideMenuViewContents(presentSideMenu: $presentSideMenu)), direction: .leading)
+                    
+                    HomeSideView(isShowing: $presentSideMenu, content: AnyView(SideMenuViewContents(memberProfile: memberProfile ,presentSideMenu: $presentSideMenu)), direction: .leading)
                         .zIndex(1)
+                    
+                    
+                    
                     
                     VStack(spacing: 0) {
                         Spacer().frame(height: 50)
