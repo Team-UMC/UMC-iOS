@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct BulletinBoardButton: View {
-    @State private var showButtons1 = true
-    @State private var showButtons2 = false
-    @State private var selectedButton1: Int? = 0
-    @State private var selectedButton2: Int? = 0
-    @State private var isBulletinBoardNoticeVisible = false
-    @State private var isSearchUIActive = false
-    @State private var isEditingProfile = false
-    
+    @State private var showButtons1 = true//학교버튼
+    @State private var showButtons2 = false//지부버튼
+    @State private var isBulletinBoardNoticeVisible = false//건의함버튼
+    @State private var selectedButton1: Int? = 0//버튼 색상 바꾸는 거
+    @State private var selectedButton2: Int? = 0//버튼 색상 바꾸는 거
+    @State private var isSearchUIActive = false//검색창
     @State private var isClicked = false
     
     var body: some View {
@@ -25,8 +23,8 @@ struct BulletinBoardButton: View {
                 Button("학교") {
                     showButtons1.toggle()
                     showButtons2 = false
-                    selectedButton1 = nil
                     isBulletinBoardNoticeVisible = false
+                    selectedButton1 = nil
                 }
                 .font(.system(size: 26))
                 .bold()

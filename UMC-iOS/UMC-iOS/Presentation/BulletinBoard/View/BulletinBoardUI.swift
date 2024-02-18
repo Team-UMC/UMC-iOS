@@ -37,7 +37,7 @@ struct BulletinBoardUI: View {
                     Spacer()
                     
                     Button(action: {
-//                        isWritingListActive.toggle()
+                        isWritingListActive.toggle()
                     }) {
                         Image("TILButton")
                             .resizable()
