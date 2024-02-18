@@ -56,12 +56,18 @@ enum ApiEndpoints {
         case universities_members = "/universities/members"
         case universities_ranks = "/universities/ranks"
         
+        // invite
+        case invites = "/invites"
+        
         // staff-university
         case staff_universities = "/staff/universities"
         
         // staff-schedule
         case staff_schedules = "/staff/schedules"
         case staff_schedules_update = "/staff/schedules/update"
+        
+        // staff-invites
+        case staff_invites = "/staff/invites"
     }
 }
 

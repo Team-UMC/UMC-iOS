@@ -19,6 +19,7 @@ struct ApiTestView: View {
     @State private var goToScheduleAPITestView: Bool = false
     @State private var goToBoardAPITestView: Bool = false
     @State private var goToFileUploadAPITestView: Bool = false
+    @State private var goToInviteAPITestView: Bool = false
     
     @State private var searchMemberId: String = ""
     
@@ -116,6 +117,15 @@ struct ApiTestView: View {
                 }
                 .navigationDestination(isPresented: $goToFileUploadAPITestView) {
                     FileUploadTestView()
+                }
+                
+                Button {
+                    goToInviteAPITestView.toggle()
+                } label: {
+                    Text("초대코드 API 테스트 뷰")
+                }
+                .navigationDestination(isPresented: $goToInviteAPITestView) {
+                    InviteAPITestView()
                 }
 
             }
