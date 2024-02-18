@@ -10,6 +10,7 @@ import SwiftUI
 struct TodoSummaryListView: View {
     var todoList : TodoListResponse.GetTodoList
     var memberNickname: String
+    @Binding var goToTodoListUI: Bool
     
     var body: some View {
         VStack(spacing: 0) {
@@ -26,11 +27,11 @@ struct TodoSummaryListView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(todoList.todoLists.indices, id: \.self) { index in
-                        TodoSummaryCell(todoInfo: todoList.todoLists[index])
+                        TodoSummaryCell(isClicked: $goToTodoListUI, todoInfo: todoList.todoLists[index])
                     } // ForEach
                     
                     
-                    TodoEmptyCell(memberNickname: memberNickname)
+                    TodoEmptyCell(isClicked: $goToTodoListUI, memberNickname: memberNickname)
                 } // HStack
                 .padding(.trailing, 18)
             } // ScrollView
@@ -41,7 +42,7 @@ struct TodoSummaryListView: View {
 }
 
 struct TodoSummaryCell: View {
-    @State private var isClicked: Bool = false
+    @Binding var isClicked: Bool
     let todoInfo: TodoListResponse.TodoListInfo
     var body: some View {
         Button {
@@ -84,24 +85,25 @@ struct TodoSummaryCell: View {
             }
         } // Button
         .padding(.bottom, 8)
-        .navigationDestination(isPresented: $isClicked) {
-            ToDoListUI()
-                .navigationTitle("To-Do List")
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button {
-                            print("완료 버튼 클릭")
-                        } label: {
-                            Text("완료")
-                        }
-                    }
-                }
-        }
+//        .navigationDestination(isPresented: $isClicked) {
+//            ToDoListUI()
+//                .navigationBarBackButtonHidden()
+////                .navigationTitle("To-Do List")
+////                .toolbar {
+////                    ToolbarItem(placement: .topBarTrailing) {
+////                        Button {
+////                            print("완료 버튼 클릭")
+////                        } label: {
+////                            Text("완료")
+////                        }
+////                    }
+////                }
+//        }
     }
 }
 
 struct TodoEmptyCell: View {
-    @State private var isClicked: Bool = false
+    @Binding var isClicked: Bool
     let memberNickname: String
     
     var body: some View {
@@ -143,19 +145,20 @@ struct TodoEmptyCell: View {
                 }
             } // Button
             .padding(.bottom, 8)
-            .navigationDestination(isPresented: $isClicked) {
-                ToDoListUI()
-                    .navigationTitle("To-Do List")
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button {
-                                print("완료 버튼 클릭")
-                            } label: {
-                                Text("완료")
-                            }
-                        }
-                    }
-            }
+//            .navigationDestination(isPresented: $isClicked) {
+//                ToDoListUI()
+//                    .navigationBarBackButtonHidden()
+////                    .navigationTitle("To-Do List")
+////                    .toolbar {
+////                        ToolbarItem(placement: .topBarTrailing) {
+////                            Button {
+////                                print("완료 버튼 클릭")
+////                            } label: {
+////                                Text("완료")
+////                            }
+////                        }
+////                    }
+//            }
         } // VStack
     }
 }
