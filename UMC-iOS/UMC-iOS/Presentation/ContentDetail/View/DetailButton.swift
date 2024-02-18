@@ -18,10 +18,11 @@ struct DetailButton: View {
                 viewModel.likeCount += 1
             }) {
                 HStack(spacing: 8) {
-                    Image("LikeIconGray")
+                    Image("commentLike")
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 10, height: 10)
+                        
                     
                     Text("좋아요")
                         .font(.system(size: 10))
@@ -37,7 +38,7 @@ struct DetailButton: View {
                 }) {
                     HStack{
                         HStack(spacing: 8) {
-                            Image("messageIconGray")
+                            Image("commentWrite")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 10, height: 10)

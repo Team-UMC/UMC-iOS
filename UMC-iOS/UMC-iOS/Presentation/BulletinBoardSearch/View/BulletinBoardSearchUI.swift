@@ -10,25 +10,36 @@ import SwiftUI
 struct BulletinBoardSearchUI: View {
     @State private var searchText = ""
     @State private var searchColor = "searchbar"
+    @ObservedObject var  boardnetwork = BoardNetwork()
+    
     var body: some View {
         VStack {
-            HStack{
-                SearchBar(text: $searchText, color: $searchColor)
-                    .padding(.top, 20)
-                    .onTapGesture {
-                        hideKeyboard()
+            HStack {
+                TextField("검색어를 입력하세요", text: $searchText, onCommit: {
+                    Task {
+                        await boardnetwork.fetchSearchBoards(keyword: searchText, page: 1)
                     }
+                    
+                    print("Enter key pressed. Search text: \(searchText)")
+                })
+                .padding(.top, 20)
+                .foregroundColor(Color("textColor"))
+                .background(Color(searchColor))
+                .cornerRadius(8)
+                .padding(.trailing, 8)
+
                 Button("취소") {
                     print("취소버튼을 눌렀습니다")
+                    searchText = "" 
                 }
                 .font(.system(size: 14))
                 .padding(.top, 20)
-                .padding(.leading,8)
                 .foregroundColor(Color("textColor"))
                 .background(.clear)
             }
             Spacer()
         }
+        .padding(.horizontal, 16)
     }
 }
 

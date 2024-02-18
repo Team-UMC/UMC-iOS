@@ -12,7 +12,7 @@ class UserContentPreListViewModel: ObservableObject {
     
     @Published var member = Member()
     @Published var boards = Board()
-    
+    @Published var boardnetwork = BoardNetwork()
 }
 
 extension UserContentPreListViewModel{
