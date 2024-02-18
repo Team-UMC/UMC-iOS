@@ -1,5 +1,5 @@
 //
-//  SelectPosition.swift
+//  SelectStaffPosition.swift
 //  UMC-iOS
 //
 //  Created by 이태현 on 1/12/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectPosition: View {
+struct SelectStaffPosition: View {
     @ObservedObject private var viewModel = JoinViewModel()
     @Binding var userData: UserData
     @State private var position:[String] = ["회장", "부회장", "운영국장", "PM 파트장", "Design 파트장", "Spring 파트장", "Node 파트장", "Web 파트장", "iOS 파트장", "Android 파트장"]

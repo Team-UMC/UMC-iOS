@@ -181,7 +181,7 @@
 		F34D2D3F2B73675300491EBE /* SelectPartAndGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB52B73675300491EBE /* SelectPartAndGeneration.swift */; };
 		F34D2D402B73675300491EBE /* JoinCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB62B73675300491EBE /* JoinCode.swift */; };
 		F34D2D412B73675300491EBE /* JoinName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB72B73675300491EBE /* JoinName.swift */; };
-		F34D2D422B73675300491EBE /* SelectPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB82B73675300491EBE /* SelectPosition.swift */; };
+		F34D2D422B73675300491EBE /* SelectStaffPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB82B73675300491EBE /* SelectStaffPosition.swift */; };
 		F34D2D432B73675300491EBE /* JoinNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2CB92B73675300491EBE /* JoinNickname.swift */; };
 		F34D2D472B7367C600491EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34D2D462B7367C600491EBE /* Assets.xcassets */; };
 		F34D2D512B7367D400491EBE /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */; };
@@ -446,7 +446,7 @@
 		F34D2CB52B73675300491EBE /* SelectPartAndGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPartAndGeneration.swift; sourceTree = "<group>"; };
 		F34D2CB62B73675300491EBE /* JoinCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinCode.swift; sourceTree = "<group>"; };
 		F34D2CB72B73675300491EBE /* JoinName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinName.swift; sourceTree = "<group>"; };
-		F34D2CB82B73675300491EBE /* SelectPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPosition.swift; sourceTree = "<group>"; };
+		F34D2CB82B73675300491EBE /* SelectStaffPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectStaffPosition.swift; sourceTree = "<group>"; };
 		F34D2CB92B73675300491EBE /* JoinNickname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinNickname.swift; sourceTree = "<group>"; };
 		F34D2D462B7367C600491EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F34D2D4A2B7367D400491EBE /* ApiEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
@@ -1324,7 +1324,7 @@
 				F34D2CB52B73675300491EBE /* SelectPartAndGeneration.swift */,
 				F34D2CB62B73675300491EBE /* JoinCode.swift */,
 				F34D2CB72B73675300491EBE /* JoinName.swift */,
-				F34D2CB82B73675300491EBE /* SelectPosition.swift */,
+				F34D2CB82B73675300491EBE /* SelectStaffPosition.swift */,
 				F34D2CB92B73675300491EBE /* JoinNickname.swift */,
 			);
 			path = JoinView;
@@ -1709,7 +1709,7 @@
 				F34D2D012B73675300491EBE /* TILViewModel.swift in Sources */,
 				F34D2CC12B73675300491EBE /* HomeView.swift in Sources */,
 				F34D2CC52B73675300491EBE /* TodoSummaryListView.swift in Sources */,
-				F34D2D422B73675300491EBE /* SelectPosition.swift in Sources */,
+				F34D2D422B73675300491EBE /* SelectStaffPosition.swift in Sources */,
 				F34D2CED2B73675300491EBE /* MascotRankingViewModel.swift in Sources */,
 				F34D2CCD2B73675300491EBE /* WritingSecondThirdViewModel.swift in Sources */,
 				F34D2CD32B73675300491EBE /* WritingListCell.swift in Sources */,

@@ -14,16 +14,18 @@ class InviteNetwork: ObservableObject {
     // POST
     // 초대 API - 초대 코드 확인 API(fetch)
     @MainActor
-    func fetchVerifyInviteCode(inviteCode: String) async {
+    func fetchVerifyInviteCode(inviteCode: String) async -> String {
+        var response: String = ""
         do {
             print("fetchCreateBoardComment : \(inviteCode)")
             
-            let response = try await verifyInviteCode(inviteCode: inviteCode)
+            response = try await verifyInviteCode(inviteCode: inviteCode).role
             print(response)
 
         } catch {
             print("Error: \(error)")
         }
+        return response
     }
     
     // 초대 API - 초대 코드 확인 API
