@@ -20,8 +20,8 @@ struct UserData {
 
         for semesterPart in mappingArr {
             
-            let semester = semesterPart.selectedSemeseter
-            let part = semesterPart.selectedPart
+            let semester = semesterPart.selectedSemeseter!
+            let part = semesterPart.selectedPart!
             
             partsDictionary.append(SemesterPart(semester: Semester.koreanToSemester(korean: semester),
                                                               part: Part.StringToPart(partString: part)))

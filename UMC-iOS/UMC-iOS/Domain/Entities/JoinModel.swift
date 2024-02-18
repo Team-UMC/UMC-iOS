@@ -11,6 +11,6 @@ import SwiftUI
 // GenerationPartSelection 선택에 대한 데이터 구조
 struct JoinViewSelectedInfo: Identifiable {
     let id = UUID() // 고유 식별자
-    var selectedSemeseter: String = ""
-    var selectedPart: String = ""
+    var selectedSemeseter: String?
+    var selectedPart: String?
 }
