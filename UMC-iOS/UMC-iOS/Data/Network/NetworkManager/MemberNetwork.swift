@@ -117,7 +117,7 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 나의 프로필 수정 API(fetch)
     @MainActor
-    func fetchUpdateMyProfile(request: MemberRequest.UpdateUserProfile, profileImage: FileInfo) async {
+    func fetchUpdateMyProfile(request: MemberRequest.UpdateMyProfile, profileImage: FileInfo) async {
         do {
             print("fetchUpdateMyProfile : \(request)")
             
@@ -140,6 +140,83 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 나의 프로필 수정 API
     func updateMyProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.members_update.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let boundary = "Boundary-\(UUID().uuidString)"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        var body = Data()
+        
+        // Multipart image 데이터 추가
+        
+        if let profileImage = profileImage {
+            let imageData = Data.createImageData(boundary: boundary, data: profileImage.data, mimeType: profileImage.mimeType, imageName: profileImage.fileName)
+            body.append(imageData)
+        }
+        
+        // JSON 데이터 추가
+        let jsonData = Data.createJsonStringData(boundary: boundary, data: sendData)
+        body.append(jsonData)
+        body.append("--".appending(boundary.appending("--")).data(using: .utf8)!)
+        
+        request.httpBody = body
+        
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<MemberResponse.MemberId>.self, from: data)
+        
+        var memberId: MemberResponse.MemberId
+        memberId = jsonDictionary.result
+        print(memberId)
+        
+        return memberId
+    }
+    
+    // 운영진용 멤버 API - 유저 정보 수정 API(fetch)
+    @MainActor
+    func fetchUpdateMemberProfile(request: MemberRequest.UpdateMyProfile, profileImage: FileInfo) async {
+        do {
+            print("fetchUpdateMemberProfile : \(request)")
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            print(request)
+            let sendData = try encoder.encode(request)
+            if let jsonString = String(data: sendData, encoding: .utf8) {
+                print("fetchUpdateMemberProfile : \(jsonString)")
+            }
+            print(request)
+            
+            let response = try await updateMyProfile(sendData: sendData, profileImage: profileImage)
+            print(response)
+
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    // 멤버 API - 나의 프로필 수정 API
+    func updateMemberProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members_update.rawValue
         

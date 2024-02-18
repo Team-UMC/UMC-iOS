@@ -11,6 +11,7 @@ struct ApiTestView: View {
     @ObservedObject var userProfileViewModel = UserProfileViewModel()
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
+    @ObservedObject var joinViewModel = JoinViewModel()
     @ObservedObject var memberNetwork = MemberNetwork()
     @State private var goToTodoListAPITestView: Bool = false
     @State private var goToMembeerAPITestView: Bool = false
@@ -44,6 +45,14 @@ struct ApiTestView: View {
                     }
                 } label: {
                     Text("kakaoLogin")
+                }
+                
+                Button {
+                    Task {
+                        await joinViewModel.fetchSignUpMember(signUpMemberInfo: MemberRequest.SignUpMember(name: "이경수", nickname: "리버", semesterParts: [MemberRequest.SemesterPart(part: "SPRING", semester: "FIFTH")], universityName: "인하대학교", campusPositions: [], centerPositions: []))
+                    }
+                } label: {
+                    Text("회원가입")
                 }
                 
                 TextField("검색할 유저 아이디를 입력하세요", text: $searchMemberId)
