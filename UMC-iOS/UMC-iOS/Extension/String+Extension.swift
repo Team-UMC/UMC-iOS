@@ -15,6 +15,12 @@ extension String {
         return dateFormatter.string(from: Date())
     }
     
+    static func dateToString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
+    }
+    
     // TodoList 작성 전용
     static func currentLocalDateTimeWithLocaleAndTimeZoneToString() -> String {
         let dateFormatter = DateFormatter()

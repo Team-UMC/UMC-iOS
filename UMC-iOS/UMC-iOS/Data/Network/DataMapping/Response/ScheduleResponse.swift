@@ -12,8 +12,8 @@ class ScheduleResponse {
     // 캘린더 조회 API
     struct GetCalendar: Codable {
         
-        let id: Int?
-        let schedules: [ScheduleInfo]
+        var id: Int? = 0
+        var schedules: [ScheduleInfo] = []
         
     }
     
@@ -45,10 +45,10 @@ extension ScheduleResponse {
     // 캘린더 조회 API - [ScheduleInfo]
     struct ScheduleInfo: Codable {
         
-        let scheduleId: String
-        let startDateTime: String
-        let endDateTime: String
-        let hostType: String
+        var scheduleId: String = ""
+        var startDateTime: String = ""
+        var endDateTime: String = ""
+        var hostType: String = ""
         
     }
     

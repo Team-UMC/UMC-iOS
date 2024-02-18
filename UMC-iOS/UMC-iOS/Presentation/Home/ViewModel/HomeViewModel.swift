@@ -148,8 +148,9 @@ class HomeViewModel:ObservableObject {
     
     func formattedDateString(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd (E)"
-        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        dateFormatter.dateFormat = "MM/dd (E)"
+//        dateFormatter.locale = Locale(identifier: "ko_KR")
         return dateFormatter.string(from: date)
     }
     

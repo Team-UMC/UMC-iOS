@@ -10,11 +10,13 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @ObservedObject var memberNetwork = MemberNetwork()
+    @ObservedObject var scheduleNetwork = ScheduleNetwork()
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
     @State private var isNavigationBtnTapped: [Bool] = [false, false, false, false]
     
     // 추후 수정...(원래 DTO를 이런 식으로 갖다쓰면 안됩니다^^... 급하니까 중간과정 생략하고 때려박는거에요...)
     @State var memberProfile = MemberResponse.GetMemberProfile()
+    @State var calendarInfo = ScheduleResponse.GetCalendar()
     
     var body: some View {
         ZStack {
@@ -71,7 +73,7 @@ struct HomeView: View {
         .onAppear {
             Task {
                 memberProfile = await memberNetwork.fetchGetMemberProfile(memberId: "")
-                print(memberProfile.memberId)
+                calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: viewModel.currentDate)))
                 
                 await viewModel.fetchGetTodoList()
             }

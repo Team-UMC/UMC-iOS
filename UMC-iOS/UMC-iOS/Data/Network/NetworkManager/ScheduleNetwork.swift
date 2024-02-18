@@ -63,15 +63,18 @@ class ScheduleNetwork: ObservableObject {
     
     // Schedule API - 캘린더 조회 API(fetch)
     @MainActor
-    func fetchGetCalendar(request: ScheduleRequest.GetCalendar) async {
+    func fetchGetCalendar(request: ScheduleRequest.GetCalendar) async -> ScheduleResponse.GetCalendar {
+        var calendarInfo = ScheduleResponse.GetCalendar()
         do {
             print("fetchGetCalendar : \(request)")
             print(request)
             
-            let response = try await getCalendar(date: request.date)
+            calendarInfo = try await getCalendar(date: request.date)
         } catch {
             print("Error: \(error)")
         }
+        
+        return calendarInfo
     }
     
     // Schedule API - 캘린더 조회 API
