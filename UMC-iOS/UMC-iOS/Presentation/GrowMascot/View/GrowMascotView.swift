@@ -53,6 +53,7 @@ struct GrowMascotView: View {
             
             VStack(spacing: 61) {
                 
+                Spacer().frame(height: 30)
                 
                 HStack(spacing: 0) {
                     
@@ -99,7 +100,7 @@ struct GrowMascotView: View {
             } // VStack
             .padding(.top, 16)
             .padding(.horizontal, 22.5)
-            .modifier(SettingBackButton(title: "마스코트 키우기", onDismiss: { dismiss() }, showTrailingItem: false))
+            .modifier(SettingBackButtonMascot(title: "마스코트 키우기", onDismiss: { dismiss() }, showTrailingItem: false))
             
             Color(.black)
                 .ignoresSafeArea(.all)
