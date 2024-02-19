@@ -16,7 +16,7 @@ class HomeViewModel:ObservableObject {
     @Published var todoLists: [TodoList] = []
 //    @Published var todoList =
     
-    func createAnnouncementPopup() -> some View { // 공지사항 팝업 뷰 만드는 함수
+    func createAnnouncementPopup(noticeInfo: BoardResponse.PinnedNotice) -> some View { // 공지사항 팝업 뷰 만드는 함수
         let popupTitle: String = "[교내]12월 26일 회식 개최!"
         let popupMainText: String = "안녕하세요 여러분 벡스입니다~!!!!\n드디어 회식을 개최하게 되었는데요!!!!\n많은 참여 부탁드립니다!!!"
         let popupDate: String = "23.12.26"

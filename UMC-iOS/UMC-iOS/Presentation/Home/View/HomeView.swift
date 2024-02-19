@@ -13,6 +13,7 @@ struct HomeView: View {
     @ObservedObject var scheduleNetwork = ScheduleNetwork()
     @ObservedObject var todoListNetwork = TodoListNetwork()
     @ObservedObject var todayILearendNetwork = TodayILearnedNetwork()
+    @ObservedObject var boardNetwork = BoardNetwork()
     
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
     @State private var isNavigationBtnTapped: [Bool] = [false, false, false, false]
@@ -22,6 +23,8 @@ struct HomeView: View {
     @State var calendarInfo = ScheduleResponse.GetCalendar()
     @State var todoList = TodoListResponse.GetTodoList()
     @State var todayILearneds = TodayILearnedResponse.GetTodayILearned()
+    @State var pinnedNotices = BoardResponse.GetPinnedNotices()
+    @State var currentNotice = BoardResponse.PinnedNotice()
     
     @State var goToTodoList: Bool = false
     @State var goToTodayILearned: Bool = false
@@ -29,6 +32,8 @@ struct HomeView: View {
     @State var goToMenuView: Bool = false
     @State var goToSetting: Bool = false
     @State var goToGrowMascot: Bool = false
+    
+    @State var shouldShowAnnouncementPopup: Bool = false
     
     var body: some View {
         ZStack {
@@ -62,7 +67,7 @@ struct HomeView: View {
                         
                         UserInformationView(memberInfo: memberProfile).padding(.top, 20)
                         
-                        AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup).padding(.top, 8)
+                        AnnouncementView(shouldShowAnnouncementPopup: $shouldShowAnnouncementPopup, currentNotice: $currentNotice, pinnedNotices: pinnedNotices.pinnedNotices).padding(.top, 8)
                         
                         MainCalendarView(currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
                         TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoList: $goToTodoList).padding(.top, 24)
@@ -105,12 +110,12 @@ struct HomeView: View {
                 calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: viewModel.currentDate)))
                 todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
                 todayILearneds = await todayILearendNetwork.fetchGetTodayILearned(date: String.currentLocalDateToString())
-                
+                pinnedNotices = await boardNetwork.fetchGetPinnedBoards()
             }
         }
         .ignoresSafeArea()
         // 공지사항 팝업
-        .popup(isPresented: $viewModel.shouldShowAnnouncementPopup, view: {self.viewModel.createAnnouncementPopup()},
+        .popup(isPresented: $shouldShowAnnouncementPopup, view: {self.viewModel.createAnnouncementPopup()},
                customize: {
             $0
                 .type(.default)
