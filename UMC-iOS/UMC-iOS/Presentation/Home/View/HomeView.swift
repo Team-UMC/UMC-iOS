@@ -86,7 +86,7 @@ struct HomeView: View {
                         
                         HStack(spacing: 18) {
                             MascotView(isClicked: $goToGrowMascot)
-                            RankView()
+                            RankView(memberNickname: memberProfile.nickname)
                         }
                         .padding(.top, 24)
                         .padding(.bottom, 24)
