@@ -15,6 +15,8 @@ class HomeViewModel:ObservableObject {
     @Published var shouldShowGithubPopup: Bool = false //깃허브 팝업 뷰
     @Published var member = Member()
     @Published var todoLists: [TodoList] = []
+    
+    @Published var scheduleDetails: [ScheduleResponse.GetSchedulesDetail] = []
 //    @Published var todoList =
     
     func createGithubPopup() -> some View {
@@ -126,55 +128,70 @@ class HomeViewModel:ObservableObject {
         .padding(.top, 288)
     }
     
-    func createCalendarPopup(calendarTasks: [TaskMetaData]) -> some View { // 캘린더 팝업 뷰 만드는 함수
-        var popupDate: String = ""
-        var popupTitle: String = ""
-        var popupMainText: String = ""
-        var popupWriter: String = ""
+    
+    
+    func createCalendarPopup(scheduleDetails: [ScheduleResponse.GetSchedulesDetail]) -> AnyView { // 캘린더 팝업 뷰 만드는 함수
         
-        if let task = calendarTasks.first(where: { taskIndex in
-            return isSameDay(date1: taskIndex.taskDate, date2: currentDate)
-        }) {
-            for index in task.calendarTasks {
-                popupDate = formattedDateString(date: currentDate)
-                popupTitle = index.title
-                popupMainText = index.mainText
-                popupWriter = "from.회장 \(index.writer)"
-            }
-        } else {
-            popupDate = ""
-            popupTitle = ""
-            popupMainText = ""
-            popupWriter = ""
-        }
+//        var popupDate: String = ""
+//        var popupTitle: String = ""
+//        var popupMainText: String = ""
+//        var popupWriter: String = ""
+//        
+//        guard let task = calendarTasks.first(where: { taskIndex in
+//            return isSameDay(date1: taskIndex.taskDate, date2: currentDate)
+//        }) else {
+//            return AnyView(EmptyView())
+//        }
+//        
+//        for index in task.calendarTasks {
+//            popupDate = formattedDateString(date: currentDate)
+//            popupTitle = index.title
+//            popupMainText = index.mainText
+//            popupWriter = "from.회장 \(index.writer)"
+//            
+//            
+//        }
         
-        return ZStack {
+        return AnyView(ZStack {
             VStack(spacing: 0) {
+                TabView {
+                    ForEach(scheduleDetails.indices, id: \.self) { index in
+                        VStack(spacing: 0) {
+                            Text(scheduleDetails[index].startDateTime)
+                                .font(.system(size: 18))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.main2)
+                            
+                            Text(scheduleDetails[index].title)
+                                .font(.system(size: 16))
+                                .fontWeight(.medium)
+                                .foregroundColor(Color.main2)
+                                .padding(.top, 6)
+                            
+                            Text(scheduleDetails[index].content)
+                                .font(.system(size: 14))
+                                .fontWeight(.regular)
+                                .foregroundColor(.black)
+                                .padding(.top, 16)
+                            
+                            Text(scheduleDetails[index].writerNickname)
+                                .font(.system(size: 12))
+                                .fontWeight(.light)
+                                .foregroundColor(Color.tdlGray)
+                                .padding(.top, 8)
+                        }
+                    }
+                    
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+                .frame(width: 248, height: 165)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 20)
                 
-                Text("\(popupDate)")
-                    .font(.system(size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.main2)
-                
-                Text(popupTitle)
-                    .font(.system(size: 16))
-                    .fontWeight(.medium)
-                    .foregroundColor(Color.main2)
-                    .padding(.top, 6)
-                
-                Text(popupMainText)
-                    .font(.system(size: 14))
-                    .fontWeight(.regular)
-                    .foregroundColor(.black)
-                    .padding(.top, 16)
-                
-                Text(popupWriter)
-                    .font(.system(size: 12))
-                    .fontWeight(.light)
-                    .foregroundColor(Color.tdlGray)
-                    .padding(.top, 8)
                 
                 Button {
+                    print(self.scheduleDetails)
+                    self.scheduleDetails = []
                     self.shouldShowCalendarPopup = false
                 } label : {
                     Text("닫기")
@@ -185,7 +202,7 @@ class HomeViewModel:ObservableObject {
                 .padding(.top, 24)
                 
             } // VStack
-            .frame(width: 248, height: 165)
+            .frame(width: 248)
             .padding(.vertical, 24)
             .padding(.horizontal, 16)
             .background(Color.white)
@@ -193,7 +210,7 @@ class HomeViewModel:ObservableObject {
             
         } // ZStack
         .multilineTextAlignment(.center)
-        .padding(.top, 288)
+        .padding(.top, 288))
     }
     
     func formattedDateString(date: Date) -> String {

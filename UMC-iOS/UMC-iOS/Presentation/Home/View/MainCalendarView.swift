@@ -9,11 +9,15 @@ import SwiftUI
 import PopupView
 
 struct MainCalendarView: View {
-    var calendarInfo: [ScheduleResponse.ScheduleInfo]
+    @ObservedObject var scheduleNetwork = ScheduleNetwork()
+    
+    @State var calendarInfo: ScheduleResponse.GetCalendar = ScheduleResponse.GetCalendar()
+    @Binding var scheduleDetailInfos: [ScheduleResponse.GetSchedulesDetail]
     @Binding var calendarTasks: [TaskMetaData]
     @Binding var currentDate: Date
     @State var currentMonth: Int = 0 // 화살표 버튼 클릭시 월 업데이트
     @State var monthTap: Int = 0 // 날짜를 눌렀을 때 currentMonth와 동기화
+    
     
     @Binding var shouldShowCalendarPopup: Bool
     
@@ -45,7 +49,14 @@ struct MainCalendarView: View {
                         
                         withAnimation {
                             currentMonth -= 1
+                            currentDate = getCurrentMonth()
+                            print("현재 날짜 \(currentDate)")
                         }
+                        Task {
+                            calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: currentDate)))
+                            calendarTasks = scheduleInfoListToTaskMetaData(calendarInfo: calendarInfo.schedules)
+                        }
+                        
                     } label: {
                         Image(systemName: "chevron.left")
                             .resizable()
@@ -57,10 +68,19 @@ struct MainCalendarView: View {
                     Button { // 오른쪽 버튼, 다음 달
                         print("CalendarRightBtn Tapped")
                         
-                        
                         withAnimation {
                             currentMonth += 1
+                            currentDate = getCurrentMonth()
+                            print("현재 날짜 \(currentDate)")
                         }
+                        Task {
+
+                            calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: currentDate)))
+                            calendarTasks = scheduleInfoListToTaskMetaData(calendarInfo: calendarInfo.schedules)
+                        }
+                        
+                        
+                        
                     } label: {
                         Image(systemName: "chevron.right")
                             .resizable()
@@ -108,6 +128,12 @@ struct MainCalendarView: View {
                                 if let task = calendarTasks.first(where: { task in
                                     return isSameDay(date1: task.taskDate, date2: currentDate)
                                 }) {
+                                    Task {
+                                        for index in task.calendarTasks {
+                                            var scheduleDetailInfo = await scheduleNetwork.fetchGetScheduleDetail(scheduleId: index.scheduleId)
+                                            scheduleDetailInfos.append(scheduleDetailInfo)
+                                        }
+                                    }
                                     self.shouldShowCalendarPopup = true
                                 } else {
                                     self.shouldShowCalendarPopup = false
@@ -233,7 +259,7 @@ struct MainCalendarView: View {
 
 func scheduleInfoListToTaskMetaData(calendarInfo: [ScheduleResponse.ScheduleInfo]) -> [TaskMetaData] {
     var calendarParsingInfos: [ScheduleResponse.ScheduleInfo] = []
-    var calendarTasks: [TaskMetaData] = []
+//    var calendarTasks: [TaskMetaData] = []
     
     for info in calendarInfo {
         let tempScheduleInfos = dateParsing(scheduleInfo: info)

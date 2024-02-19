@@ -71,7 +71,7 @@ struct HomeView: View {
                         
                         AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup, currentNotice: $currentNotice, selectedNotice: $selectedNotice, pinnedNotices: pinnedNotices.pinnedNotices).padding(.top, 8)
                         
-                        MainCalendarView(calendarInfo: calendarInfo.schedules, calendarTasks: $calendarTasks, currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
+                        MainCalendarView(calendarInfo: calendarInfo, scheduleDetailInfos: $viewModel.scheduleDetails,  calendarTasks: $calendarTasks, currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
                         
                         TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoList: $goToTodoList).padding(.top, 24)
                         
@@ -133,7 +133,7 @@ struct HomeView: View {
                 .closeOnTapOutside(true)
         })
         // 캘린더 팝업
-        .popup(isPresented: $viewModel.shouldShowCalendarPopup, view: {self.viewModel.createCalendarPopup(calendarTasks: [])},
+        .popup(isPresented: $viewModel.shouldShowCalendarPopup, view: {self.viewModel.createCalendarPopup(scheduleDetails: viewModel.scheduleDetails)},
                customize: {
             $0
                 .type(.default)

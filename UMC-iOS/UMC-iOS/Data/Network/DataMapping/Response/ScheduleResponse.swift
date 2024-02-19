@@ -20,22 +20,22 @@ class ScheduleResponse {
     // 일정 조회 (상세 조회)
     struct GetSchedulesDetail: Codable {
         
-        let id: Int?
-        let scheduleId: String
-        let writerName: String
-        let writerNickname: String
-        let title: String
-        let content: String
-        let startDateTime: String
-        let endDateTime: String
-        let placeSetting: String
-        let hostType: String
+        var id: Int? = 0
+        var scheduleId: String = ""
+        var writerName: String = ""
+        var writerNickname: String = ""
+        var title: String = ""
+        var content: String = ""
+        var startDateTime: String = ""
+        var endDateTime: String = ""
+        var placeSetting: String = ""
+        var hostType: String = ""
         
     }
     
     struct ScheduleId: Codable {
-        let id: Int?
-        let scheduleId: String
+        var id: Int? = 0
+        var scheduleId: String = ""
     }
     
 }

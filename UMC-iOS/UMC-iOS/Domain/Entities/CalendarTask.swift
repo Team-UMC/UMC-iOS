@@ -10,7 +10,7 @@ import SwiftUI
 // Task 배열
 struct CalendarTask: Identifiable, Codable{
     var id = UUID().uuidString
-    var scheduleId: String? = ""
+    var scheduleId: String = ""
     var dateTime: Date = Date() // 일단 현재 날짜
     var title: String // 일정 제목
     var mainText: String // 일정 본문

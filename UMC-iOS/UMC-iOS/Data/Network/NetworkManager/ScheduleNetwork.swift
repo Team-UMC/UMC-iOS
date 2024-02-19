@@ -13,15 +13,17 @@ class ScheduleNetwork: ObservableObject {
     // GET
     // Schedule API - 일정 조회(상세조회) API(fetch)
     @MainActor
-    func fetchGetScheduleDetail(scheduleId: String) async {
+    func fetchGetScheduleDetail(scheduleId: String) async -> ScheduleResponse.GetSchedulesDetail {
+        var scheduleDetail = ScheduleResponse.GetSchedulesDetail()
         do {
             print("fetchGetScheduleDetail : \(scheduleId)")
             
-            let response = try await getScheduleDetail(scheduleId: scheduleId)
-            print(response)
+            scheduleDetail = try await getScheduleDetail(scheduleId: scheduleId)
+            print(scheduleDetail)
         } catch {
             print("Error: \(error)")
         }
+        return scheduleDetail
     }
     
     // Schedule API - 일정 조회(상세조회) API
