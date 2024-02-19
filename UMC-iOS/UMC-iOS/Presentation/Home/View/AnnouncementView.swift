@@ -102,7 +102,7 @@ struct AnnouncementView: View {
         .onReceive(timer) { _ in
             selectedIndex = (selectedIndex + 1) % pinnedNotices.count
             currentNotice = pinnedNotices[selectedIndex]
-            print(currentNotice)
+//            print(currentNotice)
         }
     }
 }

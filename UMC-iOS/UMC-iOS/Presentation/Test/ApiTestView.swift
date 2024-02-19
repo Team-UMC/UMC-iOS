@@ -31,6 +31,15 @@ struct ApiTestView: View {
                 } label: {
                     Text(String.currentLocalDateToString())
                 }
+                Button {
+//                    print(dateParsing(scheduleInfo: ScheduleResponse.ScheduleInfo(scheduleId: "042b7712-1855-4d65-b30a-4dca63762feb", startDateTime: "2024-02-19T00:00:00", endDateTime: "2024-02-21T23:59:00", hostType: "CENTER")))
+                    scheduleInfoListToTaskMetaData(calendarInfo: [ScheduleResponse.ScheduleInfo(scheduleId: "042b7712-1855-4d65-b30a-4dca63762feb", startDateTime: "2024-02-19T00:00:00", endDateTime: "2024-02-21T23:59:00", hostType: "CENTER"),
+                                        ScheduleResponse.ScheduleInfo(scheduleId: "042b7712-1855-4d65-b30a-4dca63762feb", startDateTime: "2024-02-19T00:00:00", endDateTime: "2024-02-21T23:59:00", hostType: "CAMPUS"),
+                                        ScheduleResponse.ScheduleInfo(scheduleId: "1bf7b53b-d71b-4038-b4f3-3ca4ee40d50f", startDateTime: "2024-02-01T14:00:00", endDateTime: "2024-02-02T14:00:00", hostType: "BRANCH")
+                                       ])
+                } label: {
+                    Text("TEST")
+                }
                 
                 //apple login button
                 socialLoginViewModel.appleLoginButton() {

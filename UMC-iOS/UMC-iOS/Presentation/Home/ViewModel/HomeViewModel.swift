@@ -126,7 +126,7 @@ class HomeViewModel:ObservableObject {
         .padding(.top, 288)
     }
     
-    func createCalendarPopup() -> some View { // 캘린더 팝업 뷰 만드는 함수
+    func createCalendarPopup(calendarTasks: [TaskMetaData]) -> some View { // 캘린더 팝업 뷰 만드는 함수
         var popupDate: String = ""
         var popupTitle: String = ""
         var popupMainText: String = ""

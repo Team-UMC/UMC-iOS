@@ -26,6 +26,7 @@ struct HomeView: View {
     @State var pinnedNotices = BoardResponse.GetPinnedNotices()
     @State var currentNotice = BoardResponse.PinnedNotice()
     @State var selectedNotice = BoardResponse.PinnedNotice()
+    @State var calendarTasks: [TaskMetaData] = []
     
     @State var goToTodoList: Bool = false
     @State var goToTodayILearned: Bool = false
@@ -70,7 +71,8 @@ struct HomeView: View {
                         
                         AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup, currentNotice: $currentNotice, selectedNotice: $selectedNotice, pinnedNotices: pinnedNotices.pinnedNotices).padding(.top, 8)
                         
-                        MainCalendarView(currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
+                        MainCalendarView(calendarInfo: calendarInfo.schedules, calendarTasks: $calendarTasks, currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
+                        
                         TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoList: $goToTodoList).padding(.top, 24)
                         
                         HStack(spacing: 18) {
@@ -113,6 +115,10 @@ struct HomeView: View {
                 todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
                 todayILearneds = await todayILearendNetwork.fetchGetTodayILearned(date: String.currentLocalDateToString())
                 pinnedNotices = await boardNetwork.fetchGetPinnedBoards()
+                
+                calendarTasks = scheduleInfoListToTaskMetaData(calendarInfo: calendarInfo.schedules)
+                print("$$$$$$$$$$$$ <calendarTasks> $$$$$$$$$$$$\n\n\(calendarTasks)")
+                
             }
         }
         .ignoresSafeArea()
@@ -127,7 +133,7 @@ struct HomeView: View {
                 .closeOnTapOutside(true)
         })
         // 캘린더 팝업
-        .popup(isPresented: $viewModel.shouldShowCalendarPopup, view: {self.viewModel.createCalendarPopup()},
+        .popup(isPresented: $viewModel.shouldShowCalendarPopup, view: {self.viewModel.createCalendarPopup(calendarTasks: [])},
                customize: {
             $0
                 .type(.default)

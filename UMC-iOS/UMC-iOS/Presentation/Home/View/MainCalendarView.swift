@@ -9,6 +9,8 @@ import SwiftUI
 import PopupView
 
 struct MainCalendarView: View {
+    var calendarInfo: [ScheduleResponse.ScheduleInfo]
+    @Binding var calendarTasks: [TaskMetaData]
     @Binding var currentDate: Date
     @State var currentMonth: Int = 0 // 화살표 버튼 클릭시 월 업데이트
     @State var monthTap: Int = 0 // 날짜를 눌렀을 때 currentMonth와 동기화
@@ -225,6 +227,107 @@ struct MainCalendarView: View {
         return days
     }
     
+    
+    
+}
+
+func scheduleInfoListToTaskMetaData(calendarInfo: [ScheduleResponse.ScheduleInfo]) -> [TaskMetaData] {
+    var calendarParsingInfos: [ScheduleResponse.ScheduleInfo] = []
+    var calendarTasks: [TaskMetaData] = []
+    
+    for info in calendarInfo {
+        let tempScheduleInfos = dateParsing(scheduleInfo: info)
+        for temp in tempScheduleInfos {
+            calendarParsingInfos.append(temp)
+        }
+    }
+    
+    print("calendarParsingInfos------------------------\n\n\n\(calendarParsingInfos)")
+    
+    return convertToTaskMetaData(from: calendarParsingInfos)
+}
+
+
+func convertToTaskMetaData(from scheduleInfos: [ScheduleResponse.ScheduleInfo]) -> [TaskMetaData] {
+    // 날짜별로 ScheduleInfo 그룹화
+    let groupedByDate = Dictionary(grouping: scheduleInfos) { $0.startDateTime }
+    
+    print("groupedByDate : ------------------------\n\(groupedByDate)")
+    
+    // 각 그룹을 TaskMetaData로 변환
+    var taskMetaDatas: [TaskMetaData] = []
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    
+    
+    for (dateString, schedules) in groupedByDate {
+        guard let taskDate = dateFormatter.date(from: dateString) else {
+            print("error")
+            continue
+        }
+        
+        let calendarTasks = schedules.map { schedule -> CalendarTask in
+            CalendarTask(
+                scheduleId: schedule.scheduleId,
+                dateTime: taskDate,
+                title: "Title Placeholder", // 실제 사용시 적절한 제목으로 대체 필요
+                mainText: "MainText Placeholder", // 실제 사용시 적절한 본문으로 대체 필요
+                writer: "Writer Placeholder", // 실제 사용시 적절한 작성자로 대체 필요
+                hostType: HostType(rawValue: schedule.hostType.uppercased()) ?? HostType.CAMPUS // hostType 파싱
+            )
+        }
+        
+        print("calendarTasks ------------------------\n \(calendarTasks)")
+        
+        let taskMetaData = TaskMetaData(calendarTasks: calendarTasks, taskDate: taskDate)
+        
+        print("taskMetaData ------------------------\n\n\n\n \(taskMetaData)")
+        taskMetaDatas.append(taskMetaData)
+    }
+    
+    print("taskMetaDatas ------------------------\n\n\n\n \(taskMetaDatas)")
+    
+    return taskMetaDatas
+}
+
+
+func dateParsing(scheduleInfo: ScheduleResponse.ScheduleInfo) -> [ScheduleResponse.ScheduleInfo] {
+    
+//    let scheduleInfo = ScheduleResponse.ScheduleInfo(scheduleId: "042b7712-1855-4d65-b30a-4dca63762feb", startDateTime: "2024-02-19T00:00:00", endDateTime: "2024-02-21T23:59:00", hostType: "CENTER")
+    // ISO 8601 날짜 포맷터
+    let dateFormatter = DateFormatter()
+    
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    
+    print(scheduleInfo)
+    
+    // 시작 및 종료 날짜 파싱
+    if let startDateTime = dateFormatter.date(from: scheduleInfo.startDateTime),
+       let endDateTime = dateFormatter.date(from: scheduleInfo.endDateTime) {
+        
+        // 날짜 범위 생성
+        var currentDate = startDateTime
+        let calendar = Calendar.current
+        var datesBetween: [Date] = []
+        
+        while currentDate <= endDateTime {
+            datesBetween.append(currentDate)
+            currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+        }
+        
+        // 각 날짜별로 일정 매핑
+        let schedulesByDate = datesBetween.map { date -> ScheduleResponse.ScheduleInfo in
+            var scheduleCopy = scheduleInfo
+            scheduleCopy.startDateTime = dateFormatter.string(from: date)
+            scheduleCopy.endDateTime = dateFormatter.string(from: date)
+            return scheduleCopy
+        }
+        
+        // 결과 출력
+//        print("log : \(schedulesByDate)")
+        return schedulesByDate
+    }
+    return []
 }
 
 
