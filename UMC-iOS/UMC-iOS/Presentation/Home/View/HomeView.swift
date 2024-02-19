@@ -166,6 +166,7 @@ struct HomeView: View {
         }
         .navigationDestination(isPresented: $goToMyProfile) {
             MyProfileView(memberProfile: memberProfile)
+                .navigationBarBackButtonHidden()
         }
         .navigationDestination(isPresented: $goToSetting) {
             SettingPageUI()

@@ -12,58 +12,57 @@ struct MyProfileView: View {
     @State private var isEditingProfile = false
     var memberProfile: MemberResponse.GetMemberProfile
     @ObservedObject var viewModel = UserProfileEditViewModel()
-
+    
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                // Background
-                Image("backgroundImage_2")
-                    .resizable()
-                    .scaledToFit()
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-
-                VStack {
-                    ProfileNavigationbar()
-                        .padding(.top,-110)
-                    
-                    MemberProfileImage(memberInfo: memberProfile) // Photo and university label
-                    
-                    HStack(spacing: 8) {
-                        ProfileParts(memberParts: memberProfile.semesterParts) // Parts
-                        ProfileSemesters(memberSemesters: memberProfile.semesterParts) // Semesters
-                    }
-                    
-                    MemberStatusMessage(statusMessage: memberProfile.statusMessage ?? "") // Status message and buttons
-                        .padding(.top,70)
-                        .padding(.bottom,30)
-                    
-
-                    Button(action: {
-                        print("수정하기 버튼")
-                        isClicked.toggle()
-                    }) {
-                        Text("수정하기")
-                            .font(.system(size: 16, weight: .black))
-                            .padding(EdgeInsets(top: 9, leading: 16, bottom: 9, trailing: 16))
-                            .foregroundColor(.white)
-                            .background(Color.black)
-                            .cornerRadius(17.5)
-                            .shadow(radius: 10)
-                    }
-                    .navigationDestination(isPresented:
-                                            $isClicked){
-                        UserProfileEdit(message: viewModel.message, userNickname:viewModel.userNickname, userName: viewModel.userName)
-                    }
-                    
+        ZStack {
+            // Background
+            Image("backgroundImage_2")
+                .resizable()
+                .scaledToFit()
+                .edgesIgnoringSafeArea(.all)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            
+            VStack {
+                ProfileNavigationbar()
+                    .padding(.top,-110)
+                
+                MemberProfileImage(memberInfo: memberProfile) // Photo and university label
+                
+                HStack(spacing: 8) {
+                    ProfileParts(memberParts: memberProfile.semesterParts) // Parts
+                    ProfileSemesters(memberSemesters: memberProfile.semesterParts) // Semesters
                 }
-                .padding(.bottom, 60)
+                
+                MemberStatusMessage(statusMessage: memberProfile.statusMessage ?? "") // Status message and buttons
+                    .padding(.top,70)
+                    .padding(.bottom,30)
+                
+                
+                Button(action: {
+                    print("수정하기 버튼")
+                    isClicked.toggle()
+                }) {
+                    Text("수정하기")
+                        .font(.system(size: 16, weight: .black))
+                        .padding(EdgeInsets(top: 9, leading: 16, bottom: 9, trailing: 16))
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(17.5)
+                        .shadow(radius: 10)
+                }
+                .navigationDestination(isPresented:
+                                        $isClicked){
+                    UserProfileEdit(message: viewModel.message, userNickname:viewModel.userNickname, userName: viewModel.userName)
+                }
+                
             }
-            .background(.white)
+            .padding(.bottom, 60)
         }
+        .background(.white)
     }
 }
+
 
 // Remaining code remains the same
 
