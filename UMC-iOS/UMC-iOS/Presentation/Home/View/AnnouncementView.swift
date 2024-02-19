@@ -33,11 +33,11 @@ struct AnnouncementView: View {
                                 var imageName: String {
                                     switch pinnedNotices[index].hostType {
                                     case "CENTER":
-                                        return "Announcement"
+                                        return "AnnouncementUnit"
                                     case "BRANCH":
-                                        return "Announcement"
+                                        return "AnnouncementGroup"
                                     case "CAMPUS":
-                                        return "Announcement"
+                                        return "AnnouncementUniv"
                                     case "ALL":
                                         return "Announcement"
                                     default:
