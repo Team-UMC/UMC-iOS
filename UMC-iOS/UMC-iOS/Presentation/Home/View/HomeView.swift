@@ -27,6 +27,7 @@ struct HomeView: View {
     @State var currentNotice = BoardResponse.PinnedNotice()
     @State var selectedNotice = BoardResponse.PinnedNotice()
     @State var calendarTasks: [TaskMetaData] = []
+    @State var memberRankInfo = MemberResponse.GetMemberRankInfo()
     
     @State var goToTodoList: Bool = false
     @State var goToTodayILearned: Bool = false
@@ -88,7 +89,7 @@ struct HomeView: View {
                         
                         HStack(spacing: 18) {
                             MascotView(isClicked: $goToGrowMascot)
-                            RankView(memberNickname: memberProfile.nickname)
+                            RankView(memberRankInfo: memberRankInfo)
                         }
                         .padding(.top, 24)
                         .padding(.bottom, 24)
@@ -115,6 +116,7 @@ struct HomeView: View {
                 todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
                 todayILearneds = await todayILearendNetwork.fetchGetTodayILearned(date: String.currentLocalDateToString())
                 pinnedNotices = await boardNetwork.fetchGetPinnedBoards()
+                memberRankInfo = await memberNetwork.fetchGetMemberRankInfo()
                 
                 calendarTasks = scheduleInfoListToTaskMetaData(calendarInfo: calendarInfo.schedules)
                 print("$$$$$$$$$$$$ <calendarTasks> $$$$$$$$$$$$\n\n\(calendarTasks)")
