@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RankView: View {
+    let memberNickname: String
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -36,7 +37,7 @@ struct RankView: View {
                     
                     VStack(spacing: 0) { // 글 Stack
                         HStack(spacing: 0) {
-                            Text("원")
+                            Text(memberNickname)
                                 .fontWeight(.semibold)
                             Text("님은")
                         } // HStack
