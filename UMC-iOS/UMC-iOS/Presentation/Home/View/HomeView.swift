@@ -34,7 +34,7 @@ struct HomeView: View {
     @State var goToSetting: Bool = false
     @State var goToGrowMascot: Bool = false
     
-//    @State var shouldShowAnnouncementPopup: Bool = false
+    //    @State var shouldShowAnnouncementPopup: Bool = false
     
     var body: some View {
         ZStack {
@@ -48,7 +48,7 @@ struct HomeView: View {
                         .position(x: UIScreen.main.bounds.width/2, y: 170)
                     
                     
-                    HomeSideView(isShowing: $presentSideMenu, 
+                    HomeSideView(isShowing: $presentSideMenu,
                                  content: AnyView(SideMenuViewContents(
                                     memberProfile: memberProfile ,
                                     presentSideMenu: $presentSideMenu,
@@ -57,7 +57,7 @@ struct HomeView: View {
                                     goToSetting: $goToSetting)
                                  ),
                                  direction: .leading)
-                        .zIndex(1)
+                    .zIndex(1)
                     
                     
                     
@@ -80,7 +80,7 @@ struct HomeView: View {
                                 TodayILearnedHomeList(todayILearneds: todayILearneds)
                             }
                             
-                            GitHubView(shouldShowGithubPopup: $viewModel.shouldShowGithubPopup)
+                            GitHubEmptyView(shouldShowGithubPopup: $viewModel.shouldShowGithubPopup)
                         }
                         .padding(.top, 24)
                         
@@ -102,7 +102,7 @@ struct HomeView: View {
             Rectangle() // 팝업 뷰 뒤에 회색 배경
                 .foregroundColor(.black)
                 .opacity(viewModel.shouldShowCalendarPopup || viewModel.shouldShowAnnouncementPopup ||
-                                         viewModel.shouldShowGithubPopup  ? 0.6 : 0)
+                         viewModel.shouldShowGithubPopup  ? 0.6 : 0)
                 .edgesIgnoringSafeArea(.all)
             
         } // ZStack (최 상단에 팝업 뷰 배치)
@@ -137,16 +137,16 @@ struct HomeView: View {
                 .closeOnTapOutside(true)
         })
         //깃허브 팝업
-                .popup(isPresented: $viewModel.shouldShowGithubPopup, view: {self.viewModel.createGithubPopup()},
-                       customize: {
-                    $0
-                        .type(.default)
-                        .position(.top)
-                        .animation(.bouncy)
-                        .closeOnTap(false)
-                        .closeOnTapOutside(true)
-                })
-
+        .popup(isPresented: $viewModel.shouldShowGithubPopup, view: {self.viewModel.createGithubPopup()},
+               customize: {
+            $0
+                .type(.default)
+                .position(.top)
+                .animation(.bouncy)
+                .closeOnTap(false)
+                .closeOnTapOutside(true)
+        })
+        
         .navigationDestination(isPresented: $goToGrowMascot) {
             GrowMascotView()
         }

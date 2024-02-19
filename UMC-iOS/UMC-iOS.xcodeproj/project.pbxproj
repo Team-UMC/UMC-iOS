@@ -63,7 +63,7 @@
 		F34D2CBF2B73675300491EBE /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C012B73675300491EBE /* RankView.swift */; };
 		F34D2CC02B73675300491EBE /* TodayILearnedEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C022B73675300491EBE /* TodayILearnedEmptyView.swift */; };
 		F34D2CC12B73675300491EBE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C032B73675300491EBE /* HomeView.swift */; };
-		F34D2CC22B73675300491EBE /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C042B73675300491EBE /* GitHubView.swift */; };
+		F34D2CC22B73675300491EBE /* GitHubEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C042B73675300491EBE /* GitHubEmptyView.swift */; };
 		F34D2CC32B73675300491EBE /* MainCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C052B73675300491EBE /* MainCalendarView.swift */; };
 		F34D2CC42B73675300491EBE /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C062B73675300491EBE /* HomeSideMenuView.swift */; };
 		F34D2CC52B73675300491EBE /* TodoSummaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C072B73675300491EBE /* TodoSummaryListView.swift */; };
@@ -342,7 +342,7 @@
 		F34D2C012B73675300491EBE /* RankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		F34D2C022B73675300491EBE /* TodayILearnedEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayILearnedEmptyView.swift; sourceTree = "<group>"; };
 		F34D2C032B73675300491EBE /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F34D2C042B73675300491EBE /* GitHubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
+		F34D2C042B73675300491EBE /* GitHubEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubEmptyView.swift; sourceTree = "<group>"; };
 		F34D2C052B73675300491EBE /* MainCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCalendarView.swift; sourceTree = "<group>"; };
 		F34D2C062B73675300491EBE /* HomeSideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
 		F34D2C072B73675300491EBE /* TodoSummaryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoSummaryListView.swift; sourceTree = "<group>"; };
@@ -857,7 +857,7 @@
 				F34D2C012B73675300491EBE /* RankView.swift */,
 				F34D2C022B73675300491EBE /* TodayILearnedEmptyView.swift */,
 				F34D2C032B73675300491EBE /* HomeView.swift */,
-				F34D2C042B73675300491EBE /* GitHubView.swift */,
+				F34D2C042B73675300491EBE /* GitHubEmptyView.swift */,
 				F34D2C052B73675300491EBE /* MainCalendarView.swift */,
 				F34D2C062B73675300491EBE /* HomeSideMenuView.swift */,
 				F34D2C072B73675300491EBE /* TodoSummaryListView.swift */,
@@ -1705,7 +1705,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F34D2CC22B73675300491EBE /* GitHubView.swift in Sources */,
+				F34D2CC22B73675300491EBE /* GitHubEmptyView.swift in Sources */,
 				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
 				E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */,

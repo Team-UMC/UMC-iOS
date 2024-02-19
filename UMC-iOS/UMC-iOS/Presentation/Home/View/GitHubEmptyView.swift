@@ -1,5 +1,5 @@
 //
-//  GitHubView.swift
+//  GitHubEmptyView.swift
 //  UMC-iOS
 //
 //  Created by 김승원 on 2024/01/18.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GitHubView: View {
+struct GitHubEmptyView: View {
     @Binding var shouldShowGithubPopup: Bool
     var body: some View {
         VStack(spacing: 0) {
@@ -42,6 +42,7 @@ struct GitHubView: View {
                     
                     Button {
                         print("GitButton Clicked")
+                        self.shouldShowGithubPopup = true
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
@@ -52,10 +53,10 @@ struct GitHubView: View {
                     .padding(EdgeInsets(top: 12, leading: 0, bottom: 8, trailing: 0))
                 } // VStack
             } // ZStack
-            .onTapGesture {
-                            print("Github Tapped")
-                            self.shouldShowGithubPopup = true
-                        }
+//            .onTapGesture {
+//                print("Github Tapped")
+//                self.shouldShowGithubPopup = true
+//            }
         } // VStack
         .padding(.trailing, 18)
     }
