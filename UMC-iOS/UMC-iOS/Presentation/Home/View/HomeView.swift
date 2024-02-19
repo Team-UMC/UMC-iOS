@@ -79,7 +79,7 @@ struct HomeView: View {
                                 TodayILearnedHomeList(todayILearneds: todayILearneds)
                             }
                             
-                            GitHubView()
+                            GitHubView(shouldShowGithubPopup: $viewModel.shouldShowGithubPopup)
                         }
                         .padding(.top, 24)
                         
@@ -100,7 +100,8 @@ struct HomeView: View {
             
             Rectangle() // 팝업 뷰 뒤에 회색 배경
                 .foregroundColor(.black)
-                .opacity(viewModel.shouldShowCalendarPopup || viewModel.shouldShowAnnouncementPopup ? 0.6 : 0) // 공지사항, 캘린더 둘 다 적용
+                .opacity(viewModel.shouldShowCalendarPopup || viewModel.shouldShowAnnouncementPopup ||
+                                         viewModel.shouldShowGithubPopup  ? 0.6 : 0)
                 .edgesIgnoringSafeArea(.all)
             
         } // ZStack (최 상단에 팝업 뷰 배치)
@@ -134,6 +135,17 @@ struct HomeView: View {
                 .closeOnTap(false)
                 .closeOnTapOutside(true)
         })
+        //깃허브 팝업
+                .popup(isPresented: $viewModel.shouldShowGithubPopup, view: {self.viewModel.createGithubPopup()},
+                       customize: {
+                    $0
+                        .type(.default)
+                        .position(.top)
+                        .animation(.bouncy)
+                        .closeOnTap(false)
+                        .closeOnTapOutside(true)
+                })
+
         .navigationDestination(isPresented: $goToGrowMascot) {
             GrowMascotView()
         }
