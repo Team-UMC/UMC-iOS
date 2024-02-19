@@ -9,6 +9,8 @@ import SwiftUI
 
 //홈 슬라이드
 struct HomeSideView:View {
+    
+    
     @Binding var isShowing: Bool
         var content: AnyView
         var direction: Edge
@@ -37,7 +39,10 @@ struct HomeSideView:View {
 //사이드 메뉴
 struct SideMenuViewContents: View {
     @Binding var presentSideMenu: Bool
-
+    @State private var selectedButton2_1: Int? = 0//공지사항
+    @State private var selectedButton2_2: Int? = 1//자유게시판
+    @State var selectedButton1: Int? = 2//연합게시판
+    
     var body: some View {
         HStack {
             ZStack {
@@ -91,12 +96,13 @@ struct SideMenuViewContents: View {
                         .foregroundColor(.black)
                     Spacer().frame(height: 25)
                     VStack(alignment: .leading, spacing: 20) {
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "공지사항")
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "자유게시판")
+                        
+                        SideMenuSubNavigationButton(destination: BulletinBoardUI(selectedButton1: $selectedButton2_1), MenuName: "공지사항")
+                        SideMenuSubNavigationButton(destination: BulletinBoardButton(selectedButton1: $selectedButton2_2), MenuName: "자유게시판")
                         SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "사진첩") //추후 구현
                         SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "프로젝트 매칭") //추후 구현
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "네트워킹 게시판")
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "연합 게시판")
+                        SideMenuSubNavigationButton(destination:  BulletinBoardUI(selectedButton1: $selectedButton2_1), MenuName: "네트워킹 게시판") //추후 구현
+                        SideMenuSubNavigationButton(destination:  BulletinBoardUI(selectedButton1: $selectedButton1), MenuName: "연합 게시판")
                     }
                     .font(.system(size: 14))
                     .foregroundStyle(.black)

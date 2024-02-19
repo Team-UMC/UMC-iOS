@@ -17,21 +17,21 @@ struct UserData {
     
     static func joinviewSelectedInfoToMemberRequestSemesterPart(mappingArr: [JoinViewSelectedInfo]) -> [SemesterPart] {
         var partsDictionary: [SemesterPart] = []
-
+        
         for semesterPart in mappingArr {
             
             let semester = semesterPart.selectedSemeseter
             let part = semesterPart.selectedPart
             
-            partsDictionary.append(SemesterPart(semester: Semester.koreanToSemester(korean: semester),
-                                                              part: Part.StringToPart(partString: part)))
+            partsDictionary.append(SemesterPart(semester: Semester.koreanToSemester(korean: semester!),
+                                                part: Part.StringToPart(partString: part!)))
         }
         return partsDictionary
     }
     
     static func EntityToMemberRequestSemesterPart(mappingArr: [SemesterPart]) -> [MemberRequest.SemesterPart] {
         var partsDictionary: [MemberRequest.SemesterPart] = []
-
+        
         for semesterPart in mappingArr {
             
             let semester = semesterPart.semester

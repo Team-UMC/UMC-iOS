@@ -25,7 +25,9 @@ struct BulletinBoardNotice: View {
     }
 }
 
-#Preview {
-    BulletinBoardUI()
+struct  BulletinBoardNotice_Previews: PreviewProvider {
+    static var previews: some View {
+        @State var selectedButton1: Int? = 1
+        BulletinBoardUI(selectedButton1: $selectedButton1)
+    }
 }
-

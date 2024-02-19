@@ -8,18 +8,23 @@
 import SwiftUI
 
 struct BulletinBoardButton: View {
-    @State private var showButtons1 = true//학교버튼
-    @State private var showButtons2 = false//지부버튼
-    @State private var isBulletinBoardNoticeVisible = false//건의함버튼
-    @State private var selectedButton1: Int? = 0//버튼 색상 바꾸는 거
-    @State private var selectedButton2: Int? = 0//버튼 색상 바꾸는 거
-    @State private var isSearchUIActive = false//검색창
+    @State private var showButtons1 = true
+    @State private var showButtons2 = false
+    @State private var isBulletinBoardNoticeVisible = false
+    @Binding var selectedButton1: Int?
+    @State private var selectedButton2: Int? = 0
+    @State private var isSearchUIActive = false
     @State private var isClicked = false
+
     
+    init(selectedButton1: Binding<Int?>) {
+        _selectedButton1 = selectedButton1
+        
+    }
+
     var body: some View {
-        // FirstButton
-        VStack{
-            HStack{
+        VStack {
+            HStack {
                 Button("학교") {
                     showButtons1.toggle()
                     showButtons2 = false
@@ -30,7 +35,7 @@ struct BulletinBoardButton: View {
                 .bold()
                 .foregroundColor(selectedButton1 == 0 ? Color("searchPurple") : Color.gray)
                 .padding(.trailing, 20)
-                
+
                 Button("지부") {
                     showButtons1 = false
                     showButtons2.toggle()
@@ -41,18 +46,19 @@ struct BulletinBoardButton: View {
                 .bold()
                 .foregroundColor(selectedButton1 == 1 ? Color("searchPurple") : Color.gray)
                 .padding(.trailing, 20)
-                
+
                 Button("연합") {
                     showButtons1 = false
                     showButtons2.toggle()
                     selectedButton1 = 2
                     isBulletinBoardNoticeVisible = false
+                    
                 }
                 .font(.system(size: 26))
                 .bold()
                 .foregroundColor(selectedButton1 == 2 ? Color("searchPurple") : Color.gray)
                 .padding(.trailing, 20)
-                
+
                 Button("건의함") {
                     showButtons1 = false
                     showButtons2 = false
@@ -63,8 +69,7 @@ struct BulletinBoardButton: View {
                 .bold()
                 .foregroundColor(selectedButton1 == 3 ? Color("searchPurple") : Color.gray)
                 .padding(.trailing, 20)
-                
-                
+
                 Button(action: {
                     showButtons1 = false
                     showButtons2 = false
@@ -81,29 +86,29 @@ struct BulletinBoardButton: View {
                 .font(.system(size: 26))
                 .bold()
                 .navigationDestination(isPresented: $isClicked) {
+                    // Assuming BulletinBoardSearchUI() is another view
                     BulletinBoardSearchUI()
                 }
                 .navigationBarBackButtonHidden(true)
-                
+
                 Spacer()
             }
-            
-            // SecondButton
+
             if showButtons1 {
                 ButtonGrid(buttons: ["공지사항", "자유게시판", "질문게시판", "이전기수게시판", "위크북게시판"], selectedButton: $selectedButton2)
             }
             if showButtons2 {
                 ButtonGrid(buttons: ["공지사항", "자유게시판", "질문게시판", "이전기수게시판"], selectedButton: $selectedButton2)
             }
-            
+
             if isBulletinBoardNoticeVisible {
-                //Spacer()
                 BulletinBoardNotice()
             }
         }
-        
     }
 }
+
+
 
 // ButtonGrid
 struct ButtonGrid: View {
@@ -152,8 +157,10 @@ extension View {
 
 // Preview
 struct BulletinBoardButton_Previews: PreviewProvider {
+    @State static var selectedButton1: Int? = nil
+
     static var previews: some View {
-        BulletinBoardButton()
+        BulletinBoardButton(selectedButton1: $selectedButton1)
     }
 }
 

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct BottomTabBar: View {
-    
-let Navy = Color("NavyText")
+    @State var selectedButton1: Int? = 1
+    let Navy = Color("NavyText")
     
     var body: some View {
 
@@ -21,7 +21,7 @@ let Navy = Color("NavyText")
                     Label("홈", systemImage: "house.fill")
                 }
             
-            BulletinBoardUI()
+            BulletinBoardUI(selectedButton1: $selectedButton1)
                 .tabItem {
                     Label("게시판", systemImage: "list.bullet.clipboard.fill")
                 }
