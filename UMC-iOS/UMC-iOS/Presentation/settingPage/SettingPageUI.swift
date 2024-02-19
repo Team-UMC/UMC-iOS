@@ -9,7 +9,15 @@ import SwiftUI
 
 struct SettingPageUI: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            SettingPageNavigation()
+                .padding(.top,20)
+                .padding(.bottom,-10)
+            
+            CustomerService()
+                .padding(.leading,-10)
+        }//Vstack
+        .background(.white)
     }
 }
 
