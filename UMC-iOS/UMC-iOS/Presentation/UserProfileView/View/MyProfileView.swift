@@ -11,6 +11,7 @@ struct MyProfileView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isEditingProfile = false
     var memberProfile: MemberResponse.GetMemberProfile
+    @ObservedObject var viewModel = UserProfileEditViewModel()
 
     
     var body: some View {
@@ -24,6 +25,9 @@ struct MyProfileView: View {
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
                 VStack {
+                    ProfileNavigationbar()
+                        .padding(.top,-110)
+                    
                     MemberProfileImage(memberInfo: memberProfile) // Photo and university label
                     
                     HStack(spacing: 8) {
@@ -48,6 +52,11 @@ struct MyProfileView: View {
                             .cornerRadius(17.5)
                             .shadow(radius: 10)
                     }
+                    .navigationDestination(isPresented:
+                                            $isClicked){
+                        UserProfileEdit(message: viewModel.message, userNickname:viewModel.userNickname, userName: viewModel.userName)
+                    }
+                    
                 }
                 .padding(.bottom, 60)
             }
