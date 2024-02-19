@@ -10,7 +10,7 @@ struct UserProfileUI: View {
     @State private var isClicked = false
     @Environment(\.presentationMode) var presentationMode
     @State private var isEditingProfile = false
-    var profileImage = "profileImage"
+    var memberProfile: MemberResponse.GetMemberProfile
 
     
     var body: some View {
@@ -24,10 +24,10 @@ struct UserProfileUI: View {
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
                 VStack {
-                    UserProfile(user: Member()) // Photo and university label
+                    UserProfile(memberInfo: memberProfile) // Photo and university label
                     
                     HStack(spacing: 8) {
-                        AbleStack(member: Member()) // Technical skills
+                        ProfileParts(memberParts: memberProfile.semesterParts) // Technical skills
                         UMCSeason(member: Member()) // UMC season
                     }
                     
@@ -48,16 +48,11 @@ struct UserProfileUI: View {
                             .cornerRadius(17.5)
                             .shadow(radius: 10)
                     }
-                    .navigationDestination(isPresented: $isClicked) {
-                        UserProfileEdit(message: "", userNickname: "", userName: "")
-                    }
                 }
                 .padding(.bottom, 60)
             }
             .background(.white)
         }
-
-        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -67,7 +62,7 @@ struct UserProfileUI: View {
 #if DEBUG
 struct UserProfileUI_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileUI()
+        UserProfileUI(memberProfile: MemberResponse.GetMemberProfile())
     }
 }
 #endif

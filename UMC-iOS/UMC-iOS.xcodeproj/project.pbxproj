@@ -151,7 +151,7 @@
 		F34D2D1F2B73675300491EBE /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C882B73675300491EBE /* HomeNotificationView.swift */; };
 		F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C892B73675300491EBE /* FriendsListView.swift */; };
 		F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8C2B73675300491EBE /* UserProfileUI.swift */; };
-		F34D2D222B73675300491EBE /* AbleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8D2B73675300491EBE /* AbleStack.swift */; };
+		F34D2D222B73675300491EBE /* ProfileParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8D2B73675300491EBE /* ProfileParts.swift */; };
 		F34D2D232B73675300491EBE /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8E2B73675300491EBE /* UserMessage.swift */; };
 		F34D2D242B73675300491EBE /* UMCseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8F2B73675300491EBE /* UMCseason.swift */; };
 		F34D2D252B73675300491EBE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C902B73675300491EBE /* UserProfile.swift */; };
@@ -422,7 +422,7 @@
 		F34D2C882B73675300491EBE /* HomeNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
 		F34D2C892B73675300491EBE /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		F34D2C8C2B73675300491EBE /* UserProfileUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileUI.swift; sourceTree = "<group>"; };
-		F34D2C8D2B73675300491EBE /* AbleStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbleStack.swift; sourceTree = "<group>"; };
+		F34D2C8D2B73675300491EBE /* ProfileParts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileParts.swift; sourceTree = "<group>"; };
 		F34D2C8E2B73675300491EBE /* UserMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
 		F34D2C8F2B73675300491EBE /* UMCseason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMCseason.swift; sourceTree = "<group>"; };
 		F34D2C902B73675300491EBE /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -1258,7 +1258,7 @@
 			isa = PBXGroup;
 			children = (
 				F34D2C8C2B73675300491EBE /* UserProfileUI.swift */,
-				F34D2C8D2B73675300491EBE /* AbleStack.swift */,
+				F34D2C8D2B73675300491EBE /* ProfileParts.swift */,
 				F34D2C8E2B73675300491EBE /* UserMessage.swift */,
 				F34D2C8F2B73675300491EBE /* UMCseason.swift */,
 				F34D2C902B73675300491EBE /* UserProfile.swift */,
@@ -1837,7 +1837,7 @@
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
 				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
 				44FCC3872B7D2A8700C41278 /* RankingTitle.swift in Sources */,
-				F34D2D222B73675300491EBE /* AbleStack.swift in Sources */,
+				F34D2D222B73675300491EBE /* ProfileParts.swift in Sources */,
 				F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */,
 				44CD3DD02B7A9E170089B04F /* ToDoListNavigationbar.swift in Sources */,
 				F34D2CD12B73675300491EBE /* ButtonWithIcon.swift in Sources */,

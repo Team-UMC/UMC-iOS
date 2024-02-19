@@ -38,6 +38,10 @@ struct HomeSideView:View {
 struct SideMenuViewContents: View {
     var memberProfile: MemberResponse.GetMemberProfile
     @Binding var presentSideMenu: Bool
+    @Binding var goToMyProfile: Bool
+    @Binding var goToMenuView: Bool
+    
+    
     @State private var delayLoadingImage: Bool = false
     
     var body: some View {
@@ -90,16 +94,16 @@ struct SideMenuViewContents: View {
                             }
                         }
                         Spacer().frame(width: 56)
-                        SideMenuNavigationButton(destination:UserProfileUI(), MenuName: "프로필", ImageName: "person.crop.circle.fill")
+                        SideMenuNavigationButton(destination:UserProfileUI(memberProfile: memberProfile), MenuName: "프로필", ImageName: "person.crop.circle.fill", isClicked: $goToMyProfile)
                         Spacer().frame(width: 16)
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "설정", ImageName: "gearshape.fill") //추후 구현
+                        SideMenuNavigationButton(destination: TodoListAPITestView(), MenuName: "설정", ImageName: "gearshape.fill", isClicked: $goToMenuView) //추후 구현
                     }
                     Spacer().frame(height: 20)
                     HStack(spacing: 32){
-                        SideMenuNavigationButton(destination: WritingList(title: "", content: ""), MenuName: "글쓰기", ImageName: "pencil")
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "내글", ImageName: "doc.text.fill") //추후 구현
-                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "쪽지함", ImageName: "envelope.fill") //추후 구현
-                        SideMenuNavigationButton(destination: GrowMascotView(), MenuName: "마스코드", ImageName: "pawprint.fill")
+//                        SideMenuNavigationButton(destination: WritingList(title: "", content: ""), MenuName: "글쓰기", ImageName: "pencil")
+//                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "내글", ImageName: "doc.text.fill") //추후 구현
+//                        SideMenuNavigationButton(destination: UserProfileUI(), MenuName: "쪽지함", ImageName: "envelope.fill") //추후 구현
+//                        SideMenuNavigationButton(destination: GrowMascotView(), MenuName: "마스코드", ImageName: "pawprint.fill")
                     }
                     Spacer().frame(height: 32)
                     Text("즐겨찾기")
@@ -107,12 +111,12 @@ struct SideMenuViewContents: View {
                         .foregroundColor(.black)
                     Spacer().frame(height: 25)
                     VStack(alignment: .leading, spacing: 20) {
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "공지사항")
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "자유게시판")
-                        SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "사진첩") //추후 구현
-                        SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "프로젝트 매칭") //추후 구현
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "네트워킹 게시판")
-                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "연합 게시판")
+//                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "공지사항")
+//                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "자유게시판")
+//                        SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "사진첩") //추후 구현
+//                        SideMenuSubNavigationButton(destination: UserProfileUI(), MenuName: "프로젝트 매칭") //추후 구현
+//                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "네트워킹 게시판")
+//                        SideMenuSubNavigationButton(destination: GrowMascotView(), MenuName: "연합 게시판")
                     }
                     .font(.system(size: 14))
                     .foregroundStyle(.black)

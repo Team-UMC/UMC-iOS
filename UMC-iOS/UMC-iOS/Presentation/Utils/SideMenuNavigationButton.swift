@@ -11,7 +11,7 @@ struct SideMenuNavigationButton<Destination: View>: View {
     var destination: Destination
     var MenuName: String
     var ImageName: String
-    @State private var isClicked = false
+    @Binding var isClicked: Bool
 
     var body: some View {
         Button(action: {
@@ -29,12 +29,6 @@ struct SideMenuNavigationButton<Destination: View>: View {
             }
             .padding(EdgeInsets(top: 4, leading: 10, bottom: 10, trailing: 4))
             
-        }
-        //네비게이션 페이지 전환
-        .navigationDestination(isPresented: $isClicked) {
-            //다음 전환하고자 하는 페이지 / 백버튼 안보이게
-            destination
-                
         }
  
     }
