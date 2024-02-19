@@ -1,5 +1,5 @@
 //
-//  ToDoListView.swift
+//  ToDoLists.swift
 //  BulletinBoard
 //
 //  Created by 나예은 on 2024/01/31.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToDoListView: View {
+struct ToDoLists: View {
     @ObservedObject var todoListViewModel: TodoListViewModel
     
     var body: some View {
@@ -37,7 +37,7 @@ struct ToDoListView: View {
 
 struct ToDoListView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoListView(todoListViewModel: TodoListViewModel())
+        ToDoLists(todoListViewModel: TodoListViewModel())
     }
 }
 

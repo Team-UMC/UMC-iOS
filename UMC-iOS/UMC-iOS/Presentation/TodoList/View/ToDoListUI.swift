@@ -23,7 +23,7 @@ struct ToDoListUI: View {
                 .padding(.leading,25)
                 .padding(.bottom,-10)
                 
-            ToDoListView(todoListViewModel: TodoListViewModel())
+            ToDoLists(todoListViewModel: TodoListViewModel())
             ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: title, time: deadline, todoIcon: todoIcon))
             
             

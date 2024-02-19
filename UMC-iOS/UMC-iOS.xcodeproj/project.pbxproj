@@ -108,7 +108,7 @@
 		F34D2CF42B73675300491EBE /* ToDoListAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C4E2B73675300491EBE /* ToDoListAdd.swift */; };
 		F34D2CF52B73675300491EBE /* ToDoEditFirstActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C4F2B73675300491EBE /* ToDoEditFirstActionSheet.swift */; };
 		F34D2CF62B73675300491EBE /* ToDoListUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C502B73675300491EBE /* ToDoListUI.swift */; };
-		F34D2CF72B73675300491EBE /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C512B73675300491EBE /* ToDoListView.swift */; };
+		F34D2CF72B73675300491EBE /* ToDoLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C512B73675300491EBE /* ToDoLists.swift */; };
 		F34D2CF82B73675300491EBE /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C522B73675300491EBE /* ToDoListCell.swift */; };
 		F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C552B73675300491EBE /* MyContentViewModel.swift */; };
 		F34D2CFA2B73675300491EBE /* MyContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C572B73675300491EBE /* MyContentList.swift */; };
@@ -225,6 +225,8 @@
 		F391F90B2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */; };
 		F391F90D2B82A89100C9FD46 /* TodayILearnedHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F90C2B82A89100C9FD46 /* TodayILearnedHomeCell.swift */; };
 		F391F90F2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F90E2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift */; };
+		F392F6D42B8348BD00F29189 /* TodoSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392F6D32B8348BD00F29189 /* TodoSummaryCell.swift */; };
+		F392F6D62B8348E200F29189 /* TodoEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392F6D52B8348E200F29189 /* TodoEmptyCell.swift */; };
 		F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1D2B7B4CD40036E77A /* Board.swift */; };
 		F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D1F2B7B4E4B0036E77A /* HostType.swift */; };
 		F3935D222B7B4F470036E77A /* BoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3935D212B7B4F470036E77A /* BoardType.swift */; };
@@ -379,7 +381,7 @@
 		F34D2C4E2B73675300491EBE /* ToDoListAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListAdd.swift; sourceTree = "<group>"; };
 		F34D2C4F2B73675300491EBE /* ToDoEditFirstActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoEditFirstActionSheet.swift; sourceTree = "<group>"; };
 		F34D2C502B73675300491EBE /* ToDoListUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListUI.swift; sourceTree = "<group>"; };
-		F34D2C512B73675300491EBE /* ToDoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
+		F34D2C512B73675300491EBE /* ToDoLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoLists.swift; sourceTree = "<group>"; };
 		F34D2C522B73675300491EBE /* ToDoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 		F34D2C552B73675300491EBE /* MyContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentViewModel.swift; sourceTree = "<group>"; };
 		F34D2C572B73675300491EBE /* MyContentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentList.swift; sourceTree = "<group>"; };
@@ -493,6 +495,8 @@
 		F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedHomeList.swift; sourceTree = "<group>"; };
 		F391F90C2B82A89100C9FD46 /* TodayILearnedHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedHomeCell.swift; sourceTree = "<group>"; };
 		F391F90E2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedCreateCell.swift; sourceTree = "<group>"; };
+		F392F6D32B8348BD00F29189 /* TodoSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSummaryCell.swift; sourceTree = "<group>"; };
+		F392F6D52B8348E200F29189 /* TodoEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEmptyCell.swift; sourceTree = "<group>"; };
 		F3935D1D2B7B4CD40036E77A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F3935D1F2B7B4E4B0036E77A /* HostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostType.swift; sourceTree = "<group>"; };
 		F3935D212B7B4F470036E77A /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -836,6 +840,8 @@
 				F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */,
 				F391F90C2B82A89100C9FD46 /* TodayILearnedHomeCell.swift */,
 				F391F90E2B82AF1200C9FD46 /* TodayILearnedCreateCell.swift */,
+				F392F6D32B8348BD00F29189 /* TodoSummaryCell.swift */,
+				F392F6D52B8348E200F29189 /* TodoEmptyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1082,7 +1088,7 @@
 				F34D2C4E2B73675300491EBE /* ToDoListAdd.swift */,
 				F34D2C4F2B73675300491EBE /* ToDoEditFirstActionSheet.swift */,
 				F34D2C502B73675300491EBE /* ToDoListUI.swift */,
-				F34D2C512B73675300491EBE /* ToDoListView.swift */,
+				F34D2C512B73675300491EBE /* ToDoLists.swift */,
 				F34D2C522B73675300491EBE /* ToDoListCell.swift */,
 				44CD3DCF2B7A9E170089B04F /* ToDoListNavigationbar.swift */,
 			);
@@ -1742,6 +1748,7 @@
 				F34D2CE82B73675300491EBE /* CirclePlusButton.swift in Sources */,
 				F34D2CE42B73675300491EBE /* CommetAddbar.swift in Sources */,
 				F34D2CD92B73675300491EBE /* SearchBar.swift in Sources */,
+				F392F6D62B8348E200F29189 /* TodoEmptyCell.swift in Sources */,
 				F38547982B7D3D0D001F5E70 /* BoardCommentResponse.swift in Sources */,
 				F34D2CE22B73675300491EBE /* BulletinBoardContentDetail.swift in Sources */,
 				F3B689462B77F1AE00A4FBB5 /* UniversityNetwork.swift in Sources */,
@@ -1799,6 +1806,7 @@
 				F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */,
 				E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */,
 				F34D2D242B73675300491EBE /* ProfileSemesters.swift in Sources */,
+				F392F6D42B8348BD00F29189 /* TodoSummaryCell.swift in Sources */,
 				E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
 				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
@@ -1889,7 +1897,7 @@
 				F391F9092B82A33F00C9FD46 /* TodayILearnedNetwork.swift in Sources */,
 				F34D2CC82B73675300491EBE /* BulletinBoardNotice.swift in Sources */,
 				46C37FC22B74EFB80084CA4D /* ScheduleResponse.swift in Sources */,
-				F34D2CF72B73675300491EBE /* ToDoListView.swift in Sources */,
+				F34D2CF72B73675300491EBE /* ToDoLists.swift in Sources */,
 				F3DABB532B756D2F00BBF00B /* SemesterPart.swift in Sources */,
 				F34D2D0B2B73675300491EBE /* TILListFourthCell.swift in Sources */,
 				F34D2CC32B73675300491EBE /* MainCalendarView.swift in Sources */,
