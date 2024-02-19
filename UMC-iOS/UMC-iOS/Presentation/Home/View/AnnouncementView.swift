@@ -56,19 +56,19 @@ struct AnnouncementView: View {
                                 var labelText: String {
                                     switch pinnedNotices[index].hostType {
                                     case "CENTER":
-                                        return "[연합]"
+                                        return "연합"
                                     case "BRANCH":
-                                        return "[지부]"
+                                        return "지부"
                                     case "CAMPUS":
-                                        return "[학교]"
+                                        return "학교"
                                     case "ALL":
-                                        return "[전체]"
+                                        return "전체"
                                     default:
                                         return pinnedNotices[index].hostType
                                     }
                                 }
 
-                                Text(labelText)
+                                Text("[\(labelText)]")
                                     .foregroundStyle(Color.main2)
                                     .font(.system(size: 14))
                                     .kerning(-1.07)
