@@ -24,7 +24,7 @@ struct UserProfileSocialAdd: View {
 //                UserProfile(user: Member())  // 사진, 대학 라벨
                 HStack(spacing: 8) {
 //                    ProfileParts(memberParts: <#T##[MemberResponse.SemesterParts]#>)    // 기술
-                    UMCSeason(member: Member())    // 기수
+//                    UMCSeason(memberSemesters: memberINfo: Member())    // 기수
                 }
                 SocialButtonSet()  // 친구 추가 및 쪽지 보내기
                 UserMessage()  // 상태 메세지 및 버튼

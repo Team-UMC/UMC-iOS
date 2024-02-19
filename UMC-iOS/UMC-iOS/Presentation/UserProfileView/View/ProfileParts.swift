@@ -18,19 +18,11 @@ struct ProfileParts: View {
                 .shadow(radius: 5)
             
             HStack(spacing:6){
-//                if let secondSemesterPart = member.semesterParts?[1] {
-//                    Image(secondSemesterPart.part.rawValue)
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fill)
-//                        .frame(width: 24, height: 24)
-//                    
-//                    if let secondSemesterPart = member.semesterParts?[1] {
-//                        Image(secondSemesterPart.part.rawValue)
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fill)
-//                            .frame(width: 24, height: 24)
-//                    }
-//                }
+                HStack(spacing: 6) {
+                    ForEach(memberParts.indices, id: \.self) { index in
+                        Image(memberParts[index].part)
+                    }
+                }
             }
         }
     }

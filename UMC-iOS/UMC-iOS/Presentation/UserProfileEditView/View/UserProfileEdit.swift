@@ -49,10 +49,10 @@ struct UserProfileEdit: View {
     }
 }
 
-struct UserProfileEdit_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileEdit(message: "", userNickname: "", userName: "")
-    }
-}
+//struct UserProfileEdit_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserProfileEdit(message: "", userNickname: "", userName: "")
+//    }
+//}
 
 
