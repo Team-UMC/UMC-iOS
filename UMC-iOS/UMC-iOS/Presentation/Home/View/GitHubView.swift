@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GitHubView: View {
+    @Binding var shouldShowGithubPopup: Bool
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -51,6 +52,10 @@ struct GitHubView: View {
                     .padding(EdgeInsets(top: 12, leading: 0, bottom: 8, trailing: 0))
                 } // VStack
             } // ZStack
+            .onTapGesture {
+                print("Github Tapped")
+                self.shouldShowGithubPopup = true
+            }
         } // VStack
         .padding(.trailing, 18)
     }
