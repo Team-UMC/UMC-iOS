@@ -155,6 +155,7 @@ struct HomeView: View {
         
         .navigationDestination(isPresented: $goToGrowMascot) {
             GrowMascotView()
+                .navigationTitle("마스코트 키우기")
         }
         .navigationDestination(isPresented: $goToTodoList) {
             ToDoListUI()

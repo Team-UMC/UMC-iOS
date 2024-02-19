@@ -9,14 +9,16 @@ import SwiftUI
 
 struct MyContributionButtonView: View {
     
-    @Binding var isTapped2: Bool
+    @Binding var activeRankingOrContribution: Int
+    @Binding var goToRankingView: Bool
     
     var body: some View {
         
         // 학교 랭킹 버튼
         Button {
             print("기여도버튼 Tapped")
-            self.isTapped2.toggle()
+            goToRankingView.toggle()
+            activeRankingOrContribution = 2
         } label: {
             
             VStack(spacing: 4) {
@@ -39,8 +41,5 @@ struct MyContributionButtonView: View {
             .cornerRadius(12)
             
         } // Button
-        .navigationDestination(isPresented: $isTapped2) {
-            RankingDetailView()
-        }
     }
 }

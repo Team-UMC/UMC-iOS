@@ -11,8 +11,8 @@ import PopupView
 struct GrowMascotView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @State var isTapped1: Bool = false
-    @State var isTapped2: Bool = false
+    @State var goToRankingView: Bool = false
+    @State var activeRankingOrContribution: Int = 1
     
     @State var shouldShowFeedPopup: Bool = false
     @State var selectedPointType: PointType = .PUDDING
@@ -65,8 +65,8 @@ struct GrowMascotView: View {
                     
                     HStack(spacing: 10) {
                         
-                        UniversityRankButtonView(isTapped1: $isTapped1)
-                        MyContributionButtonView(isTapped2: $isTapped2)
+                        UniversityRankButtonView(activeRankingOrContribution: $activeRankingOrContribution, goToRankingView: $goToRankingView)
+                        MyContributionButtonView(activeRankingOrContribution: $activeRankingOrContribution, goToRankingView: $goToRankingView)
                         
                     } // HStack
                     
@@ -80,26 +80,6 @@ struct GrowMascotView: View {
                         MascotFoodView(pointType: pointType, selectedPointType: $selectedPointType, shouldShowFeedPopup: $shouldShowFeedPopup)
                         
                     }
-//                    
-//                    MascotFoodView(foodImageName: "puddingImage",
-//                                   exp: 1,
-//                                   foodInfo: "은하수를 살짝 얹은 커스터드 푸딩",
-//                                   shouldShowFeedPopup: $shouldShowFeedPopup)
-//                    
-//                    MascotFoodView(foodImageName: "donutImage",
-//                                   exp: 5,
-//                                   foodInfo: "별빛 스프링클이 가득한 블랙홀 도넛",
-//                                   shouldShowFeedPopup: $shouldShowFeedPopup)
-//                    
-//                    MascotFoodView(foodImageName: "icecreamImage",
-//                                   exp: 10,
-//                                   foodInfo: "태양이 물든 선샤인 샤베트 아이스크림",
-//                                   shouldShowFeedPopup: $shouldShowFeedPopup)
-//                    
-//                    MascotFoodView(foodImageName: "rollcakeImage",
-//                                   exp: 30,
-//                                   foodInfo: "찬란한 별들이 쏙쏙 박힌 우주맛 롤케이크",
-//                                   shouldShowFeedPopup: $shouldShowFeedPopup)
                     
                 } // VStack
                 
@@ -108,13 +88,16 @@ struct GrowMascotView: View {
             } // VStack
             .padding(.top, 16)
             .padding(.horizontal, 22.5)
-            .modifier(SettingBackButtonMascot(title: "마스코트 키우기", onDismiss: { dismiss() }, showTrailingItem: false))
+//            .modifier(SettingBackButtonMascot(title: "마스코트 키우기", onDismiss: { dismiss() }, showTrailingItem: false))
             
 //            Color(.black)
 //                .ignoresSafeArea(.all)
 //                .opacity(self.shouldShowFeedPopup ? 0.3 : 0)
             
         } // ZStack
+        .navigationDestination(isPresented: $goToRankingView) {
+            RankingDetailView(activeRankingOrContribution: activeRankingOrContribution)
+        }
         
         .popup(isPresented: $shouldShowFeedPopup, view: {self.createFeedPopup()},
                customize: {

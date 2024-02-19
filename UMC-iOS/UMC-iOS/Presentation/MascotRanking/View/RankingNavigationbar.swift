@@ -42,7 +42,7 @@ struct RankingNavigationbar: View {
            }
        }
 
-#Preview {
-    RankingDetailView()
-    //RankingNavigationbar()
-}
+//#Preview {
+//    RankingDetailView()
+//    //RankingNavigationbar()
+//}
