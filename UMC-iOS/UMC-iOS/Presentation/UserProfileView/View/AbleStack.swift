@@ -13,20 +13,21 @@ struct AbleStack: View {
     var member = Member()
 
     var body: some View {
-        ZStack {
+        ZStack{
             Rectangle()
                 .fill(Color.white)
                 .cornerRadius(20)
                 .frame(width: 78, height: 32)
                 .shadow(radius: 5)
-            
+
             HStack(spacing: 6) {
                 if let firstSemesterPart = member.semesterParts?.first {
                     Image(firstSemesterPart.part.rawValue)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 24, height: 24)
-                    
+
+
                     if member.semesterParts?.count ?? 0 > 1, let secondSemesterPart = member.semesterParts?[1] {
                         Image(secondSemesterPart.part.rawValue)
                             .resizable()
@@ -34,7 +35,7 @@ struct AbleStack: View {
                             .frame(width: 24, height: 24)
                     }
                 }
-                
+
                 // member.semesterParts?.first?.part.rawValue를 사용하여 이미지 이름을 가져옴
                 Image(member.semesterParts?.first?.part.rawValue ?? "default")
                     .resizable()
@@ -44,4 +45,3 @@ struct AbleStack: View {
         }
     }
 }
-
