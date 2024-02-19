@@ -9,63 +9,63 @@ import Foundation
 
 struct UniversityResponse: Codable {
     struct UniversityInfo: Codable {
-        let id: String?
-        let universityId: String
-        let universityName: String
+        var id: String? = ""
+        var universityId: String = ""
+        var universityName: String = ""
     }
     
     struct GetUniversityList: Codable {
-        let joinUniversities: [UniversityInfo]
+        var joinUniversities: [UniversityInfo] = []
     }
     
     struct GetUniverSityDetail: Codable {
-        let id: String?
-        let universityId: String
-        let universityName: String
-        let universityLogo: String
-        let universityPoint: Int
-        let universityRank: Int
+        var id: String? = ""
+        var universityId: String = ""
+        var universityName: String = ""
+        var universityLogo: String = ""
+        var universityPoint: Int = 1
+        var universityRank: Int = 1
     }
     
     struct GetUniversityMascotInfo: Codable {
-        let level: Int
-        let point: Int
-        let rank: Int
-        let mascotImage: String
-        let mascotDialog: String
-        let universityImage: String
+        var level: Int = 1
+        var point: Int = 1
+        var rank: Int = 1
+        var mascotImage: String = ""
+        var mascotDialog: String = ""
+        var universityImage: String = ""
     }
     
     struct UniversityRank: Codable {
-        let universityName: String
-        let universityLogo: String
-        let universityPoint: Int
-        let universityRank: Int
+        var universityName: String = ""
+        var universityLogo: String = ""
+        var universityPoint: Int = 1
+        var universityRank: Int = 1
     }
     
     struct GetUniversityRanks: Codable {
-        let joinUniversityRanks: [UniversityRank]
+        var joinUniversityRanks: [UniversityRank] = []
     }
     
     struct UniversityContributorInfo: Codable {
-        let nickname: String
-        let name: String
-        let profileImage: String?
-        let usedPoint: Int
-        let rank: Int
+        var nickname: String = ""
+        var name: String = ""
+        var profileImage: String? = ""
+        var usedPoint: Int = 1
+        var rank: Int = 1
     }
     
     struct GetUniversityContributors: Codable {
-        let joinContributionRanks: [UniversityContributorInfo]
+        var joinContributionRanks: [UniversityContributorInfo] = []
     }
     
     struct FeedUniversityMascot: Codable {
-        let universityTotalpoint: Int
-        let memberRemainPoint: Int
+        var universityTotalpoint: Int = 1
+        var memberRemainPoint: Int = 1
     }
     
     struct UniversityId: Codable {
-        let universityId: String
+        var universityId: String = ""
     }
     
 }

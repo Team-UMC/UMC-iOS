@@ -14,6 +14,12 @@ struct RankingDetailView:View {
     var univ = University()
     
     @ObservedObject var viewModel = MascotRankingViewModel()
+    @ObservedObject var universityNetwork = UniversityNetwork()
+    @ObservedObject var memberNetwork = MemberNetwork()
+    
+    @State var universityRanks = UniversityResponse.GetUniversityRanks()
+    @State var myUniversityRankDetail = UniversityResponse.GetUniverSityDetail()
+    @State var memberRankInfo = MemberResponse.GetMemberRankInfo()
     
     var UnivRank: Int = 1
     var UserRank: Int = 4
@@ -47,15 +53,18 @@ struct RankingDetailView:View {
                     // 학교 랭킹 선택 버튼
                     Button(action: {
                         self.viewModel.selectedRanking = .school
+                        Task {
+                            universityRanks = await universityNetwork.fetchGetUniversityRanks()
+                        }
                     }) {
                         VStack {
-                            Image(univ.universityLogo)
+                            Image(myUniversityRankDetail.universityName)
                                 .resizable()
                                 .frame(width: 100, height: 100)
                                 .clipShape(Circle())
                                 .padding(.bottom,14)
                             
-                            Text("**\(user.university)**\n**\(univ.totalPoint)**포인트로\n현재 **\(UnivRank)**등이에요 👏")
+                            Text("**\(myUniversityRankDetail.universityName)** 는\n**\(myUniversityRankDetail.universityPoint)**포인트로\n현재 **\(myUniversityRankDetail.universityRank)**등이에요 👏")
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
                                 .font(.system(size: 12))
@@ -92,15 +101,27 @@ struct RankingDetailView:View {
                     // 개인 기여도 선택 버튼
                     Button(action: {
                         self.viewModel.selectedRanking = .personal
+                        Task {
+                            memberRankInfo = await memberNetwork.fetchGetMemberRankInfo()
+                        }
                     }) {
                         VStack {
-                            Image(user.profileImage)
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .clipShape(Circle())
-                                .padding(.bottom,14)
+                            AsyncImage(url: URL(string: memberRankInfo.profileImage ?? "")) { image in
+                                image
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                                    .clipShape(Circle())
+                                    .padding(.bottom,14)
+                            } placeholder: {
+                                Image(systemName: "person.circle")
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                                    .clipShape(Circle())
+                                    .padding(.bottom,14)
+                            }
+                                
                             
-                            Text("**\(user.name)** 님은\n**\(user.contributionPoint)** 기여도로\n현재 **\(UserRank)**등이에요 👏")
+                            Text("**\(memberRankInfo.nickname)** 님은\n**\(memberRankInfo.contributionPoint)** 기여도로\n현재 **\(memberRankInfo.contributionRank)**등이에요 👏")
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
                                 .font(.system(size: 12))
@@ -383,6 +404,13 @@ struct RankingDetailView:View {
             .ignoresSafeArea()
         } // ScrollView
         .background(Color.background)
+        .onAppear {
+            Task {
+                universityRanks = await universityNetwork.fetchGetUniversityRanks()
+                memberRankInfo = await memberNetwork.fetchGetMemberRankInfo()
+                myUniversityRankDetail = await universityNetwork.fetchGetUniversityDetail()
+            }
+        }
     }
 }
 //}

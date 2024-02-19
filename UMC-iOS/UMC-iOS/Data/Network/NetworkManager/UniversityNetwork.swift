@@ -192,14 +192,16 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 우리 학교 세부 정보 조회 API(fetch)
     @MainActor
-    func fetchGetUniversityDetail() async {
+    func fetchGetUniversityDetail() async -> UniversityResponse.GetUniverSityDetail {
+        var universityDetail = UniversityResponse.GetUniverSityDetail()
         do {
-            let universityDetail = try await getUniversityDetail()
+            universityDetail = try await getUniversityDetail()
             
             print(universityDetail)
         } catch {
             print("Error: \(error)")
         }
+        return universityDetail
     }
     
     // University API - 우리 학교 세부 정보 조회 API
@@ -214,7 +216,6 @@ class UniversityNetwork: ObservableObject {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        print("UserDefaults : \(UserDefaults.standard.string(forKey: "Authorization"))")
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -288,9 +289,10 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 전체 학교 랭킹 조회 API(fetch)
     @MainActor
-    func fetchGetUniversityRanks() async {
+    func fetchGetUniversityRanks() async -> UniversityResponse.GetUniversityRanks {
+        var universityRanks = UniversityResponse.GetUniversityRanks()
         do {
-            let universityRanks = try await getUniversityRanks()
+            universityRanks = try await getUniversityRanks()
             self.universities = universityRanks.joinUniversityRanks.mapToUniversityList()
             
             print(universityRanks)
@@ -298,6 +300,7 @@ class UniversityNetwork: ObservableObject {
         } catch {
             print("Error: \(error)")
         }
+        return universityRanks
     }
     
     // University API - 전체 학교 랭킹 조회 API
@@ -312,7 +315,6 @@ class UniversityNetwork: ObservableObject {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        print("UserDefaults : \(UserDefaults.standard.string(forKey: "Authorization"))")
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         
         let (data, response) = try await URLSession.shared.data(for: request)

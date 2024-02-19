@@ -21,16 +21,22 @@ struct MemberResponse: Codable {
     }
     
     struct GetAccessTokenWithSocialLogin: Codable {
-        let memberId: String
-        let accessToken: String
-        let refreshToken: String
-        let serviceMember: Bool
+        var memberId: String = ""
+        var accessToken: String = ""
+        var refreshToken: String = ""
+        var serviceMember: Bool = false
     }
     
     struct MemberId: Codable {
-        let memberId: String
+        var memberId: String = ""
     }
     
+    struct GetMemberRankInfo: Codable {
+        var profileImage: String? = ""
+        var nickname: String = ""
+        var contributionPoint: Int = 0
+        var contributionRank: Int = 0
+    }
 }
 
 extension MemberResponse {

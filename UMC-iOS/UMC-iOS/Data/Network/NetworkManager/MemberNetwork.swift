@@ -117,6 +117,61 @@ class MemberNetwork: ObservableObject {
         return memberProfile
     }
     
+    // 멤버 API - 포인트 관련 유저 정보 조회 API(fetch)
+    @MainActor
+    func fetchGetMemberRankInfo() async -> MemberResponse.GetMemberRankInfo {
+        var memberRankInfo = MemberResponse.GetMemberRankInfo()
+        do {
+            memberRankInfo = try await getMemberRankInfo()
+            print(memberRankInfo)
+            return memberRankInfo
+            
+        } catch {
+            print("Error: \(error)")
+        }
+        return memberRankInfo
+    }
+    
+    // 멤버 API - 유저 프로필 조회 API
+    func getMemberRankInfo() async throws -> MemberResponse.GetMemberRankInfo {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.members_rank.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        guard let jsonString = String(data: data, encoding: .utf8) else {
+            print("Error: Failed to convert data to string")
+            throw ExchangeRateError.decodeFailed
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<MemberResponse.GetMemberRankInfo>.self, from: data)
+        
+        var memberRankInfo: MemberResponse.GetMemberRankInfo
+        memberRankInfo = jsonDictionary.result
+        print(memberRankInfo)
+        
+        return memberRankInfo
+    }
     
     // 멤버 API - 나의 프로필 수정 API(fetch)
     @MainActor
