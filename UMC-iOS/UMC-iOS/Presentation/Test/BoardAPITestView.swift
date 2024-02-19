@@ -25,7 +25,7 @@ struct BoardAPITestView: View {
     @State private var isPinned: Bool = false
     
     var body: some View {
-        VStack {
+        ScrollView {
             Button {
                 Task {
                     await boardNetwork.fetchGetSpecificBoards(host: "CENTER", board: "NOTICE", page: 0)
@@ -176,6 +176,14 @@ struct BoardAPITestView: View {
                 }
             } label: {
                 Text("교내 공지사항 핀 설정")
+            }
+            
+            Button {
+                Task {
+                    await boardNetwork.fetchGetPinnedBoards()
+                }
+            } label: {
+                Text("핀 고정된 notice 조회")
             }
 
         }

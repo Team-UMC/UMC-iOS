@@ -10,120 +10,130 @@ import Foundation
 struct BoardResponse: Codable {
     
     struct SpecificBoards: Codable {
-        let id: Int?
-        let boardPageElements: [BoardResponse.BoardPageElement]
-        let page: Int
-        let totalElements: Int
-        let totalPages: Int
-        let isFirst: Bool
-        let isLast: Bool
+        var id: Int?
+        var boardPageElements: [BoardResponse.BoardPageElement] = []
+        var page: Int = 0
+        var totalElements: Int = 0
+        var totalPages: Int = 0
+        var isFirst: Bool = false
+        var isLast: Bool = false
     }
     
     struct SearchBoards: Codable {
-        let id: Int?
-        let boardSearchPageElements: [BoardResponse.BoardPageElement]
-        let page: Int
-        let totalElements: Int
-        let totalPages: Int
-        let isFirst: Bool
-        let isLast: Bool
+        var id: Int?
+        var boardSearchPageElements: [BoardResponse.BoardPageElement] = []
+        var page: Int = 0
+        var totalElements: Int = 0
+        var totalPages: Int = 0
+        var isFirst: Bool = false
+        var isLast: Bool = false
     }
     
     struct BoardId: Codable {
-        let id: Int?
-        let boardId: String
+        var id: Int?
+        var boardId: String = ""
     }
     
     struct GetBoardDetail: Codable {
-        let id: Int?
-        let hostType: String
-        let boardType: String
-        let writer: String
-        let profileImage: String?
-        let part: String
-        let semester: String
-        let title: String
-        let content: String
-        let boardFiles: [String]
-        let hitCount: Int
-        let heartCount: Int
-        let commentCount: Int
-        let createdAt: String
-        let liked: Bool
+        var id: Int?
+        var hostType: String = ""
+        var boardType: String = ""
+        var writer: String = ""
+        var profileImage: String? = ""
+        var part: String = ""
+        var semester: String = ""
+        var title: String = ""
+        var content: String = ""
+        var boardFiles: [String] = []
+        var hitCount: Int = 0
+        var heartCount: Int = 0
+        var commentCount: Int = 0
+        var createdAt: String = ""
+        var liked: Bool = false
     }
     
     struct GetMyBoards: Codable {
-        let myBoardPageElements: [MyBoardPageElement]
-        let page: Int
-        let totalElements: Int
-        let totalPages: Int
-        let isFirst: Bool
-        let isLast: Bool
+        var myBoardPageElements: [MyBoardPageElement]
+        var page: Int = 0
+        var totalElements: Int = 0
+        var totalPages: Int = 0
+        var isFirst: Bool = false
+        var isLast: Bool = false
     }
     
     struct GetMyHeartBoards: Codable {
-        let myBoardPageElements: [MyBoardPageElement]
-        let page: Int
-        let totalElements: Int
-        let totalPages: Int
-        let isFirst: Bool
-        let isLast: Bool
+        var myBoardPageElements: [MyBoardPageElement]
+        var page: Int = 0
+        var totalElements: Int = 0
+        var totalPages: Int = 0
+        var isFirst: Bool = false
+        var isLast: Bool = false
     }
     
     struct GetMyCommentBoards: Codable {
-        let myBoardPageElements: [MyBoardPageElement]
-        let page: Int
-        let totalElements: Int
-        let totalPages: Int
-        let isFirst: Bool
-        let isLast: Bool
+        var myBoardPageElements: [MyBoardPageElement]
+        var page: Int = 0
+        var totalElements: Int = 0
+        var totalPages: Int = 0
+        var isFirst: Bool = false
+        var isLast: Bool = false
     }
     
     struct GetStaffNoticeBoards: Codable {
-        let noticePageElements: [NoticePageElement]
-        let page: Int
-        let totalElements: Int
-        let totalPages: Int
-        let isFirst: Bool
-        let isLast: Bool
+        var noticePageElements: [NoticePageElement]
+        var page: Int = 0
+        var totalElements: Int = 0
+        var totalPages: Int = 0
+        var isFirst: Bool = false
+        var isLast: Bool = false
+    }
+    
+    struct GetPinnedNotices: Codable {
+        var pinnedNotices: [PinnedNotice] = []
     }
     
 }
-    extension BoardResponse {
-        struct BoardPageElement: Codable {
-            let title: String
-            let profileImage: String?
-            let writer: String
-            let boardId: String
-            let content: String
-            let thumbnail: String?
-            let hitCount: Int
-            let commentCount: Int
-            let heartCount: Int
-            let createdAt: String
-            let fixed: Bool
-        }
-        
-        struct MyBoardPageElement: Codable {
-            let boardId: String
-            let hostType: String
-            let boardType: String
-            let title: String
-            let hitCount: Int
-            let heartCount: Int
-            let createdAt: String
-        }
-        
-        struct NoticePageElement: Codable {
-            let boardId: String
-            let hostType: String
-            let writer: String
-            let title: String
-            let hitCount: Int
-            let createdAt: String
-            let fixed: Bool
-            
-        }
+extension BoardResponse {
+    struct BoardPageElement: Codable {
+        var title: String = ""
+        var profileImage: String? = ""
+        var writer: String = ""
+        var boardId: String = ""
+        var content: String = ""
+        var thumbnail: String? = ""
+        var hitCount: Int = 0
+        var commentCount: Int = 0
+        var heartCount: Int = 0
+        var createdAt: String
+        var fixed: Bool = false
+    }
+    
+    struct MyBoardPageElement: Codable {
+        var boardId: String = ""
+        var hostType: String = ""
+        var boardType: String = ""
+        var title: String = ""
+        var hitCount: Int = 0
+        var heartCount: Int = 0
+        var createdAt: String = ""
+    }
+    
+    struct NoticePageElement: Codable {
+        var boardId: String = ""
+        var hostType: String = ""
+        var writer: String = ""
+        var title: String = ""
+        var hitCount: Int = 0
+        var createdAt: String = ""
+        var fixed: Bool = false
         
     }
+    
+    struct PinnedNotice: Codable {
+        var hostType: String = ""
+        var title: String = ""
+        var boardId: String = ""
+    }
+    
+}
 

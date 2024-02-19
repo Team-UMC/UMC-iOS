@@ -800,7 +800,7 @@ class BoardNetwork: ObservableObject {
         }
     }
     
-    // 게시판 API - 게시글 특정 게시글 상세 조회 API(fetch)
+    // 게시판 API - 게시글 특정 게시글 상세 조회 API
     func getBoardDetail(boardId: String) async throws -> BoardResponse.GetBoardDetail {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards.rawValue + "/\(boardId)"
@@ -833,6 +833,56 @@ class BoardNetwork: ObservableObject {
         print(boardDetail)
         
         return boardDetail
+    }
+    
+    // 게시판 API - 핀 고정된 notice 조회 API(fetch)
+    @MainActor
+    func fetchGetPinnedBoards() async -> BoardResponse.GetPinnedNotices {
+        var pinnedNotices = BoardResponse.GetPinnedNotices()
+        do {
+            print("fetchGetPinnedBoards : ")
+            
+            pinnedNotices = try await getPinnedBoards()
+            print(pinnedNotices)
+        } catch {
+            print("Error: \(error)")
+        }
+        return pinnedNotices
+    }
+    
+    // 게시판 API - 핀 고정된 notice 조회 API
+    func getPinnedBoards() async throws -> BoardResponse.GetPinnedNotices {
+        var urlComponents = ApiEndpoints.getBasicUrlComponents()
+        urlComponents.path = ApiEndpoints.Path.boards_pinned.rawValue
+        
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            throw ExchangeRateError.cannotCreateURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(data)
+        print(response)
+        
+        if let response = response as? HTTPURLResponse,
+           !(200..<300).contains(response.statusCode) {
+            throw ExchangeRateError.badRequest
+        }
+        
+        let decoder = JSONDecoder()
+        
+        let jsonDictionary = try decoder.decode(BaseResponse<BoardResponse.GetPinnedNotices>.self, from: data)
+        
+        var pinnedNotices: BoardResponse.GetPinnedNotices
+        pinnedNotices = jsonDictionary.result
+        print(pinnedNotices)
+        
+        return pinnedNotices
     }
     
     // GET
