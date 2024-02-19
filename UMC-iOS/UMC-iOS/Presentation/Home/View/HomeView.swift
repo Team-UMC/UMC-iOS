@@ -28,6 +28,7 @@ struct HomeView: View {
     @State var goToMyProfile: Bool = false
     @State var goToMenuView: Bool = false
     @State var goToSetting: Bool = false
+    @State var goToGrowMascot: Bool = false
     
     var body: some View {
         ZStack {
@@ -78,7 +79,7 @@ struct HomeView: View {
                         .padding(.top, 24)
                         
                         HStack(spacing: 18) {
-                            MascotView()
+                            MascotView(isClicked: $goToGrowMascot)
                             RankView()
                         }
                         .padding(.top, 24)
@@ -128,6 +129,9 @@ struct HomeView: View {
                 .closeOnTap(false)
                 .closeOnTapOutside(true)
         })
+        .navigationDestination(isPresented: $goToGrowMascot) {
+            GrowMascotView()
+        }
         .navigationDestination(isPresented: $goToTodoList) {
             ToDoListUI()
                 .navigationBarBackButtonHidden()

@@ -20,14 +20,14 @@ struct GrowMascotView: View {
     var body: some View {
         ZStack {
             
-            Color(.gray)
+            Color.black
                 .ignoresSafeArea(.all)
             // 배경
-//            Image("growMascotViewBackgroundImage")
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-//                .frame(width: UIScreen.main.bounds.width)
-//                .offset(y: -13)
+            Image("growMascotViewBackgroundImage")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: UIScreen.main.bounds.width)
+                .offset(y: -13)
             
             // 지구 이미지, 마스코트
             VStack(spacing: 0) {

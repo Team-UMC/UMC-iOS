@@ -146,6 +146,11 @@ struct SideMenuViewContents: View {
             }
         }
         .onAppear {
+            // 현재 접속중인 챌린저 로딩 API
+            
+        }
+        .onAppear {
+            // 프로필 이미지 지연로딩
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 withAnimation {
                     delayLoadingImage = true
