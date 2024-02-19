@@ -71,32 +71,37 @@ class HomeViewModel:ObservableObject {
         return ZStack {
             VStack(spacing: 0) {
                 
-                Text(popupTitle)
+                Text(noticeInfo.hostType)
                     .font(.system(size: 16))
                     .fontWeight(.medium)
                     .foregroundColor(Color.main2)
                 
-                Text(popupMainText)
+                Text(noticeInfo.title)
+                    .font(.system(size: 16))
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.main2)
+                
+                Text(noticeInfo.content)
                     .font(.system(size: 14))
                     .fontWeight(.regular)
                     .foregroundColor(.black)
                     .padding(.top, 16)
                 
-                HStack(spacing: 2) {
-                    Text("⏰" + popupDate)
-                    Text("|")
-                    Text(popupTime)
-                } // HStack
-                .font(.system(size: 12))
-                .fontWeight(.light)
-                .foregroundColor(Color.tdlGray)
-                .padding(.top, 16)
+//                HStack(spacing: 2) {
+//                    Text("⏰" + noticeInfo.nickname)
+//                    Text("|")
+//                    Text(popupTime)
+//                } // HStack
+//                .font(.system(size: 12))
+//                .fontWeight(.light)
+//                .foregroundColor(Color.tdlGray)
+//                .padding(.top, 16)
                 
-                Text("🏠" + popupLocation)
-                    .font(.system(size: 12))
-                    .fontWeight(.light)
-                    .foregroundColor(Color.tdlGray)
-                    .padding(.top, 4)
+//                Text("🏠" + popupLocation)
+//                    .font(.system(size: 12))
+//                    .fontWeight(.light)
+//                    .foregroundColor(Color.tdlGray)
+//                    .padding(.top, 4)
                 
                 Button {
                     self.shouldShowAnnouncementPopup = false

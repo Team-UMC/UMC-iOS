@@ -11,6 +11,7 @@ struct AnnouncementView: View {
     @State private var selectedIndex = 0
     @Binding var shouldShowAnnouncementPopup: Bool
     @Binding var currentNotice: BoardResponse.PinnedNotice
+    @Binding var selectedNotice: BoardResponse.PinnedNotice
     var pinnedNotices: [BoardResponse.PinnedNotice] = []
     
     let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
@@ -53,6 +54,7 @@ struct AnnouncementView: View {
         } // ZStack
         .onTapGesture {
             print("Announcementview Tapped")
+            selectedNotice = pinnedNotices[selectedIndex]
             self.shouldShowAnnouncementPopup = true
         }
         .onReceive(timer) { _ in

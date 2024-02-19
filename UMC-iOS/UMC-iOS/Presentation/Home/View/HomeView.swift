@@ -25,6 +25,7 @@ struct HomeView: View {
     @State var todayILearneds = TodayILearnedResponse.GetTodayILearned()
     @State var pinnedNotices = BoardResponse.GetPinnedNotices()
     @State var currentNotice = BoardResponse.PinnedNotice()
+    @State var selectedNotice = BoardResponse.PinnedNotice()
     
     @State var goToTodoList: Bool = false
     @State var goToTodayILearned: Bool = false
@@ -33,7 +34,7 @@ struct HomeView: View {
     @State var goToSetting: Bool = false
     @State var goToGrowMascot: Bool = false
     
-    @State var shouldShowAnnouncementPopup: Bool = false
+//    @State var shouldShowAnnouncementPopup: Bool = false
     
     var body: some View {
         ZStack {
@@ -67,7 +68,7 @@ struct HomeView: View {
                         
                         UserInformationView(memberInfo: memberProfile).padding(.top, 20)
                         
-                        AnnouncementView(shouldShowAnnouncementPopup: $shouldShowAnnouncementPopup, currentNotice: $currentNotice, pinnedNotices: pinnedNotices.pinnedNotices).padding(.top, 8)
+                        AnnouncementView(shouldShowAnnouncementPopup: $viewModel.shouldShowAnnouncementPopup, currentNotice: $currentNotice, selectedNotice: $selectedNotice, pinnedNotices: pinnedNotices.pinnedNotices).padding(.top, 8)
                         
                         MainCalendarView(currentDate: $viewModel.currentDate, shouldShowCalendarPopup: $viewModel.shouldShowCalendarPopup).padding(.top, 8)
                         TodoSummaryListView(todoList: todoList, memberNickname: memberProfile.nickname, goToTodoList: $goToTodoList).padding(.top, 24)
@@ -116,7 +117,7 @@ struct HomeView: View {
         }
         .ignoresSafeArea()
         // 공지사항 팝업
-        .popup(isPresented: $shouldShowAnnouncementPopup, view: {self.viewModel.createAnnouncementPopup()},
+        .popup(isPresented: $viewModel.shouldShowAnnouncementPopup, view: {self.viewModel.createAnnouncementPopup(noticeInfo: selectedNotice)},
                customize: {
             $0
                 .type(.default)

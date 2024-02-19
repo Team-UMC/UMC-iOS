@@ -133,6 +133,8 @@ extension BoardResponse {
         var hostType: String = ""
         var title: String = ""
         var boardId: String = ""
+        var content: String = ""
+        var nickname: String = ""
     }
     
 }
