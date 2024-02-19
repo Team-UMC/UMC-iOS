@@ -10,8 +10,8 @@ import SwiftUI
 struct RankingDetailView:View {
 //    @Environment(\.dismiss) private var dismiss
     var activeRankingOrContribution: Int
-    var user = Member()
-    var univ = University()
+//    var user = Member()
+//    var univ = University()
     
     @ObservedObject var viewModel = MascotRankingViewModel()
     @ObservedObject var universityNetwork = UniversityNetwork()
@@ -401,10 +401,15 @@ struct RankingDetailView:View {
                 
             }
 //            .modifier(SettingBackButton(title: "랭킹", onDismiss: { dismiss() }, showTrailingItem: false))            
-            .ignoresSafeArea()
+//            .ignoresSafeArea()
         } // ScrollView
         .background(Color.background)
         .onAppear {
+            if activeRankingOrContribution == 1 {
+                viewModel.selectedRanking = .school
+            } else {
+                viewModel.selectedRanking = .personal
+            }
             Task {
                 universityRanks = await universityNetwork.fetchGetUniversityRanks()
                 memberRankInfo = await memberNetwork.fetchGetMemberRankInfo()

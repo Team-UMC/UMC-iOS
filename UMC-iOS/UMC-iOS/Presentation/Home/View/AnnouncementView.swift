@@ -100,8 +100,10 @@ struct AnnouncementView: View {
             self.shouldShowAnnouncementPopup = true
         }
         .onReceive(timer) { _ in
-            selectedIndex = (selectedIndex + 1) % pinnedNotices.count
-            currentNotice = pinnedNotices[selectedIndex]
+            if !pinnedNotices.isEmpty {
+                selectedIndex = (selectedIndex + 1) % pinnedNotices.count
+                currentNotice = pinnedNotices[selectedIndex]
+            }
 //            print(currentNotice)
         }
     }

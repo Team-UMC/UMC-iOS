@@ -13,6 +13,7 @@ struct mascotFeedPopupView: View {
     var pointType: PointType
     
     @Binding var shouldShowFeedPopup: Bool
+    @Binding var mascotInfo: UniversityResponse.GetUniversityMascotInfo
     
     var body: some View {
         VStack(spacing: 0) {
@@ -44,6 +45,7 @@ struct mascotFeedPopupView: View {
                     print("줄래요 Button Tapped")
                     Task {
                         await universityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: pointType))
+                        mascotInfo = await universityNetwork.fetchGetMascotInfo()
                     }
                     shouldShowFeedPopup.toggle()
                 } label: {

@@ -10,10 +10,14 @@ import PopupView
 
 struct GrowMascotView: View {
     
+    
+    @ObservedObject var universityNetwork = UniversityNetwork()
+    
     @Environment(\.dismiss) private var dismiss
     @State var goToRankingView: Bool = false
     @State var activeRankingOrContribution: Int = 1
     
+    @State var mascotInfo = UniversityResponse.GetUniversityMascotInfo()
     @State var shouldShowFeedPopup: Bool = false
     @State var selectedPointType: PointType = .PUDDING
     
@@ -59,7 +63,7 @@ struct GrowMascotView: View {
                 
                 HStack(spacing: 0) {
                     
-                    UniversityExpView()
+                    UniversityExpView(mascotInfo: $mascotInfo)
                     
                     Spacer()
                     
@@ -98,6 +102,12 @@ struct GrowMascotView: View {
         .navigationDestination(isPresented: $goToRankingView) {
             RankingDetailView(activeRankingOrContribution: activeRankingOrContribution)
         }
+        .onAppear {
+            Task {
+                mascotInfo = await universityNetwork.fetchGetMascotInfo()
+                print(mascotInfo)
+            }
+        }
         
         .popup(isPresented: $shouldShowFeedPopup, view: {self.createFeedPopup()},
                customize: {
@@ -113,7 +123,7 @@ struct GrowMascotView: View {
     
     func createFeedPopup() -> some View {
         
-        return mascotFeedPopupView(pointType: selectedPointType, shouldShowFeedPopup: $shouldShowFeedPopup)
+        return mascotFeedPopupView(pointType: selectedPointType, shouldShowFeedPopup: $shouldShowFeedPopup, mascotInfo: $mascotInfo)
         
     }
 }

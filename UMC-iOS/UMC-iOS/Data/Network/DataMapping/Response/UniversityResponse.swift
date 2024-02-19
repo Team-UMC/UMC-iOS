@@ -29,11 +29,11 @@ struct UniversityResponse: Codable {
     
     struct GetUniversityMascotInfo: Codable {
         var level: Int = 1
-        var point: Int = 1
+        var point: Int = 0
         var rank: Int = 1
-        var mascotImage: String = ""
-        var mascotDialog: String = ""
-        var universityImage: String = ""
+        var universityName: String = ""
+        var mascotImage: String? = ""
+        var mascotDialog: [String] = []
     }
     
     struct UniversityRank: Codable {

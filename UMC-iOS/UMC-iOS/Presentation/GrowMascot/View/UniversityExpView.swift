@@ -9,8 +9,7 @@ import SwiftUI
 
 struct UniversityExpView: View {
     
-    var universityLevel: Int = 0
-    var nowExp: Int = 0
+    @Binding var mascotInfo: UniversityResponse.GetUniversityMascotInfo
     
     var body: some View {
         
@@ -19,7 +18,7 @@ struct UniversityExpView: View {
             HStack(spacing: 12) {
                 
                 // 학교 로고
-                Image("인하대학교")
+                Image(mascotInfo.universityName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(Circle())
@@ -28,7 +27,7 @@ struct UniversityExpView: View {
                 // 레벨, exp
                 VStack(alignment: .leading, spacing: 0) {
                     
-                    Text("LV.\(universityLevel)")
+                    Text("LV.\(mascotInfo.level)")
                         .font(.system(size: 18))
                         .fontWeight(.semibold)
                         .kerning(-1.26)
@@ -36,7 +35,7 @@ struct UniversityExpView: View {
                     
                     HStack(spacing: 0) {
                         
-                        Text("\(nowExp)")
+                        Text("\(mascotInfo.point)")
                             .fontWeight(.semibold)
                         Text(" / 11000")
                         
@@ -60,6 +59,6 @@ struct UniversityExpView: View {
     }
 }
 
-#Preview {
-    UniversityExpView()
-}
+//#Preview {
+//    UniversityExpView()
+//}

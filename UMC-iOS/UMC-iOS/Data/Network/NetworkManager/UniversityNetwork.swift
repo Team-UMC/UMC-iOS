@@ -241,14 +241,15 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 우리 학교 마스코트 조회 API(fetch)
     @MainActor
-    func fetchGetMascotInfo() async {
+    func fetchGetMascotInfo() async -> UniversityResponse.GetUniversityMascotInfo {
+        var mascotInfo = UniversityResponse.GetUniversityMascotInfo()
         do {
-            let universityDetail = try await getMascotInfo()
+            mascotInfo = try await getMascotInfo()
             
-            print(universityDetail)
         } catch {
             print("Error: \(error)")
         }
+        return mascotInfo
     }
     
     // University API - 우리 학교 마스코트 조회 API
@@ -263,7 +264,6 @@ class UniversityNetwork: ObservableObject {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        print("UserDefaults : \(UserDefaults.standard.string(forKey: "Authorization"))")
         request.setValue(UserDefaults.standard.string(forKey: "Authorization"), forHTTPHeaderField: "Authorization")
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -279,7 +279,6 @@ class UniversityNetwork: ObservableObject {
         
         let jsonDictionary = try decoder.decode(BaseResponse<UniversityResponse.GetUniversityMascotInfo>.self, from: data)
         
-        print(jsonDictionary)
         
         var mascotInfo: UniversityResponse.GetUniversityMascotInfo
         mascotInfo = jsonDictionary.result
