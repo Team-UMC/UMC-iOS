@@ -27,6 +27,7 @@ struct HomeView: View {
     @State var goToTodayILearned: Bool = false
     @State var goToMyProfile: Bool = false
     @State var goToMenuView: Bool = false
+    @State var goToSetting: Bool = false
     
     var body: some View {
         ZStack {
@@ -40,7 +41,15 @@ struct HomeView: View {
                         .position(x: UIScreen.main.bounds.width/2, y: 170)
                     
                     
-                    HomeSideView(isShowing: $presentSideMenu, content: AnyView(SideMenuViewContents(memberProfile: memberProfile ,presentSideMenu: $presentSideMenu, goToMyProfile: $goToMyProfile, goToMenuView: $goToMenuView)), direction: .leading)
+                    HomeSideView(isShowing: $presentSideMenu, 
+                                 content: AnyView(SideMenuViewContents(
+                                    memberProfile: memberProfile ,
+                                    presentSideMenu: $presentSideMenu,
+                                    goToMyProfile: $goToMyProfile,
+                                    goToMenuView: $goToMenuView,
+                                    goToSetting: $goToSetting)
+                                 ),
+                                 direction: .leading)
                         .zIndex(1)
                     
                     
@@ -129,6 +138,10 @@ struct HomeView: View {
         }
         .navigationDestination(isPresented: $goToMyProfile) {
             MyProfileView(memberProfile: memberProfile)
+        }
+        .navigationDestination(isPresented: $goToSetting) {
+            SettingPageUI()
+                .navigationBarBackButtonHidden()
         }
         
     }

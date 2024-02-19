@@ -40,6 +40,7 @@ struct SideMenuViewContents: View {
     @Binding var presentSideMenu: Bool
     @Binding var goToMyProfile: Bool
     @Binding var goToMenuView: Bool
+    @Binding var goToSetting: Bool
     
     
     @State private var delayLoadingImage: Bool = false
@@ -96,7 +97,7 @@ struct SideMenuViewContents: View {
                         Spacer().frame(width: 56)
                         SideMenuNavigationButton(destination:MyProfileView(memberProfile: memberProfile), MenuName: "프로필", ImageName: "person.crop.circle.fill", isClicked: $goToMyProfile)
                         Spacer().frame(width: 16)
-                        SideMenuNavigationButton(destination: TodoListAPITestView(), MenuName: "설정", ImageName: "gearshape.fill", isClicked: $goToMenuView) //추후 구현
+                        SideMenuNavigationButton(destination: SettingPageUI(), MenuName: "설정", ImageName: "gearshape.fill", isClicked: $goToSetting) //추후 구현
                     }
                     Spacer().frame(height: 20)
                     HStack(spacing: 32){
