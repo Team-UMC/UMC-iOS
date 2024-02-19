@@ -9,8 +9,8 @@ import SwiftUI
 
 struct mascotFeedPopupView: View {
     
-    var exp: Int = 0
-    
+    @ObservedObject var universityNetwork = UniversityNetwork()
+    var pointType: PointType
     
     @Binding var shouldShowFeedPopup: Bool
     
@@ -27,7 +27,7 @@ struct mascotFeedPopupView: View {
             // Exp 차감 문구
             HStack(spacing: 0) {
                 
-                Text("\(exp) EXP")
+                Text("\(pointType.point) EXP")
                     .fontWeight(.semibold)
                     .foregroundColor(Color.historyPurple)
                 Text("가 차감됩니다.")
@@ -42,6 +42,10 @@ struct mascotFeedPopupView: View {
                 // 확인 버튼
                 Button {
                     print("줄래요 Button Tapped")
+                    Task {
+                        await universityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: pointType))
+                    }
+                    shouldShowFeedPopup.toggle()
                 } label: {
                     Text("줄래요")
                         .font(.system(size: 12))

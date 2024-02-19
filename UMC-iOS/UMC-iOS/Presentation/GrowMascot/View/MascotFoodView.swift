@@ -9,20 +9,21 @@ import SwiftUI
 
 struct MascotFoodView: View {
     
-    var foodImageName: String = ""
-    var exp: Int = 0
-    var foodInfo: String = ""
-    var mascot: String = ""
+//    var foodImageName: String = ""
+//    var exp: Int = 0
+//    var foodInfo: String = ""
+//    var mascot: String = ""
+    var pointType: PointType
+    @Binding var selectedPointType: PointType
     
     @Binding var shouldShowFeedPopup: Bool
-    @Binding var popupExp: Int
     
     var body: some View {
         
         Button {
-            print("\(foodInfo) Button Tapped. (\(exp) exp)")
+            print("\(pointType.rawValue) Button Tapped. (\(pointType.point) exp)")
+            selectedPointType = pointType
             self.shouldShowFeedPopup = true
-            self.popupExp = exp
         } label: {
             
             HStack(spacing: 0) {
@@ -32,7 +33,7 @@ struct MascotFoodView: View {
                     // 먹이 이미지와 exp
                     VStack(alignment: .center, spacing: 0) {
                         
-                        Image(foodImageName)
+                        Image(pointType.image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 24, height: 24)
@@ -45,7 +46,7 @@ struct MascotFoodView: View {
 //                            .frame(width: 48, height: 48)
 //                            .foregroundColor(.white)
                         
-                        Text("\(exp)" + " EXP")
+                        Text("\(pointType.point)" + " EXP")
                             .font(.system(size: 8))
                             .fontWeight(.regular)
                             .foregroundColor(.black)
@@ -58,7 +59,7 @@ struct MascotFoodView: View {
                     } // VStack
                     
                     // 먹이 설명
-                    Text("\(foodInfo)")
+                    Text("\(pointType.description)")
                         .font(.system(size: 12))
                         .fontWeight(.regular)
                         .kerning(-0.24)
