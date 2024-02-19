@@ -128,7 +128,7 @@ struct HomeView: View {
                 .navigationBarBackButtonHidden()
         }
         .navigationDestination(isPresented: $goToMyProfile) {
-            UserProfileUI(memberProfile: memberProfile)
+            MyProfileView(memberProfile: memberProfile)
         }
         
     }

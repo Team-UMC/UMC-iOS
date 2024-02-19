@@ -150,11 +150,11 @@
 		F34D2D1E2B73675300491EBE /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C862B73675300491EBE /* NotificationModel.swift */; };
 		F34D2D1F2B73675300491EBE /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C882B73675300491EBE /* HomeNotificationView.swift */; };
 		F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C892B73675300491EBE /* FriendsListView.swift */; };
-		F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8C2B73675300491EBE /* UserProfileUI.swift */; };
+		F34D2D212B73675300491EBE /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8C2B73675300491EBE /* MyProfileView.swift */; };
 		F34D2D222B73675300491EBE /* ProfileParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8D2B73675300491EBE /* ProfileParts.swift */; };
-		F34D2D232B73675300491EBE /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8E2B73675300491EBE /* UserMessage.swift */; };
-		F34D2D242B73675300491EBE /* UMCseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8F2B73675300491EBE /* UMCseason.swift */; };
-		F34D2D252B73675300491EBE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C902B73675300491EBE /* UserProfile.swift */; };
+		F34D2D232B73675300491EBE /* MemberStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8E2B73675300491EBE /* MemberStatusMessage.swift */; };
+		F34D2D242B73675300491EBE /* ProfileSemesters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C8F2B73675300491EBE /* ProfileSemesters.swift */; };
+		F34D2D252B73675300491EBE /* MemberProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C902B73675300491EBE /* MemberProfileImage.swift */; };
 		F34D2D262B73675300491EBE /* UserProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C932B73675300491EBE /* UserProfileEditViewModel.swift */; };
 		F34D2D272B73675300491EBE /* UserProfileEditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C942B73675300491EBE /* UserProfileEditImageViewModel.swift */; };
 		F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D2C962B73675300491EBE /* UserProfileEditImage.swift */; };
@@ -421,11 +421,11 @@
 		F34D2C862B73675300491EBE /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		F34D2C882B73675300491EBE /* HomeNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
 		F34D2C892B73675300491EBE /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
-		F34D2C8C2B73675300491EBE /* UserProfileUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileUI.swift; sourceTree = "<group>"; };
+		F34D2C8C2B73675300491EBE /* MyProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		F34D2C8D2B73675300491EBE /* ProfileParts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileParts.swift; sourceTree = "<group>"; };
-		F34D2C8E2B73675300491EBE /* UserMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
-		F34D2C8F2B73675300491EBE /* UMCseason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMCseason.swift; sourceTree = "<group>"; };
-		F34D2C902B73675300491EBE /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F34D2C8E2B73675300491EBE /* MemberStatusMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberStatusMessage.swift; sourceTree = "<group>"; };
+		F34D2C8F2B73675300491EBE /* ProfileSemesters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSemesters.swift; sourceTree = "<group>"; };
+		F34D2C902B73675300491EBE /* MemberProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileImage.swift; sourceTree = "<group>"; };
 		F34D2C932B73675300491EBE /* UserProfileEditViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditViewModel.swift; sourceTree = "<group>"; };
 		F34D2C942B73675300491EBE /* UserProfileEditImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditImageViewModel.swift; sourceTree = "<group>"; };
 		F34D2C962B73675300491EBE /* UserProfileEditImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileEditImage.swift; sourceTree = "<group>"; };
@@ -1257,11 +1257,11 @@
 		F34D2C8B2B73675300491EBE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F34D2C8C2B73675300491EBE /* UserProfileUI.swift */,
+				F34D2C8C2B73675300491EBE /* MyProfileView.swift */,
 				F34D2C8D2B73675300491EBE /* ProfileParts.swift */,
-				F34D2C8E2B73675300491EBE /* UserMessage.swift */,
-				F34D2C8F2B73675300491EBE /* UMCseason.swift */,
-				F34D2C902B73675300491EBE /* UserProfile.swift */,
+				F34D2C8E2B73675300491EBE /* MemberStatusMessage.swift */,
+				F34D2C8F2B73675300491EBE /* ProfileSemesters.swift */,
+				F34D2C902B73675300491EBE /* MemberProfileImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1677,7 +1677,7 @@
 				F34D2D2C2B73675300491EBE /* UserProfileEditList.swift in Sources */,
 				F34D2CFB2B73675300491EBE /* MyContentPreList.swift in Sources */,
 				E3C5A63F2B7DCBF7009518D8 /* MascotImageView.swift in Sources */,
-				F34D2D212B73675300491EBE /* UserProfileUI.swift in Sources */,
+				F34D2D212B73675300491EBE /* MyProfileView.swift in Sources */,
 				44FCC3802B7B6EF500C41278 /* DetailButtonViewModel.swift in Sources */,
 				F34D2D5D2B7367DC00491EBE /* CalendarTask.swift in Sources */,
 				F3B689412B77BA1C00A4FBB5 /* TodoListAPITestView.swift in Sources */,
@@ -1779,7 +1779,7 @@
 				F34D2CD52B73675300491EBE /* WritingListThirdCell.swift in Sources */,
 				F34D2BCF2B73671700491EBE /* UMC_iOSApp.swift in Sources */,
 				427820432B7520170024476C /* FriendsRequest.swift in Sources */,
-				F34D2D232B73675300491EBE /* UserMessage.swift in Sources */,
+				F34D2D232B73675300491EBE /* MemberStatusMessage.swift in Sources */,
 				44B0C7902B74FB3D000AF621 /*  BoardSearchLikedResultRequest.swift in Sources */,
 				F34D2D202B73675300491EBE /* FriendsListView.swift in Sources */,
 				F34D2D102B73675300491EBE /* ProjectTypeButtonView.swift in Sources */,
@@ -1798,7 +1798,7 @@
 				F3935D242B7B53230036E77A /* ScheduleNetwork.swift in Sources */,
 				F3935D1E2B7B4CD40036E77A /* Board.swift in Sources */,
 				E376F82A2B7D538800C874B6 /* UniversityExpView.swift in Sources */,
-				F34D2D242B73675300491EBE /* UMCseason.swift in Sources */,
+				F34D2D242B73675300491EBE /* ProfileSemesters.swift in Sources */,
 				E376F82C2B7D53DB00C874B6 /* UniversityRankButtonView.swift in Sources */,
 				F34D2D0E2B73675300491EBE /* TILListThirdCell.swift in Sources */,
 				F34D2D282B73675300491EBE /* UserProfileEditImage.swift in Sources */,
@@ -1835,7 +1835,7 @@
 				F3935D302B7B76A10036E77A /* BoardAPITestView.swift in Sources */,
 				F34D2D5C2B7367DC00491EBE /* ManagerModel.swift in Sources */,
 				F34D2CF32B73675300491EBE /* ToDoDate.swift in Sources */,
-				F34D2D252B73675300491EBE /* UserProfile.swift in Sources */,
+				F34D2D252B73675300491EBE /* MemberProfileImage.swift in Sources */,
 				44FCC3872B7D2A8700C41278 /* RankingTitle.swift in Sources */,
 				F34D2D222B73675300491EBE /* ProfileParts.swift in Sources */,
 				F3935D202B7B4E4B0036E77A /* HostType.swift in Sources */,

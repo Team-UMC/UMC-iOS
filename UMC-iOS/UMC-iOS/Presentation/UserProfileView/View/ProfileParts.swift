@@ -1,4 +1,4 @@
-//  AbleStack.swift
+//  ProfileParts.swift
 //  UMC-iOS
 //
 //  Created by 나예은 on 2024/01/18.

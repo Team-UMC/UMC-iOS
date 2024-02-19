@@ -6,9 +6,9 @@
 
 import SwiftUI
 
-struct UserMessage: View {
+struct MemberStatusMessage: View {
     let textColor = Color(#colorLiteral(red: 0.250980407, green: 0.270588248, blue: 0.4470588276, alpha: 1))
-    var statusMessage:String = "상태 메세지"
+    var statusMessage: String
     var body: some View {
             VStack{
                 
@@ -21,10 +21,10 @@ struct UserMessage: View {
                         .shadow(color:.gray.opacity(0.3), radius: 5)
                         .frame(width: 280, height: 75)
                     VStack(spacing: 8) {
-                        Text(statusMessage)
+                        Text("상태 메세지")
                             .foregroundColor(.gray)
                             .font(.system(size: 14).bold())
-                        Text("상태메세지를 입력해주세요.")
+                        Text(statusMessage == "" ? "상태메세지를 입력해주세요." : statusMessage)
                             .font(.system(size: 16))
                             .foregroundColor(.gray)
                     }

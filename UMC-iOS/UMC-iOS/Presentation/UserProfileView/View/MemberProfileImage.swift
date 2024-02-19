@@ -7,7 +7,7 @@
 import SwiftUI
 
 
-struct UserProfile: View {
+struct MemberProfileImage: View {
     var memberInfo: MemberResponse.GetMemberProfile
     
     var body: some View {

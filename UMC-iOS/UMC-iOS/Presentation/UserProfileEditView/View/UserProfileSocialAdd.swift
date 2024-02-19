@@ -27,7 +27,7 @@ struct UserProfileSocialAdd: View {
 //                    UMCSeason(memberSemesters: memberINfo: Member())    // 기수
                 }
                 SocialButtonSet()  // 친구 추가 및 쪽지 보내기
-                UserMessage()  // 상태 메세지 및 버튼
+//                MemberStatusMessage(statusMessage: m)  // 상태 메세지 및 버튼
             }
             .padding(.bottom, 60)
         }

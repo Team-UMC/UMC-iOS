@@ -1,4 +1,4 @@
-//  UserProfileUI.swift
+//  MyProfileView.swift
 //  UMC-iOS
 //
 //  Created by 나예은 on 2024/01/18.
@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-struct UserProfileUI: View {
+struct MyProfileView: View {
     @State private var isClicked = false
     @Environment(\.presentationMode) var presentationMode
     @State private var isEditingProfile = false
@@ -24,14 +24,14 @@ struct UserProfileUI: View {
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
                 VStack {
-                    UserProfile(memberInfo: memberProfile) // Photo and university label
+                    MemberProfileImage(memberInfo: memberProfile) // Photo and university label
                     
                     HStack(spacing: 8) {
                         ProfileParts(memberParts: memberProfile.semesterParts) // Parts
                         ProfileSemesters(memberSemesters: memberProfile.semesterParts) // Semesters
                     }
                     
-                    UserMessage() // Status message and buttons
+                    MemberStatusMessage(statusMessage: memberProfile.statusMessage ?? "") // Status message and buttons
                         .padding(.top,70)
                         .padding(.bottom,30)
                     
@@ -62,7 +62,7 @@ struct UserProfileUI: View {
 #if DEBUG
 struct UserProfileUI_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileUI(memberProfile: MemberResponse.GetMemberProfile())
+        MyProfileView(memberProfile: MemberResponse.GetMemberProfile())
     }
 }
 #endif

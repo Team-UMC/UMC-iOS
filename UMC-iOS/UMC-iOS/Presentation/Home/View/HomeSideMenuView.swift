@@ -94,7 +94,7 @@ struct SideMenuViewContents: View {
                             }
                         }
                         Spacer().frame(width: 56)
-                        SideMenuNavigationButton(destination:UserProfileUI(memberProfile: memberProfile), MenuName: "프로필", ImageName: "person.crop.circle.fill", isClicked: $goToMyProfile)
+                        SideMenuNavigationButton(destination:MyProfileView(memberProfile: memberProfile), MenuName: "프로필", ImageName: "person.crop.circle.fill", isClicked: $goToMyProfile)
                         Spacer().frame(width: 16)
                         SideMenuNavigationButton(destination: TodoListAPITestView(), MenuName: "설정", ImageName: "gearshape.fill", isClicked: $goToMenuView) //추후 구현
                     }

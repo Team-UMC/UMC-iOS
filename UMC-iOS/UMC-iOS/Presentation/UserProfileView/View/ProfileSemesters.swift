@@ -1,5 +1,5 @@
 //
-//  UMCseason.swift
+//  ProfileSemesters.swift
 //  UMC-iOS
 //
 //  Created by 나예은 on 2024/02/06.
