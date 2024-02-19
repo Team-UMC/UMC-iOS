@@ -2,7 +2,7 @@
 //  UMC-iOS
 //
 //  Created by 나예은 on 2024/01/18.
-//
+
 
 import SwiftUI
 
@@ -39,3 +39,4 @@ struct AbleStack: View {
 #Preview {
     AbleStack(member: Member())  // 실제 Member 객체와 함께 semesterParts를 전달해 주세요
 }
+
