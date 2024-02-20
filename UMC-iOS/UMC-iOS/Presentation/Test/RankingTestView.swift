@@ -18,6 +18,7 @@ struct RankingTestView: View {
     @State var universityRanks = UniversityResponse.GetUniversityRanks()
     @State var myUniversityRankDetail = UniversityResponse.GetUniverSityDetail()
     @State var memberRankInfo = MemberResponse.GetMemberRankInfo()
+    @State var contributionRanking = UniversityResponse.GetContributionRankingInCampus()
     
     
     var mascot: String = "mascotImage2"
@@ -350,6 +351,32 @@ struct RankingTestView: View {
                                      alignment: .top)
                             .shadow(color: .shadow60,radius: 2, y: 2)
                             
+                            VStack {
+                                ForEach(universityRanks.joinUniversityRanks, id: \.self) { univ in
+                                    HStack {
+                                        Spacer().frame(width: 20)
+                                        Text("\(univ.universityRank)등")
+                                            .font(.system(size: 16, weight: .medium))
+                                            .foregroundStyle(.main)
+                                        Spacer()
+                                        Text(univ.universityName)
+                                            .font(.system(size: 16, weight: .medium))
+                                        Spacer()
+                                        Text("\(univ.universityPoint) points")
+                                            .font(.system(size: 10))
+                                        Spacer().frame(width: 20)
+                                    }
+                                    .frame(width: 310, height: 41)
+                                    .background {
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .fill(.white)
+                                            .shadow(color: .shadow60,radius: 5, y: 1)
+                                    }
+                                    .listRowInsets(.init(top: 20, leading: 30, bottom: 20, trailing: 30))
+                                    .cornerRadius(5)
+    //                                .listRowSeparator(.hidden)
+                                }
+                            }
                             
                             
                         }
@@ -363,6 +390,7 @@ struct RankingTestView: View {
                 myUniversityRankDetail = await UniversityNetwork.fetchGetUniversityDetail()
                 universityRanks = await UniversityNetwork.fetchGetUniversityRanks()
                 memberRankInfo = await MemberNetwork.fetchGetMemberRankInfo()
+                contributionRanking = await UniversityNetwork.fetchGetContributionRankingInCampus()
             }
         }
     }

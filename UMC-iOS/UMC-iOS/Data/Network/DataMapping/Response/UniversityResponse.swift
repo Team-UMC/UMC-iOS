@@ -68,4 +68,18 @@ struct UniversityResponse: Codable {
         var universityId: String = ""
     }
     
+    struct GetContributionRankingInCampus: Codable {
+        var joinContributionRanks: [JoinContributioinRank] = []
+    }
+    
+}
+
+extension UniversityResponse {
+    struct JoinContributioinRank: Codable, Hashable {
+        var nickname: String = ""
+        var name: String = ""
+        var profileImage: String? = ""
+        var usedPoint: Int = 0
+        var rank: Int = 0
+    }
 }
