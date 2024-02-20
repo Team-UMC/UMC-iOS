@@ -36,7 +36,7 @@ struct UniversityResponse: Codable {
         var mascotDialog: [String] = []
     }
     
-    struct UniversityRank: Codable {
+    struct UniversityRank: Codable, Hashable {
         var universityName: String = ""
         var universityLogo: String = ""
         var universityPoint: Int = 1

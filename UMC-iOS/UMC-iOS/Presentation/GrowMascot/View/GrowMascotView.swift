@@ -99,9 +99,9 @@ struct GrowMascotView: View {
             
         } // ZStack
         .navigationDestination(isPresented: $goToRankingView) {
-//            RankingDetailView(activeRankingOrContribution: activeRankingOrContribution)
+//            RankingDetailView(activeRankingOrContribution: $activeRankingOrContribution)
             RankingTestView(activeRankingOrContribution: $activeRankingOrContribution)
-                .navigationBarBackButtonHidden()
+//                .navigationBarBackButtonHidden()
         }
         .onAppear {
             Task {
