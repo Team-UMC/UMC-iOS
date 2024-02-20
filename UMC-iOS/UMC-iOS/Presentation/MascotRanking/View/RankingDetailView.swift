@@ -14,8 +14,7 @@ struct RankingDetailView:View {
 //    var univ = University()
     
     @ObservedObject var viewModel = MascotRankingViewModel()
-    @ObservedObject var universityNetwork = UniversityNetwork()
-    @ObservedObject var memberNetwork = MemberNetwork()
+//    @ObservedObject var memberNetwork = MemberNetwork()
     
     @State var universityRanks = UniversityResponse.GetUniversityRanks()
     @State var myUniversityRankDetail = UniversityResponse.GetUniverSityDetail()
@@ -54,7 +53,7 @@ struct RankingDetailView:View {
                     Button(action: {
                         self.viewModel.selectedRanking = .school
                         Task {
-                            universityRanks = await universityNetwork.fetchGetUniversityRanks()
+                            universityRanks = await UniversityNetwork.fetchGetUniversityRanks()
                         }
                     }) {
                         VStack {
@@ -102,7 +101,7 @@ struct RankingDetailView:View {
                     Button(action: {
                         self.viewModel.selectedRanking = .personal
                         Task {
-                            memberRankInfo = await memberNetwork.fetchGetMemberRankInfo()
+                            memberRankInfo = await MemberNetwork.fetchGetMemberRankInfo()
                         }
                     }) {
                         VStack {
@@ -411,9 +410,9 @@ struct RankingDetailView:View {
                 viewModel.selectedRanking = .personal
             }
             Task {
-                universityRanks = await universityNetwork.fetchGetUniversityRanks()
-                memberRankInfo = await memberNetwork.fetchGetMemberRankInfo()
-                myUniversityRankDetail = await universityNetwork.fetchGetUniversityDetail()
+                universityRanks = await UniversityNetwork.fetchGetUniversityRanks()
+                memberRankInfo = await MemberNetwork.fetchGetMemberRankInfo()
+                myUniversityRankDetail = await UniversityNetwork.fetchGetUniversityDetail()
             }
         }
     }

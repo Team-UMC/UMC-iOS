@@ -11,7 +11,7 @@ class TodayILearnedNetwork: ObservableObject {
     
     // TodayILearned API - 투두리스트 조회 API(fetch)
     @MainActor
-    func fetchGetTodayILearned(date: String) async -> TodayILearnedResponse.GetTodayILearned {
+    static func fetchGetTodayILearned(date: String) async -> TodayILearnedResponse.GetTodayILearned {
         var todayILearnedInfos = TodayILearnedResponse.GetTodayILearned()
         do {
             todayILearnedInfos = try await getTodayILearneds(date: date)
@@ -24,7 +24,7 @@ class TodayILearnedNetwork: ObservableObject {
     }
     
     // TodoList API - 투두리스트 조회 API
-    func getTodayILearneds(date: String) async throws -> TodayILearnedResponse.GetTodayILearned {
+    static func getTodayILearneds(date: String) async throws -> TodayILearnedResponse.GetTodayILearned {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.today_i_learned.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "date", value: date)]

@@ -9,11 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
-    @ObservedObject var memberNetwork = MemberNetwork()
-    @ObservedObject var scheduleNetwork = ScheduleNetwork()
-    @ObservedObject var todoListNetwork = TodoListNetwork()
-    @ObservedObject var todayILearendNetwork = TodayILearnedNetwork()
-    @ObservedObject var boardNetwork = BoardNetwork()
     
     @State private var presentSideMenu = false // 사이드 메뉴 표시 여부
     @State private var isNavigationBtnTapped: [Bool] = [false, false, false, false]
@@ -111,12 +106,12 @@ struct HomeView: View {
         } // ZStack (최 상단에 팝업 뷰 배치)
         .onAppear {
             Task {
-                memberProfile = await memberNetwork.fetchGetMemberProfile(memberId: "")
-                calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: viewModel.currentDate)))
-                todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
-                todayILearneds = await todayILearendNetwork.fetchGetTodayILearned(date: String.currentLocalDateToString())
-                pinnedNotices = await boardNetwork.fetchGetPinnedBoards()
-                memberRankInfo = await memberNetwork.fetchGetMemberRankInfo()
+                memberProfile = await MemberNetwork.fetchGetMemberProfile(memberId: "")
+                calendarInfo = await ScheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: viewModel.currentDate)))
+                todoList = await TodoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
+                todayILearneds = await TodayILearnedNetwork.fetchGetTodayILearned(date: String.currentLocalDateToString())
+                pinnedNotices = await BoardNetwork.fetchGetPinnedBoards()
+                memberRankInfo = await MemberNetwork.fetchGetMemberRankInfo()
                 
                 calendarTasks = scheduleInfoListToTaskMetaData(calendarInfo: calendarInfo.schedules)
                 print("$$$$$$$$$$$$ <calendarTasks> $$$$$$$$$$$$\n\n\(calendarTasks)")

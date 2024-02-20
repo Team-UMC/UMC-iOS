@@ -17,7 +17,7 @@ struct FileUploadTestView: View {
     @State var updateOpenFile = false
     @State var updateSaveFile = false
     @State var updateBoardId = ""
-    @ObservedObject var boardNetwork = BoardNetwork()
+//    @ObservedObject var boardNetwork = BoardNetwork()
     
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
@@ -80,7 +80,7 @@ struct FileUploadTestView: View {
                     print("fileInfo: \(fileInfo)")
                     
                     Task {
-                        await boardNetwork.fetchCreateBoard(request: BoardRequest.CreateBoard(title: "TEST", content: "TEST", host: "CENTER", board: "NOTICE"), files: [fileInfo])
+                        await BoardNetwork.fetchCreateBoard(request: BoardRequest.CreateBoard(title: "TEST", content: "TEST", host: "CENTER", board: "NOTICE"), files: [fileInfo])
                     }
                     
                 } catch {
@@ -159,7 +159,7 @@ struct FileUploadTestView: View {
                     print("fileInfo: \(fileInfo)")
                     
                     Task {
-                        await boardNetwork.fetchUpdateBoard(boardId: updateBoardId,request: BoardRequest.UpdateBoard(title: "TEST", content: "TEST", host: "CENTER", board: "NOTICE"), files: [fileInfo])
+                        await BoardNetwork.fetchUpdateBoard(boardId: updateBoardId,request: BoardRequest.UpdateBoard(title: "TEST", content: "TEST", host: "CENTER", board: "NOTICE"), files: [fileInfo])
                     }
                     
                 } catch {

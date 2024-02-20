@@ -9,7 +9,7 @@ import SwiftUI
 
 struct mascotFeedPopupView: View {
     
-    @ObservedObject var universityNetwork = UniversityNetwork()
+//    @ObservedObject var universityNetwork = UniversityNetwork()
     var pointType: PointType
     
     @Binding var shouldShowFeedPopup: Bool
@@ -44,8 +44,8 @@ struct mascotFeedPopupView: View {
                 Button {
                     print("줄래요 Button Tapped")
                     Task {
-                        await universityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: pointType))
-                        mascotInfo = await universityNetwork.fetchGetMascotInfo()
+                        await UniversityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: pointType))
+                        mascotInfo = await UniversityNetwork.fetchGetMascotInfo()
                     }
                     shouldShowFeedPopup.toggle()
                 } label: {

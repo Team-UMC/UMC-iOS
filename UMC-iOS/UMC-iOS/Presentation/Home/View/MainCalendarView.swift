@@ -9,7 +9,7 @@ import SwiftUI
 import PopupView
 
 struct MainCalendarView: View {
-    @ObservedObject var scheduleNetwork = ScheduleNetwork()
+//    @ObservedObject var scheduleNetwork = ScheduleNetwork()
     
     @State var calendarInfo: ScheduleResponse.GetCalendar = ScheduleResponse.GetCalendar()
     @Binding var scheduleDetailInfos: [ScheduleResponse.GetSchedulesDetail]
@@ -53,7 +53,7 @@ struct MainCalendarView: View {
                             print("현재 날짜 \(currentDate)")
                         }
                         Task {
-                            calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: currentDate)))
+                            calendarInfo = await ScheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: currentDate)))
                             calendarTasks = scheduleInfoListToTaskMetaData(calendarInfo: calendarInfo.schedules)
                         }
                         
@@ -75,7 +75,7 @@ struct MainCalendarView: View {
                         }
                         Task {
 
-                            calendarInfo = await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: currentDate)))
+                            calendarInfo = await ScheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: String.dateToString(date: currentDate)))
                             calendarTasks = scheduleInfoListToTaskMetaData(calendarInfo: calendarInfo.schedules)
                         }
                         
@@ -130,7 +130,7 @@ struct MainCalendarView: View {
                                 }) {
                                     Task {
                                         for index in task.calendarTasks {
-                                            var scheduleDetailInfo = await scheduleNetwork.fetchGetScheduleDetail(scheduleId: index.scheduleId)
+                                            var scheduleDetailInfo = await ScheduleNetwork.fetchGetScheduleDetail(scheduleId: index.scheduleId)
                                             scheduleDetailInfos.append(scheduleDetailInfo)
                                         }
                                     }

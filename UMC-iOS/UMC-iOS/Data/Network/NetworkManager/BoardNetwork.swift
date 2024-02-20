@@ -15,7 +15,7 @@ class BoardNetwork: ObservableObject {
     // GET
     // 게시판 API - 특정 게시판의 게시글 목록 조회 API(fetch)
     @MainActor
-    func fetchGetSpecificBoards(host: String, board: String, page: Int) async {
+    static func fetchGetSpecificBoards(host: String, board: String, page: Int) async {
         do {
             let response = try await getSpecificBoards(host: host, board: board, page: page)
             print(response)
@@ -26,7 +26,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 특정 게시판의 게시글 목록 조회 API
-    func getSpecificBoards(host: String, board: String, page: Int) async throws -> BoardResponse.SpecificBoards {
+    static func getSpecificBoards(host: String, board: String, page: Int) async throws -> BoardResponse.SpecificBoards {
         //URL 생성
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards.rawValue
@@ -66,7 +66,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 게시글 검색 API(fetch)
     @MainActor
-    func fetchSearchBoards(keyword: String, page: Int) async {
+    static func fetchSearchBoards(keyword: String, page: Int) async {
         do {
             let response = try await searchBoards(keyword: keyword, page: page)
             print(response)
@@ -77,7 +77,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 게시글 검색 API
-    func searchBoards(keyword: String, page: Int) async throws -> BoardResponse.SearchBoards {
+    static func searchBoards(keyword: String, page: Int) async throws -> BoardResponse.SearchBoards {
         //URL 생성
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_search.rawValue
@@ -116,7 +116,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 내가 쓴 게시글 조회/검색 API(fetch)
     @MainActor
-    func fetchGetMyBoards(keyword: String, page: Int) async {
+    static func fetchGetMyBoards(keyword: String, page: Int) async {
         do {
             let response = try await getMyBoards(keyword: keyword, page: page)
             print(response)
@@ -127,7 +127,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 내가 쓴 게시글 조회/검색 API
-    func getMyBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyBoards {
+    static func getMyBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyBoards {
         //URL 생성
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_member_app.rawValue
@@ -166,7 +166,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 내가 좋아요한 게시글 조회/검색 API(fetch)
     @MainActor
-    func fetchGetMyHeartBoards(keyword: String, page: Int) async {
+    static func fetchGetMyHeartBoards(keyword: String, page: Int) async {
         do {
             let response = try await getMyHeartBoards(keyword: keyword, page: page)
             print(response)
@@ -177,7 +177,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 내가 좋아요한 게시글 조회/검색 API
-    func getMyHeartBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyHeartBoards {
+    static func getMyHeartBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyHeartBoards {
         //URL 생성
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_member_hearts_app.rawValue
@@ -216,7 +216,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 내가 댓글 쓴 글 조회/검색 API(fetch)
     @MainActor
-    func fetchGetMyCommentBoards(keyword: String, page: Int) async {
+    static func fetchGetMyCommentBoards(keyword: String, page: Int) async {
         do {
             let response = try await getMyCommentBoards(keyword: keyword, page: page)
             print(response)
@@ -227,7 +227,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 내가 댓글 쓴 글 조회/검색 API
-    func getMyCommentBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyCommentBoards {
+    static func getMyCommentBoards(keyword: String, page: Int) async throws -> BoardResponse.GetMyCommentBoards {
         //URL 생성
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_comments_member_comments_app.rawValue
@@ -266,7 +266,7 @@ class BoardNetwork: ObservableObject {
     
     // 운영진 게시판 API - 공지사항 목록 조회/검색 API(fetch)
     @MainActor
-    func fetchGetStaffNoticeBoards(host: String, keyword: String, page: Int) async {
+    static func fetchGetStaffNoticeBoards(host: String, keyword: String, page: Int) async {
         do {
             let response = try await getStaffNoticeBoards(host: host, keyword: keyword, page: page)
             print(response)
@@ -277,7 +277,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 운영진 게시판 API - 공지사항 목록 조회/검색 API
-    func getStaffNoticeBoards(host: String, keyword: String, page: Int) async throws -> BoardResponse.GetStaffNoticeBoards {
+    static func getStaffNoticeBoards(host: String, keyword: String, page: Int) async throws -> BoardResponse.GetStaffNoticeBoards {
         //URL 생성
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.staff_boards_notices.rawValue
@@ -319,7 +319,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 게시글 작성 API(fetch)
     @MainActor
-    func fetchCreateBoard(request: BoardRequest.CreateBoard, files: [FileInfo]) async {
+    static func fetchCreateBoard(request: BoardRequest.CreateBoard, files: [FileInfo]) async {
         do {
             print("fetchCreateBoard : \(request)")
             
@@ -341,7 +341,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 게시글 작성 API
-    func createBoard(sendData: Data, files: [FileInfo]) async throws -> BoardResponse.BoardId {
+    static func createBoard(sendData: Data, files: [FileInfo]) async throws -> BoardResponse.BoardId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards.rawValue
         
@@ -395,7 +395,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 게시글 수정 API(fetch)
     @MainActor
-    func fetchUpdateBoard(boardId: String, request: BoardRequest.UpdateBoard, files: [FileInfo]) async {
+    static func fetchUpdateBoard(boardId: String, request: BoardRequest.UpdateBoard, files: [FileInfo]) async {
         do {
             print("fetchUpdateBoard : \(request)")
             
@@ -417,7 +417,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 게시글 수정 API
-    func updateBoard(boardId: String, sendData: Data, files: [FileInfo]) async throws -> BoardResponse.BoardId {
+    static func updateBoard(boardId: String, sendData: Data, files: [FileInfo]) async throws -> BoardResponse.BoardId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards.rawValue + "/\(boardId)"
         
@@ -471,7 +471,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 댓글 API - 댓글 작성 API(fetch)
     @MainActor
-    func fetchCreateBoardComment(request: BoardCommentRequest.CreateBoardComment) async {
+    static func fetchCreateBoardComment(request: BoardCommentRequest.CreateBoardComment) async {
         do {
             print("fetchCreateBoardComment : \(request)")
             
@@ -493,7 +493,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 댓글 API - 댓글 작성 API
-    func createBoardComment(sendData: Data) async throws -> BoardCommentResponse.BoardCommentId {
+    static func createBoardComment(sendData: Data) async throws -> BoardCommentResponse.BoardCommentId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_comments.rawValue
         
@@ -530,7 +530,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 댓글 API - 댓글 수정 API(fetch)
     @MainActor
-    func fetchUpdateBoardComment(commentId: String, request: BoardCommentRequest.UpdateBoardComment) async {
+    static func fetchUpdateBoardComment(commentId: String, request: BoardCommentRequest.UpdateBoardComment) async {
         do {
             print("fetchUpdateBoardComment : \(request)")
             
@@ -552,7 +552,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 댓글 API - 댓글 수정 API
-    func updateBoardComment(commentId: String, sendData: Data) async throws -> BoardCommentResponse.BoardCommentId {
+    static func updateBoardComment(commentId: String, sendData: Data) async throws -> BoardCommentResponse.BoardCommentId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_comments.rawValue + "/\(commentId)"
         
@@ -589,7 +589,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 댓글 API - 댓글 삭제 API(fetch)
     @MainActor
-    func fetchDeleteBoardComment(commentId: String) async {
+    static func fetchDeleteBoardComment(commentId: String) async {
         do {
             print("fetchDeleteBoardComment : \(commentId)")
             print(commentId)
@@ -602,7 +602,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 댓글 API - 댓글 삭제 API
-    func deleteBoardComment(commentId: String) async throws -> BoardCommentResponse.BoardCommentId {
+    static func deleteBoardComment(commentId: String) async throws -> BoardCommentResponse.BoardCommentId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_comments.rawValue + "/\(commentId)"
         
@@ -638,7 +638,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 게시글 삭제 API(fetch)
     @MainActor
-    func fetchDeleteBoard(request: BoardRequest.BoardId) async {
+    static func fetchDeleteBoard(request: BoardRequest.BoardId) async {
         do {
             print("fetchDeleteBoard : \(request)")
             print(request)
@@ -651,7 +651,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 게시글 삭제 API
-    func deleteBoard(boardId: String) async throws -> BoardResponse.BoardId {
+    static func deleteBoard(boardId: String) async throws -> BoardResponse.BoardId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards.rawValue + "/\(boardId)"
         
@@ -687,7 +687,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 게시글 좋아요/취소 API(fetch)
     @MainActor
-    func fetchHeartBoard(boardId: String) async {
+    static func fetchHeartBoard(boardId: String) async {
         do {
             print("fetchHeartBoard : \(boardId)")
             print(boardId)
@@ -700,7 +700,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 게시글 좋아요/취소 API
-    func heartBoard(boardId: String) async throws -> BoardResponse.BoardId {
+    static func heartBoard(boardId: String) async throws -> BoardResponse.BoardId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards.rawValue + "/\(boardId)" + ApiEndpoints.Path.heart.rawValue
         
@@ -736,7 +736,7 @@ class BoardNetwork: ObservableObject {
     
     // 운영진 게시판 API - 교내 공지사항 핀 설정 API(fetch)
     @MainActor
-    func fetchPinnedBoard(boardId: String, isPinned: Bool) async {
+    static func fetchPinnedBoard(boardId: String, isPinned: Bool) async {
         do {
             print("fetchPinnedBoard : \(boardId)")
             print(boardId)
@@ -751,7 +751,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 운영진 게시판 API - 교내 공지사항 핀 설정 API(fetch)
-    func pinnedBoard(boardId: String, isPinned: Bool) async throws -> BoardResponse.BoardId {
+    static func pinnedBoard(boardId: String, isPinned: Bool) async throws -> BoardResponse.BoardId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.staff_boards_notices.rawValue + "/\(boardId)" + ApiEndpoints.Path.pin.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "isPinned", value: "\(isPinned)")]
@@ -789,7 +789,7 @@ class BoardNetwork: ObservableObject {
     // GET
     // 게시판 API - 게시글 특정 게시글 상세 조회 API(fetch)
     @MainActor
-    func fetchGetBoardDetail(boardId: String) async {
+    static func fetchGetBoardDetail(boardId: String) async {
         do {
             print("fetchGetBoardDetail : \(boardId)")
             
@@ -801,7 +801,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 게시글 특정 게시글 상세 조회 API
-    func getBoardDetail(boardId: String) async throws -> BoardResponse.GetBoardDetail {
+    static func getBoardDetail(boardId: String) async throws -> BoardResponse.GetBoardDetail {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards.rawValue + "/\(boardId)"
         
@@ -837,7 +837,7 @@ class BoardNetwork: ObservableObject {
     
     // 게시판 API - 핀 고정된 notice 조회 API(fetch)
     @MainActor
-    func fetchGetPinnedBoards() async -> BoardResponse.GetPinnedNotices {
+    static func fetchGetPinnedBoards() async -> BoardResponse.GetPinnedNotices {
         var pinnedNotices = BoardResponse.GetPinnedNotices()
         do {
             print("fetchGetPinnedBoards : ")
@@ -851,7 +851,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 핀 고정된 notice 조회 API
-    func getPinnedBoards() async throws -> BoardResponse.GetPinnedNotices {
+    static func getPinnedBoards() async throws -> BoardResponse.GetPinnedNotices {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_pinned.rawValue
         
@@ -888,7 +888,7 @@ class BoardNetwork: ObservableObject {
     // GET
     // 게시판 API - 게시글 특정 게시글 댓글 목록 조회 API(fetch)
     @MainActor
-    func fetchGetSpecificBoardComment(boardId: String, page: Int) async {
+    static func fetchGetSpecificBoardComment(boardId: String, page: Int) async {
         do {
             print("fetchGetSpecificBoardComment : \(boardId)")
             
@@ -900,7 +900,7 @@ class BoardNetwork: ObservableObject {
     }
     
     // 게시판 API - 게시글 특정 게시글 상세 조회 API(fetch)
-    func getSpecificBoardComment(boardId: String, page: Int) async throws -> BoardCommentResponse.GetSpecificBoardComments {
+    static func getSpecificBoardComment(boardId: String, page: Int) async throws -> BoardCommentResponse.GetSpecificBoardComments {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.boards_comments.rawValue + "/\(boardId)"
         urlComponents.queryItems = [URLQueryItem(name: "page", value: "\(page)")]

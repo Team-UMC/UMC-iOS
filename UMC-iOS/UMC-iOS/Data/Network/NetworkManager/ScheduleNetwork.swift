@@ -13,7 +13,7 @@ class ScheduleNetwork: ObservableObject {
     // GET
     // Schedule API - 일정 조회(상세조회) API(fetch)
     @MainActor
-    func fetchGetScheduleDetail(scheduleId: String) async -> ScheduleResponse.GetSchedulesDetail {
+    static func fetchGetScheduleDetail(scheduleId: String) async -> ScheduleResponse.GetSchedulesDetail {
         var scheduleDetail = ScheduleResponse.GetSchedulesDetail()
         do {
             print("fetchGetScheduleDetail : \(scheduleId)")
@@ -27,7 +27,7 @@ class ScheduleNetwork: ObservableObject {
     }
     
     // Schedule API - 일정 조회(상세조회) API
-    func getScheduleDetail(scheduleId: String) async throws -> ScheduleResponse.GetSchedulesDetail {
+    static func getScheduleDetail(scheduleId: String) async throws -> ScheduleResponse.GetSchedulesDetail {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.scheudles_detail.rawValue + "/\(scheduleId)"
         
@@ -65,7 +65,7 @@ class ScheduleNetwork: ObservableObject {
     
     // Schedule API - 캘린더 조회 API(fetch)
     @MainActor
-    func fetchGetCalendar(request: ScheduleRequest.GetCalendar) async -> ScheduleResponse.GetCalendar {
+    static func fetchGetCalendar(request: ScheduleRequest.GetCalendar) async -> ScheduleResponse.GetCalendar {
         var calendarInfo = ScheduleResponse.GetCalendar()
         do {
             print("fetchGetCalendar : \(request)")
@@ -80,7 +80,7 @@ class ScheduleNetwork: ObservableObject {
     }
     
     // Schedule API - 캘린더 조회 API
-    func getCalendar(date: String) async throws -> ScheduleResponse.GetCalendar {
+    static func getCalendar(date: String) async throws -> ScheduleResponse.GetCalendar {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.schedules_calendar.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "date", value: date)]
@@ -117,7 +117,8 @@ class ScheduleNetwork: ObservableObject {
     
     // Schedule API - 일정 추가 API(fetch)
     @MainActor
-    func fetchCreateSchedule(request: ScheduleRequest.CreateSchedule) async {
+    static func fetchCreateSchedule(request: ScheduleRequest.CreateSchedule) async -> ScheduleResponse.ScheduleId {
+        var scheduleId = ScheduleResponse.ScheduleId()
         do {
             print("fetchCreateSchedule : \(request)")
             print(request)
@@ -129,16 +130,16 @@ class ScheduleNetwork: ObservableObject {
             if let jsonString = String(data: sendData, encoding: .utf8) {
                 print("fetchCreateSchedule : \(jsonString)")
             }
-            let response = try await createSchedule(
-                sendData: sendData)
-            print(response)
+            scheduleId = try await createSchedule(sendData: sendData)
+            print(scheduleId)
         } catch {
             print("Error: \(error)")
         }
+        return scheduleId
     }
     
     // Schedule API - 일정 추가 API
-    func createSchedule(sendData: Data) async throws -> ScheduleResponse.ScheduleId {
+    static func createSchedule(sendData: Data) async throws -> ScheduleResponse.ScheduleId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.staff_schedules.rawValue
         
@@ -175,20 +176,22 @@ class ScheduleNetwork: ObservableObject {
     
     // Schedule API - 일정 삭제 API(fetch)
     @MainActor
-    func fetchDeleteSchedule(request: ScheduleRequest.DeleteSchedule) async {
+    static func fetchDeleteSchedule(request: ScheduleRequest.DeleteSchedule) async -> ScheduleResponse.ScheduleId {
+        var scheduleId = ScheduleResponse.ScheduleId()
         do {
             print("fetchCreateSchedule : \(request)")
             print(request)
             
-            let scheduleId = try await deleteSchedule(scheduleId: request.scheduleId)
+            scheduleId = try await deleteSchedule(scheduleId: request.scheduleId)
             print(scheduleId)
         } catch {
             print("Error: \(error)")
         }
+        return scheduleId
     }
     
     // Schedule API - 일정 삭제 API
-    func deleteSchedule(scheduleId: String) async throws -> ScheduleResponse.ScheduleId {
+    static func deleteSchedule(scheduleId: String) async throws -> ScheduleResponse.ScheduleId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.staff_schedules.rawValue + "/\(scheduleId)"
         
@@ -225,7 +228,9 @@ class ScheduleNetwork: ObservableObject {
     
     // Schedule API - 일정 수정 API(fetch)
     @MainActor
-    func fetchUpdateSchedule(scheduleId: String, request: ScheduleRequest.UpdateSchedule) async {
+    static func fetchUpdateSchedule(scheduleId: String, request: ScheduleRequest.UpdateSchedule) async -> ScheduleResponse.ScheduleId {
+        var updateScheduleId = ScheduleResponse.ScheduleId()
+        
         do {
             print("fetchUpdateSchedule : \(request)")
             print(request)
@@ -237,16 +242,16 @@ class ScheduleNetwork: ObservableObject {
             if let jsonString = String(data: sendData, encoding: .utf8) {
                 print("fetchUpdateSchedule : \(jsonString)")
             }
-            let response = try await updateSchedule(
-                scheduleId: scheduleId, sendData: sendData)
-            print(response)
+            updateScheduleId = try await updateSchedule(scheduleId: scheduleId, sendData: sendData)
+            print(updateScheduleId)
         } catch {
             print("Error: \(error)")
         }
+        return updateScheduleId
     }
     
     // Schedule API - 일정 수정 API
-    func updateSchedule(scheduleId: String, sendData: Data) async throws -> ScheduleResponse.ScheduleId {
+    static func updateSchedule(scheduleId: String, sendData: Data) async throws -> ScheduleResponse.ScheduleId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.staff_schedules_update.rawValue + "/\(scheduleId)"
         

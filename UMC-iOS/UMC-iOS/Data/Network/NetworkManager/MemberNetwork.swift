@@ -11,18 +11,20 @@ class MemberNetwork: ObservableObject {
     
     // 게시판 댓글 API - 댓글 삭제 API(fetch)
     @MainActor
-    func fetchDeleteMember() async {
+    static func fetchDeleteMember() async -> MemberResponse.MemberId {
+        var deleteMemberId = MemberResponse.MemberId()
         do {
             print("fetchDeleteMember")
             
-            let commentId = try await deleteMember()
+            let deleteMemberId = try await deleteMember()
         } catch {
             print("Error: \(error)")
         }
+        return deleteMemberId
     }
     
     // 게시판 댓글 API - 댓글 삭제 API
-    func deleteMember() async throws -> MemberResponse.MemberId {
+    static func deleteMember() async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
         
@@ -60,7 +62,7 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 유저 프로필 조회 API(fetch)
     @MainActor
-    func fetchGetMemberProfile(memberId: String) async -> MemberResponse.GetMemberProfile {
+    static func fetchGetMemberProfile(memberId: String) async -> MemberResponse.GetMemberProfile {
         var memberProfile = MemberResponse.GetMemberProfile()
         do {
             memberProfile = try await getMemberProfile(memberId: memberId)
@@ -74,7 +76,7 @@ class MemberNetwork: ObservableObject {
     }
     
     // 멤버 API - 유저 프로필 조회 API
-    func getMemberProfile(memberId: String) async throws -> MemberResponse.GetMemberProfile {
+    static func getMemberProfile(memberId: String) async throws -> MemberResponse.GetMemberProfile {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members.rawValue
         if memberId != "" {
@@ -119,7 +121,7 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 포인트 관련 유저 정보 조회 API(fetch)
     @MainActor
-    func fetchGetMemberRankInfo() async -> MemberResponse.GetMemberRankInfo {
+    static func fetchGetMemberRankInfo() async -> MemberResponse.GetMemberRankInfo {
         var memberRankInfo = MemberResponse.GetMemberRankInfo()
         do {
             memberRankInfo = try await getMemberRankInfo()
@@ -133,7 +135,7 @@ class MemberNetwork: ObservableObject {
     }
     
     // 멤버 API - 유저 프로필 조회 API
-    func getMemberRankInfo() async throws -> MemberResponse.GetMemberRankInfo {
+    static func getMemberRankInfo() async throws -> MemberResponse.GetMemberRankInfo {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members_rank.rawValue
         
@@ -175,7 +177,7 @@ class MemberNetwork: ObservableObject {
     
     // 멤버 API - 나의 프로필 수정 API(fetch)
     @MainActor
-    func fetchUpdateMyProfile(request: MemberRequest.UpdateMyProfile, profileImage: FileInfo) async {
+    static func fetchUpdateMyProfile(request: MemberRequest.UpdateMyProfile, profileImage: FileInfo) async {
         do {
             print("fetchUpdateMyProfile : \(request)")
             
@@ -197,7 +199,7 @@ class MemberNetwork: ObservableObject {
     }
     
     // 멤버 API - 나의 프로필 수정 API
-    func updateMyProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
+    static func updateMyProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members_update.rawValue
         
@@ -252,7 +254,8 @@ class MemberNetwork: ObservableObject {
     
     // 운영진용 멤버 API - 유저 정보 수정 API(fetch)
     @MainActor
-    func fetchUpdateMemberProfile(request: MemberRequest.UpdateMyProfile, profileImage: FileInfo) async {
+    static func fetchUpdateMemberProfile(request: MemberRequest.UpdateMyProfile, profileImage: FileInfo) async -> MemberResponse.MemberId  {
+        var updateMemberId = MemberResponse.MemberId()
         do {
             print("fetchUpdateMemberProfile : \(request)")
             
@@ -265,16 +268,17 @@ class MemberNetwork: ObservableObject {
             }
             print(request)
             
-            let response = try await updateMyProfile(sendData: sendData, profileImage: profileImage)
-            print(response)
+            let updateMemberId = try await updateMyProfile(sendData: sendData, profileImage: profileImage)
+            print(updateMemberId)
 
         } catch {
             print("Error: \(error)")
         }
+        return updateMemberId
     }
     
     // 멤버 API - 나의 프로필 수정 API
-    func updateMemberProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
+    static func updateMemberProfile(sendData: Data, profileImage: FileInfo?) async throws -> MemberResponse.MemberId {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.members_update.rawValue
         

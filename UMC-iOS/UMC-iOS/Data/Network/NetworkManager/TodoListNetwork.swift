@@ -11,7 +11,7 @@ class TodoListNetwork: ObservableObject {
     
     // TodoList API - 투두리스트 조회 API(fetch)
     @MainActor
-    func fetchGetTodoList(date: String) async -> TodoListResponse.GetTodoList {
+    static func fetchGetTodoList(date: String) async -> TodoListResponse.GetTodoList {
         var todoList = TodoListResponse.GetTodoList()
         do {
             todoList = try await getTodoList(date: date)
@@ -24,7 +24,7 @@ class TodoListNetwork: ObservableObject {
     }
     
     // TodoList API - 투두리스트 조회 API
-    func getTodoList(date: String) async throws -> TodoListResponse.GetTodoList {
+    static func getTodoList(date: String) async throws -> TodoListResponse.GetTodoList {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.queryItems = [URLQueryItem(name: "date", value: date)]
         urlComponents.path = ApiEndpoints.Path.todoLists.rawValue

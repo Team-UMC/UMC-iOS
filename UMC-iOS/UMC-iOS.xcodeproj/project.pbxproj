@@ -226,6 +226,7 @@
 		F3896FD02B81ED8F0075E0AB /* InviteNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FCF2B81ED8F0075E0AB /* InviteNetwork.swift */; };
 		F3896FD22B8200120075E0AB /* InviteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FD12B8200120075E0AB /* InviteResponse.swift */; };
 		F3896FD42B8202140075E0AB /* InviteAPITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3896FD32B8202140075E0AB /* InviteAPITestView.swift */; };
+		F38B78142B842E29007BDBA8 /* RankingTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B78132B842E29007BDBA8 /* RankingTestView.swift */; };
 		F391F9072B827EA500C9FD46 /* TodoListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F9062B827EA500C9FD46 /* TodoListNetwork.swift */; };
 		F391F9092B82A33F00C9FD46 /* TodayILearnedNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F9082B82A33F00C9FD46 /* TodayILearnedNetwork.swift */; };
 		F391F90B2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */; };
@@ -502,6 +503,7 @@
 		F3896FCF2B81ED8F0075E0AB /* InviteNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteNetwork.swift; sourceTree = "<group>"; };
 		F3896FD12B8200120075E0AB /* InviteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteResponse.swift; sourceTree = "<group>"; };
 		F3896FD32B8202140075E0AB /* InviteAPITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteAPITestView.swift; sourceTree = "<group>"; };
+		F38B78132B842E29007BDBA8 /* RankingTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTestView.swift; sourceTree = "<group>"; };
 		F391F9062B827EA500C9FD46 /* TodoListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListNetwork.swift; sourceTree = "<group>"; };
 		F391F9082B82A33F00C9FD46 /* TodayILearnedNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedNetwork.swift; sourceTree = "<group>"; };
 		F391F90A2B82A7AE00C9FD46 /* TodayILearnedHomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayILearnedHomeList.swift; sourceTree = "<group>"; };
@@ -1498,6 +1500,7 @@
 				F3935D372B7BE9870036E77A /* FileUploadTestView.swift */,
 				F3896FCA2B7DCF8B0075E0AB /* MemberAPITestView.swift */,
 				F3896FD32B8202140075E0AB /* InviteAPITestView.swift */,
+				F38B78132B842E29007BDBA8 /* RankingTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1797,6 +1800,7 @@
 				F34D2CF92B73675300491EBE /* MyContentViewModel.swift in Sources */,
 				F3896FC82B7DCAAE0075E0AB /* MemberNetwork.swift in Sources */,
 				F34D2D1B2B73675300491EBE /* ProjectCardinalNumberView.swift in Sources */,
+				F38B78142B842E29007BDBA8 /* RankingTestView.swift in Sources */,
 				F34D2CBE2B73675300491EBE /* AnnouncementView.swift in Sources */,
 				F3B689502B78116500A4FBB5 /* UniversityRequest.swift in Sources */,
 				F34D2D1D2B73675300491EBE /* ProjectNameRegisterView.swift in Sources */,

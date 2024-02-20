@@ -11,7 +11,6 @@ import PopupView
 struct GrowMascotView: View {
     
     
-    @ObservedObject var universityNetwork = UniversityNetwork()
     
     @Environment(\.dismiss) private var dismiss
     @State var goToRankingView: Bool = false
@@ -100,11 +99,13 @@ struct GrowMascotView: View {
             
         } // ZStack
         .navigationDestination(isPresented: $goToRankingView) {
-            RankingDetailView(activeRankingOrContribution: activeRankingOrContribution)
+//            RankingDetailView(activeRankingOrContribution: activeRankingOrContribution)
+            RankingTestView(activeRankingOrContribution: $activeRankingOrContribution)
+                .navigationBarBackButtonHidden()
         }
         .onAppear {
             Task {
-                mascotInfo = await universityNetwork.fetchGetMascotInfo()
+                mascotInfo = await UniversityNetwork.fetchGetMascotInfo()
                 print(mascotInfo)
             }
         }

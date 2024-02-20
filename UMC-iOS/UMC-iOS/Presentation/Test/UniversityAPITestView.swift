@@ -9,14 +9,14 @@ import SwiftUI
 
 struct UniversityAPITestView: View {
     @ObservedObject var userProfileViewModel = UserProfileViewModel()
-    @ObservedObject var universityNetwork = UniversityNetwork()
+//    @ObservedObject var universityNetwork = UniversityNetwork()
     @EnvironmentObject var socialLoginViewModel: SocialLoginViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     var body: some View {
         VStack {
             Button {
                 Task {
-                    await universityNetwork.fetchGetUniversityList()
+                    await UniversityNetwork.fetchGetUniversityList()
                 }
             } label: {
                 Text("전체 학교 조회 조회")
@@ -24,7 +24,7 @@ struct UniversityAPITestView: View {
             
             Button {
                 Task {
-                    await universityNetwork.fetchGetUniversityDetail()
+                    await UniversityNetwork.fetchGetUniversityDetail()
                 }
             } label: {
                 Text("우리 학교 세부 정보 조회")
@@ -32,7 +32,7 @@ struct UniversityAPITestView: View {
             
             Button {
                 Task {
-                    await universityNetwork.fetchGetMascotInfo()
+                    await UniversityNetwork.fetchGetMascotInfo()
                 }
             } label: {
                 Text("우리 학교 마스코트 조회")
@@ -40,7 +40,7 @@ struct UniversityAPITestView: View {
             
             Button {
                 Task {
-                    await universityNetwork.fetchGetUniversityRanks()
+                    await UniversityNetwork.fetchGetUniversityRanks()
                 }
             } label: {
                 Text("전체 학교 랭킹 조회")
@@ -48,7 +48,7 @@ struct UniversityAPITestView: View {
             
             Button {
                 Task {
-                    await universityNetwork.fetchGetUniversityContributors()
+                    await UniversityNetwork.fetchGetUniversityContributors()
                 }
             } label: {
                 Text("우리 학교 전체 기여도 랭킹 조회")
@@ -56,7 +56,7 @@ struct UniversityAPITestView: View {
             
             Button {
                 Task {
-                    await universityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: PointType.PUDDING))
+                    await UniversityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: PointType.PUDDING))
                 }
             } label: {
                 Text("우리 학교 마스코트 먹이주기 - PUDDING")
@@ -64,7 +64,7 @@ struct UniversityAPITestView: View {
             
             Button {
                 Task {
-                    await universityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: PointType.DOUGHNUT))
+                    await UniversityNetwork.fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot(pointType: PointType.DOUGHNUT))
                 }
             } label: {
                 Text("우리 학교 마스코트 먹이주기 - DOUGHNUT")

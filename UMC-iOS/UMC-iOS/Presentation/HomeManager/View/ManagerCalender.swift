@@ -10,7 +10,7 @@ import SwiftUI
 struct ManagerCalender: View {
     
     // Api
-    @ObservedObject var scheduleNetwork = ScheduleNetwork()
+//    @ObservedObject var scheduleNetwork = ScheduleNetwork()
     @State private var deleteScheduleId: String = ""
     @State private var updateScheduleId: String = ""
     @State private var getScheduleDetailScheduleId: String = ""
@@ -139,7 +139,7 @@ struct ManagerCalender: View {
                 Button {
                     
                     Task {
-                        await scheduleNetwork.fetchCreateSchedule(
+                        await ScheduleNetwork.fetchCreateSchedule(
                             request: ScheduleRequest.CreateSchedule(title: CalTitle,
                                                                     content: CalContent,
                                                                     startDateTime: convertDateToString(date: StartDate),

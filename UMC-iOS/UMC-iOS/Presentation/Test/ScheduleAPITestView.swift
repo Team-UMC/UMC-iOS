@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScheduleAPITestView: View {
-    @ObservedObject var scheduleNetwork = ScheduleNetwork()
+//    @ObservedObject var scheduleNetwork = ScheduleNetwork()
     @State private var deleteScheduleId: String = ""
     @State private var updateScheduleId: String = ""
     @State private var getScheduleDetailScheduleId: String = ""
@@ -18,7 +18,7 @@ struct ScheduleAPITestView: View {
         VStack {
             Button {
                 Task {
-                    await scheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: "2024-02-13"))
+                    await ScheduleNetwork.fetchGetCalendar(request: ScheduleRequest.GetCalendar(date: "2024-02-13"))
                 }
             } label: {
                 Text("캘린더 조회")
@@ -26,7 +26,7 @@ struct ScheduleAPITestView: View {
             
             Button {
                 Task {
-                    await scheduleNetwork.fetchCreateSchedule(request: ScheduleRequest.CreateSchedule(title: "TEST", content: "TEST", startDateTime: "2024-02-13T08:08:41", endDateTime: "2024-02-15T08:08:41", semesterPermission: [Semester.FIFTH.rawValue], hostType: HostType.CENTER.rawValue, placeSetting: "인하대"))
+                    await ScheduleNetwork.fetchCreateSchedule(request: ScheduleRequest.CreateSchedule(title: "TEST", content: "TEST", startDateTime: "2024-02-13T08:08:41", endDateTime: "2024-02-15T08:08:41", semesterPermission: [Semester.FIFTH.rawValue], hostType: HostType.CENTER.rawValue, placeSetting: "인하대"))
                 }
             } label: {
                 Text("일정 추가")
@@ -35,7 +35,7 @@ struct ScheduleAPITestView: View {
             
             Button {
                 Task {
-                    await scheduleNetwork.fetchUpdateSchedule(scheduleId: updateScheduleId, request: ScheduleRequest.UpdateSchedule(title: "TEST", content: "TEST", startDateTime: "2024-02-13T08:08:41", endDateTime: "2024-02-15T08:08:41", semesterPermission: [Semester.FIFTH.rawValue], hostType: HostType.CENTER.rawValue, placeSetting: "가천대"))
+                    await ScheduleNetwork.fetchUpdateSchedule(scheduleId: updateScheduleId, request: ScheduleRequest.UpdateSchedule(title: "TEST", content: "TEST", startDateTime: "2024-02-13T08:08:41", endDateTime: "2024-02-15T08:08:41", semesterPermission: [Semester.FIFTH.rawValue], hostType: HostType.CENTER.rawValue, placeSetting: "가천대"))
                 }
             } label: {
                 Text("일정 수정")
@@ -45,7 +45,7 @@ struct ScheduleAPITestView: View {
             
             Button {
                 Task {
-                    await scheduleNetwork.fetchGetScheduleDetail(scheduleId: getScheduleDetailScheduleId)
+                    await ScheduleNetwork.fetchGetScheduleDetail(scheduleId: getScheduleDetailScheduleId)
                 }
             } label: {
                 Text("일정 상세 조회")
@@ -55,7 +55,7 @@ struct ScheduleAPITestView: View {
             
             Button {
                 Task {
-                    await scheduleNetwork.fetchDeleteSchedule(request: ScheduleRequest.DeleteSchedule(scheduleId: deleteScheduleId))
+                    await ScheduleNetwork.fetchDeleteSchedule(request: ScheduleRequest.DeleteSchedule(scheduleId: deleteScheduleId))
                 }
             } label: {
                 Text("일정 삭제")

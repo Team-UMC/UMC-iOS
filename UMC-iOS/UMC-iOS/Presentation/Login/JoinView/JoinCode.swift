@@ -74,7 +74,7 @@ struct JoinCode: View {
                         Button {
                             print(userData)
                             Task {
-                                role = await inviteNetwork.fetchVerifyInviteCode(inviteCode: inviteCode)
+                                role = await InviteNetwork.fetchVerifyInviteCode(inviteCode: inviteCode)
                                 if role == "MEMBER" {
                                     goToSelectUniv.toggle()
                                 } else if role == "ADMIN" {

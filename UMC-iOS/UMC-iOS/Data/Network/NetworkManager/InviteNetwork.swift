@@ -14,7 +14,7 @@ class InviteNetwork: ObservableObject {
     // POST
     // 초대 API - 초대 코드 확인 API(fetch)
     @MainActor
-    func fetchVerifyInviteCode(inviteCode: String) async -> String {
+    static func fetchVerifyInviteCode(inviteCode: String) async -> String {
         var response: String = ""
         do {
             print("fetchCreateBoardComment : \(inviteCode)")
@@ -29,7 +29,7 @@ class InviteNetwork: ObservableObject {
     }
     
     // 초대 API - 초대 코드 확인 API
-    func verifyInviteCode(inviteCode: String) async throws -> InviteResponse.VerifyInviteCode {
+    static func verifyInviteCode(inviteCode: String) async throws -> InviteResponse.VerifyInviteCode {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.invites.rawValue
         urlComponents.path.append("/\(inviteCode)")

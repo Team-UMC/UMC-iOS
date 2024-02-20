@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MemberAPITestView: View {
-    @ObservedObject var memberNetwork = MemberNetwork()
     
     @State var fileName = ""
     
@@ -22,7 +21,7 @@ struct MemberAPITestView: View {
         VStack {
             Button {
                 Task {
-                    await memberNetwork.fetchDeleteMember()
+                    await MemberNetwork.fetchDeleteMember()
                 }
             } label: {
                 Text("멤버 탈퇴")
@@ -82,7 +81,7 @@ struct MemberAPITestView: View {
                     print("fileInfo: \(fileInfo)")
                     
                     Task {
-                        await memberNetwork.fetchUpdateMyProfile(request: MemberRequest.UpdateMyProfile(name: "경경수", nickname: "리버버", statusMessage: "포항항") , profileImage: fileInfo)
+                        await MemberNetwork.fetchUpdateMyProfile(request: MemberRequest.UpdateMyProfile(name: "경경수", nickname: "리버버", statusMessage: "포항항") , profileImage: fileInfo)
                     }
                     
                 } catch {

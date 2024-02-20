@@ -10,14 +10,14 @@ import SwiftUI
 struct BulletinBoardSearchUI: View {
     @State private var searchText = ""
     @State private var searchColor = "searchbar"
-    @ObservedObject var  boardnetwork = BoardNetwork()
+    
     
     var body: some View {
         VStack {
             HStack {
                 TextField("검색어를 입력하세요", text: $searchText, onCommit: {
                     Task {
-                        await boardnetwork.fetchSearchBoards(keyword: searchText, page: 1)
+                        await BoardNetwork.fetchSearchBoards(keyword: searchText, page: 1)
                     }
                     
                     print("Enter key pressed. Search text: \(searchText)")

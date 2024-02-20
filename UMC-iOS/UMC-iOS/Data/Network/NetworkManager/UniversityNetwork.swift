@@ -8,26 +8,29 @@
 import Foundation
 
 class UniversityNetwork: ObservableObject {
-    @Published var universities: [University] = []
+//    @Published var universities: [University] = []
     
     
     // POST
     
     // University API - 우리 학교 마스코트 먹이주기 API(fetch)
     @MainActor
-    func fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot) async {
+    static func fetchFeedUniversityMascot(request: UniversityRequest.FeedUniversityMascot) async -> UniversityResponse.FeedUniversityMascot {
+        var feedResponse = UniversityResponse.FeedUniversityMascot()
         do {
             print("fetchFeedUniversityMascot : \(request)")
             print(request.pointType.rawValue)
             
-            let response = try await feedUniversityMascot(pointType: request.pointType.rawValue)
+            feedResponse = try await feedUniversityMascot(pointType: request.pointType.rawValue)
         } catch {
             print("Error: \(error)")
         }
+        
+        return feedResponse
     }
     
     // University API - 우리 학교 마스코트 먹이주기 API
-    func feedUniversityMascot(pointType: String) async throws -> UniversityResponse.FeedUniversityMascot {
+    static func feedUniversityMascot(pointType: String) async throws -> UniversityResponse.FeedUniversityMascot {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities_mascot.rawValue
         urlComponents.queryItems = [URLQueryItem(name: "pointType", value: pointType)]
@@ -142,20 +145,22 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 전체 학교 조회 API(fetch)
     @MainActor
-    func fetchGetUniversityList() async {
+    static func fetchGetUniversityList() async -> UniversityResponse.GetUniversityList {
+        var universities = UniversityResponse.GetUniversityList()
         do {
-            let universities = try await getUniversityList()
+            universities = try await getUniversityList()
             print(universities)
-            self.universities = universities.joinUniversities.mapToUniversityList()
+//            universities = universities.joinUniversities.mapToUniversityList()
             
-            print(self.universities)
+            
         } catch {
             print("Error: \(error)")
         }
+        return universities
     }
     
     // University API - 전체 학교 조회 API
-    func getUniversityList() async throws -> UniversityResponse.GetUniversityList {
+    static func getUniversityList() async throws -> UniversityResponse.GetUniversityList {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities.rawValue
         
@@ -192,7 +197,7 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 우리 학교 세부 정보 조회 API(fetch)
     @MainActor
-    func fetchGetUniversityDetail() async -> UniversityResponse.GetUniverSityDetail {
+    static func fetchGetUniversityDetail() async -> UniversityResponse.GetUniverSityDetail {
         var universityDetail = UniversityResponse.GetUniverSityDetail()
         do {
             universityDetail = try await getUniversityDetail()
@@ -205,7 +210,7 @@ class UniversityNetwork: ObservableObject {
     }
     
     // University API - 우리 학교 세부 정보 조회 API
-    func getUniversityDetail() async throws -> UniversityResponse.GetUniverSityDetail {
+    static func getUniversityDetail() async throws -> UniversityResponse.GetUniverSityDetail {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities_details.rawValue
         
@@ -241,7 +246,7 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 우리 학교 마스코트 조회 API(fetch)
     @MainActor
-    func fetchGetMascotInfo() async -> UniversityResponse.GetUniversityMascotInfo {
+    static func fetchGetMascotInfo() async -> UniversityResponse.GetUniversityMascotInfo {
         var mascotInfo = UniversityResponse.GetUniversityMascotInfo()
         do {
             mascotInfo = try await getMascotInfo()
@@ -253,7 +258,7 @@ class UniversityNetwork: ObservableObject {
     }
     
     // University API - 우리 학교 마스코트 조회 API
-    func getMascotInfo() async throws -> UniversityResponse.GetUniversityMascotInfo {
+    static func getMascotInfo() async throws -> UniversityResponse.GetUniversityMascotInfo {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities_mascot.rawValue
         
@@ -288,14 +293,14 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 전체 학교 랭킹 조회 API(fetch)
     @MainActor
-    func fetchGetUniversityRanks() async -> UniversityResponse.GetUniversityRanks {
+    static func fetchGetUniversityRanks() async -> UniversityResponse.GetUniversityRanks {
         var universityRanks = UniversityResponse.GetUniversityRanks()
         do {
             universityRanks = try await getUniversityRanks()
-            self.universities = universityRanks.joinUniversityRanks.mapToUniversityList()
+//            self.universities = universityRanks.joinUniversityRanks.mapToUniversityList()
             
             print(universityRanks)
-            print(self.universities)
+//            print(self.universities)
         } catch {
             print("Error: \(error)")
         }
@@ -303,7 +308,7 @@ class UniversityNetwork: ObservableObject {
     }
     
     // University API - 전체 학교 랭킹 조회 API
-    func getUniversityRanks() async throws -> UniversityResponse.GetUniversityRanks {
+    static func getUniversityRanks() async throws -> UniversityResponse.GetUniversityRanks {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities_ranks.rawValue
         
@@ -339,7 +344,7 @@ class UniversityNetwork: ObservableObject {
     
     // University API - 우리 학교 전체 기여도 랭킹 조회 API(fetch)
     @MainActor
-    func fetchGetUniversityContributors() async {
+    static func fetchGetUniversityContributors() async {
         do {
             let joinContributionRanks = try await getUniversityContributors()
             
@@ -350,7 +355,7 @@ class UniversityNetwork: ObservableObject {
     }
     
     // University API - 우리 학교 전체 기여도 랭킹 조회 API
-    func getUniversityContributors() async throws -> UniversityResponse.GetUniversityContributors {
+    static func getUniversityContributors() async throws -> UniversityResponse.GetUniversityContributors {
         var urlComponents = ApiEndpoints.getBasicUrlComponents()
         urlComponents.path = ApiEndpoints.Path.universities_members.rawValue
         

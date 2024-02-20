@@ -10,7 +10,6 @@ import SwiftUI
 struct ToDoListAdd: View {
     
     @ObservedObject var viewModel = TodoListViewModel()
-    @ObservedObject var todoListNetwork = TodoListNetwork()
     
     // 추후 삭제.
     @ObservedObject private var cellViewModel = ToDoListCellViewModel(toDoTitle: "", time: "", todoIcon: "")
@@ -51,7 +50,7 @@ struct ToDoListAdd: View {
                         // 추후 deadline 수정
                         await viewModel.fetchCreateTodoList(todoInfo: TodoListRequest.CreateTodo(title: title, deadline: "2024-02-20T23:59:59"))
                         print("todoList(befroe) : \(todoList)")
-                        todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
+                        todoList = await TodoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
                         print("todoList(after) : \(todoList)")
                         
                     }

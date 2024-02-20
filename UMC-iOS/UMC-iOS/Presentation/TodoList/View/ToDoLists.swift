@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToDoLists: View {
 //    @ObservedObject var todoListViewModel: TodoListViewModel
-    @ObservedObject var todoListNetwork = TodoListNetwork()
+//    @ObservedObject var todoListNetwork = TodoListNetwork()
     
     @Binding var todoList: TodoListResponse.GetTodoList
     
@@ -25,7 +25,7 @@ struct ToDoLists: View {
         .onAppear {
             UITableView.appearance().separatorStyle = .none
             Task {
-                todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
+                todoList = await TodoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
             }
         }
     }
