@@ -77,8 +77,17 @@ struct HomeView: View {
                             } else {
                                 TodayILearnedHomeList(todayILearneds: todayILearneds)
                             }
-                            
-                            GitHubEmptyView(shouldShowGithubPopup: $viewModel.shouldShowGithubPopup)
+                            if viewModel.githubId == "" {
+                                GitHubEmptyView(shouldShowGithubPopup: $viewModel.shouldShowGithubPopup)
+                            } else {
+                                AsyncImage(url: URL(string: "https://ghchart.rshah.org/2965FF/\(viewModel.githubId)")) { image in
+                                    image
+                                        .resizable()
+                                        .frame(width: 100, height: 100)
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                            }
                         }
                         .padding(.top, 24)
                         

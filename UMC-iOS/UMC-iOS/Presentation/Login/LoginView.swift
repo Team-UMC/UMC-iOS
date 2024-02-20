@@ -18,24 +18,33 @@ struct LoginView:View {
             ZStack {
                 Image("signup_background")
                     .resizable()
+                // 구글로그인 추후 개발예정
                 VStack (spacing: 16){
                     
+                    Spacer().frame(height: 150)
+                    
+                    Image("UMC_MAIN_LOGO")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 400)
+                        
+//
                     Spacer()
-                    //google login button
-                    Button {
-                    } label: {
-                        HStack(spacing: 32) {
-                            Image("Google")
-                                .frame(width: 20, height: 20)
-                            Text("Google로 계속하기")
-                            
-                        }
-                        .frame(width: 272, height: 44)
-                        .background(.white)
-                        .foregroundColor(.black)
-                        .cornerRadius(12)
-                        .padding(12)
-                    }
+//                    //google login button
+//                    Button {
+//                    } label: {
+//                        HStack(spacing: 32) {
+//                            Image("Google")
+//                                .frame(width: 20, height: 20)
+//                            Text("Google로 계속하기")
+//                            
+//                        }
+//                        .frame(width: 272, height: 44)
+//                        .background(.white)
+//                        .foregroundColor(.black)
+//                        .cornerRadius(12)
+//                        .padding(12)
+//                    }
                     
                     //apple login button
                     AppleLoginButton(isLoggedIn: $socialLoginViewModel.isLoggedIn, alreadyMember: $alreadyMember)

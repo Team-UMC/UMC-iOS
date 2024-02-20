@@ -13,6 +13,7 @@ class HomeViewModel:ObservableObject {
     @Published var shouldShowCalendarPopup: Bool = false // 캘린더 팝업 뷰 State변수
     @Published var shouldShowAnnouncementPopup: Bool = false // 공지사항 팝업 뷰 State변수
     @Published var shouldShowGithubPopup: Bool = false //깃허브 팝업 뷰
+    @Published var githubId: String = ""
     @Published var member = Member()
     @Published var todoLists: [TodoList] = []
     
@@ -45,15 +46,30 @@ class HomeViewModel:ObservableObject {
                     .fontWeight(.regular)
                     .foregroundColor(.historyDisabledGray)
                 
-                Button {
-                    self.shouldShowGithubPopup = false
-                } label : {
-                    Text("닫기")
-                        .font(.system(size: 12))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.tdlGray)
-                } // Button
-                .padding(.top, 24)
+                HStack {
+                    Button {
+                        self.githubId = textInput
+                        print(self.githubId)
+                        print(textInput)
+                        self.shouldShowGithubPopup = false
+                    } label : {
+                        Text("확인")
+                            .font(.system(size: 12))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.tdlGray)
+                    } // Button
+                    .padding(.top, 24)
+                    Button {
+                        self.shouldShowGithubPopup = false
+                    } label : {
+                        Text("닫기")
+                            .font(.system(size: 12))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.tdlGray)
+                    } // Button
+                    .padding(.top, 24)
+                }
+                
                 
             } // VStack
             .multilineTextAlignment(.center)
