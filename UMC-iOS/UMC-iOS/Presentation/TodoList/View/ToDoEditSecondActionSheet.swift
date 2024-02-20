@@ -133,8 +133,5 @@ struct ToDoEditSecondActionSheet: View {
     }
 }
 
-#Preview {
-    ToDoEditSecondActionSheet(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
-}
-
+//cellViewModel
 

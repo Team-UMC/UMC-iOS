@@ -8,8 +8,8 @@
 import Foundation
 
 struct TodoListResponse: Codable {
-    struct TodoListInfo: Codable {
-        var id: String? = ""
+    struct TodoListInfo: Codable, Hashable {
+        var id: String? = UUID().uuidString
         var todoListId: String = ""
         var title: String = ""
         var deadline: String = ""

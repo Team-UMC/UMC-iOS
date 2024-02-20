@@ -10,15 +10,15 @@ import SwiftUI
 struct ToDoListAdd: View {
     
     @ObservedObject var viewModel = TodoListViewModel()
+    @ObservedObject var todoListNetwork = TodoListNetwork()
     
     // 추후 삭제.
-    @ObservedObject private var cellViewModel: ToDoListCellViewModel
+    @ObservedObject private var cellViewModel = ToDoListCellViewModel(toDoTitle: "", time: "", todoIcon: "")
     
-    init(viewModel: ToDoListCellViewModel) {
-        self._cellViewModel = ObservedObject(wrappedValue: viewModel)
-    }
+
     @State var title: String = ""
     @State var todoicon: String = ""
+    @Binding var todoList: TodoListResponse.GetTodoList
     
     var body: some View {
         ZStack{
@@ -49,7 +49,11 @@ struct ToDoListAdd: View {
                 Button(action: {
                     Task {
                         // 추후 deadline 수정
-                        await viewModel.fetchCreateTodoList(todoInfo: TodoListRequest.CreateTodo(title: title, deadline: "2024-02-10T14:35:03"))
+                        await viewModel.fetchCreateTodoList(todoInfo: TodoListRequest.CreateTodo(title: title, deadline: "2024-02-20T23:59:59"))
+                        print("todoList(befroe) : \(todoList)")
+                        todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
+                        print("todoList(after) : \(todoList)")
+                        
                     }
                     print("추가버튼을 눌렀습니다")
                 }) {
@@ -76,11 +80,11 @@ struct ToDoListAdd: View {
     }
 }
 
-struct ToDoListAdd_Previews: PreviewProvider {
-    static var previews: some View {
-        ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
-            .previewLayout(.sizeThatFits)
-            .padding()
-    }
-}
+//struct ToDoListAdd_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
+//            .previewLayout(.sizeThatFits)
+//            .padding()
+//    }
+//}
 

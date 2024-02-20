@@ -64,10 +64,6 @@ struct ToDoEditFirstActionSheet: View {
     }
 }
 
-struct ToDoEditFirstActionSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: "미리보기 할 일", time: "오후 2:00", todoIcon: "🌕"))
-    }
-}
+//cellViewModel
 
 

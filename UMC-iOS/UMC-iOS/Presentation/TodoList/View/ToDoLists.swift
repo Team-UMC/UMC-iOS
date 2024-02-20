@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ToDoLists: View {
-    @ObservedObject var todoListViewModel: TodoListViewModel
+//    @ObservedObject var todoListViewModel: TodoListViewModel
+    @ObservedObject var todoListNetwork = TodoListNetwork()
+    
+    @Binding var todoList: TodoListResponse.GetTodoList
     
     var body: some View {
         List {
-            ForEach(todoListViewModel.todoList, id: \.id) { todo in
-                ToDoListCell(viewModel: ToDoListCellViewModel(toDoTitle: todo.title, time: formattedDate(todo.deadline), todoIcon: "0"))
+            ForEach(todoList.todoLists, id: \.self) { todo in
+                ToDoListCell(todo: todo)
                     .listRowSeparator(.hidden)
                     .padding(.bottom, -15)
             }
@@ -22,7 +25,7 @@ struct ToDoLists: View {
         .onAppear {
             UITableView.appearance().separatorStyle = .none
             Task {
-                await todoListViewModel.fetchGetTodoList()
+                todoList = await todoListNetwork.fetchGetTodoList(date: String.currentLocalDateToString())
             }
         }
     }
@@ -34,10 +37,10 @@ struct ToDoLists: View {
         return formatter.string(from: date)
     }
 }
-
-struct ToDoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ToDoLists(todoListViewModel: TodoListViewModel())
-    }
-}
+//
+//struct ToDoListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ToDoLists(todoListViewModel: TodoListViewModel())
+//    }
+//}
 

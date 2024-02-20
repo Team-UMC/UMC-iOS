@@ -12,6 +12,7 @@ struct ToDoListUI: View {
     @State var title: String = ""
     @State var deadline: String = ""
     @State var todoIcon: String = ""
+    @Binding var todoList: TodoListResponse.GetTodoList
     
     var body: some View {
         
@@ -23,8 +24,8 @@ struct ToDoListUI: View {
                 .padding(.leading,25)
                 .padding(.bottom,-10)
                 
-            ToDoLists(todoListViewModel: TodoListViewModel())
-            ToDoListAdd(viewModel: ToDoListCellViewModel(toDoTitle: title, time: deadline, todoIcon: todoIcon))
+            ToDoLists(todoList: $todoList)
+            ToDoListAdd(todoList: $todoList)
             
             
             Image("Underbar")
@@ -36,9 +37,9 @@ struct ToDoListUI: View {
         
     }
 }
-
-#Preview {
-    ToDoListUI()
-}
+//
+//#Preview {
+//    ToDoListUI()
+//}
 
 

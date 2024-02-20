@@ -160,7 +160,7 @@ struct HomeView: View {
                 .navigationTitle("마스코트 키우기")
         }
         .navigationDestination(isPresented: $goToTodoList) {
-            ToDoListUI()
+            ToDoListUI(todoList: $todoList)
                 .navigationBarBackButtonHidden()
         }
         .navigationDestination(isPresented: $goToTodayILearned) {
