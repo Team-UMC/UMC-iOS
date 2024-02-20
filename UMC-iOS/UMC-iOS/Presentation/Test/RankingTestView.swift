@@ -55,7 +55,6 @@ struct RankingTestView: View {
                                     .resizable()
                                     .frame(width: 100, height: 100)
                                     .padding(.bottom,14)
-                                    .clipShape(Circle())
                                 
                                 Text("**\(myUniversityRankDetail.universityName)** 는\n**\(myUniversityRankDetail.universityPoint)**포인트로\n현재 **\(myUniversityRankDetail.universityRank)**등이에요 👏")
                                     .fontWeight(.regular)
@@ -154,13 +153,13 @@ struct RankingTestView: View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image("가톨릭대학교")
+                                Image("인하대학교")
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text("가톨릭대학교")
+                                Text("인하대학교")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("100")
+                                Text("500")
                                     .font(.system(size: 12))
                                 
                             }
@@ -184,13 +183,13 @@ struct RankingTestView: View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image("인하대학교")
+                                Image("가천대학교")
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text("인하대학교")
+                                Text("가천대학교")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("500")
+                                Text("300 point")
                                     .font(.system(size: 12))
                                 
                             }
@@ -214,13 +213,13 @@ struct RankingTestView: View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                Image("숭실대학교")
+                                Image("가톨릭대학교")
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .clipShape(Circle())
-                                Text("숭실대학교")
+                                Text("가톨릭대학교")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("100")
+                                Text("100 point")
                                     .font(.system(size: 12))
                                 
                                 
@@ -260,7 +259,7 @@ struct RankingTestView: View {
                                 }
                                 .listRowInsets(.init(top: 20, leading: 30, bottom: 20, trailing: 30))
                                 .cornerRadius(5)
-//                                .listRowSeparator(.hidden)
+                                //                                .listRowSeparator(.hidden)
                             }
                         }
                     } else if activeRankingOrContribution == 2 {
@@ -275,13 +274,13 @@ struct RankingTestView: View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                //                            Image("이경수")
-                                //                                .resizable()
-                                //                                .frame(width: 30, height: 30)
-                                //                                .clipShape(Circle())
+                                Image(systemName: "person.circle")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .clipShape(Circle())
                                 Text("이경수")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("100")
+                                Text("500 point")
                                     .font(.system(size: 12))
                             }
                             .frame(width: 98, height: 140)
@@ -302,13 +301,13 @@ struct RankingTestView: View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                //                            Image(viewModel.myContributions[0].name)
-                                //                                .resizable()
-                                //                                .frame(width: 30, height: 30)
-                                //                                .clipShape(Circle())
-                                Text("이경수")
+                                Image(systemName: "person.circle")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .clipShape(Circle())
+                                Text("정진혁")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("400")
+                                Text("500 point")
                                     .font(.system(size: 12))
                                 
                             }
@@ -332,13 +331,13 @@ struct RankingTestView: View {
                                     .background(.energy)
                                     .cornerRadius(12)
                                     .padding(4)
-                                //                            Image(viewModel.myContributions[2].name)
-                                //                                .resizable()
-                                //                                .frame(width: 30, height: 30)
-                                //                                .clipShape(Circle())
-                                Text("이경수")
+                                Image(systemName: "person.circle")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .clipShape(Circle())
+                                Text("김준석")
                                     .font(.system(size: 16, weight: .semibold))
-                                Text("400point")
+                                Text("100 point")
                                     .font(.system(size: 12))
                             }
                             .frame(width: 98, height: 125)
@@ -351,34 +350,32 @@ struct RankingTestView: View {
                                      alignment: .top)
                             .shadow(color: .shadow60,radius: 2, y: 2)
                             
-                            VStack {
-                                ForEach(universityRanks.joinUniversityRanks, id: \.self) { univ in
-                                    HStack {
-                                        Spacer().frame(width: 20)
-                                        Text("\(univ.universityRank)등")
-                                            .font(.system(size: 16, weight: .medium))
-                                            .foregroundStyle(.main)
-                                        Spacer()
-                                        Text(univ.universityName)
-                                            .font(.system(size: 16, weight: .medium))
-                                        Spacer()
-                                        Text("\(univ.universityPoint) points")
-                                            .font(.system(size: 10))
-                                        Spacer().frame(width: 20)
-                                    }
-                                    .frame(width: 310, height: 41)
-                                    .background {
-                                        RoundedRectangle(cornerRadius: 12)
-                                            .fill(.white)
-                                            .shadow(color: .shadow60,radius: 5, y: 1)
-                                    }
-                                    .listRowInsets(.init(top: 20, leading: 30, bottom: 20, trailing: 30))
-                                    .cornerRadius(5)
-    //                                .listRowSeparator(.hidden)
+                        }
+                        VStack {
+                            ForEach(contributionRanking.joinContributionRanks, id: \.self) { member in
+                                HStack {
+                                    Spacer().frame(width: 20)
+                                    Text("\(member.rank)등")
+                                        .font(.system(size: 16, weight: .medium))
+                                        .foregroundStyle(.main)
+                                    Spacer()
+                                    Text(member.name)
+                                        .font(.system(size: 16, weight: .medium))
+                                    Spacer()
+                                    Text("\(member.usedPoint) points")
+                                        .font(.system(size: 10))
+                                    Spacer().frame(width: 20)
                                 }
+                                .frame(width: 310, height: 41)
+                                .background {
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(.white)
+                                        .shadow(color: .shadow60,radius: 5, y: 1)
+                                }
+                                .listRowInsets(.init(top: 20, leading: 30, bottom: 20, trailing: 30))
+                                .cornerRadius(5)
+                                //                                .listRowSeparator(.hidden)
                             }
-                            
-                            
                         }
                     }
                     
