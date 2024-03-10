@@ -44,7 +44,8 @@ struct JoinFinalMessage:View {
             }
             //네비게이션 페이지 전환
             .navigationDestination(isPresented: $isClickedFinalMessage){
-                HomeView()
+//                HomeView()
+                BottomTabBar()
             }
             .navigationBarBackButtonHidden()
         }

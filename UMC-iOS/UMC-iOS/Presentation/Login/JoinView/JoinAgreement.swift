@@ -111,7 +111,8 @@ struct JoinAgreement:View {
                                 .foregroundColor(.white)
                         }
                         .navigationDestination(isPresented: $isClicked) {
-                            HomeView()
+//                            HomeView()
+                            BottomTabBar()
                                 .navigationBarBackButtonHidden()
                         }
                         Spacer().frame(width: 10)
